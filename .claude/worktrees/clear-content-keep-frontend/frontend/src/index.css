@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+/* Design tokens — mirror /UI_UX_GUIDE.md's color system exactly.
+   Dark is the default theme (data-theme unset or "dark"); light is
+   opted into via [data-theme="light"] on the root element. */
+:root,
+[data-theme='dark'] {
+  --bg-canvas: #0d1117;
+  --bg-surface: #161b22;
+  --bg-surface-raised: #1c2128;
+  --border: #30363d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --accent-brand: #58a6ff;
+  --status-success: #3fb950;
+  --status-warning: #d29922;
+  --status-danger: #f85149;
+  --status-info: #58a6ff;
+}
+
+[data-theme='light'] {
+  --bg-canvas: #ffffff;
+  --bg-surface: #f6f8fa;
+  --bg-surface-raised: #ffffff;
+  --border: #d0d7de;
+  --text-primary: #1f2328;
+  --text-secondary: #59636e;
+  --accent-brand: #0969da;
+  --status-success: #1a7f37;
+  --status-warning: #9a6700;
+  --status-danger: #cf222e;
+  --status-info: #0969da;
+}
+
+@theme {
+  --color-canvas: var(--bg-canvas);
+  --color-surface: var(--bg-surface);
+  --color-surface-raised: var(--bg-surface-raised);
+  --color-border: var(--border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-brand: var(--accent-brand);
+  --color-success: var(--status-success);
+  --color-warning: var(--status-warning);
+  --color-danger: var(--status-danger);
+  --color-info: var(--status-info);
+
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+/* Visible focus state everywhere — see UI_UX_GUIDE.md Accessibility standards */
+:focus-visible {
+  outline: 2px solid var(--accent-brand);
+  outline-offset: 2px;
+}

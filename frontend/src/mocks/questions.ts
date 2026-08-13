@@ -2,7 +2,7 @@
 // question/topic page in the repo via scripts/sync_mock_questions.js.
 // Regenerate with `node scripts/sync_mock_questions.js` after editing
 // or adding markdown content; do not hand-edit this file directly.
-// 3000 total questions (973 coding, 2027 technical).
+// 2870 total questions (973 coding, 1897 technical).
 
 import type {
   CodingQuestionDetail,
@@ -12011,7 +12011,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1155",
-      "questionNumber": "Q2081",
+      "questionNumber": "Q1951",
       "title": "QSD_MAX_78 · Machine Coding Architecture & Design Case 78",
       "difficulty": "Hard",
       "companies": [
@@ -12070,7 +12070,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1156",
-      "questionNumber": "Q2082",
+      "questionNumber": "Q1952",
       "title": "QSD_MAX_79 · Machine Coding Architecture & Design Case 79",
       "difficulty": "Medium",
       "companies": [
@@ -12129,7 +12129,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1157",
-      "questionNumber": "Q2083",
+      "questionNumber": "Q1953",
       "title": "QSD_MAX_80 · Machine Coding Architecture & Design Case 80",
       "difficulty": "Medium",
       "companies": [
@@ -12188,7 +12188,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1158",
-      "questionNumber": "Q2084",
+      "questionNumber": "Q1954",
       "title": "QSD_MAX_81 · Machine Coding Architecture & Design Case 81",
       "difficulty": "Hard",
       "companies": [
@@ -12247,7 +12247,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1159",
-      "questionNumber": "Q2085",
+      "questionNumber": "Q1955",
       "title": "QSD_MAX_82 · Machine Coding Architecture & Design Case 82",
       "difficulty": "Medium",
       "companies": [
@@ -12306,7 +12306,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1160",
-      "questionNumber": "Q2086",
+      "questionNumber": "Q1956",
       "title": "QSD_MAX_83 · Machine Coding Architecture & Design Case 83",
       "difficulty": "Medium",
       "companies": [
@@ -12365,7 +12365,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1161",
-      "questionNumber": "Q2087",
+      "questionNumber": "Q1957",
       "title": "QSD_MAX_84 · Machine Coding Architecture & Design Case 84",
       "difficulty": "Hard",
       "companies": [
@@ -12424,7 +12424,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1162",
-      "questionNumber": "Q2088",
+      "questionNumber": "Q1958",
       "title": "QSD_MAX_85 · Machine Coding Architecture & Design Case 85",
       "difficulty": "Medium",
       "companies": [
@@ -12483,7 +12483,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1163",
-      "questionNumber": "Q2089",
+      "questionNumber": "Q1959",
       "title": "QSD_MAX_86 · Machine Coding Architecture & Design Case 86",
       "difficulty": "Medium",
       "companies": [
@@ -12542,7 +12542,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1164",
-      "questionNumber": "Q2090",
+      "questionNumber": "Q1960",
       "title": "QSD_MAX_87 · Machine Coding Architecture & Design Case 87",
       "difficulty": "Hard",
       "companies": [
@@ -12601,7 +12601,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1165",
-      "questionNumber": "Q2091",
+      "questionNumber": "Q1961",
       "title": "QSD_MAX_88 · Machine Coding Architecture & Design Case 88",
       "difficulty": "Medium",
       "companies": [
@@ -12660,7 +12660,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1166",
-      "questionNumber": "Q2092",
+      "questionNumber": "Q1962",
       "title": "QSD_MAX_89 · Machine Coding Architecture & Design Case 89",
       "difficulty": "Medium",
       "companies": [
@@ -12719,7 +12719,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1167",
-      "questionNumber": "Q2093",
+      "questionNumber": "Q1963",
       "title": "QSD_W15_149 · Machine Coding Enterprise System Architecture Case 149",
       "difficulty": "Medium",
       "companies": [
@@ -12778,7 +12778,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1168",
-      "questionNumber": "Q2094",
+      "questionNumber": "Q1964",
       "title": "QSD_W15_150 · Machine Coding Enterprise System Architecture Case 150",
       "difficulty": "Hard",
       "companies": [
@@ -12837,7 +12837,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1169",
-      "questionNumber": "Q2095",
+      "questionNumber": "Q1965",
       "title": "QSD_W15_151 · Machine Coding Enterprise System Architecture Case 151",
       "difficulty": "Medium",
       "companies": [
@@ -12896,7 +12896,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1170",
-      "questionNumber": "Q2096",
+      "questionNumber": "Q1966",
       "title": "QSD_W15_152 · Machine Coding Enterprise System Architecture Case 152",
       "difficulty": "Medium",
       "companies": [
@@ -12955,7 +12955,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1171",
-      "questionNumber": "Q2097",
+      "questionNumber": "Q1967",
       "title": "QSD_W15_153 · Machine Coding Enterprise System Architecture Case 153",
       "difficulty": "Hard",
       "companies": [
@@ -13014,7 +13014,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1172",
-      "questionNumber": "Q2098",
+      "questionNumber": "Q1968",
       "title": "QSD_W15_154 · Machine Coding Enterprise System Architecture Case 154",
       "difficulty": "Medium",
       "companies": [
@@ -13073,7 +13073,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1173",
-      "questionNumber": "Q2099",
+      "questionNumber": "Q1969",
       "title": "QSD_W15_155 · Machine Coding Enterprise System Architecture Case 155",
       "difficulty": "Medium",
       "companies": [
@@ -13132,7 +13132,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1174",
-      "questionNumber": "Q2100",
+      "questionNumber": "Q1970",
       "title": "QSD_W15_156 · Machine Coding Enterprise System Architecture Case 156",
       "difficulty": "Hard",
       "companies": [
@@ -13191,7 +13191,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1175",
-      "questionNumber": "Q2101",
+      "questionNumber": "Q1971",
       "title": "QSD_W15_157 · Machine Coding Enterprise System Architecture Case 157",
       "difficulty": "Medium",
       "companies": [
@@ -13250,7 +13250,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1176",
-      "questionNumber": "Q2102",
+      "questionNumber": "Q1972",
       "title": "QSD_W15_158 · Machine Coding Enterprise System Architecture Case 158",
       "difficulty": "Medium",
       "companies": [
@@ -13309,7 +13309,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1177",
-      "questionNumber": "Q2103",
+      "questionNumber": "Q1973",
       "title": "QSD_W15_159 · Machine Coding Enterprise System Architecture Case 159",
       "difficulty": "Hard",
       "companies": [
@@ -13368,7 +13368,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1178",
-      "questionNumber": "Q2104",
+      "questionNumber": "Q1974",
       "title": "QSD_W15_160 · Machine Coding Enterprise System Architecture Case 160",
       "difficulty": "Medium",
       "companies": [
@@ -14207,7 +14207,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1192",
-      "questionNumber": "Q2118",
+      "questionNumber": "Q1988",
       "title": "QSD_M2_113 · Machine Coding Production Scale Architecture Case 113",
       "difficulty": "Medium",
       "companies": [
@@ -14266,7 +14266,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1193",
-      "questionNumber": "Q2119",
+      "questionNumber": "Q1989",
       "title": "QSD_M2_114 · Machine Coding Production Scale Architecture Case 114",
       "difficulty": "Hard",
       "companies": [
@@ -14325,7 +14325,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1194",
-      "questionNumber": "Q2120",
+      "questionNumber": "Q1990",
       "title": "QSD_M2_115 · Machine Coding Production Scale Architecture Case 115",
       "difficulty": "Medium",
       "companies": [
@@ -14384,7 +14384,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1195",
-      "questionNumber": "Q2121",
+      "questionNumber": "Q1991",
       "title": "QSD_M2_116 · Machine Coding Production Scale Architecture Case 116",
       "difficulty": "Medium",
       "companies": [
@@ -14443,7 +14443,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1196",
-      "questionNumber": "Q2122",
+      "questionNumber": "Q1992",
       "title": "QSD_M2_117 · Machine Coding Production Scale Architecture Case 117",
       "difficulty": "Hard",
       "companies": [
@@ -14502,7 +14502,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1197",
-      "questionNumber": "Q2123",
+      "questionNumber": "Q1993",
       "title": "QSD_M2_118 · Machine Coding Production Scale Architecture Case 118",
       "difficulty": "Medium",
       "companies": [
@@ -14561,7 +14561,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1198",
-      "questionNumber": "Q2124",
+      "questionNumber": "Q1994",
       "title": "QSD_M2_119 · Machine Coding Production Scale Architecture Case 119",
       "difficulty": "Medium",
       "companies": [
@@ -14620,7 +14620,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1199",
-      "questionNumber": "Q2125",
+      "questionNumber": "Q1995",
       "title": "QSD_M2_120 · Machine Coding Production Scale Architecture Case 120",
       "difficulty": "Hard",
       "companies": [
@@ -14679,7 +14679,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1200",
-      "questionNumber": "Q2126",
+      "questionNumber": "Q1996",
       "title": "QSD_M2_121 · Machine Coding Production Scale Architecture Case 121",
       "difficulty": "Medium",
       "companies": [
@@ -14738,7 +14738,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1201",
-      "questionNumber": "Q2127",
+      "questionNumber": "Q1997",
       "title": "QSD_M2_122 · Machine Coding Production Scale Architecture Case 122",
       "difficulty": "Medium",
       "companies": [
@@ -14797,7 +14797,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1202",
-      "questionNumber": "Q2128",
+      "questionNumber": "Q1998",
       "title": "QSD_M2_123 · Machine Coding Production Scale Architecture Case 123",
       "difficulty": "Hard",
       "companies": [
@@ -14856,7 +14856,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1203",
-      "questionNumber": "Q2129",
+      "questionNumber": "Q1999",
       "title": "QSD_M2_124 · Machine Coding Production Scale Architecture Case 124",
       "difficulty": "Medium",
       "companies": [
@@ -19507,7 +19507,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1272",
-      "questionNumber": "Q2282",
+      "questionNumber": "Q2152",
       "title": "QDSA_M2_112 · Algorithmic Optimization ARRAYS Strategy 112",
       "difficulty": "Medium",
       "companies": [
@@ -19566,7 +19566,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1273",
-      "questionNumber": "Q2283",
+      "questionNumber": "Q2153",
       "title": "QDSA_M2_128 · Algorithmic Optimization ARRAYS Strategy 128",
       "difficulty": "Medium",
       "companies": [
@@ -19625,7 +19625,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1274",
-      "questionNumber": "Q2284",
+      "questionNumber": "Q2154",
       "title": "QDSA_M2_144 · Algorithmic Optimization ARRAYS Strategy 144",
       "difficulty": "Hard",
       "companies": [
@@ -19684,7 +19684,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1275",
-      "questionNumber": "Q2285",
+      "questionNumber": "Q2155",
       "title": "QDSA_LS_16 · Algorithmic Strategy ARRAYS Problem 16",
       "difficulty": "Medium",
       "companies": [
@@ -19743,7 +19743,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1276",
-      "questionNumber": "Q2286",
+      "questionNumber": "Q2156",
       "title": "QDSA_LS_32 · Algorithmic Strategy ARRAYS Problem 32",
       "difficulty": "Medium",
       "companies": [
@@ -19802,7 +19802,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1277",
-      "questionNumber": "Q2287",
+      "questionNumber": "Q2157",
       "title": "QDSA_LS_48 · Algorithmic Strategy ARRAYS Problem 48",
       "difficulty": "Hard",
       "companies": [
@@ -20255,7 +20255,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1282",
-      "questionNumber": "Q2292",
+      "questionNumber": "Q2162",
       "title": "QDSA_MAX_64 · Data Structures & Algorithms ARRAYS Challenge 64",
       "difficulty": "Medium",
       "companies": [
@@ -20314,7 +20314,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1283",
-      "questionNumber": "Q2293",
+      "questionNumber": "Q2163",
       "title": "QDSA_MAX_80 · Data Structures & Algorithms ARRAYS Challenge 80",
       "difficulty": "Medium",
       "companies": [
@@ -20373,7 +20373,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1284",
-      "questionNumber": "Q2294",
+      "questionNumber": "Q2164",
       "title": "QDSA_MAX_96 · Data Structures & Algorithms ARRAYS Challenge 96",
       "difficulty": "Hard",
       "companies": [
@@ -20432,7 +20432,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1285",
-      "questionNumber": "Q2295",
+      "questionNumber": "Q2165",
       "title": "QDSA_W15_160 · Data Structures & Algorithms ARRAYS Mastery 160",
       "difficulty": "Medium",
       "companies": [
@@ -20491,7 +20491,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1286",
-      "questionNumber": "Q2296",
+      "questionNumber": "Q2166",
       "title": "QDSA_W15_176 · Data Structures & Algorithms ARRAYS Mastery 176",
       "difficulty": "Medium",
       "companies": [
@@ -20550,7 +20550,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1287",
-      "questionNumber": "Q2297",
+      "questionNumber": "Q2167",
       "title": "QDSA_W15_192 · Data Structures & Algorithms ARRAYS Mastery 192",
       "difficulty": "Hard",
       "companies": [
@@ -24585,7 +24585,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1335",
-      "questionNumber": "Q2345",
+      "questionNumber": "Q2215",
       "title": "QDSA_M2_107 · Algorithmic Optimization BACKTRACKING Strategy 107",
       "difficulty": "Easy",
       "companies": [
@@ -24644,7 +24644,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1336",
-      "questionNumber": "Q2346",
+      "questionNumber": "Q2216",
       "title": "QDSA_M2_123 · Algorithmic Optimization BACKTRACKING Strategy 123",
       "difficulty": "Hard",
       "companies": [
@@ -24703,7 +24703,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1337",
-      "questionNumber": "Q2347",
+      "questionNumber": "Q2217",
       "title": "QDSA_M2_139 · Algorithmic Optimization BACKTRACKING Strategy 139",
       "difficulty": "Easy",
       "companies": [
@@ -24762,7 +24762,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1338",
-      "questionNumber": "Q2348",
+      "questionNumber": "Q2218",
       "title": "QDSA_LS_11 · Algorithmic Strategy BACKTRACKING Problem 11",
       "difficulty": "Easy",
       "companies": [
@@ -24821,7 +24821,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1339",
-      "questionNumber": "Q2349",
+      "questionNumber": "Q2219",
       "title": "QDSA_LS_27 · Algorithmic Strategy BACKTRACKING Problem 27",
       "difficulty": "Hard",
       "companies": [
@@ -24880,7 +24880,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1340",
-      "questionNumber": "Q2350",
+      "questionNumber": "Q2220",
       "title": "QDSA_LS_43 · Algorithmic Strategy BACKTRACKING Problem 43",
       "difficulty": "Easy",
       "companies": [
@@ -25212,7 +25212,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1344",
-      "questionNumber": "Q2354",
+      "questionNumber": "Q2224",
       "title": "QDSA_MAX_59 · Data Structures & Algorithms BACKTRACKING Challenge 59",
       "difficulty": "Easy",
       "companies": [
@@ -25271,7 +25271,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1345",
-      "questionNumber": "Q2355",
+      "questionNumber": "Q2225",
       "title": "QDSA_MAX_75 · Data Structures & Algorithms BACKTRACKING Challenge 75",
       "difficulty": "Hard",
       "companies": [
@@ -25330,7 +25330,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1346",
-      "questionNumber": "Q2356",
+      "questionNumber": "Q2226",
       "title": "QDSA_MAX_91 · Data Structures & Algorithms BACKTRACKING Challenge 91",
       "difficulty": "Easy",
       "companies": [
@@ -25389,7 +25389,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1347",
-      "questionNumber": "Q2357",
+      "questionNumber": "Q2227",
       "title": "QDSA_W15_155 · Data Structures & Algorithms BACKTRACKING Mastery 155",
       "difficulty": "Easy",
       "companies": [
@@ -25448,7 +25448,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1348",
-      "questionNumber": "Q2358",
+      "questionNumber": "Q2228",
       "title": "QDSA_W15_171 · Data Structures & Algorithms BACKTRACKING Mastery 171",
       "difficulty": "Hard",
       "companies": [
@@ -25507,7 +25507,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1349",
-      "questionNumber": "Q2359",
+      "questionNumber": "Q2229",
       "title": "QDSA_W15_187 · Data Structures & Algorithms BACKTRACKING Mastery 187",
       "difficulty": "Easy",
       "companies": [
@@ -26914,7 +26914,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1368",
-      "questionNumber": "Q2378",
+      "questionNumber": "Q2248",
       "title": "QDSA_M2_103 · Algorithmic Optimization BINARY-SEARCH Strategy 103",
       "difficulty": "Easy",
       "companies": [
@@ -26973,7 +26973,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1369",
-      "questionNumber": "Q2379",
+      "questionNumber": "Q2249",
       "title": "QDSA_M2_119 · Algorithmic Optimization BINARY-SEARCH Strategy 119",
       "difficulty": "Easy",
       "companies": [
@@ -27032,7 +27032,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1370",
-      "questionNumber": "Q2380",
+      "questionNumber": "Q2250",
       "title": "QDSA_M2_135 · Algorithmic Optimization BINARY-SEARCH Strategy 135",
       "difficulty": "Hard",
       "companies": [
@@ -27091,7 +27091,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1371",
-      "questionNumber": "Q2381",
+      "questionNumber": "Q2251",
       "title": "QDSA_LS_23 · Algorithmic Strategy BINARY-SEARCH Problem 23",
       "difficulty": "Easy",
       "companies": [
@@ -27150,7 +27150,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1372",
-      "questionNumber": "Q2382",
+      "questionNumber": "Q2252",
       "title": "QDSA_LS_39 · Algorithmic Strategy BINARY-SEARCH Problem 39",
       "difficulty": "Hard",
       "companies": [
@@ -27209,7 +27209,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1373",
-      "questionNumber": "Q2383",
+      "questionNumber": "Q2253",
       "title": "QDSA_LS_7 · Algorithmic Strategy BINARY-SEARCH Problem 7",
       "difficulty": "Easy",
       "companies": [
@@ -27643,7 +27643,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1378",
-      "questionNumber": "Q2388",
+      "questionNumber": "Q2258",
       "title": "QDSA_MAX_55 · Data Structures & Algorithms BINARY-SEARCH Challenge 55",
       "difficulty": "Easy",
       "companies": [
@@ -27702,7 +27702,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1379",
-      "questionNumber": "Q2389",
+      "questionNumber": "Q2259",
       "title": "QDSA_MAX_71 · Data Structures & Algorithms BINARY-SEARCH Challenge 71",
       "difficulty": "Easy",
       "companies": [
@@ -27761,7 +27761,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1380",
-      "questionNumber": "Q2390",
+      "questionNumber": "Q2260",
       "title": "QDSA_MAX_87 · Data Structures & Algorithms BINARY-SEARCH Challenge 87",
       "difficulty": "Hard",
       "companies": [
@@ -27820,7 +27820,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1381",
-      "questionNumber": "Q2391",
+      "questionNumber": "Q2261",
       "title": "QDSA_W15_151 · Data Structures & Algorithms BINARY-SEARCH Mastery 151",
       "difficulty": "Easy",
       "companies": [
@@ -27879,7 +27879,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1382",
-      "questionNumber": "Q2392",
+      "questionNumber": "Q2262",
       "title": "QDSA_W15_167 · Data Structures & Algorithms BINARY-SEARCH Mastery 167",
       "difficulty": "Easy",
       "companies": [
@@ -27938,7 +27938,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1383",
-      "questionNumber": "Q2393",
+      "questionNumber": "Q2263",
       "title": "QDSA_W15_183 · Data Structures & Algorithms BINARY-SEARCH Mastery 183",
       "difficulty": "Hard",
       "companies": [
@@ -27997,7 +27997,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1384",
-      "questionNumber": "Q2394",
+      "questionNumber": "Q2264",
       "title": "QDSA_W15_199 · Data Structures & Algorithms BINARY-SEARCH Mastery 199",
       "difficulty": "Easy",
       "companies": [
@@ -29448,7 +29448,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1404",
-      "questionNumber": "Q2414",
+      "questionNumber": "Q2284",
       "title": "QDSA_M2_102 · Algorithmic Optimization BINARY-SEARCH-TREE Strategy 102",
       "difficulty": "Hard",
       "companies": [
@@ -29507,7 +29507,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1405",
-      "questionNumber": "Q2415",
+      "questionNumber": "Q2285",
       "title": "QDSA_M2_118 · Algorithmic Optimization BINARY-SEARCH-TREE Strategy 118",
       "difficulty": "Medium",
       "companies": [
@@ -29566,7 +29566,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1406",
-      "questionNumber": "Q2416",
+      "questionNumber": "Q2286",
       "title": "QDSA_M2_134 · Algorithmic Optimization BINARY-SEARCH-TREE Strategy 134",
       "difficulty": "Medium",
       "companies": [
@@ -29625,7 +29625,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1407",
-      "questionNumber": "Q2417",
+      "questionNumber": "Q2287",
       "title": "QDSA_M2_150 · Algorithmic Optimization BINARY-SEARCH-TREE Strategy 150",
       "difficulty": "Hard",
       "companies": [
@@ -29684,7 +29684,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1408",
-      "questionNumber": "Q2418",
+      "questionNumber": "Q2288",
       "title": "QDSA_LS_22 · Algorithmic Strategy BINARY-SEARCH-TREE Problem 22",
       "difficulty": "Medium",
       "companies": [
@@ -29743,7 +29743,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1409",
-      "questionNumber": "Q2419",
+      "questionNumber": "Q2289",
       "title": "QDSA_LS_38 · Algorithmic Strategy BINARY-SEARCH-TREE Problem 38",
       "difficulty": "Medium",
       "companies": [
@@ -29802,7 +29802,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1410",
-      "questionNumber": "Q2420",
+      "questionNumber": "Q2290",
       "title": "QDSA_LS_6 · Algorithmic Strategy BINARY-SEARCH-TREE Problem 6",
       "difficulty": "Hard",
       "companies": [
@@ -29976,7 +29976,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1413",
-      "questionNumber": "Q2423",
+      "questionNumber": "Q2293",
       "title": "QDSA_MAX_54 · Data Structures & Algorithms BINARY-SEARCH-TREE Challenge 54",
       "difficulty": "Hard",
       "companies": [
@@ -30035,7 +30035,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1414",
-      "questionNumber": "Q2424",
+      "questionNumber": "Q2294",
       "title": "QDSA_MAX_70 · Data Structures & Algorithms BINARY-SEARCH-TREE Challenge 70",
       "difficulty": "Medium",
       "companies": [
@@ -30094,7 +30094,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1415",
-      "questionNumber": "Q2425",
+      "questionNumber": "Q2295",
       "title": "QDSA_MAX_86 · Data Structures & Algorithms BINARY-SEARCH-TREE Challenge 86",
       "difficulty": "Medium",
       "companies": [
@@ -30153,7 +30153,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1416",
-      "questionNumber": "Q2426",
+      "questionNumber": "Q2296",
       "title": "QDSA_W15_166 · Data Structures & Algorithms BINARY-SEARCH-TREE Mastery 166",
       "difficulty": "Medium",
       "companies": [
@@ -30212,7 +30212,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1417",
-      "questionNumber": "Q2427",
+      "questionNumber": "Q2297",
       "title": "QDSA_W15_182 · Data Structures & Algorithms BINARY-SEARCH-TREE Mastery 182",
       "difficulty": "Medium",
       "companies": [
@@ -30271,7 +30271,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1418",
-      "questionNumber": "Q2428",
+      "questionNumber": "Q2298",
       "title": "QDSA_W15_198 · Data Structures & Algorithms BINARY-SEARCH-TREE Mastery 198",
       "difficulty": "Hard",
       "companies": [
@@ -30732,7 +30732,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1424",
-      "questionNumber": "Q2434",
+      "questionNumber": "Q2304",
       "title": "QDSA_M2_101 · Algorithmic Optimization BINARY-TREE Strategy 101",
       "difficulty": "Easy",
       "companies": [
@@ -30791,7 +30791,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1425",
-      "questionNumber": "Q2435",
+      "questionNumber": "Q2305",
       "title": "QDSA_M2_117 · Algorithmic Optimization BINARY-TREE Strategy 117",
       "difficulty": "Hard",
       "companies": [
@@ -30850,7 +30850,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1426",
-      "questionNumber": "Q2436",
+      "questionNumber": "Q2306",
       "title": "QDSA_M2_133 · Algorithmic Optimization BINARY-TREE Strategy 133",
       "difficulty": "Easy",
       "companies": [
@@ -30909,7 +30909,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1427",
-      "questionNumber": "Q2437",
+      "questionNumber": "Q2307",
       "title": "QDSA_M2_149 · Algorithmic Optimization BINARY-TREE Strategy 149",
       "difficulty": "Easy",
       "companies": [
@@ -30968,7 +30968,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1428",
-      "questionNumber": "Q2438",
+      "questionNumber": "Q2308",
       "title": "QDSA_LS_21 · Algorithmic Strategy BINARY-TREE Problem 21",
       "difficulty": "Hard",
       "companies": [
@@ -31027,7 +31027,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1429",
-      "questionNumber": "Q2439",
+      "questionNumber": "Q2309",
       "title": "QDSA_LS_37 · Algorithmic Strategy BINARY-TREE Problem 37",
       "difficulty": "Easy",
       "companies": [
@@ -31086,7 +31086,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1430",
-      "questionNumber": "Q2440",
+      "questionNumber": "Q2310",
       "title": "QDSA_LS_5 · Algorithmic Strategy BINARY-TREE Problem 5",
       "difficulty": "Easy",
       "companies": [
@@ -32325,7 +32325,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1448",
-      "questionNumber": "Q2458",
+      "questionNumber": "Q2328",
       "title": "QDSA_MAX_53 · Data Structures & Algorithms BINARY-TREE Challenge 53",
       "difficulty": "Easy",
       "companies": [
@@ -32384,7 +32384,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1449",
-      "questionNumber": "Q2459",
+      "questionNumber": "Q2329",
       "title": "QDSA_MAX_69 · Data Structures & Algorithms BINARY-TREE Challenge 69",
       "difficulty": "Hard",
       "companies": [
@@ -32443,7 +32443,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1450",
-      "questionNumber": "Q2460",
+      "questionNumber": "Q2330",
       "title": "QDSA_MAX_85 · Data Structures & Algorithms BINARY-TREE Challenge 85",
       "difficulty": "Easy",
       "companies": [
@@ -32502,7 +32502,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1451",
-      "questionNumber": "Q2461",
+      "questionNumber": "Q2331",
       "title": "QDSA_W15_165 · Data Structures & Algorithms BINARY-TREE Mastery 165",
       "difficulty": "Hard",
       "companies": [
@@ -32561,7 +32561,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1452",
-      "questionNumber": "Q2462",
+      "questionNumber": "Q2332",
       "title": "QDSA_W15_181 · Data Structures & Algorithms BINARY-TREE Mastery 181",
       "difficulty": "Easy",
       "companies": [
@@ -32620,7 +32620,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1453",
-      "questionNumber": "Q2463",
+      "questionNumber": "Q2333",
       "title": "QDSA_W15_197 · Data Structures & Algorithms BINARY-TREE Mastery 197",
       "difficulty": "Easy",
       "companies": [
@@ -34445,7 +34445,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1480",
-      "questionNumber": "Q2490",
+      "questionNumber": "Q2360",
       "title": "QDSA_M2_109 · Algorithmic Optimization BIT-MANIPULATION Strategy 109",
       "difficulty": "Easy",
       "companies": [
@@ -34504,7 +34504,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1481",
-      "questionNumber": "Q2491",
+      "questionNumber": "Q2361",
       "title": "QDSA_M2_125 · Algorithmic Optimization BIT-MANIPULATION Strategy 125",
       "difficulty": "Easy",
       "companies": [
@@ -34563,7 +34563,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1482",
-      "questionNumber": "Q2492",
+      "questionNumber": "Q2362",
       "title": "QDSA_M2_141 · Algorithmic Optimization BIT-MANIPULATION Strategy 141",
       "difficulty": "Hard",
       "companies": [
@@ -34622,7 +34622,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1483",
-      "questionNumber": "Q2493",
+      "questionNumber": "Q2363",
       "title": "QDSA_LS_13 · Algorithmic Strategy BIT-MANIPULATION Problem 13",
       "difficulty": "Easy",
       "companies": [
@@ -34681,7 +34681,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1484",
-      "questionNumber": "Q2494",
+      "questionNumber": "Q2364",
       "title": "QDSA_LS_29 · Algorithmic Strategy BIT-MANIPULATION Problem 29",
       "difficulty": "Easy",
       "companies": [
@@ -34740,7 +34740,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1485",
-      "questionNumber": "Q2495",
+      "questionNumber": "Q2365",
       "title": "QDSA_LS_45 · Algorithmic Strategy BIT-MANIPULATION Problem 45",
       "difficulty": "Hard",
       "companies": [
@@ -35142,7 +35142,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1491",
-      "questionNumber": "Q2501",
+      "questionNumber": "Q2371",
       "title": "QDSA_MAX_61 · Data Structures & Algorithms BIT-MANIPULATION Challenge 61",
       "difficulty": "Easy",
       "companies": [
@@ -35201,7 +35201,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1492",
-      "questionNumber": "Q2502",
+      "questionNumber": "Q2372",
       "title": "QDSA_MAX_77 · Data Structures & Algorithms BIT-MANIPULATION Challenge 77",
       "difficulty": "Easy",
       "companies": [
@@ -35260,7 +35260,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1493",
-      "questionNumber": "Q2503",
+      "questionNumber": "Q2373",
       "title": "QDSA_MAX_93 · Data Structures & Algorithms BIT-MANIPULATION Challenge 93",
       "difficulty": "Hard",
       "companies": [
@@ -35319,7 +35319,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1494",
-      "questionNumber": "Q2504",
+      "questionNumber": "Q2374",
       "title": "QDSA_W15_157 · Data Structures & Algorithms BIT-MANIPULATION Mastery 157",
       "difficulty": "Easy",
       "companies": [
@@ -35378,7 +35378,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1495",
-      "questionNumber": "Q2505",
+      "questionNumber": "Q2375",
       "title": "QDSA_W15_173 · Data Structures & Algorithms BIT-MANIPULATION Mastery 173",
       "difficulty": "Easy",
       "companies": [
@@ -35437,7 +35437,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1496",
-      "questionNumber": "Q2506",
+      "questionNumber": "Q2376",
       "title": "QDSA_W15_189 · Data Structures & Algorithms BIT-MANIPULATION Mastery 189",
       "difficulty": "Hard",
       "companies": [
@@ -36499,7 +36499,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1512",
-      "questionNumber": "Q2522",
+      "questionNumber": "Q2392",
       "title": "QDSA_M2_106 · Algorithmic Optimization DP Strategy 106",
       "difficulty": "Medium",
       "companies": [
@@ -36558,7 +36558,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1513",
-      "questionNumber": "Q2523",
+      "questionNumber": "Q2393",
       "title": "QDSA_M2_122 · Algorithmic Optimization DP Strategy 122",
       "difficulty": "Medium",
       "companies": [
@@ -36617,7 +36617,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1514",
-      "questionNumber": "Q2524",
+      "questionNumber": "Q2394",
       "title": "QDSA_M2_138 · Algorithmic Optimization DP Strategy 138",
       "difficulty": "Hard",
       "companies": [
@@ -36676,7 +36676,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1515",
-      "questionNumber": "Q2525",
+      "questionNumber": "Q2395",
       "title": "QDSA_LS_10 · Algorithmic Strategy DP Problem 10",
       "difficulty": "Medium",
       "companies": [
@@ -36735,7 +36735,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1516",
-      "questionNumber": "Q2526",
+      "questionNumber": "Q2396",
       "title": "QDSA_LS_26 · Algorithmic Strategy DP Problem 26",
       "difficulty": "Medium",
       "companies": [
@@ -36794,7 +36794,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1517",
-      "questionNumber": "Q2527",
+      "questionNumber": "Q2397",
       "title": "QDSA_LS_42 · Algorithmic Strategy DP Problem 42",
       "difficulty": "Hard",
       "companies": [
@@ -38002,7 +38002,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1530",
-      "questionNumber": "Q2540",
+      "questionNumber": "Q2410",
       "title": "QDSA_MAX_58 · Data Structures & Algorithms DP Challenge 58",
       "difficulty": "Medium",
       "companies": [
@@ -38061,7 +38061,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1531",
-      "questionNumber": "Q2541",
+      "questionNumber": "Q2411",
       "title": "QDSA_MAX_74 · Data Structures & Algorithms DP Challenge 74",
       "difficulty": "Medium",
       "companies": [
@@ -38120,7 +38120,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1532",
-      "questionNumber": "Q2542",
+      "questionNumber": "Q2412",
       "title": "QDSA_MAX_90 · Data Structures & Algorithms DP Challenge 90",
       "difficulty": "Hard",
       "companies": [
@@ -38179,7 +38179,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1533",
-      "questionNumber": "Q2543",
+      "questionNumber": "Q2413",
       "title": "QDSA_W15_154 · Data Structures & Algorithms DP Mastery 154",
       "difficulty": "Medium",
       "companies": [
@@ -38238,7 +38238,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1534",
-      "questionNumber": "Q2544",
+      "questionNumber": "Q2414",
       "title": "QDSA_W15_170 · Data Structures & Algorithms DP Mastery 170",
       "difficulty": "Medium",
       "companies": [
@@ -38297,7 +38297,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1535",
-      "questionNumber": "Q2545",
+      "questionNumber": "Q2415",
       "title": "QDSA_W15_186 · Data Structures & Algorithms DP Mastery 186",
       "difficulty": "Hard",
       "companies": [
@@ -41666,7 +41666,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1579",
-      "questionNumber": "Q2589",
+      "questionNumber": "Q2459",
       "title": "QDSA_M2_105 · Algorithmic Optimization GRAPH Strategy 105",
       "difficulty": "Hard",
       "companies": [
@@ -41725,7 +41725,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1580",
-      "questionNumber": "Q2590",
+      "questionNumber": "Q2460",
       "title": "QDSA_M2_121 · Algorithmic Optimization GRAPH Strategy 121",
       "difficulty": "Easy",
       "companies": [
@@ -41784,7 +41784,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1581",
-      "questionNumber": "Q2591",
+      "questionNumber": "Q2461",
       "title": "QDSA_M2_137 · Algorithmic Optimization GRAPH Strategy 137",
       "difficulty": "Easy",
       "companies": [
@@ -41843,7 +41843,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1582",
-      "questionNumber": "Q2592",
+      "questionNumber": "Q2462",
       "title": "QDSA_LS_25 · Algorithmic Strategy GRAPH Problem 25",
       "difficulty": "Easy",
       "companies": [
@@ -41902,7 +41902,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1583",
-      "questionNumber": "Q2593",
+      "questionNumber": "Q2463",
       "title": "QDSA_LS_41 · Algorithmic Strategy GRAPH Problem 41",
       "difficulty": "Easy",
       "companies": [
@@ -41961,7 +41961,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1584",
-      "questionNumber": "Q2594",
+      "questionNumber": "Q2464",
       "title": "QDSA_LS_9 · Algorithmic Strategy GRAPH Problem 9",
       "difficulty": "Hard",
       "companies": [
@@ -43350,7 +43350,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1598",
-      "questionNumber": "Q2608",
+      "questionNumber": "Q2478",
       "title": "QDSA_MAX_57 · Data Structures & Algorithms GRAPH Challenge 57",
       "difficulty": "Hard",
       "companies": [
@@ -43409,7 +43409,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1599",
-      "questionNumber": "Q2609",
+      "questionNumber": "Q2479",
       "title": "QDSA_MAX_73 · Data Structures & Algorithms GRAPH Challenge 73",
       "difficulty": "Easy",
       "companies": [
@@ -43468,7 +43468,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1600",
-      "questionNumber": "Q2610",
+      "questionNumber": "Q2480",
       "title": "QDSA_MAX_89 · Data Structures & Algorithms GRAPH Challenge 89",
       "difficulty": "Easy",
       "companies": [
@@ -43527,7 +43527,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1601",
-      "questionNumber": "Q2611",
+      "questionNumber": "Q2481",
       "title": "QDSA_W15_153 · Data Structures & Algorithms GRAPH Mastery 153",
       "difficulty": "Hard",
       "companies": [
@@ -43586,7 +43586,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1602",
-      "questionNumber": "Q2612",
+      "questionNumber": "Q2482",
       "title": "QDSA_W15_169 · Data Structures & Algorithms GRAPH Mastery 169",
       "difficulty": "Easy",
       "companies": [
@@ -43645,7 +43645,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1603",
-      "questionNumber": "Q2613",
+      "questionNumber": "Q2483",
       "title": "QDSA_W15_185 · Data Structures & Algorithms GRAPH Mastery 185",
       "difficulty": "Easy",
       "companies": [
@@ -47136,7 +47136,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1647",
-      "questionNumber": "Q2657",
+      "questionNumber": "Q2527",
       "title": "QDSA_M2_111 · Algorithmic Optimization HASHING Strategy 111",
       "difficulty": "Hard",
       "companies": [
@@ -47195,7 +47195,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1648",
-      "questionNumber": "Q2658",
+      "questionNumber": "Q2528",
       "title": "QDSA_M2_127 · Algorithmic Optimization HASHING Strategy 127",
       "difficulty": "Easy",
       "companies": [
@@ -47254,7 +47254,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1649",
-      "questionNumber": "Q2659",
+      "questionNumber": "Q2529",
       "title": "QDSA_M2_143 · Algorithmic Optimization HASHING Strategy 143",
       "difficulty": "Easy",
       "companies": [
@@ -47313,7 +47313,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1650",
-      "questionNumber": "Q2660",
+      "questionNumber": "Q2530",
       "title": "QDSA_LS_15 · Algorithmic Strategy HASHING Problem 15",
       "difficulty": "Hard",
       "companies": [
@@ -47372,7 +47372,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1651",
-      "questionNumber": "Q2661",
+      "questionNumber": "Q2531",
       "title": "QDSA_LS_31 · Algorithmic Strategy HASHING Problem 31",
       "difficulty": "Easy",
       "companies": [
@@ -47431,7 +47431,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1652",
-      "questionNumber": "Q2662",
+      "questionNumber": "Q2532",
       "title": "QDSA_LS_47 · Algorithmic Strategy HASHING Problem 47",
       "difficulty": "Easy",
       "companies": [
@@ -47745,7 +47745,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1656",
-      "questionNumber": "Q2666",
+      "questionNumber": "Q2536",
       "title": "QDSA_MAX_63 · Data Structures & Algorithms HASHING Challenge 63",
       "difficulty": "Hard",
       "companies": [
@@ -47804,7 +47804,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1657",
-      "questionNumber": "Q2667",
+      "questionNumber": "Q2537",
       "title": "QDSA_MAX_79 · Data Structures & Algorithms HASHING Challenge 79",
       "difficulty": "Easy",
       "companies": [
@@ -47863,7 +47863,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1658",
-      "questionNumber": "Q2668",
+      "questionNumber": "Q2538",
       "title": "QDSA_MAX_95 · Data Structures & Algorithms HASHING Challenge 95",
       "difficulty": "Easy",
       "companies": [
@@ -47922,7 +47922,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1659",
-      "questionNumber": "Q2669",
+      "questionNumber": "Q2539",
       "title": "QDSA_W15_159 · Data Structures & Algorithms HASHING Mastery 159",
       "difficulty": "Hard",
       "companies": [
@@ -47981,7 +47981,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1660",
-      "questionNumber": "Q2670",
+      "questionNumber": "Q2540",
       "title": "QDSA_W15_175 · Data Structures & Algorithms HASHING Mastery 175",
       "difficulty": "Easy",
       "companies": [
@@ -48040,7 +48040,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1661",
-      "questionNumber": "Q2671",
+      "questionNumber": "Q2541",
       "title": "QDSA_W15_191 · Data Structures & Algorithms HASHING Mastery 191",
       "difficulty": "Easy",
       "companies": [
@@ -49423,7 +49423,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1679",
-      "questionNumber": "Q2689",
+      "questionNumber": "Q2559",
       "title": "QDSA_M2_104 · Algorithmic Optimization HEAP Strategy 104",
       "difficulty": "Medium",
       "companies": [
@@ -49482,7 +49482,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1680",
-      "questionNumber": "Q2690",
+      "questionNumber": "Q2560",
       "title": "QDSA_M2_120 · Algorithmic Optimization HEAP Strategy 120",
       "difficulty": "Hard",
       "companies": [
@@ -49541,7 +49541,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1681",
-      "questionNumber": "Q2691",
+      "questionNumber": "Q2561",
       "title": "QDSA_M2_136 · Algorithmic Optimization HEAP Strategy 136",
       "difficulty": "Medium",
       "companies": [
@@ -49600,7 +49600,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1682",
-      "questionNumber": "Q2692",
+      "questionNumber": "Q2562",
       "title": "QDSA_LS_24 · Algorithmic Strategy HEAP Problem 24",
       "difficulty": "Hard",
       "companies": [
@@ -49659,7 +49659,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1683",
-      "questionNumber": "Q2693",
+      "questionNumber": "Q2563",
       "title": "QDSA_LS_40 · Algorithmic Strategy HEAP Problem 40",
       "difficulty": "Medium",
       "companies": [
@@ -49718,7 +49718,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1684",
-      "questionNumber": "Q2694",
+      "questionNumber": "Q2564",
       "title": "QDSA_LS_8 · Algorithmic Strategy HEAP Problem 8",
       "difficulty": "Medium",
       "companies": [
@@ -49777,7 +49777,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1685",
-      "questionNumber": "Q2695",
+      "questionNumber": "Q2565",
       "title": "QDSA_MAX_56 · Data Structures & Algorithms HEAP Challenge 56",
       "difficulty": "Medium",
       "companies": [
@@ -49836,7 +49836,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1686",
-      "questionNumber": "Q2696",
+      "questionNumber": "Q2566",
       "title": "QDSA_MAX_72 · Data Structures & Algorithms HEAP Challenge 72",
       "difficulty": "Hard",
       "companies": [
@@ -49895,7 +49895,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1687",
-      "questionNumber": "Q2697",
+      "questionNumber": "Q2567",
       "title": "QDSA_MAX_88 · Data Structures & Algorithms HEAP Challenge 88",
       "difficulty": "Medium",
       "companies": [
@@ -49954,7 +49954,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1688",
-      "questionNumber": "Q2698",
+      "questionNumber": "Q2568",
       "title": "QDSA_W15_152 · Data Structures & Algorithms HEAP Mastery 152",
       "difficulty": "Medium",
       "companies": [
@@ -50013,7 +50013,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1689",
-      "questionNumber": "Q2699",
+      "questionNumber": "Q2569",
       "title": "QDSA_W15_168 · Data Structures & Algorithms HEAP Mastery 168",
       "difficulty": "Hard",
       "companies": [
@@ -50072,7 +50072,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1690",
-      "questionNumber": "Q2700",
+      "questionNumber": "Q2570",
       "title": "QDSA_W15_184 · Data Structures & Algorithms HEAP Mastery 184",
       "difficulty": "Medium",
       "companies": [
@@ -50131,7 +50131,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1691",
-      "questionNumber": "Q2701",
+      "questionNumber": "Q2571",
       "title": "QDSA_W15_200 · Data Structures & Algorithms HEAP Mastery 200",
       "difficulty": "Medium",
       "companies": [
@@ -52131,7 +52131,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1717",
-      "questionNumber": "Q2727",
+      "questionNumber": "Q2597",
       "title": "QDSA_M2_114 · Algorithmic Optimization LINKED-LIST Strategy 114",
       "difficulty": "Hard",
       "companies": [
@@ -52190,7 +52190,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1718",
-      "questionNumber": "Q2728",
+      "questionNumber": "Q2598",
       "title": "QDSA_M2_130 · Algorithmic Optimization LINKED-LIST Strategy 130",
       "difficulty": "Medium",
       "companies": [
@@ -52249,7 +52249,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1719",
-      "questionNumber": "Q2729",
+      "questionNumber": "Q2599",
       "title": "QDSA_M2_146 · Algorithmic Optimization LINKED-LIST Strategy 146",
       "difficulty": "Medium",
       "companies": [
@@ -52308,7 +52308,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1720",
-      "questionNumber": "Q2730",
+      "questionNumber": "Q2600",
       "title": "QDSA_LS_18 · Algorithmic Strategy LINKED-LIST Problem 18",
       "difficulty": "Hard",
       "companies": [
@@ -52367,7 +52367,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1721",
-      "questionNumber": "Q2731",
+      "questionNumber": "Q2601",
       "title": "QDSA_LS_2 · Algorithmic Strategy LINKED-LIST Problem 2",
       "difficulty": "Medium",
       "companies": [
@@ -52426,7 +52426,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1722",
-      "questionNumber": "Q2732",
+      "questionNumber": "Q2602",
       "title": "QDSA_LS_34 · Algorithmic Strategy LINKED-LIST Problem 34",
       "difficulty": "Medium",
       "companies": [
@@ -52485,7 +52485,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1723",
-      "questionNumber": "Q2733",
+      "questionNumber": "Q2603",
       "title": "QDSA_LS_50 · Algorithmic Strategy LINKED-LIST Problem 50",
       "difficulty": "Medium",
       "companies": [
@@ -52632,7 +52632,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1725",
-      "questionNumber": "Q2735",
+      "questionNumber": "Q2605",
       "title": "QDSA_MAX_66 · Data Structures & Algorithms LINKED-LIST Challenge 66",
       "difficulty": "Hard",
       "companies": [
@@ -52691,7 +52691,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1726",
-      "questionNumber": "Q2736",
+      "questionNumber": "Q2606",
       "title": "QDSA_MAX_82 · Data Structures & Algorithms LINKED-LIST Challenge 82",
       "difficulty": "Medium",
       "companies": [
@@ -52750,7 +52750,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1727",
-      "questionNumber": "Q2737",
+      "questionNumber": "Q2607",
       "title": "QDSA_MAX_98 · Data Structures & Algorithms LINKED-LIST Challenge 98",
       "difficulty": "Medium",
       "companies": [
@@ -52809,7 +52809,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1728",
-      "questionNumber": "Q2738",
+      "questionNumber": "Q2608",
       "title": "QDSA_W15_162 · Data Structures & Algorithms LINKED-LIST Mastery 162",
       "difficulty": "Hard",
       "companies": [
@@ -52868,7 +52868,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1729",
-      "questionNumber": "Q2739",
+      "questionNumber": "Q2609",
       "title": "QDSA_W15_178 · Data Structures & Algorithms LINKED-LIST Mastery 178",
       "difficulty": "Medium",
       "companies": [
@@ -52927,7 +52927,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1730",
-      "questionNumber": "Q2740",
+      "questionNumber": "Q2610",
       "title": "QDSA_W15_194 · Data Structures & Algorithms LINKED-LIST Mastery 194",
       "difficulty": "Medium",
       "companies": [
@@ -57076,7 +57076,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1786",
-      "questionNumber": "Q2796",
+      "questionNumber": "Q2666",
       "title": "QDSA_M2_116 · Algorithmic Optimization QUEUE Strategy 116",
       "difficulty": "Medium",
       "companies": [
@@ -57135,7 +57135,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1787",
-      "questionNumber": "Q2797",
+      "questionNumber": "Q2667",
       "title": "QDSA_M2_132 · Algorithmic Optimization QUEUE Strategy 132",
       "difficulty": "Hard",
       "companies": [
@@ -57194,7 +57194,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1788",
-      "questionNumber": "Q2798",
+      "questionNumber": "Q2668",
       "title": "QDSA_M2_148 · Algorithmic Optimization QUEUE Strategy 148",
       "difficulty": "Medium",
       "companies": [
@@ -57253,7 +57253,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1789",
-      "questionNumber": "Q2799",
+      "questionNumber": "Q2669",
       "title": "QDSA_LS_20 · Algorithmic Strategy QUEUE Problem 20",
       "difficulty": "Medium",
       "companies": [
@@ -57312,7 +57312,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1790",
-      "questionNumber": "Q2800",
+      "questionNumber": "Q2670",
       "title": "QDSA_LS_36 · Algorithmic Strategy QUEUE Problem 36",
       "difficulty": "Hard",
       "companies": [
@@ -57371,7 +57371,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1791",
-      "questionNumber": "Q2801",
+      "questionNumber": "Q2671",
       "title": "QDSA_LS_4 · Algorithmic Strategy QUEUE Problem 4",
       "difficulty": "Medium",
       "companies": [
@@ -57430,7 +57430,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1792",
-      "questionNumber": "Q2802",
+      "questionNumber": "Q2672",
       "title": "QDSA_MAX_100 · Data Structures & Algorithms QUEUE Challenge 100",
       "difficulty": "Medium",
       "companies": [
@@ -57489,7 +57489,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1793",
-      "questionNumber": "Q2803",
+      "questionNumber": "Q2673",
       "title": "QDSA_MAX_52 · Data Structures & Algorithms QUEUE Challenge 52",
       "difficulty": "Medium",
       "companies": [
@@ -57548,7 +57548,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1794",
-      "questionNumber": "Q2804",
+      "questionNumber": "Q2674",
       "title": "QDSA_MAX_68 · Data Structures & Algorithms QUEUE Challenge 68",
       "difficulty": "Medium",
       "companies": [
@@ -57607,7 +57607,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1795",
-      "questionNumber": "Q2805",
+      "questionNumber": "Q2675",
       "title": "QDSA_MAX_84 · Data Structures & Algorithms QUEUE Challenge 84",
       "difficulty": "Hard",
       "companies": [
@@ -57666,7 +57666,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1796",
-      "questionNumber": "Q2806",
+      "questionNumber": "Q2676",
       "title": "QDSA_W15_164 · Data Structures & Algorithms QUEUE Mastery 164",
       "difficulty": "Medium",
       "companies": [
@@ -57725,7 +57725,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1797",
-      "questionNumber": "Q2807",
+      "questionNumber": "Q2677",
       "title": "QDSA_W15_180 · Data Structures & Algorithms QUEUE Mastery 180",
       "difficulty": "Hard",
       "companies": [
@@ -57784,7 +57784,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1798",
-      "questionNumber": "Q2808",
+      "questionNumber": "Q2678",
       "title": "QDSA_W15_196 · Data Structures & Algorithms QUEUE Mastery 196",
       "difficulty": "Medium",
       "companies": [
@@ -60087,7 +60087,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1826",
-      "questionNumber": "Q2836",
+      "questionNumber": "Q2706",
       "title": "QDSA_M2_110 · Algorithmic Optimization SORTING Strategy 110",
       "difficulty": "Medium",
       "companies": [
@@ -60146,7 +60146,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1827",
-      "questionNumber": "Q2837",
+      "questionNumber": "Q2707",
       "title": "QDSA_M2_126 · Algorithmic Optimization SORTING Strategy 126",
       "difficulty": "Hard",
       "companies": [
@@ -60205,7 +60205,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1828",
-      "questionNumber": "Q2838",
+      "questionNumber": "Q2708",
       "title": "QDSA_M2_142 · Algorithmic Optimization SORTING Strategy 142",
       "difficulty": "Medium",
       "companies": [
@@ -60264,7 +60264,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1829",
-      "questionNumber": "Q2839",
+      "questionNumber": "Q2709",
       "title": "QDSA_LS_14 · Algorithmic Strategy SORTING Problem 14",
       "difficulty": "Medium",
       "companies": [
@@ -60323,7 +60323,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1830",
-      "questionNumber": "Q2840",
+      "questionNumber": "Q2710",
       "title": "QDSA_LS_30 · Algorithmic Strategy SORTING Problem 30",
       "difficulty": "Hard",
       "companies": [
@@ -60382,7 +60382,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1831",
-      "questionNumber": "Q2841",
+      "questionNumber": "Q2711",
       "title": "QDSA_LS_46 · Algorithmic Strategy SORTING Problem 46",
       "difficulty": "Medium",
       "companies": [
@@ -60581,7 +60581,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1833",
-      "questionNumber": "Q2843",
+      "questionNumber": "Q2713",
       "title": "QDSA_MAX_62 · Data Structures & Algorithms SORTING Challenge 62",
       "difficulty": "Medium",
       "companies": [
@@ -60640,7 +60640,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1834",
-      "questionNumber": "Q2844",
+      "questionNumber": "Q2714",
       "title": "QDSA_MAX_78 · Data Structures & Algorithms SORTING Challenge 78",
       "difficulty": "Hard",
       "companies": [
@@ -60699,7 +60699,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1835",
-      "questionNumber": "Q2845",
+      "questionNumber": "Q2715",
       "title": "QDSA_MAX_94 · Data Structures & Algorithms SORTING Challenge 94",
       "difficulty": "Medium",
       "companies": [
@@ -60758,7 +60758,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1836",
-      "questionNumber": "Q2846",
+      "questionNumber": "Q2716",
       "title": "QDSA_W15_158 · Data Structures & Algorithms SORTING Mastery 158",
       "difficulty": "Medium",
       "companies": [
@@ -60817,7 +60817,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1837",
-      "questionNumber": "Q2847",
+      "questionNumber": "Q2717",
       "title": "QDSA_W15_174 · Data Structures & Algorithms SORTING Mastery 174",
       "difficulty": "Hard",
       "companies": [
@@ -60876,7 +60876,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1838",
-      "questionNumber": "Q2848",
+      "questionNumber": "Q2718",
       "title": "QDSA_W15_190 · Data Structures & Algorithms SORTING Mastery 190",
       "difficulty": "Medium",
       "companies": [
@@ -62010,7 +62010,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1855",
-      "questionNumber": "Q2865",
+      "questionNumber": "Q2735",
       "title": "QDSA_M2_115 · Algorithmic Optimization STACK Strategy 115",
       "difficulty": "Easy",
       "companies": [
@@ -62069,7 +62069,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1856",
-      "questionNumber": "Q2866",
+      "questionNumber": "Q2736",
       "title": "QDSA_M2_131 · Algorithmic Optimization STACK Strategy 131",
       "difficulty": "Easy",
       "companies": [
@@ -62128,7 +62128,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1857",
-      "questionNumber": "Q2867",
+      "questionNumber": "Q2737",
       "title": "QDSA_M2_147 · Algorithmic Optimization STACK Strategy 147",
       "difficulty": "Hard",
       "companies": [
@@ -62187,7 +62187,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1858",
-      "questionNumber": "Q2868",
+      "questionNumber": "Q2738",
       "title": "QDSA_LS_19 · Algorithmic Strategy STACK Problem 19",
       "difficulty": "Easy",
       "companies": [
@@ -62246,7 +62246,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1859",
-      "questionNumber": "Q2869",
+      "questionNumber": "Q2739",
       "title": "QDSA_LS_3 · Algorithmic Strategy STACK Problem 3",
       "difficulty": "Hard",
       "companies": [
@@ -62305,7 +62305,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1860",
-      "questionNumber": "Q2870",
+      "questionNumber": "Q2740",
       "title": "QDSA_LS_35 · Algorithmic Strategy STACK Problem 35",
       "difficulty": "Easy",
       "companies": [
@@ -62805,7 +62805,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1866",
-      "questionNumber": "Q2876",
+      "questionNumber": "Q2746",
       "title": "QDSA_MAX_51 · Data Structures & Algorithms STACK Challenge 51",
       "difficulty": "Hard",
       "companies": [
@@ -62864,7 +62864,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1867",
-      "questionNumber": "Q2877",
+      "questionNumber": "Q2747",
       "title": "QDSA_MAX_67 · Data Structures & Algorithms STACK Challenge 67",
       "difficulty": "Easy",
       "companies": [
@@ -62923,7 +62923,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1868",
-      "questionNumber": "Q2878",
+      "questionNumber": "Q2748",
       "title": "QDSA_MAX_83 · Data Structures & Algorithms STACK Challenge 83",
       "difficulty": "Easy",
       "companies": [
@@ -62982,7 +62982,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1869",
-      "questionNumber": "Q2879",
+      "questionNumber": "Q2749",
       "title": "QDSA_MAX_99 · Data Structures & Algorithms STACK Challenge 99",
       "difficulty": "Hard",
       "companies": [
@@ -63041,7 +63041,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1870",
-      "questionNumber": "Q2880",
+      "questionNumber": "Q2750",
       "title": "QDSA_W15_163 · Data Structures & Algorithms STACK Mastery 163",
       "difficulty": "Easy",
       "companies": [
@@ -63100,7 +63100,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1871",
-      "questionNumber": "Q2881",
+      "questionNumber": "Q2751",
       "title": "QDSA_W15_179 · Data Structures & Algorithms STACK Mastery 179",
       "difficulty": "Easy",
       "companies": [
@@ -63159,7 +63159,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1872",
-      "questionNumber": "Q2882",
+      "questionNumber": "Q2752",
       "title": "QDSA_W15_195 · Data Structures & Algorithms STACK Mastery 195",
       "difficulty": "Hard",
       "companies": [
@@ -65240,7 +65240,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1898",
-      "questionNumber": "Q2908",
+      "questionNumber": "Q2778",
       "title": "QDSA_M2_113 · Algorithmic Optimization STRINGS Strategy 113",
       "difficulty": "Easy",
       "companies": [
@@ -65299,7 +65299,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1899",
-      "questionNumber": "Q2909",
+      "questionNumber": "Q2779",
       "title": "QDSA_M2_129 · Algorithmic Optimization STRINGS Strategy 129",
       "difficulty": "Hard",
       "companies": [
@@ -65358,7 +65358,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1900",
-      "questionNumber": "Q2910",
+      "questionNumber": "Q2780",
       "title": "QDSA_M2_145 · Algorithmic Optimization STRINGS Strategy 145",
       "difficulty": "Easy",
       "companies": [
@@ -65417,7 +65417,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1901",
-      "questionNumber": "Q2911",
+      "questionNumber": "Q2781",
       "title": "QDSA_LS_1 · Algorithmic Strategy STRINGS Problem 1",
       "difficulty": "Easy",
       "companies": [
@@ -65476,7 +65476,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1902",
-      "questionNumber": "Q2912",
+      "questionNumber": "Q2782",
       "title": "QDSA_LS_17 · Algorithmic Strategy STRINGS Problem 17",
       "difficulty": "Easy",
       "companies": [
@@ -65535,7 +65535,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1903",
-      "questionNumber": "Q2913",
+      "questionNumber": "Q2783",
       "title": "QDSA_LS_33 · Algorithmic Strategy STRINGS Problem 33",
       "difficulty": "Hard",
       "companies": [
@@ -65594,7 +65594,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1904",
-      "questionNumber": "Q2914",
+      "questionNumber": "Q2784",
       "title": "QDSA_LS_49 · Algorithmic Strategy STRINGS Problem 49",
       "difficulty": "Easy",
       "companies": [
@@ -65710,7 +65710,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1906",
-      "questionNumber": "Q2916",
+      "questionNumber": "Q2786",
       "title": "QDSA_MAX_65 · Data Structures & Algorithms STRINGS Challenge 65",
       "difficulty": "Easy",
       "companies": [
@@ -65769,7 +65769,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1907",
-      "questionNumber": "Q2917",
+      "questionNumber": "Q2787",
       "title": "QDSA_MAX_81 · Data Structures & Algorithms STRINGS Challenge 81",
       "difficulty": "Hard",
       "companies": [
@@ -65828,7 +65828,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1908",
-      "questionNumber": "Q2918",
+      "questionNumber": "Q2788",
       "title": "QDSA_MAX_97 · Data Structures & Algorithms STRINGS Challenge 97",
       "difficulty": "Easy",
       "companies": [
@@ -65887,7 +65887,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1909",
-      "questionNumber": "Q2919",
+      "questionNumber": "Q2789",
       "title": "QDSA_W15_161 · Data Structures & Algorithms STRINGS Mastery 161",
       "difficulty": "Easy",
       "companies": [
@@ -65946,7 +65946,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1910",
-      "questionNumber": "Q2920",
+      "questionNumber": "Q2790",
       "title": "QDSA_W15_177 · Data Structures & Algorithms STRINGS Mastery 177",
       "difficulty": "Hard",
       "companies": [
@@ -66005,7 +66005,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1911",
-      "questionNumber": "Q2921",
+      "questionNumber": "Q2791",
       "title": "QDSA_W15_193 · Data Structures & Algorithms STRINGS Mastery 193",
       "difficulty": "Easy",
       "companies": [
@@ -68718,7 +68718,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1946",
-      "questionNumber": "Q2956",
+      "questionNumber": "Q2826",
       "title": "QDSA_M2_108 · Algorithmic Optimization TRIE Strategy 108",
       "difficulty": "Hard",
       "companies": [
@@ -68777,7 +68777,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1947",
-      "questionNumber": "Q2957",
+      "questionNumber": "Q2827",
       "title": "QDSA_M2_124 · Algorithmic Optimization TRIE Strategy 124",
       "difficulty": "Medium",
       "companies": [
@@ -68836,7 +68836,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1948",
-      "questionNumber": "Q2958",
+      "questionNumber": "Q2828",
       "title": "QDSA_M2_140 · Algorithmic Optimization TRIE Strategy 140",
       "difficulty": "Medium",
       "companies": [
@@ -68895,7 +68895,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1949",
-      "questionNumber": "Q2959",
+      "questionNumber": "Q2829",
       "title": "QDSA_LS_12 · Algorithmic Strategy TRIE Problem 12",
       "difficulty": "Hard",
       "companies": [
@@ -68954,7 +68954,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1950",
-      "questionNumber": "Q2960",
+      "questionNumber": "Q2830",
       "title": "QDSA_LS_28 · Algorithmic Strategy TRIE Problem 28",
       "difficulty": "Medium",
       "companies": [
@@ -69013,7 +69013,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1951",
-      "questionNumber": "Q2961",
+      "questionNumber": "Q2831",
       "title": "QDSA_LS_44 · Algorithmic Strategy TRIE Problem 44",
       "difficulty": "Medium",
       "companies": [
@@ -69072,7 +69072,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1952",
-      "questionNumber": "Q2962",
+      "questionNumber": "Q2832",
       "title": "QDSA_MAX_60 · Data Structures & Algorithms TRIE Challenge 60",
       "difficulty": "Hard",
       "companies": [
@@ -69131,7 +69131,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1953",
-      "questionNumber": "Q2963",
+      "questionNumber": "Q2833",
       "title": "QDSA_MAX_76 · Data Structures & Algorithms TRIE Challenge 76",
       "difficulty": "Medium",
       "companies": [
@@ -69190,7 +69190,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1954",
-      "questionNumber": "Q2964",
+      "questionNumber": "Q2834",
       "title": "QDSA_MAX_92 · Data Structures & Algorithms TRIE Challenge 92",
       "difficulty": "Medium",
       "companies": [
@@ -69249,7 +69249,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1955",
-      "questionNumber": "Q2965",
+      "questionNumber": "Q2835",
       "title": "QDSA_W15_156 · Data Structures & Algorithms TRIE Mastery 156",
       "difficulty": "Hard",
       "companies": [
@@ -69308,7 +69308,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1956",
-      "questionNumber": "Q2966",
+      "questionNumber": "Q2836",
       "title": "QDSA_W15_172 · Data Structures & Algorithms TRIE Mastery 172",
       "difficulty": "Medium",
       "companies": [
@@ -69367,7 +69367,7 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     "detail": {
       "id": "q1957",
-      "questionNumber": "Q2967",
+      "questionNumber": "Q2837",
       "title": "QDSA_W15_188 · Data Structures & Algorithms TRIE Mastery 188",
       "difficulty": "Medium",
       "companies": [
@@ -77096,756 +77096,6 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   {
     "detail": {
       "id": "t1139",
-      "questionNumber": "QJS360",
-      "title": "JavaScript Core Specification Pattern Topic 360",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 360"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 360 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1140",
-      "questionNumber": "QJS361",
-      "title": "JavaScript Core Specification Pattern Topic 361",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 361"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 361 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1141",
-      "questionNumber": "QJS362",
-      "title": "JavaScript Core Specification Pattern Topic 362",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 362"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 362 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1142",
-      "questionNumber": "QJS363",
-      "title": "JavaScript Core Specification Pattern Topic 363",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 363"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 363 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1143",
-      "questionNumber": "QJS364",
-      "title": "JavaScript Core Specification Pattern Topic 364",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 364"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 364 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1144",
-      "questionNumber": "QJS365",
-      "title": "JavaScript Core Specification Pattern Topic 365",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 365"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 365 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1145",
-      "questionNumber": "QJS366",
-      "title": "JavaScript Core Specification Pattern Topic 366",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 366"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 366 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1146",
-      "questionNumber": "QJS367",
-      "title": "JavaScript Core Specification Pattern Topic 367",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 367"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 367 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1147",
-      "questionNumber": "QJS368",
-      "title": "JavaScript Core Specification Pattern Topic 368",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 368"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 368 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1148",
-      "questionNumber": "QJS369",
-      "title": "JavaScript Core Specification Pattern Topic 369",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 369"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 369 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1149",
-      "questionNumber": "QJS370",
-      "title": "JavaScript Core Specification Pattern Topic 370",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 370"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 370 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1150",
-      "questionNumber": "QJS371",
-      "title": "JavaScript Core Specification Pattern Topic 371",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 371"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 371 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1151",
-      "questionNumber": "QJS372",
-      "title": "JavaScript Core Specification Pattern Topic 372",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 372"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 372 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1152",
-      "questionNumber": "QJS373",
-      "title": "JavaScript Core Specification Pattern Topic 373",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 373"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 373 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1153",
-      "questionNumber": "QJS374",
-      "title": "JavaScript Core Specification Pattern Topic 374",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 374"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 374 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1154",
       "questionNumber": "T220",
       "title": "JavaScript Data Types: Primitive Values vs Reference Objects",
       "difficulty": "Easy",
@@ -77883,1477 +77133,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1155",
-      "questionNumber": "QJS390",
-      "title": "JavaScript Engine & Language Specification 390",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 390"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 390 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1156",
-      "questionNumber": "QJS391",
-      "title": "JavaScript Engine & Language Specification 391",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 391"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 391 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1157",
-      "questionNumber": "QJS392",
-      "title": "JavaScript Engine & Language Specification 392",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 392"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 392 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1158",
-      "questionNumber": "QJS393",
-      "title": "JavaScript Engine & Language Specification 393",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 393"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 393 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1159",
-      "questionNumber": "QJS394",
-      "title": "JavaScript Engine & Language Specification 394",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 394"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 394 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1160",
-      "questionNumber": "QJS395",
-      "title": "JavaScript Engine & Language Specification 395",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 395"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 395 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1161",
-      "questionNumber": "QJS396",
-      "title": "JavaScript Engine & Language Specification 396",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 396"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 396 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1162",
-      "questionNumber": "QJS397",
-      "title": "JavaScript Engine & Language Specification 397",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 397"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 397 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1163",
-      "questionNumber": "QJS398",
-      "title": "JavaScript Engine & Language Specification 398",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 398"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 398 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1164",
-      "questionNumber": "QJS399",
-      "title": "JavaScript Engine & Language Specification 399",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 399"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 399 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1165",
-      "questionNumber": "QJS400",
-      "title": "JavaScript Engine & Language Specification 400",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 400"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 400 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1166",
-      "questionNumber": "QJS401",
-      "title": "JavaScript Engine & Language Specification 401",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 401"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 401 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1167",
-      "questionNumber": "QJS402",
-      "title": "JavaScript Engine & Language Specification 402",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 402"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 402 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1168",
-      "questionNumber": "QJS403",
-      "title": "JavaScript Engine & Language Specification 403",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 403"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 403 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1169",
-      "questionNumber": "QJS404",
-      "title": "JavaScript Engine & Language Specification 404",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 404"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 404 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1170",
-      "questionNumber": "QJS420",
-      "title": "JavaScript Engine & Metaprogramming Pattern 420",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 420"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 420 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1171",
-      "questionNumber": "QJS421",
-      "title": "JavaScript Engine & Metaprogramming Pattern 421",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 421"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 421 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1172",
-      "questionNumber": "QJS422",
-      "title": "JavaScript Engine & Metaprogramming Pattern 422",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 422"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 422 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1173",
-      "questionNumber": "QJS423",
-      "title": "JavaScript Engine & Metaprogramming Pattern 423",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 423"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 423 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1174",
-      "questionNumber": "QJS424",
-      "title": "JavaScript Engine & Metaprogramming Pattern 424",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 424"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 424 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1175",
-      "questionNumber": "QJS425",
-      "title": "JavaScript Engine & Metaprogramming Pattern 425",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 425"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 425 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1176",
-      "questionNumber": "QJS426",
-      "title": "JavaScript Engine & Metaprogramming Pattern 426",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 426"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 426 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1177",
-      "questionNumber": "QJS427",
-      "title": "JavaScript Engine & Metaprogramming Pattern 427",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 427"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 427 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1178",
-      "questionNumber": "QJS428",
-      "title": "JavaScript Engine & Metaprogramming Pattern 428",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 428"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 428 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1179",
-      "questionNumber": "QJS429",
-      "title": "JavaScript Engine & Metaprogramming Pattern 429",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 429"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 429 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1180",
-      "questionNumber": "QJS430",
-      "title": "JavaScript Engine & Metaprogramming Pattern 430",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 430"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 430 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1181",
-      "questionNumber": "QJS431",
-      "title": "JavaScript Engine & Metaprogramming Pattern 431",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 431"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 431 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1182",
-      "questionNumber": "QJS432",
-      "title": "JavaScript Engine & Metaprogramming Pattern 432",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 432"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 432 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1183",
-      "questionNumber": "QJS433",
-      "title": "JavaScript Engine & Metaprogramming Pattern 433",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 433"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 433 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1184",
-      "questionNumber": "QJS434",
-      "title": "JavaScript Engine & Metaprogramming Pattern 434",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 434"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 434 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1185",
+      "id": "t1140",
       "questionNumber": "T227",
       "title": "JavaScript Promise States, Chaining & Microtask Scheduling",
       "difficulty": "Medium",
@@ -79392,987 +77172,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1186",
-      "questionNumber": "QJS450",
-      "title": "JavaScript Specification Pattern & Engine Semantics 450",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 450"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 450 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1187",
-      "questionNumber": "QJS451",
-      "title": "JavaScript Specification Pattern & Engine Semantics 451",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 451"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 451 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1188",
-      "questionNumber": "QJS452",
-      "title": "JavaScript Specification Pattern & Engine Semantics 452",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 452"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 452 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1189",
-      "questionNumber": "QJS453",
-      "title": "JavaScript Specification Pattern & Engine Semantics 453",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 453"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 453 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1190",
-      "questionNumber": "QJS454",
-      "title": "JavaScript Specification Pattern & Engine Semantics 454",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 454"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 454 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1191",
-      "questionNumber": "QJS455",
-      "title": "JavaScript Specification Pattern & Engine Semantics 455",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 455"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 455 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1192",
-      "questionNumber": "QJS456",
-      "title": "JavaScript Specification Pattern & Engine Semantics 456",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 456"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 456 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1193",
-      "questionNumber": "QJS457",
-      "title": "JavaScript Specification Pattern & Engine Semantics 457",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 457"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 457 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1194",
-      "questionNumber": "QJS458",
-      "title": "JavaScript Specification Pattern & Engine Semantics 458",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 458"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 458 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1195",
-      "questionNumber": "QJS459",
-      "title": "JavaScript Specification Pattern & Engine Semantics 459",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 459"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 459 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1196",
-      "questionNumber": "QJS460",
-      "title": "JavaScript Specification Pattern & Engine Semantics 460",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 460"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 460 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1197",
-      "questionNumber": "QJS461",
-      "title": "JavaScript Specification Pattern & Engine Semantics 461",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 461"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 461 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1198",
-      "questionNumber": "QJS462",
-      "title": "JavaScript Specification Pattern & Engine Semantics 462",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 462"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 462 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1199",
-      "questionNumber": "QJS463",
-      "title": "JavaScript Specification Pattern & Engine Semantics 463",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 463"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 463 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1200",
-      "questionNumber": "QJS464",
-      "title": "JavaScript Specification Pattern & Engine Semantics 464",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 464"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 464 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1201",
-      "questionNumber": "QJS465",
-      "title": "JavaScript Specification Pattern & Engine Semantics 465",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 465"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 465 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1202",
-      "questionNumber": "QJS466",
-      "title": "JavaScript Specification Pattern & Engine Semantics 466",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 466"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 466 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1203",
-      "questionNumber": "QJS467",
-      "title": "JavaScript Specification Pattern & Engine Semantics 467",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 467"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 467 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1204",
-      "questionNumber": "QJS468",
-      "title": "JavaScript Specification Pattern & Engine Semantics 468",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 468"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 468 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1205",
-      "questionNumber": "QJS469",
-      "title": "JavaScript Specification Pattern & Engine Semantics 469",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 469"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 469 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1206",
+      "id": "t1141",
       "questionNumber": "S5028",
       "title": "JIT Compilation",
       "difficulty": "Hard",
@@ -80418,7 +77218,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1207",
+      "id": "t1142",
       "questionNumber": "S6129",
       "title": "JSON.parse() Reviver Function",
       "difficulty": "Medium",
@@ -80464,7 +77264,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1208",
+      "id": "t1143",
       "questionNumber": "S6128",
       "title": "JSON.stringify() Edge Cases",
       "difficulty": "Medium",
@@ -80510,7 +77310,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1209",
+      "id": "t1144",
       "questionNumber": "S117",
       "title": "JSX",
       "difficulty": "Easy",
@@ -80556,7 +77356,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1210",
+      "id": "t1145",
       "questionNumber": "S136",
       "title": "Lazy Loading",
       "difficulty": "Medium",
@@ -80602,7 +77402,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1211",
+      "id": "t1146",
       "questionNumber": "S5014",
       "title": "Lexical Environment",
       "difficulty": "Medium",
@@ -80648,7 +77448,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1212",
+      "id": "t1147",
       "questionNumber": "S6102",
       "title": "Logical Assignment Operators (&&=, ||=, ??=)",
       "difficulty": "Medium",
@@ -80694,7 +77494,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1213",
+      "id": "t1148",
       "questionNumber": "S6014",
       "title": "Losing this Context (Common Bugs & Fixes)",
       "difficulty": "Medium",
@@ -80742,7 +77542,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1214",
+      "id": "t1149",
       "questionNumber": "S22",
       "title": "Macrotask Queue",
       "difficulty": "Medium",
@@ -80788,7 +77588,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1215",
+      "id": "t1150",
       "questionNumber": "T233",
       "title": "Keyed Collections: `Map` and `Set` Data Structures",
       "difficulty": "Easy",
@@ -80826,7 +77626,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1216",
+      "id": "t1151",
       "questionNumber": "T208",
       "title": "ES6 Collections: `Map`, `Set`, `WeakMap`, `WeakSet` & Garbage Collection",
       "difficulty": "Medium",
@@ -80878,7 +77678,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1217",
+      "id": "t1152",
       "questionNumber": "S6114",
       "title": "map() vs forEach(): Performance & Semantics",
       "difficulty": "Easy",
@@ -80924,7 +77724,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1218",
+      "id": "t1153",
       "questionNumber": "S6070",
       "title": "Map vs Plain Object",
       "difficulty": "Easy",
@@ -80970,7 +77770,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1219",
+      "id": "t1154",
       "questionNumber": "S5027",
       "title": "Mark & Sweep",
       "difficulty": "Hard",
@@ -81016,7 +77816,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1220",
+      "id": "t1155",
       "questionNumber": "S6049",
       "title": "Memoization (Concept & Trade-offs)",
       "difficulty": "Medium",
@@ -81062,7 +77862,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1221",
+      "id": "t1156",
       "questionNumber": "S5031",
       "title": "Memory Leaks",
       "difficulty": "Hard",
@@ -81108,7 +77908,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1222",
+      "id": "t1157",
       "questionNumber": "S6126",
       "title": "Method Overriding in JavaScript Classes",
       "difficulty": "Easy",
@@ -81154,7 +77954,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1223",
+      "id": "t1158",
       "questionNumber": "S155",
       "title": "Micro Frontends",
       "difficulty": "Hard",
@@ -81200,7 +78000,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1224",
+      "id": "t1159",
       "questionNumber": "S5016",
       "title": "Microtask Queue",
       "difficulty": "Medium",
@@ -81246,7 +78046,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1225",
+      "id": "t1160",
       "questionNumber": "S6032",
       "title": "Microtask vs Macrotask Ordering (Advanced Cases)",
       "difficulty": "Hard",
@@ -81292,7 +78092,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1226",
+      "id": "t1161",
       "questionNumber": "S6022",
       "title": "Mixins in JavaScript",
       "difficulty": "Medium",
@@ -81338,7 +78138,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1227",
+      "id": "t1162",
       "questionNumber": "S5071",
       "title": "Module Federation",
       "difficulty": "Hard",
@@ -81384,7 +78184,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1228",
+      "id": "t1163",
       "questionNumber": "S6009",
       "title": "Module Pattern using Closures",
       "difficulty": "Medium",
@@ -81430,7 +78230,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1229",
+      "id": "t1164",
       "questionNumber": "S6025",
       "title": "Named Exports vs Default Exports",
       "difficulty": "Easy",
@@ -81476,7 +78276,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1230",
+      "id": "t1165",
       "questionNumber": "S6012",
       "title": "Named Function Expressions",
       "difficulty": "Easy",
@@ -81522,7 +78322,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1231",
+      "id": "t1166",
       "questionNumber": "S6087",
       "title": "NaN Comparisons and Number.isNaN()",
       "difficulty": "Easy",
@@ -81568,8 +78368,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1232",
-      "questionNumber": "Q364",
+      "id": "t1167",
+      "questionNumber": "Q299",
       "title": "NaN",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -81612,7 +78412,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1233",
+      "id": "t1168",
       "questionNumber": "S6111",
       "title": "Node.js Event Loop Phases",
       "difficulty": "Hard",
@@ -81658,7 +78458,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1234",
+      "id": "t1169",
       "questionNumber": "S6101",
       "title": "Nullish Coalescing Operator (??)",
       "difficulty": "Easy",
@@ -81704,7 +78504,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1235",
+      "id": "t1170",
       "questionNumber": "S6082",
       "title": "Object.assign() Pitfalls",
       "difficulty": "Medium",
@@ -81750,7 +78550,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1236",
+      "id": "t1171",
       "questionNumber": "QJS335",
       "title": "Object assign Polyfill Implementation",
       "difficulty": "Easy",
@@ -81798,7 +78598,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1237",
+      "id": "t1172",
       "questionNumber": "S6017",
       "title": "Object.create()",
       "difficulty": "Medium",
@@ -81844,7 +78644,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1238",
+      "id": "t1173",
       "questionNumber": "T229",
       "title": "Object Property Descriptors & `Object.defineProperty()`",
       "difficulty": "Medium",
@@ -81881,7 +78681,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1239",
+      "id": "t1174",
       "questionNumber": "S6107",
       "title": "Object Destructuring with Renaming and Defaults",
       "difficulty": "Easy",
@@ -81927,7 +78727,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1240",
+      "id": "t1175",
       "questionNumber": "S6078",
       "title": "Object.freeze vs Object.seal vs Object.preventExtensions",
       "difficulty": "Medium",
@@ -81973,7 +78773,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1241",
+      "id": "t1176",
       "questionNumber": "S6076",
       "title": "Object.freeze()",
       "difficulty": "Easy",
@@ -82019,7 +78819,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1242",
+      "id": "t1177",
       "questionNumber": "QJS330",
       "title": "Object Is Polyfill and SameValue Algorithm",
       "difficulty": "Easy",
@@ -82067,7 +78867,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1243",
+      "id": "t1178",
       "questionNumber": "S6081",
       "title": "Object.is() vs ===",
       "difficulty": "Medium",
@@ -82113,7 +78913,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1244",
+      "id": "t1179",
       "questionNumber": "S6137",
       "title": "Object Property Order Guarantees",
       "difficulty": "Medium",
@@ -82159,7 +78959,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1245",
+      "id": "t1180",
       "questionNumber": "S6077",
       "title": "Object.seal()",
       "difficulty": "Easy",
@@ -82205,7 +79005,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1246",
+      "id": "t1181",
       "questionNumber": "S6059",
       "title": "Observer Pattern (Concept)",
       "difficulty": "Medium",
@@ -82251,7 +79051,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1247",
+      "id": "t1182",
       "questionNumber": "S6100",
       "title": "Optional Catch Binding",
       "difficulty": "Easy",
@@ -82297,7 +79097,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1248",
+      "id": "t1183",
       "questionNumber": "T202",
       "title": "Optional Chaining (`?.`) and Nullish Coalescing (`??`) Operators",
       "difficulty": "Easy",
@@ -82348,7 +79148,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1249",
+      "id": "t1184",
       "questionNumber": "S5008",
       "title": "Optional Chaining",
       "difficulty": "Easy",
@@ -82394,7 +79194,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1250",
+      "id": "t1185",
       "questionNumber": "S6045",
       "title": "Partial Application vs Currying",
       "difficulty": "Medium",
@@ -82440,7 +79240,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1251",
+      "id": "t1186",
       "questionNumber": "S6016",
       "title": "Partial Application with bind()",
       "difficulty": "Medium",
@@ -82488,7 +79288,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1252",
+      "id": "t1187",
       "questionNumber": "S6050",
       "title": "Point-Free Style Programming",
       "difficulty": "Hard",
@@ -82534,7 +79334,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1253",
+      "id": "t1188",
       "questionNumber": "S6097",
       "title": "Polyfill vs Transpile: What's the Difference",
       "difficulty": "Easy",
@@ -82580,7 +79380,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1254",
+      "id": "t1189",
       "questionNumber": "S5025",
       "title": "Polymorphism",
       "difficulty": "Medium",
@@ -82626,7 +79426,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1255",
+      "id": "t1190",
       "questionNumber": "S6020",
       "title": "Private Class Fields (#)",
       "difficulty": "Medium",
@@ -82672,7 +79472,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1256",
+      "id": "t1191",
       "questionNumber": "S6110",
       "title": "process.nextTick vs Promise Microtasks (Node.js)",
       "difficulty": "Hard",
@@ -82718,7 +79518,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1257",
+      "id": "t1192",
       "questionNumber": "S6031",
       "title": "Promise Chaining Pitfalls",
       "difficulty": "Medium",
@@ -82764,7 +79564,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1258",
+      "id": "t1193",
       "questionNumber": "S6036",
       "title": "Promise Internal States Explained",
       "difficulty": "Medium",
@@ -82810,7 +79610,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1259",
+      "id": "t1194",
       "questionNumber": "QJS326",
       "title": "Promise Polyfill Implementation from Scratch",
       "difficulty": "Hard",
@@ -82860,7 +79660,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1260",
+      "id": "t1195",
       "questionNumber": "T209",
       "title": "Polyfilling `Promise.allSettled`, `Promise.race` & `Promise.any`",
       "difficulty": "Medium",
@@ -82910,7 +79710,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1261",
+      "id": "t1196",
       "questionNumber": "S14",
       "title": "Promises",
       "difficulty": "Easy",
@@ -82956,7 +79756,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1262",
+      "id": "t1197",
       "questionNumber": "S6075",
       "title": "Property Descriptors (writable, enumerable, configurable)",
       "difficulty": "Medium",
@@ -83002,7 +79802,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1263",
+      "id": "t1198",
       "questionNumber": "S5060",
       "title": "Props vs State",
       "difficulty": "Easy",
@@ -83048,7 +79848,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1264",
+      "id": "t1199",
       "questionNumber": "S119",
       "title": "Props",
       "difficulty": "Easy",
@@ -83094,7 +79894,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1265",
+      "id": "t1200",
       "questionNumber": "T230",
       "title": "Prototypal Inheritance & The Prototype Chain (`__proto__` vs `prototype`)",
       "difficulty": "Medium",
@@ -83133,7 +79933,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1266",
+      "id": "t1201",
       "questionNumber": "S6018",
       "title": "Prototypal Inheritance vs Classical Inheritance",
       "difficulty": "Medium",
@@ -83179,7 +79979,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1267",
+      "id": "t1202",
       "questionNumber": "S5020",
       "title": "Prototype Chain",
       "difficulty": "Medium",
@@ -83225,7 +80025,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1268",
+      "id": "t1203",
       "questionNumber": "T204",
       "title": "Prototype Inheritance, `__proto__`, `prototype` & Class Transpilation",
       "difficulty": "Medium",
@@ -83276,7 +80076,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1269",
+      "id": "t1204",
       "questionNumber": "S28",
       "title": "Prototype",
       "difficulty": "Medium",
@@ -83322,8 +80122,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1270",
-      "questionNumber": "Q402",
+      "id": "t1205",
+      "questionNumber": "Q337",
       "title": "Prototypes & Inheritance",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -83369,7 +80169,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1271",
+      "id": "t1206",
       "questionNumber": "S6065",
       "title": "Proxy Object Fundamentals",
       "difficulty": "Medium",
@@ -83415,7 +80215,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1272",
+      "id": "t1207",
       "questionNumber": "S6067",
       "title": "Proxy Traps Deep Dive (get/set/has/deleteProperty)",
       "difficulty": "Hard",
@@ -83461,7 +80261,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1273",
+      "id": "t1208",
       "questionNumber": "S6060",
       "title": "Pub/Sub Pattern (Concept)",
       "difficulty": "Medium",
@@ -83507,7 +80307,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1274",
+      "id": "t1209",
       "questionNumber": "S6047",
       "title": "Pure Functions and Side Effects",
       "difficulty": "Easy",
@@ -83553,7 +80353,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1275",
+      "id": "t1210",
       "questionNumber": "S6035",
       "title": "queueMicrotask()",
       "difficulty": "Medium",
@@ -83599,7 +80399,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1276",
+      "id": "t1211",
       "questionNumber": "S5070",
       "title": "React Compiler",
       "difficulty": "Hard",
@@ -83645,7 +80445,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1277",
+      "id": "t1212",
       "questionNumber": "S133",
       "title": "React.memo",
       "difficulty": "Medium",
@@ -83691,7 +80491,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1278",
+      "id": "t1213",
       "questionNumber": "S5064",
       "title": "React Query",
       "difficulty": "Medium",
@@ -83737,7 +80537,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1279",
+      "id": "t1214",
       "questionNumber": "S5062",
       "title": "React Router",
       "difficulty": "Easy",
@@ -83783,7 +80583,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1280",
+      "id": "t1215",
       "questionNumber": "S54",
       "title": "Reactive Programming",
       "difficulty": "Hard",
@@ -83829,7 +80629,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1281",
+      "id": "t1216",
       "questionNumber": "S131",
       "title": "Reconciliation",
       "difficulty": "Medium",
@@ -83875,7 +80675,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1282",
+      "id": "t1217",
       "questionNumber": "S6122",
       "title": "Recursion vs Iteration Trade-offs",
       "difficulty": "Medium",
@@ -83921,7 +80721,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1283",
+      "id": "t1218",
       "questionNumber": "S6113",
       "title": "reduce() Advanced Use Cases",
       "difficulty": "Medium",
@@ -83967,7 +80767,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1284",
+      "id": "t1219",
       "questionNumber": "S179",
       "title": "Redux Toolkit",
       "difficulty": "Medium",
@@ -84013,7 +80813,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1285",
+      "id": "t1220",
       "questionNumber": "S176",
       "title": "Redux",
       "difficulty": "Medium",
@@ -84059,7 +80859,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1286",
+      "id": "t1221",
       "questionNumber": "S6066",
       "title": "Reflect API",
       "difficulty": "Medium",
@@ -84105,7 +80905,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1287",
+      "id": "t1222",
       "questionNumber": "S5030",
       "title": "Reflow vs Repaint",
       "difficulty": "Hard",
@@ -84151,7 +80951,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1288",
+      "id": "t1223",
       "questionNumber": "S6054",
       "title": "requestAnimationFrame-based Throttling",
       "difficulty": "Medium",
@@ -84197,7 +80997,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1289",
+      "id": "t1224",
       "questionNumber": "S6094",
       "title": "requestIdleCallback",
       "difficulty": "Medium",
@@ -84243,7 +81043,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1290",
+      "id": "t1225",
       "questionNumber": "S10",
       "title": "Rest Operator",
       "difficulty": "Easy",
@@ -84289,7 +81089,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1291",
+      "id": "t1226",
       "questionNumber": "T223",
       "title": "Rest Parameters (`...args`) vs Spread Operator (`...iterable`)",
       "difficulty": "Easy",
@@ -84326,7 +81126,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1292",
+      "id": "t1227",
       "questionNumber": "S6063",
       "title": "Revealing Module Pattern",
       "difficulty": "Medium",
@@ -84372,7 +81172,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1293",
+      "id": "t1228",
       "questionNumber": "S190",
       "title": "RTK Query",
       "difficulty": "Medium",
@@ -84418,7 +81218,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1294",
+      "id": "t1229",
       "questionNumber": "S49",
       "title": "Runtime Optimization",
       "difficulty": "Hard",
@@ -84464,7 +81264,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1295",
+      "id": "t1230",
       "questionNumber": "S5035",
       "title": "RxJS",
       "difficulty": "Hard",
@@ -84510,7 +81310,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1296",
+      "id": "t1231",
       "questionNumber": "S5036",
       "title": "Scheduler Design",
       "difficulty": "Hard",
@@ -84556,7 +81356,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1297",
+      "id": "t1232",
       "questionNumber": "S148",
       "title": "Scheduler",
       "difficulty": "Hard",
@@ -84602,8 +81402,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1298",
-      "questionNumber": "Q430",
+      "id": "t1233",
+      "questionNumber": "Q365",
       "title": "Scope, Scope Chain & Lexical Environment",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -84648,7 +81448,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1299",
+      "id": "t1234",
       "questionNumber": "S5013",
       "title": "Scope Chain",
       "difficulty": "Medium",
@@ -84694,7 +81494,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1300",
+      "id": "t1235",
       "questionNumber": "QJS320",
       "title": "Scope Resolution Lexical Environment and Scope Chain",
       "difficulty": "Medium",
@@ -84743,7 +81543,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1301",
+      "id": "t1236",
       "questionNumber": "S5",
       "title": "Scope",
       "difficulty": "Easy",
@@ -84789,7 +81589,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1302",
+      "id": "t1237",
       "questionNumber": "S6034",
       "title": "Sequential vs Parallel Async Execution",
       "difficulty": "Medium",
@@ -84835,7 +81635,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1303",
+      "id": "t1238",
       "questionNumber": "S152",
       "title": "Server Components",
       "difficulty": "Hard",
@@ -84881,7 +81681,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1304",
+      "id": "t1239",
       "questionNumber": "S6090",
       "title": "Service Workers",
       "difficulty": "Hard",
@@ -84927,7 +81727,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1305",
+      "id": "t1240",
       "questionNumber": "S6071",
       "title": "Set vs Array for Uniqueness",
       "difficulty": "Easy",
@@ -84973,7 +81773,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1306",
+      "id": "t1241",
       "questionNumber": "S6112",
       "title": "setTimeout vs setImmediate (Node.js)",
       "difficulty": "Medium",
@@ -85019,7 +81819,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1307",
+      "id": "t1242",
       "questionNumber": "S6079",
       "title": "Shallow Copy vs Deep Clone",
       "difficulty": "Medium",
@@ -85065,7 +81865,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1308",
+      "id": "t1243",
       "questionNumber": "T218",
       "title": "Object Cloning: Shallow Copy vs Deep Copy & `structuredClone()`",
       "difficulty": "Medium",
@@ -85104,7 +81904,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1309",
+      "id": "t1244",
       "questionNumber": "S5032",
       "title": "SharedArrayBuffer",
       "difficulty": "Hard",
@@ -85150,7 +81950,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1310",
+      "id": "t1245",
       "questionNumber": "S6125",
       "title": "Simulating Abstract Classes in JavaScript",
       "difficulty": "Medium",
@@ -85196,7 +81996,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1311",
+      "id": "t1246",
       "questionNumber": "S6123",
       "title": "Single-Threaded Nature of JavaScript",
       "difficulty": "Easy",
@@ -85242,7 +82042,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1312",
+      "id": "t1247",
       "questionNumber": "S6061",
       "title": "Singleton Pattern in JavaScript",
       "difficulty": "Easy",
@@ -85288,7 +82088,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1313",
+      "id": "t1248",
       "questionNumber": "S5007",
       "title": "Spread Operator",
       "difficulty": "Easy",
@@ -85334,7 +82134,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1314",
+      "id": "t1249",
       "questionNumber": "S147",
       "title": "SSR",
       "difficulty": "Hard",
@@ -85380,7 +82180,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1315",
+      "id": "t1250",
       "questionNumber": "S6001",
       "title": "Stack Memory vs Heap Memory",
       "difficulty": "Medium",
@@ -85426,7 +82226,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1316",
+      "id": "t1251",
       "questionNumber": "S121",
       "title": "State",
       "difficulty": "Easy",
@@ -85472,7 +82272,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1317",
+      "id": "t1252",
       "questionNumber": "S6019",
       "title": "Static Methods and Properties",
       "difficulty": "Easy",
@@ -85518,7 +82318,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1318",
+      "id": "t1253",
       "questionNumber": "S6057",
       "title": "stopPropagation vs preventDefault",
       "difficulty": "Easy",
@@ -85564,7 +82364,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1319",
+      "id": "t1254",
       "questionNumber": "S5069",
       "title": "Streaming SSR",
       "difficulty": "Hard",
@@ -85610,7 +82410,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1320",
+      "id": "t1255",
       "questionNumber": "S6091",
       "title": "Streams API (ReadableStream/WritableStream)",
       "difficulty": "Hard",
@@ -85656,7 +82456,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1321",
+      "id": "t1256",
       "questionNumber": "T207",
       "title": "JavaScript Strict Mode (`'use strict'`) & ES6 Modules (`import` / `export`)",
       "difficulty": "Easy",
@@ -85706,7 +82506,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1322",
+      "id": "t1257",
       "questionNumber": "T235",
       "title": "JavaScript Strict Mode (`'use strict'`) Safety Guardrails",
       "difficulty": "Easy",
@@ -85743,7 +82543,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1323",
+      "id": "t1258",
       "questionNumber": "S6118",
       "title": "String Immutability",
       "difficulty": "Easy",
@@ -85789,7 +82589,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1324",
+      "id": "t1259",
       "questionNumber": "S6120",
       "title": "String.raw",
       "difficulty": "Medium",
@@ -85835,7 +82635,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1325",
+      "id": "t1260",
       "questionNumber": "S6138",
       "title": "Structured Clone Algorithm vs JSON Deep Clone",
       "difficulty": "Medium",
@@ -85881,7 +82681,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1326",
+      "id": "t1261",
       "questionNumber": "S6080",
       "title": "structuredClone() API",
       "difficulty": "Medium",
@@ -85927,7 +82727,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1327",
+      "id": "t1262",
       "questionNumber": "S135",
       "title": "Suspense",
       "difficulty": "Medium",
@@ -85973,7 +82773,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1328",
+      "id": "t1263",
       "questionNumber": "S6136",
       "title": "Symbol.asyncIterator",
       "difficulty": "Hard",
@@ -86019,7 +82819,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1329",
+      "id": "t1264",
       "questionNumber": "S6040",
       "title": "Symbol.iterator",
       "difficulty": "Medium",
@@ -86065,7 +82865,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1330",
+      "id": "t1265",
       "questionNumber": "S6069",
       "title": "Symbol.toPrimitive",
       "difficulty": "Hard",
@@ -86111,7 +82911,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1331",
+      "id": "t1266",
       "questionNumber": "S6068",
       "title": "Symbol Type and Well-Known Symbols",
       "difficulty": "Medium",
@@ -86157,7 +82957,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1332",
+      "id": "t1267",
       "questionNumber": "T231",
       "title": "ES6 Symbols & Well-Known Symbols (`Symbol.iterator`, `Symbol.toPrimitive`)",
       "difficulty": "Medium",
@@ -86194,7 +82994,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1333",
+      "id": "t1268",
       "questionNumber": "S6103",
       "title": "Tagged Template Literals",
       "difficulty": "Medium",
@@ -86240,7 +83040,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1334",
+      "id": "t1269",
       "questionNumber": "S6121",
       "title": "Tail Call Optimization",
       "difficulty": "Hard",
@@ -86286,7 +83086,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1335",
+      "id": "t1270",
       "questionNumber": "T224",
       "title": "ES6 Template Literals & Tagged Template Functions",
       "difficulty": "Medium",
@@ -86325,7 +83125,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1336",
+      "id": "t1271",
       "questionNumber": "S6119",
       "title": "Template Literals vs String Concatenation",
       "difficulty": "Easy",
@@ -86371,7 +83171,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1337",
+      "id": "t1272",
       "questionNumber": "S6002",
       "title": "Temporal Dead Zone (TDZ)",
       "difficulty": "Medium",
@@ -86417,7 +83217,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1338",
+      "id": "t1273",
       "questionNumber": "S6127",
       "title": "The super Keyword: Mechanics",
       "difficulty": "Medium",
@@ -86463,8 +83263,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1339",
-      "questionNumber": "Q471",
+      "id": "t1274",
+      "questionNumber": "Q406",
       "title": "this, call, apply & bind",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -86510,7 +83310,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1340",
+      "id": "t1275",
       "questionNumber": "S6013",
       "title": "this in Arrow Functions vs Regular Functions",
       "difficulty": "Medium",
@@ -86558,7 +83358,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1341",
+      "id": "t1276",
       "questionNumber": "T206",
       "title": "The `this` Keyword: Call, Apply, Bind & Arrow Function Binding Rules",
       "difficulty": "Medium",
@@ -86611,7 +83411,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1342",
+      "id": "t1277",
       "questionNumber": "S5019",
       "title": "this keyword",
       "difficulty": "Medium",
@@ -86657,7 +83457,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1343",
+      "id": "t1278",
       "questionNumber": "S6052",
       "title": "Throttling (Concept)",
       "difficulty": "Easy",
@@ -86703,7 +83503,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1344",
+      "id": "t1279",
       "questionNumber": "S6027",
       "title": "Top-level await",
       "difficulty": "Medium",
@@ -86749,7 +83549,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1345",
+      "id": "t1280",
       "questionNumber": "S6029",
       "title": "Tree Shaking and Module Design",
       "difficulty": "Hard",
@@ -86795,8 +83595,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1346",
-      "questionNumber": "Q478",
+      "id": "t1281",
+      "questionNumber": "Q413",
       "title": "Truthy vs Falsy",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -86841,7 +83641,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1347",
+      "id": "t1282",
       "questionNumber": "S5005",
       "title": "Truthy vs Falsy",
       "difficulty": "Easy",
@@ -86887,7 +83687,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1348",
+      "id": "t1283",
       "questionNumber": "S6099",
       "title": "try/catch/finally Nuances",
       "difficulty": "Medium",
@@ -86933,7 +83733,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1349",
+      "id": "t1284",
       "questionNumber": "S6083",
       "title": "Type Coercion Rules in JavaScript",
       "difficulty": "Medium",
@@ -86979,8 +83779,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1350",
-      "questionNumber": "Q482",
+      "id": "t1285",
+      "questionNumber": "Q417",
       "title": "typeof Operator",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -87023,7 +83823,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1351",
+      "id": "t1286",
       "questionNumber": "S5004",
       "title": "typeof",
       "difficulty": "Easy",
@@ -87069,8 +83869,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1352",
-      "questionNumber": "Q484",
+      "id": "t1287",
+      "questionNumber": "Q419",
       "title": "undefined vs null",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -87115,7 +83915,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1353",
+      "id": "t1288",
       "questionNumber": "S6037",
       "title": "Unhandled Promise Rejections",
       "difficulty": "Medium",
@@ -87161,7 +83961,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1354",
+      "id": "t1289",
       "questionNumber": "S5063",
       "title": "useCallback",
       "difficulty": "Medium",
@@ -87207,7 +84007,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1355",
+      "id": "t1290",
       "questionNumber": "S122",
       "title": "useEffect",
       "difficulty": "Easy",
@@ -87253,7 +84053,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1356",
+      "id": "t1291",
       "questionNumber": "S134",
       "title": "useMemo",
       "difficulty": "Medium",
@@ -87299,7 +84099,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1357",
+      "id": "t1292",
       "questionNumber": "S150",
       "title": "useOptimistic",
       "difficulty": "Hard",
@@ -87345,7 +84145,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1358",
+      "id": "t1293",
       "questionNumber": "S162",
       "title": "useReducer",
       "difficulty": "Medium",
@@ -87391,7 +84191,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1359",
+      "id": "t1294",
       "questionNumber": "S123",
       "title": "useRef",
       "difficulty": "Medium",
@@ -87437,7 +84237,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1360",
+      "id": "t1295",
       "questionNumber": "S5061",
       "title": "useState",
       "difficulty": "Easy",
@@ -87483,7 +84283,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1361",
+      "id": "t1296",
       "questionNumber": "S41",
       "title": "V8 Engine",
       "difficulty": "Hard",
@@ -87529,7 +84329,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1362",
+      "id": "t1297",
       "questionNumber": "T219",
       "title": "Scope & Hoisting: `var`, `let`, `const`, and Temporal Dead Zone (TDZ)",
       "difficulty": "Easy",
@@ -87570,8 +84370,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1363",
-      "questionNumber": "Q495",
+      "id": "t1298",
+      "questionNumber": "Q430",
       "title": "var vs let vs const",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -87617,7 +84417,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1364",
+      "id": "t1299",
       "questionNumber": "S1",
       "title": "var vs let vs const",
       "difficulty": "Easy",
@@ -87663,7 +84463,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1365",
+      "id": "t1300",
       "questionNumber": "S120",
       "title": "Virtual DOM",
       "difficulty": "Easy",
@@ -87709,7 +84509,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1366",
+      "id": "t1301",
       "questionNumber": "S6084",
       "title": "== vs === Edge Cases",
       "difficulty": "Medium",
@@ -87755,7 +84555,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1367",
+      "id": "t1302",
       "questionNumber": "T234",
       "title": "Garbage Collection Collections: `WeakMap` and `WeakSet`",
       "difficulty": "Medium",
@@ -87793,7 +84593,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1368",
+      "id": "t1303",
       "questionNumber": "S6072",
       "title": "WeakMap Use Cases",
       "difficulty": "Medium",
@@ -87839,7 +84639,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1369",
+      "id": "t1304",
       "questionNumber": "S6074",
       "title": "WeakMap vs Map: Key Differences",
       "difficulty": "Medium",
@@ -87885,7 +84685,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1370",
+      "id": "t1305",
       "questionNumber": "S6007",
       "title": "WeakRef and FinalizationRegistry",
       "difficulty": "Hard",
@@ -87931,7 +84731,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1371",
+      "id": "t1306",
       "questionNumber": "S6073",
       "title": "WeakSet Use Cases",
       "difficulty": "Medium",
@@ -87977,7 +84777,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1372",
+      "id": "t1307",
       "questionNumber": "S6088",
       "title": "Web Workers",
       "difficulty": "Medium",
@@ -88023,7 +84823,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1373",
+      "id": "t1308",
       "questionNumber": "S5001",
       "title": "What is JavaScript?",
       "difficulty": "Easy",
@@ -88069,7 +84869,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1374",
+      "id": "t1309",
       "questionNumber": "S116",
       "title": "What is React?",
       "difficulty": "Easy",
@@ -88115,7 +84915,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1375",
+      "id": "t1310",
       "questionNumber": "S6015",
       "title": "What Really Happens with the new Keyword",
       "difficulty": "Medium",
@@ -88163,7 +84963,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1376",
+      "id": "t1311",
       "questionNumber": "S6089",
       "title": "Worker Threads in Node.js",
       "difficulty": "Hard",
@@ -88209,7 +85009,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1377",
+      "id": "t1312",
       "questionNumber": "S6095",
       "title": "Writing Polyfills: General Approach",
       "difficulty": "Medium",
@@ -88255,7 +85055,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1378",
+      "id": "t1313",
       "questionNumber": "S6041",
       "title": "yield* Delegation",
       "difficulty": "Hard",
@@ -88301,7 +85101,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1379",
+      "id": "t1314",
       "questionNumber": "T318",
       "title": "Async Task Cancellation: `AbortController` & `AbortSignal`",
       "difficulty": "Medium",
@@ -88342,8 +85142,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1380",
-      "questionNumber": "Q512",
+      "id": "t1315",
+      "questionNumber": "Q447",
       "title": "async/await",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE) — at Senior level this extends",
@@ -88399,7 +85199,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1381",
+      "id": "t1316",
       "questionNumber": "T307",
       "title": "Iterators, Generators (`function*`) & Async Iterables (`for await...of`)",
       "difficulty": "Hard",
@@ -88450,7 +85250,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1382",
+      "id": "t1317",
       "questionNumber": "QADVJS051",
       "title": "Async Task Scheduler with Concurrency Limit",
       "difficulty": "Hard",
@@ -88498,7 +85298,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1383",
+      "id": "t1318",
       "questionNumber": "QADVJS047",
       "title": "BigInt Capabilities, Performance and Serialization Pitfalls",
       "difficulty": "Medium",
@@ -88547,7 +85347,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1384",
+      "id": "t1319",
       "questionNumber": "QADVJS041",
       "title": "Bytecode vs Machine Code Execution in Modern V8 Engine",
       "difficulty": "Hard",
@@ -88596,7 +85396,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1385",
+      "id": "t1320",
       "questionNumber": "T308",
       "title": "Function Currying, Infinite Currying & Partial Application Polyfills",
       "difficulty": "Medium",
@@ -88647,7 +85447,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1386",
+      "id": "t1321",
       "questionNumber": "QADVJS058",
       "title": "Currying Function with Dynamic Placeholder Support",
       "difficulty": "Hard",
@@ -88695,7 +85495,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1387",
+      "id": "t1322",
       "questionNumber": "T315",
       "title": "Polyfilling Array Prototype Higher-Order Methods (`map`, `filter`, `reduce`, `flat`, `flatMap`)",
       "difficulty": "Medium",
@@ -88748,7 +85548,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1388",
+      "id": "t1323",
       "questionNumber": "QADVJS065",
       "title": "Custom Async Parallel Function Runner with Limit",
       "difficulty": "Hard",
@@ -88795,7 +85595,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1389",
+      "id": "t1324",
       "questionNumber": "QADVJS079",
       "title": "Custom Async Pipeline Function Execution",
       "difficulty": "Hard",
@@ -88842,7 +85642,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1390",
+      "id": "t1325",
       "questionNumber": "T332",
       "title": "Building an Async Task Queue with Concurrency Limit (`p-limit`)",
       "difficulty": "Hard",
@@ -88881,7 +85681,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1391",
+      "id": "t1326",
       "questionNumber": "QADVJS074",
       "title": "Custom Async Queue with Priority Task Processing",
       "difficulty": "Hard",
@@ -88928,7 +85728,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1392",
+      "id": "t1327",
       "questionNumber": "QADVJS077",
       "title": "Custom Async Task Pool Manager with Max Concurrency",
       "difficulty": "Hard",
@@ -88975,7 +85775,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1393",
+      "id": "t1328",
       "questionNumber": "QADVJS070",
       "title": "Custom Async Waterfall Runner Implementation",
       "difficulty": "Medium",
@@ -89022,7 +85822,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1394",
+      "id": "t1329",
       "questionNumber": "QADVJS081",
       "title": "Custom Async Waterfalled Task Pipeline",
       "difficulty": "Medium",
@@ -89068,7 +85868,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1395",
+      "id": "t1330",
       "questionNumber": "QADVJS064",
       "title": "Custom Curried Sum Function with Infinite Invocation",
       "difficulty": "Medium",
@@ -89115,7 +85915,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1396",
+      "id": "t1331",
       "questionNumber": "QADVJS068",
       "title": "Custom Debounce with Cancel and Flush Methods",
       "difficulty": "Medium",
@@ -89163,7 +85963,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1397",
+      "id": "t1332",
       "questionNumber": "QADVJS063",
       "title": "Custom DOM Query Selector Engine Implementation",
       "difficulty": "Hard",
@@ -89211,7 +86011,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1398",
+      "id": "t1333",
       "questionNumber": "QADVJS067",
       "title": "Custom Event Emitter with Once and Wildcard Listeners",
       "difficulty": "Hard",
@@ -89258,7 +86058,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1399",
+      "id": "t1334",
       "questionNumber": "QADVJS071",
       "title": "Custom HTML Parser AST Tokenizer Generator",
       "difficulty": "Hard",
@@ -89305,7 +86105,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1400",
+      "id": "t1335",
       "questionNumber": "QADVJS060",
       "title": "Custom JSON parse Deserializer Implementation",
       "difficulty": "Hard",
@@ -89353,7 +86153,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1401",
+      "id": "t1336",
       "questionNumber": "QADVJS059",
       "title": "Custom JSON stringify Serializer Implementation",
       "difficulty": "Hard",
@@ -89401,7 +86201,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1402",
+      "id": "t1337",
       "questionNumber": "QADVJS078",
       "title": "Custom Object Deep Equal Checker Polyfill",
       "difficulty": "Medium",
@@ -89447,7 +86247,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1403",
+      "id": "t1338",
       "questionNumber": "QADVJS082",
       "title": "Custom Object Deep Freeze Recursive Polyfill",
       "difficulty": "Medium",
@@ -89493,7 +86293,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1404",
+      "id": "t1339",
       "questionNumber": "QADVJS084",
       "title": "Custom Object Deep Merge Function Simple",
       "difficulty": "Medium",
@@ -89539,7 +86339,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1405",
+      "id": "t1340",
       "questionNumber": "QADVJS066",
       "title": "Custom Object Deep Merge Utility Function",
       "difficulty": "Medium",
@@ -89587,7 +86387,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1406",
+      "id": "t1341",
       "questionNumber": "QADVJS075",
       "title": "Custom Object Path Getter and Setter Polyfill",
       "difficulty": "Medium",
@@ -89634,7 +86434,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1407",
+      "id": "t1342",
       "questionNumber": "QADVJS083",
       "title": "Custom Object Path Getter Utility (Lodash get)",
       "difficulty": "Medium",
@@ -89680,7 +86480,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1408",
+      "id": "t1343",
       "questionNumber": "QADVJS080",
       "title": "Custom Object Property Descriptor Mutator Utility",
       "difficulty": "Medium",
@@ -89729,7 +86529,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1409",
+      "id": "t1344",
       "questionNumber": "QADVJS050",
       "title": "Custom Promise all and Promise allSettled Implementation",
       "difficulty": "Medium",
@@ -89777,7 +86577,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1410",
+      "id": "t1345",
       "questionNumber": "T320",
       "title": "Polyfilling Promise Combinators: `Promise.allSettled()`, `Promise.race()`, and `Promise.any()`",
       "difficulty": "Hard",
@@ -89818,7 +86618,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1411",
+      "id": "t1346",
       "questionNumber": "QADVJS072",
       "title": "Custom Promise allSettled Polyfill Implementation",
       "difficulty": "Medium",
@@ -89865,7 +86665,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1412",
+      "id": "t1347",
       "questionNumber": "T326",
       "title": "Building a Custom A+ Compliant Promise from Scratch",
       "difficulty": "Hard",
@@ -89905,7 +86705,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1413",
+      "id": "t1348",
       "questionNumber": "QADVJS073",
       "title": "Custom Promise retry Utility with Exponential Backoff",
       "difficulty": "Medium",
@@ -89952,7 +86752,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1414",
+      "id": "t1349",
       "questionNumber": "QADVJS076",
       "title": "Custom Promise Sequence Runner (Promise.sequence)",
       "difficulty": "Medium",
@@ -89998,7 +86798,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1415",
+      "id": "t1350",
       "questionNumber": "QADVJS055",
       "title": "Custom SetInterval Polyfill using SetTimeout",
       "difficulty": "Medium",
@@ -90046,7 +86846,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1416",
+      "id": "t1351",
       "questionNumber": "QADVJS069",
       "title": "Custom Throttle with Leading and Trailing Control Flags",
       "difficulty": "Hard",
@@ -90093,7 +86893,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1417",
+      "id": "t1352",
       "questionNumber": "T305",
       "title": "Debounce vs Throttle: Implementations, Cancel & Immediate Options",
       "difficulty": "Medium",
@@ -90144,7 +86944,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1418",
+      "id": "t1353",
       "questionNumber": "QADVJS056",
       "title": "Deep Omit Utility Function in JavaScript",
       "difficulty": "Medium",
@@ -90191,7 +86991,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1419",
+      "id": "t1354",
       "questionNumber": "T322",
       "title": "ES2024 Object & Map Grouping: `Object.groupBy()` and `Map.groupBy()`",
       "difficulty": "Medium",
@@ -90229,7 +87029,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1420",
+      "id": "t1355",
       "questionNumber": "QADVJS049",
       "title": "Event Delegation Pattern and Event Propagation Phases",
       "difficulty": "Easy",
@@ -90278,8 +87078,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1421",
-      "questionNumber": "Q553",
+      "id": "t1356",
+      "questionNumber": "Q488",
       "title": "Event Loop, Microtasks & Macrotasks",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -90325,7 +87125,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1422",
+      "id": "t1357",
       "questionNumber": "T303",
       "title": "Event Loop Mechanics: Call Stack, Microtasks & Macrotasks",
       "difficulty": "Medium",
@@ -90379,7 +87179,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1423",
+      "id": "t1358",
       "questionNumber": "T331",
       "title": "Custom EventEmitter Implementation & Native `EventTarget` Subclassing",
       "difficulty": "Medium",
@@ -90418,8 +87218,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1424",
-      "questionNumber": "Q556",
+      "id": "t1359",
+      "questionNumber": "Q491",
       "title": "Execution Context & Call Stack",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE) — at Senior level this",
@@ -90475,7 +87275,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1425",
+      "id": "t1360",
       "questionNumber": "T321",
       "title": "Polyfilling `Function.prototype.bind`, `call`, and `apply`",
       "difficulty": "Hard",
@@ -90516,7 +87316,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1426",
+      "id": "t1361",
       "questionNumber": "T329",
       "title": "V8 Generational Garbage Collection: Mark-and-Sweep & Scavenger Algorithms",
       "difficulty": "Hard",
@@ -90556,7 +87356,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1427",
+      "id": "t1362",
       "questionNumber": "QADVJS044",
       "title": "Generator Functions and Async Iterators Flow",
       "difficulty": "Hard",
@@ -90606,7 +87406,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1428",
+      "id": "t1363",
       "questionNumber": "QADVJS046",
       "title": "GlobalThis and Cross-Environment Execution Contexts",
       "difficulty": "Easy",
@@ -90656,7 +87456,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1429",
+      "id": "t1364",
       "questionNumber": "T334",
       "title": "ECMAScript `Intl` API: Internationalized Numbers, Dates & Relative Time Formatting",
       "difficulty": "Easy",
@@ -90694,7 +87494,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1430",
+      "id": "t1365",
       "questionNumber": "T325",
       "title": "Iterator Helpers Proposal: Lazy Evaluation Methods (`map`, `filter`, `take`, `drop`)",
       "difficulty": "Medium",
@@ -90731,2227 +87531,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1431",
-      "questionNumber": "QJS375",
-      "title": "JavaScript Core Specification Pattern Topic 375",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 375"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 375 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1432",
-      "questionNumber": "QJS376",
-      "title": "JavaScript Core Specification Pattern Topic 376",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 376"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 376 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1433",
-      "questionNumber": "QJS377",
-      "title": "JavaScript Core Specification Pattern Topic 377",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 377"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 377 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1434",
-      "questionNumber": "QJS378",
-      "title": "JavaScript Core Specification Pattern Topic 378",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 378"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 378 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1435",
-      "questionNumber": "QJS379",
-      "title": "JavaScript Core Specification Pattern Topic 379",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 379"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 379 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1436",
-      "questionNumber": "QJS380",
-      "title": "JavaScript Core Specification Pattern Topic 380",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 380"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 380 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1437",
-      "questionNumber": "QJS381",
-      "title": "JavaScript Core Specification Pattern Topic 381",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 381"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 381 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1438",
-      "questionNumber": "QJS382",
-      "title": "JavaScript Core Specification Pattern Topic 382",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 382"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 382 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1439",
-      "questionNumber": "QJS383",
-      "title": "JavaScript Core Specification Pattern Topic 383",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 383"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 383 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1440",
-      "questionNumber": "QJS384",
-      "title": "JavaScript Core Specification Pattern Topic 384",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 384"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 384 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1441",
-      "questionNumber": "QJS385",
-      "title": "JavaScript Core Specification Pattern Topic 385",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 385"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 385 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1442",
-      "questionNumber": "QJS386",
-      "title": "JavaScript Core Specification Pattern Topic 386",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 386"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 386 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1443",
-      "questionNumber": "QJS387",
-      "title": "JavaScript Core Specification Pattern Topic 387",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 387"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 387 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1444",
-      "questionNumber": "QJS388",
-      "title": "JavaScript Core Specification Pattern Topic 388",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 388"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 388 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1445",
-      "questionNumber": "QJS389",
-      "title": "JavaScript Core Specification Pattern Topic 389",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "Event Loop",
-        "Closures",
-        "Prototypes",
-        "ES2025",
-        "Memory Engine"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Core Specification Pattern Topic 389"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Core Specification Pattern Topic 389 is a vital interview concept within JavaScript. Mastering Event Loop, Closures, Prototypes, ES2025, Memory Engine helps software engineers construct robust, high-performance web applications and succeed in technical interviews at top technology firms such as Meta, Google, Uber.",
-      "deepExplanation": "Understanding Event Loop, Closures, Prototypes, ES2025, Memory Engine requires deep analysis of execution semantics, runtime boundaries, and memory lifecycle management. Engineering decisions made here directly determine application throughput, resilience, and maintainability.",
-      "productionExample": "In large-scale production applications deployed at Meta, Google, Uber, challenges involving Event Loop, Closures, Prototypes, ES2025, Memory Engine routinely arise during system profiling, code reviews, and structural refactoring.",
-      "bestPractices": [
-        "Adhere to industry specification standards and clean code heuristics.",
-        "Enforce strict typing, comprehensive error boundaries, and automated test suites."
-      ],
-      "tradeOffs": "- Balances execution performance against structural codebase complexity. - Requires careful evaluation of browser engine compatibility boundaries.",
-      "commonMistakes": [
-        "Misunderstanding edge-case conditions or execution resolution order.",
-        "Over-engineering custom handlers when browser or language built-ins suffice."
-      ],
-      "followUpQuestions": [
-        "How do you measure and debug bottlenecks related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across multi-team monorepos?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "System Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1446",
-      "questionNumber": "QJS405",
-      "title": "JavaScript Engine & Language Specification 405",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 405"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 405 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1447",
-      "questionNumber": "QJS406",
-      "title": "JavaScript Engine & Language Specification 406",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 406"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 406 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1448",
-      "questionNumber": "QJS407",
-      "title": "JavaScript Engine & Language Specification 407",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 407"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 407 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1449",
-      "questionNumber": "QJS408",
-      "title": "JavaScript Engine & Language Specification 408",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 408"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 408 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1450",
-      "questionNumber": "QJS409",
-      "title": "JavaScript Engine & Language Specification 409",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 409"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 409 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1451",
-      "questionNumber": "QJS410",
-      "title": "JavaScript Engine & Language Specification 410",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 410"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 410 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1452",
-      "questionNumber": "QJS411",
-      "title": "JavaScript Engine & Language Specification 411",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 411"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 411 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1453",
-      "questionNumber": "QJS412",
-      "title": "JavaScript Engine & Language Specification 412",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 412"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 412 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1454",
-      "questionNumber": "QJS413",
-      "title": "JavaScript Engine & Language Specification 413",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 413"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 413 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1455",
-      "questionNumber": "QJS414",
-      "title": "JavaScript Engine & Language Specification 414",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 414"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 414 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1456",
-      "questionNumber": "QJS415",
-      "title": "JavaScript Engine & Language Specification 415",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 415"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 415 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1457",
-      "questionNumber": "QJS416",
-      "title": "JavaScript Engine & Language Specification 416",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 416"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 416 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1458",
-      "questionNumber": "QJS417",
-      "title": "JavaScript Engine & Language Specification 417",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 417"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 417 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1459",
-      "questionNumber": "QJS418",
-      "title": "JavaScript Engine & Language Specification 418",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 418"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 418 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1460",
-      "questionNumber": "QJS419",
-      "title": "JavaScript Engine & Language Specification 419",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript Specification",
-        "Call Stack",
-        "Task Queues",
-        "Garbage Collection"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Language Specification 419"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Language Specification 419 is an essential interview topic in JavaScript. Mastering EcmaScript Specification, Call Stack, Task Queues, Garbage Collection enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript Specification, Call Stack, Task Queues, Garbage Collection requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript Specification, Call Stack, Task Queues, Garbage Collection frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1461",
-      "questionNumber": "QJS435",
-      "title": "JavaScript Engine & Metaprogramming Pattern 435",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 435"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 435 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1462",
-      "questionNumber": "QJS436",
-      "title": "JavaScript Engine & Metaprogramming Pattern 436",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 436"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 436 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1463",
-      "questionNumber": "QJS437",
-      "title": "JavaScript Engine & Metaprogramming Pattern 437",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 437"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 437 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1464",
-      "questionNumber": "QJS438",
-      "title": "JavaScript Engine & Metaprogramming Pattern 438",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 438"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 438 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1465",
-      "questionNumber": "QJS439",
-      "title": "JavaScript Engine & Metaprogramming Pattern 439",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 439"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 439 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1466",
-      "questionNumber": "QJS440",
-      "title": "JavaScript Engine & Metaprogramming Pattern 440",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 440"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 440 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1467",
-      "questionNumber": "QJS441",
-      "title": "JavaScript Engine & Metaprogramming Pattern 441",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 441"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 441 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1468",
-      "questionNumber": "QJS442",
-      "title": "JavaScript Engine & Metaprogramming Pattern 442",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 442"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 442 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1469",
-      "questionNumber": "QJS443",
-      "title": "JavaScript Engine & Metaprogramming Pattern 443",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 443"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 443 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1470",
-      "questionNumber": "QJS444",
-      "title": "JavaScript Engine & Metaprogramming Pattern 444",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 444"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 444 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1471",
-      "questionNumber": "QJS445",
-      "title": "JavaScript Engine & Metaprogramming Pattern 445",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 445"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 445 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1472",
-      "questionNumber": "QJS446",
-      "title": "JavaScript Engine & Metaprogramming Pattern 446",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 446"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 446 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1473",
-      "questionNumber": "QJS447",
-      "title": "JavaScript Engine & Metaprogramming Pattern 447",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 447"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 447 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1474",
-      "questionNumber": "QJS448",
-      "title": "JavaScript Engine & Metaprogramming Pattern 448",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 448"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 448 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1475",
-      "questionNumber": "QJS449",
-      "title": "JavaScript Engine & Metaprogramming Pattern 449",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "V8 Ignition",
-        "Async Microtasks",
-        "Proxy Metaprogramming",
-        "Memory Scavenging"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Engine & Metaprogramming Pattern 449"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Engine & Metaprogramming Pattern 449 is an essential interview topic in JavaScript. Mastering V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to V8 Ignition, Async Microtasks, Proxy Metaprogramming, Memory Scavenging frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1476",
+      "id": "t1366",
       "questionNumber": "T316",
       "title": "V8 Engine Architecture: Ignition Interpreter & TurboFan JIT Compiler",
       "difficulty": "Hard",
@@ -92991,987 +87571,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1477",
-      "questionNumber": "QJS470",
-      "title": "JavaScript Specification Pattern & Engine Semantics 470",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 470"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 470 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1478",
-      "questionNumber": "QJS471",
-      "title": "JavaScript Specification Pattern & Engine Semantics 471",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 471"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 471 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1479",
-      "questionNumber": "QJS472",
-      "title": "JavaScript Specification Pattern & Engine Semantics 472",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 472"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 472 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1480",
-      "questionNumber": "QJS473",
-      "title": "JavaScript Specification Pattern & Engine Semantics 473",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 473"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 473 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1481",
-      "questionNumber": "QJS474",
-      "title": "JavaScript Specification Pattern & Engine Semantics 474",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 474"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 474 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1482",
-      "questionNumber": "QJS475",
-      "title": "JavaScript Specification Pattern & Engine Semantics 475",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 475"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 475 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1483",
-      "questionNumber": "QJS476",
-      "title": "JavaScript Specification Pattern & Engine Semantics 476",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 476"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 476 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1484",
-      "questionNumber": "QJS477",
-      "title": "JavaScript Specification Pattern & Engine Semantics 477",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 477"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 477 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1485",
-      "questionNumber": "QJS478",
-      "title": "JavaScript Specification Pattern & Engine Semantics 478",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 478"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 478 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1486",
-      "questionNumber": "QJS479",
-      "title": "JavaScript Specification Pattern & Engine Semantics 479",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 479"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 479 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1487",
-      "questionNumber": "QJS480",
-      "title": "JavaScript Specification Pattern & Engine Semantics 480",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 480"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 480 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1488",
-      "questionNumber": "QJS481",
-      "title": "JavaScript Specification Pattern & Engine Semantics 481",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 481"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 481 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1489",
-      "questionNumber": "QJS482",
-      "title": "JavaScript Specification Pattern & Engine Semantics 482",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 482"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 482 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1490",
-      "questionNumber": "QJS483",
-      "title": "JavaScript Specification Pattern & Engine Semantics 483",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 483"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 483 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1491",
-      "questionNumber": "QJS484",
-      "title": "JavaScript Specification Pattern & Engine Semantics 484",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 484"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 484 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1492",
-      "questionNumber": "QJS485",
-      "title": "JavaScript Specification Pattern & Engine Semantics 485",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 485"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 485 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1493",
-      "questionNumber": "QJS486",
-      "title": "JavaScript Specification Pattern & Engine Semantics 486",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 486"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 486 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1494",
-      "questionNumber": "QJS487",
-      "title": "JavaScript Specification Pattern & Engine Semantics 487",
-      "difficulty": "Easy",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 487"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 487 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1495",
-      "questionNumber": "QJS488",
-      "title": "JavaScript Specification Pattern & Engine Semantics 488",
-      "difficulty": "Medium",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 488"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 488 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1496",
-      "questionNumber": "QJS489",
-      "title": "JavaScript Specification Pattern & Engine Semantics 489",
-      "difficulty": "Hard",
-      "experienceLevel": "Mid (2-5 YOE)",
-      "companies": [
-        "Meta",
-        "Google",
-        "Uber"
-      ],
-      "frequency": 5,
-      "category": "javascript",
-      "concepts": [
-        "EcmaScript 2026 Features",
-        "V8 TurboFan Optimization",
-        "WeakRef & FinalizationRegistry",
-        "Event Loop Queues"
-      ],
-      "solved": false,
-      "attempted": false,
-      "bookmarked": false,
-      "questionType": "technical",
-      "question": "JavaScript Specification Pattern & Engine Semantics 489"
-    },
-    "answer": {
-      "expectedAnswer": "JavaScript Specification Pattern & Engine Semantics 489 is an essential interview topic in JavaScript. Mastering EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues enables software engineers to build scalable, high-performance systems and succeed in technical interviews at top engineering firms like Meta, Google, Uber.",
-      "deepExplanation": "Understanding EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues requires deep analysis of algorithm complexity, memory boundaries, and execution contexts. Engineering choices made here directly influence application throughput, stability, and maintainability.",
-      "productionExample": "At scale in production applications at Meta, Google, Uber, real-world challenges related to EcmaScript 2026 Features, V8 TurboFan Optimization, WeakRef & FinalizationRegistry, Event Loop Queues frequently surface during performance profiling, code reviews, and system architectural designs.",
-      "bestPractices": [
-        "Follow established specification patterns and clean code principles.",
-        "Enforce strict typing, error boundaries, and automated test coverage."
-      ],
-      "tradeOffs": "- Balances execution efficiency against architectural complexity. - Requires careful consideration of cross-platform runtime guarantees.",
-      "commonMistakes": [
-        "Misunderstanding boundary conditions or algorithmic complexities.",
-        "Over-engineering solutions when standard patterns are sufficient."
-      ],
-      "followUpQuestions": [
-        "How do you profile and debug issues related to this topic in production?",
-        "What architectural considerations apply when scaling this pattern across large teams?"
-      ],
-      "relatedTopics": [
-        "Advanced JavaScript Architecture",
-        "Performance and Reliability"
-      ]
-    }
-  },
-  {
-    "detail": {
-      "id": "t1497",
+      "id": "t1367",
       "questionNumber": "T324",
       "title": "Common JavaScript Memory Leaks: Detached DOM Nodes, Uncleared Timers & Closure Retentions",
       "difficulty": "Hard",
@@ -94011,7 +87611,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1498",
+      "id": "t1368",
       "questionNumber": "QADVJS052",
       "title": "LRU Cache Class Implementation in JavaScript",
       "difficulty": "Medium",
@@ -94059,7 +87659,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1499",
+      "id": "t1369",
       "questionNumber": "QADVJS040",
       "title": "Memoization Pattern and Cache Eviction Strategies",
       "difficulty": "Medium",
@@ -94108,7 +87708,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1500",
+      "id": "t1370",
       "questionNumber": "T319",
       "title": "Event Loop Internals: Microtasks Queue vs Macrotasks Queue Execution Priority",
       "difficulty": "Hard",
@@ -94150,7 +87750,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1501",
+      "id": "t1371",
       "questionNumber": "T306",
       "title": "Deep Cloning Objects: `structuredClone`, JSON Limitation & Custom Recursive Clone",
       "difficulty": "Medium",
@@ -94201,7 +87801,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1502",
+      "id": "t1372",
       "questionNumber": "T313",
       "title": "Immutability Methods: `Object.freeze()`, `Object.seal()`, and `Object.preventExtensions()`",
       "difficulty": "Medium",
@@ -94251,7 +87851,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1503",
+      "id": "t1373",
       "questionNumber": "QADVJS053",
       "title": "Object Observer via Proxy Reactivity Engine",
       "difficulty": "Hard",
@@ -94299,7 +87899,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1504",
+      "id": "t1374",
       "questionNumber": "QADVJS057",
       "title": "Piping Functions with Async Step Resolution",
       "difficulty": "Hard",
@@ -94346,8 +87946,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1505",
-      "questionNumber": "Q637",
+      "id": "t1375",
+      "questionNumber": "Q507",
       "title": "Promise Internals",
       "difficulty": "Medium",
       "experienceLevel": "Mid-Senior (2-5 YOE)",
@@ -94393,7 +87993,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1506",
+      "id": "t1376",
       "questionNumber": "T304",
       "title": "Promises Under the Hood: States, Chaining & `Promise.all` Implementation",
       "difficulty": "Medium",
@@ -94445,7 +88045,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1507",
+      "id": "t1377",
       "questionNumber": "QADVJS043",
       "title": "Proxy and Reflect API for Metaprogramming and Reactive State",
       "difficulty": "Hard",
@@ -94495,7 +88095,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1508",
+      "id": "t1378",
       "questionNumber": "T311",
       "title": "ES6 Proxy & Reflect API: Traps, Data Binding & Vue 3 Reactivity Engine",
       "difficulty": "Hard",
@@ -94546,7 +88146,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1509",
+      "id": "t1379",
       "questionNumber": "T328",
       "title": "Building a Reactive State Engine via `Proxy` & `Reflect` (Vue 3 Reactivity)",
       "difficulty": "Hard",
@@ -94586,7 +88186,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1510",
+      "id": "t1380",
       "questionNumber": "T302",
       "title": "Reflow vs Repaint: DOM Batching & Composite Layers",
       "difficulty": "Medium",
@@ -94640,7 +88240,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1511",
+      "id": "t1381",
       "questionNumber": "T333",
       "title": "`requestIdleCallback()` & Non-Blocking Idle Period Processing",
       "difficulty": "Medium",
@@ -94677,7 +88277,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1512",
+      "id": "t1382",
       "questionNumber": "T317",
       "title": "Multi-Threading Memory Sharing: `SharedArrayBuffer` & `Atomics`",
       "difficulty": "Hard",
@@ -94716,7 +88316,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1513",
+      "id": "t1383",
       "questionNumber": "T323",
       "title": "Deep Cloning Mechanics: `structuredClone()` vs `JSON.parse(JSON.stringify())`",
       "difficulty": "Medium",
@@ -94754,7 +88354,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1514",
+      "id": "t1384",
       "questionNumber": "QADVJS048",
       "title": "Structured Cloning API vs JSON stringify Deep Copy",
       "difficulty": "Medium",
@@ -94803,7 +88403,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1515",
+      "id": "t1385",
       "questionNumber": "QADVJS042",
       "title": "Symbol Type Use Cases and Well-Known Symbols",
       "difficulty": "Medium",
@@ -94852,7 +88452,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1516",
+      "id": "t1386",
       "questionNumber": "T310",
       "title": "ES6 Symbols, Well-Known Symbols & Metaprogramming",
       "difficulty": "Medium",
@@ -94903,7 +88503,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1517",
+      "id": "t1387",
       "questionNumber": "T312",
       "title": "Call Stack Overflow Limits & Tail Call Optimization (TCO)",
       "difficulty": "Hard",
@@ -94953,7 +88553,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1518",
+      "id": "t1388",
       "questionNumber": "T327",
       "title": "Tail Call Optimization (TCO) & Stack Frame Elimination",
       "difficulty": "Medium",
@@ -94990,7 +88590,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1519",
+      "id": "t1389",
       "questionNumber": "QADVJS062",
       "title": "Task Queue with Auto Retry and Exponential Backoff",
       "difficulty": "Hard",
@@ -95039,7 +88639,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1520",
+      "id": "t1390",
       "questionNumber": "T301",
       "title": "Temporal Dead Zone (TDZ) & Variable Creation Lifecycles",
       "difficulty": "Medium",
@@ -95091,7 +88691,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1521",
+      "id": "t1391",
       "questionNumber": "QADVJS054",
       "title": "Virtual DOM Diffing and Patch Algorithm Fundamentals",
       "difficulty": "Hard",
@@ -95139,7 +88739,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1522",
+      "id": "t1392",
       "questionNumber": "QADVJS061",
       "title": "Virtual DOM Element Creation and Render Utility",
       "difficulty": "Medium",
@@ -95187,7 +88787,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1523",
+      "id": "t1393",
       "questionNumber": "T309",
       "title": "V8 Garbage Collector Architecture: Generational GC, Scavenger & Mark-Sweep-Compact",
       "difficulty": "Hard",
@@ -95238,7 +88838,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1524",
+      "id": "t1394",
       "questionNumber": "QADVJS045",
       "title": "WeakMap and WeakSet Garbage Collection Mechanics",
       "difficulty": "Medium",
@@ -95288,7 +88888,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1525",
+      "id": "t1395",
       "questionNumber": "T314",
       "title": "ES2021 `WeakRef` & `FinalizationRegistry`: Garbage Collection Cleanup Triggers",
       "difficulty": "Hard",
@@ -95338,7 +88938,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1526",
+      "id": "t1396",
       "questionNumber": "T330",
       "title": "Web Crypto API (`window.crypto.subtle`) for In-Browser Encryption",
       "difficulty": "Hard",
@@ -95378,7 +88978,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1527",
+      "id": "t1397",
       "questionNumber": "T335",
       "title": "Web Streams API: `ReadableStream`, `WritableStream`, and `TransformStream`",
       "difficulty": "Hard",
@@ -95416,7 +89016,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1528",
+      "id": "t1398",
       "questionNumber": "QTS074",
       "title": "Ambient Declarations and d.ts File Authoring",
       "difficulty": "Medium",
@@ -95464,7 +89064,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1529",
+      "id": "t1399",
       "questionNumber": "T417",
       "title": "Top & Bottom Types: `any` vs `unknown` vs `never`",
       "difficulty": "Medium",
@@ -95504,7 +89104,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1530",
+      "id": "t1400",
       "questionNumber": "S73",
       "title": "any",
       "difficulty": "Easy",
@@ -95550,7 +89150,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1531",
+      "id": "t1401",
       "questionNumber": "S5040",
       "title": "boolean",
       "difficulty": "Easy",
@@ -95596,7 +89196,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1532",
+      "id": "t1402",
       "questionNumber": "S104",
       "title": "Branded Types",
       "difficulty": "Hard",
@@ -95642,7 +89242,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1533",
+      "id": "t1403",
       "questionNumber": "T411",
       "title": "TypeScript Conditional Types & Distributive Conditional Types",
       "difficulty": "Hard",
@@ -95681,7 +89281,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1534",
+      "id": "t1404",
       "questionNumber": "T406",
       "title": "Advanced Conditional Types & The `infer` Keyword (`Awaited`, `ReturnType`)",
       "difficulty": "Hard",
@@ -95731,7 +89331,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1535",
+      "id": "t1405",
       "questionNumber": "S5052",
       "title": "Conditional Types",
       "difficulty": "Hard",
@@ -95777,7 +89377,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1536",
+      "id": "t1406",
       "questionNumber": "QTS075",
       "title": "Const Assertions and Satisfies Operator",
       "difficulty": "Medium",
@@ -95826,7 +89426,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1537",
+      "id": "t1407",
       "questionNumber": "T415",
       "title": "TypeScript Const Assertions (`as const`) & Readonly Tuples",
       "difficulty": "Medium",
@@ -95864,7 +89464,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1538",
+      "id": "t1408",
       "questionNumber": "T419",
       "title": "Subtyping Variance: Covariance, Contravariance & Strict Function Types",
       "difficulty": "Hard",
@@ -95902,7 +89502,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1539",
+      "id": "t1409",
       "questionNumber": "T426",
       "title": "Declaration Files (`.d.ts`) & Ambient Module Declarations",
       "difficulty": "Medium",
@@ -95939,7 +89539,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1540",
+      "id": "t1410",
       "questionNumber": "S5055",
       "title": "Declaration Files",
       "difficulty": "Hard",
@@ -95985,7 +89585,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1541",
+      "id": "t1411",
       "questionNumber": "QTS070",
       "title": "Declaration Merging, Interfaces vs Type Aliases",
       "difficulty": "Medium",
@@ -96034,7 +89634,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1542",
+      "id": "t1412",
       "questionNumber": "S5058",
       "title": "Decorators",
       "difficulty": "Hard",
@@ -96080,7 +89680,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1543",
+      "id": "t1413",
       "questionNumber": "S5057",
       "title": "DeepPartial",
       "difficulty": "Hard",
@@ -96126,7 +89726,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1544",
+      "id": "t1414",
       "questionNumber": "T424",
       "title": "Enums vs `const enum` vs Union String Types",
       "difficulty": "Medium",
@@ -96164,7 +89764,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1545",
+      "id": "t1415",
       "questionNumber": "S5050",
       "title": "Exclude",
       "difficulty": "Medium",
@@ -96210,7 +89810,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1546",
+      "id": "t1416",
       "questionNumber": "QTS077",
       "title": "Exhaustiveness Checking with Never Type in Switch Cases",
       "difficulty": "Easy",
@@ -96258,7 +89858,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1547",
+      "id": "t1417",
       "questionNumber": "S5051",
       "title": "Extract",
       "difficulty": "Medium",
@@ -96304,7 +89904,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1548",
+      "id": "t1418",
       "questionNumber": "S5047",
       "title": "Generic Constraints",
       "difficulty": "Medium",
@@ -96350,7 +89950,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1549",
+      "id": "t1419",
       "questionNumber": "T402",
       "title": "TypeScript Generics & Mapped Utility Types (`Pick`, `Omit`, `Partial`)",
       "difficulty": "Medium",
@@ -96402,7 +90002,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1550",
+      "id": "t1420",
       "questionNumber": "S81",
       "title": "Generics Basics",
       "difficulty": "Easy",
@@ -96448,7 +90048,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1551",
+      "id": "t1421",
       "questionNumber": "QTS069",
       "title": "Generics Constraints and Default Type Arguments",
       "difficulty": "Medium",
@@ -96496,7 +90096,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1552",
+      "id": "t1422",
       "questionNumber": "T410",
       "title": "Advanced TypeScript Generics: Generic Constraints (`extends`), `infer` Keyword & Utility Type Derivations",
       "difficulty": "Hard",
@@ -96546,8 +90146,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1553",
-      "questionNumber": "Q685",
+      "id": "t1423",
+      "questionNumber": "Q555",
       "title": "Generics",
       "difficulty": "Medium",
       "experienceLevel": "Mid-to-Senior (3-7 YOE) — the baseline \"what are",
@@ -96598,7 +90198,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1554",
+      "id": "t1424",
       "questionNumber": "QTS078",
       "title": "Index Signatures vs Record Type Safety",
       "difficulty": "Easy",
@@ -96647,7 +90247,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1555",
+      "id": "t1425",
       "questionNumber": "T418",
       "title": "Dynamic Objects: Index Signatures (`[key: string]`) vs `Record<K, T>`",
       "difficulty": "Easy",
@@ -96684,7 +90284,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1556",
+      "id": "t1426",
       "questionNumber": "T430",
       "title": "The `infer` Keyword & Type Extraction in Conditional Types",
       "difficulty": "Hard",
@@ -96722,7 +90322,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1557",
+      "id": "t1427",
       "questionNumber": "S72",
       "title": "Interface",
       "difficulty": "Easy",
@@ -96768,7 +90368,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1558",
+      "id": "t1428",
       "questionNumber": "S5045",
       "title": "Intersection Types",
       "difficulty": "Easy",
@@ -96814,7 +90414,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1559",
+      "id": "t1429",
       "questionNumber": "S5037",
       "title": "JS vs TS",
       "difficulty": "Easy",
@@ -96860,7 +90460,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1560",
+      "id": "t1430",
       "questionNumber": "T404",
       "title": "Type Transformations: `keyof`, `typeof`, `[K]` Indexed Access & Type Assertions",
       "difficulty": "Medium",
@@ -96911,7 +90511,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1561",
+      "id": "t1431",
       "questionNumber": "S82",
       "title": "keyof",
       "difficulty": "Medium",
@@ -96957,7 +90557,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1562",
+      "id": "t1432",
       "questionNumber": "QTS066",
       "title": "Mapped Types and Template Literal Type Transformations",
       "difficulty": "Hard",
@@ -97006,7 +90606,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1563",
+      "id": "t1433",
       "questionNumber": "T413",
       "title": "TypeScript Mapped Types & Key Remapping via `as`",
       "difficulty": "Hard",
@@ -97045,7 +90645,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1564",
+      "id": "t1434",
       "questionNumber": "S5056",
       "title": "Module Augmentation",
       "difficulty": "Hard",
@@ -97091,7 +90691,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1565",
+      "id": "t1435",
       "questionNumber": "T425",
       "title": "TSConfig Module Resolution Strategies (`node16`, `nodenext`, `bundler`)",
       "difficulty": "Medium",
@@ -97129,7 +90729,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1566",
+      "id": "t1436",
       "questionNumber": "QTS079",
       "title": "Module Resolution Strategies: NodeNext vs Bundler",
       "difficulty": "Hard",
@@ -97178,7 +90778,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1567",
+      "id": "t1437",
       "questionNumber": "T429",
       "title": "Namespaces vs ES Modules in TypeScript",
       "difficulty": "Easy",
@@ -97214,7 +90814,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1568",
+      "id": "t1438",
       "questionNumber": "S5042",
       "title": "never",
       "difficulty": "Easy",
@@ -97260,7 +90860,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1569",
+      "id": "t1439",
       "questionNumber": "QTS076",
       "title": "Nominal Typing in TypeScript using Branded Types",
       "difficulty": "Hard",
@@ -97309,7 +90909,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1570",
+      "id": "t1440",
       "questionNumber": "S5039",
       "title": "number",
       "difficulty": "Easy",
@@ -97355,7 +90955,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1571",
+      "id": "t1441",
       "questionNumber": "T428",
       "title": "Function Overloads & Signature Matching",
       "difficulty": "Medium",
@@ -97391,7 +90991,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1572",
+      "id": "t1442",
       "questionNumber": "S92",
       "title": "Readonly",
       "difficulty": "Medium",
@@ -97437,7 +91037,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1573",
+      "id": "t1443",
       "questionNumber": "S5049",
       "title": "Record",
       "difficulty": "Medium",
@@ -97483,7 +91083,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1574",
+      "id": "t1444",
       "questionNumber": "S99",
       "title": "Recursive Mapped Types",
       "difficulty": "Hard",
@@ -97529,7 +91129,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1575",
+      "id": "t1445",
       "questionNumber": "S5053",
       "title": "Recursive Types",
       "difficulty": "Hard",
@@ -97575,7 +91175,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1576",
+      "id": "t1446",
       "questionNumber": "S5048",
       "title": "Required",
       "difficulty": "Medium",
@@ -97621,7 +91221,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1577",
+      "id": "t1447",
       "questionNumber": "T421",
       "title": "TypeScript 4.9+ `satisfies` Operator vs Type Annotations",
       "difficulty": "Medium",
@@ -97660,7 +91260,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1578",
+      "id": "t1448",
       "questionNumber": "T409",
       "title": "The `satisfies` Operator vs Type Annotations (`: Type`) in TypeScript 4.9+",
       "difficulty": "Medium",
@@ -97710,7 +91310,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1579",
+      "id": "t1449",
       "questionNumber": "S5038",
       "title": "string",
       "difficulty": "Easy",
@@ -97756,7 +91356,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1580",
+      "id": "t1450",
       "questionNumber": "T407",
       "title": "Template Literal Types & Advanced Mapped Types",
       "difficulty": "Hard",
@@ -97806,7 +91406,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1581",
+      "id": "t1451",
       "questionNumber": "T412",
       "title": "TypeScript Template Literal Types & String Union Manipulations",
       "difficulty": "Medium",
@@ -97844,7 +91444,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1582",
+      "id": "t1452",
       "questionNumber": "T420",
       "title": "TSConfig Strict Mode Flags: `strictNullChecks`, `noImplicitAny` & `exactOptionalPropertyTypes`",
       "difficulty": "Medium",
@@ -97882,7 +91482,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1583",
+      "id": "t1453",
       "questionNumber": "S5044",
       "title": "Type Alias",
       "difficulty": "Easy",
@@ -97928,7 +91528,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1584",
+      "id": "t1454",
       "questionNumber": "T427",
       "title": "Type Assertions (`as`) vs Runtime Type Casting",
       "difficulty": "Easy",
@@ -97965,7 +91565,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1585",
+      "id": "t1455",
       "questionNumber": "QTS068",
       "title": "Type Guards: User-Defined Predicates vs In Operator",
       "difficulty": "Medium",
@@ -98014,7 +91614,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1586",
+      "id": "t1456",
       "questionNumber": "S86",
       "title": "Type Guards",
       "difficulty": "Medium",
@@ -98060,7 +91660,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1587",
+      "id": "t1457",
       "questionNumber": "T423",
       "title": "TypeScript Type Inference & Contextual Typing",
       "difficulty": "Easy",
@@ -98096,7 +91696,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1588",
+      "id": "t1458",
       "questionNumber": "S78",
       "title": "Type Inference",
       "difficulty": "Easy",
@@ -98142,7 +91742,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1589",
+      "id": "t1459",
       "questionNumber": "T403",
       "title": "Type Narrowing, Type Guards (`is`), and Discriminated Unions",
       "difficulty": "Medium",
@@ -98192,7 +91792,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1590",
+      "id": "t1460",
       "questionNumber": "T414",
       "title": "Type Narrowing: Discriminated Unions & Custom Type Guards (`is`)",
       "difficulty": "Medium",
@@ -98230,7 +91830,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1591",
+      "id": "t1461",
       "questionNumber": "S5046",
       "title": "Type Narrowing",
       "difficulty": "Medium",
@@ -98276,7 +91876,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1592",
+      "id": "t1462",
       "questionNumber": "S5059",
       "title": "Type-safe Architecture",
       "difficulty": "Hard",
@@ -98322,7 +91922,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1593",
+      "id": "t1463",
       "questionNumber": "T416",
       "title": "`type` Aliases vs `interface` & Declaration Merging",
       "difficulty": "Easy",
@@ -98359,7 +91959,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1594",
+      "id": "t1464",
       "questionNumber": "QTS107",
       "title": "TypeScript Advanced Type System Topic 107",
       "difficulty": "Easy",
@@ -98408,7 +92008,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1595",
+      "id": "t1465",
       "questionNumber": "QTS108",
       "title": "TypeScript Advanced Type System Topic 108",
       "difficulty": "Hard",
@@ -98457,7 +92057,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1596",
+      "id": "t1466",
       "questionNumber": "QTS109",
       "title": "TypeScript Advanced Type System Topic 109",
       "difficulty": "Easy",
@@ -98506,7 +92106,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1597",
+      "id": "t1467",
       "questionNumber": "QTS110",
       "title": "TypeScript Advanced Type System Topic 110",
       "difficulty": "Medium",
@@ -98555,7 +92155,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1598",
+      "id": "t1468",
       "questionNumber": "QTS111",
       "title": "TypeScript Advanced Type System Topic 111",
       "difficulty": "Hard",
@@ -98604,7 +92204,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1599",
+      "id": "t1469",
       "questionNumber": "QTS112",
       "title": "TypeScript Advanced Type System Topic 112",
       "difficulty": "Medium",
@@ -98653,7 +92253,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1600",
+      "id": "t1470",
       "questionNumber": "QTS113",
       "title": "TypeScript Advanced Type System Topic 113",
       "difficulty": "Easy",
@@ -98702,7 +92302,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1601",
+      "id": "t1471",
       "questionNumber": "QTS114",
       "title": "TypeScript Advanced Type System Topic 114",
       "difficulty": "Hard",
@@ -98751,7 +92351,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1602",
+      "id": "t1472",
       "questionNumber": "QTS115",
       "title": "TypeScript Advanced Type System Topic 115",
       "difficulty": "Easy",
@@ -98800,7 +92400,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1603",
+      "id": "t1473",
       "questionNumber": "QTS116",
       "title": "TypeScript Advanced Type System Topic 116",
       "difficulty": "Medium",
@@ -98849,7 +92449,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1604",
+      "id": "t1474",
       "questionNumber": "QTS117",
       "title": "TypeScript Advanced Type System Topic 117",
       "difficulty": "Hard",
@@ -98898,7 +92498,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1605",
+      "id": "t1475",
       "questionNumber": "QTS118",
       "title": "TypeScript Advanced Type System Topic 118",
       "difficulty": "Medium",
@@ -98947,7 +92547,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1606",
+      "id": "t1476",
       "questionNumber": "QTS119",
       "title": "TypeScript Advanced Type System Topic 119",
       "difficulty": "Easy",
@@ -98996,7 +92596,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1607",
+      "id": "t1477",
       "questionNumber": "QTS120",
       "title": "TypeScript Advanced Type System Topic 120",
       "difficulty": "Hard",
@@ -99045,7 +92645,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1608",
+      "id": "t1478",
       "questionNumber": "QTS121",
       "title": "TypeScript Advanced Type System Topic 121",
       "difficulty": "Easy",
@@ -99094,7 +92694,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1609",
+      "id": "t1479",
       "questionNumber": "QTS122",
       "title": "TypeScript Advanced Type System Topic 122",
       "difficulty": "Medium",
@@ -99143,7 +92743,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1610",
+      "id": "t1480",
       "questionNumber": "QTS123",
       "title": "TypeScript Advanced Type System Topic 123",
       "difficulty": "Hard",
@@ -99192,7 +92792,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1611",
+      "id": "t1481",
       "questionNumber": "QTS124",
       "title": "TypeScript Advanced Type System Topic 124",
       "difficulty": "Medium",
@@ -99241,7 +92841,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1612",
+      "id": "t1482",
       "questionNumber": "QTS125",
       "title": "TypeScript Advanced Type System Topic 125",
       "difficulty": "Easy",
@@ -99290,7 +92890,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1613",
+      "id": "t1483",
       "questionNumber": "QTS126",
       "title": "TypeScript Advanced Type System Topic 126",
       "difficulty": "Hard",
@@ -99339,7 +92939,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1614",
+      "id": "t1484",
       "questionNumber": "QTS103",
       "title": "TypeScript Awaited Utility Type Implementation",
       "difficulty": "Medium",
@@ -99386,7 +92986,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1615",
+      "id": "t1485",
       "questionNumber": "QTS085",
       "title": "TypeScript CamelCase and KebabCase String Transformers",
       "difficulty": "Hard",
@@ -99433,7 +93033,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1616",
+      "id": "t1486",
       "questionNumber": "QTS073",
       "title": "TypeScript Compiler AST and Custom Transformer Plugins",
       "difficulty": "Hard",
@@ -99482,7 +93082,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1617",
+      "id": "t1487",
       "questionNumber": "QTS065",
       "title": "TypeScript Conditional Types and Infer Keyword Mechanics",
       "difficulty": "Hard",
@@ -99531,7 +93131,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1618",
+      "id": "t1488",
       "questionNumber": "QTS090",
       "title": "TypeScript Deep Mutable Utility Type",
       "difficulty": "Medium",
@@ -99578,7 +93178,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1619",
+      "id": "t1489",
       "questionNumber": "QTS084",
       "title": "TypeScript Deep Partial Utility Type",
       "difficulty": "Medium",
@@ -99625,7 +93225,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1620",
+      "id": "t1490",
       "questionNumber": "QTS080",
       "title": "TypeScript Deep Readonly Type Implementation",
       "difficulty": "Medium",
@@ -99673,7 +93273,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1621",
+      "id": "t1491",
       "questionNumber": "QTS104",
       "title": "TypeScript Exclude and Extract Utility Implementation",
       "difficulty": "Easy",
@@ -99721,7 +93321,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1622",
+      "id": "t1492",
       "questionNumber": "QTS102",
       "title": "TypeScript Extract and Exclude Utility Types Implementation",
       "difficulty": "Easy",
@@ -99767,7 +93367,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1623",
+      "id": "t1493",
       "questionNumber": "QTS092",
       "title": "TypeScript First and Last Tuple Element Extractors",
       "difficulty": "Easy",
@@ -99814,7 +93414,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1624",
+      "id": "t1494",
       "questionNumber": "QTS086",
       "title": "TypeScript Flatten Type Utility for Nested Arrays",
       "difficulty": "Medium",
@@ -99861,7 +93461,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1625",
+      "id": "t1495",
       "questionNumber": "QTS099",
       "title": "TypeScript InstanceType Utility Implementation",
       "difficulty": "Easy",
@@ -99907,7 +93507,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1626",
+      "id": "t1496",
       "questionNumber": "QTS082",
       "title": "TypeScript JSON Parser Type Specification",
       "difficulty": "Hard",
@@ -99954,7 +93554,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1627",
+      "id": "t1497",
       "questionNumber": "QTS095",
       "title": "TypeScript Mutable Type Utility for Deep Readonly Stripping",
       "difficulty": "Medium",
@@ -100000,7 +93600,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1628",
+      "id": "t1498",
       "questionNumber": "QTS097",
       "title": "TypeScript NonNullable Utility Type Implementation",
       "difficulty": "Easy",
@@ -100046,7 +93646,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1629",
+      "id": "t1499",
       "questionNumber": "QTS098",
       "title": "TypeScript Parameters and ReturnType Type Utility Implementation",
       "difficulty": "Easy",
@@ -100093,7 +93693,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1630",
+      "id": "t1500",
       "questionNumber": "QTS105",
       "title": "TypeScript Partial and Required Utility Types",
       "difficulty": "Easy",
@@ -100139,7 +93739,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1631",
+      "id": "t1501",
       "questionNumber": "QTS088",
       "title": "TypeScript Path Keys Extractor for Nested Objects",
       "difficulty": "Hard",
@@ -100186,7 +93786,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1632",
+      "id": "t1502",
       "questionNumber": "QTS101",
       "title": "TypeScript Pick and Omit Utility Types Implementation",
       "difficulty": "Easy",
@@ -100232,7 +93832,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1633",
+      "id": "t1503",
       "questionNumber": "QTS089",
       "title": "TypeScript Promisify Function Return Type Utility",
       "difficulty": "Medium",
@@ -100280,7 +93880,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1634",
+      "id": "t1504",
       "questionNumber": "QTS093",
       "title": "TypeScript Push and Pop Tuple Utilities",
       "difficulty": "Easy",
@@ -100328,7 +93928,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1635",
+      "id": "t1505",
       "questionNumber": "QTS106",
       "title": "TypeScript Readonly and Record Utility Types",
       "difficulty": "Easy",
@@ -100375,7 +93975,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1636",
+      "id": "t1506",
       "questionNumber": "QTS100",
       "title": "TypeScript Record Utility Type Implementation",
       "difficulty": "Easy",
@@ -100421,7 +94021,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1637",
+      "id": "t1507",
       "questionNumber": "QTS096",
       "title": "TypeScript Required Type Utility for Deep Optional Stripping",
       "difficulty": "Medium",
@@ -100467,7 +94067,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1638",
+      "id": "t1508",
       "questionNumber": "QTS083",
       "title": "TypeScript RequiredKeys and OptionalKeys Extraction",
       "difficulty": "Medium",
@@ -100514,7 +94114,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1639",
+      "id": "t1509",
       "questionNumber": "QTS094",
       "title": "TypeScript Shift and Unshift Tuple Utilities",
       "difficulty": "Easy",
@@ -100562,7 +94162,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1640",
+      "id": "t1510",
       "questionNumber": "QTS067",
       "title": "TypeScript Strict Mode Flags and Type Safety Impact",
       "difficulty": "Medium",
@@ -100611,7 +94211,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1641",
+      "id": "t1511",
       "questionNumber": "QTS081",
       "title": "TypeScript Tuple to Union and Union to Intersection",
       "difficulty": "Hard",
@@ -100659,7 +94259,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1642",
+      "id": "t1512",
       "questionNumber": "QTS127",
       "title": "TypeScript Type Inference & Compiler Rule 127",
       "difficulty": "Easy",
@@ -100708,7 +94308,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1643",
+      "id": "t1513",
       "questionNumber": "QTS128",
       "title": "TypeScript Type Inference & Compiler Rule 128",
       "difficulty": "Medium",
@@ -100757,7 +94357,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1644",
+      "id": "t1514",
       "questionNumber": "QTS129",
       "title": "TypeScript Type Inference & Compiler Rule 129",
       "difficulty": "Hard",
@@ -100806,7 +94406,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1645",
+      "id": "t1515",
       "questionNumber": "QTS130",
       "title": "TypeScript Type Inference & Compiler Rule 130",
       "difficulty": "Medium",
@@ -100855,7 +94455,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1646",
+      "id": "t1516",
       "questionNumber": "QTS131",
       "title": "TypeScript Type Inference & Compiler Rule 131",
       "difficulty": "Easy",
@@ -100904,7 +94504,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1647",
+      "id": "t1517",
       "questionNumber": "QTS132",
       "title": "TypeScript Type Inference & Compiler Rule 132",
       "difficulty": "Hard",
@@ -100953,7 +94553,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1648",
+      "id": "t1518",
       "questionNumber": "QTS133",
       "title": "TypeScript Type Inference & Compiler Rule 133",
       "difficulty": "Easy",
@@ -101002,7 +94602,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1649",
+      "id": "t1519",
       "questionNumber": "QTS134",
       "title": "TypeScript Type Inference & Compiler Rule 134",
       "difficulty": "Medium",
@@ -101051,7 +94651,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1650",
+      "id": "t1520",
       "questionNumber": "QTS135",
       "title": "TypeScript Type Inference & Compiler Rule 135",
       "difficulty": "Hard",
@@ -101100,7 +94700,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1651",
+      "id": "t1521",
       "questionNumber": "QTS136",
       "title": "TypeScript Type Inference & Compiler Rule 136",
       "difficulty": "Medium",
@@ -101149,7 +94749,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1652",
+      "id": "t1522",
       "questionNumber": "QTS137",
       "title": "TypeScript Type Inference & Compiler Rule 137",
       "difficulty": "Easy",
@@ -101198,7 +94798,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1653",
+      "id": "t1523",
       "questionNumber": "QTS138",
       "title": "TypeScript Type Inference & Compiler Rule 138",
       "difficulty": "Hard",
@@ -101247,7 +94847,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1654",
+      "id": "t1524",
       "questionNumber": "QTS139",
       "title": "TypeScript Type Inference & Compiler Rule 139",
       "difficulty": "Easy",
@@ -101296,7 +94896,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1655",
+      "id": "t1525",
       "questionNumber": "QTS140",
       "title": "TypeScript Type Inference & Compiler Rule 140",
       "difficulty": "Medium",
@@ -101345,7 +94945,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1656",
+      "id": "t1526",
       "questionNumber": "QTS141",
       "title": "TypeScript Type Inference & Compiler Rule 141",
       "difficulty": "Hard",
@@ -101394,7 +94994,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1657",
+      "id": "t1527",
       "questionNumber": "QTS142",
       "title": "TypeScript Type Inference & Compiler Rule 142",
       "difficulty": "Medium",
@@ -101443,7 +95043,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1658",
+      "id": "t1528",
       "questionNumber": "QTS143",
       "title": "TypeScript Type Inference & Compiler Rule 143",
       "difficulty": "Easy",
@@ -101492,7 +95092,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1659",
+      "id": "t1529",
       "questionNumber": "QTS144",
       "title": "TypeScript Type Inference & Compiler Rule 144",
       "difficulty": "Hard",
@@ -101541,7 +95141,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1660",
+      "id": "t1530",
       "questionNumber": "QTS145",
       "title": "TypeScript Type Inference & Compiler Rule 145",
       "difficulty": "Easy",
@@ -101590,7 +95190,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1661",
+      "id": "t1531",
       "questionNumber": "QTS146",
       "title": "TypeScript Type Inference & Compiler Rule 146",
       "difficulty": "Medium",
@@ -101639,7 +95239,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1662",
+      "id": "t1532",
       "questionNumber": "QTS167",
       "title": "TypeScript Type Manipulation & Structural Subtyping 167",
       "difficulty": "Easy",
@@ -101688,7 +95288,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1663",
+      "id": "t1533",
       "questionNumber": "QTS168",
       "title": "TypeScript Type Manipulation & Structural Subtyping 168",
       "difficulty": "Hard",
@@ -101737,7 +95337,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1664",
+      "id": "t1534",
       "questionNumber": "QTS169",
       "title": "TypeScript Type Manipulation & Structural Subtyping 169",
       "difficulty": "Easy",
@@ -101786,7 +95386,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1665",
+      "id": "t1535",
       "questionNumber": "QTS170",
       "title": "TypeScript Type Manipulation & Structural Subtyping 170",
       "difficulty": "Medium",
@@ -101835,7 +95435,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1666",
+      "id": "t1536",
       "questionNumber": "QTS171",
       "title": "TypeScript Type Manipulation & Structural Subtyping 171",
       "difficulty": "Hard",
@@ -101884,7 +95484,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1667",
+      "id": "t1537",
       "questionNumber": "QTS172",
       "title": "TypeScript Type Manipulation & Structural Subtyping 172",
       "difficulty": "Medium",
@@ -101933,7 +95533,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1668",
+      "id": "t1538",
       "questionNumber": "QTS173",
       "title": "TypeScript Type Manipulation & Structural Subtyping 173",
       "difficulty": "Easy",
@@ -101982,7 +95582,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1669",
+      "id": "t1539",
       "questionNumber": "QTS174",
       "title": "TypeScript Type Manipulation & Structural Subtyping 174",
       "difficulty": "Hard",
@@ -102031,7 +95631,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1670",
+      "id": "t1540",
       "questionNumber": "QTS175",
       "title": "TypeScript Type Manipulation & Structural Subtyping 175",
       "difficulty": "Easy",
@@ -102080,7 +95680,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1671",
+      "id": "t1541",
       "questionNumber": "QTS176",
       "title": "TypeScript Type Manipulation & Structural Subtyping 176",
       "difficulty": "Medium",
@@ -102129,7 +95729,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1672",
+      "id": "t1542",
       "questionNumber": "QTS177",
       "title": "TypeScript Type Manipulation & Structural Subtyping 177",
       "difficulty": "Hard",
@@ -102178,7 +95778,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1673",
+      "id": "t1543",
       "questionNumber": "QTS178",
       "title": "TypeScript Type Manipulation & Structural Subtyping 178",
       "difficulty": "Medium",
@@ -102227,7 +95827,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1674",
+      "id": "t1544",
       "questionNumber": "QTS179",
       "title": "TypeScript Type Manipulation & Structural Subtyping 179",
       "difficulty": "Easy",
@@ -102276,7 +95876,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1675",
+      "id": "t1545",
       "questionNumber": "QTS180",
       "title": "TypeScript Type Manipulation & Structural Subtyping 180",
       "difficulty": "Hard",
@@ -102325,7 +95925,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1676",
+      "id": "t1546",
       "questionNumber": "QTS181",
       "title": "TypeScript Type Manipulation & Structural Subtyping 181",
       "difficulty": "Easy",
@@ -102374,7 +95974,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1677",
+      "id": "t1547",
       "questionNumber": "QTS182",
       "title": "TypeScript Type Manipulation & Structural Subtyping 182",
       "difficulty": "Medium",
@@ -102423,7 +96023,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1678",
+      "id": "t1548",
       "questionNumber": "QTS183",
       "title": "TypeScript Type Manipulation & Structural Subtyping 183",
       "difficulty": "Hard",
@@ -102472,7 +96072,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1679",
+      "id": "t1549",
       "questionNumber": "QTS184",
       "title": "TypeScript Type Manipulation & Structural Subtyping 184",
       "difficulty": "Medium",
@@ -102521,7 +96121,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1680",
+      "id": "t1550",
       "questionNumber": "QTS185",
       "title": "TypeScript Type Manipulation & Structural Subtyping 185",
       "difficulty": "Easy",
@@ -102570,7 +96170,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1681",
+      "id": "t1551",
       "questionNumber": "QTS186",
       "title": "TypeScript Type Manipulation & Structural Subtyping 186",
       "difficulty": "Hard",
@@ -102619,7 +96219,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1682",
+      "id": "t1552",
       "questionNumber": "QTS187",
       "title": "TypeScript Type Manipulation & Structural Subtyping 187",
       "difficulty": "Easy",
@@ -102668,7 +96268,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1683",
+      "id": "t1553",
       "questionNumber": "QTS188",
       "title": "TypeScript Type Manipulation & Structural Subtyping 188",
       "difficulty": "Medium",
@@ -102717,7 +96317,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1684",
+      "id": "t1554",
       "questionNumber": "QTS189",
       "title": "TypeScript Type Manipulation & Structural Subtyping 189",
       "difficulty": "Hard",
@@ -102766,7 +96366,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1685",
+      "id": "t1555",
       "questionNumber": "QTS190",
       "title": "TypeScript Type Manipulation & Structural Subtyping 190",
       "difficulty": "Medium",
@@ -102815,7 +96415,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1686",
+      "id": "t1556",
       "questionNumber": "QTS191",
       "title": "TypeScript Type Manipulation & Structural Subtyping 191",
       "difficulty": "Easy",
@@ -102864,7 +96464,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1687",
+      "id": "t1557",
       "questionNumber": "QTS147",
       "title": "TypeScript Type Transformation & Generics Rule 147",
       "difficulty": "Hard",
@@ -102913,7 +96513,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1688",
+      "id": "t1558",
       "questionNumber": "QTS148",
       "title": "TypeScript Type Transformation & Generics Rule 148",
       "difficulty": "Medium",
@@ -102962,7 +96562,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1689",
+      "id": "t1559",
       "questionNumber": "QTS149",
       "title": "TypeScript Type Transformation & Generics Rule 149",
       "difficulty": "Easy",
@@ -103011,7 +96611,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1690",
+      "id": "t1560",
       "questionNumber": "QTS150",
       "title": "TypeScript Type Transformation & Generics Rule 150",
       "difficulty": "Hard",
@@ -103060,7 +96660,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1691",
+      "id": "t1561",
       "questionNumber": "QTS151",
       "title": "TypeScript Type Transformation & Generics Rule 151",
       "difficulty": "Easy",
@@ -103109,7 +96709,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1692",
+      "id": "t1562",
       "questionNumber": "QTS152",
       "title": "TypeScript Type Transformation & Generics Rule 152",
       "difficulty": "Medium",
@@ -103158,7 +96758,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1693",
+      "id": "t1563",
       "questionNumber": "QTS153",
       "title": "TypeScript Type Transformation & Generics Rule 153",
       "difficulty": "Hard",
@@ -103207,7 +96807,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1694",
+      "id": "t1564",
       "questionNumber": "QTS154",
       "title": "TypeScript Type Transformation & Generics Rule 154",
       "difficulty": "Medium",
@@ -103256,7 +96856,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1695",
+      "id": "t1565",
       "questionNumber": "QTS155",
       "title": "TypeScript Type Transformation & Generics Rule 155",
       "difficulty": "Easy",
@@ -103305,7 +96905,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1696",
+      "id": "t1566",
       "questionNumber": "QTS156",
       "title": "TypeScript Type Transformation & Generics Rule 156",
       "difficulty": "Hard",
@@ -103354,7 +96954,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1697",
+      "id": "t1567",
       "questionNumber": "QTS157",
       "title": "TypeScript Type Transformation & Generics Rule 157",
       "difficulty": "Easy",
@@ -103403,7 +97003,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1698",
+      "id": "t1568",
       "questionNumber": "QTS158",
       "title": "TypeScript Type Transformation & Generics Rule 158",
       "difficulty": "Medium",
@@ -103452,7 +97052,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1699",
+      "id": "t1569",
       "questionNumber": "QTS159",
       "title": "TypeScript Type Transformation & Generics Rule 159",
       "difficulty": "Hard",
@@ -103501,7 +97101,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1700",
+      "id": "t1570",
       "questionNumber": "QTS160",
       "title": "TypeScript Type Transformation & Generics Rule 160",
       "difficulty": "Medium",
@@ -103550,7 +97150,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1701",
+      "id": "t1571",
       "questionNumber": "QTS161",
       "title": "TypeScript Type Transformation & Generics Rule 161",
       "difficulty": "Easy",
@@ -103599,7 +97199,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1702",
+      "id": "t1572",
       "questionNumber": "QTS162",
       "title": "TypeScript Type Transformation & Generics Rule 162",
       "difficulty": "Hard",
@@ -103648,7 +97248,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1703",
+      "id": "t1573",
       "questionNumber": "QTS163",
       "title": "TypeScript Type Transformation & Generics Rule 163",
       "difficulty": "Easy",
@@ -103697,7 +97297,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1704",
+      "id": "t1574",
       "questionNumber": "QTS164",
       "title": "TypeScript Type Transformation & Generics Rule 164",
       "difficulty": "Medium",
@@ -103746,7 +97346,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1705",
+      "id": "t1575",
       "questionNumber": "QTS165",
       "title": "TypeScript Type Transformation & Generics Rule 165",
       "difficulty": "Hard",
@@ -103795,7 +97395,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1706",
+      "id": "t1576",
       "questionNumber": "QTS166",
       "title": "TypeScript Type Transformation & Generics Rule 166",
       "difficulty": "Medium",
@@ -103844,7 +97444,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1707",
+      "id": "t1577",
       "questionNumber": "QTS091",
       "title": "TypeScript Union to Intersection Utility Type",
       "difficulty": "Hard",
@@ -103890,7 +97490,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1708",
+      "id": "t1578",
       "questionNumber": "QTS087",
       "title": "TypeScript Zip Utility Type for Tuples",
       "difficulty": "Medium",
@@ -103937,7 +97537,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1709",
+      "id": "t1579",
       "questionNumber": "S74",
       "title": "Union Types",
       "difficulty": "Easy",
@@ -103983,7 +97583,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1710",
+      "id": "t1580",
       "questionNumber": "T405",
       "title": "TypeScript Type Hierarchy: `unknown` vs `never` vs `any` vs `void`",
       "difficulty": "Medium",
@@ -104034,7 +97634,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1711",
+      "id": "t1581",
       "questionNumber": "S5041",
       "title": "unknown",
       "difficulty": "Easy",
@@ -104080,7 +97680,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1712",
+      "id": "t1582",
       "questionNumber": "QTS071",
       "title": "Utility Types Implementation: Readonly, Partial, Pick, Omit",
       "difficulty": "Medium",
@@ -104133,7 +97733,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1713",
+      "id": "t1583",
       "questionNumber": "T422",
       "title": "Polyfilling Built-In TypeScript Utility Types (`Partial`, `Required`, `Pick`, `Omit`, `Readonly`)",
       "difficulty": "Medium",
@@ -104170,7 +97770,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1714",
+      "id": "t1584",
       "questionNumber": "S83",
       "title": "Utility Types",
       "difficulty": "Medium",
@@ -104216,7 +97816,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1715",
+      "id": "t1585",
       "questionNumber": "S5054",
       "title": "Variadic Tuple Types",
       "difficulty": "Hard",
@@ -104262,7 +97862,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1716",
+      "id": "t1586",
       "questionNumber": "QTS072",
       "title": "Variance in TypeScript: Covariance and Contravariance",
       "difficulty": "Hard",
@@ -104311,7 +97911,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1717",
+      "id": "t1587",
       "questionNumber": "S5043",
       "title": "void",
       "difficulty": "Easy",
@@ -104357,7 +97957,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1718",
+      "id": "t1588",
       "questionNumber": "S71",
       "title": "What is TypeScript?",
       "difficulty": "Easy",
@@ -104403,7 +98003,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1719",
+      "id": "t1589",
       "questionNumber": "QBI016",
       "title": "Beacon API for Reliable Unload Telemetry",
       "difficulty": "Medium",
@@ -104452,7 +98052,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1720",
+      "id": "t1590",
       "questionNumber": "QBI017",
       "title": "BroadcastChannel API for Cross-Tab Communication",
       "difficulty": "Medium",
@@ -104500,7 +98100,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1721",
+      "id": "t1591",
       "questionNumber": "QSYS21",
       "title": "Browser Internals Engineering Mechanism 21",
       "difficulty": "Hard",
@@ -104549,7 +98149,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1722",
+      "id": "t1592",
       "questionNumber": "QSYS22",
       "title": "Browser Internals Engineering Mechanism 22",
       "difficulty": "Medium",
@@ -104598,7 +98198,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1723",
+      "id": "t1593",
       "questionNumber": "QSYS23",
       "title": "Browser Internals Engineering Mechanism 23",
       "difficulty": "Medium",
@@ -104647,7 +98247,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1724",
+      "id": "t1594",
       "questionNumber": "QSYS24",
       "title": "Browser Internals Engineering Mechanism 24",
       "difficulty": "Hard",
@@ -104696,7 +98296,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1725",
+      "id": "t1595",
       "questionNumber": "QSYS25",
       "title": "Browser Internals Engineering Mechanism 25",
       "difficulty": "Medium",
@@ -104745,7 +98345,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1726",
+      "id": "t1596",
       "questionNumber": "QSYS26",
       "title": "Browser Internals Engineering Mechanism 26",
       "difficulty": "Medium",
@@ -104794,7 +98394,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1727",
+      "id": "t1597",
       "questionNumber": "QSYS27",
       "title": "Browser Internals Engineering Mechanism 27",
       "difficulty": "Hard",
@@ -104843,7 +98443,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1728",
+      "id": "t1598",
       "questionNumber": "QSYS28",
       "title": "Browser Internals Engineering Mechanism 28",
       "difficulty": "Medium",
@@ -104892,7 +98492,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1729",
+      "id": "t1599",
       "questionNumber": "QSYS29",
       "title": "Browser Internals Engineering Mechanism 29",
       "difficulty": "Medium",
@@ -104941,7 +98541,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1730",
+      "id": "t1600",
       "questionNumber": "QSYS30",
       "title": "Browser Internals Engineering Mechanism 30",
       "difficulty": "Hard",
@@ -104990,8 +98590,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1731",
-      "questionNumber": "Q863",
+      "id": "t1601",
+      "questionNumber": "Q733",
       "title": "QSYS_W15_111 · Browser Internals High Availability System Engineering 111",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105039,8 +98639,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1732",
-      "questionNumber": "Q864",
+      "id": "t1602",
+      "questionNumber": "Q734",
       "title": "QSYS_W15_112 · Browser Internals High Availability System Engineering 112",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105088,8 +98688,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1733",
-      "questionNumber": "Q865",
+      "id": "t1603",
+      "questionNumber": "Q735",
       "title": "QSYS_W15_113 · Browser Internals High Availability System Engineering 113",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105137,8 +98737,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1734",
-      "questionNumber": "Q866",
+      "id": "t1604",
+      "questionNumber": "Q736",
       "title": "QSYS_W15_114 · Browser Internals High Availability System Engineering 114",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105186,8 +98786,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1735",
-      "questionNumber": "Q867",
+      "id": "t1605",
+      "questionNumber": "Q737",
       "title": "QSYS_W15_115 · Browser Internals High Availability System Engineering 115",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105235,8 +98835,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1736",
-      "questionNumber": "Q868",
+      "id": "t1606",
+      "questionNumber": "Q738",
       "title": "QSYS_W15_116 · Browser Internals High Availability System Engineering 116",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105284,8 +98884,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1737",
-      "questionNumber": "Q869",
+      "id": "t1607",
+      "questionNumber": "Q739",
       "title": "QSYS_W15_117 · Browser Internals High Availability System Engineering 117",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105333,8 +98933,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1738",
-      "questionNumber": "Q870",
+      "id": "t1608",
+      "questionNumber": "Q740",
       "title": "QSYS_W15_118 · Browser Internals High Availability System Engineering 118",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105382,8 +98982,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1739",
-      "questionNumber": "Q871",
+      "id": "t1609",
+      "questionNumber": "Q741",
       "title": "QSYS_W15_119 · Browser Internals High Availability System Engineering 119",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105431,8 +99031,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1740",
-      "questionNumber": "Q872",
+      "id": "t1610",
+      "questionNumber": "Q742",
       "title": "QSYS_W15_120 · Browser Internals High Availability System Engineering 120",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105480,8 +99080,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1741",
-      "questionNumber": "Q873",
+      "id": "t1611",
+      "questionNumber": "Q743",
       "title": "QSYS_M2_81 · Browser Internals High Throughput & Defense Strategy 81",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105529,8 +99129,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1742",
-      "questionNumber": "Q874",
+      "id": "t1612",
+      "questionNumber": "Q744",
       "title": "QSYS_M2_82 · Browser Internals High Throughput & Defense Strategy 82",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105578,8 +99178,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1743",
-      "questionNumber": "Q875",
+      "id": "t1613",
+      "questionNumber": "Q745",
       "title": "QSYS_M2_83 · Browser Internals High Throughput & Defense Strategy 83",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105627,8 +99227,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1744",
-      "questionNumber": "Q876",
+      "id": "t1614",
+      "questionNumber": "Q746",
       "title": "QSYS_M2_84 · Browser Internals High Throughput & Defense Strategy 84",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105676,8 +99276,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1745",
-      "questionNumber": "Q877",
+      "id": "t1615",
+      "questionNumber": "Q747",
       "title": "QSYS_M2_85 · Browser Internals High Throughput & Defense Strategy 85",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105725,8 +99325,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1746",
-      "questionNumber": "Q878",
+      "id": "t1616",
+      "questionNumber": "Q748",
       "title": "QSYS_M2_86 · Browser Internals High Throughput & Defense Strategy 86",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105774,8 +99374,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1747",
-      "questionNumber": "Q879",
+      "id": "t1617",
+      "questionNumber": "Q749",
       "title": "QSYS_M2_87 · Browser Internals High Throughput & Defense Strategy 87",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105823,8 +99423,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1748",
-      "questionNumber": "Q880",
+      "id": "t1618",
+      "questionNumber": "Q750",
       "title": "QSYS_M2_88 · Browser Internals High Throughput & Defense Strategy 88",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105872,8 +99472,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1749",
-      "questionNumber": "Q881",
+      "id": "t1619",
+      "questionNumber": "Q751",
       "title": "QSYS_M2_89 · Browser Internals High Throughput & Defense Strategy 89",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105921,8 +99521,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1750",
-      "questionNumber": "Q882",
+      "id": "t1620",
+      "questionNumber": "Q752",
       "title": "QSYS_M2_90 · Browser Internals High Throughput & Defense Strategy 90",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -105970,8 +99570,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1751",
-      "questionNumber": "Q883",
+      "id": "t1621",
+      "questionNumber": "Q753",
       "title": "QSYS_MAX_51 · Browser Internals Systems Engineering Concept 51",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106019,8 +99619,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1752",
-      "questionNumber": "Q884",
+      "id": "t1622",
+      "questionNumber": "Q754",
       "title": "QSYS_MAX_52 · Browser Internals Systems Engineering Concept 52",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106068,8 +99668,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1753",
-      "questionNumber": "Q885",
+      "id": "t1623",
+      "questionNumber": "Q755",
       "title": "QSYS_MAX_53 · Browser Internals Systems Engineering Concept 53",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106117,8 +99717,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1754",
-      "questionNumber": "Q886",
+      "id": "t1624",
+      "questionNumber": "Q756",
       "title": "QSYS_MAX_54 · Browser Internals Systems Engineering Concept 54",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106166,8 +99766,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1755",
-      "questionNumber": "Q887",
+      "id": "t1625",
+      "questionNumber": "Q757",
       "title": "QSYS_MAX_55 · Browser Internals Systems Engineering Concept 55",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106215,8 +99815,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1756",
-      "questionNumber": "Q888",
+      "id": "t1626",
+      "questionNumber": "Q758",
       "title": "QSYS_MAX_56 · Browser Internals Systems Engineering Concept 56",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106264,8 +99864,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1757",
-      "questionNumber": "Q889",
+      "id": "t1627",
+      "questionNumber": "Q759",
       "title": "QSYS_MAX_57 · Browser Internals Systems Engineering Concept 57",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106313,8 +99913,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1758",
-      "questionNumber": "Q890",
+      "id": "t1628",
+      "questionNumber": "Q760",
       "title": "QSYS_MAX_58 · Browser Internals Systems Engineering Concept 58",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106362,8 +99962,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1759",
-      "questionNumber": "Q891",
+      "id": "t1629",
+      "questionNumber": "Q761",
       "title": "QSYS_MAX_59 · Browser Internals Systems Engineering Concept 59",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106411,8 +100011,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1760",
-      "questionNumber": "Q892",
+      "id": "t1630",
+      "questionNumber": "Q762",
       "title": "QSYS_MAX_60 · Browser Internals Systems Engineering Concept 60",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -106460,7 +100060,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1761",
+      "id": "t1631",
       "questionNumber": "T502",
       "title": "Client-Side Storage Architecture: `localStorage` vs `sessionStorage` vs `IndexedDB` vs Cookies",
       "difficulty": "Medium",
@@ -106512,7 +100112,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1762",
+      "id": "t1632",
       "questionNumber": "QBI008",
       "title": "Browser Storage Quotas and Persistence Eviction Policies",
       "difficulty": "Medium",
@@ -106561,8 +100161,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1763",
-      "questionNumber": "Q895",
+      "id": "t1633",
+      "questionNumber": "Q765",
       "title": "Critical Rendering Path",
       "difficulty": "Medium",
       "experienceLevel": "Mid-to-Senior (3-7 YOE) — the basic sequence is",
@@ -106613,7 +100213,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1764",
+      "id": "t1634",
       "questionNumber": "T502",
       "title": "DOM MutationObserver, ResizeObserver & IntersectionObserver",
       "difficulty": "Medium",
@@ -106666,7 +100266,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1765",
+      "id": "t1635",
       "questionNumber": "QBI013",
       "title": "DOM MutationObserver API vs Legacy Mutation Events",
       "difficulty": "Medium",
@@ -106715,7 +100315,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1766",
+      "id": "t1636",
       "questionNumber": "QBI004",
       "title": "Event Loop Architecture: Microtasks vs Macrotasks",
       "difficulty": "Hard",
@@ -106767,7 +100367,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1767",
+      "id": "t1637",
       "questionNumber": "QBI014",
       "title": "IntersectionObserver API for Lazy Loading and Analytics",
       "difficulty": "Easy",
@@ -106817,7 +100417,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1768",
+      "id": "t1638",
       "questionNumber": "QBI007",
       "title": "Memory Leaks and Garbage Collection Heap Snapshots",
       "difficulty": "Hard",
@@ -106866,7 +100466,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1769",
+      "id": "t1639",
       "questionNumber": "QBI009",
       "title": "Paint Flashing, Layer Trees and Compositing GPU Surfaces",
       "difficulty": "Medium",
@@ -106916,7 +100516,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1770",
+      "id": "t1640",
       "questionNumber": "QBI006",
       "title": "Performance Observer API and Real User Monitoring",
       "difficulty": "Hard",
@@ -106965,7 +100565,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1771",
+      "id": "t1641",
       "questionNumber": "QBI015",
       "title": "ResizeObserver API for Responsive Component Layouts",
       "difficulty": "Easy",
@@ -107014,7 +100614,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1772",
+      "id": "t1642",
       "questionNumber": "QBI011",
       "title": "Resource Hints: Preload, Prefetch, Preconnect, and DNS-Prefetch",
       "difficulty": "Easy",
@@ -107063,7 +100663,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1773",
+      "id": "t1643",
       "questionNumber": "QBI012",
       "title": "Same-Origin Policy and CORS Preflight Handshake",
       "difficulty": "Medium",
@@ -107112,7 +100712,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1774",
+      "id": "t1644",
       "questionNumber": "QBI0010",
       "title": "Service Worker Lifecycle, Caching and Push Notifications",
       "difficulty": "Hard",
@@ -107162,7 +100762,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1775",
+      "id": "t1645",
       "questionNumber": "QBI005",
       "title": "V8 Engine JIT Compilation and Inline Caches",
       "difficulty": "Hard",
@@ -107212,7 +100812,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1776",
+      "id": "t1646",
       "questionNumber": "QHTML008",
       "title": "Canvas 2D Context State Stack and Transformations",
       "difficulty": "Medium",
@@ -107262,7 +100862,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1777",
+      "id": "t1647",
       "questionNumber": "QHTML006",
       "title": "Canvas vs SVG Rendering and Performance Profiles",
       "difficulty": "Medium",
@@ -107311,7 +100911,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1778",
+      "id": "t1648",
       "questionNumber": "QHTML012",
       "title": "Content Security Policy Meta Tags vs HTTP Headers",
       "difficulty": "Hard",
@@ -107361,8 +100961,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1779",
-      "questionNumber": "Q911",
+      "id": "t1649",
+      "questionNumber": "Q781",
       "title": "QWEB_MAX_43 · HTML Component Architecture & Layout Principle 43",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107410,8 +101010,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1780",
-      "questionNumber": "Q912",
+      "id": "t1650",
+      "questionNumber": "Q782",
       "title": "QWEB_MAX_44 · HTML Component Architecture & Layout Principle 44",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107459,8 +101059,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1781",
-      "questionNumber": "Q913",
+      "id": "t1651",
+      "questionNumber": "Q783",
       "title": "QWEB_MAX_45 · HTML Component Architecture & Layout Principle 45",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107508,8 +101108,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1782",
-      "questionNumber": "Q914",
+      "id": "t1652",
+      "questionNumber": "Q784",
       "title": "QWEB_MAX_46 · HTML Component Architecture & Layout Principle 46",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107557,8 +101157,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1783",
-      "questionNumber": "Q915",
+      "id": "t1653",
+      "questionNumber": "Q785",
       "title": "QWEB_MAX_47 · HTML Component Architecture & Layout Principle 47",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107606,8 +101206,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1784",
-      "questionNumber": "Q916",
+      "id": "t1654",
+      "questionNumber": "Q786",
       "title": "QWEB_MAX_48 · HTML Component Architecture & Layout Principle 48",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107655,8 +101255,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1785",
-      "questionNumber": "Q917",
+      "id": "t1655",
+      "questionNumber": "Q787",
       "title": "QWEB_MAX_49 · HTML Component Architecture & Layout Principle 49",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107704,8 +101304,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1786",
-      "questionNumber": "Q918",
+      "id": "t1656",
+      "questionNumber": "Q788",
       "title": "QWEB_MAX_50 · HTML Component Architecture & Layout Principle 50",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107753,7 +101353,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1787",
+      "id": "t1657",
       "questionNumber": "QHTML005",
       "title": "HTML Document Parsing and Render-Blocking Resources",
       "difficulty": "Hard",
@@ -107804,7 +101404,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1788",
+      "id": "t1658",
       "questionNumber": "QHTML004",
       "title": "HTML Form Validation API and Custom Constraints",
       "difficulty": "Medium",
@@ -107853,8 +101453,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1789",
-      "questionNumber": "Q921",
+      "id": "t1659",
+      "questionNumber": "Q791",
       "title": "QWEB_W15_100 · HTML Production Standard & UX Architecture 100",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107902,8 +101502,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1790",
-      "questionNumber": "Q922",
+      "id": "t1660",
+      "questionNumber": "Q792",
       "title": "QWEB_W15_101 · HTML Production Standard & UX Architecture 101",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -107951,8 +101551,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1791",
-      "questionNumber": "Q923",
+      "id": "t1661",
+      "questionNumber": "Q793",
       "title": "QWEB_W15_102 · HTML Production Standard & UX Architecture 102",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108000,8 +101600,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1792",
-      "questionNumber": "Q924",
+      "id": "t1662",
+      "questionNumber": "Q794",
       "title": "QWEB_W15_93 · HTML Production Standard & UX Architecture 93",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108049,8 +101649,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1793",
-      "questionNumber": "Q925",
+      "id": "t1663",
+      "questionNumber": "Q795",
       "title": "QWEB_W15_94 · HTML Production Standard & UX Architecture 94",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108098,8 +101698,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1794",
-      "questionNumber": "Q926",
+      "id": "t1664",
+      "questionNumber": "Q796",
       "title": "QWEB_W15_95 · HTML Production Standard & UX Architecture 95",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108147,8 +101747,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1795",
-      "questionNumber": "Q927",
+      "id": "t1665",
+      "questionNumber": "Q797",
       "title": "QWEB_W15_96 · HTML Production Standard & UX Architecture 96",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108196,8 +101796,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1796",
-      "questionNumber": "Q928",
+      "id": "t1666",
+      "questionNumber": "Q798",
       "title": "QWEB_W15_97 · HTML Production Standard & UX Architecture 97",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108245,8 +101845,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1797",
-      "questionNumber": "Q929",
+      "id": "t1667",
+      "questionNumber": "Q799",
       "title": "QWEB_W15_98 · HTML Production Standard & UX Architecture 98",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108294,8 +101894,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1798",
-      "questionNumber": "Q930",
+      "id": "t1668",
+      "questionNumber": "Q800",
       "title": "QWEB_W15_99 · HTML Production Standard & UX Architecture 99",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108343,7 +101943,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1799",
+      "id": "t1669",
       "questionNumber": "QWEB18",
       "title": "HTML Scalable Architecture Rule 18",
       "difficulty": "Medium",
@@ -108392,7 +101992,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1800",
+      "id": "t1670",
       "questionNumber": "QWEB19",
       "title": "HTML Scalable Architecture Rule 19",
       "difficulty": "Easy",
@@ -108441,7 +102041,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1801",
+      "id": "t1671",
       "questionNumber": "QWEB20",
       "title": "HTML Scalable Architecture Rule 20",
       "difficulty": "Medium",
@@ -108490,7 +102090,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1802",
+      "id": "t1672",
       "questionNumber": "QWEB21",
       "title": "HTML Scalable Architecture Rule 21",
       "difficulty": "Easy",
@@ -108539,7 +102139,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1803",
+      "id": "t1673",
       "questionNumber": "QWEB22",
       "title": "HTML Scalable Architecture Rule 22",
       "difficulty": "Medium",
@@ -108588,7 +102188,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1804",
+      "id": "t1674",
       "questionNumber": "QWEB23",
       "title": "HTML Scalable Architecture Rule 23",
       "difficulty": "Easy",
@@ -108637,7 +102237,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1805",
+      "id": "t1675",
       "questionNumber": "QWEB24",
       "title": "HTML Scalable Architecture Rule 24",
       "difficulty": "Medium",
@@ -108686,7 +102286,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1806",
+      "id": "t1676",
       "questionNumber": "QWEB25",
       "title": "HTML Scalable Architecture Rule 25",
       "difficulty": "Easy",
@@ -108735,8 +102335,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1807",
-      "questionNumber": "Q939",
+      "id": "t1677",
+      "questionNumber": "Q809",
       "title": "QWEB_M2_68 · HTML Scalable UX & Rendering Standard 68",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108784,8 +102384,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1808",
-      "questionNumber": "Q940",
+      "id": "t1678",
+      "questionNumber": "Q810",
       "title": "QWEB_M2_69 · HTML Scalable UX & Rendering Standard 69",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108833,8 +102433,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1809",
-      "questionNumber": "Q941",
+      "id": "t1679",
+      "questionNumber": "Q811",
       "title": "QWEB_M2_70 · HTML Scalable UX & Rendering Standard 70",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108882,8 +102482,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1810",
-      "questionNumber": "Q942",
+      "id": "t1680",
+      "questionNumber": "Q812",
       "title": "QWEB_M2_71 · HTML Scalable UX & Rendering Standard 71",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108931,8 +102531,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1811",
-      "questionNumber": "Q943",
+      "id": "t1681",
+      "questionNumber": "Q813",
       "title": "QWEB_M2_72 · HTML Scalable UX & Rendering Standard 72",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -108980,8 +102580,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1812",
-      "questionNumber": "Q944",
+      "id": "t1682",
+      "questionNumber": "Q814",
       "title": "QWEB_M2_73 · HTML Scalable UX & Rendering Standard 73",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -109029,8 +102629,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1813",
-      "questionNumber": "Q945",
+      "id": "t1683",
+      "questionNumber": "Q815",
       "title": "QWEB_M2_74 · HTML Scalable UX & Rendering Standard 74",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -109078,8 +102678,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1814",
-      "questionNumber": "Q946",
+      "id": "t1684",
+      "questionNumber": "Q816",
       "title": "QWEB_M2_75 · HTML Scalable UX & Rendering Standard 75",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -109127,7 +102727,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1815",
+      "id": "t1685",
       "questionNumber": "QHTML011",
       "title": "HTML5 Drag and Drop API and DataTransfer Objects",
       "difficulty": "Medium",
@@ -109177,7 +102777,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1816",
+      "id": "t1686",
       "questionNumber": "QHTML007",
       "title": "HTML5 Microdata and Schema.org Structured Data",
       "difficulty": "Medium",
@@ -109227,7 +102827,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1817",
+      "id": "t1687",
       "questionNumber": "QHTML016",
       "title": "HTML5 Storage Limits, IndexedDB and Quota Management",
       "difficulty": "Hard",
@@ -109277,7 +102877,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1818",
+      "id": "t1688",
       "questionNumber": "QHTML010",
       "title": "iFrame Sandbox Attributes and Cross-Origin Security",
       "difficulty": "Hard",
@@ -109327,7 +102927,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1819",
+      "id": "t1689",
       "questionNumber": "QHTML015",
       "title": "Native Dialog Element vs Custom ARIA Modals",
       "difficulty": "Medium",
@@ -109377,7 +102977,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1820",
+      "id": "t1690",
       "questionNumber": "QHTML013",
       "title": "Picture Element and Srcset Responsive Selection",
       "difficulty": "Easy",
@@ -109427,7 +103027,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1821",
+      "id": "t1691",
       "questionNumber": "T601",
       "title": "Semantic HTML5 Elements, Document Structure & SEO Accessibility",
       "difficulty": "Medium",
@@ -109481,7 +103081,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1822",
+      "id": "t1692",
       "questionNumber": "QHTML002",
       "title": "Semantic HTML5 Architecture and Landmark Regions",
       "difficulty": "Easy",
@@ -109531,7 +103131,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1823",
+      "id": "t1693",
       "questionNumber": "QHTML003",
       "title": "Shadow DOM vs Light DOM Architecture",
       "difficulty": "Hard",
@@ -109581,7 +103181,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1824",
+      "id": "t1694",
       "questionNumber": "QHTML014",
       "title": "Web Components Custom Elements Lifecycle Callbacks",
       "difficulty": "Medium",
@@ -109630,7 +103230,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1825",
+      "id": "t1695",
       "questionNumber": "QHTML009",
       "title": "Web Workers Multithreading and Transferable Objects",
       "difficulty": "Hard",
@@ -109680,7 +103280,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1826",
+      "id": "t1696",
       "questionNumber": "QCSS016",
       "title": "Aspect-Ratio and Object-Fit Image Formatting",
       "difficulty": "Easy",
@@ -109729,7 +103329,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1827",
+      "id": "t1697",
       "questionNumber": "T701",
       "title": "CSS Box Model, Specificity, Flexbox & 2D Grid Layouts",
       "difficulty": "Medium",
@@ -109783,7 +103383,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1828",
+      "id": "t1698",
       "questionNumber": "T702",
       "title": "CSS Layout Models: Box-Sizing, Flexbox vs Grid & BFC",
       "difficulty": "Medium",
@@ -109835,7 +103435,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1829",
+      "id": "t1699",
       "questionNumber": "QCSS018",
       "title": "Critical CSS Extraction and Performance Optimization",
       "difficulty": "Hard",
@@ -109884,7 +103484,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1830",
+      "id": "t1700",
       "questionNumber": "QCSS013",
       "title": "CSS Clamp, Min, Max Functions for Fluid Typography",
       "difficulty": "Easy",
@@ -109934,7 +103534,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1831",
+      "id": "t1701",
       "questionNumber": "QCSS021",
       "title": "CSS Color Spaces: LCH, OKLCH and Wide-Gamut Displays",
       "difficulty": "Medium",
@@ -109984,8 +103584,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1832",
-      "questionNumber": "Q964",
+      "id": "t1702",
+      "questionNumber": "Q834",
       "title": "QWEB_MAX_51 · CSS Component Architecture & Layout Principle 51",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110033,8 +103633,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1833",
-      "questionNumber": "Q965",
+      "id": "t1703",
+      "questionNumber": "Q835",
       "title": "QWEB_MAX_52 · CSS Component Architecture & Layout Principle 52",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110082,8 +103682,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1834",
-      "questionNumber": "Q966",
+      "id": "t1704",
+      "questionNumber": "Q836",
       "title": "QWEB_MAX_53 · CSS Component Architecture & Layout Principle 53",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110131,8 +103731,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1835",
-      "questionNumber": "Q967",
+      "id": "t1705",
+      "questionNumber": "Q837",
       "title": "QWEB_MAX_54 · CSS Component Architecture & Layout Principle 54",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110180,8 +103780,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1836",
-      "questionNumber": "Q968",
+      "id": "t1706",
+      "questionNumber": "Q838",
       "title": "QWEB_MAX_55 · CSS Component Architecture & Layout Principle 55",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110229,8 +103829,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1837",
-      "questionNumber": "Q969",
+      "id": "t1707",
+      "questionNumber": "Q839",
       "title": "QWEB_MAX_56 · CSS Component Architecture & Layout Principle 56",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110278,8 +103878,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1838",
-      "questionNumber": "Q970",
+      "id": "t1708",
+      "questionNumber": "Q840",
       "title": "QWEB_MAX_57 · CSS Component Architecture & Layout Principle 57",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110327,8 +103927,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1839",
-      "questionNumber": "Q971",
+      "id": "t1709",
+      "questionNumber": "Q841",
       "title": "QWEB_MAX_58 · CSS Component Architecture & Layout Principle 58",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110376,8 +103976,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1840",
-      "questionNumber": "Q972",
+      "id": "t1710",
+      "questionNumber": "Q842",
       "title": "QWEB_MAX_59 · CSS Component Architecture & Layout Principle 59",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110425,8 +104025,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1841",
-      "questionNumber": "Q973",
+      "id": "t1711",
+      "questionNumber": "Q843",
       "title": "QWEB_MAX_60 · CSS Component Architecture & Layout Principle 60",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110474,7 +104074,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1842",
+      "id": "t1712",
       "questionNumber": "QCSS006",
       "title": "CSS Container Queries and Component-Driven Layouts",
       "difficulty": "Medium",
@@ -110523,7 +104123,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1843",
+      "id": "t1713",
       "questionNumber": "QCSS010",
       "title": "CSS Containment (contain property) and Rendering Isolation",
       "difficulty": "Hard",
@@ -110572,7 +104172,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1844",
+      "id": "t1714",
       "questionNumber": "QCSS004",
       "title": "CSS Grid Subgrid and Complex Layout Alignment",
       "difficulty": "Medium",
@@ -110621,7 +104221,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1845",
+      "id": "t1715",
       "questionNumber": "T703",
       "title": "CSS Grid vs Flexbox: Modern Subgrid & Container Queries (`@container`)",
       "difficulty": "Medium",
@@ -110672,7 +104272,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1846",
+      "id": "t1716",
       "questionNumber": "QCSS020",
       "title": "CSS Modules vs Styled Components in Large Apps",
       "difficulty": "Medium",
@@ -110721,8 +104321,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1847",
-      "questionNumber": "Q979",
+      "id": "t1717",
+      "questionNumber": "Q849",
       "title": "QWEB_W15_103 · CSS Production Standard & UX Architecture 103",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110770,8 +104370,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1848",
-      "questionNumber": "Q980",
+      "id": "t1718",
+      "questionNumber": "Q850",
       "title": "QWEB_W15_104 · CSS Production Standard & UX Architecture 104",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110819,8 +104419,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1849",
-      "questionNumber": "Q981",
+      "id": "t1719",
+      "questionNumber": "Q851",
       "title": "QWEB_W15_105 · CSS Production Standard & UX Architecture 105",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110868,8 +104468,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1850",
-      "questionNumber": "Q982",
+      "id": "t1720",
+      "questionNumber": "Q852",
       "title": "QWEB_W15_106 · CSS Production Standard & UX Architecture 106",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110917,8 +104517,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1851",
-      "questionNumber": "Q983",
+      "id": "t1721",
+      "questionNumber": "Q853",
       "title": "QWEB_W15_107 · CSS Production Standard & UX Architecture 107",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -110966,8 +104566,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1852",
-      "questionNumber": "Q984",
+      "id": "t1722",
+      "questionNumber": "Q854",
       "title": "QWEB_W15_108 · CSS Production Standard & UX Architecture 108",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111015,8 +104615,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1853",
-      "questionNumber": "Q985",
+      "id": "t1723",
+      "questionNumber": "Q855",
       "title": "QWEB_W15_109 · CSS Production Standard & UX Architecture 109",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111064,8 +104664,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1854",
-      "questionNumber": "Q986",
+      "id": "t1724",
+      "questionNumber": "Q856",
       "title": "QWEB_W15_110 · CSS Production Standard & UX Architecture 110",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111113,8 +104713,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1855",
-      "questionNumber": "Q987",
+      "id": "t1725",
+      "questionNumber": "Q857",
       "title": "QWEB_W15_111 · CSS Production Standard & UX Architecture 111",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111162,8 +104762,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1856",
-      "questionNumber": "Q988",
+      "id": "t1726",
+      "questionNumber": "Q858",
       "title": "QWEB_W15_112 · CSS Production Standard & UX Architecture 112",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111211,7 +104811,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1857",
+      "id": "t1727",
       "questionNumber": "QCSS017",
       "title": "CSS Pseudo-Elements (::before, ::after, ::marker) Styling",
       "difficulty": "Easy",
@@ -111261,7 +104861,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1858",
+      "id": "t1728",
       "questionNumber": "QWEB26",
       "title": "CSS Scalable Architecture Rule 26",
       "difficulty": "Medium",
@@ -111310,7 +104910,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1859",
+      "id": "t1729",
       "questionNumber": "QWEB27",
       "title": "CSS Scalable Architecture Rule 27",
       "difficulty": "Easy",
@@ -111359,7 +104959,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1860",
+      "id": "t1730",
       "questionNumber": "QWEB28",
       "title": "CSS Scalable Architecture Rule 28",
       "difficulty": "Medium",
@@ -111408,7 +105008,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1861",
+      "id": "t1731",
       "questionNumber": "QWEB29",
       "title": "CSS Scalable Architecture Rule 29",
       "difficulty": "Easy",
@@ -111457,7 +105057,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1862",
+      "id": "t1732",
       "questionNumber": "QWEB30",
       "title": "CSS Scalable Architecture Rule 30",
       "difficulty": "Medium",
@@ -111506,7 +105106,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1863",
+      "id": "t1733",
       "questionNumber": "QWEB31",
       "title": "CSS Scalable Architecture Rule 31",
       "difficulty": "Easy",
@@ -111555,7 +105155,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1864",
+      "id": "t1734",
       "questionNumber": "QWEB32",
       "title": "CSS Scalable Architecture Rule 32",
       "difficulty": "Medium",
@@ -111604,7 +105204,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1865",
+      "id": "t1735",
       "questionNumber": "QWEB33",
       "title": "CSS Scalable Architecture Rule 33",
       "difficulty": "Easy",
@@ -111653,7 +105253,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1866",
+      "id": "t1736",
       "questionNumber": "QWEB34",
       "title": "CSS Scalable Architecture Rule 34",
       "difficulty": "Medium",
@@ -111702,7 +105302,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1867",
+      "id": "t1737",
       "questionNumber": "QWEB35",
       "title": "CSS Scalable Architecture Rule 35",
       "difficulty": "Easy",
@@ -111751,8 +105351,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1868",
-      "questionNumber": "Q1000",
+      "id": "t1738",
+      "questionNumber": "Q870",
       "title": "QWEB_M2_76 · CSS Scalable UX & Rendering Standard 76",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111800,8 +105400,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1869",
-      "questionNumber": "Q1001",
+      "id": "t1739",
+      "questionNumber": "Q871",
       "title": "QWEB_M2_77 · CSS Scalable UX & Rendering Standard 77",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111849,8 +105449,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1870",
-      "questionNumber": "Q1002",
+      "id": "t1740",
+      "questionNumber": "Q872",
       "title": "QWEB_M2_78 · CSS Scalable UX & Rendering Standard 78",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111898,8 +105498,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1871",
-      "questionNumber": "Q1003",
+      "id": "t1741",
+      "questionNumber": "Q873",
       "title": "QWEB_M2_79 · CSS Scalable UX & Rendering Standard 79",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111947,8 +105547,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1872",
-      "questionNumber": "Q1004",
+      "id": "t1742",
+      "questionNumber": "Q874",
       "title": "QWEB_M2_80 · CSS Scalable UX & Rendering Standard 80",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -111996,8 +105596,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1873",
-      "questionNumber": "Q1005",
+      "id": "t1743",
+      "questionNumber": "Q875",
       "title": "QWEB_M2_81 · CSS Scalable UX & Rendering Standard 81",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112045,8 +105645,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1874",
-      "questionNumber": "Q1006",
+      "id": "t1744",
+      "questionNumber": "Q876",
       "title": "QWEB_M2_82 · CSS Scalable UX & Rendering Standard 82",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112094,8 +105694,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1875",
-      "questionNumber": "Q1007",
+      "id": "t1745",
+      "questionNumber": "Q877",
       "title": "QWEB_M2_83 · CSS Scalable UX & Rendering Standard 83",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112143,8 +105743,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1876",
-      "questionNumber": "Q1008",
+      "id": "t1746",
+      "questionNumber": "Q878",
       "title": "QWEB_M2_84 · CSS Scalable UX & Rendering Standard 84",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112192,8 +105792,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1877",
-      "questionNumber": "Q1009",
+      "id": "t1747",
+      "questionNumber": "Q879",
       "title": "QWEB_M2_85 · CSS Scalable UX & Rendering Standard 85",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112241,7 +105841,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1878",
+      "id": "t1748",
       "questionNumber": "QCSS015",
       "title": "CSS Scroll Snap API and Smooth Touch Interfaces",
       "difficulty": "Easy",
@@ -112289,7 +105889,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1879",
+      "id": "t1749",
       "questionNumber": "QCSS007",
       "title": "CSS Specificity, Cascade Layers (@layer), and Scope",
       "difficulty": "Hard",
@@ -112338,7 +105938,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1880",
+      "id": "t1750",
       "questionNumber": "QCSS022",
       "title": "CSS View Transitions API for Native-like Routing",
       "difficulty": "Hard",
@@ -112386,7 +105986,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1881",
+      "id": "t1751",
       "questionNumber": "QCSS008",
       "title": "Flexbox Alignment Mechanics vs Grid Tracks",
       "difficulty": "Easy",
@@ -112436,7 +106036,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1882",
+      "id": "t1752",
       "questionNumber": "QCSS012",
       "title": "Layout Thrashing and Synchronous Forced Reflows",
       "difficulty": "Hard",
@@ -112485,7 +106085,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1883",
+      "id": "t1753",
       "questionNumber": "QCSS014",
       "title": "Logical Properties (inline/block) and Internationalization",
       "difficulty": "Medium",
@@ -112534,7 +106134,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1884",
+      "id": "t1754",
       "questionNumber": "QCSS019",
       "title": "Modern CSS Reset Strategies and Cascade Baseline",
       "difficulty": "Easy",
@@ -112583,7 +106183,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1885",
+      "id": "t1755",
       "questionNumber": "QCSS009",
       "title": "Modern CSS Selectors: :has(), :where(), and :is() Specificity",
       "difficulty": "Medium",
@@ -112633,7 +106233,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1886",
+      "id": "t1756",
       "questionNumber": "QCSS005",
       "title": "Stacking Context and z-index Stacking Rules",
       "difficulty": "Hard",
@@ -112684,7 +106284,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1887",
+      "id": "t1757",
       "questionNumber": "QCSS011",
       "title": "Will-Change and Hardware GPU Acceleration Layers",
       "difficulty": "Medium",
@@ -112734,8 +106334,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1888",
-      "questionNumber": "Q1020",
+      "id": "t1758",
+      "questionNumber": "Q890",
       "title": "QWEB_MAX_61 · Accessibility Component Architecture & Layout Principle 61",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112783,8 +106383,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1889",
-      "questionNumber": "Q1021",
+      "id": "t1759",
+      "questionNumber": "Q891",
       "title": "QWEB_MAX_62 · Accessibility Component Architecture & Layout Principle 62",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112832,8 +106432,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1890",
-      "questionNumber": "Q1022",
+      "id": "t1760",
+      "questionNumber": "Q892",
       "title": "QWEB_MAX_63 · Accessibility Component Architecture & Layout Principle 63",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112881,8 +106481,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1891",
-      "questionNumber": "Q1023",
+      "id": "t1761",
+      "questionNumber": "Q893",
       "title": "QWEB_MAX_64 · Accessibility Component Architecture & Layout Principle 64",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112930,8 +106530,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1892",
-      "questionNumber": "Q1024",
+      "id": "t1762",
+      "questionNumber": "Q894",
       "title": "QWEB_MAX_65 · Accessibility Component Architecture & Layout Principle 65",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -112979,8 +106579,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1893",
-      "questionNumber": "Q1025",
+      "id": "t1763",
+      "questionNumber": "Q895",
       "title": "QWEB_MAX_66 · Accessibility Component Architecture & Layout Principle 66",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113028,8 +106628,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1894",
-      "questionNumber": "Q1026",
+      "id": "t1764",
+      "questionNumber": "Q896",
       "title": "QWEB_MAX_67 · Accessibility Component Architecture & Layout Principle 67",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113077,8 +106677,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1895",
-      "questionNumber": "Q1027",
+      "id": "t1765",
+      "questionNumber": "Q897",
       "title": "QWEB_W15_113 · Accessibility Production Standard & UX Architecture 113",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113126,8 +106726,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1896",
-      "questionNumber": "Q1028",
+      "id": "t1766",
+      "questionNumber": "Q898",
       "title": "QWEB_W15_114 · Accessibility Production Standard & UX Architecture 114",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113175,8 +106775,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1897",
-      "questionNumber": "Q1029",
+      "id": "t1767",
+      "questionNumber": "Q899",
       "title": "QWEB_W15_115 · Accessibility Production Standard & UX Architecture 115",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113224,8 +106824,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1898",
-      "questionNumber": "Q1030",
+      "id": "t1768",
+      "questionNumber": "Q900",
       "title": "QWEB_W15_116 · Accessibility Production Standard & UX Architecture 116",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113273,8 +106873,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1899",
-      "questionNumber": "Q1031",
+      "id": "t1769",
+      "questionNumber": "Q901",
       "title": "QWEB_W15_117 · Accessibility Production Standard & UX Architecture 117",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113322,8 +106922,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1900",
-      "questionNumber": "Q1032",
+      "id": "t1770",
+      "questionNumber": "Q902",
       "title": "QWEB_W15_118 · Accessibility Production Standard & UX Architecture 118",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113371,8 +106971,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1901",
-      "questionNumber": "Q1033",
+      "id": "t1771",
+      "questionNumber": "Q903",
       "title": "QWEB_W15_119 · Accessibility Production Standard & UX Architecture 119",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113420,8 +107020,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1902",
-      "questionNumber": "Q1034",
+      "id": "t1772",
+      "questionNumber": "Q904",
       "title": "QWEB_W15_120 · Accessibility Production Standard & UX Architecture 120",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113469,8 +107069,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1903",
-      "questionNumber": "Q1035",
+      "id": "t1773",
+      "questionNumber": "Q905",
       "title": "QWEB_W15_121 · Accessibility Production Standard & UX Architecture 121",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113518,8 +107118,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1904",
-      "questionNumber": "Q1036",
+      "id": "t1774",
+      "questionNumber": "Q906",
       "title": "QWEB_W15_122 · Accessibility Production Standard & UX Architecture 122",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113567,7 +107167,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1905",
+      "id": "t1775",
       "questionNumber": "QWEB36",
       "title": "Accessibility Scalable Architecture Rule 36",
       "difficulty": "Medium",
@@ -113616,7 +107216,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1906",
+      "id": "t1776",
       "questionNumber": "QWEB37",
       "title": "Accessibility Scalable Architecture Rule 37",
       "difficulty": "Easy",
@@ -113665,7 +107265,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1907",
+      "id": "t1777",
       "questionNumber": "QWEB38",
       "title": "Accessibility Scalable Architecture Rule 38",
       "difficulty": "Medium",
@@ -113714,7 +107314,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1908",
+      "id": "t1778",
       "questionNumber": "QWEB39",
       "title": "Accessibility Scalable Architecture Rule 39",
       "difficulty": "Easy",
@@ -113763,7 +107363,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1909",
+      "id": "t1779",
       "questionNumber": "QWEB40",
       "title": "Accessibility Scalable Architecture Rule 40",
       "difficulty": "Medium",
@@ -113812,7 +107412,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1910",
+      "id": "t1780",
       "questionNumber": "QWEB41",
       "title": "Accessibility Scalable Architecture Rule 41",
       "difficulty": "Easy",
@@ -113861,7 +107461,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1911",
+      "id": "t1781",
       "questionNumber": "QWEB42",
       "title": "Accessibility Scalable Architecture Rule 42",
       "difficulty": "Medium",
@@ -113910,8 +107510,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1912",
-      "questionNumber": "Q1044",
+      "id": "t1782",
+      "questionNumber": "Q914",
       "title": "QWEB_M2_86 · Accessibility Scalable UX & Rendering Standard 86",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -113959,8 +107559,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1913",
-      "questionNumber": "Q1045",
+      "id": "t1783",
+      "questionNumber": "Q915",
       "title": "QWEB_M2_87 · Accessibility Scalable UX & Rendering Standard 87",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -114008,8 +107608,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1914",
-      "questionNumber": "Q1046",
+      "id": "t1784",
+      "questionNumber": "Q916",
       "title": "QWEB_M2_88 · Accessibility Scalable UX & Rendering Standard 88",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -114057,8 +107657,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1915",
-      "questionNumber": "Q1047",
+      "id": "t1785",
+      "questionNumber": "Q917",
       "title": "QWEB_M2_89 · Accessibility Scalable UX & Rendering Standard 89",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -114106,8 +107706,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1916",
-      "questionNumber": "Q1048",
+      "id": "t1786",
+      "questionNumber": "Q918",
       "title": "QWEB_M2_90 · Accessibility Scalable UX & Rendering Standard 90",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -114155,8 +107755,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1917",
-      "questionNumber": "Q1049",
+      "id": "t1787",
+      "questionNumber": "Q919",
       "title": "QWEB_M2_91 · Accessibility Scalable UX & Rendering Standard 91",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -114204,8 +107804,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1918",
-      "questionNumber": "Q1050",
+      "id": "t1788",
+      "questionNumber": "Q920",
       "title": "QWEB_M2_92 · Accessibility Scalable UX & Rendering Standard 92",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -114253,7 +107853,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1919",
+      "id": "t1789",
       "questionNumber": "QA11Y008",
       "title": "Accessible Custom Dropdown Combobox Implementation",
       "difficulty": "Hard",
@@ -114302,7 +107902,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1920",
+      "id": "t1790",
       "questionNumber": "QA11Y006",
       "title": "Accessible Data Tables with Header and Scope Attributes",
       "difficulty": "Medium",
@@ -114352,7 +107952,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1921",
+      "id": "t1791",
       "questionNumber": "QA11Y002",
       "title": "Accessible Focus Management and Keyboard Focus Traps",
       "difficulty": "Medium",
@@ -114403,7 +108003,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1922",
+      "id": "t1792",
       "questionNumber": "QA11Y010",
       "title": "Accessible Form Control Error Messaging and aria-describedby",
       "difficulty": "Medium",
@@ -114452,7 +108052,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1923",
+      "id": "t1793",
       "questionNumber": "QA11Y011",
       "title": "Accessible Icon Buttons and Visually Hidden Text",
       "difficulty": "Easy",
@@ -114501,7 +108101,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1924",
+      "id": "t1794",
       "questionNumber": "QA11Y007",
       "title": "Color Blindness and Visual Accommodation Techniques",
       "difficulty": "Easy",
@@ -114550,7 +108150,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1925",
+      "id": "t1795",
       "questionNumber": "QA11Y005",
       "title": "Keyboard Roving Tabindex vs Active Descendant",
       "difficulty": "Hard",
@@ -114599,7 +108199,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1926",
+      "id": "t1796",
       "questionNumber": "QA11Y003",
       "title": "Screen Reader Announcements with ARIA Live Regions",
       "difficulty": "Medium",
@@ -114648,7 +108248,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1927",
+      "id": "t1797",
       "questionNumber": "QA11Y009",
       "title": "Skip Navigation Links and Landmark Navigation UX",
       "difficulty": "Easy",
@@ -114696,7 +108296,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1928",
+      "id": "t1798",
       "questionNumber": "QA11Y004",
       "title": "WCAG 2.2 AA Color Contrast Standards and Calculation",
       "difficulty": "Easy",
@@ -114746,7 +108346,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1929",
+      "id": "t1799",
       "questionNumber": "T901",
       "title": "WCAG 2.1 Guidelines, ARIA Roles & Keyboard Focus Management",
       "difficulty": "Medium",
@@ -114799,7 +108399,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1930",
+      "id": "t1800",
       "questionNumber": "QREACT054",
       "title": "Component Composition vs Inheritance in React",
       "difficulty": "Easy",
@@ -114848,7 +108448,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1931",
+      "id": "t1801",
       "questionNumber": "QREACT060",
       "title": "Compound Component Pattern with React Context",
       "difficulty": "Medium",
@@ -114896,7 +108496,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1932",
+      "id": "t1802",
       "questionNumber": "QREACT047",
       "title": "Controlled vs Uncontrolled Components Architecture",
       "difficulty": "Easy",
@@ -114945,7 +108545,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1933",
+      "id": "t1803",
       "questionNumber": "QREACT061",
       "title": "Custom Hook Testing Strategies and Isolation",
       "difficulty": "Medium",
@@ -114994,7 +108594,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1934",
+      "id": "t1804",
       "questionNumber": "QREACT044",
       "title": "Fiber Architecture: WorkLoop, Reconciler and Committer",
       "difficulty": "Hard",
@@ -115044,7 +108644,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1935",
+      "id": "t1805",
       "questionNumber": "QREACT048",
       "title": "Forwarding Refs and useImperativeHandle Architecture",
       "difficulty": "Medium",
@@ -115093,7 +108693,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1936",
+      "id": "t1806",
       "questionNumber": "QREACT046",
       "title": "Higher-Order Components vs Custom Hooks Comparison",
       "difficulty": "Medium",
@@ -115142,7 +108742,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1937",
+      "id": "t1807",
       "questionNumber": "QREACT051",
       "title": "Hydration Mismatch Causes and SSR Suppression Solutions",
       "difficulty": "Hard",
@@ -115191,7 +108791,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1938",
+      "id": "t1808",
       "questionNumber": "QREACT055",
       "title": "Memoization Optimization with useMemo and useCallback",
       "difficulty": "Easy",
@@ -115241,7 +108841,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1939",
+      "id": "t1809",
       "questionNumber": "T1015",
       "title": "React 18 Automatic Batching vs `flushSync` Event Loop Bypassing",
       "difficulty": "Medium",
@@ -115291,7 +108891,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1940",
+      "id": "t1810",
       "questionNumber": "T1006",
       "title": "React 18 Concurrent Rendering: `useTransition`, `useDeferredValue` & Automatic Batching",
       "difficulty": "Hard",
@@ -115341,7 +108941,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1941",
+      "id": "t1811",
       "questionNumber": "T1017",
       "title": "React 18 Concurrent Features: `useTransition()` vs `useDeferredValue()`",
       "difficulty": "Hard",
@@ -115381,8 +108981,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1942",
-      "questionNumber": "Q1074",
+      "id": "t1812",
+      "questionNumber": "Q944",
       "title": "QREACT_M2_251 · React 19 Action & Hook Concurrent Design 251",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115430,8 +109030,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1943",
-      "questionNumber": "Q1075",
+      "id": "t1813",
+      "questionNumber": "Q945",
       "title": "QREACT_M2_252 · React 19 Action & Hook Concurrent Design 252",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115479,8 +109079,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1944",
-      "questionNumber": "Q1076",
+      "id": "t1814",
+      "questionNumber": "Q946",
       "title": "QREACT_M2_253 · React 19 Action & Hook Concurrent Design 253",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115528,8 +109128,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1945",
-      "questionNumber": "Q1077",
+      "id": "t1815",
+      "questionNumber": "Q947",
       "title": "QREACT_M2_254 · React 19 Action & Hook Concurrent Design 254",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115577,8 +109177,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1946",
-      "questionNumber": "Q1078",
+      "id": "t1816",
+      "questionNumber": "Q948",
       "title": "QREACT_M2_255 · React 19 Action & Hook Concurrent Design 255",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115626,8 +109226,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1947",
-      "questionNumber": "Q1079",
+      "id": "t1817",
+      "questionNumber": "Q949",
       "title": "QREACT_M2_256 · React 19 Action & Hook Concurrent Design 256",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115675,8 +109275,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1948",
-      "questionNumber": "Q1080",
+      "id": "t1818",
+      "questionNumber": "Q950",
       "title": "QREACT_M2_257 · React 19 Action & Hook Concurrent Design 257",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115724,8 +109324,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1949",
-      "questionNumber": "Q1081",
+      "id": "t1819",
+      "questionNumber": "Q951",
       "title": "QREACT_M2_258 · React 19 Action & Hook Concurrent Design 258",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115773,8 +109373,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1950",
-      "questionNumber": "Q1082",
+      "id": "t1820",
+      "questionNumber": "Q952",
       "title": "QREACT_M2_259 · React 19 Action & Hook Concurrent Design 259",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115822,8 +109422,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1951",
-      "questionNumber": "Q1083",
+      "id": "t1821",
+      "questionNumber": "Q953",
       "title": "QREACT_M2_260 · React 19 Action & Hook Concurrent Design 260",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115871,8 +109471,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1952",
-      "questionNumber": "Q1084",
+      "id": "t1822",
+      "questionNumber": "Q954",
       "title": "QREACT_M2_261 · React 19 Action & Hook Concurrent Design 261",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115920,8 +109520,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1953",
-      "questionNumber": "Q1085",
+      "id": "t1823",
+      "questionNumber": "Q955",
       "title": "QREACT_M2_262 · React 19 Action & Hook Concurrent Design 262",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -115969,8 +109569,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1954",
-      "questionNumber": "Q1086",
+      "id": "t1824",
+      "questionNumber": "Q956",
       "title": "QREACT_M2_263 · React 19 Action & Hook Concurrent Design 263",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116018,8 +109618,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1955",
-      "questionNumber": "Q1087",
+      "id": "t1825",
+      "questionNumber": "Q957",
       "title": "QREACT_M2_264 · React 19 Action & Hook Concurrent Design 264",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116067,8 +109667,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1956",
-      "questionNumber": "Q1088",
+      "id": "t1826",
+      "questionNumber": "Q958",
       "title": "QREACT_M2_265 · React 19 Action & Hook Concurrent Design 265",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116116,8 +109716,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1957",
-      "questionNumber": "Q1089",
+      "id": "t1827",
+      "questionNumber": "Q959",
       "title": "QREACT_M2_266 · React 19 Action & Hook Concurrent Design 266",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116165,8 +109765,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1958",
-      "questionNumber": "Q1090",
+      "id": "t1828",
+      "questionNumber": "Q960",
       "title": "QREACT_M2_267 · React 19 Action & Hook Concurrent Design 267",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116214,8 +109814,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1959",
-      "questionNumber": "Q1091",
+      "id": "t1829",
+      "questionNumber": "Q961",
       "title": "QREACT_M2_268 · React 19 Action & Hook Concurrent Design 268",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116263,8 +109863,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1960",
-      "questionNumber": "Q1092",
+      "id": "t1830",
+      "questionNumber": "Q962",
       "title": "QREACT_M2_269 · React 19 Action & Hook Concurrent Design 269",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116312,8 +109912,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1961",
-      "questionNumber": "Q1093",
+      "id": "t1831",
+      "questionNumber": "Q963",
       "title": "QREACT_M2_270 · React 19 Action & Hook Concurrent Design 270",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116361,8 +109961,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1962",
-      "questionNumber": "Q1094",
+      "id": "t1832",
+      "questionNumber": "Q964",
       "title": "QREACT_M2_271 · React 19 Action & Hook Concurrent Design 271",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116410,8 +110010,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1963",
-      "questionNumber": "Q1095",
+      "id": "t1833",
+      "questionNumber": "Q965",
       "title": "QREACT_M2_272 · React 19 Action & Hook Concurrent Design 272",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116459,8 +110059,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1964",
-      "questionNumber": "Q1096",
+      "id": "t1834",
+      "questionNumber": "Q966",
       "title": "QREACT_M2_273 · React 19 Action & Hook Concurrent Design 273",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116508,8 +110108,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1965",
-      "questionNumber": "Q1097",
+      "id": "t1835",
+      "questionNumber": "Q967",
       "title": "QREACT_M2_274 · React 19 Action & Hook Concurrent Design 274",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116557,8 +110157,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1966",
-      "questionNumber": "Q1098",
+      "id": "t1836",
+      "questionNumber": "Q968",
       "title": "QREACT_M2_275 · React 19 Action & Hook Concurrent Design 275",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116606,8 +110206,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1967",
-      "questionNumber": "Q1099",
+      "id": "t1837",
+      "questionNumber": "Q969",
       "title": "QREACT_M2_276 · React 19 Action & Hook Concurrent Design 276",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116655,8 +110255,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1968",
-      "questionNumber": "Q1100",
+      "id": "t1838",
+      "questionNumber": "Q970",
       "title": "QREACT_M2_277 · React 19 Action & Hook Concurrent Design 277",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116704,8 +110304,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1969",
-      "questionNumber": "Q1101",
+      "id": "t1839",
+      "questionNumber": "Q971",
       "title": "QREACT_M2_278 · React 19 Action & Hook Concurrent Design 278",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116753,8 +110353,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1970",
-      "questionNumber": "Q1102",
+      "id": "t1840",
+      "questionNumber": "Q972",
       "title": "QREACT_M2_279 · React 19 Action & Hook Concurrent Design 279",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116802,8 +110402,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1971",
-      "questionNumber": "Q1103",
+      "id": "t1841",
+      "questionNumber": "Q973",
       "title": "QREACT_M2_280 · React 19 Action & Hook Concurrent Design 280",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116851,8 +110451,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1972",
-      "questionNumber": "Q1104",
+      "id": "t1842",
+      "questionNumber": "Q974",
       "title": "QREACT_M2_281 · React 19 Action & Hook Concurrent Design 281",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116900,8 +110500,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1973",
-      "questionNumber": "Q1105",
+      "id": "t1843",
+      "questionNumber": "Q975",
       "title": "QREACT_M2_282 · React 19 Action & Hook Concurrent Design 282",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116949,8 +110549,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1974",
-      "questionNumber": "Q1106",
+      "id": "t1844",
+      "questionNumber": "Q976",
       "title": "QREACT_M2_283 · React 19 Action & Hook Concurrent Design 283",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -116998,8 +110598,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1975",
-      "questionNumber": "Q1107",
+      "id": "t1845",
+      "questionNumber": "Q977",
       "title": "QREACT_M2_284 · React 19 Action & Hook Concurrent Design 284",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117047,8 +110647,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1976",
-      "questionNumber": "Q1108",
+      "id": "t1846",
+      "questionNumber": "Q978",
       "title": "QREACT_M2_285 · React 19 Action & Hook Concurrent Design 285",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117096,8 +110696,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1977",
-      "questionNumber": "Q1109",
+      "id": "t1847",
+      "questionNumber": "Q979",
       "title": "QREACT_W15_286 · React 19 Action & State Management Deep Dive 286",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117145,8 +110745,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1978",
-      "questionNumber": "Q1110",
+      "id": "t1848",
+      "questionNumber": "Q980",
       "title": "QREACT_W15_287 · React 19 Action & State Management Deep Dive 287",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117194,8 +110794,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1979",
-      "questionNumber": "Q1111",
+      "id": "t1849",
+      "questionNumber": "Q981",
       "title": "QREACT_W15_288 · React 19 Action & State Management Deep Dive 288",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117243,8 +110843,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1980",
-      "questionNumber": "Q1112",
+      "id": "t1850",
+      "questionNumber": "Q982",
       "title": "QREACT_W15_289 · React 19 Action & State Management Deep Dive 289",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117292,8 +110892,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1981",
-      "questionNumber": "Q1113",
+      "id": "t1851",
+      "questionNumber": "Q983",
       "title": "QREACT_W15_290 · React 19 Action & State Management Deep Dive 290",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117341,8 +110941,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1982",
-      "questionNumber": "Q1114",
+      "id": "t1852",
+      "questionNumber": "Q984",
       "title": "QREACT_W15_291 · React 19 Action & State Management Deep Dive 291",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117390,8 +110990,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1983",
-      "questionNumber": "Q1115",
+      "id": "t1853",
+      "questionNumber": "Q985",
       "title": "QREACT_W15_292 · React 19 Action & State Management Deep Dive 292",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117439,8 +111039,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1984",
-      "questionNumber": "Q1116",
+      "id": "t1854",
+      "questionNumber": "Q986",
       "title": "QREACT_W15_293 · React 19 Action & State Management Deep Dive 293",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117488,8 +111088,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1985",
-      "questionNumber": "Q1117",
+      "id": "t1855",
+      "questionNumber": "Q987",
       "title": "QREACT_W15_294 · React 19 Action & State Management Deep Dive 294",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117537,8 +111137,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1986",
-      "questionNumber": "Q1118",
+      "id": "t1856",
+      "questionNumber": "Q988",
       "title": "QREACT_W15_295 · React 19 Action & State Management Deep Dive 295",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117586,8 +111186,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1987",
-      "questionNumber": "Q1119",
+      "id": "t1857",
+      "questionNumber": "Q989",
       "title": "QREACT_W15_296 · React 19 Action & State Management Deep Dive 296",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117635,8 +111235,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1988",
-      "questionNumber": "Q1120",
+      "id": "t1858",
+      "questionNumber": "Q990",
       "title": "QREACT_W15_297 · React 19 Action & State Management Deep Dive 297",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117684,8 +111284,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1989",
-      "questionNumber": "Q1121",
+      "id": "t1859",
+      "questionNumber": "Q991",
       "title": "QREACT_W15_298 · React 19 Action & State Management Deep Dive 298",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117733,8 +111333,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1990",
-      "questionNumber": "Q1122",
+      "id": "t1860",
+      "questionNumber": "Q992",
       "title": "QREACT_W15_299 · React 19 Action & State Management Deep Dive 299",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117782,8 +111382,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1991",
-      "questionNumber": "Q1123",
+      "id": "t1861",
+      "questionNumber": "Q993",
       "title": "QREACT_W15_300 · React 19 Action & State Management Deep Dive 300",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117831,8 +111431,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1992",
-      "questionNumber": "Q1124",
+      "id": "t1862",
+      "questionNumber": "Q994",
       "title": "QREACT_W15_301 · React 19 Action & State Management Deep Dive 301",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117880,8 +111480,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1993",
-      "questionNumber": "Q1125",
+      "id": "t1863",
+      "questionNumber": "Q995",
       "title": "QREACT_W15_302 · React 19 Action & State Management Deep Dive 302",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117929,8 +111529,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1994",
-      "questionNumber": "Q1126",
+      "id": "t1864",
+      "questionNumber": "Q996",
       "title": "QREACT_W15_303 · React 19 Action & State Management Deep Dive 303",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -117978,8 +111578,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1995",
-      "questionNumber": "Q1127",
+      "id": "t1865",
+      "questionNumber": "Q997",
       "title": "QREACT_W15_304 · React 19 Action & State Management Deep Dive 304",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118027,8 +111627,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1996",
-      "questionNumber": "Q1128",
+      "id": "t1866",
+      "questionNumber": "Q998",
       "title": "QREACT_W15_305 · React 19 Action & State Management Deep Dive 305",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118076,8 +111676,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1997",
-      "questionNumber": "Q1129",
+      "id": "t1867",
+      "questionNumber": "Q999",
       "title": "QREACT_W15_306 · React 19 Action & State Management Deep Dive 306",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118125,8 +111725,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1998",
-      "questionNumber": "Q1130",
+      "id": "t1868",
+      "questionNumber": "Q1000",
       "title": "QREACT_W15_307 · React 19 Action & State Management Deep Dive 307",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118174,8 +111774,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t1999",
-      "questionNumber": "Q1131",
+      "id": "t1869",
+      "questionNumber": "Q1001",
       "title": "QREACT_W15_308 · React 19 Action & State Management Deep Dive 308",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118223,8 +111823,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2000",
-      "questionNumber": "Q1132",
+      "id": "t1870",
+      "questionNumber": "Q1002",
       "title": "QREACT_W15_309 · React 19 Action & State Management Deep Dive 309",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118272,8 +111872,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2001",
-      "questionNumber": "Q1133",
+      "id": "t1871",
+      "questionNumber": "Q1003",
       "title": "QREACT_W15_310 · React 19 Action & State Management Deep Dive 310",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118321,8 +111921,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2002",
-      "questionNumber": "Q1134",
+      "id": "t1872",
+      "questionNumber": "Q1004",
       "title": "QREACT_W15_311 · React 19 Action & State Management Deep Dive 311",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118370,8 +111970,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2003",
-      "questionNumber": "Q1135",
+      "id": "t1873",
+      "questionNumber": "Q1005",
       "title": "QREACT_W15_312 · React 19 Action & State Management Deep Dive 312",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118419,8 +112019,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2004",
-      "questionNumber": "Q1136",
+      "id": "t1874",
+      "questionNumber": "Q1006",
       "title": "QREACT_W15_313 · React 19 Action & State Management Deep Dive 313",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118468,8 +112068,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2005",
-      "questionNumber": "Q1137",
+      "id": "t1875",
+      "questionNumber": "Q1007",
       "title": "QREACT_W15_314 · React 19 Action & State Management Deep Dive 314",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118517,8 +112117,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2006",
-      "questionNumber": "Q1138",
+      "id": "t1876",
+      "questionNumber": "Q1008",
       "title": "QREACT_W15_315 · React 19 Action & State Management Deep Dive 315",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118566,8 +112166,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2007",
-      "questionNumber": "Q1139",
+      "id": "t1877",
+      "questionNumber": "Q1009",
       "title": "QREACT_W15_316 · React 19 Action & State Management Deep Dive 316",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118615,8 +112215,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2008",
-      "questionNumber": "Q1140",
+      "id": "t1878",
+      "questionNumber": "Q1010",
       "title": "QREACT_W15_317 · React 19 Action & State Management Deep Dive 317",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118664,8 +112264,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2009",
-      "questionNumber": "Q1141",
+      "id": "t1879",
+      "questionNumber": "Q1011",
       "title": "QREACT_W15_318 · React 19 Action & State Management Deep Dive 318",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118713,8 +112313,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2010",
-      "questionNumber": "Q1142",
+      "id": "t1880",
+      "questionNumber": "Q1012",
       "title": "QREACT_W15_319 · React 19 Action & State Management Deep Dive 319",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118762,8 +112362,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2011",
-      "questionNumber": "Q1143",
+      "id": "t1881",
+      "questionNumber": "Q1013",
       "title": "QREACT_W15_320 · React 19 Action & State Management Deep Dive 320",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118811,8 +112411,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2012",
-      "questionNumber": "Q1144",
+      "id": "t1882",
+      "questionNumber": "Q1014",
       "title": "QREACT_W15_321 · React 19 Action & State Management Deep Dive 321",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118860,8 +112460,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2013",
-      "questionNumber": "Q1145",
+      "id": "t1883",
+      "questionNumber": "Q1015",
       "title": "QREACT_W15_322 · React 19 Action & State Management Deep Dive 322",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118909,8 +112509,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2014",
-      "questionNumber": "Q1146",
+      "id": "t1884",
+      "questionNumber": "Q1016",
       "title": "QREACT_W15_323 · React 19 Action & State Management Deep Dive 323",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -118958,8 +112558,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2015",
-      "questionNumber": "Q1147",
+      "id": "t1885",
+      "questionNumber": "Q1017",
       "title": "QREACT_W15_324 · React 19 Action & State Management Deep Dive 324",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -119007,8 +112607,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2016",
-      "questionNumber": "Q1148",
+      "id": "t1886",
+      "questionNumber": "Q1018",
       "title": "QREACT_W15_325 · React 19 Action & State Management Deep Dive 325",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -119056,8 +112656,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2017",
-      "questionNumber": "Q1149",
+      "id": "t1887",
+      "questionNumber": "Q1019",
       "title": "QREACT_W15_326 · React 19 Action & State Management Deep Dive 326",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -119105,8 +112705,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2018",
-      "questionNumber": "Q1150",
+      "id": "t1888",
+      "questionNumber": "Q1020",
       "title": "QREACT_W15_327 · React 19 Action & State Management Deep Dive 327",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -119154,8 +112754,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2019",
-      "questionNumber": "Q1151",
+      "id": "t1889",
+      "questionNumber": "Q1021",
       "title": "QREACT_W15_328 · React 19 Action & State Management Deep Dive 328",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -119203,8 +112803,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2020",
-      "questionNumber": "Q1152",
+      "id": "t1890",
+      "questionNumber": "Q1022",
       "title": "QREACT_W15_329 · React 19 Action & State Management Deep Dive 329",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -119252,8 +112852,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2021",
-      "questionNumber": "Q1153",
+      "id": "t1891",
+      "questionNumber": "Q1023",
       "title": "QREACT_W15_330 · React 19 Action & State Management Deep Dive 330",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -119301,7 +112901,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2022",
+      "id": "t1892",
       "questionNumber": "QREACT038",
       "title": "React 19 Actions and useActionState Architecture",
       "difficulty": "Medium",
@@ -119351,7 +112951,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2023",
+      "id": "t1893",
       "questionNumber": "QREACT181",
       "title": "React 19 Architecture Component Pattern 181",
       "difficulty": "Easy",
@@ -119400,7 +113000,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2024",
+      "id": "t1894",
       "questionNumber": "QREACT182",
       "title": "React 19 Architecture Component Pattern 182",
       "difficulty": "Medium",
@@ -119449,7 +113049,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2025",
+      "id": "t1895",
       "questionNumber": "QREACT183",
       "title": "React 19 Architecture Component Pattern 183",
       "difficulty": "Hard",
@@ -119498,7 +113098,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2026",
+      "id": "t1896",
       "questionNumber": "QREACT184",
       "title": "React 19 Architecture Component Pattern 184",
       "difficulty": "Medium",
@@ -119547,7 +113147,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2027",
+      "id": "t1897",
       "questionNumber": "QREACT185",
       "title": "React 19 Architecture Component Pattern 185",
       "difficulty": "Easy",
@@ -119596,7 +113196,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2028",
+      "id": "t1898",
       "questionNumber": "QREACT186",
       "title": "React 19 Architecture Component Pattern 186",
       "difficulty": "Hard",
@@ -119645,7 +113245,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2029",
+      "id": "t1899",
       "questionNumber": "QREACT187",
       "title": "React 19 Architecture Component Pattern 187",
       "difficulty": "Easy",
@@ -119694,7 +113294,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2030",
+      "id": "t1900",
       "questionNumber": "QREACT188",
       "title": "React 19 Architecture Component Pattern 188",
       "difficulty": "Medium",
@@ -119743,7 +113343,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2031",
+      "id": "t1901",
       "questionNumber": "QREACT189",
       "title": "React 19 Architecture Component Pattern 189",
       "difficulty": "Hard",
@@ -119792,7 +113392,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2032",
+      "id": "t1902",
       "questionNumber": "QREACT190",
       "title": "React 19 Architecture Component Pattern 190",
       "difficulty": "Medium",
@@ -119841,7 +113441,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2033",
+      "id": "t1903",
       "questionNumber": "QREACT191",
       "title": "React 19 Architecture Component Pattern 191",
       "difficulty": "Easy",
@@ -119890,7 +113490,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2034",
+      "id": "t1904",
       "questionNumber": "QREACT192",
       "title": "React 19 Architecture Component Pattern 192",
       "difficulty": "Hard",
@@ -119939,7 +113539,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2035",
+      "id": "t1905",
       "questionNumber": "QREACT193",
       "title": "React 19 Architecture Component Pattern 193",
       "difficulty": "Easy",
@@ -119988,7 +113588,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2036",
+      "id": "t1906",
       "questionNumber": "QREACT194",
       "title": "React 19 Architecture Component Pattern 194",
       "difficulty": "Medium",
@@ -120037,7 +113637,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2037",
+      "id": "t1907",
       "questionNumber": "QREACT195",
       "title": "React 19 Architecture Component Pattern 195",
       "difficulty": "Hard",
@@ -120086,7 +113686,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2038",
+      "id": "t1908",
       "questionNumber": "QREACT196",
       "title": "React 19 Architecture Component Pattern 196",
       "difficulty": "Medium",
@@ -120135,7 +113735,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2039",
+      "id": "t1909",
       "questionNumber": "QREACT197",
       "title": "React 19 Architecture Component Pattern 197",
       "difficulty": "Easy",
@@ -120184,7 +113784,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2040",
+      "id": "t1910",
       "questionNumber": "QREACT198",
       "title": "React 19 Architecture Component Pattern 198",
       "difficulty": "Hard",
@@ -120233,7 +113833,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2041",
+      "id": "t1911",
       "questionNumber": "QREACT199",
       "title": "React 19 Architecture Component Pattern 199",
       "difficulty": "Easy",
@@ -120282,7 +113882,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2042",
+      "id": "t1912",
       "questionNumber": "QREACT200",
       "title": "React 19 Architecture Component Pattern 200",
       "difficulty": "Medium",
@@ -120331,7 +113931,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2043",
+      "id": "t1913",
       "questionNumber": "QREACT201",
       "title": "React 19 Architecture Component Pattern 201",
       "difficulty": "Hard",
@@ -120380,7 +113980,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2044",
+      "id": "t1914",
       "questionNumber": "QREACT202",
       "title": "React 19 Architecture Component Pattern 202",
       "difficulty": "Medium",
@@ -120429,7 +114029,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2045",
+      "id": "t1915",
       "questionNumber": "QREACT203",
       "title": "React 19 Architecture Component Pattern 203",
       "difficulty": "Easy",
@@ -120478,7 +114078,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2046",
+      "id": "t1916",
       "questionNumber": "QREACT204",
       "title": "React 19 Architecture Component Pattern 204",
       "difficulty": "Hard",
@@ -120527,7 +114127,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2047",
+      "id": "t1917",
       "questionNumber": "QREACT205",
       "title": "React 19 Architecture Component Pattern 205",
       "difficulty": "Easy",
@@ -120576,7 +114176,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2048",
+      "id": "t1918",
       "questionNumber": "QREACT206",
       "title": "React 19 Architecture Component Pattern 206",
       "difficulty": "Medium",
@@ -120625,7 +114225,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2049",
+      "id": "t1919",
       "questionNumber": "QREACT207",
       "title": "React 19 Architecture Component Pattern 207",
       "difficulty": "Hard",
@@ -120674,7 +114274,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2050",
+      "id": "t1920",
       "questionNumber": "QREACT208",
       "title": "React 19 Architecture Component Pattern 208",
       "difficulty": "Medium",
@@ -120723,7 +114323,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2051",
+      "id": "t1921",
       "questionNumber": "QREACT209",
       "title": "React 19 Architecture Component Pattern 209",
       "difficulty": "Easy",
@@ -120772,7 +114372,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2052",
+      "id": "t1922",
       "questionNumber": "QREACT210",
       "title": "React 19 Architecture Component Pattern 210",
       "difficulty": "Hard",
@@ -120821,7 +114421,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2053",
+      "id": "t1923",
       "questionNumber": "QREACT211",
       "title": "React 19 Architecture Component Pattern 211",
       "difficulty": "Easy",
@@ -120870,7 +114470,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2054",
+      "id": "t1924",
       "questionNumber": "QREACT212",
       "title": "React 19 Architecture Component Pattern 212",
       "difficulty": "Medium",
@@ -120919,7 +114519,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2055",
+      "id": "t1925",
       "questionNumber": "QREACT213",
       "title": "React 19 Architecture Component Pattern 213",
       "difficulty": "Hard",
@@ -120968,7 +114568,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2056",
+      "id": "t1926",
       "questionNumber": "QREACT214",
       "title": "React 19 Architecture Component Pattern 214",
       "difficulty": "Medium",
@@ -121017,7 +114617,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2057",
+      "id": "t1927",
       "questionNumber": "QREACT215",
       "title": "React 19 Architecture Component Pattern 215",
       "difficulty": "Easy",
@@ -121066,8 +114666,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2058",
-      "questionNumber": "Q1190",
+      "id": "t1928",
+      "questionNumber": "Q1060",
       "title": "QREACT_MAX_216 · React 19 Concurrent Rendering & Hook Architecture 216",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121115,8 +114715,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2059",
-      "questionNumber": "Q1191",
+      "id": "t1929",
+      "questionNumber": "Q1061",
       "title": "QREACT_MAX_217 · React 19 Concurrent Rendering & Hook Architecture 217",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121164,8 +114764,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2060",
-      "questionNumber": "Q1192",
+      "id": "t1930",
+      "questionNumber": "Q1062",
       "title": "QREACT_MAX_218 · React 19 Concurrent Rendering & Hook Architecture 218",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121213,8 +114813,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2061",
-      "questionNumber": "Q1193",
+      "id": "t1931",
+      "questionNumber": "Q1063",
       "title": "QREACT_MAX_219 · React 19 Concurrent Rendering & Hook Architecture 219",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121262,8 +114862,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2062",
-      "questionNumber": "Q1194",
+      "id": "t1932",
+      "questionNumber": "Q1064",
       "title": "QREACT_MAX_220 · React 19 Concurrent Rendering & Hook Architecture 220",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121311,8 +114911,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2063",
-      "questionNumber": "Q1195",
+      "id": "t1933",
+      "questionNumber": "Q1065",
       "title": "QREACT_MAX_221 · React 19 Concurrent Rendering & Hook Architecture 221",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121360,8 +114960,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2064",
-      "questionNumber": "Q1196",
+      "id": "t1934",
+      "questionNumber": "Q1066",
       "title": "QREACT_MAX_222 · React 19 Concurrent Rendering & Hook Architecture 222",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121409,8 +115009,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2065",
-      "questionNumber": "Q1197",
+      "id": "t1935",
+      "questionNumber": "Q1067",
       "title": "QREACT_MAX_223 · React 19 Concurrent Rendering & Hook Architecture 223",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121458,8 +115058,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2066",
-      "questionNumber": "Q1198",
+      "id": "t1936",
+      "questionNumber": "Q1068",
       "title": "QREACT_MAX_224 · React 19 Concurrent Rendering & Hook Architecture 224",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121507,8 +115107,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2067",
-      "questionNumber": "Q1199",
+      "id": "t1937",
+      "questionNumber": "Q1069",
       "title": "QREACT_MAX_225 · React 19 Concurrent Rendering & Hook Architecture 225",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121556,8 +115156,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2068",
-      "questionNumber": "Q1200",
+      "id": "t1938",
+      "questionNumber": "Q1070",
       "title": "QREACT_MAX_226 · React 19 Concurrent Rendering & Hook Architecture 226",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121605,8 +115205,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2069",
-      "questionNumber": "Q1201",
+      "id": "t1939",
+      "questionNumber": "Q1071",
       "title": "QREACT_MAX_227 · React 19 Concurrent Rendering & Hook Architecture 227",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121654,8 +115254,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2070",
-      "questionNumber": "Q1202",
+      "id": "t1940",
+      "questionNumber": "Q1072",
       "title": "QREACT_MAX_228 · React 19 Concurrent Rendering & Hook Architecture 228",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121703,8 +115303,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2071",
-      "questionNumber": "Q1203",
+      "id": "t1941",
+      "questionNumber": "Q1073",
       "title": "QREACT_MAX_229 · React 19 Concurrent Rendering & Hook Architecture 229",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121752,8 +115352,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2072",
-      "questionNumber": "Q1204",
+      "id": "t1942",
+      "questionNumber": "Q1074",
       "title": "QREACT_MAX_230 · React 19 Concurrent Rendering & Hook Architecture 230",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121801,8 +115401,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2073",
-      "questionNumber": "Q1205",
+      "id": "t1943",
+      "questionNumber": "Q1075",
       "title": "QREACT_MAX_231 · React 19 Concurrent Rendering & Hook Architecture 231",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121850,8 +115450,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2074",
-      "questionNumber": "Q1206",
+      "id": "t1944",
+      "questionNumber": "Q1076",
       "title": "QREACT_MAX_232 · React 19 Concurrent Rendering & Hook Architecture 232",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121899,8 +115499,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2075",
-      "questionNumber": "Q1207",
+      "id": "t1945",
+      "questionNumber": "Q1077",
       "title": "QREACT_MAX_233 · React 19 Concurrent Rendering & Hook Architecture 233",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121948,8 +115548,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2076",
-      "questionNumber": "Q1208",
+      "id": "t1946",
+      "questionNumber": "Q1078",
       "title": "QREACT_MAX_234 · React 19 Concurrent Rendering & Hook Architecture 234",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -121997,8 +115597,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2077",
-      "questionNumber": "Q1209",
+      "id": "t1947",
+      "questionNumber": "Q1079",
       "title": "QREACT_MAX_235 · React 19 Concurrent Rendering & Hook Architecture 235",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122046,8 +115646,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2078",
-      "questionNumber": "Q1210",
+      "id": "t1948",
+      "questionNumber": "Q1080",
       "title": "QREACT_MAX_236 · React 19 Concurrent Rendering & Hook Architecture 236",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122095,8 +115695,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2079",
-      "questionNumber": "Q1211",
+      "id": "t1949",
+      "questionNumber": "Q1081",
       "title": "QREACT_MAX_237 · React 19 Concurrent Rendering & Hook Architecture 237",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122144,8 +115744,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2080",
-      "questionNumber": "Q1212",
+      "id": "t1950",
+      "questionNumber": "Q1082",
       "title": "QREACT_MAX_238 · React 19 Concurrent Rendering & Hook Architecture 238",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122193,8 +115793,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2081",
-      "questionNumber": "Q1213",
+      "id": "t1951",
+      "questionNumber": "Q1083",
       "title": "QREACT_MAX_239 · React 19 Concurrent Rendering & Hook Architecture 239",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122242,8 +115842,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2082",
-      "questionNumber": "Q1214",
+      "id": "t1952",
+      "questionNumber": "Q1084",
       "title": "QREACT_MAX_240 · React 19 Concurrent Rendering & Hook Architecture 240",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122291,8 +115891,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2083",
-      "questionNumber": "Q1215",
+      "id": "t1953",
+      "questionNumber": "Q1085",
       "title": "QREACT_MAX_241 · React 19 Concurrent Rendering & Hook Architecture 241",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122340,8 +115940,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2084",
-      "questionNumber": "Q1216",
+      "id": "t1954",
+      "questionNumber": "Q1086",
       "title": "QREACT_MAX_242 · React 19 Concurrent Rendering & Hook Architecture 242",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122389,8 +115989,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2085",
-      "questionNumber": "Q1217",
+      "id": "t1955",
+      "questionNumber": "Q1087",
       "title": "QREACT_MAX_243 · React 19 Concurrent Rendering & Hook Architecture 243",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122438,8 +116038,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2086",
-      "questionNumber": "Q1218",
+      "id": "t1956",
+      "questionNumber": "Q1088",
       "title": "QREACT_MAX_244 · React 19 Concurrent Rendering & Hook Architecture 244",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122487,8 +116087,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2087",
-      "questionNumber": "Q1219",
+      "id": "t1957",
+      "questionNumber": "Q1089",
       "title": "QREACT_MAX_245 · React 19 Concurrent Rendering & Hook Architecture 245",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122536,8 +116136,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2088",
-      "questionNumber": "Q1220",
+      "id": "t1958",
+      "questionNumber": "Q1090",
       "title": "QREACT_MAX_246 · React 19 Concurrent Rendering & Hook Architecture 246",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122585,8 +116185,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2089",
-      "questionNumber": "Q1221",
+      "id": "t1959",
+      "questionNumber": "Q1091",
       "title": "QREACT_MAX_247 · React 19 Concurrent Rendering & Hook Architecture 247",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122634,8 +116234,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2090",
-      "questionNumber": "Q1222",
+      "id": "t1960",
+      "questionNumber": "Q1092",
       "title": "QREACT_MAX_248 · React 19 Concurrent Rendering & Hook Architecture 248",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122683,8 +116283,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2091",
-      "questionNumber": "Q1223",
+      "id": "t1961",
+      "questionNumber": "Q1093",
       "title": "QREACT_MAX_249 · React 19 Concurrent Rendering & Hook Architecture 249",
       "difficulty": "Hard",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122732,8 +116332,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2092",
-      "questionNumber": "Q1224",
+      "id": "t1962",
+      "questionNumber": "Q1094",
       "title": "QREACT_MAX_250 · React 19 Concurrent Rendering & Hook Architecture 250",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -122781,7 +116381,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2093",
+      "id": "t1963",
       "questionNumber": "T1013",
       "title": "React 19 Server Actions, `useOptimistic` & `useActionState` Form Architecture",
       "difficulty": "Hard",
@@ -122832,7 +116432,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2094",
+      "id": "t1964",
       "questionNumber": "T1030",
       "title": "React Server Components (RSC) vs Client Components (`'use client'`)",
       "difficulty": "Hard",
@@ -122871,7 +116471,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2095",
+      "id": "t1965",
       "questionNumber": "QREACT042",
       "title": "React 19 use API for Promise and Context Resolution",
       "difficulty": "Medium",
@@ -122920,7 +116520,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2096",
+      "id": "t1966",
       "questionNumber": "T1016",
       "title": "React 19 `use()` Hook: Suspense Promise Unwrapping & Context Consumption",
       "difficulty": "Medium",
@@ -122971,7 +116571,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2097",
+      "id": "t1967",
       "questionNumber": "QREACT041",
       "title": "React 19 useFormStatus Hook for Action State Propagation",
       "difficulty": "Easy",
@@ -123020,7 +116620,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2098",
+      "id": "t1968",
       "questionNumber": "T1022",
       "title": "React 19 Form Hooks: `useFormStatus()` & `useOptimistic()`",
       "difficulty": "Medium",
@@ -123058,7 +116658,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2099",
+      "id": "t1969",
       "questionNumber": "QREACT040",
       "title": "React 19 useOptimistic Hook for Responsive UI Updates",
       "difficulty": "Medium",
@@ -123107,7 +116707,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2100",
+      "id": "t1970",
       "questionNumber": "QREACT132",
       "title": "React Accordion Collapse Expand Component",
       "difficulty": "Easy",
@@ -123153,7 +116753,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2101",
+      "id": "t1971",
       "questionNumber": "QREACT074",
       "title": "React Accordion Component with Single and Multiple Expand",
       "difficulty": "Easy",
@@ -123200,7 +116800,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2102",
+      "id": "t1972",
       "questionNumber": "QREACT150",
       "title": "React Accordion Multi Expand Component",
       "difficulty": "Easy",
@@ -123246,7 +116846,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2103",
+      "id": "t1973",
       "questionNumber": "QREACT179",
       "title": "React Accordion Panel Collapse Component",
       "difficulty": "Easy",
@@ -123292,7 +116892,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2104",
+      "id": "t1974",
       "questionNumber": "QREACT163",
       "title": "React Accordion Single Item Expand Component",
       "difficulty": "Easy",
@@ -123338,7 +116938,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2105",
+      "id": "t1975",
       "questionNumber": "QREACT145",
       "title": "React Badge Count Component",
       "difficulty": "Easy",
@@ -123384,7 +116984,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2106",
+      "id": "t1976",
       "questionNumber": "QREACT175",
       "title": "React Badge Count Indicator Component",
       "difficulty": "Easy",
@@ -123430,7 +117030,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2107",
+      "id": "t1977",
       "questionNumber": "QREACT102",
       "title": "React Breadcrumb Component with Route Segment Matching",
       "difficulty": "Easy",
@@ -123477,7 +117077,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2108",
+      "id": "t1978",
       "questionNumber": "QREACT142",
       "title": "React Breadcrumb Nav Component",
       "difficulty": "Easy",
@@ -123523,7 +117123,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2109",
+      "id": "t1979",
       "questionNumber": "QREACT172",
       "title": "React Breadcrumb Route Component",
       "difficulty": "Easy",
@@ -123569,7 +117169,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2110",
+      "id": "t1980",
       "questionNumber": "QREACT088",
       "title": "React Carousel Component with Touch Swipe",
       "difficulty": "Medium",
@@ -123617,7 +117217,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2111",
+      "id": "t1981",
       "questionNumber": "QREACT117",
       "title": "React Chip Input Component with Removable Tags",
       "difficulty": "Easy",
@@ -123664,7 +117264,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2112",
+      "id": "t1982",
       "questionNumber": "QREACT159",
       "title": "React Circular Loading Progress Component",
       "difficulty": "Easy",
@@ -123710,7 +117310,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2113",
+      "id": "t1983",
       "questionNumber": "QREACT140",
       "title": "React Circular Loading Spinner Component",
       "difficulty": "Easy",
@@ -123757,7 +117357,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2114",
+      "id": "t1984",
       "questionNumber": "QREACT119",
       "title": "React Circular Progress Bar Component SVG",
       "difficulty": "Easy",
@@ -123804,7 +117404,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2115",
+      "id": "t1985",
       "questionNumber": "QREACT170",
       "title": "React Circular Progress Spinner Component",
       "difficulty": "Easy",
@@ -123850,7 +117450,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2116",
+      "id": "t1986",
       "questionNumber": "T1009",
       "title": "React 19 Innovations: Auto-Memoization Compiler, `use()` Hook & Server Actions",
       "difficulty": "Hard",
@@ -123900,7 +117500,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2117",
+      "id": "t1987",
       "questionNumber": "T1028",
       "title": "React Context API Performance: Context Splitting & Memoization",
       "difficulty": "Medium",
@@ -123939,7 +117539,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2118",
+      "id": "t1988",
       "questionNumber": "T1011",
       "title": "React Context API Performance: Context Splitting, Selector Patterns & Memoization",
       "difficulty": "Medium",
@@ -123989,7 +117589,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2119",
+      "id": "t1989",
       "questionNumber": "QREACT045",
       "title": "React Context Performance: Splitting Context and Selectors",
       "difficulty": "Medium",
@@ -124038,7 +117638,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2120",
+      "id": "t1990",
       "questionNumber": "QREACT082",
       "title": "React Custom Hook: useAsync Task Execution State Machine",
       "difficulty": "Medium",
@@ -124088,7 +117688,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2121",
+      "id": "t1991",
       "questionNumber": "QREACT148",
       "title": "React Custom Hook: useCopyToClipboard State Feedback",
       "difficulty": "Easy",
@@ -124135,7 +117735,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2122",
+      "id": "t1992",
       "questionNumber": "QREACT083",
       "title": "React Custom Hook: useCopyToClipboard with Feedback Timeout",
       "difficulty": "Easy",
@@ -124182,7 +117782,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2123",
+      "id": "t1993",
       "questionNumber": "QREACT065",
       "title": "React Custom Hook: useDebounce and useThrottle",
       "difficulty": "Easy",
@@ -124230,7 +117830,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2124",
+      "id": "t1994",
       "questionNumber": "QREACT176",
       "title": "React Custom Hook: useDebounce Deferred State Sync",
       "difficulty": "Easy",
@@ -124276,7 +117876,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2125",
+      "id": "t1995",
       "questionNumber": "QREACT130",
       "title": "React Custom Hook: useDebouncedCallback Handler",
       "difficulty": "Easy",
@@ -124323,7 +117923,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2126",
+      "id": "t1996",
       "questionNumber": "QREACT096",
       "title": "React Custom Hook: useDebouncedState for Immediate and Deferred Values",
       "difficulty": "Easy",
@@ -124371,7 +117971,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2127",
+      "id": "t1997",
       "questionNumber": "QREACT149",
       "title": "React Custom Hook: useDocumentTitle Dynamic Head",
       "difficulty": "Easy",
@@ -124418,7 +118018,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2128",
+      "id": "t1998",
       "questionNumber": "QREACT084",
       "title": "React Custom Hook: useDocumentTitle for Page Head Management",
       "difficulty": "Easy",
@@ -124465,7 +118065,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2129",
+      "id": "t1999",
       "questionNumber": "T1018",
       "title": "Stable Event Handlers Pattern: `useEvent()` / `useLatest()` Custom Hooks",
       "difficulty": "Medium",
@@ -124505,7 +118105,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2130",
+      "id": "t2000",
       "questionNumber": "QREACT080",
       "title": "React Custom Hook: useEventListener for Clean Window Subscriptions",
       "difficulty": "Easy",
@@ -124553,7 +118153,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2131",
+      "id": "t2001",
       "questionNumber": "QREACT146",
       "title": "React Custom Hook: useEventListener Window Document Listener",
       "difficulty": "Easy",
@@ -124601,7 +118201,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2132",
+      "id": "t2002",
       "questionNumber": "QREACT070",
       "title": "React Custom Hook: useFetch with AbortController and Cache",
       "difficulty": "Medium",
@@ -124649,7 +118249,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2133",
+      "id": "t2003",
       "questionNumber": "QREACT091",
       "title": "React Custom Hook: useHover to Track Cursor Proximity",
       "difficulty": "Easy",
@@ -124696,7 +118296,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2134",
+      "id": "t2004",
       "questionNumber": "QREACT157",
       "title": "React Custom Hook: useHoverTargetState",
       "difficulty": "Easy",
@@ -124742,7 +118342,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2135",
+      "id": "t2005",
       "questionNumber": "QREACT067",
       "title": "React Custom Hook: useIntersectionObserver for Lazy Content",
       "difficulty": "Medium",
@@ -124790,7 +118390,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2136",
+      "id": "t2006",
       "questionNumber": "QREACT111",
       "title": "React Custom Hook: useIntersectionObserver for Target Visibility",
       "difficulty": "Easy",
@@ -124837,7 +118437,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2137",
+      "id": "t2007",
       "questionNumber": "QREACT121",
       "title": "React Custom Hook: useIntersectionObserverLazyImage",
       "difficulty": "Easy",
@@ -124884,7 +118484,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2138",
+      "id": "t2008",
       "questionNumber": "QREACT156",
       "title": "React Custom Hook: useIntersectionObserverVisibility",
       "difficulty": "Easy",
@@ -124930,7 +118530,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2139",
+      "id": "t2009",
       "questionNumber": "QREACT107",
       "title": "React Custom Hook: useInterval Declarative Timer",
       "difficulty": "Easy",
@@ -124977,7 +118577,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2140",
+      "id": "t2010",
       "questionNumber": "QREACT098",
       "title": "React Custom Hook: useIsMounted Component Safety Check",
       "difficulty": "Easy",
@@ -125024,7 +118624,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2141",
+      "id": "t2011",
       "questionNumber": "QREACT106",
       "title": "React Custom Hook: useKeyCombination Keyboard Shortcut Listener",
       "difficulty": "Medium",
@@ -125071,7 +118671,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2142",
+      "id": "t2012",
       "questionNumber": "QREACT129",
       "title": "React Custom Hook: useLocalStorage State Sync",
       "difficulty": "Easy",
@@ -125117,7 +118717,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2143",
+      "id": "t2013",
       "questionNumber": "QREACT066",
       "title": "React Custom Hook: useLocalStorage with Window Storage Event",
       "difficulty": "Easy",
@@ -125165,7 +118765,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2144",
+      "id": "t2014",
       "questionNumber": "QREACT081",
       "title": "React Custom Hook: useMediaQuery for Responsive JS Layouts",
       "difficulty": "Easy",
@@ -125213,7 +118813,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2145",
+      "id": "t2015",
       "questionNumber": "QREACT147",
       "title": "React Custom Hook: useMediaQuery Responsive Breakpoint Detector",
       "difficulty": "Easy",
@@ -125259,7 +118859,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2146",
+      "id": "t2016",
       "questionNumber": "QREACT112",
       "title": "React Custom Hook: useMutationObserver for DOM Attribute Tracking",
       "difficulty": "Medium",
@@ -125306,7 +118906,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2147",
+      "id": "t2017",
       "questionNumber": "QREACT128",
       "title": "React Custom Hook: useOnClickOutside Container Listener",
       "difficulty": "Easy",
@@ -125352,7 +118952,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2148",
+      "id": "t2018",
       "questionNumber": "QREACT069",
       "title": "React Custom Hook: useOnClickOutside for Dropdowns",
       "difficulty": "Easy",
@@ -125399,7 +118999,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2149",
+      "id": "t2019",
       "questionNumber": "QREACT100",
       "title": "React Custom Hook: useOnlineStatus Network Monitor",
       "difficulty": "Easy",
@@ -125446,7 +119046,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2150",
+      "id": "t2020",
       "questionNumber": "QREACT122",
       "title": "React Custom Hook: usePageLeave Window Intent Detector",
       "difficulty": "Easy",
@@ -125492,7 +119092,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2151",
+      "id": "t2021",
       "questionNumber": "QREACT068",
       "title": "React Custom Hook: usePrevious to Track Past State",
       "difficulty": "Easy",
@@ -125539,7 +119139,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2152",
+      "id": "t2022",
       "questionNumber": "QREACT126",
       "title": "React Custom Hook: usePrevious Value State Tracker",
       "difficulty": "Easy",
@@ -125586,7 +119186,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2153",
+      "id": "t2023",
       "questionNumber": "QREACT161",
       "title": "React Custom Hook: usePrevious Value Tracker",
       "difficulty": "Easy",
@@ -125632,7 +119232,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2154",
+      "id": "t2024",
       "questionNumber": "QREACT113",
       "title": "React Custom Hook: useResizeObserver for Element Bounding Dimensions",
       "difficulty": "Medium",
@@ -125679,7 +119279,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2155",
+      "id": "t2025",
       "questionNumber": "QREACT099",
       "title": "React Custom Hook: useScrollPosition Tracker",
       "difficulty": "Easy",
@@ -125726,7 +119326,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2156",
+      "id": "t2026",
       "questionNumber": "QREACT177",
       "title": "React Custom Hook: useThrottle Deferred State Sync",
       "difficulty": "Easy",
@@ -125772,7 +119372,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2157",
+      "id": "t2027",
       "questionNumber": "QREACT114",
       "title": "React Custom Hook: useThrottle for Deferred Value Calculations",
       "difficulty": "Easy",
@@ -125819,7 +119419,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2158",
+      "id": "t2028",
       "questionNumber": "QREACT131",
       "title": "React Custom Hook: useThrottledCallback Handler",
       "difficulty": "Easy",
@@ -125866,7 +119466,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2159",
+      "id": "t2029",
       "questionNumber": "QREACT108",
       "title": "React Custom Hook: useTimeout Declarative Delay",
       "difficulty": "Easy",
@@ -125914,7 +119514,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2160",
+      "id": "t2030",
       "questionNumber": "QREACT127",
       "title": "React Custom Hook: useToggle Boolean State Switcher",
       "difficulty": "Easy",
@@ -125960,7 +119560,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2161",
+      "id": "t2031",
       "questionNumber": "QREACT092",
       "title": "React Custom Hook: useToggle for Boolean State Control",
       "difficulty": "Easy",
@@ -126007,7 +119607,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2162",
+      "id": "t2032",
       "questionNumber": "QREACT162",
       "title": "React Custom Hook: useToggle State Switcher",
       "difficulty": "Easy",
@@ -126053,7 +119653,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2163",
+      "id": "t2033",
       "questionNumber": "QREACT097",
       "title": "React Custom Hook: useUnmount Lifecycle Cleaner",
       "difficulty": "Easy",
@@ -126099,7 +119699,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2164",
+      "id": "t2034",
       "questionNumber": "QREACT123",
       "title": "React Custom Hook: useWindowFocus Window Active State",
       "difficulty": "Easy",
@@ -126145,7 +119745,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2165",
+      "id": "t2035",
       "questionNumber": "QREACT093",
       "title": "React Custom Hook: useWindowSize with Throttled Resize Event",
       "difficulty": "Easy",
@@ -126192,7 +119792,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2166",
+      "id": "t2036",
       "questionNumber": "T1007",
       "title": "Testing Custom Hooks with React Testing Library & MSW",
       "difficulty": "Medium",
@@ -126243,7 +119843,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2167",
+      "id": "t2037",
       "questionNumber": "T1012",
       "title": "`useSyncExternalStore`: Concurrent Mode Safe State Subscriptions (Zustand, Redux, Window Listeners)",
       "difficulty": "Hard",
@@ -126294,7 +119894,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2168",
+      "id": "t2038",
       "questionNumber": "QREACT101",
       "title": "React Dropdown Menu with Arrow Key Focus Navigation",
       "difficulty": "Medium",
@@ -126341,7 +119941,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2169",
+      "id": "t2039",
       "questionNumber": "QREACT049",
       "title": "React Error Boundaries and Component Catch Fallbacks",
       "difficulty": "Medium",
@@ -126390,7 +119990,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2170",
+      "id": "t2040",
       "questionNumber": "T1010",
       "title": "React Error Boundaries: `componentDidCatch`, `getDerivedStateFromError` & Fallback UIs",
       "difficulty": "Medium",
@@ -126440,7 +120040,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2171",
+      "id": "t2041",
       "questionNumber": "T1027",
       "title": "React Error Boundaries: `componentDidCatch` & Fallback Recovery UIs",
       "difficulty": "Medium",
@@ -126479,7 +120079,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2172",
+      "id": "t2042",
       "questionNumber": "QREACT125",
       "title": "React Expandable Accordion Menu Component",
       "difficulty": "Easy",
@@ -126526,8 +120126,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2173",
-      "questionNumber": "Q1305",
+      "id": "t2043",
+      "questionNumber": "Q1175",
       "title": "React Fiber & Concurrent Rendering",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE) — at Staff level this extends into",
@@ -126577,7 +120177,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2174",
+      "id": "t2044",
       "questionNumber": "T1002",
       "title": "React Fiber Architecture & Diffing Algorithm",
       "difficulty": "Hard",
@@ -126628,7 +120228,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2175",
+      "id": "t2045",
       "questionNumber": "QREACT078",
       "title": "React File Drag and Drop Zone Component",
       "difficulty": "Easy",
@@ -126676,7 +120276,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2176",
+      "id": "t2046",
       "questionNumber": "QREACT139",
       "title": "React File Drag Drop Target Component",
       "difficulty": "Easy",
@@ -126723,7 +120323,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2177",
+      "id": "t2047",
       "questionNumber": "QREACT155",
       "title": "React File Drop Zone Target Component",
       "difficulty": "Easy",
@@ -126770,7 +120370,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2178",
+      "id": "t2048",
       "questionNumber": "QREACT169",
       "title": "React File Drop Zone Target Control Component",
       "difficulty": "Easy",
@@ -126816,7 +120416,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2179",
+      "id": "t2049",
       "questionNumber": "T1026",
       "title": "Component Composition Patterns: HOCs vs Render Props vs Custom Hooks",
       "difficulty": "Medium",
@@ -126855,7 +120455,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2180",
+      "id": "t2050",
       "questionNumber": "QREACT089",
       "title": "React Infinite Scroll Hook and Virtualization Integration",
       "difficulty": "Hard",
@@ -126903,7 +120503,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2181",
+      "id": "t2051",
       "questionNumber": "QREACT077",
       "title": "React Infinite Scroll Image Grid with IntersectionObserver",
       "difficulty": "Medium",
@@ -126951,7 +120551,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2182",
+      "id": "t2052",
       "questionNumber": "QREACT160",
       "title": "React Linear Progress Bar Component",
       "difficulty": "Easy",
@@ -126997,7 +120597,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2183",
+      "id": "t2053",
       "questionNumber": "QREACT120",
       "title": "React Linear Progress Indicator Component",
       "difficulty": "Easy",
@@ -127044,7 +120644,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2184",
+      "id": "t2054",
       "questionNumber": "QREACT073",
       "title": "React Modal Dialog Component with Portal and Focus Trap",
       "difficulty": "Medium",
@@ -127092,7 +120692,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2185",
+      "id": "t2055",
       "questionNumber": "QREACT134",
       "title": "React Modal Dialog Overlay Component",
       "difficulty": "Easy",
@@ -127139,7 +120739,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2186",
+      "id": "t2056",
       "questionNumber": "QREACT165",
       "title": "React Modal Overlay Dialog Component",
       "difficulty": "Easy",
@@ -127185,7 +120785,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2187",
+      "id": "t2057",
       "questionNumber": "QREACT110",
       "title": "React Multi Selector Tag Input Component",
       "difficulty": "Easy",
@@ -127233,7 +120833,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2188",
+      "id": "t2058",
       "questionNumber": "QREACT075",
       "title": "React Multi-Step Form Wizard Component with State Machine",
       "difficulty": "Medium",
@@ -127281,7 +120881,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2189",
+      "id": "t2059",
       "questionNumber": "QREACT115",
       "title": "React Notification Badge Component with Live Count",
       "difficulty": "Easy",
@@ -127328,7 +120928,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2190",
+      "id": "t2060",
       "questionNumber": "QREACT158",
       "title": "React Notification Badge Counter Component",
       "difficulty": "Easy",
@@ -127374,7 +120974,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2191",
+      "id": "t2061",
       "questionNumber": "QREACT124",
       "title": "React Notification Toast Portal Manager",
       "difficulty": "Medium",
@@ -127421,7 +121021,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2192",
+      "id": "t2062",
       "questionNumber": "QREACT167",
       "title": "React Pagination Control Buttons Component",
       "difficulty": "Easy",
@@ -127467,7 +121067,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2193",
+      "id": "t2063",
       "questionNumber": "QREACT103",
       "title": "React Pagination Controls Component",
       "difficulty": "Easy",
@@ -127514,7 +121114,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2194",
+      "id": "t2064",
       "questionNumber": "QREACT154",
       "title": "React Pagination Page Buttons Component",
       "difficulty": "Easy",
@@ -127560,7 +121160,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2195",
+      "id": "t2065",
       "questionNumber": "QREACT136",
       "title": "React Pagination Page Nav Component",
       "difficulty": "Easy",
@@ -127607,7 +121207,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2196",
+      "id": "t2066",
       "questionNumber": "QREACT109",
       "title": "React Pagination Table Component with Row Selection",
       "difficulty": "Medium",
@@ -127655,7 +121255,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2197",
+      "id": "t2067",
       "questionNumber": "T1023",
       "title": "React Portals (`createPortal`) & Synthetic Event Bubbling",
       "difficulty": "Medium",
@@ -127693,7 +121293,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2198",
+      "id": "t2068",
       "questionNumber": "QREACT052",
       "title": "React Portal Pattern and Event Bubbling Rules",
       "difficulty": "Easy",
@@ -127742,7 +121342,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2199",
+      "id": "t2069",
       "questionNumber": "T1008",
       "title": "React Portals (`createPortal`) & WAI-ARIA Modal Accessibility Patterns",
       "difficulty": "Medium",
@@ -127794,7 +121394,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2200",
+      "id": "t2070",
       "questionNumber": "QREACT053",
       "title": "React Profiler API and Identifying Expensive Renders",
       "difficulty": "Medium",
@@ -127844,7 +121444,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2201",
+      "id": "t2071",
       "questionNumber": "T1036",
       "title": "Programmatic Rendering Performance: `<Profiler>` Component",
       "difficulty": "Medium",
@@ -127882,7 +121482,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2202",
+      "id": "t2072",
       "questionNumber": "QREACT104",
       "title": "React Rating Slider Component with Dynamic Gradient",
       "difficulty": "Easy",
@@ -127929,7 +121529,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2203",
+      "id": "t2073",
       "questionNumber": "QREACT153",
       "title": "React Rating Stars Component",
       "difficulty": "Easy",
@@ -127975,7 +121575,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2204",
+      "id": "t2074",
       "questionNumber": "QREACT043",
       "title": "React Reconciliation: Diffing Algorithm and Keys Rationale",
       "difficulty": "Hard",
@@ -128024,7 +121624,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2205",
+      "id": "t2075",
       "questionNumber": "T1032",
       "title": "Ref Forwarding: `React.forwardRef()` & React 19 Ref Prop Simplification",
       "difficulty": "Easy",
@@ -128062,7 +121662,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2206",
+      "id": "t2076",
       "questionNumber": "T1019",
       "title": "React Fiber Architecture: Render Phase vs Commit Phase",
       "difficulty": "Hard",
@@ -128101,7 +121701,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2207",
+      "id": "t2077",
       "questionNumber": "QREACT137",
       "title": "React Search Typeahead Dropdown Component",
       "difficulty": "Medium",
@@ -128148,7 +121748,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2208",
+      "id": "t2078",
       "questionNumber": "QREACT178",
       "title": "React Search Typeahead Filtered Options Dropdown",
       "difficulty": "Medium",
@@ -128194,7 +121794,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2209",
+      "id": "t2079",
       "questionNumber": "QREACT076",
       "title": "React Searchable Select Dropdown with Async Options",
       "difficulty": "Medium",
@@ -128242,7 +121842,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2210",
+      "id": "t2080",
       "questionNumber": "QREACT118",
       "title": "React Segmented Control Switcher Component",
       "difficulty": "Easy",
@@ -128289,7 +121889,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2211",
+      "id": "t2081",
       "questionNumber": "QREACT039",
       "title": "React Server Components vs Client Components Boundary Rules",
       "difficulty": "Hard",
@@ -128338,7 +121938,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2212",
+      "id": "t2082",
       "questionNumber": "QREACT141",
       "title": "React Skeleton Content Placeholder Component",
       "difficulty": "Easy",
@@ -128385,7 +121985,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2213",
+      "id": "t2083",
       "questionNumber": "QREACT105",
       "title": "React Skeleton Loader Component for Suspense Fallback",
       "difficulty": "Easy",
@@ -128432,7 +122032,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2214",
+      "id": "t2084",
       "questionNumber": "QREACT171",
       "title": "React Skeleton Placeholder Component",
       "difficulty": "Easy",
@@ -128478,7 +122078,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2215",
+      "id": "t2085",
       "questionNumber": "QREACT087",
       "title": "React Slider Range Input Component",
       "difficulty": "Medium",
@@ -128526,7 +122126,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2216",
+      "id": "t2086",
       "questionNumber": "QREACT072",
       "title": "React Star Rating Component with Hover State",
       "difficulty": "Easy",
@@ -128573,7 +122173,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2217",
+      "id": "t2087",
       "questionNumber": "QREACT166",
       "title": "React Star Rating Picker Component",
       "difficulty": "Easy",
@@ -128619,7 +122219,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2218",
+      "id": "t2088",
       "questionNumber": "QREACT135",
       "title": "React Star Rating Select Component",
       "difficulty": "Easy",
@@ -128666,7 +122266,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2219",
+      "id": "t2089",
       "questionNumber": "T1031",
       "title": "React State Batching Evolution: Legacy Event Batching vs React 18 Automatic Batching",
       "difficulty": "Medium",
@@ -128704,7 +122304,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2220",
+      "id": "t2090",
       "questionNumber": "QREACT064",
       "title": "React State Initialization Functions and Lazy State",
       "difficulty": "Easy",
@@ -128751,7 +122351,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2221",
+      "id": "t2091",
       "questionNumber": "T1004",
       "title": "React Context API vs Zustand / Redux for High-Frequency State",
       "difficulty": "Medium",
@@ -128803,7 +122403,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2222",
+      "id": "t2092",
       "questionNumber": "QREACT095",
       "title": "React Stepper Process Component",
       "difficulty": "Easy",
@@ -128850,7 +122450,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2223",
+      "id": "t2093",
       "questionNumber": "T1021",
       "title": "React StrictMode Double Rendering & Effect Cleanup Verification",
       "difficulty": "Medium",
@@ -128889,7 +122489,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2224",
+      "id": "t2094",
       "questionNumber": "QREACT174",
       "title": "React Switch Control Toggle Component",
       "difficulty": "Easy",
@@ -128935,7 +122535,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2225",
+      "id": "t2095",
       "questionNumber": "QREACT144",
       "title": "React Switch Toggle Control Component Variant",
       "difficulty": "Easy",
@@ -128981,7 +122581,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2226",
+      "id": "t2096",
       "questionNumber": "QREACT116",
       "title": "React Switch Toggle Control Component",
       "difficulty": "Easy",
@@ -129028,7 +122628,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2227",
+      "id": "t2097",
       "questionNumber": "T1024",
       "title": "React SyntheticEvent Wrapper vs Native Browser Events",
       "difficulty": "Medium",
@@ -129066,7 +122666,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2228",
+      "id": "t2098",
       "questionNumber": "QREACT151",
       "title": "React Tabs Accessible Component",
       "difficulty": "Easy",
@@ -129112,7 +122712,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2229",
+      "id": "t2099",
       "questionNumber": "QREACT086",
       "title": "React Tabs Component with Keyboard Arrow Switching",
       "difficulty": "Easy",
@@ -129159,7 +122759,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2230",
+      "id": "t2100",
       "questionNumber": "QREACT164",
       "title": "React Tabs Nav Switcher Component",
       "difficulty": "Easy",
@@ -129205,7 +122805,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2231",
+      "id": "t2101",
       "questionNumber": "QREACT180",
       "title": "React Tabs Nav Switching Component Simple",
       "difficulty": "Easy",
@@ -129251,7 +122851,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2232",
+      "id": "t2102",
       "questionNumber": "QREACT133",
       "title": "React Tabs Nav Switching Component",
       "difficulty": "Easy",
@@ -129297,7 +122897,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2233",
+      "id": "t2103",
       "questionNumber": "QREACT168",
       "title": "React Tag Input Chip Input Component",
       "difficulty": "Easy",
@@ -129343,7 +122943,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2234",
+      "id": "t2104",
       "questionNumber": "QREACT138",
       "title": "React Tag Input Chip Removal Component",
       "difficulty": "Easy",
@@ -129390,7 +122990,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2235",
+      "id": "t2105",
       "questionNumber": "QREACT094",
       "title": "React Toast Notification Queue Container Component",
       "difficulty": "Medium",
@@ -129438,7 +123038,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2236",
+      "id": "t2106",
       "questionNumber": "QREACT085",
       "title": "React Tooltip Component with Auto Placement Detection",
       "difficulty": "Medium",
@@ -129486,7 +123086,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2237",
+      "id": "t2107",
       "questionNumber": "QREACT152",
       "title": "React Tooltip Dynamic Message Component",
       "difficulty": "Easy",
@@ -129533,7 +123133,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2238",
+      "id": "t2108",
       "questionNumber": "QREACT143",
       "title": "React Tooltip Hover Message Component",
       "difficulty": "Easy",
@@ -129580,7 +123180,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2239",
+      "id": "t2109",
       "questionNumber": "QREACT173",
       "title": "React Tooltip Message Overlay Component",
       "difficulty": "Easy",
@@ -129626,7 +123226,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2240",
+      "id": "t2110",
       "questionNumber": "QREACT079",
       "title": "React Tree View Component with Recursive Nodes",
       "difficulty": "Hard",
@@ -129673,7 +123273,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2241",
+      "id": "t2111",
       "questionNumber": "T1025",
       "title": "Controlled vs Uncontrolled Form Components in React",
       "difficulty": "Easy",
@@ -129711,7 +123311,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2242",
+      "id": "t2112",
       "questionNumber": "T1035",
       "title": "React 18 `useId()` & Stable SSR Hydration Element IDs",
       "difficulty": "Easy",
@@ -129750,7 +123350,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2243",
+      "id": "t2113",
       "questionNumber": "T1033",
       "title": "Exposing Imperative Child Handles via `useImperativeHandle()`",
       "difficulty": "Medium",
@@ -129788,7 +123388,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2244",
+      "id": "t2114",
       "questionNumber": "T1034",
       "title": "Synchronous Layout Measurement: `useLayoutEffect()` vs `useEffect()`",
       "difficulty": "Medium",
@@ -129827,7 +123427,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2245",
+      "id": "t2115",
       "questionNumber": "T1029",
       "title": "React 18 `useSyncExternalStore()` & Concurrent Tearing Prevention",
       "difficulty": "Hard",
@@ -129866,7 +123466,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2246",
+      "id": "t2116",
       "questionNumber": "T1020",
       "title": "Memoization Optimization: `useMemo()`, `useCallback()`, and `React.memo()`",
       "difficulty": "Medium",
@@ -129906,7 +123506,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2247",
+      "id": "t2117",
       "questionNumber": "T1014",
       "title": "React Virtual DOM Reconciliation & Fiber Node Diffing Algorithm ($O(N)$ Heuristics)",
       "difficulty": "Hard",
@@ -129957,7 +123557,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2248",
+      "id": "t2118",
       "questionNumber": "QREACT071",
       "title": "React Virtualized Window List Component Implementation",
       "difficulty": "Hard",
@@ -130005,7 +123605,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2249",
+      "id": "t2119",
       "questionNumber": "QREACT063",
       "title": "Render Props Pattern and Modern Custom Hook Refactoring",
       "difficulty": "Easy",
@@ -130053,7 +123653,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2250",
+      "id": "t2120",
       "questionNumber": "QREACT059",
       "title": "State Colocation Principle and Avoiding Global Bloat",
       "difficulty": "Easy",
@@ -130101,7 +123701,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2251",
+      "id": "t2121",
       "questionNumber": "QREACT056",
       "title": "Strict Mode Double Rendering Rationale and Pure Effects",
       "difficulty": "Easy",
@@ -130150,7 +123750,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2252",
+      "id": "t2122",
       "questionNumber": "QREACT062",
       "title": "Structural Sharing in React State Mutations",
       "difficulty": "Medium",
@@ -130198,7 +123798,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2253",
+      "id": "t2123",
       "questionNumber": "QREACT057",
       "title": "Suspense for Data Fetching and Waterfalls Elimination",
       "difficulty": "Hard",
@@ -130247,7 +123847,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2254",
+      "id": "t2124",
       "questionNumber": "QREACT058",
       "title": "SyntheticEvent System in React 18 and 19",
       "difficulty": "Medium",
@@ -130295,7 +123895,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2255",
+      "id": "t2125",
       "questionNumber": "T1003",
       "title": "`useEffect` Lifecycle Rules & Custom Hook Abstractions",
       "difficulty": "Medium",
@@ -130349,7 +123949,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2256",
+      "id": "t2126",
       "questionNumber": "QREACT050",
       "title": "useLayoutEffect vs useEffect Execution Timing Differences",
       "difficulty": "Medium",
@@ -130398,7 +123998,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2257",
+      "id": "t2127",
       "questionNumber": "T1005",
       "title": "`useMemo` & `useCallback`: Performance Optimization & Referencing Rules",
       "difficulty": "Medium",
@@ -130450,7 +124050,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2258",
+      "id": "t2128",
       "questionNumber": "QHOOKS007",
       "title": "useContext Subscription Mechanics and Context Splitting",
       "difficulty": "Medium",
@@ -130500,7 +124100,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2259",
+      "id": "t2129",
       "questionNumber": "QHOOKS10",
       "title": "useDeferredValue Value Deferral and Stale Visual Rendering",
       "difficulty": "Medium",
@@ -130549,7 +124149,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2260",
+      "id": "t2130",
       "questionNumber": "QHOOKS002",
       "title": "useEffect Synchronization Lifecycle and Teardown Rules",
       "difficulty": "Medium",
@@ -130599,7 +124199,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2261",
+      "id": "t2131",
       "questionNumber": "QHOOKS008",
       "title": "useImperativeHandle and forwardRef Encapsulation Boundaries",
       "difficulty": "Medium",
@@ -130648,7 +124248,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2262",
+      "id": "t2132",
       "questionNumber": "QHOOKS003",
       "title": "useLayoutEffect vs useEffect Paint Timing Differences",
       "difficulty": "Hard",
@@ -130697,7 +124297,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2263",
+      "id": "t2133",
       "questionNumber": "QHOOKS004",
       "title": "useMemo and useCallback Referential Integrity and Cache Eviction",
       "difficulty": "Medium",
@@ -130747,7 +124347,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2264",
+      "id": "t2134",
       "questionNumber": "QHOOKS006",
       "title": "useReducer State Machine Architecture and Complex State Logic",
       "difficulty": "Medium",
@@ -130797,7 +124397,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2265",
+      "id": "t2135",
       "questionNumber": "QHOOKS005",
       "title": "useRef Persistent Mutable Container and DOM Node Binding",
       "difficulty": "Easy",
@@ -130847,7 +124447,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2266",
+      "id": "t2136",
       "questionNumber": "QHOOKS001",
       "title": "useState Internal Dispatcher and State Queue Mechanics",
       "difficulty": "Medium",
@@ -130897,7 +124497,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2267",
+      "id": "t2137",
       "questionNumber": "QHOOKS009",
       "title": "useTransition Non-Blocking Deferred Render Priority",
       "difficulty": "Hard",
@@ -130947,7 +124547,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2268",
+      "id": "t2138",
       "questionNumber": "QINT006",
       "title": "Automatic Batching Mechanics in React 18 and 19",
       "difficulty": "Medium",
@@ -130997,7 +124597,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2269",
+      "id": "t2139",
       "questionNumber": "QINT005",
       "title": "Concurrent React Priority Levels and Scheduler Mechanics",
       "difficulty": "Hard",
@@ -131049,7 +124649,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2270",
+      "id": "t2140",
       "questionNumber": "QINT009",
       "title": "Double Rendering in React Strict Mode and Effect Cleanup Verification",
       "difficulty": "Easy",
@@ -131098,7 +124698,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2271",
+      "id": "t2141",
       "questionNumber": "QINT002",
       "title": "Fiber Render Phase vs Commit Phase Execution Mechanics",
       "difficulty": "Hard",
@@ -131149,7 +124749,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2272",
+      "id": "t2142",
       "questionNumber": "QINT008",
       "title": "React Compiler (React Forget) Automemoization Architecture",
       "difficulty": "Hard",
@@ -131199,7 +124799,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2273",
+      "id": "t2143",
       "questionNumber": "QINT001",
       "title": "React Fiber Architecture: Linked List Node Structure and Work Loop",
       "difficulty": "Hard",
@@ -131251,7 +124851,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2274",
+      "id": "t2144",
       "questionNumber": "QINT007",
       "title": "React Hydration Architecture: HTML Matching and Selective Hydration",
       "difficulty": "Hard",
@@ -131301,7 +124901,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2275",
+      "id": "t2145",
       "questionNumber": "QINT003",
       "title": "React Reconciliation: Diffing Algorithm, Key Prop, and Type Identity",
       "difficulty": "Hard",
@@ -131351,7 +124951,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2276",
+      "id": "t2146",
       "questionNumber": "QINT010",
       "title": "React Suspense Internals: Promise Throwing and Fallback Rendering",
       "difficulty": "Hard",
@@ -131401,7 +125001,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2277",
+      "id": "t2147",
       "questionNumber": "QINT004",
       "title": "SyntheticEvent System: Root Delegation and Event Dispatching",
       "difficulty": "Medium",
@@ -131451,7 +125051,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2278",
+      "id": "t2148",
       "questionNumber": "QFW53",
       "title": "Redux Application Design Rule 53",
       "difficulty": "Easy",
@@ -131500,7 +125100,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2279",
+      "id": "t2149",
       "questionNumber": "QFW54",
       "title": "Redux Application Design Rule 54",
       "difficulty": "Medium",
@@ -131549,7 +125149,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2280",
+      "id": "t2150",
       "questionNumber": "QFW55",
       "title": "Redux Application Design Rule 55",
       "difficulty": "Easy",
@@ -131598,7 +125198,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2281",
+      "id": "t2151",
       "questionNumber": "QFW56",
       "title": "Redux Application Design Rule 56",
       "difficulty": "Medium",
@@ -131647,7 +125247,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2282",
+      "id": "t2152",
       "questionNumber": "QFW57",
       "title": "Redux Application Design Rule 57",
       "difficulty": "Easy",
@@ -131696,7 +125296,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2283",
+      "id": "t2153",
       "questionNumber": "QFW58",
       "title": "Redux Application Design Rule 58",
       "difficulty": "Medium",
@@ -131745,7 +125345,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2284",
+      "id": "t2154",
       "questionNumber": "QFW59",
       "title": "Redux Application Design Rule 59",
       "difficulty": "Easy",
@@ -131794,7 +125394,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2285",
+      "id": "t2155",
       "questionNumber": "QFW60",
       "title": "Redux Application Design Rule 60",
       "difficulty": "Medium",
@@ -131843,7 +125443,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2286",
+      "id": "t2156",
       "questionNumber": "QFW61",
       "title": "Redux Application Design Rule 61",
       "difficulty": "Easy",
@@ -131892,7 +125492,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2287",
+      "id": "t2157",
       "questionNumber": "QFW62",
       "title": "Redux Application Design Rule 62",
       "difficulty": "Medium",
@@ -131941,7 +125541,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2288",
+      "id": "t2158",
       "questionNumber": "QREDUX004",
       "title": "Redux Async Actions with createAsyncThunk",
       "difficulty": "Medium",
@@ -131989,8 +125589,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2289",
-      "questionNumber": "Q1421",
+      "id": "t2159",
+      "questionNumber": "Q1291",
       "title": "QFW_MAX_84 · Redux Enterprise Framework Pattern 84",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132037,8 +125637,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2290",
-      "questionNumber": "Q1422",
+      "id": "t2160",
+      "questionNumber": "Q1292",
       "title": "QFW_MAX_85 · Redux Enterprise Framework Pattern 85",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132085,8 +125685,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2291",
-      "questionNumber": "Q1423",
+      "id": "t2161",
+      "questionNumber": "Q1293",
       "title": "QFW_MAX_86 · Redux Enterprise Framework Pattern 86",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132133,8 +125733,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2292",
-      "questionNumber": "Q1424",
+      "id": "t2162",
+      "questionNumber": "Q1294",
       "title": "QFW_MAX_87 · Redux Enterprise Framework Pattern 87",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132181,8 +125781,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2293",
-      "questionNumber": "Q1425",
+      "id": "t2163",
+      "questionNumber": "Q1295",
       "title": "QFW_MAX_88 · Redux Enterprise Framework Pattern 88",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132229,8 +125829,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2294",
-      "questionNumber": "Q1426",
+      "id": "t2164",
+      "questionNumber": "Q1296",
       "title": "QFW_MAX_89 · Redux Enterprise Framework Pattern 89",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132277,8 +125877,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2295",
-      "questionNumber": "Q1427",
+      "id": "t2165",
+      "questionNumber": "Q1297",
       "title": "QFW_MAX_90 · Redux Enterprise Framework Pattern 90",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132325,8 +125925,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2296",
-      "questionNumber": "Q1428",
+      "id": "t2166",
+      "questionNumber": "Q1298",
       "title": "QFW_MAX_91 · Redux Enterprise Framework Pattern 91",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132373,8 +125973,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2297",
-      "questionNumber": "Q1429",
+      "id": "t2167",
+      "questionNumber": "Q1299",
       "title": "QFW_MAX_92 · Redux Enterprise Framework Pattern 92",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132421,8 +126021,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2298",
-      "questionNumber": "Q1430",
+      "id": "t2168",
+      "questionNumber": "Q1300",
       "title": "QFW_W15_149 · Redux Fullstack Architecture Strategy 149",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132469,8 +126069,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2299",
-      "questionNumber": "Q1431",
+      "id": "t2169",
+      "questionNumber": "Q1301",
       "title": "QFW_W15_150 · Redux Fullstack Architecture Strategy 150",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132517,8 +126117,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2300",
-      "questionNumber": "Q1432",
+      "id": "t2170",
+      "questionNumber": "Q1302",
       "title": "QFW_W15_151 · Redux Fullstack Architecture Strategy 151",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132565,8 +126165,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2301",
-      "questionNumber": "Q1433",
+      "id": "t2171",
+      "questionNumber": "Q1303",
       "title": "QFW_W15_152 · Redux Fullstack Architecture Strategy 152",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132613,8 +126213,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2302",
-      "questionNumber": "Q1434",
+      "id": "t2172",
+      "questionNumber": "Q1304",
       "title": "QFW_W15_153 · Redux Fullstack Architecture Strategy 153",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132661,8 +126261,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2303",
-      "questionNumber": "Q1435",
+      "id": "t2173",
+      "questionNumber": "Q1305",
       "title": "QFW_W15_154 · Redux Fullstack Architecture Strategy 154",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132709,8 +126309,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2304",
-      "questionNumber": "Q1436",
+      "id": "t2174",
+      "questionNumber": "Q1306",
       "title": "QFW_W15_155 · Redux Fullstack Architecture Strategy 155",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132757,8 +126357,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2305",
-      "questionNumber": "Q1437",
+      "id": "t2175",
+      "questionNumber": "Q1307",
       "title": "QFW_W15_156 · Redux Fullstack Architecture Strategy 156",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132805,8 +126405,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2306",
-      "questionNumber": "Q1438",
+      "id": "t2176",
+      "questionNumber": "Q1308",
       "title": "QFW_W15_157 · Redux Fullstack Architecture Strategy 157",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132853,8 +126453,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2307",
-      "questionNumber": "Q1439",
+      "id": "t2177",
+      "questionNumber": "Q1309",
       "title": "QFW_W15_158 · Redux Fullstack Architecture Strategy 158",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132901,8 +126501,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2308",
-      "questionNumber": "Q1440",
+      "id": "t2178",
+      "questionNumber": "Q1310",
       "title": "QFW_W15_159 · Redux Fullstack Architecture Strategy 159",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132949,8 +126549,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2309",
-      "questionNumber": "Q1441",
+      "id": "t2179",
+      "questionNumber": "Q1311",
       "title": "QFW_W15_160 · Redux Fullstack Architecture Strategy 160",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -132997,8 +126597,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2310",
-      "questionNumber": "Q1442",
+      "id": "t2180",
+      "questionNumber": "Q1312",
       "title": "QFW_W15_161 · Redux Fullstack Architecture Strategy 161",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133045,8 +126645,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2311",
-      "questionNumber": "Q1443",
+      "id": "t2181",
+      "questionNumber": "Q1313",
       "title": "QFW_W15_162 · Redux Fullstack Architecture Strategy 162",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133093,7 +126693,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2312",
+      "id": "t2182",
       "questionNumber": "QREDUX005",
       "title": "Redux Reselect Memoized Selector Optimization",
       "difficulty": "Medium",
@@ -133142,8 +126742,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2313",
-      "questionNumber": "Q1445",
+      "id": "t2183",
+      "questionNumber": "Q1315",
       "title": "QFW_M2_114 · Redux Scalable Architecture Rule 114",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133190,8 +126790,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2314",
-      "questionNumber": "Q1446",
+      "id": "t2184",
+      "questionNumber": "Q1316",
       "title": "QFW_M2_115 · Redux Scalable Architecture Rule 115",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133238,8 +126838,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2315",
-      "questionNumber": "Q1447",
+      "id": "t2185",
+      "questionNumber": "Q1317",
       "title": "QFW_M2_116 · Redux Scalable Architecture Rule 116",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133286,8 +126886,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2316",
-      "questionNumber": "Q1448",
+      "id": "t2186",
+      "questionNumber": "Q1318",
       "title": "QFW_M2_117 · Redux Scalable Architecture Rule 117",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133334,8 +126934,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2317",
-      "questionNumber": "Q1449",
+      "id": "t2187",
+      "questionNumber": "Q1319",
       "title": "QFW_M2_118 · Redux Scalable Architecture Rule 118",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133382,8 +126982,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2318",
-      "questionNumber": "Q1450",
+      "id": "t2188",
+      "questionNumber": "Q1320",
       "title": "QFW_M2_119 · Redux Scalable Architecture Rule 119",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133430,8 +127030,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2319",
-      "questionNumber": "Q1451",
+      "id": "t2189",
+      "questionNumber": "Q1321",
       "title": "QFW_M2_120 · Redux Scalable Architecture Rule 120",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133478,8 +127078,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2320",
-      "questionNumber": "Q1452",
+      "id": "t2190",
+      "questionNumber": "Q1322",
       "title": "QFW_M2_121 · Redux Scalable Architecture Rule 121",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133526,8 +127126,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2321",
-      "questionNumber": "Q1453",
+      "id": "t2191",
+      "questionNumber": "Q1323",
       "title": "QFW_M2_122 · Redux Scalable Architecture Rule 122",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -133574,7 +127174,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2322",
+      "id": "t2192",
       "questionNumber": "QREDUX006",
       "title": "Redux Store Rehydration and LocalStorage Persistence",
       "difficulty": "Medium",
@@ -133622,7 +127222,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2323",
+      "id": "t2193",
       "questionNumber": "T1601",
       "title": "Redux Toolkit (RTK) Architecture & RTK Query Caching Layer",
       "difficulty": "Hard",
@@ -133675,7 +127275,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2324",
+      "id": "t2194",
       "questionNumber": "QREDUX003",
       "title": "Redux Toolkit createSlice and Immer Immutability",
       "difficulty": "Easy",
@@ -133724,7 +127324,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2325",
+      "id": "t2195",
       "questionNumber": "T1602",
       "title": "Redux Toolkit (RTK) vs Zustand: Normalization, Reducers & Slice Architecture",
       "difficulty": "Medium",
@@ -133776,7 +127376,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2326",
+      "id": "t2196",
       "questionNumber": "QRQ008",
       "title": "Global State vs Server State Architectural Separation",
       "difficulty": "Hard",
@@ -133824,7 +127424,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2327",
+      "id": "t2197",
       "questionNumber": "QRQ003",
       "title": "RTK Query Cache Invalidation and Tag System",
       "difficulty": "Medium",
@@ -133873,7 +127473,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2328",
+      "id": "t2198",
       "questionNumber": "T2001",
       "title": "TanStack Query (React Query) Cache Invalidation & Optimistic Mutations",
       "difficulty": "Hard",
@@ -133926,7 +127526,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2329",
+      "id": "t2199",
       "questionNumber": "QRQ007",
       "title": "TanStack Query Infinite Queries and Pagination Patterns",
       "difficulty": "Medium",
@@ -133975,7 +127575,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2330",
+      "id": "t2200",
       "questionNumber": "QRQ005",
       "title": "TanStack Query Optimistic Updates and Rollback Handling",
       "difficulty": "Hard",
@@ -134024,7 +127624,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2331",
+      "id": "t2201",
       "questionNumber": "QRQ004",
       "title": "TanStack Query Query Keys and Stale Time Mechanics",
       "difficulty": "Easy",
@@ -134072,7 +127672,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2332",
+      "id": "t2202",
       "questionNumber": "T2002",
       "title": "TanStack Query v5 (React Query): Optimistic UI Updates, `useMutation` & Query Invalidation",
       "difficulty": "Hard",
@@ -134123,7 +127723,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2333",
+      "id": "t2203",
       "questionNumber": "QRQ006",
       "title": "Zustand vs Redux Toolkit Architecture Comparison",
       "difficulty": "Medium",
@@ -134172,7 +127772,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2334",
+      "id": "t2204",
       "questionNumber": "QNEXT005",
       "title": "Dynamic Route Segments, Catch-All and Optional Routes",
       "difficulty": "Easy",
@@ -134222,7 +127822,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2335",
+      "id": "t2205",
       "questionNumber": "QNEXT009",
       "title": "Font Optimization (next/font) Zero-CLS Loading",
       "difficulty": "Easy",
@@ -134270,7 +127870,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2336",
+      "id": "t2206",
       "questionNumber": "QNEXT008",
       "title": "Image Optimization Component (next/image) Mechanics",
       "difficulty": "Easy",
@@ -134319,7 +127919,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2337",
+      "id": "t2207",
       "questionNumber": "QNEXT012",
       "title": "Layouts vs Templates Lifecycle Differences",
       "difficulty": "Easy",
@@ -134368,7 +127968,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2338",
+      "id": "t2208",
       "questionNumber": "QNEXT024",
       "title": "Next.js App Router Custom Metadata API (generateMetadata)",
       "difficulty": "Easy",
@@ -134414,7 +128014,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2339",
+      "id": "t2209",
       "questionNumber": "QNEXT027",
       "title": "Next.js App Router Custom Not Found (not-found.tsx) Page",
       "difficulty": "Easy",
@@ -134460,7 +128060,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2340",
+      "id": "t2210",
       "questionNumber": "QNEXT031",
       "title": "Next.js App Router Error Boundaries (error.tsx) Pattern",
       "difficulty": "Easy",
@@ -134505,7 +128105,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2341",
+      "id": "t2211",
       "questionNumber": "QNEXT028",
       "title": "Next.js App Router Global Layouts setup",
       "difficulty": "Easy",
@@ -134551,7 +128151,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2342",
+      "id": "t2212",
       "questionNumber": "QNEXT032",
       "title": "Next.js App Router Loading UI (loading.tsx) Setup",
       "difficulty": "Easy",
@@ -134596,7 +128196,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2343",
+      "id": "t2213",
       "questionNumber": "QNEXT014",
       "title": "Next.js App Router Middleware Authentication Guard Pattern",
       "difficulty": "Medium",
@@ -134644,7 +128244,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2344",
+      "id": "t2214",
       "questionNumber": "QNEXT026",
       "title": "Next.js App Router Nested Layouts Setup",
       "difficulty": "Easy",
@@ -134689,7 +128289,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2345",
+      "id": "t2215",
       "questionNumber": "QNEXT029",
       "title": "Next.js App Router Page Segments (page.tsx) Architecture",
       "difficulty": "Easy",
@@ -134734,7 +128334,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2346",
+      "id": "t2216",
       "questionNumber": "QNEXT003",
       "title": "Next.js App Router Rendering Strategies: SSR, SSG, and ISR",
       "difficulty": "Medium",
@@ -134784,7 +128384,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2347",
+      "id": "t2217",
       "questionNumber": "QNEXT030",
       "title": "Next.js App Router Root Layout Setup",
       "difficulty": "Easy",
@@ -134829,7 +128429,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2348",
+      "id": "t2218",
       "questionNumber": "QNEXT020",
       "title": "Next.js App Router Route Groups (folder) Architecture",
       "difficulty": "Easy",
@@ -134875,7 +128475,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2349",
+      "id": "t2219",
       "questionNumber": "QNEXT022",
       "title": "Next.js App Router Route Segment Loading UI (loading.tsx) Pattern",
       "difficulty": "Easy",
@@ -134921,7 +128521,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2350",
+      "id": "t2220",
       "questionNumber": "QNEXT025",
       "title": "Next.js App Router Server Component Caching (fetch revalidate)",
       "difficulty": "Medium",
@@ -134967,7 +128567,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2351",
+      "id": "t2221",
       "questionNumber": "QNEXT023",
       "title": "Next.js App Router Static Params Generation (generateStaticParams)",
       "difficulty": "Medium",
@@ -135013,7 +128613,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2352",
+      "id": "t2222",
       "questionNumber": "QNEXT019",
       "title": "Next.js App Router Static Route Segment Configuration (dynamic, revalidate)",
       "difficulty": "Medium",
@@ -135059,7 +128659,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2353",
+      "id": "t2223",
       "questionNumber": "QFW33",
       "title": "Next.js Application Design Rule 33",
       "difficulty": "Easy",
@@ -135108,7 +128708,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2354",
+      "id": "t2224",
       "questionNumber": "QFW34",
       "title": "Next.js Application Design Rule 34",
       "difficulty": "Medium",
@@ -135157,7 +128757,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2355",
+      "id": "t2225",
       "questionNumber": "QFW35",
       "title": "Next.js Application Design Rule 35",
       "difficulty": "Easy",
@@ -135206,7 +128806,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2356",
+      "id": "t2226",
       "questionNumber": "QFW36",
       "title": "Next.js Application Design Rule 36",
       "difficulty": "Medium",
@@ -135255,7 +128855,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2357",
+      "id": "t2227",
       "questionNumber": "QFW37",
       "title": "Next.js Application Design Rule 37",
       "difficulty": "Easy",
@@ -135304,7 +128904,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2358",
+      "id": "t2228",
       "questionNumber": "QFW38",
       "title": "Next.js Application Design Rule 38",
       "difficulty": "Medium",
@@ -135353,7 +128953,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2359",
+      "id": "t2229",
       "questionNumber": "QFW39",
       "title": "Next.js Application Design Rule 39",
       "difficulty": "Easy",
@@ -135402,7 +129002,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2360",
+      "id": "t2230",
       "questionNumber": "QFW40",
       "title": "Next.js Application Design Rule 40",
       "difficulty": "Medium",
@@ -135451,7 +129051,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2361",
+      "id": "t2231",
       "questionNumber": "QFW41",
       "title": "Next.js Application Design Rule 41",
       "difficulty": "Easy",
@@ -135500,7 +129100,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2362",
+      "id": "t2232",
       "questionNumber": "QFW42",
       "title": "Next.js Application Design Rule 42",
       "difficulty": "Medium",
@@ -135549,7 +129149,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2363",
+      "id": "t2233",
       "questionNumber": "QNEXT017",
       "title": "Next.js Custom Error Page and Global Error Boundary Setup",
       "difficulty": "Easy",
@@ -135597,7 +129197,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2364",
+      "id": "t2234",
       "questionNumber": "QNEXT018",
       "title": "Next.js Draft Mode and CMS Live Preview Architecture",
       "difficulty": "Medium",
@@ -135645,7 +129245,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2365",
+      "id": "t2235",
       "questionNumber": "QNEXT021",
       "title": "Next.js Dynamic Imports with ssr false Option",
       "difficulty": "Easy",
@@ -135692,7 +129292,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2366",
+      "id": "t2236",
       "questionNumber": "QNEXT016",
       "title": "Next.js Dynamic Open Graph Image Generation with next og",
       "difficulty": "Medium",
@@ -135740,8 +129340,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2367",
-      "questionNumber": "Q1499",
+      "id": "t2237",
+      "questionNumber": "Q1369",
       "title": "QFW_MAX_63 · Next.js Enterprise Framework Pattern 63",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -135788,8 +129388,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2368",
-      "questionNumber": "Q1500",
+      "id": "t2238",
+      "questionNumber": "Q1370",
       "title": "QFW_MAX_64 · Next.js Enterprise Framework Pattern 64",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -135836,8 +129436,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2369",
-      "questionNumber": "Q1501",
+      "id": "t2239",
+      "questionNumber": "Q1371",
       "title": "QFW_MAX_65 · Next.js Enterprise Framework Pattern 65",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -135884,8 +129484,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2370",
-      "questionNumber": "Q1502",
+      "id": "t2240",
+      "questionNumber": "Q1372",
       "title": "QFW_MAX_66 · Next.js Enterprise Framework Pattern 66",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -135932,8 +129532,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2371",
-      "questionNumber": "Q1503",
+      "id": "t2241",
+      "questionNumber": "Q1373",
       "title": "QFW_MAX_67 · Next.js Enterprise Framework Pattern 67",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -135980,8 +129580,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2372",
-      "questionNumber": "Q1504",
+      "id": "t2242",
+      "questionNumber": "Q1374",
       "title": "QFW_MAX_68 · Next.js Enterprise Framework Pattern 68",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136028,8 +129628,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2373",
-      "questionNumber": "Q1505",
+      "id": "t2243",
+      "questionNumber": "Q1375",
       "title": "QFW_MAX_69 · Next.js Enterprise Framework Pattern 69",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136076,8 +129676,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2374",
-      "questionNumber": "Q1506",
+      "id": "t2244",
+      "questionNumber": "Q1376",
       "title": "QFW_MAX_70 · Next.js Enterprise Framework Pattern 70",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136124,8 +129724,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2375",
-      "questionNumber": "Q1507",
+      "id": "t2245",
+      "questionNumber": "Q1377",
       "title": "QFW_MAX_71 · Next.js Enterprise Framework Pattern 71",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136172,8 +129772,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2376",
-      "questionNumber": "Q1508",
+      "id": "t2246",
+      "questionNumber": "Q1378",
       "title": "QFW_MAX_72 · Next.js Enterprise Framework Pattern 72",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136220,8 +129820,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2377",
-      "questionNumber": "Q1509",
+      "id": "t2247",
+      "questionNumber": "Q1379",
       "title": "QFW_MAX_73 · Next.js Enterprise Framework Pattern 73",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136268,8 +129868,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2378",
-      "questionNumber": "Q1510",
+      "id": "t2248",
+      "questionNumber": "Q1380",
       "title": "QFW_W15_123 · Next.js Fullstack Architecture Strategy 123",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136316,8 +129916,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2379",
-      "questionNumber": "Q1511",
+      "id": "t2249",
+      "questionNumber": "Q1381",
       "title": "QFW_W15_124 · Next.js Fullstack Architecture Strategy 124",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136364,8 +129964,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2380",
-      "questionNumber": "Q1512",
+      "id": "t2250",
+      "questionNumber": "Q1382",
       "title": "QFW_W15_125 · Next.js Fullstack Architecture Strategy 125",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136412,8 +130012,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2381",
-      "questionNumber": "Q1513",
+      "id": "t2251",
+      "questionNumber": "Q1383",
       "title": "QFW_W15_126 · Next.js Fullstack Architecture Strategy 126",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136460,8 +130060,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2382",
-      "questionNumber": "Q1514",
+      "id": "t2252",
+      "questionNumber": "Q1384",
       "title": "QFW_W15_127 · Next.js Fullstack Architecture Strategy 127",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136508,8 +130108,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2383",
-      "questionNumber": "Q1515",
+      "id": "t2253",
+      "questionNumber": "Q1385",
       "title": "QFW_W15_128 · Next.js Fullstack Architecture Strategy 128",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136556,8 +130156,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2384",
-      "questionNumber": "Q1516",
+      "id": "t2254",
+      "questionNumber": "Q1386",
       "title": "QFW_W15_129 · Next.js Fullstack Architecture Strategy 129",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136604,8 +130204,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2385",
-      "questionNumber": "Q1517",
+      "id": "t2255",
+      "questionNumber": "Q1387",
       "title": "QFW_W15_130 · Next.js Fullstack Architecture Strategy 130",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136652,8 +130252,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2386",
-      "questionNumber": "Q1518",
+      "id": "t2256",
+      "questionNumber": "Q1388",
       "title": "QFW_W15_131 · Next.js Fullstack Architecture Strategy 131",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136700,8 +130300,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2387",
-      "questionNumber": "Q1519",
+      "id": "t2257",
+      "questionNumber": "Q1389",
       "title": "QFW_W15_132 · Next.js Fullstack Architecture Strategy 132",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136748,8 +130348,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2388",
-      "questionNumber": "Q1520",
+      "id": "t2258",
+      "questionNumber": "Q1390",
       "title": "QFW_W15_133 · Next.js Fullstack Architecture Strategy 133",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136796,8 +130396,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2389",
-      "questionNumber": "Q1521",
+      "id": "t2259",
+      "questionNumber": "Q1391",
       "title": "QFW_W15_134 · Next.js Fullstack Architecture Strategy 134",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136844,8 +130444,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2390",
-      "questionNumber": "Q1522",
+      "id": "t2260",
+      "questionNumber": "Q1392",
       "title": "QFW_W15_135 · Next.js Fullstack Architecture Strategy 135",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136892,7 +130492,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2391",
+      "id": "t2261",
       "questionNumber": "QNEXT007",
       "title": "Next.js Middleware and Edge Runtime Capabilities",
       "difficulty": "Medium",
@@ -136941,8 +130541,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2392",
-      "questionNumber": "Q1524",
+      "id": "t2262",
+      "questionNumber": "Q1394",
       "title": "QFW_M2_100 · Next.js Scalable Architecture Rule 100",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -136989,8 +130589,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2393",
-      "questionNumber": "Q1525",
+      "id": "t2263",
+      "questionNumber": "Q1395",
       "title": "QFW_M2_101 · Next.js Scalable Architecture Rule 101",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137037,8 +130637,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2394",
-      "questionNumber": "Q1526",
+      "id": "t2264",
+      "questionNumber": "Q1396",
       "title": "QFW_M2_102 · Next.js Scalable Architecture Rule 102",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137085,8 +130685,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2395",
-      "questionNumber": "Q1527",
+      "id": "t2265",
+      "questionNumber": "Q1397",
       "title": "QFW_M2_103 · Next.js Scalable Architecture Rule 103",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137133,8 +130733,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2396",
-      "questionNumber": "Q1528",
+      "id": "t2266",
+      "questionNumber": "Q1398",
       "title": "QFW_M2_93 · Next.js Scalable Architecture Rule 93",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137181,8 +130781,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2397",
-      "questionNumber": "Q1529",
+      "id": "t2267",
+      "questionNumber": "Q1399",
       "title": "QFW_M2_94 · Next.js Scalable Architecture Rule 94",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137229,8 +130829,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2398",
-      "questionNumber": "Q1530",
+      "id": "t2268",
+      "questionNumber": "Q1400",
       "title": "QFW_M2_95 · Next.js Scalable Architecture Rule 95",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137277,8 +130877,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2399",
-      "questionNumber": "Q1531",
+      "id": "t2269",
+      "questionNumber": "Q1401",
       "title": "QFW_M2_96 · Next.js Scalable Architecture Rule 96",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137325,8 +130925,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2400",
-      "questionNumber": "Q1532",
+      "id": "t2270",
+      "questionNumber": "Q1402",
       "title": "QFW_M2_97 · Next.js Scalable Architecture Rule 97",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137373,8 +130973,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2401",
-      "questionNumber": "Q1533",
+      "id": "t2271",
+      "questionNumber": "Q1403",
       "title": "QFW_M2_98 · Next.js Scalable Architecture Rule 98",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137421,8 +131021,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2402",
-      "questionNumber": "Q1534",
+      "id": "t2272",
+      "questionNumber": "Q1404",
       "title": "QFW_M2_99 · Next.js Scalable Architecture Rule 99",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -137469,7 +131069,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2403",
+      "id": "t2273",
       "questionNumber": "QNEXT015",
       "title": "Next.js Server-Driven Dynamic Breadcrumbs Navigation",
       "difficulty": "Medium",
@@ -137517,7 +131117,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2404",
+      "id": "t2274",
       "questionNumber": "T2201",
       "title": "Next.js App Router, React Server Components (RSC) & Rendering Strategies",
       "difficulty": "Hard",
@@ -137572,7 +131172,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2405",
+      "id": "t2275",
       "questionNumber": "T2202",
       "title": "Next.js App Router Architecture: React Server Components (RSC) vs `'use client'` Directives",
       "difficulty": "Medium",
@@ -137623,7 +131223,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2406",
+      "id": "t2276",
       "questionNumber": "QNEXT006",
       "title": "Parallel Routes (@slot) and Intercepting Routes Modals",
       "difficulty": "Hard",
@@ -137673,7 +131273,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2407",
+      "id": "t2277",
       "questionNumber": "QNEXT011",
       "title": "Revalidation Strategies: revalidatePath vs revalidateTag",
       "difficulty": "Medium",
@@ -137722,7 +131322,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2408",
+      "id": "t2278",
       "questionNumber": "QNEXT010",
       "title": "Route Handlers and Web API Request Response Interfaces",
       "difficulty": "Medium",
@@ -137772,7 +131372,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2409",
+      "id": "t2279",
       "questionNumber": "QNEXT004",
       "title": "Server Actions and Progressive Form Enhancement",
       "difficulty": "Medium",
@@ -137821,7 +131421,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2410",
+      "id": "t2280",
       "questionNumber": "QNEXT013",
       "title": "Static Export and Standalone Output Build Deployment",
       "difficulty": "Medium",
@@ -137870,7 +131470,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2411",
+      "id": "t2281",
       "questionNumber": "S221",
       "title": "AsyncStorage",
       "difficulty": "Easy",
@@ -137916,7 +131516,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2412",
+      "id": "t2282",
       "questionNumber": "S5073",
       "title": "Axios",
       "difficulty": "Easy",
@@ -137962,7 +131562,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2413",
+      "id": "t2283",
       "questionNumber": "QRN031",
       "title": "Bridgeless Architecture in RN New Architecture",
       "difficulty": "Hard",
@@ -138009,7 +131609,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2414",
+      "id": "t2284",
       "questionNumber": "S236",
       "title": "Bridging",
       "difficulty": "Hard",
@@ -138055,7 +131655,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2415",
+      "id": "t2285",
       "questionNumber": "S230",
       "title": "Camera",
       "difficulty": "Medium",
@@ -138101,7 +131701,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2416",
+      "id": "t2286",
       "questionNumber": "S217",
       "title": "Components",
       "difficulty": "Easy",
@@ -138147,7 +131747,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2417",
+      "id": "t2287",
       "questionNumber": "S233",
       "title": "Deep Linking",
       "difficulty": "Medium",
@@ -138193,7 +131793,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2418",
+      "id": "t2288",
       "questionNumber": "QRN035",
       "title": "Expo EAS Build, Submit and OTA Update Workflows",
       "difficulty": "Medium",
@@ -138242,7 +131842,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2419",
+      "id": "t2289",
       "questionNumber": "S238",
       "title": "Fabric",
       "difficulty": "Hard",
@@ -138288,7 +131888,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2420",
+      "id": "t2290",
       "questionNumber": "S218",
       "title": "FlatList",
       "difficulty": "Easy",
@@ -138334,7 +131934,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2421",
+      "id": "t2291",
       "questionNumber": "S219",
       "title": "Flexbox",
       "difficulty": "Easy",
@@ -138380,7 +131980,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2422",
+      "id": "t2292",
       "questionNumber": "S237",
       "title": "Hermes Engine",
       "difficulty": "Hard",
@@ -138426,7 +132026,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2423",
+      "id": "t2293",
       "questionNumber": "S5075",
       "title": "Image Picker",
       "difficulty": "Medium",
@@ -138472,7 +132072,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2424",
+      "id": "t2294",
       "questionNumber": "S5077",
       "title": "JSI",
       "difficulty": "Hard",
@@ -138518,7 +132118,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2425",
+      "id": "t2295",
       "questionNumber": "S5080",
       "title": "Mobile Security",
       "difficulty": "Hard",
@@ -138564,7 +132164,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2426",
+      "id": "t2296",
       "questionNumber": "QRN033",
       "title": "Native Module Bridge C++ Implementation via JSI",
       "difficulty": "Hard",
@@ -138612,7 +132212,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2427",
+      "id": "t2297",
       "questionNumber": "S239",
       "title": "Native Modules",
       "difficulty": "Hard",
@@ -138658,7 +132258,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2428",
+      "id": "t2298",
       "questionNumber": "S220",
       "title": "Navigation",
       "difficulty": "Easy",
@@ -138704,7 +132304,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2429",
+      "id": "t2299",
       "questionNumber": "S5078",
       "title": "New Architecture",
       "difficulty": "Hard",
@@ -138750,7 +132350,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2430",
+      "id": "t2300",
       "questionNumber": "S241",
       "title": "Offline-first Architecture",
       "difficulty": "Hard",
@@ -138796,7 +132396,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2431",
+      "id": "t2301",
       "questionNumber": "S5074",
       "title": "Offline Storage",
       "difficulty": "Medium",
@@ -138842,7 +132442,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2432",
+      "id": "t2302",
       "questionNumber": "S234",
       "title": "Performance Optimization",
       "difficulty": "Medium",
@@ -138888,7 +132488,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2433",
+      "id": "t2303",
       "questionNumber": "S228",
       "title": "Push Notifications",
       "difficulty": "Medium",
@@ -138934,7 +132534,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2434",
+      "id": "t2304",
       "questionNumber": "QRN044",
       "title": "React Native ActivityIndicator Loading Spinner Component",
       "difficulty": "Easy",
@@ -138981,7 +132581,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2435",
+      "id": "t2305",
       "questionNumber": "QRN053",
       "title": "React Native ActivityIndicator Loading Spinner Usage",
       "difficulty": "Easy",
@@ -139026,7 +132626,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2436",
+      "id": "t2306",
       "questionNumber": "QFW43",
       "title": "React Native Application Design Rule 43",
       "difficulty": "Easy",
@@ -139075,7 +132675,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2437",
+      "id": "t2307",
       "questionNumber": "QFW44",
       "title": "React Native Application Design Rule 44",
       "difficulty": "Medium",
@@ -139124,7 +132724,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2438",
+      "id": "t2308",
       "questionNumber": "QFW45",
       "title": "React Native Application Design Rule 45",
       "difficulty": "Easy",
@@ -139173,7 +132773,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2439",
+      "id": "t2309",
       "questionNumber": "QFW46",
       "title": "React Native Application Design Rule 46",
       "difficulty": "Medium",
@@ -139222,7 +132822,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2440",
+      "id": "t2310",
       "questionNumber": "QFW47",
       "title": "React Native Application Design Rule 47",
       "difficulty": "Easy",
@@ -139271,7 +132871,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2441",
+      "id": "t2311",
       "questionNumber": "QFW48",
       "title": "React Native Application Design Rule 48",
       "difficulty": "Medium",
@@ -139320,7 +132920,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2442",
+      "id": "t2312",
       "questionNumber": "QFW49",
       "title": "React Native Application Design Rule 49",
       "difficulty": "Easy",
@@ -139369,7 +132969,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2443",
+      "id": "t2313",
       "questionNumber": "QFW50",
       "title": "React Native Application Design Rule 50",
       "difficulty": "Medium",
@@ -139418,7 +133018,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2444",
+      "id": "t2314",
       "questionNumber": "QFW51",
       "title": "React Native Application Design Rule 51",
       "difficulty": "Easy",
@@ -139467,7 +133067,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2445",
+      "id": "t2315",
       "questionNumber": "QFW52",
       "title": "React Native Application Design Rule 52",
       "difficulty": "Medium",
@@ -139516,7 +133116,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2446",
+      "id": "t2316",
       "questionNumber": "QRN029",
       "title": "React Native Architecture: JSI, Fabric and TurboModules",
       "difficulty": "Hard",
@@ -139566,7 +133166,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2447",
+      "id": "t2317",
       "questionNumber": "T2302",
       "title": "React Native Architecture: Legacy Bridge vs New Architecture (JSI, TurboModules, Fabric Renderer)",
       "difficulty": "Hard",
@@ -139617,7 +133217,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2448",
+      "id": "t2318",
       "questionNumber": "QRN039",
       "title": "React Native Camera Access and Media Capture",
       "difficulty": "Medium",
@@ -139665,7 +133265,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2449",
+      "id": "t2319",
       "questionNumber": "QRN046",
       "title": "React Native Dimensions API vs useWindowDimensions Hook",
       "difficulty": "Easy",
@@ -139710,8 +133310,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2450",
-      "questionNumber": "Q1582",
+      "id": "t2320",
+      "questionNumber": "Q1452",
       "title": "QFW_MAX_74 · React Native Enterprise Framework Pattern 74",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -139758,8 +133358,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2451",
-      "questionNumber": "Q1583",
+      "id": "t2321",
+      "questionNumber": "Q1453",
       "title": "QFW_MAX_75 · React Native Enterprise Framework Pattern 75",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -139806,8 +133406,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2452",
-      "questionNumber": "Q1584",
+      "id": "t2322",
+      "questionNumber": "Q1454",
       "title": "QFW_MAX_76 · React Native Enterprise Framework Pattern 76",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -139854,8 +133454,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2453",
-      "questionNumber": "Q1585",
+      "id": "t2323",
+      "questionNumber": "Q1455",
       "title": "QFW_MAX_77 · React Native Enterprise Framework Pattern 77",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -139902,8 +133502,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2454",
-      "questionNumber": "Q1586",
+      "id": "t2324",
+      "questionNumber": "Q1456",
       "title": "QFW_MAX_78 · React Native Enterprise Framework Pattern 78",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -139950,8 +133550,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2455",
-      "questionNumber": "Q1587",
+      "id": "t2325",
+      "questionNumber": "Q1457",
       "title": "QFW_MAX_79 · React Native Enterprise Framework Pattern 79",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -139998,8 +133598,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2456",
-      "questionNumber": "Q1588",
+      "id": "t2326",
+      "questionNumber": "Q1458",
       "title": "QFW_MAX_80 · React Native Enterprise Framework Pattern 80",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140046,8 +133646,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2457",
-      "questionNumber": "Q1589",
+      "id": "t2327",
+      "questionNumber": "Q1459",
       "title": "QFW_MAX_81 · React Native Enterprise Framework Pattern 81",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140094,8 +133694,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2458",
-      "questionNumber": "Q1590",
+      "id": "t2328",
+      "questionNumber": "Q1460",
       "title": "QFW_MAX_82 · React Native Enterprise Framework Pattern 82",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140142,8 +133742,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2459",
-      "questionNumber": "Q1591",
+      "id": "t2329",
+      "questionNumber": "Q1461",
       "title": "QFW_MAX_83 · React Native Enterprise Framework Pattern 83",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140190,7 +133790,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2460",
+      "id": "t2330",
       "questionNumber": "T2303",
       "title": "React Native FlatList Performance Optimization: `windowSize`, `getItemLayout`, `keyExtractor` & RecyclerListView",
       "difficulty": "Hard",
@@ -140241,7 +133841,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2461",
+      "id": "t2331",
       "questionNumber": "QRN034",
       "title": "React Native FlatList Virtualization and getItemLayout",
       "difficulty": "Medium",
@@ -140291,8 +133891,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2462",
-      "questionNumber": "Q1594",
+      "id": "t2332",
+      "questionNumber": "Q1464",
       "title": "QFW_W15_136 · React Native Fullstack Architecture Strategy 136",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140339,8 +133939,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2463",
-      "questionNumber": "Q1595",
+      "id": "t2333",
+      "questionNumber": "Q1465",
       "title": "QFW_W15_137 · React Native Fullstack Architecture Strategy 137",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140387,8 +133987,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2464",
-      "questionNumber": "Q1596",
+      "id": "t2334",
+      "questionNumber": "Q1466",
       "title": "QFW_W15_138 · React Native Fullstack Architecture Strategy 138",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140435,8 +134035,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2465",
-      "questionNumber": "Q1597",
+      "id": "t2335",
+      "questionNumber": "Q1467",
       "title": "QFW_W15_139 · React Native Fullstack Architecture Strategy 139",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140483,8 +134083,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2466",
-      "questionNumber": "Q1598",
+      "id": "t2336",
+      "questionNumber": "Q1468",
       "title": "QFW_W15_140 · React Native Fullstack Architecture Strategy 140",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140531,8 +134131,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2467",
-      "questionNumber": "Q1599",
+      "id": "t2337",
+      "questionNumber": "Q1469",
       "title": "QFW_W15_141 · React Native Fullstack Architecture Strategy 141",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140579,8 +134179,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2468",
-      "questionNumber": "Q1600",
+      "id": "t2338",
+      "questionNumber": "Q1470",
       "title": "QFW_W15_142 · React Native Fullstack Architecture Strategy 142",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140627,8 +134227,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2469",
-      "questionNumber": "Q1601",
+      "id": "t2339",
+      "questionNumber": "Q1471",
       "title": "QFW_W15_143 · React Native Fullstack Architecture Strategy 143",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140675,8 +134275,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2470",
-      "questionNumber": "Q1602",
+      "id": "t2340",
+      "questionNumber": "Q1472",
       "title": "QFW_W15_144 · React Native Fullstack Architecture Strategy 144",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140723,8 +134323,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2471",
-      "questionNumber": "Q1603",
+      "id": "t2341",
+      "questionNumber": "Q1473",
       "title": "QFW_W15_145 · React Native Fullstack Architecture Strategy 145",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140771,8 +134371,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2472",
-      "questionNumber": "Q1604",
+      "id": "t2342",
+      "questionNumber": "Q1474",
       "title": "QFW_W15_146 · React Native Fullstack Architecture Strategy 146",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140819,8 +134419,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2473",
-      "questionNumber": "Q1605",
+      "id": "t2343",
+      "questionNumber": "Q1475",
       "title": "QFW_W15_147 · React Native Fullstack Architecture Strategy 147",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140867,8 +134467,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2474",
-      "questionNumber": "Q1606",
+      "id": "t2344",
+      "questionNumber": "Q1476",
       "title": "QFW_W15_148 · React Native Fullstack Architecture Strategy 148",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -140915,7 +134515,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2475",
+      "id": "t2345",
       "questionNumber": "QRN036",
       "title": "React Native Gesture Handler and Reanimated 3 Animations",
       "difficulty": "Hard",
@@ -140964,7 +134564,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2476",
+      "id": "t2346",
       "questionNumber": "QRN040",
       "title": "React Native Image Caching and Fast Image Component",
       "difficulty": "Medium",
@@ -141012,7 +134612,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2477",
+      "id": "t2347",
       "questionNumber": "QRN050",
       "title": "React Native Image Component Optimization Props",
       "difficulty": "Easy",
@@ -141059,7 +134659,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2478",
+      "id": "t2348",
       "questionNumber": "S216",
       "title": "React Native Introduction",
       "difficulty": "Easy",
@@ -141105,7 +134705,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2479",
+      "id": "t2349",
       "questionNumber": "QRN042",
       "title": "React Native KeyboardAvoidingView Layout Adaptation",
       "difficulty": "Easy",
@@ -141152,7 +134752,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2480",
+      "id": "t2350",
       "questionNumber": "QRN037",
       "title": "React Native Layout and Flexbox Differences from Web",
       "difficulty": "Easy",
@@ -141201,7 +134801,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2481",
+      "id": "t2351",
       "questionNumber": "QRN038",
       "title": "React Native Offline Storage and Sync Strategies",
       "difficulty": "Medium",
@@ -141250,7 +134850,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2482",
+      "id": "t2352",
       "questionNumber": "QRN032",
       "title": "React Native Performance Optimization and Profiling",
       "difficulty": "Hard",
@@ -141299,7 +134899,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2483",
+      "id": "t2353",
       "questionNumber": "QRN045",
       "title": "React Native Pressable API vs TouchableOpacity",
       "difficulty": "Easy",
@@ -141345,7 +134945,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2484",
+      "id": "t2354",
       "questionNumber": "QRN043",
       "title": "React Native RefreshControl Pull to Refresh Pattern",
       "difficulty": "Easy",
@@ -141393,7 +134993,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2485",
+      "id": "t2355",
       "questionNumber": "QRN041",
       "title": "React Native Safe Area View and Notch Adaptation",
       "difficulty": "Easy",
@@ -141440,8 +135040,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2486",
-      "questionNumber": "Q1618",
+      "id": "t2356",
+      "questionNumber": "Q1488",
       "title": "QFW_M2_104 · React Native Scalable Architecture Rule 104",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141488,8 +135088,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2487",
-      "questionNumber": "Q1619",
+      "id": "t2357",
+      "questionNumber": "Q1489",
       "title": "QFW_M2_105 · React Native Scalable Architecture Rule 105",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141536,8 +135136,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2488",
-      "questionNumber": "Q1620",
+      "id": "t2358",
+      "questionNumber": "Q1490",
       "title": "QFW_M2_106 · React Native Scalable Architecture Rule 106",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141584,8 +135184,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2489",
-      "questionNumber": "Q1621",
+      "id": "t2359",
+      "questionNumber": "Q1491",
       "title": "QFW_M2_107 · React Native Scalable Architecture Rule 107",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141632,8 +135232,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2490",
-      "questionNumber": "Q1622",
+      "id": "t2360",
+      "questionNumber": "Q1492",
       "title": "QFW_M2_108 · React Native Scalable Architecture Rule 108",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141680,8 +135280,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2491",
-      "questionNumber": "Q1623",
+      "id": "t2361",
+      "questionNumber": "Q1493",
       "title": "QFW_M2_109 · React Native Scalable Architecture Rule 109",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141728,8 +135328,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2492",
-      "questionNumber": "Q1624",
+      "id": "t2362",
+      "questionNumber": "Q1494",
       "title": "QFW_M2_110 · React Native Scalable Architecture Rule 110",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141776,8 +135376,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2493",
-      "questionNumber": "Q1625",
+      "id": "t2363",
+      "questionNumber": "Q1495",
       "title": "QFW_M2_111 · React Native Scalable Architecture Rule 111",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141824,8 +135424,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2494",
-      "questionNumber": "Q1626",
+      "id": "t2364",
+      "questionNumber": "Q1496",
       "title": "QFW_M2_112 · React Native Scalable Architecture Rule 112",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141872,8 +135472,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2495",
-      "questionNumber": "Q1627",
+      "id": "t2365",
+      "questionNumber": "Q1497",
       "title": "QFW_M2_113 · React Native Scalable Architecture Rule 113",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -141920,7 +135520,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2496",
+      "id": "t2366",
       "questionNumber": "QRN049",
       "title": "React Native ScrollView Component Usage",
       "difficulty": "Easy",
@@ -141966,7 +135566,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2497",
+      "id": "t2367",
       "questionNumber": "QRN048",
       "title": "React Native Text Component Styling",
       "difficulty": "Easy",
@@ -142012,7 +135612,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2498",
+      "id": "t2368",
       "questionNumber": "QRN052",
       "title": "React Native Text Component Typography Props",
       "difficulty": "Easy",
@@ -142057,7 +135657,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2499",
+      "id": "t2369",
       "questionNumber": "QRN030",
       "title": "React Native Threading Model: UI Thread vs JS Thread",
       "difficulty": "Medium",
@@ -142107,7 +135707,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2500",
+      "id": "t2370",
       "questionNumber": "QRN051",
       "title": "React Native View Component Flexbox Layout",
       "difficulty": "Easy",
@@ -142152,7 +135752,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2501",
+      "id": "t2371",
       "questionNumber": "QRN047",
       "title": "React Native View Component Layout Basics",
       "difficulty": "Easy",
@@ -142198,7 +135798,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2502",
+      "id": "t2372",
       "questionNumber": "S5076",
       "title": "Redux Toolkit",
       "difficulty": "Medium",
@@ -142244,7 +135844,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2503",
+      "id": "t2373",
       "questionNumber": "S231",
       "title": "SQLite",
       "difficulty": "Medium",
@@ -142290,7 +135890,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2504",
+      "id": "t2374",
       "questionNumber": "S5079",
       "title": "Thread Management",
       "difficulty": "Hard",
@@ -142336,7 +135936,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2505",
+      "id": "t2375",
       "questionNumber": "S240",
       "title": "TurboModules",
       "difficulty": "Hard",
@@ -142382,8 +135982,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2506",
-      "questionNumber": "Q1638",
+      "id": "t2376",
+      "questionNumber": "Q1508",
       "title": "QBE_W15_100 · Node.js Basics Backend Architecture Rule 100",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142430,8 +136030,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2507",
-      "questionNumber": "Q1639",
+      "id": "t2377",
+      "questionNumber": "Q1509",
       "title": "QBE_W15_101 · Node.js Basics Backend Architecture Rule 101",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142478,8 +136078,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2508",
-      "questionNumber": "Q1640",
+      "id": "t2378",
+      "questionNumber": "Q1510",
       "title": "QBE_W15_102 · Node.js Basics Backend Architecture Rule 102",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142526,8 +136126,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2509",
-      "questionNumber": "Q1641",
+      "id": "t2379",
+      "questionNumber": "Q1511",
       "title": "QBE_W15_103 · Node.js Basics Backend Architecture Rule 103",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142574,8 +136174,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2510",
-      "questionNumber": "Q1642",
+      "id": "t2380",
+      "questionNumber": "Q1512",
       "title": "QBE_W15_93 · Node.js Basics Backend Architecture Rule 93",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142622,8 +136222,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2511",
-      "questionNumber": "Q1643",
+      "id": "t2381",
+      "questionNumber": "Q1513",
       "title": "QBE_W15_94 · Node.js Basics Backend Architecture Rule 94",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142670,8 +136270,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2512",
-      "questionNumber": "Q1644",
+      "id": "t2382",
+      "questionNumber": "Q1514",
       "title": "QBE_W15_95 · Node.js Basics Backend Architecture Rule 95",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142718,8 +136318,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2513",
-      "questionNumber": "Q1645",
+      "id": "t2383",
+      "questionNumber": "Q1515",
       "title": "QBE_W15_96 · Node.js Basics Backend Architecture Rule 96",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142766,8 +136366,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2514",
-      "questionNumber": "Q1646",
+      "id": "t2384",
+      "questionNumber": "Q1516",
       "title": "QBE_W15_97 · Node.js Basics Backend Architecture Rule 97",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142814,8 +136414,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2515",
-      "questionNumber": "Q1647",
+      "id": "t2385",
+      "questionNumber": "Q1517",
       "title": "QBE_W15_98 · Node.js Basics Backend Architecture Rule 98",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142862,8 +136462,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2516",
-      "questionNumber": "Q1648",
+      "id": "t2386",
+      "questionNumber": "Q1518",
       "title": "QBE_W15_99 · Node.js Basics Backend Architecture Rule 99",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -142910,7 +136510,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2517",
+      "id": "t2387",
       "questionNumber": "QBE18",
       "title": "Node.js Basics Industry Practice 18",
       "difficulty": "Medium",
@@ -142959,7 +136559,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2518",
+      "id": "t2388",
       "questionNumber": "QBE19",
       "title": "Node.js Basics Industry Practice 19",
       "difficulty": "Easy",
@@ -143008,7 +136608,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2519",
+      "id": "t2389",
       "questionNumber": "QBE20",
       "title": "Node.js Basics Industry Practice 20",
       "difficulty": "Medium",
@@ -143057,7 +136657,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2520",
+      "id": "t2390",
       "questionNumber": "QBE21",
       "title": "Node.js Basics Industry Practice 21",
       "difficulty": "Easy",
@@ -143106,7 +136706,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2521",
+      "id": "t2391",
       "questionNumber": "QBE22",
       "title": "Node.js Basics Industry Practice 22",
       "difficulty": "Medium",
@@ -143155,7 +136755,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2522",
+      "id": "t2392",
       "questionNumber": "QBE23",
       "title": "Node.js Basics Industry Practice 23",
       "difficulty": "Easy",
@@ -143204,7 +136804,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2523",
+      "id": "t2393",
       "questionNumber": "QBE24",
       "title": "Node.js Basics Industry Practice 24",
       "difficulty": "Medium",
@@ -143253,7 +136853,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2524",
+      "id": "t2394",
       "questionNumber": "QBE25",
       "title": "Node.js Basics Industry Practice 25",
       "difficulty": "Easy",
@@ -143302,8 +136902,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2525",
-      "questionNumber": "Q1657",
+      "id": "t2395",
+      "questionNumber": "Q1527",
       "title": "QBE_MAX_43 · Node.js Basics Production Systems Rule 43",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143351,8 +136951,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2526",
-      "questionNumber": "Q1658",
+      "id": "t2396",
+      "questionNumber": "Q1528",
       "title": "QBE_MAX_44 · Node.js Basics Production Systems Rule 44",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143400,8 +137000,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2527",
-      "questionNumber": "Q1659",
+      "id": "t2397",
+      "questionNumber": "Q1529",
       "title": "QBE_MAX_45 · Node.js Basics Production Systems Rule 45",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143449,8 +137049,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2528",
-      "questionNumber": "Q1660",
+      "id": "t2398",
+      "questionNumber": "Q1530",
       "title": "QBE_MAX_46 · Node.js Basics Production Systems Rule 46",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143498,8 +137098,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2529",
-      "questionNumber": "Q1661",
+      "id": "t2399",
+      "questionNumber": "Q1531",
       "title": "QBE_MAX_47 · Node.js Basics Production Systems Rule 47",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143547,8 +137147,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2530",
-      "questionNumber": "Q1662",
+      "id": "t2400",
+      "questionNumber": "Q1532",
       "title": "QBE_MAX_48 · Node.js Basics Production Systems Rule 48",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143596,8 +137196,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2531",
-      "questionNumber": "Q1663",
+      "id": "t2401",
+      "questionNumber": "Q1533",
       "title": "QBE_MAX_49 · Node.js Basics Production Systems Rule 49",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143645,8 +137245,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2532",
-      "questionNumber": "Q1664",
+      "id": "t2402",
+      "questionNumber": "Q1534",
       "title": "QBE_MAX_50 · Node.js Basics Production Systems Rule 50",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143694,8 +137294,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2533",
-      "questionNumber": "Q1665",
+      "id": "t2403",
+      "questionNumber": "Q1535",
       "title": "QBE_MAX_51 · Node.js Basics Production Systems Rule 51",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143743,8 +137343,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2534",
-      "questionNumber": "Q1666",
+      "id": "t2404",
+      "questionNumber": "Q1536",
       "title": "QBE_M2_68 · Node.js Basics Scalable API Pattern 68",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143792,8 +137392,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2535",
-      "questionNumber": "Q1667",
+      "id": "t2405",
+      "questionNumber": "Q1537",
       "title": "QBE_M2_69 · Node.js Basics Scalable API Pattern 69",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143841,8 +137441,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2536",
-      "questionNumber": "Q1668",
+      "id": "t2406",
+      "questionNumber": "Q1538",
       "title": "QBE_M2_70 · Node.js Basics Scalable API Pattern 70",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143890,8 +137490,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2537",
-      "questionNumber": "Q1669",
+      "id": "t2407",
+      "questionNumber": "Q1539",
       "title": "QBE_M2_71 · Node.js Basics Scalable API Pattern 71",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143939,8 +137539,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2538",
-      "questionNumber": "Q1670",
+      "id": "t2408",
+      "questionNumber": "Q1540",
       "title": "QBE_M2_72 · Node.js Basics Scalable API Pattern 72",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -143988,8 +137588,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2539",
-      "questionNumber": "Q1671",
+      "id": "t2409",
+      "questionNumber": "Q1541",
       "title": "QBE_M2_73 · Node.js Basics Scalable API Pattern 73",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -144037,8 +137637,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2540",
-      "questionNumber": "Q1672",
+      "id": "t2410",
+      "questionNumber": "Q1542",
       "title": "QBE_M2_74 · Node.js Basics Scalable API Pattern 74",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -144086,8 +137686,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2541",
-      "questionNumber": "Q1673",
+      "id": "t2411",
+      "questionNumber": "Q1543",
       "title": "QBE_M2_75 · Node.js Basics Scalable API Pattern 75",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -144135,8 +137735,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2542",
-      "questionNumber": "Q1674",
+      "id": "t2412",
+      "questionNumber": "Q1544",
       "title": "QBE_M2_76 · Node.js Basics Scalable API Pattern 76",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -144184,7 +137784,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2543",
+      "id": "t2413",
       "questionNumber": "QNODE006",
       "title": "Node.js Buffer Class and Binary Data Manipulation",
       "difficulty": "Medium",
@@ -144235,7 +137835,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2544",
+      "id": "t2414",
       "questionNumber": "QNODE009",
       "title": "Node.js Child Process module (fork, exec, spawn) Selection",
       "difficulty": "Medium",
@@ -144284,7 +137884,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2545",
+      "id": "t2415",
       "questionNumber": "QNODE003",
       "title": "Node.js Cluster Module and Process Scaling",
       "difficulty": "Medium",
@@ -144334,7 +137934,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2546",
+      "id": "t2416",
       "questionNumber": "QNODE007",
       "title": "Node.js Event Emitter Memory Leak Warning (setMaxListeners)",
       "difficulty": "Easy",
@@ -144380,7 +137980,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2547",
+      "id": "t2417",
       "questionNumber": "QNODE001",
       "title": "Node.js Event Loop Architecture and libuv Thread Pool",
       "difficulty": "Hard",
@@ -144431,7 +138031,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2548",
+      "id": "t2418",
       "questionNumber": "QNODE012",
       "title": "Node.js Events EventEmitter Basics",
       "difficulty": "Easy",
@@ -144476,7 +138076,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2549",
+      "id": "t2419",
       "questionNumber": "QNODE015",
       "title": "Node.js Events EventEmitter Listener Binding",
       "difficulty": "Easy",
@@ -144521,7 +138121,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2550",
+      "id": "t2420",
       "questionNumber": "QNODE016",
       "title": "Node.js Events EventEmitter Once Listener Binding",
       "difficulty": "Easy",
@@ -144566,7 +138166,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2551",
+      "id": "t2421",
       "questionNumber": "QNODE008",
       "title": "Node.js File System (fs) Promises vs Synchronous Operations",
       "difficulty": "Easy",
@@ -144613,7 +138213,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2552",
+      "id": "t2422",
       "questionNumber": "QNODE005",
       "title": "Node.js Memory Leak Profiling with Heapdumps and Clinic.js",
       "difficulty": "Hard",
@@ -144662,7 +138262,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2553",
+      "id": "t2423",
       "questionNumber": "QNODE013",
       "title": "Node.js Path module path.basename and path.extname",
       "difficulty": "Easy",
@@ -144707,7 +138307,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2554",
+      "id": "t2424",
       "questionNumber": "QNODE014",
       "title": "Node.js Path module path.dir and path.parse",
       "difficulty": "Easy",
@@ -144752,7 +138352,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2555",
+      "id": "t2425",
       "questionNumber": "QNODE010",
       "title": "Node.js Path module (path.join, path.resolve) Resolution Rules",
       "difficulty": "Easy",
@@ -144798,7 +138398,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2556",
+      "id": "t2426",
       "questionNumber": "QNODE017",
       "title": "Node.js Path module path.join vs path.resolve Comparison",
       "difficulty": "Easy",
@@ -144843,7 +138443,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2557",
+      "id": "t2427",
       "questionNumber": "QNODE002",
       "title": "Node.js Streams Backpressure and Pipe Flow Control",
       "difficulty": "Hard",
@@ -144894,7 +138494,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2558",
+      "id": "t2428",
       "questionNumber": "QNODE011",
       "title": "Node.js Utility module (util.promisify, util.types) Standard Functions",
       "difficulty": "Easy",
@@ -144939,7 +138539,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2559",
+      "id": "t2429",
       "questionNumber": "QNODE004",
       "title": "Node.js Worker Threads vs Cluster Module Parallel Processing",
       "difficulty": "Hard",
@@ -144987,7 +138587,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2560",
+      "id": "t2430",
       "questionNumber": "QREST013",
       "title": "API Authentication Headers Authorization Bearer Token",
       "difficulty": "Easy",
@@ -145033,7 +138633,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2561",
+      "id": "t2431",
       "questionNumber": "QREST008",
       "title": "API HATEOAS (Hypermedia As The Engine Of Application State)",
       "difficulty": "Medium",
@@ -145079,7 +138679,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2562",
+      "id": "t2432",
       "questionNumber": "QREST005",
       "title": "API Pagination Strategies: Cursor vs Offset Pagination",
       "difficulty": "Medium",
@@ -145127,7 +138727,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2563",
+      "id": "t2433",
       "questionNumber": "QREST002",
       "title": "API Rate Limiting and Sliding Window Algorithms",
       "difficulty": "Medium",
@@ -145177,7 +138777,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2564",
+      "id": "t2434",
       "questionNumber": "QREST014",
       "title": "API Response Cache Control Headers (max-age, no-cache)",
       "difficulty": "Easy",
@@ -145223,7 +138823,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2565",
+      "id": "t2435",
       "questionNumber": "QREST007",
       "title": "API Response Caching with Conditional Requests (If-Modified-Since)",
       "difficulty": "Medium",
@@ -145271,7 +138871,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2566",
+      "id": "t2436",
       "questionNumber": "QREST006",
       "title": "API Response Envelope Standardization and Error Contract",
       "difficulty": "Easy",
@@ -145320,7 +138920,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2567",
+      "id": "t2437",
       "questionNumber": "QREST009",
       "title": "API Response Filtering and Sparse Fieldsets (fields query parameter)",
       "difficulty": "Easy",
@@ -145369,7 +138969,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2568",
+      "id": "t2438",
       "questionNumber": "QREST016",
       "title": "API Response HTTP Status Code 400 vs 401 vs 403 vs 404",
       "difficulty": "Easy",
@@ -145415,7 +139015,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2569",
+      "id": "t2439",
       "questionNumber": "QREST015",
       "title": "API Response HTTP Status Code Selection Rules",
       "difficulty": "Easy",
@@ -145461,7 +139061,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2570",
+      "id": "t2440",
       "questionNumber": "QREST012",
       "title": "API Response HTTP Status Code Selection",
       "difficulty": "Easy",
@@ -145511,7 +139111,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2571",
+      "id": "t2441",
       "questionNumber": "QREST017",
       "title": "API Response HTTP Status Codes 200 vs 201 vs 204",
       "difficulty": "Easy",
@@ -145557,7 +139157,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2572",
+      "id": "t2442",
       "questionNumber": "QREST011",
       "title": "API Response Serialization and Data Stripping (DTO Pattern)",
       "difficulty": "Medium",
@@ -145604,7 +139204,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2573",
+      "id": "t2443",
       "questionNumber": "QREST010",
       "title": "API Security: Protecting Endpoints with CORS and Origin Headers",
       "difficulty": "Easy",
@@ -145651,7 +139251,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2574",
+      "id": "t2444",
       "questionNumber": "QREST004",
       "title": "API Versioning Strategies: URI vs Header vs Query Parameter",
       "difficulty": "Medium",
@@ -145699,7 +139299,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2575",
+      "id": "t2445",
       "questionNumber": "QREST003",
       "title": "Idempotency Keys in Financial API Requests",
       "difficulty": "Hard",
@@ -145748,8 +139348,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2576",
-      "questionNumber": "Q1708",
+      "id": "t2446",
+      "questionNumber": "Q1578",
       "title": "QBE_W15_104 · REST API Backend Architecture Rule 104",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -145796,8 +139396,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2577",
-      "questionNumber": "Q1709",
+      "id": "t2447",
+      "questionNumber": "Q1579",
       "title": "QBE_W15_105 · REST API Backend Architecture Rule 105",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -145844,8 +139444,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2578",
-      "questionNumber": "Q1710",
+      "id": "t2448",
+      "questionNumber": "Q1580",
       "title": "QBE_W15_106 · REST API Backend Architecture Rule 106",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -145892,8 +139492,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2579",
-      "questionNumber": "Q1711",
+      "id": "t2449",
+      "questionNumber": "Q1581",
       "title": "QBE_W15_107 · REST API Backend Architecture Rule 107",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -145940,8 +139540,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2580",
-      "questionNumber": "Q1712",
+      "id": "t2450",
+      "questionNumber": "Q1582",
       "title": "QBE_W15_108 · REST API Backend Architecture Rule 108",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -145988,8 +139588,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2581",
-      "questionNumber": "Q1713",
+      "id": "t2451",
+      "questionNumber": "Q1583",
       "title": "QBE_W15_109 · REST API Backend Architecture Rule 109",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146036,8 +139636,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2582",
-      "questionNumber": "Q1714",
+      "id": "t2452",
+      "questionNumber": "Q1584",
       "title": "QBE_W15_110 · REST API Backend Architecture Rule 110",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146084,8 +139684,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2583",
-      "questionNumber": "Q1715",
+      "id": "t2453",
+      "questionNumber": "Q1585",
       "title": "QBE_W15_111 · REST API Backend Architecture Rule 111",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146132,8 +139732,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2584",
-      "questionNumber": "Q1716",
+      "id": "t2454",
+      "questionNumber": "Q1586",
       "title": "QBE_W15_112 · REST API Backend Architecture Rule 112",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146180,7 +139780,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2585",
+      "id": "t2455",
       "questionNumber": "QBE26",
       "title": "REST API Industry Practice 26",
       "difficulty": "Medium",
@@ -146229,7 +139829,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2586",
+      "id": "t2456",
       "questionNumber": "QBE27",
       "title": "REST API Industry Practice 27",
       "difficulty": "Easy",
@@ -146278,7 +139878,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2587",
+      "id": "t2457",
       "questionNumber": "QBE28",
       "title": "REST API Industry Practice 28",
       "difficulty": "Medium",
@@ -146327,7 +139927,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2588",
+      "id": "t2458",
       "questionNumber": "QBE29",
       "title": "REST API Industry Practice 29",
       "difficulty": "Easy",
@@ -146376,7 +139976,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2589",
+      "id": "t2459",
       "questionNumber": "QBE30",
       "title": "REST API Industry Practice 30",
       "difficulty": "Medium",
@@ -146425,7 +140025,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2590",
+      "id": "t2460",
       "questionNumber": "QBE31",
       "title": "REST API Industry Practice 31",
       "difficulty": "Easy",
@@ -146474,7 +140074,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2591",
+      "id": "t2461",
       "questionNumber": "QBE32",
       "title": "REST API Industry Practice 32",
       "difficulty": "Medium",
@@ -146523,7 +140123,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2592",
+      "id": "t2462",
       "questionNumber": "QBE33",
       "title": "REST API Industry Practice 33",
       "difficulty": "Easy",
@@ -146572,8 +140172,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2593",
-      "questionNumber": "Q1725",
+      "id": "t2463",
+      "questionNumber": "Q1595",
       "title": "QBE_MAX_52 · REST API Production Systems Rule 52",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146621,8 +140221,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2594",
-      "questionNumber": "Q1726",
+      "id": "t2464",
+      "questionNumber": "Q1596",
       "title": "QBE_MAX_53 · REST API Production Systems Rule 53",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146670,8 +140270,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2595",
-      "questionNumber": "Q1727",
+      "id": "t2465",
+      "questionNumber": "Q1597",
       "title": "QBE_MAX_54 · REST API Production Systems Rule 54",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146719,8 +140319,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2596",
-      "questionNumber": "Q1728",
+      "id": "t2466",
+      "questionNumber": "Q1598",
       "title": "QBE_MAX_55 · REST API Production Systems Rule 55",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146768,8 +140368,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2597",
-      "questionNumber": "Q1729",
+      "id": "t2467",
+      "questionNumber": "Q1599",
       "title": "QBE_MAX_56 · REST API Production Systems Rule 56",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146817,8 +140417,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2598",
-      "questionNumber": "Q1730",
+      "id": "t2468",
+      "questionNumber": "Q1600",
       "title": "QBE_MAX_57 · REST API Production Systems Rule 57",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146866,8 +140466,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2599",
-      "questionNumber": "Q1731",
+      "id": "t2469",
+      "questionNumber": "Q1601",
       "title": "QBE_MAX_58 · REST API Production Systems Rule 58",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146915,8 +140515,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2600",
-      "questionNumber": "Q1732",
+      "id": "t2470",
+      "questionNumber": "Q1602",
       "title": "QBE_MAX_59 · REST API Production Systems Rule 59",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -146964,8 +140564,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2601",
-      "questionNumber": "Q1733",
+      "id": "t2471",
+      "questionNumber": "Q1603",
       "title": "QBE_M2_77 · REST API Scalable API Pattern 77",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -147013,8 +140613,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2602",
-      "questionNumber": "Q1734",
+      "id": "t2472",
+      "questionNumber": "Q1604",
       "title": "QBE_M2_78 · REST API Scalable API Pattern 78",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -147062,8 +140662,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2603",
-      "questionNumber": "Q1735",
+      "id": "t2473",
+      "questionNumber": "Q1605",
       "title": "QBE_M2_79 · REST API Scalable API Pattern 79",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -147111,8 +140711,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2604",
-      "questionNumber": "Q1736",
+      "id": "t2474",
+      "questionNumber": "Q1606",
       "title": "QBE_M2_80 · REST API Scalable API Pattern 80",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -147160,8 +140760,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2605",
-      "questionNumber": "Q1737",
+      "id": "t2475",
+      "questionNumber": "Q1607",
       "title": "QBE_M2_81 · REST API Scalable API Pattern 81",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -147209,8 +140809,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2606",
-      "questionNumber": "Q1738",
+      "id": "t2476",
+      "questionNumber": "Q1608",
       "title": "QBE_M2_82 · REST API Scalable API Pattern 82",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -147258,8 +140858,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2607",
-      "questionNumber": "Q1739",
+      "id": "t2477",
+      "questionNumber": "Q1609",
       "title": "QBE_M2_83 · REST API Scalable API Pattern 83",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -147307,8 +140907,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2608",
-      "questionNumber": "Q1740",
+      "id": "t2478",
+      "questionNumber": "Q1610",
       "title": "QBE_M2_84 · REST API Scalable API Pattern 84",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -147356,7 +140956,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2609",
+      "id": "t2479",
       "questionNumber": "QREST001",
       "title": "RESTful API Design Idempotency and Resource Naming",
       "difficulty": "Easy",
@@ -147405,7 +141005,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2610",
+      "id": "t2480",
       "questionNumber": "QGQL003",
       "title": "GraphQL Directives and Client-Side Cache Normalization",
       "difficulty": "Hard",
@@ -147453,7 +141053,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2611",
+      "id": "t2481",
       "questionNumber": "QGQL002",
       "title": "GraphQL N+1 Problem and DataLoader Batching",
       "difficulty": "Hard",
@@ -147502,7 +141102,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2612",
+      "id": "t2482",
       "questionNumber": "QGQL004",
       "title": "GraphQL Subscriptions with WebSockets Transport",
       "difficulty": "Hard",
@@ -147550,7 +141150,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2613",
+      "id": "t2483",
       "questionNumber": "QGQL001",
       "title": "GraphQL vs REST: Over-fetching, Under-fetching and Schema Design",
       "difficulty": "Easy",
@@ -147600,7 +141200,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2614",
+      "id": "t2484",
       "questionNumber": "QWS002",
       "title": "WebSocket Heartbeat and Reconnection Backoff Architecture",
       "difficulty": "Medium",
@@ -147648,7 +141248,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2615",
+      "id": "t2485",
       "questionNumber": "QWS001",
       "title": "WebSockets vs Server-Sent Events (SSE) and Long Polling",
       "difficulty": "Medium",
@@ -147697,7 +141297,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2616",
+      "id": "t2486",
       "questionNumber": "QAUTH001",
       "title": "JWT Authentication and Refresh Token Rotation Architecture",
       "difficulty": "Hard",
@@ -147747,7 +141347,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2617",
+      "id": "t2487",
       "questionNumber": "QAUTH002",
       "title": "OAuth 2.0 PKCE Flow for Single Page Applications",
       "difficulty": "Hard",
@@ -147797,7 +141397,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2618",
+      "id": "t2488",
       "questionNumber": "QAUTHZ001",
       "title": "Role-Based Access Control (RBAC) in Frontend Applications",
       "difficulty": "Medium",
@@ -147846,7 +141446,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2619",
+      "id": "t2489",
       "questionNumber": "QSEC009",
       "title": "Clickjacking Prevention via X-Frame-Options and CSP",
       "difficulty": "Easy",
@@ -147895,7 +141495,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2620",
+      "id": "t2490",
       "questionNumber": "T3102",
       "title": "Content Security Policy (CSP) Directives, Nonces & Hashes",
       "difficulty": "Medium",
@@ -147945,7 +141545,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2621",
+      "id": "t2491",
       "questionNumber": "QSEC007",
       "title": "Content Security Policy Directives and Nonce Setup",
       "difficulty": "Hard",
@@ -147996,7 +141596,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2622",
+      "id": "t2492",
       "questionNumber": "QSEC006",
       "title": "Cross-Site Request Forgery (CSRF) and SameSite Cookie Defenses",
       "difficulty": "Medium",
@@ -148045,7 +141645,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2623",
+      "id": "t2493",
       "questionNumber": "QSEC005",
       "title": "Cross-Site Scripting (XSS) Vectors and Defense-in-Depth",
       "difficulty": "Hard",
@@ -148097,7 +141697,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2624",
+      "id": "t2494",
       "questionNumber": "QSEC008",
       "title": "Dependency Risk Audit and Supply Chain Vulnerabilities",
       "difficulty": "Medium",
@@ -148146,7 +141746,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2625",
+      "id": "t2495",
       "questionNumber": "QSEC014",
       "title": "OAuth 2.0 State Parameter and CSRF Mitigation in Auth Flows",
       "difficulty": "Medium",
@@ -148194,7 +141794,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2626",
+      "id": "t2496",
       "questionNumber": "QSEC012",
       "title": "Open Redirect Vulnerabilities and URL Validation",
       "difficulty": "Easy",
@@ -148243,7 +141843,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2627",
+      "id": "t2497",
       "questionNumber": "QSEC011",
       "title": "Secure Token Storage: Memory vs HttpOnly Cookies",
       "difficulty": "Medium",
@@ -148292,7 +141892,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2628",
+      "id": "t2498",
       "questionNumber": "QSEC019",
       "title": "Security Audit: Preventing Clickjacking in Modern Single Page Applications",
       "difficulty": "Easy",
@@ -148339,7 +141939,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2629",
+      "id": "t2499",
       "questionNumber": "QSEC026",
       "title": "Security Audit: Preventing Cross-Site Scripting (XSS) in HTML Inputs",
       "difficulty": "Easy",
@@ -148384,7 +141984,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2630",
+      "id": "t2500",
       "questionNumber": "QSEC018",
       "title": "Security Audit: Preventing HTTP Parameter Pollution (HPP)",
       "difficulty": "Medium",
@@ -148432,7 +142032,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2631",
+      "id": "t2501",
       "questionNumber": "QSEC016",
       "title": "Security Audit: Preventing Prototype Pollution Attacks",
       "difficulty": "Hard",
@@ -148481,7 +142081,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2632",
+      "id": "t2502",
       "questionNumber": "QSEC017",
       "title": "Security Audit: Preventing RegEx Denial of Service (ReDoS) Attacks",
       "difficulty": "Hard",
@@ -148529,7 +142129,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2633",
+      "id": "t2503",
       "questionNumber": "QSEC023",
       "title": "Security Audit: Preventing Sensitive Data Exposure in API Logs",
       "difficulty": "Easy",
@@ -148574,7 +142174,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2634",
+      "id": "t2504",
       "questionNumber": "QSEC020",
       "title": "Security Audit: Preventing SQL Injection in Node.js Database Queries",
       "difficulty": "Easy",
@@ -148620,7 +142220,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2635",
+      "id": "t2505",
       "questionNumber": "QSEC015",
       "title": "Security Audit: Preventing Timing Attacks in Secret Comparison",
       "difficulty": "Hard",
@@ -148668,7 +142268,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2636",
+      "id": "t2506",
       "questionNumber": "QSEC022",
       "title": "Security Audit: Preventing Unsafe Redirects in Web Applications",
       "difficulty": "Easy",
@@ -148713,7 +142313,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2637",
+      "id": "t2507",
       "questionNumber": "QSEC027",
       "title": "Security Audit: Protecting Express APIs against Rate Limit Breaches",
       "difficulty": "Easy",
@@ -148759,7 +142359,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2638",
+      "id": "t2508",
       "questionNumber": "QSEC021",
       "title": "Security Audit: Protecting Express/Node APIs against DoS with Rate Limit",
       "difficulty": "Easy",
@@ -148807,7 +142407,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2639",
+      "id": "t2509",
       "questionNumber": "QSEC025",
       "title": "Security Audit: Protecting Web Storage against XSS Injections",
       "difficulty": "Easy",
@@ -148852,7 +142452,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2640",
+      "id": "t2510",
       "questionNumber": "QSEC024",
       "title": "Security Audit: Protecting Web Storage against XSS Theft",
       "difficulty": "Easy",
@@ -148897,7 +142497,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2641",
+      "id": "t2511",
       "questionNumber": "QSYS31",
       "title": "Security Engineering Mechanism 31",
       "difficulty": "Medium",
@@ -148946,7 +142546,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2642",
+      "id": "t2512",
       "questionNumber": "QSYS32",
       "title": "Security Engineering Mechanism 32",
       "difficulty": "Medium",
@@ -148995,7 +142595,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2643",
+      "id": "t2513",
       "questionNumber": "QSYS33",
       "title": "Security Engineering Mechanism 33",
       "difficulty": "Hard",
@@ -149044,7 +142644,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2644",
+      "id": "t2514",
       "questionNumber": "QSYS34",
       "title": "Security Engineering Mechanism 34",
       "difficulty": "Medium",
@@ -149093,7 +142693,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2645",
+      "id": "t2515",
       "questionNumber": "QSYS35",
       "title": "Security Engineering Mechanism 35",
       "difficulty": "Medium",
@@ -149142,7 +142742,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2646",
+      "id": "t2516",
       "questionNumber": "QSYS36",
       "title": "Security Engineering Mechanism 36",
       "difficulty": "Hard",
@@ -149191,7 +142791,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2647",
+      "id": "t2517",
       "questionNumber": "QSYS37",
       "title": "Security Engineering Mechanism 37",
       "difficulty": "Medium",
@@ -149240,7 +142840,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2648",
+      "id": "t2518",
       "questionNumber": "QSYS38",
       "title": "Security Engineering Mechanism 38",
       "difficulty": "Medium",
@@ -149289,7 +142889,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2649",
+      "id": "t2519",
       "questionNumber": "QSYS39",
       "title": "Security Engineering Mechanism 39",
       "difficulty": "Hard",
@@ -149338,7 +142938,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2650",
+      "id": "t2520",
       "questionNumber": "QSYS40",
       "title": "Security Engineering Mechanism 40",
       "difficulty": "Medium",
@@ -149387,8 +142987,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2651",
-      "questionNumber": "Q1784",
+      "id": "t2521",
+      "questionNumber": "Q1654",
       "title": "QSYS_W15_121 · Security High Availability System Engineering 121",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149436,8 +143036,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2652",
-      "questionNumber": "Q1785",
+      "id": "t2522",
+      "questionNumber": "Q1655",
       "title": "QSYS_W15_122 · Security High Availability System Engineering 122",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149485,8 +143085,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2653",
-      "questionNumber": "Q1786",
+      "id": "t2523",
+      "questionNumber": "Q1656",
       "title": "QSYS_W15_123 · Security High Availability System Engineering 123",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149534,8 +143134,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2654",
-      "questionNumber": "Q1787",
+      "id": "t2524",
+      "questionNumber": "Q1657",
       "title": "QSYS_W15_124 · Security High Availability System Engineering 124",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149583,8 +143183,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2655",
-      "questionNumber": "Q1788",
+      "id": "t2525",
+      "questionNumber": "Q1658",
       "title": "QSYS_W15_125 · Security High Availability System Engineering 125",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149632,8 +143232,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2656",
-      "questionNumber": "Q1789",
+      "id": "t2526",
+      "questionNumber": "Q1659",
       "title": "QSYS_W15_126 · Security High Availability System Engineering 126",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149681,8 +143281,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2657",
-      "questionNumber": "Q1790",
+      "id": "t2527",
+      "questionNumber": "Q1660",
       "title": "QSYS_W15_127 · Security High Availability System Engineering 127",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149730,8 +143330,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2658",
-      "questionNumber": "Q1791",
+      "id": "t2528",
+      "questionNumber": "Q1661",
       "title": "QSYS_W15_128 · Security High Availability System Engineering 128",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149779,8 +143379,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2659",
-      "questionNumber": "Q1792",
+      "id": "t2529",
+      "questionNumber": "Q1662",
       "title": "QSYS_W15_129 · Security High Availability System Engineering 129",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149828,8 +143428,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2660",
-      "questionNumber": "Q1793",
+      "id": "t2530",
+      "questionNumber": "Q1663",
       "title": "QSYS_W15_130 · Security High Availability System Engineering 130",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149877,8 +143477,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2661",
-      "questionNumber": "Q1794",
+      "id": "t2531",
+      "questionNumber": "Q1664",
       "title": "QSYS_M2_100 · Security High Throughput & Defense Strategy 100",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149926,8 +143526,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2662",
-      "questionNumber": "Q1795",
+      "id": "t2532",
+      "questionNumber": "Q1665",
       "title": "QSYS_M2_91 · Security High Throughput & Defense Strategy 91",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -149975,8 +143575,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2663",
-      "questionNumber": "Q1796",
+      "id": "t2533",
+      "questionNumber": "Q1666",
       "title": "QSYS_M2_92 · Security High Throughput & Defense Strategy 92",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150024,8 +143624,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2664",
-      "questionNumber": "Q1797",
+      "id": "t2534",
+      "questionNumber": "Q1667",
       "title": "QSYS_M2_93 · Security High Throughput & Defense Strategy 93",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150073,8 +143673,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2665",
-      "questionNumber": "Q1798",
+      "id": "t2535",
+      "questionNumber": "Q1668",
       "title": "QSYS_M2_94 · Security High Throughput & Defense Strategy 94",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150122,8 +143722,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2666",
-      "questionNumber": "Q1799",
+      "id": "t2536",
+      "questionNumber": "Q1669",
       "title": "QSYS_M2_95 · Security High Throughput & Defense Strategy 95",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150171,8 +143771,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2667",
-      "questionNumber": "Q1800",
+      "id": "t2537",
+      "questionNumber": "Q1670",
       "title": "QSYS_M2_96 · Security High Throughput & Defense Strategy 96",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150220,8 +143820,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2668",
-      "questionNumber": "Q1801",
+      "id": "t2538",
+      "questionNumber": "Q1671",
       "title": "QSYS_M2_97 · Security High Throughput & Defense Strategy 97",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150269,8 +143869,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2669",
-      "questionNumber": "Q1802",
+      "id": "t2539",
+      "questionNumber": "Q1672",
       "title": "QSYS_M2_98 · Security High Throughput & Defense Strategy 98",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150318,8 +143918,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2670",
-      "questionNumber": "Q1803",
+      "id": "t2540",
+      "questionNumber": "Q1673",
       "title": "QSYS_M2_99 · Security High Throughput & Defense Strategy 99",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150367,8 +143967,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2671",
-      "questionNumber": "Q1804",
+      "id": "t2541",
+      "questionNumber": "Q1674",
       "title": "QSYS_MAX_61 · Security Systems Engineering Concept 61",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150416,8 +144016,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2672",
-      "questionNumber": "Q1805",
+      "id": "t2542",
+      "questionNumber": "Q1675",
       "title": "QSYS_MAX_62 · Security Systems Engineering Concept 62",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150465,8 +144065,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2673",
-      "questionNumber": "Q1806",
+      "id": "t2543",
+      "questionNumber": "Q1676",
       "title": "QSYS_MAX_63 · Security Systems Engineering Concept 63",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150514,8 +144114,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2674",
-      "questionNumber": "Q1807",
+      "id": "t2544",
+      "questionNumber": "Q1677",
       "title": "QSYS_MAX_64 · Security Systems Engineering Concept 64",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150563,8 +144163,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2675",
-      "questionNumber": "Q1808",
+      "id": "t2545",
+      "questionNumber": "Q1678",
       "title": "QSYS_MAX_65 · Security Systems Engineering Concept 65",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150612,8 +144212,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2676",
-      "questionNumber": "Q1809",
+      "id": "t2546",
+      "questionNumber": "Q1679",
       "title": "QSYS_MAX_66 · Security Systems Engineering Concept 66",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150661,8 +144261,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2677",
-      "questionNumber": "Q1810",
+      "id": "t2547",
+      "questionNumber": "Q1680",
       "title": "QSYS_MAX_67 · Security Systems Engineering Concept 67",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150710,8 +144310,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2678",
-      "questionNumber": "Q1811",
+      "id": "t2548",
+      "questionNumber": "Q1681",
       "title": "QSYS_MAX_68 · Security Systems Engineering Concept 68",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150759,8 +144359,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2679",
-      "questionNumber": "Q1812",
+      "id": "t2549",
+      "questionNumber": "Q1682",
       "title": "QSYS_MAX_69 · Security Systems Engineering Concept 69",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150808,8 +144408,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2680",
-      "questionNumber": "Q1813",
+      "id": "t2550",
+      "questionNumber": "Q1683",
       "title": "QSYS_MAX_70 · Security Systems Engineering Concept 70",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -150857,7 +144457,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2681",
+      "id": "t2551",
       "questionNumber": "QSEC010",
       "title": "Subresource Integrity (SRI) Hashing for CDN Assets",
       "difficulty": "Easy",
@@ -150905,7 +144505,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2682",
+      "id": "t2552",
       "questionNumber": "T105",
       "title": "Web Security: XSS, CSRF & Content Security Policy",
       "difficulty": "Hard",
@@ -150958,7 +144558,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2683",
+      "id": "t2553",
       "questionNumber": "T3101",
       "title": "Frontend Security: XSS Prevention, CSRF Mitigation & CSP Headers",
       "difficulty": "Hard",
@@ -151011,7 +144611,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2684",
+      "id": "t2554",
       "questionNumber": "T3103",
       "title": "Cross-Site Scripting (XSS) Mitigation: Reflected, Stored & DOM-Based XSS Prevention",
       "difficulty": "Medium",
@@ -151063,7 +144663,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2685",
+      "id": "t2555",
       "questionNumber": "T3202",
       "title": "Browser Caching: Cache-Control, ETag & Service Worker PWA Strategies",
       "difficulty": "Medium",
@@ -151114,7 +144714,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2686",
+      "id": "t2556",
       "questionNumber": "QPERF020",
       "title": "Code Splitting and Route-Based Dynamic Imports",
       "difficulty": "Medium",
@@ -151163,7 +144763,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2687",
+      "id": "t2557",
       "questionNumber": "T3216",
       "title": "Code Splitting & Dynamic Imports (`import()`) with React Lazy",
       "difficulty": "Medium",
@@ -151202,7 +144802,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2688",
+      "id": "t2558",
       "questionNumber": "QPERF028",
       "title": "Content Visibility Auto for Off-Screen Render Optimization",
       "difficulty": "Easy",
@@ -151250,7 +144850,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2689",
+      "id": "t2559",
       "questionNumber": "T3210",
       "title": "Offscreen Rendering Optimization: `content-visibility: auto` & `contain-intrinsic-size`",
       "difficulty": "Medium",
@@ -151287,7 +144887,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2690",
+      "id": "t2560",
       "questionNumber": "T106",
       "title": "Web Performance: Core Web Vitals & INP Optimization",
       "difficulty": "Medium",
@@ -151340,7 +144940,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2691",
+      "id": "t2561",
       "questionNumber": "QPERF019",
       "title": "Core Web Vitals Optimization: LCP, INP, and CLS",
       "difficulty": "Hard",
@@ -151392,7 +144992,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2692",
+      "id": "t2562",
       "questionNumber": "T3208",
       "title": "Above-the-Fold Optimization: Critical Inline CSS vs Un-blocking External Stylesheets",
       "difficulty": "Medium",
@@ -151442,7 +145042,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2693",
+      "id": "t2563",
       "questionNumber": "QPERF024",
       "title": "Critical CSS Extraction and Above-the-fold Inlining",
       "difficulty": "Medium",
@@ -151491,7 +145091,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2694",
+      "id": "t2564",
       "questionNumber": "T3203",
       "title": "Critical Rendering Path & Resource Hints (`preload`, `prefetch`, `preconnect`)",
       "difficulty": "Medium",
@@ -151542,7 +145142,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2695",
+      "id": "t2565",
       "questionNumber": "T3206",
       "title": "Critical Rendering Path Optimization: `<script async>` vs `<script defer>` vs Dynamic Imports",
       "difficulty": "Medium",
@@ -151593,7 +145193,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2696",
+      "id": "t2566",
       "questionNumber": "T3217",
       "title": "CSS Containment: The `contain` Property for Render Performance",
       "difficulty": "Medium",
@@ -151629,7 +145229,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2697",
+      "id": "t2567",
       "questionNumber": "QPERF025",
       "title": "DOM Node Count Reduction and List Virtualization",
       "difficulty": "Medium",
@@ -151678,7 +145278,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2698",
+      "id": "t2568",
       "questionNumber": "T3209",
       "title": "Web Font Optimization: `font-display: swap` & FOIT vs FOUT",
       "difficulty": "Medium",
@@ -151717,7 +145317,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2699",
+      "id": "t2569",
       "questionNumber": "QPERF023",
       "title": "Font Loading Strategies: FOIT vs FOUT Mitigation",
       "difficulty": "Easy",
@@ -151766,7 +145366,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2700",
+      "id": "t2570",
       "questionNumber": "QPERF021",
       "title": "Image Compression and Modern AVIF and WebP Formatting",
       "difficulty": "Easy",
@@ -151815,7 +145415,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2701",
+      "id": "t2571",
       "questionNumber": "T3212",
       "title": "Modern Image Format & Responsive Loading: AVIF, WebP, `srcset`, and `<picture>`",
       "difficulty": "Medium",
@@ -151854,7 +145454,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2702",
+      "id": "t2572",
       "questionNumber": "T3205",
       "title": "Image & Video Optimization: Native `loading=\"lazy\"`, Responsive `srcset`, and IntersectionObserver",
       "difficulty": "Medium",
@@ -151905,7 +145505,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2703",
+      "id": "t2573",
       "questionNumber": "QPERF027",
       "title": "Long Animation Frame (LoAF) API Diagnostic Workflow",
       "difficulty": "Hard",
@@ -151954,7 +145554,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2704",
+      "id": "t2574",
       "questionNumber": "QPERF026",
       "title": "Main Thread Task Chunking via scheduler yield",
       "difficulty": "Hard",
@@ -152003,7 +145603,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2705",
+      "id": "t2575",
       "questionNumber": "QPERF032",
       "title": "Optimizing Cumulative Layout Shift with Font Metric Overrides",
       "difficulty": "Medium",
@@ -152050,7 +145650,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2706",
+      "id": "t2576",
       "questionNumber": "QPERF035",
       "title": "Optimizing Cumulative Layout Shift with Reserved Dimensions",
       "difficulty": "Easy",
@@ -152095,7 +145695,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2707",
+      "id": "t2577",
       "questionNumber": "QPERF037",
       "title": "Optimizing First Contentful Paint with Critical Resource Hints",
       "difficulty": "Easy",
@@ -152140,7 +145740,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2708",
+      "id": "t2578",
       "questionNumber": "QPERF030",
       "title": "Optimizing First Input Delay and Interaction to Next Paint with Web Workers",
       "difficulty": "Hard",
@@ -152187,7 +145787,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2709",
+      "id": "t2579",
       "questionNumber": "QPERF039",
       "title": "Optimizing First Input Delay with Asynchronous Task Scheduling",
       "difficulty": "Easy",
@@ -152232,7 +145832,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2710",
+      "id": "t2580",
       "questionNumber": "QPERF029",
       "title": "Optimizing Font Display and Font Subsetting",
       "difficulty": "Easy",
@@ -152279,7 +145879,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2711",
+      "id": "t2581",
       "questionNumber": "QPERF033",
       "title": "Optimizing Initial Server Response Time (TTFB) with CDN Edge Caching",
       "difficulty": "Medium",
@@ -152327,7 +145927,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2712",
+      "id": "t2582",
       "questionNumber": "QPERF031",
       "title": "Optimizing JavaScript Memory Allocation Pools for Games and Audio",
       "difficulty": "Hard",
@@ -152375,7 +145975,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2713",
+      "id": "t2583",
       "questionNumber": "QPERF036",
       "title": "Optimizing Largest Contentful Paint with Image Fetchpriority",
       "difficulty": "Easy",
@@ -152420,7 +146020,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2714",
+      "id": "t2584",
       "questionNumber": "QPERF038",
       "title": "Optimizing Layout Shift with Image Dimension Attributes",
       "difficulty": "Easy",
@@ -152465,7 +146065,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2715",
+      "id": "t2585",
       "questionNumber": "QPERF034",
       "title": "Optimizing Main Thread Execution with Idle Tasks (requestIdleCallback)",
       "difficulty": "Medium",
@@ -152512,7 +146112,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2716",
+      "id": "t2586",
       "questionNumber": "QPERF040",
       "title": "Optimizing Main Thread Long Tasks with Scheduler Yield",
       "difficulty": "Medium",
@@ -152558,7 +146158,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2717",
+      "id": "t2587",
       "questionNumber": "QSYS41",
       "title": "Performance Engineering Mechanism 41",
       "difficulty": "Medium",
@@ -152607,7 +146207,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2718",
+      "id": "t2588",
       "questionNumber": "QSYS42",
       "title": "Performance Engineering Mechanism 42",
       "difficulty": "Hard",
@@ -152656,7 +146256,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2719",
+      "id": "t2589",
       "questionNumber": "QSYS43",
       "title": "Performance Engineering Mechanism 43",
       "difficulty": "Medium",
@@ -152705,7 +146305,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2720",
+      "id": "t2590",
       "questionNumber": "QSYS44",
       "title": "Performance Engineering Mechanism 44",
       "difficulty": "Medium",
@@ -152754,7 +146354,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2721",
+      "id": "t2591",
       "questionNumber": "QSYS45",
       "title": "Performance Engineering Mechanism 45",
       "difficulty": "Hard",
@@ -152803,7 +146403,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2722",
+      "id": "t2592",
       "questionNumber": "QSYS46",
       "title": "Performance Engineering Mechanism 46",
       "difficulty": "Medium",
@@ -152852,7 +146452,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2723",
+      "id": "t2593",
       "questionNumber": "QSYS47",
       "title": "Performance Engineering Mechanism 47",
       "difficulty": "Medium",
@@ -152901,7 +146501,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2724",
+      "id": "t2594",
       "questionNumber": "QSYS48",
       "title": "Performance Engineering Mechanism 48",
       "difficulty": "Hard",
@@ -152950,7 +146550,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2725",
+      "id": "t2595",
       "questionNumber": "QSYS49",
       "title": "Performance Engineering Mechanism 49",
       "difficulty": "Medium",
@@ -152999,7 +146599,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2726",
+      "id": "t2596",
       "questionNumber": "QSYS50",
       "title": "Performance Engineering Mechanism 50",
       "difficulty": "Medium",
@@ -153048,8 +146648,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2727",
-      "questionNumber": "Q1860",
+      "id": "t2597",
+      "questionNumber": "Q1730",
       "title": "QSYS_W15_131 · Performance High Availability System Engineering 131",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153097,8 +146697,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2728",
-      "questionNumber": "Q1861",
+      "id": "t2598",
+      "questionNumber": "Q1731",
       "title": "QSYS_W15_132 · Performance High Availability System Engineering 132",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153146,8 +146746,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2729",
-      "questionNumber": "Q1862",
+      "id": "t2599",
+      "questionNumber": "Q1732",
       "title": "QSYS_W15_133 · Performance High Availability System Engineering 133",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153195,8 +146795,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2730",
-      "questionNumber": "Q1863",
+      "id": "t2600",
+      "questionNumber": "Q1733",
       "title": "QSYS_W15_134 · Performance High Availability System Engineering 134",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153244,8 +146844,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2731",
-      "questionNumber": "Q1864",
+      "id": "t2601",
+      "questionNumber": "Q1734",
       "title": "QSYS_W15_135 · Performance High Availability System Engineering 135",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153293,8 +146893,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2732",
-      "questionNumber": "Q1865",
+      "id": "t2602",
+      "questionNumber": "Q1735",
       "title": "QSYS_W15_136 · Performance High Availability System Engineering 136",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153342,8 +146942,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2733",
-      "questionNumber": "Q1866",
+      "id": "t2603",
+      "questionNumber": "Q1736",
       "title": "QSYS_W15_137 · Performance High Availability System Engineering 137",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153391,8 +146991,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2734",
-      "questionNumber": "Q1867",
+      "id": "t2604",
+      "questionNumber": "Q1737",
       "title": "QSYS_W15_138 · Performance High Availability System Engineering 138",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153440,8 +147040,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2735",
-      "questionNumber": "Q1868",
+      "id": "t2605",
+      "questionNumber": "Q1738",
       "title": "QSYS_W15_139 · Performance High Availability System Engineering 139",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153489,8 +147089,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2736",
-      "questionNumber": "Q1869",
+      "id": "t2606",
+      "questionNumber": "Q1739",
       "title": "QSYS_W15_140 · Performance High Availability System Engineering 140",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153538,8 +147138,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2737",
-      "questionNumber": "Q1870",
+      "id": "t2607",
+      "questionNumber": "Q1740",
       "title": "QSYS_M2_101 · Performance High Throughput & Defense Strategy 101",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153587,8 +147187,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2738",
-      "questionNumber": "Q1871",
+      "id": "t2608",
+      "questionNumber": "Q1741",
       "title": "QSYS_M2_102 · Performance High Throughput & Defense Strategy 102",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153636,8 +147236,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2739",
-      "questionNumber": "Q1872",
+      "id": "t2609",
+      "questionNumber": "Q1742",
       "title": "QSYS_M2_103 · Performance High Throughput & Defense Strategy 103",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153685,8 +147285,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2740",
-      "questionNumber": "Q1873",
+      "id": "t2610",
+      "questionNumber": "Q1743",
       "title": "QSYS_M2_104 · Performance High Throughput & Defense Strategy 104",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153734,8 +147334,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2741",
-      "questionNumber": "Q1874",
+      "id": "t2611",
+      "questionNumber": "Q1744",
       "title": "QSYS_M2_105 · Performance High Throughput & Defense Strategy 105",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153783,8 +147383,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2742",
-      "questionNumber": "Q1875",
+      "id": "t2612",
+      "questionNumber": "Q1745",
       "title": "QSYS_M2_106 · Performance High Throughput & Defense Strategy 106",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153832,8 +147432,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2743",
-      "questionNumber": "Q1876",
+      "id": "t2613",
+      "questionNumber": "Q1746",
       "title": "QSYS_M2_107 · Performance High Throughput & Defense Strategy 107",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153881,8 +147481,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2744",
-      "questionNumber": "Q1877",
+      "id": "t2614",
+      "questionNumber": "Q1747",
       "title": "QSYS_M2_108 · Performance High Throughput & Defense Strategy 108",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153930,8 +147530,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2745",
-      "questionNumber": "Q1878",
+      "id": "t2615",
+      "questionNumber": "Q1748",
       "title": "QSYS_M2_109 · Performance High Throughput & Defense Strategy 109",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -153979,8 +147579,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2746",
-      "questionNumber": "Q1879",
+      "id": "t2616",
+      "questionNumber": "Q1749",
       "title": "QSYS_M2_110 · Performance High Throughput & Defense Strategy 110",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154028,8 +147628,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2747",
-      "questionNumber": "Q1880",
+      "id": "t2617",
+      "questionNumber": "Q1750",
       "title": "QSYS_MAX_71 · Performance Systems Engineering Concept 71",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154077,8 +147677,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2748",
-      "questionNumber": "Q1881",
+      "id": "t2618",
+      "questionNumber": "Q1751",
       "title": "QSYS_MAX_72 · Performance Systems Engineering Concept 72",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154126,8 +147726,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2749",
-      "questionNumber": "Q1882",
+      "id": "t2619",
+      "questionNumber": "Q1752",
       "title": "QSYS_MAX_73 · Performance Systems Engineering Concept 73",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154175,8 +147775,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2750",
-      "questionNumber": "Q1883",
+      "id": "t2620",
+      "questionNumber": "Q1753",
       "title": "QSYS_MAX_74 · Performance Systems Engineering Concept 74",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154224,8 +147824,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2751",
-      "questionNumber": "Q1884",
+      "id": "t2621",
+      "questionNumber": "Q1754",
       "title": "QSYS_MAX_75 · Performance Systems Engineering Concept 75",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154273,8 +147873,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2752",
-      "questionNumber": "Q1885",
+      "id": "t2622",
+      "questionNumber": "Q1755",
       "title": "QSYS_MAX_76 · Performance Systems Engineering Concept 76",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154322,8 +147922,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2753",
-      "questionNumber": "Q1886",
+      "id": "t2623",
+      "questionNumber": "Q1756",
       "title": "QSYS_MAX_77 · Performance Systems Engineering Concept 77",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154371,8 +147971,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2754",
-      "questionNumber": "Q1887",
+      "id": "t2624",
+      "questionNumber": "Q1757",
       "title": "QSYS_MAX_78 · Performance Systems Engineering Concept 78",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154420,8 +148020,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2755",
-      "questionNumber": "Q1888",
+      "id": "t2625",
+      "questionNumber": "Q1758",
       "title": "QSYS_MAX_79 · Performance Systems Engineering Concept 79",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154469,8 +148069,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2756",
-      "questionNumber": "Q1889",
+      "id": "t2626",
+      "questionNumber": "Q1759",
       "title": "QSYS_MAX_80 · Performance Systems Engineering Concept 80",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -154518,7 +148118,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2757",
+      "id": "t2627",
       "questionNumber": "T3215",
       "title": "Resource Hints Architecture: `dns-prefetch`, `preconnect`, `preload`, and `prefetch`",
       "difficulty": "Medium",
@@ -154557,7 +148157,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2758",
+      "id": "t2628",
       "questionNumber": "T3207",
       "title": "Service Workers & PWA Offline Caching Strategies: Stale-While-Revalidate vs Cache-First vs Network-First",
       "difficulty": "Hard",
@@ -154607,7 +148207,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2759",
+      "id": "t2629",
       "questionNumber": "QPERF022",
       "title": "Tree Shaking and Dead Code Elimination in Bundlers",
       "difficulty": "Medium",
@@ -154655,7 +148255,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2760",
+      "id": "t2630",
       "questionNumber": "T3213",
       "title": "Tree Shaking & Dead Code Elimination (`sideEffects: false`)",
       "difficulty": "Medium",
@@ -154694,7 +148294,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2761",
+      "id": "t2631",
       "questionNumber": "T3218",
       "title": "Virtual DOM Reconciliation Overhead vs Compiler Signals (Svelte / SolidJS)",
       "difficulty": "Hard",
@@ -154733,7 +148333,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2762",
+      "id": "t2632",
       "questionNumber": "T3214",
       "title": "Core Web Vitals 2024: INP (Interaction to Next Paint), LCP & CLS Optimization",
       "difficulty": "Hard",
@@ -154772,7 +148372,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2763",
+      "id": "t2633",
       "questionNumber": "T3204",
       "title": "Core Web Vitals Optimization: INP (Interaction to Next Paint), LCP & CLS",
       "difficulty": "Hard",
@@ -154824,7 +148424,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2764",
+      "id": "t2634",
       "questionNumber": "T3211",
       "title": "Main Thread Offloading via Web Workers",
       "difficulty": "Medium",
@@ -154863,7 +148463,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2765",
+      "id": "t2635",
       "questionNumber": "QCACHE001",
       "title": "HTTP Caching Headers: Cache-Control, ETag and SWR",
       "difficulty": "Medium",
@@ -154913,7 +148513,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2766",
+      "id": "t2636",
       "questionNumber": "QCACHE002",
       "title": "Service Worker Caching Strategies (Cache First, Network First)",
       "difficulty": "Medium",
@@ -154962,7 +148562,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2767",
+      "id": "t2637",
       "questionNumber": "T3411",
       "title": "CDN Edge Architecture: Geographic PoP Routing & Cache Invalidation",
       "difficulty": "Medium",
@@ -155002,7 +148602,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2768",
+      "id": "t2638",
       "questionNumber": "T3403",
       "title": "CORS Architecture: Preflight Options Requests & Credentials Sharing",
       "difficulty": "Medium",
@@ -155053,7 +148653,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2769",
+      "id": "t2639",
       "questionNumber": "T3409",
       "title": "CORS Architecture: Simple Requests vs Preflight `OPTIONS` Requests",
       "difficulty": "Medium",
@@ -155093,7 +148693,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2770",
+      "id": "t2640",
       "questionNumber": "T3408",
       "title": "DNS Resolution Journey: Browser Cache to Recursive Resolver to Root & Authoritative Nameservers",
       "difficulty": "Medium",
@@ -155144,7 +148744,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2771",
+      "id": "t2641",
       "questionNumber": "T3418",
       "title": "GraphQL DataLoader Pattern & $N+1$ Database Query Resolution",
       "difficulty": "Hard",
@@ -155182,7 +148782,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2772",
+      "id": "t2642",
       "questionNumber": "T3402",
       "title": "GraphQL Architecture vs REST: Queries, Mutations, Schema & Normalized Cache",
       "difficulty": "Medium",
@@ -155234,7 +148834,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2773",
+      "id": "t2643",
       "questionNumber": "T3412",
       "title": "HTTP Caching Headers: `Cache-Control`, `ETag`, `If-None-Match` & `304 Not Modified`",
       "difficulty": "Medium",
@@ -155274,7 +148874,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2774",
+      "id": "t2644",
       "questionNumber": "T3405",
       "title": "Networking Protocol Evolution: HTTP/1.1 Pipelining vs HTTP/2 Multiplexing vs HTTP/3 QUIC",
       "difficulty": "Hard",
@@ -155326,7 +148926,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2775",
+      "id": "t2645",
       "questionNumber": "T3401",
       "title": "HTTP/1.1 vs HTTP/2 vs HTTP/3, WebSockets & Transport Optimization",
       "difficulty": "Medium",
@@ -155380,7 +148980,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2776",
+      "id": "t2646",
       "questionNumber": "T3414",
       "title": "HTTP/2 Multiplexing & Head-of-Line (HOL) Blocking Elimination",
       "difficulty": "Medium",
@@ -155418,7 +149018,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2777",
+      "id": "t2647",
       "questionNumber": "T3415",
       "title": "HTTP/3 QUIC Protocol: UDP Transport & Zero-RTT Connection Migration",
       "difficulty": "Hard",
@@ -155457,7 +149057,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2778",
+      "id": "t2648",
       "questionNumber": "QNET018",
       "title": "Network Waterfall Bottlenecks and HTTP2 Multiplexing",
       "difficulty": "Hard",
@@ -155505,8 +149105,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2779",
-      "questionNumber": "Q1912",
+      "id": "t2649",
+      "questionNumber": "Q1782",
       "title": "QSYS_W15_141 · Networking High Availability System Engineering 141",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155554,8 +149154,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2780",
-      "questionNumber": "Q1913",
+      "id": "t2650",
+      "questionNumber": "Q1783",
       "title": "QSYS_W15_142 · Networking High Availability System Engineering 142",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155603,8 +149203,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2781",
-      "questionNumber": "Q1914",
+      "id": "t2651",
+      "questionNumber": "Q1784",
       "title": "QSYS_W15_143 · Networking High Availability System Engineering 143",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155652,8 +149252,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2782",
-      "questionNumber": "Q1915",
+      "id": "t2652",
+      "questionNumber": "Q1785",
       "title": "QSYS_W15_144 · Networking High Availability System Engineering 144",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155701,8 +149301,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2783",
-      "questionNumber": "Q1916",
+      "id": "t2653",
+      "questionNumber": "Q1786",
       "title": "QSYS_W15_145 · Networking High Availability System Engineering 145",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155750,8 +149350,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2784",
-      "questionNumber": "Q1917",
+      "id": "t2654",
+      "questionNumber": "Q1787",
       "title": "QSYS_W15_146 · Networking High Availability System Engineering 146",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155799,8 +149399,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2785",
-      "questionNumber": "Q1918",
+      "id": "t2655",
+      "questionNumber": "Q1788",
       "title": "QSYS_W15_147 · Networking High Availability System Engineering 147",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155848,8 +149448,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2786",
-      "questionNumber": "Q1919",
+      "id": "t2656",
+      "questionNumber": "Q1789",
       "title": "QSYS_W15_148 · Networking High Availability System Engineering 148",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155897,8 +149497,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2787",
-      "questionNumber": "Q1920",
+      "id": "t2657",
+      "questionNumber": "Q1790",
       "title": "QSYS_W15_149 · Networking High Availability System Engineering 149",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155946,8 +149546,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2788",
-      "questionNumber": "Q1921",
+      "id": "t2658",
+      "questionNumber": "Q1791",
       "title": "QSYS_W15_150 · Networking High Availability System Engineering 150",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -155995,7 +149595,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2789",
+      "id": "t2659",
       "questionNumber": "T3406",
       "title": "API Architecture Design: REST vs GraphQL vs gRPC Protocol Buffers",
       "difficulty": "Hard",
@@ -156048,7 +149648,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2790",
+      "id": "t2660",
       "questionNumber": "T3417",
       "title": "API Architecture Choice: REST vs GraphQL vs gRPC",
       "difficulty": "Medium",
@@ -156087,7 +149687,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2791",
+      "id": "t2661",
       "questionNumber": "T3413",
       "title": "SSE vs WebSockets: Choosing the Right Real-Time Transport Protocol",
       "difficulty": "Medium",
@@ -156127,7 +149727,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2792",
+      "id": "t2662",
       "questionNumber": "T3410",
       "title": "TLS 1.3 Handshake Protocol & 0-RTT Early Data Resumption",
       "difficulty": "Hard",
@@ -156166,7 +149766,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2793",
+      "id": "t2663",
       "questionNumber": "T3416",
       "title": "Web Security Defenses: XSS, CSRF, & Content Security Policy (CSP)",
       "difficulty": "Medium",
@@ -156206,7 +149806,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2794",
+      "id": "t2664",
       "questionNumber": "T3407",
       "title": "Real-Time Communication Protocols: WebSockets vs Server-Sent Events (SSE) vs Long Polling",
       "difficulty": "Medium",
@@ -156258,7 +149858,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2795",
+      "id": "t2665",
       "questionNumber": "QVITE004",
       "title": "Tree Shaking Mechanics in Rollup and Vite",
       "difficulty": "Medium",
@@ -156306,7 +149906,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2796",
+      "id": "t2666",
       "questionNumber": "QVITE003",
       "title": "Vite HMR Architecture and Native ESM Dev Server",
       "difficulty": "Medium",
@@ -156354,7 +149954,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2797",
+      "id": "t2667",
       "questionNumber": "T3502",
       "title": "Vite ESM Dev Server Architecture: HMR Performance vs Webpack Bundling",
       "difficulty": "Medium",
@@ -156405,7 +150005,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2798",
+      "id": "t2668",
       "questionNumber": "T3501",
       "title": "Vite ESM Native Dev Server HMR vs Webpack Bundle Optimization",
       "difficulty": "Medium",
@@ -156460,7 +150060,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2799",
+      "id": "t2669",
       "questionNumber": "QWP001",
       "title": "Webpack Loaders vs Plugins Architectural Roles",
       "difficulty": "Medium",
@@ -156509,7 +150109,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2800",
+      "id": "t2670",
       "questionNumber": "QBABEL001",
       "title": "Babel AST Transformation Pipeline and Custom Plugins",
       "difficulty": "Hard",
@@ -156558,7 +150158,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2801",
+      "id": "t2671",
       "questionNumber": "QPNPM001",
       "title": "Package Managers: npm vs pnpm Content Addressable Store",
       "difficulty": "Easy",
@@ -156607,7 +150207,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2802",
+      "id": "t2672",
       "questionNumber": "QTURBO001",
       "title": "Monorepo Architecture: Turborepo vs Nx Comparison",
       "difficulty": "Medium",
@@ -156656,7 +150256,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2803",
+      "id": "t2673",
       "questionNumber": "QDP006",
       "title": "Builder Pattern for Complex Request Configurations",
       "difficulty": "Medium",
@@ -156704,7 +150304,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2804",
+      "id": "t2674",
       "questionNumber": "QDP007",
       "title": "Chain of Responsibility Pattern for Middleware Handlers",
       "difficulty": "Medium",
@@ -156752,7 +150352,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2805",
+      "id": "t2675",
       "questionNumber": "QDP012",
       "title": "Command Pattern for Undo Redo Action Queues",
       "difficulty": "Medium",
@@ -156801,8 +150401,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2806",
-      "questionNumber": "Q1939",
+      "id": "t2676",
+      "questionNumber": "Q1809",
       "title": "QSD_MAX_67 · Design Patterns Architecture & Design Case 67",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -156849,8 +150449,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2807",
-      "questionNumber": "Q1940",
+      "id": "t2677",
+      "questionNumber": "Q1810",
       "title": "QSD_MAX_68 · Design Patterns Architecture & Design Case 68",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -156897,8 +150497,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2808",
-      "questionNumber": "Q1941",
+      "id": "t2678",
+      "questionNumber": "Q1811",
       "title": "QSD_MAX_69 · Design Patterns Architecture & Design Case 69",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -156945,8 +150545,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2809",
-      "questionNumber": "Q1942",
+      "id": "t2679",
+      "questionNumber": "Q1812",
       "title": "QSD_MAX_70 · Design Patterns Architecture & Design Case 70",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -156993,8 +150593,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2810",
-      "questionNumber": "Q1943",
+      "id": "t2680",
+      "questionNumber": "Q1813",
       "title": "QSD_MAX_71 · Design Patterns Architecture & Design Case 71",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157041,8 +150641,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2811",
-      "questionNumber": "Q1944",
+      "id": "t2681",
+      "questionNumber": "Q1814",
       "title": "QSD_MAX_72 · Design Patterns Architecture & Design Case 72",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157089,8 +150689,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2812",
-      "questionNumber": "Q1945",
+      "id": "t2682",
+      "questionNumber": "Q1815",
       "title": "QSD_MAX_73 · Design Patterns Architecture & Design Case 73",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157137,8 +150737,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2813",
-      "questionNumber": "Q1946",
+      "id": "t2683",
+      "questionNumber": "Q1816",
       "title": "QSD_MAX_74 · Design Patterns Architecture & Design Case 74",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157185,8 +150785,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2814",
-      "questionNumber": "Q1947",
+      "id": "t2684",
+      "questionNumber": "Q1817",
       "title": "QSD_MAX_75 · Design Patterns Architecture & Design Case 75",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157233,8 +150833,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2815",
-      "questionNumber": "Q1948",
+      "id": "t2685",
+      "questionNumber": "Q1818",
       "title": "QSD_MAX_76 · Design Patterns Architecture & Design Case 76",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157281,8 +150881,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2816",
-      "questionNumber": "Q1949",
+      "id": "t2686",
+      "questionNumber": "Q1819",
       "title": "QSD_MAX_77 · Design Patterns Architecture & Design Case 77",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157329,8 +150929,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2817",
-      "questionNumber": "Q1950",
+      "id": "t2687",
+      "questionNumber": "Q1820",
       "title": "QSD_W15_137 · Design Patterns Enterprise System Architecture Case 137",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157377,8 +150977,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2818",
-      "questionNumber": "Q1951",
+      "id": "t2688",
+      "questionNumber": "Q1821",
       "title": "QSD_W15_138 · Design Patterns Enterprise System Architecture Case 138",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157425,8 +151025,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2819",
-      "questionNumber": "Q1952",
+      "id": "t2689",
+      "questionNumber": "Q1822",
       "title": "QSD_W15_139 · Design Patterns Enterprise System Architecture Case 139",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157473,8 +151073,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2820",
-      "questionNumber": "Q1953",
+      "id": "t2690",
+      "questionNumber": "Q1823",
       "title": "QSD_W15_140 · Design Patterns Enterprise System Architecture Case 140",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157521,8 +151121,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2821",
-      "questionNumber": "Q1954",
+      "id": "t2691",
+      "questionNumber": "Q1824",
       "title": "QSD_W15_141 · Design Patterns Enterprise System Architecture Case 141",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157569,8 +151169,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2822",
-      "questionNumber": "Q1955",
+      "id": "t2692",
+      "questionNumber": "Q1825",
       "title": "QSD_W15_142 · Design Patterns Enterprise System Architecture Case 142",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157617,8 +151217,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2823",
-      "questionNumber": "Q1956",
+      "id": "t2693",
+      "questionNumber": "Q1826",
       "title": "QSD_W15_143 · Design Patterns Enterprise System Architecture Case 143",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157665,8 +151265,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2824",
-      "questionNumber": "Q1957",
+      "id": "t2694",
+      "questionNumber": "Q1827",
       "title": "QSD_W15_144 · Design Patterns Enterprise System Architecture Case 144",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157713,8 +151313,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2825",
-      "questionNumber": "Q1958",
+      "id": "t2695",
+      "questionNumber": "Q1828",
       "title": "QSD_W15_145 · Design Patterns Enterprise System Architecture Case 145",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157761,8 +151361,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2826",
-      "questionNumber": "Q1959",
+      "id": "t2696",
+      "questionNumber": "Q1829",
       "title": "QSD_W15_146 · Design Patterns Enterprise System Architecture Case 146",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157809,8 +151409,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2827",
-      "questionNumber": "Q1960",
+      "id": "t2697",
+      "questionNumber": "Q1830",
       "title": "QSD_W15_147 · Design Patterns Enterprise System Architecture Case 147",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157857,8 +151457,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2828",
-      "questionNumber": "Q1961",
+      "id": "t2698",
+      "questionNumber": "Q1831",
       "title": "QSD_W15_148 · Design Patterns Enterprise System Architecture Case 148",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -157905,7 +151505,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2829",
+      "id": "t2699",
       "questionNumber": "QSD32",
       "title": "Design Patterns Large Scale Architecture Problem 32",
       "difficulty": "Medium",
@@ -157954,7 +151554,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2830",
+      "id": "t2700",
       "questionNumber": "QSD33",
       "title": "Design Patterns Large Scale Architecture Problem 33",
       "difficulty": "Hard",
@@ -158003,7 +151603,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2831",
+      "id": "t2701",
       "questionNumber": "QSD34",
       "title": "Design Patterns Large Scale Architecture Problem 34",
       "difficulty": "Medium",
@@ -158052,7 +151652,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2832",
+      "id": "t2702",
       "questionNumber": "QSD35",
       "title": "Design Patterns Large Scale Architecture Problem 35",
       "difficulty": "Medium",
@@ -158101,7 +151701,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2833",
+      "id": "t2703",
       "questionNumber": "QSD36",
       "title": "Design Patterns Large Scale Architecture Problem 36",
       "difficulty": "Hard",
@@ -158150,7 +151750,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2834",
+      "id": "t2704",
       "questionNumber": "QSD37",
       "title": "Design Patterns Large Scale Architecture Problem 37",
       "difficulty": "Medium",
@@ -158199,7 +151799,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2835",
+      "id": "t2705",
       "questionNumber": "QSD38",
       "title": "Design Patterns Large Scale Architecture Problem 38",
       "difficulty": "Medium",
@@ -158248,7 +151848,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2836",
+      "id": "t2706",
       "questionNumber": "QSD39",
       "title": "Design Patterns Large Scale Architecture Problem 39",
       "difficulty": "Hard",
@@ -158297,7 +151897,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2837",
+      "id": "t2707",
       "questionNumber": "QSD40",
       "title": "Design Patterns Large Scale Architecture Problem 40",
       "difficulty": "Medium",
@@ -158346,7 +151946,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2838",
+      "id": "t2708",
       "questionNumber": "QSD41",
       "title": "Design Patterns Large Scale Architecture Problem 41",
       "difficulty": "Medium",
@@ -158395,7 +151995,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2839",
+      "id": "t2709",
       "questionNumber": "QSD42",
       "title": "Design Patterns Large Scale Architecture Problem 42",
       "difficulty": "Hard",
@@ -158444,8 +152044,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2840",
-      "questionNumber": "Q1973",
+      "id": "t2710",
+      "questionNumber": "Q1843",
       "title": "QSD_M2_102 · Design Patterns Production Scale Architecture Case 102",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158492,8 +152092,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2841",
-      "questionNumber": "Q1974",
+      "id": "t2711",
+      "questionNumber": "Q1844",
       "title": "QSD_M2_103 · Design Patterns Production Scale Architecture Case 103",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158540,8 +152140,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2842",
-      "questionNumber": "Q1975",
+      "id": "t2712",
+      "questionNumber": "Q1845",
       "title": "QSD_M2_104 · Design Patterns Production Scale Architecture Case 104",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158588,8 +152188,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2843",
-      "questionNumber": "Q1976",
+      "id": "t2713",
+      "questionNumber": "Q1846",
       "title": "QSD_M2_105 · Design Patterns Production Scale Architecture Case 105",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158636,8 +152236,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2844",
-      "questionNumber": "Q1977",
+      "id": "t2714",
+      "questionNumber": "Q1847",
       "title": "QSD_M2_106 · Design Patterns Production Scale Architecture Case 106",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158684,8 +152284,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2845",
-      "questionNumber": "Q1978",
+      "id": "t2715",
+      "questionNumber": "Q1848",
       "title": "QSD_M2_107 · Design Patterns Production Scale Architecture Case 107",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158732,8 +152332,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2846",
-      "questionNumber": "Q1979",
+      "id": "t2716",
+      "questionNumber": "Q1849",
       "title": "QSD_M2_108 · Design Patterns Production Scale Architecture Case 108",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158780,8 +152380,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2847",
-      "questionNumber": "Q1980",
+      "id": "t2717",
+      "questionNumber": "Q1850",
       "title": "QSD_M2_109 · Design Patterns Production Scale Architecture Case 109",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158828,8 +152428,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2848",
-      "questionNumber": "Q1981",
+      "id": "t2718",
+      "questionNumber": "Q1851",
       "title": "QSD_M2_110 · Design Patterns Production Scale Architecture Case 110",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158876,8 +152476,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2849",
-      "questionNumber": "Q1982",
+      "id": "t2719",
+      "questionNumber": "Q1852",
       "title": "QSD_M2_111 · Design Patterns Production Scale Architecture Case 111",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158924,8 +152524,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2850",
-      "questionNumber": "Q1983",
+      "id": "t2720",
+      "questionNumber": "Q1853",
       "title": "QSD_M2_112 · Design Patterns Production Scale Architecture Case 112",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -158972,7 +152572,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2851",
+      "id": "t2721",
       "questionNumber": "QDP014",
       "title": "Factory Pattern for Dynamic Input Component Creation",
       "difficulty": "Easy",
@@ -159018,7 +152618,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2852",
+      "id": "t2722",
       "questionNumber": "QDP017",
       "title": "Factory Pattern for Dynamic UI Component Generation",
       "difficulty": "Easy",
@@ -159063,7 +152663,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2853",
+      "id": "t2723",
       "questionNumber": "QDP008",
       "title": "Flyweight Pattern for Memory-Efficient Large Datasets",
       "difficulty": "Hard",
@@ -159110,7 +152710,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2854",
+      "id": "t2724",
       "questionNumber": "T4401",
       "title": "Essential Design Patterns in Frontend (Observer, Factory, Singleton, Strategy)",
       "difficulty": "Medium",
@@ -159164,7 +152764,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2855",
+      "id": "t2725",
       "questionNumber": "T4402",
       "title": "Low-Level Design (LLD): Extensible Shopping Cart & Promotion Engine",
       "difficulty": "Hard",
@@ -159216,7 +152816,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2856",
+      "id": "t2726",
       "questionNumber": "QDP010",
       "title": "Mediator Pattern for Complex Component Inter-Communication",
       "difficulty": "Medium",
@@ -159263,7 +152863,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2857",
+      "id": "t2727",
       "questionNumber": "QDP004",
       "title": "Observer Pattern and Event Emitter Architecture",
       "difficulty": "Medium",
@@ -159314,7 +152914,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2858",
+      "id": "t2728",
       "questionNumber": "T4403",
       "title": "Observer Pattern vs Publisher-Subscriber (Pub/Sub) Event Architecture",
       "difficulty": "Medium",
@@ -159365,7 +152965,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2859",
+      "id": "t2729",
       "questionNumber": "QDP015",
       "title": "Observer Pattern for Event Listener Registration",
       "difficulty": "Easy",
@@ -159410,7 +153010,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2860",
+      "id": "t2730",
       "questionNumber": "QDP011",
       "title": "Proxy Pattern for Lazy Initialization and Access Control",
       "difficulty": "Medium",
@@ -159458,7 +153058,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2861",
+      "id": "t2731",
       "questionNumber": "QDP016",
       "title": "Singleton Pattern for App Configuration Manager",
       "difficulty": "Easy",
@@ -159503,7 +153103,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2862",
+      "id": "t2732",
       "questionNumber": "QDP013",
       "title": "Singleton Pattern for Global Config Manager",
       "difficulty": "Easy",
@@ -159548,7 +153148,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2863",
+      "id": "t2733",
       "questionNumber": "QDP009",
       "title": "State Pattern for Complex Multi-Step Form Transitions",
       "difficulty": "Medium",
@@ -159596,7 +153196,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2864",
+      "id": "t2734",
       "questionNumber": "QDP005",
       "title": "Strategy Pattern for Pluggable Form Validation Engines",
       "difficulty": "Medium",
@@ -159644,7 +153244,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2865",
+      "id": "t2735",
       "questionNumber": "QARCH009",
       "title": "Atomic Design Methodology in React Component Libraries",
       "difficulty": "Easy",
@@ -159693,7 +153293,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2866",
+      "id": "t2736",
       "questionNumber": "QARCH006",
       "title": "BFF (Backend-for-Frontend) Architecture for Mobile and Web Clients",
       "difficulty": "Hard",
@@ -159741,7 +153341,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2867",
+      "id": "t2737",
       "questionNumber": "QARCH003",
       "title": "Clean Architecture in Large React Applications",
       "difficulty": "Hard",
@@ -159790,7 +153390,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2868",
+      "id": "t2738",
       "questionNumber": "QARCH005",
       "title": "Design System Token Architecture and Dynamic Themes",
       "difficulty": "Hard",
@@ -159839,7 +153439,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2869",
+      "id": "t2739",
       "questionNumber": "QARCH012",
       "title": "Feature Based Project Folder Structure",
       "difficulty": "Easy",
@@ -159886,7 +153486,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2870",
+      "id": "t2740",
       "questionNumber": "QARCH002",
       "title": "Feature-Sliced Design (FSD) Frontend Architecture",
       "difficulty": "Hard",
@@ -159932,7 +153532,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2871",
+      "id": "t2741",
       "questionNumber": "QARCH014",
       "title": "Layered Architecture in React Applications",
       "difficulty": "Easy",
@@ -159977,7 +153577,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2872",
+      "id": "t2742",
       "questionNumber": "QARCH011",
       "title": "Layered Frontend Application Architecture",
       "difficulty": "Easy",
@@ -160024,7 +153624,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2873",
+      "id": "t2743",
       "questionNumber": "QARCH008",
       "title": "Micro-Frontend Cross-App Event Bus Architecture",
       "difficulty": "Hard",
@@ -160071,7 +153671,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2874",
+      "id": "t2744",
       "questionNumber": "QARCH007",
       "title": "Micro-Frontend Shared Dependency Version Management",
       "difficulty": "Hard",
@@ -160119,7 +153719,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2875",
+      "id": "t2745",
       "questionNumber": "T4702",
       "title": "Micro-Frontends Architecture: Webpack Module Federation, Shared Dependencies & Isolated Deployment",
       "difficulty": "Hard",
@@ -160170,7 +153770,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2876",
+      "id": "t2746",
       "questionNumber": "QARCH015",
       "title": "Modular Frontend Application Architecture",
       "difficulty": "Easy",
@@ -160215,7 +153815,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2877",
+      "id": "t2747",
       "questionNumber": "QARCH010",
       "title": "Monorepo Code Sharing Patterns with Shared UI Libraries",
       "difficulty": "Medium",
@@ -160263,7 +153863,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2878",
+      "id": "t2748",
       "questionNumber": "QARCH013",
       "title": "Single Page Application (SPA) vs Multi-Page Application (MPA) Architecture",
       "difficulty": "Easy",
@@ -160308,7 +153908,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2879",
+      "id": "t2749",
       "questionNumber": "QARCH004",
       "title": "State Management Taxonomy: Global, Server, Form, and URL State",
       "difficulty": "Hard",
@@ -160356,7 +153956,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2880",
+      "id": "t2750",
       "questionNumber": "QMFE001",
       "title": "Micro-Frontend Integration: Web Components vs Iframes vs Federation",
       "difficulty": "Hard",
@@ -160405,7 +154005,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2881",
+      "id": "t2751",
       "questionNumber": "QMF001",
       "title": "Webpack Module Federation for Micro-Frontends",
       "difficulty": "Hard",
@@ -160454,7 +154054,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2882",
+      "id": "t2752",
       "questionNumber": "QTEST009",
       "title": "Code Coverage Metrics: Statement, Branch, Line Coverage",
       "difficulty": "Easy",
@@ -160502,7 +154102,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2883",
+      "id": "t2753",
       "questionNumber": "QTEST005",
       "title": "End-to-End Testing with Playwright and Parallel Execution",
       "difficulty": "Medium",
@@ -160551,7 +154151,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2884",
+      "id": "t2754",
       "questionNumber": "QTEST010",
       "title": "Mocking Module Dependencies with Vitest vi mock",
       "difficulty": "Easy",
@@ -160600,7 +154200,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2885",
+      "id": "t2755",
       "questionNumber": "QTEST006",
       "title": "MSW (Mock Service Worker) API Mocking at Network Layer",
       "difficulty": "Medium",
@@ -160649,7 +154249,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2886",
+      "id": "t2756",
       "questionNumber": "T5001",
       "title": "Integration Testing with React Testing Library (RTL) & Mock Service Worker (MSW)",
       "difficulty": "Medium",
@@ -160703,7 +154303,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2887",
+      "id": "t2757",
       "questionNumber": "QTEST003",
       "title": "React Testing Library Philosophy and Behavioral Testing",
       "difficulty": "Medium",
@@ -160754,7 +154354,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2888",
+      "id": "t2758",
       "questionNumber": "QTEST008",
       "title": "Snapshot Testing Best Practices and Flakiness Pitfalls",
       "difficulty": "Easy",
@@ -160802,8 +154402,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2889",
-      "questionNumber": "Q2022",
+      "id": "t2759",
+      "questionNumber": "Q1892",
       "title": "QBE_W15_113 · Testing Backend Architecture Rule 113",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -160850,8 +154450,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2890",
-      "questionNumber": "Q2023",
+      "id": "t2760",
+      "questionNumber": "Q1893",
       "title": "QBE_W15_114 · Testing Backend Architecture Rule 114",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -160898,8 +154498,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2891",
-      "questionNumber": "Q2024",
+      "id": "t2761",
+      "questionNumber": "Q1894",
       "title": "QBE_W15_115 · Testing Backend Architecture Rule 115",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -160946,8 +154546,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2892",
-      "questionNumber": "Q2025",
+      "id": "t2762",
+      "questionNumber": "Q1895",
       "title": "QBE_W15_116 · Testing Backend Architecture Rule 116",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -160994,8 +154594,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2893",
-      "questionNumber": "Q2026",
+      "id": "t2763",
+      "questionNumber": "Q1896",
       "title": "QBE_W15_117 · Testing Backend Architecture Rule 117",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161042,8 +154642,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2894",
-      "questionNumber": "Q2027",
+      "id": "t2764",
+      "questionNumber": "Q1897",
       "title": "QBE_W15_118 · Testing Backend Architecture Rule 118",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161090,8 +154690,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2895",
-      "questionNumber": "Q2028",
+      "id": "t2765",
+      "questionNumber": "Q1898",
       "title": "QBE_W15_119 · Testing Backend Architecture Rule 119",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161138,8 +154738,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2896",
-      "questionNumber": "Q2029",
+      "id": "t2766",
+      "questionNumber": "Q1899",
       "title": "QBE_W15_120 · Testing Backend Architecture Rule 120",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161186,8 +154786,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2897",
-      "questionNumber": "Q2030",
+      "id": "t2767",
+      "questionNumber": "Q1900",
       "title": "QBE_W15_121 · Testing Backend Architecture Rule 121",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161234,8 +154834,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2898",
-      "questionNumber": "Q2031",
+      "id": "t2768",
+      "questionNumber": "Q1901",
       "title": "QBE_W15_122 · Testing Backend Architecture Rule 122",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161282,7 +154882,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2899",
+      "id": "t2769",
       "questionNumber": "QBE34",
       "title": "Testing Industry Practice 34",
       "difficulty": "Medium",
@@ -161331,7 +154931,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2900",
+      "id": "t2770",
       "questionNumber": "QBE35",
       "title": "Testing Industry Practice 35",
       "difficulty": "Easy",
@@ -161380,7 +154980,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2901",
+      "id": "t2771",
       "questionNumber": "QBE36",
       "title": "Testing Industry Practice 36",
       "difficulty": "Medium",
@@ -161429,7 +155029,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2902",
+      "id": "t2772",
       "questionNumber": "QBE37",
       "title": "Testing Industry Practice 37",
       "difficulty": "Easy",
@@ -161478,7 +155078,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2903",
+      "id": "t2773",
       "questionNumber": "QBE38",
       "title": "Testing Industry Practice 38",
       "difficulty": "Medium",
@@ -161527,7 +155127,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2904",
+      "id": "t2774",
       "questionNumber": "QBE39",
       "title": "Testing Industry Practice 39",
       "difficulty": "Easy",
@@ -161576,7 +155176,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2905",
+      "id": "t2775",
       "questionNumber": "QBE40",
       "title": "Testing Industry Practice 40",
       "difficulty": "Medium",
@@ -161625,7 +155225,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2906",
+      "id": "t2776",
       "questionNumber": "QBE41",
       "title": "Testing Industry Practice 41",
       "difficulty": "Easy",
@@ -161674,7 +155274,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2907",
+      "id": "t2777",
       "questionNumber": "QBE42",
       "title": "Testing Industry Practice 42",
       "difficulty": "Medium",
@@ -161723,8 +155323,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2908",
-      "questionNumber": "Q2041",
+      "id": "t2778",
+      "questionNumber": "Q1911",
       "title": "QBE_MAX_60 · Testing Production Systems Rule 60",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161772,8 +155372,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2909",
-      "questionNumber": "Q2042",
+      "id": "t2779",
+      "questionNumber": "Q1912",
       "title": "QBE_MAX_61 · Testing Production Systems Rule 61",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161821,8 +155421,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2910",
-      "questionNumber": "Q2043",
+      "id": "t2780",
+      "questionNumber": "Q1913",
       "title": "QBE_MAX_62 · Testing Production Systems Rule 62",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161870,8 +155470,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2911",
-      "questionNumber": "Q2044",
+      "id": "t2781",
+      "questionNumber": "Q1914",
       "title": "QBE_MAX_63 · Testing Production Systems Rule 63",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161919,8 +155519,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2912",
-      "questionNumber": "Q2045",
+      "id": "t2782",
+      "questionNumber": "Q1915",
       "title": "QBE_MAX_64 · Testing Production Systems Rule 64",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -161968,8 +155568,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2913",
-      "questionNumber": "Q2046",
+      "id": "t2783",
+      "questionNumber": "Q1916",
       "title": "QBE_MAX_65 · Testing Production Systems Rule 65",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162017,8 +155617,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2914",
-      "questionNumber": "Q2047",
+      "id": "t2784",
+      "questionNumber": "Q1917",
       "title": "QBE_MAX_66 · Testing Production Systems Rule 66",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162066,8 +155666,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2915",
-      "questionNumber": "Q2048",
+      "id": "t2785",
+      "questionNumber": "Q1918",
       "title": "QBE_MAX_67 · Testing Production Systems Rule 67",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162115,8 +155715,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2916",
-      "questionNumber": "Q2049",
+      "id": "t2786",
+      "questionNumber": "Q1919",
       "title": "QBE_M2_85 · Testing Scalable API Pattern 85",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162164,8 +155764,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2917",
-      "questionNumber": "Q2050",
+      "id": "t2787",
+      "questionNumber": "Q1920",
       "title": "QBE_M2_86 · Testing Scalable API Pattern 86",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162213,8 +155813,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2918",
-      "questionNumber": "Q2051",
+      "id": "t2788",
+      "questionNumber": "Q1921",
       "title": "QBE_M2_87 · Testing Scalable API Pattern 87",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162262,8 +155862,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2919",
-      "questionNumber": "Q2052",
+      "id": "t2789",
+      "questionNumber": "Q1922",
       "title": "QBE_M2_88 · Testing Scalable API Pattern 88",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162311,8 +155911,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2920",
-      "questionNumber": "Q2053",
+      "id": "t2790",
+      "questionNumber": "Q1923",
       "title": "QBE_M2_89 · Testing Scalable API Pattern 89",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162360,8 +155960,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2921",
-      "questionNumber": "Q2054",
+      "id": "t2791",
+      "questionNumber": "Q1924",
       "title": "QBE_M2_90 · Testing Scalable API Pattern 90",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162409,8 +156009,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2922",
-      "questionNumber": "Q2055",
+      "id": "t2792",
+      "questionNumber": "Q1925",
       "title": "QBE_M2_91 · Testing Scalable API Pattern 91",
       "difficulty": "Easy",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162458,8 +156058,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2923",
-      "questionNumber": "Q2056",
+      "id": "t2793",
+      "questionNumber": "Q1926",
       "title": "QBE_M2_92 · Testing Scalable API Pattern 92",
       "difficulty": "Medium",
       "experienceLevel": "Mid (2-5 YOE)",
@@ -162507,7 +156107,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2924",
+      "id": "t2794",
       "questionNumber": "QTEST007",
       "title": "Unit Testing Custom React Hooks with renderHook",
       "difficulty": "Easy",
@@ -162556,7 +156156,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2925",
+      "id": "t2795",
       "questionNumber": "T5002",
       "title": "Unit Testing with Vitest vs Jest: Spies, `vi.fn()`, Factory Mocks & Timer Control",
       "difficulty": "Medium",
@@ -162608,7 +156208,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2926",
+      "id": "t2796",
       "questionNumber": "QTEST004",
       "title": "Vitest vs Jest Architecture and ESM Support",
       "difficulty": "Easy",
@@ -162657,7 +156257,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2927",
+      "id": "t2797",
       "questionNumber": "T108",
       "title": "Machine Coding: Virtualized Infinite Scroll Grid",
       "difficulty": "Hard",
@@ -162709,7 +156309,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2928",
+      "id": "t2798",
       "questionNumber": "QFSD017",
       "title": "Design a Client-Side Analytics Tracker with Batching and Retry",
       "difficulty": "Hard",
@@ -162758,7 +156358,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2929",
+      "id": "t2799",
       "questionNumber": "QFSD030",
       "title": "Design a Client-Side Logging and Error Reporting SDK",
       "difficulty": "Hard",
@@ -162806,7 +156406,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2930",
+      "id": "t2800",
       "questionNumber": "QFSD031",
       "title": "Design a Client-Side Session Timeout Warning Component",
       "difficulty": "Medium",
@@ -162853,7 +156453,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2931",
+      "id": "t2801",
       "questionNumber": "QFSD018",
       "title": "Design a Dynamic Form Builder with Schema Validation",
       "difficulty": "Hard",
@@ -162902,7 +156502,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2932",
+      "id": "t2802",
       "questionNumber": "QFSD022",
       "title": "Design a High-Performance Spreadsheet Component",
       "difficulty": "Hard",
@@ -162950,7 +156550,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2933",
+      "id": "t2803",
       "questionNumber": "QFSD020",
       "title": "Design a High-Volume Video Streaming Platform Frontend",
       "difficulty": "Hard",
@@ -162999,7 +156599,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2934",
+      "id": "t2804",
       "questionNumber": "QFSD023",
       "title": "Design a Multi-Tenant Micro-Frontend Shell Architecture",
       "difficulty": "Hard",
@@ -163048,7 +156648,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2935",
+      "id": "t2805",
       "questionNumber": "QFSD027",
       "title": "Design a Real-Time Collaborative Canvas Drawing Tool",
       "difficulty": "Hard",
@@ -163097,7 +156697,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2936",
+      "id": "t2806",
       "questionNumber": "QFSD029",
       "title": "Design a Real-Time Collaborative Cursor and Selection Sync Engine",
       "difficulty": "Hard",
@@ -163145,7 +156745,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2937",
+      "id": "t2807",
       "questionNumber": "QFSD032",
       "title": "Design a Real-Time Collaborative Cursor Synchronizer",
       "difficulty": "Hard",
@@ -163191,7 +156791,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2938",
+      "id": "t2808",
       "questionNumber": "QFSD026",
       "title": "Design a Real-Time Collaborative Cursor Tracking Overlay",
       "difficulty": "Hard",
@@ -163239,7 +156839,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2939",
+      "id": "t2809",
       "questionNumber": "QFSD024",
       "title": "Design a Real-Time Collaborative Form Builder System",
       "difficulty": "Hard",
@@ -163287,7 +156887,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2940",
+      "id": "t2810",
       "questionNumber": "QFSD019",
       "title": "Design a Real-Time Collaborative Whiteboard Application",
       "difficulty": "Hard",
@@ -163337,7 +156937,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2941",
+      "id": "t2811",
       "questionNumber": "QFSD028",
       "title": "Design a Web-based Audio Waveform Visualizer Component",
       "difficulty": "Hard",
@@ -163385,7 +156985,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2942",
+      "id": "t2812",
       "questionNumber": "QFSD025",
       "title": "Design a Web-based Code Editor Component (Monaco / CodeMirror Architecture)",
       "difficulty": "Hard",
@@ -163434,7 +157034,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2943",
+      "id": "t2813",
       "questionNumber": "QFSD021",
       "title": "Design an Embedded Third-Party Customer Chat Widget",
       "difficulty": "Hard",
@@ -163482,7 +157082,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2944",
+      "id": "t2814",
       "questionNumber": "QFSD016",
       "title": "Design an Infinite Scroll Feed with DOM Virtualization",
       "difficulty": "Hard",
@@ -163531,8 +157131,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2945",
-      "questionNumber": "Q2148",
+      "id": "t2815",
+      "questionNumber": "Q2018",
       "title": "QSD_MAX_100 · Frontend System Design Architecture & Design Case 100",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163579,8 +157179,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2946",
-      "questionNumber": "Q2149",
+      "id": "t2816",
+      "questionNumber": "Q2019",
       "title": "QSD_MAX_101 · Frontend System Design Architecture & Design Case 101",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163627,8 +157227,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2947",
-      "questionNumber": "Q2150",
+      "id": "t2817",
+      "questionNumber": "Q2020",
       "title": "QSD_MAX_90 · Frontend System Design Architecture & Design Case 90",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163675,8 +157275,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2948",
-      "questionNumber": "Q2151",
+      "id": "t2818",
+      "questionNumber": "Q2021",
       "title": "QSD_MAX_91 · Frontend System Design Architecture & Design Case 91",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163723,8 +157323,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2949",
-      "questionNumber": "Q2152",
+      "id": "t2819",
+      "questionNumber": "Q2022",
       "title": "QSD_MAX_92 · Frontend System Design Architecture & Design Case 92",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163771,8 +157371,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2950",
-      "questionNumber": "Q2153",
+      "id": "t2820",
+      "questionNumber": "Q2023",
       "title": "QSD_MAX_93 · Frontend System Design Architecture & Design Case 93",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163819,8 +157419,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2951",
-      "questionNumber": "Q2154",
+      "id": "t2821",
+      "questionNumber": "Q2024",
       "title": "QSD_MAX_94 · Frontend System Design Architecture & Design Case 94",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163867,8 +157467,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2952",
-      "questionNumber": "Q2155",
+      "id": "t2822",
+      "questionNumber": "Q2025",
       "title": "QSD_MAX_95 · Frontend System Design Architecture & Design Case 95",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163915,8 +157515,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2953",
-      "questionNumber": "Q2156",
+      "id": "t2823",
+      "questionNumber": "Q2026",
       "title": "QSD_MAX_96 · Frontend System Design Architecture & Design Case 96",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -163963,8 +157563,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2954",
-      "questionNumber": "Q2157",
+      "id": "t2824",
+      "questionNumber": "Q2027",
       "title": "QSD_MAX_97 · Frontend System Design Architecture & Design Case 97",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164011,8 +157611,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2955",
-      "questionNumber": "Q2158",
+      "id": "t2825",
+      "questionNumber": "Q2028",
       "title": "QSD_MAX_98 · Frontend System Design Architecture & Design Case 98",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164059,8 +157659,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2956",
-      "questionNumber": "Q2159",
+      "id": "t2826",
+      "questionNumber": "Q2029",
       "title": "QSD_MAX_99 · Frontend System Design Architecture & Design Case 99",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164107,8 +157707,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2957",
-      "questionNumber": "Q2160",
+      "id": "t2827",
+      "questionNumber": "Q2030",
       "title": "QSD_W15_161 · Frontend System Design Enterprise System Architecture Case 161",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164155,8 +157755,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2958",
-      "questionNumber": "Q2161",
+      "id": "t2828",
+      "questionNumber": "Q2031",
       "title": "QSD_W15_162 · Frontend System Design Enterprise System Architecture Case 162",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164203,8 +157803,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2959",
-      "questionNumber": "Q2162",
+      "id": "t2829",
+      "questionNumber": "Q2032",
       "title": "QSD_W15_163 · Frontend System Design Enterprise System Architecture Case 163",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164251,8 +157851,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2960",
-      "questionNumber": "Q2163",
+      "id": "t2830",
+      "questionNumber": "Q2033",
       "title": "QSD_W15_164 · Frontend System Design Enterprise System Architecture Case 164",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164299,8 +157899,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2961",
-      "questionNumber": "Q2164",
+      "id": "t2831",
+      "questionNumber": "Q2034",
       "title": "QSD_W15_165 · Frontend System Design Enterprise System Architecture Case 165",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164347,8 +157947,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2962",
-      "questionNumber": "Q2165",
+      "id": "t2832",
+      "questionNumber": "Q2035",
       "title": "QSD_W15_166 · Frontend System Design Enterprise System Architecture Case 166",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164395,8 +157995,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2963",
-      "questionNumber": "Q2166",
+      "id": "t2833",
+      "questionNumber": "Q2036",
       "title": "QSD_W15_167 · Frontend System Design Enterprise System Architecture Case 167",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164443,8 +158043,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2964",
-      "questionNumber": "Q2167",
+      "id": "t2834",
+      "questionNumber": "Q2037",
       "title": "QSD_W15_168 · Frontend System Design Enterprise System Architecture Case 168",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164491,8 +158091,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2965",
-      "questionNumber": "Q2168",
+      "id": "t2835",
+      "questionNumber": "Q2038",
       "title": "QSD_W15_169 · Frontend System Design Enterprise System Architecture Case 169",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164539,8 +158139,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2966",
-      "questionNumber": "Q2169",
+      "id": "t2836",
+      "questionNumber": "Q2039",
       "title": "QSD_W15_170 · Frontend System Design Enterprise System Architecture Case 170",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164587,8 +158187,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2967",
-      "questionNumber": "Q2170",
+      "id": "t2837",
+      "questionNumber": "Q2040",
       "title": "QSD_W15_171 · Frontend System Design Enterprise System Architecture Case 171",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164635,8 +158235,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2968",
-      "questionNumber": "Q2171",
+      "id": "t2838",
+      "questionNumber": "Q2041",
       "title": "QSD_W15_172 · Frontend System Design Enterprise System Architecture Case 172",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164683,8 +158283,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2969",
-      "questionNumber": "Q2172",
+      "id": "t2839",
+      "questionNumber": "Q2042",
       "title": "QSD_W15_173 · Frontend System Design Enterprise System Architecture Case 173",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164731,8 +158331,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2970",
-      "questionNumber": "Q2173",
+      "id": "t2840",
+      "questionNumber": "Q2043",
       "title": "QSD_W15_174 · Frontend System Design Enterprise System Architecture Case 174",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164779,8 +158379,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2971",
-      "questionNumber": "Q2174",
+      "id": "t2841",
+      "questionNumber": "Q2044",
       "title": "QSD_W15_175 · Frontend System Design Enterprise System Architecture Case 175",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164827,8 +158427,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2972",
-      "questionNumber": "Q2175",
+      "id": "t2842",
+      "questionNumber": "Q2045",
       "title": "QSD_W15_176 · Frontend System Design Enterprise System Architecture Case 176",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -164875,7 +158475,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2973",
+      "id": "t2843",
       "questionNumber": "QSD56",
       "title": "Frontend System Design Large Scale Architecture Problem 56",
       "difficulty": "Medium",
@@ -164924,7 +158524,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2974",
+      "id": "t2844",
       "questionNumber": "QSD57",
       "title": "Frontend System Design Large Scale Architecture Problem 57",
       "difficulty": "Hard",
@@ -164973,7 +158573,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2975",
+      "id": "t2845",
       "questionNumber": "QSD58",
       "title": "Frontend System Design Large Scale Architecture Problem 58",
       "difficulty": "Medium",
@@ -165022,7 +158622,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2976",
+      "id": "t2846",
       "questionNumber": "QSD59",
       "title": "Frontend System Design Large Scale Architecture Problem 59",
       "difficulty": "Medium",
@@ -165071,7 +158671,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2977",
+      "id": "t2847",
       "questionNumber": "QSD60",
       "title": "Frontend System Design Large Scale Architecture Problem 60",
       "difficulty": "Hard",
@@ -165120,7 +158720,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2978",
+      "id": "t2848",
       "questionNumber": "QSD61",
       "title": "Frontend System Design Large Scale Architecture Problem 61",
       "difficulty": "Medium",
@@ -165169,7 +158769,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2979",
+      "id": "t2849",
       "questionNumber": "QSD62",
       "title": "Frontend System Design Large Scale Architecture Problem 62",
       "difficulty": "Medium",
@@ -165218,7 +158818,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2980",
+      "id": "t2850",
       "questionNumber": "QSD63",
       "title": "Frontend System Design Large Scale Architecture Problem 63",
       "difficulty": "Hard",
@@ -165267,7 +158867,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2981",
+      "id": "t2851",
       "questionNumber": "QSD64",
       "title": "Frontend System Design Large Scale Architecture Problem 64",
       "difficulty": "Medium",
@@ -165316,7 +158916,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2982",
+      "id": "t2852",
       "questionNumber": "QSD65",
       "title": "Frontend System Design Large Scale Architecture Problem 65",
       "difficulty": "Medium",
@@ -165365,7 +158965,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2983",
+      "id": "t2853",
       "questionNumber": "QSD66",
       "title": "Frontend System Design Large Scale Architecture Problem 66",
       "difficulty": "Hard",
@@ -165414,8 +159014,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2984",
-      "questionNumber": "Q2187",
+      "id": "t2854",
+      "questionNumber": "Q2057",
       "title": "QSD_M2_125 · Frontend System Design Production Scale Architecture Case 125",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165462,8 +159062,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2985",
-      "questionNumber": "Q2188",
+      "id": "t2855",
+      "questionNumber": "Q2058",
       "title": "QSD_M2_126 · Frontend System Design Production Scale Architecture Case 126",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165510,8 +159110,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2986",
-      "questionNumber": "Q2189",
+      "id": "t2856",
+      "questionNumber": "Q2059",
       "title": "QSD_M2_127 · Frontend System Design Production Scale Architecture Case 127",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165558,8 +159158,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2987",
-      "questionNumber": "Q2190",
+      "id": "t2857",
+      "questionNumber": "Q2060",
       "title": "QSD_M2_128 · Frontend System Design Production Scale Architecture Case 128",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165606,8 +159206,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2988",
-      "questionNumber": "Q2191",
+      "id": "t2858",
+      "questionNumber": "Q2061",
       "title": "QSD_M2_129 · Frontend System Design Production Scale Architecture Case 129",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165654,8 +159254,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2989",
-      "questionNumber": "Q2192",
+      "id": "t2859",
+      "questionNumber": "Q2062",
       "title": "QSD_M2_130 · Frontend System Design Production Scale Architecture Case 130",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165702,8 +159302,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2990",
-      "questionNumber": "Q2193",
+      "id": "t2860",
+      "questionNumber": "Q2063",
       "title": "QSD_M2_131 · Frontend System Design Production Scale Architecture Case 131",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165750,8 +159350,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2991",
-      "questionNumber": "Q2194",
+      "id": "t2861",
+      "questionNumber": "Q2064",
       "title": "QSD_M2_132 · Frontend System Design Production Scale Architecture Case 132",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165798,8 +159398,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2992",
-      "questionNumber": "Q2195",
+      "id": "t2862",
+      "questionNumber": "Q2065",
       "title": "QSD_M2_133 · Frontend System Design Production Scale Architecture Case 133",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165846,8 +159446,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2993",
-      "questionNumber": "Q2196",
+      "id": "t2863",
+      "questionNumber": "Q2066",
       "title": "QSD_M2_134 · Frontend System Design Production Scale Architecture Case 134",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165894,8 +159494,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2994",
-      "questionNumber": "Q2197",
+      "id": "t2864",
+      "questionNumber": "Q2067",
       "title": "QSD_M2_135 · Frontend System Design Production Scale Architecture Case 135",
       "difficulty": "Hard",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165942,8 +159542,8 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2995",
-      "questionNumber": "Q2198",
+      "id": "t2865",
+      "questionNumber": "Q2068",
       "title": "QSD_M2_136 · Frontend System Design Production Scale Architecture Case 136",
       "difficulty": "Medium",
       "experienceLevel": "Senior (5-7 YOE)",
@@ -165990,7 +159590,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2996",
+      "id": "t2866",
       "questionNumber": "T6002",
       "title": "High-Level Design (HLD): Realtime Collaborative Document Editor (CRDT vs OT)",
       "difficulty": "Hard",
@@ -166043,7 +159643,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2997",
+      "id": "t2867",
       "questionNumber": "T6013",
       "title": "High-Level System Design: Micro-Frontends Architecture (Webpack Module Federation / Single-SPA)",
       "difficulty": "Hard",
@@ -166083,7 +159683,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2998",
+      "id": "t2868",
       "questionNumber": "T6018",
       "title": "High-Level System Design: Offline-First Progressive Web App (PWA Note App)",
       "difficulty": "Hard",
@@ -166123,7 +159723,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t2999",
+      "id": "t2869",
       "questionNumber": "T6009",
       "title": "High-Level System Design: Real-Time Chat Application Architecture (Slack / Teams)",
       "difficulty": "Hard",
@@ -166163,7 +159763,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3000",
+      "id": "t2870",
       "questionNumber": "T6015",
       "title": "High-Level System Design: Real-Time Collaborative Document Editor (Google Docs / Notion)",
       "difficulty": "Hard",
@@ -166203,7 +159803,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3001",
+      "id": "t2871",
       "questionNumber": "T6003",
       "title": "High-Level System Design: Real-Time Notification System (WebSockets vs SSE vs Push Notifications)",
       "difficulty": "Hard",
@@ -166256,7 +159856,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3002",
+      "id": "t2872",
       "questionNumber": "T6008",
       "title": "High-Level System Design: Scalable Frontend Analytics Tracking SDK & Event Batching",
       "difficulty": "Hard",
@@ -166308,7 +159908,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3003",
+      "id": "t2873",
       "questionNumber": "T6007",
       "title": "High-Level System Design: Scalable Enterprise Design System & Component Library Architecture",
       "difficulty": "Hard",
@@ -166361,7 +159961,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3004",
+      "id": "t2874",
       "questionNumber": "T6016",
       "title": "High-Level System Design: Enterprise Design System Component Library",
       "difficulty": "Hard",
@@ -166401,7 +160001,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3005",
+      "id": "t2875",
       "questionNumber": "T6010",
       "title": "High-Level System Design: Scalable E-Commerce Checkout Funnel & Payment State Machine",
       "difficulty": "Hard",
@@ -166441,7 +160041,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3006",
+      "id": "t2876",
       "questionNumber": "T6012",
       "title": "High-Level System Design: Scalable Client-Side Image Processing & Upload Pipeline",
       "difficulty": "Hard",
@@ -166481,7 +160081,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3007",
+      "id": "t2877",
       "questionNumber": "T6014",
       "title": "High-Level System Design: Video Streaming Platform (YouTube / Netflix)",
       "difficulty": "Hard",
@@ -166521,7 +160121,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3008",
+      "id": "t2878",
       "questionNumber": "T6011",
       "title": "High-Level System Design: Scalable Social Media News Feed (Meta / Twitter)",
       "difficulty": "Hard",
@@ -166560,7 +160160,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3009",
+      "id": "t2879",
       "questionNumber": "T6017",
       "title": "High-Level System Design: Scalable Web Analytics & Event Tracking SDK",
       "difficulty": "Hard",
@@ -166600,7 +160200,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3010",
+      "id": "t2880",
       "questionNumber": "T107",
       "title": "Frontend System Design: Realtime Chat & WebSockets",
       "difficulty": "Hard",
@@ -166653,7 +160253,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3011",
+      "id": "t2881",
       "questionNumber": "T7702",
       "title": "Behavioral Interview: Navigating Engineering Conflicts & Managing Cross-Functional Stakeholders",
       "difficulty": "Medium",
@@ -166704,7 +160304,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3012",
+      "id": "t2882",
       "questionNumber": "T7701",
       "title": "STAR Method for Technical Leadership & Handling Ambiguity",
       "difficulty": "Medium",
@@ -166758,7 +160358,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3013",
+      "id": "t2883",
       "questionNumber": "T7901",
       "title": "Full Senior Frontend Mock Interview Script & Scoring Rubric",
       "difficulty": "Hard",
@@ -166809,7 +160409,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3014",
+      "id": "t2884",
       "questionNumber": "T8101",
       "title": "HR Recruiter Round: Elevator Pitch, Leveling Calibration & Negotiation",
       "difficulty": "Easy",
@@ -166858,7 +160458,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3015",
+      "id": "t2885",
       "questionNumber": "T8302",
       "title": "High-Frequency DSA Patterns Cheat Sheet: Two Pointers, Sliding Window, Fast/Slow, Subsets & Topological Sort",
       "difficulty": "Medium",
@@ -166903,7 +160503,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3016",
+      "id": "t2886",
       "questionNumber": "T8301",
       "title": "Frontend System Design & Architecture One-Page Cheat Sheet",
       "difficulty": "Medium",
@@ -166954,7 +160554,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3017",
+      "id": "t2887",
       "questionNumber": "T8510",
       "title": "Airbnb Frontend Technical Interview Playbook: Design Systems, Date Pickers & Accessibility",
       "difficulty": "Hard",
@@ -166991,7 +160591,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3018",
+      "id": "t2888",
       "questionNumber": "T8514",
       "title": "Amazon Frontend Technical Interview Playbook: Leadership Principles, E-Commerce & Micro-Frontends",
       "difficulty": "Hard",
@@ -167027,7 +160627,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3019",
+      "id": "t2889",
       "questionNumber": "T8516",
       "title": "Apple Frontend Technical Interview Playbook: UI Animation, WebGPU & Pixel-Perfect Design",
       "difficulty": "Hard",
@@ -167064,7 +160664,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3020",
+      "id": "t2890",
       "questionNumber": "T8501",
       "title": "FAANG Frontend Interview Playbook: Google vs Meta vs Amazon Rubrics",
       "difficulty": "Hard",
@@ -167118,7 +160718,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3021",
+      "id": "t2891",
       "questionNumber": "T8512",
       "title": "Google Frontend Technical Interview Playbook: JavaScript Internals, Web Vitals & System Design",
       "difficulty": "Hard",
@@ -167154,7 +160754,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3022",
+      "id": "t2892",
       "questionNumber": "T8511",
       "title": "LinkedIn Frontend Technical Interview Playbook: Feed Architecture, Accessibility & Performance",
       "difficulty": "Hard",
@@ -167190,7 +160790,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3023",
+      "id": "t2893",
       "questionNumber": "T8513",
       "title": "Meta Frontend Technical Interview Playbook: Machine Coding, React Fiber & Large-Scale Design",
       "difficulty": "Hard",
@@ -167226,7 +160826,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3024",
+      "id": "t2894",
       "questionNumber": "T8515",
       "title": "Microsoft Frontend Technical Interview Playbook: TypeScript Architecture, Accessibility & Office Web",
       "difficulty": "Hard",
@@ -167263,7 +160863,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3025",
+      "id": "t2895",
       "questionNumber": "T8507",
       "title": "Netflix Frontend Technical Interview Playbook: Streaming Systems, TV UI & Performance",
       "difficulty": "Hard",
@@ -167299,7 +160899,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3026",
+      "id": "t2896",
       "questionNumber": "T8509",
       "title": "Stripe Frontend Technical Interview Playbook: API Design, Embedded Components & Security",
       "difficulty": "Hard",
@@ -167336,7 +160936,7 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   },
   {
     "detail": {
-      "id": "t3027",
+      "id": "t2897",
       "questionNumber": "T8508",
       "title": "Uber Frontend Technical Interview Playbook: WebGL Mapping, Real-Time WebSockets & System Design",
       "difficulty": "Hard",

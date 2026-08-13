@@ -1,5 +1,5 @@
-Sync report — 2026-08-07T11:56:21.999Z
-9640 gaps across 3000 files
+Sync report — 2026-08-07T12:23:34.999Z
+9640 gaps across 2870 files
 
 01-programming-fundamentals/floating-point-precision-and-ieee-754-representation.md: no Constraints found, used generic fallback
 01-programming-fundamentals/floating-point-precision-and-ieee-754-representation.md: no Examples found

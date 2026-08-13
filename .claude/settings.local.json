@@ -73,7 +73,21 @@
       "Bash(pkill -9 -f \"vitest.mjs run\")",
       "Bash(pkill -9 -f \"npm exec vitest\")",
       "Bash(xargs cat)",
-      "Bash(grep -rlE \"^- Advanced .* Architecture$\" --include=\"*.md\" .)"
+      "Bash(grep -rlE \"^- Advanced .* Architecture$\" --include=\"*.md\" .)",
+      "Bash(grep -E \"\\(topic-[0-9]+|specification-[0-9]+|pattern-[0-9]+|semantics-[0-9]+\\)\\\\.md$\")",
+      "Bash(grep -E \"\\(topic-[0-9]+|specification-[0-9]+|pattern-[0-9]+|semantics-[0-9]+|architecture-[0-9]+|-[0-9]{2,4}\\)\\\\.md$\")",
+      "Bash(:)",
+      "Bash(sed 's/.*\\\\///' /tmp/claude-1000/-mnt-c-Users-PTPL0267-Desktop-Example-interview-prep-master/082f9b14-cf91-427f-9095-307ed9c848c7/scratchpad/junk_files_02_03.txt)",
+      "Bash(grep -rlFf /tmp/claude-1000/-mnt-c-Users-PTPL0267-Desktop-Example-interview-prep-master/082f9b14-cf91-427f-9095-307ed9c848c7/scratchpad/junk_basenames.txt --include=\"*.md\" --include=\"*.ts\" --exclude-dir=node_modules .)",
+      "Bash(grep -v -Ff /tmp/claude-1000/-mnt-c-Users-PTPL0267-Desktop-Example-interview-prep-master/082f9b14-cf91-427f-9095-307ed9c848c7/scratchpad/junk_files_02_03.txt)",
+      "Bash(xargs rm -v)",
+      "Bash(tee /tmp/claude-1000/-mnt-c-Users-PTPL0267-Desktop-Example-interview-prep-master/082f9b14-cf91-427f-9095-307ed9c848c7/scratchpad/placeholder_61.txt)",
+      "Bash(sort -t'C' -k2 -n)",
+      "Bash(rm -rf [0-9][0-9]-*)",
+      "Bash(rm -f ADMIN_GUIDE.md API_GUIDE.md ARCHITECTURE.md BACKLOG-JS.md CHECKLIST.md DATABASE.md INTERVIEWHUB_CONTENT_SPECIFICATION.md PRD.md PROGRESS.md PROMPTS.md QUESTION_TEMPLATE.md ROADMAP.md STYLE_GUIDE.md TECHNICAL_QUESTION_TEMPLATE.md TEMPLATE.md UI_UX_GUIDE.md CONTRIBUTING.md)",
+      "Bash(rm -rf docs scripts _salvage)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
