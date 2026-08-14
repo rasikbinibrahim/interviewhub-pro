@@ -87,7 +87,22 @@
       "Bash(rm -f ADMIN_GUIDE.md API_GUIDE.md ARCHITECTURE.md BACKLOG-JS.md CHECKLIST.md DATABASE.md INTERVIEWHUB_CONTENT_SPECIFICATION.md PRD.md PROGRESS.md PROMPTS.md QUESTION_TEMPLATE.md ROADMAP.md STYLE_GUIDE.md TECHNICAL_QUESTION_TEMPLATE.md TEMPLATE.md UI_UX_GUIDE.md CONTRIBUTING.md)",
       "Bash(rm -rf docs scripts _salvage)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git ls-tree *)",
+      "Bash(awk '/\"category\": \"html\"/{print NR}' frontend/src/mocks/questions.ts)",
+      "Bash(awk '/\"category\": \"html\"/{c++; if\\(c<=50\\) print NR}' frontend/src/mocks/questions.ts)",
+      "Bash(grep -o '```' /mnt/c/Users/PTPL0267/Desktop/Example/interview-prep-master/.claude/worktrees/clear-content-keep-frontend/frontend/document/Part_1_HTML_Master_Handbook.md)",
+      "Bash(grep *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(awk '{print $1}')",
+      "Bash(awk -F'–' '{print $1}')",
+      "Bash(sort -t' ' -k2 -n -u)",
+      "Bash(timeout 570 git stash apply stash@{0})",
+      "Bash(git checkout *)",
+      "Bash(git stash *)",
+      "Bash(awk '/^## Question 1 /{f=1} f && /^## Question 2 /{exit} f' Part_13_Frontend_Machine_Coding_Master_Handbook.md)",
+      "Bash(awk '/^## Question 1 /{f=1} f && /^## Question 2 /{exit} f' Part_14_Frontend_System_Design_Master_Handbook.md)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }
