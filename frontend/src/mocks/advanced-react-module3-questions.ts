@@ -383,6 +383,7 @@ export const MOCK_ADVANCED_REACT_MODULE3_TECHNICAL_QUESTIONS: MockTechnicalQuest
     companies: seed.companies,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Advanced React',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

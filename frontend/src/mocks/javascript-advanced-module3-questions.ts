@@ -26,6 +26,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -127,6 +128,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -228,6 +230,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -329,6 +332,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -430,6 +434,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -531,6 +536,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -632,6 +638,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -733,6 +740,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -834,6 +842,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -935,6 +944,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1036,6 +1046,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1137,6 +1148,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1238,6 +1250,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1339,6 +1352,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1440,6 +1454,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1541,6 +1556,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1642,6 +1658,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1743,6 +1760,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1844,6 +1862,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",
@@ -1945,6 +1964,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Hoisting",
+      "part": "Advanced JS",
       "concepts": [
         "Hoisting",
         "var",

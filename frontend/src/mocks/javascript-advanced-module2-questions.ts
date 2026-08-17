@@ -26,6 +26,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -130,6 +131,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -234,6 +236,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -338,6 +341,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -442,6 +446,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -546,6 +551,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -650,6 +656,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -754,6 +761,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -858,6 +866,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -962,6 +971,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1066,6 +1076,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1170,6 +1181,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1274,6 +1286,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1378,6 +1391,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1482,6 +1496,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1586,6 +1601,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1690,6 +1706,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1794,6 +1811,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -1898,6 +1916,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2002,6 +2021,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2106,6 +2126,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2210,6 +2231,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2314,6 +2336,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2418,6 +2441,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2522,6 +2546,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2626,6 +2651,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2730,6 +2756,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2834,6 +2861,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -2938,6 +2966,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3042,6 +3071,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3146,6 +3176,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3250,6 +3281,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3354,6 +3386,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3458,6 +3491,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3562,6 +3596,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3666,6 +3701,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3770,6 +3806,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3874,6 +3911,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -3978,6 +4016,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4082,6 +4121,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4186,6 +4226,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4290,6 +4331,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4394,6 +4436,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4498,6 +4541,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4602,6 +4646,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4706,6 +4751,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4810,6 +4856,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -4914,6 +4961,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5018,6 +5066,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5122,6 +5171,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5226,6 +5276,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5330,6 +5381,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5434,6 +5486,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5538,6 +5591,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5642,6 +5696,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5746,6 +5801,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5850,6 +5906,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -5954,6 +6011,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6058,6 +6116,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6162,6 +6221,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6266,6 +6326,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6370,6 +6431,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6474,6 +6536,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6578,6 +6641,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6682,6 +6746,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6786,6 +6851,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6890,6 +6956,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -6994,6 +7061,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7098,6 +7166,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7202,6 +7271,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7306,6 +7376,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7410,6 +7481,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7514,6 +7586,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7618,6 +7691,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7722,6 +7796,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7826,6 +7901,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -7930,6 +8006,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -8034,6 +8111,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -8138,6 +8216,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",
@@ -8242,6 +8321,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Scope & Lexical Environment",
+      "part": "Advanced JS",
       "concepts": [
         "Scope",
         "Lexical scope",

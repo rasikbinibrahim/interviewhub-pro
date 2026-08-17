@@ -392,6 +392,7 @@ export const MOCK_FRONTEND_TESTING_QA_MODULE20_TECHNICAL_QUESTIONS: MockTechnica
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Testing',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

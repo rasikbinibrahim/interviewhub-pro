@@ -1,12 +1,12 @@
 import { useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useGetQuestionsQuery } from '@/store/api/questionsApi';
+import { useGetQuestionsQuery, matchCategory, matchPart } from '@/store/api/questionsApi';
 import { useAppSelector } from '@/shared/hooks/redux';
 import { selectSolvedIds, selectBookmarkedIds } from '@/shared/selectors/progressSelectors';
 import { Button } from '@/components/ui/Button';
 import { QuestionListItem } from './QuestionListItem';
-import type { Difficulty, QuestionSummary, QuestionType } from '@/shared/types/question';
+import type { Difficulty, QuestionPart, QuestionSummary, QuestionType } from '@/shared/types/question';
 
 // Every filter + the current page lives in the URL (via useSearchParams)
 // rather than local component state. /practice and /practice/:questionId
@@ -27,6 +27,30 @@ const QUESTION_TYPE_OPTIONS: Array<{ label: string; value: QuestionType | 'All' 
   { label: 'All Types', value: 'All' },
   { label: 'Coding Practice', value: 'coding' },
   { label: 'Technical Concepts', value: 'technical' },
+];
+// The 18-part top-level curriculum track — coarser than CATEGORY_OPTIONS
+// below, which is the finer-grained per-topic breakdown within a part.
+const PART_OPTIONS: Array<{ label: string; value: QuestionPart | 'All' }> = [
+  { label: 'All Parts', value: 'All' },
+  { label: 'HTML', value: 'HTML' },
+  { label: 'CSS', value: 'CSS' },
+  { label: 'JS Fundamentals', value: 'JS Fundamentals' },
+  { label: 'Advanced JS', value: 'Advanced JS' },
+  { label: 'JS Output', value: 'JS Output' },
+  { label: 'Browser/Web APIs', value: 'Browser/Web APIs' },
+  { label: 'TypeScript', value: 'TypeScript' },
+  { label: 'React Fundamentals', value: 'React Fundamentals' },
+  { label: 'Advanced React', value: 'Advanced React' },
+  { label: 'Redux/State', value: 'Redux/State' },
+  { label: 'Performance', value: 'Performance' },
+  { label: 'Security', value: 'Security' },
+  { label: 'Machine Coding', value: 'Machine Coding' },
+  { label: 'System Design', value: 'System Design' },
+  { label: 'DSA', value: 'DSA' },
+  { label: 'Testing', value: 'Testing' },
+  { label: 'Architecture', value: 'Architecture' },
+  { label: 'DevOps/Cloud', value: 'DevOps/Cloud' },
+  { label: 'AI/LLM', value: 'AI/LLM' },
 ];
 const CATEGORY_OPTIONS: Array<{ label: string; value: string }> = [
   { label: 'All Categories', value: 'All' },
@@ -68,21 +92,13 @@ const STATUS_OPTIONS: Array<{ label: string; value: StatusFilter }> = [
   { label: 'Bookmarked', value: 'bookmarked' },
 ];
 
-function countBy(questions: readonly QuestionSummary[] | undefined, key: (q: QuestionSummary) => string): Map<string, number> {
-  const counts = new Map<string, number>();
-  for (const q of questions ?? []) {
-    const k = key(q);
-    counts.set(k, (counts.get(k) ?? 0) + 1);
-  }
-  return counts;
-}
-
 export function QuestionList() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const search = searchParams.get('search') ?? '';
   const difficulty = (searchParams.get('difficulty') as Difficulty | null) ?? 'All';
   const questionType = (searchParams.get('type') as QuestionType | null) ?? 'All';
+  const part = (searchParams.get('part') as QuestionPart | null) ?? 'All';
   const category = searchParams.get('category') ?? 'All';
   const status = (searchParams.get('status') as StatusFilter | null) ?? 'All';
   const requestedPage = Math.max(1, Number(searchParams.get('page')) || 1);
@@ -116,11 +132,12 @@ export function QuestionList() {
   }
 
   const activeFilters = {
-    ...(search && { search }),
-    ...(difficulty !== 'All' && { difficulty }),
-    ...(questionType !== 'All' && { questionType }),
-    ...(category !== 'All' && { category }),
-    ...(status !== 'All' && { status }),
+    search: search || undefined,
+    difficulty: difficulty === 'All' ? undefined : difficulty,
+    questionType: questionType === 'All' ? undefined : questionType,
+    part: part === 'All' ? undefined : part,
+    category: category === 'All' ? undefined : category,
+    status: status === 'All' ? undefined : status,
   };
 
   const { data: questions, isLoading } = useGetQuestionsQuery(activeFilters);
@@ -130,9 +147,53 @@ export function QuestionList() {
   const solvedIds = useAppSelector(selectSolvedIds);
   const bookmarkedIds = useAppSelector(selectBookmarkedIds);
 
-  const categoryCounts = useMemo(() => countBy(allQuestions, (q) => q.category), [allQuestions]);
-  const difficultyCounts = useMemo(() => countBy(allQuestions, (q) => q.difficulty), [allQuestions]);
-  const typeCounts = useMemo(() => countBy(allQuestions, (q) => q.questionType), [allQuestions]);
+  const partCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const opt of PART_OPTIONS) {
+      if (opt.value === 'All') {
+        counts.set('All', allQuestions?.length ?? 0);
+      } else {
+        counts.set(opt.value, allQuestions?.filter((q) => matchPart(q.part, opt.value))?.length ?? 0);
+      }
+    }
+    return counts;
+  }, [allQuestions]);
+
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const opt of CATEGORY_OPTIONS) {
+      if (opt.value === 'All') {
+        counts.set('All', allQuestions?.length ?? 0);
+      } else {
+        counts.set(opt.value, allQuestions?.filter((q) => matchCategory(q.category, opt.value))?.length ?? 0);
+      }
+    }
+    return counts;
+  }, [allQuestions]);
+
+  const difficultyCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const diff of DIFFICULTY_OPTIONS) {
+      if (diff === 'All') {
+        counts.set('All', allQuestions?.length ?? 0);
+      } else {
+        counts.set(diff, allQuestions?.filter((q) => q.difficulty.toLowerCase() === diff.toLowerCase())?.length ?? 0);
+      }
+    }
+    return counts;
+  }, [allQuestions]);
+
+  const typeCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const opt of QUESTION_TYPE_OPTIONS) {
+      if (opt.value === 'All') {
+        counts.set('All', allQuestions?.length ?? 0);
+      } else {
+        counts.set(opt.value, allQuestions?.filter((q) => q.questionType === opt.value)?.length ?? 0);
+      }
+    }
+    return counts;
+  }, [allQuestions]);
 
   const totalCount = questions?.length ?? 0;
   const pageCount = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
@@ -184,6 +245,22 @@ export function QuestionList() {
           {QUESTION_TYPE_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label} ({opt.value === 'All' ? (allQuestions?.length ?? 0) : (typeCounts.get(opt.value) ?? 0)})
+            </option>
+          ))}
+        </select>
+
+        {/* Part Filter — the top-level 18-track curriculum grouping (HTML,
+            CSS, Advanced JS, DSA, ...). Coarser than the Category filter
+            below, which breaks a part down into its finer-grained topics. */}
+        <select
+          value={part}
+          onChange={(e) => updateFilter('part', e.target.value)}
+          aria-label="Filter by part"
+          className="rounded-md border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-brand"
+        >
+          {PART_OPTIONS.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label} ({opt.value === 'All' ? (allQuestions?.length ?? 0) : (partCounts.get(opt.value) ?? 0)})
             </option>
           ))}
         </select>

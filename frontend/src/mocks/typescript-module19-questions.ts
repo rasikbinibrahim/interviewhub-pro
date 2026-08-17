@@ -213,6 +213,7 @@ export const MOCK_TYPESCRIPT_MODULE19_TECHNICAL_QUESTIONS: MockTechnicalQuestion
     companies: seed.companies,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'TypeScript',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

@@ -383,6 +383,7 @@ export const MOCK_FRONTEND_MACHINE_CODING_MODULE7_TECHNICAL_QUESTIONS: MockTechn
     companies: seed.companies,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Machine Coding',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

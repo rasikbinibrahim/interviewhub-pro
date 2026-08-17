@@ -296,6 +296,7 @@ export const MOCK_JAVASCRIPT_OUTPUT_MODULE9_TECHNICAL_QUESTIONS: MockTechnicalQu
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'JS Output',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

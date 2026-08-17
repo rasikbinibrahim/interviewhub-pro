@@ -213,6 +213,7 @@ export const MOCK_REACT_FUNDAMENTALS_MODULE20_TECHNICAL_QUESTIONS: MockTechnical
     companies: seed.companies,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'React Fundamentals',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

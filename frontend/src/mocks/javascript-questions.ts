@@ -26,6 +26,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -117,6 +118,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -208,6 +210,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -299,6 +302,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -390,6 +394,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -481,6 +486,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -572,6 +578,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -663,6 +670,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -754,6 +762,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -845,6 +854,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -936,6 +946,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1027,6 +1038,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1118,6 +1130,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1209,6 +1222,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1300,6 +1314,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "JavaScript Introduction",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1391,6 +1406,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1482,6 +1498,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1573,6 +1590,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1664,6 +1682,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1755,6 +1774,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1846,6 +1866,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -1937,6 +1958,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2028,6 +2050,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2119,6 +2142,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2210,6 +2234,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2301,6 +2326,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2392,6 +2418,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2483,6 +2510,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2574,6 +2602,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2665,6 +2694,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2756,6 +2786,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2847,6 +2878,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -2938,6 +2970,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3029,6 +3062,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3120,6 +3154,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Variables & Data Types",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3211,6 +3246,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3302,6 +3338,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3393,6 +3430,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3484,6 +3522,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3575,6 +3614,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3666,6 +3706,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3757,6 +3798,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3848,6 +3890,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -3939,6 +3982,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4030,6 +4074,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4121,6 +4166,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4212,6 +4258,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4303,6 +4350,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4394,6 +4442,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4485,6 +4534,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4576,6 +4626,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4667,6 +4718,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4758,6 +4810,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4849,6 +4902,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -4940,6 +4994,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Operators",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5031,6 +5086,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5122,6 +5178,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5213,6 +5270,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5304,6 +5362,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5395,6 +5454,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5486,6 +5546,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5577,6 +5638,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5668,6 +5730,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5759,6 +5822,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5850,6 +5914,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -5941,6 +6006,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6032,6 +6098,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6123,6 +6190,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6214,6 +6282,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6305,6 +6374,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6396,6 +6466,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6487,6 +6558,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6578,6 +6650,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6669,6 +6742,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6760,6 +6834,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Strings",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6851,6 +6926,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -6942,6 +7018,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7033,6 +7110,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7124,6 +7202,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7215,6 +7294,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7306,6 +7386,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7397,6 +7478,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7488,6 +7570,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7579,6 +7662,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7670,6 +7754,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7761,6 +7846,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7852,6 +7938,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -7943,6 +8030,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8034,6 +8122,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8125,6 +8214,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Numbers & Math",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8216,6 +8306,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8307,6 +8398,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8398,6 +8490,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8489,6 +8582,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8580,6 +8674,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8671,6 +8766,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8762,6 +8858,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8853,6 +8950,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -8944,6 +9042,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9035,6 +9134,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9126,6 +9226,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9217,6 +9318,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9308,6 +9410,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9399,6 +9502,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9490,6 +9594,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9581,6 +9686,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9672,6 +9778,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9763,6 +9870,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9854,6 +9962,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -9945,6 +10054,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10036,6 +10146,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10127,6 +10238,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10218,6 +10330,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10309,6 +10422,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10400,6 +10514,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10491,6 +10606,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10582,6 +10698,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10673,6 +10790,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10764,6 +10882,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10855,6 +10974,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Arrays",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -10946,6 +11066,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11037,6 +11158,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11128,6 +11250,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11219,6 +11342,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11310,6 +11434,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11401,6 +11526,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11492,6 +11618,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11583,6 +11710,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11674,6 +11802,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11765,6 +11894,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11856,6 +11986,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -11947,6 +12078,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12038,6 +12170,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12129,6 +12262,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12220,6 +12354,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12311,6 +12446,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12402,6 +12538,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12493,6 +12630,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12584,6 +12722,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12675,6 +12814,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12766,6 +12906,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12857,6 +12998,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -12948,6 +13090,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13039,6 +13182,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13130,6 +13274,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13221,6 +13366,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13312,6 +13458,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13403,6 +13550,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13494,6 +13642,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13585,6 +13734,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13676,6 +13826,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13767,6 +13918,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13858,6 +14010,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -13949,6 +14102,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14040,6 +14194,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14131,6 +14286,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14222,6 +14378,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14313,6 +14470,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14404,6 +14562,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14495,6 +14654,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14586,6 +14746,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14677,6 +14838,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14768,6 +14930,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14859,6 +15022,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -14950,6 +15114,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15041,6 +15206,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15132,6 +15298,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15223,6 +15390,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15314,6 +15482,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15405,6 +15574,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15496,6 +15666,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Functions",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15587,6 +15758,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15678,6 +15850,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15769,6 +15942,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15860,6 +16034,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -15951,6 +16126,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16042,6 +16218,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16133,6 +16310,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16224,6 +16402,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16315,6 +16494,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16406,6 +16586,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16497,6 +16678,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16588,6 +16770,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16679,6 +16862,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16770,6 +16954,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16861,6 +17046,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Control Flow",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -16952,6 +17138,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17043,6 +17230,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17134,6 +17322,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17225,6 +17414,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17316,6 +17506,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17407,6 +17598,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17498,6 +17690,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17589,6 +17782,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17680,6 +17874,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17771,6 +17966,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17862,6 +18058,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -17953,6 +18150,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18044,6 +18242,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18135,6 +18334,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18226,6 +18426,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18317,6 +18518,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18408,6 +18610,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18499,6 +18702,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18590,6 +18794,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18681,6 +18886,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "DOM Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18772,6 +18978,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18863,6 +19070,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -18954,6 +19162,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19045,6 +19254,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19136,6 +19346,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19227,6 +19438,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19318,6 +19530,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19409,6 +19622,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19500,6 +19714,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19591,6 +19806,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19682,6 +19898,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19773,6 +19990,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19864,6 +20082,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -19955,6 +20174,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20046,6 +20266,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Events",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20137,6 +20358,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20228,6 +20450,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20319,6 +20542,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20410,6 +20634,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20501,6 +20726,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20592,6 +20818,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20683,6 +20910,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20774,6 +21002,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20865,6 +21094,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -20956,6 +21186,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Error Handling",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21047,6 +21278,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21138,6 +21370,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21229,6 +21462,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21320,6 +21554,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21411,6 +21646,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21502,6 +21738,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21593,6 +21830,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21684,6 +21922,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21775,6 +22014,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21866,6 +22106,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Modules",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -21957,6 +22198,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22048,6 +22290,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22139,6 +22382,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22230,6 +22474,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22321,6 +22566,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22412,6 +22658,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22503,6 +22750,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22594,6 +22842,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22685,6 +22934,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22776,6 +23026,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser Storage",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22867,6 +23118,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -22958,6 +23210,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23049,6 +23302,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23140,6 +23394,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23231,6 +23486,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23322,6 +23578,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23413,6 +23670,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23504,6 +23762,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23595,6 +23854,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23686,6 +23946,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Timers",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23777,6 +24038,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23868,6 +24130,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -23959,6 +24222,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24050,6 +24314,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24141,6 +24406,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24232,6 +24498,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24323,6 +24590,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24414,6 +24682,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24505,6 +24774,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24596,6 +24866,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24687,6 +24958,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24778,6 +25050,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24869,6 +25142,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -24960,6 +25234,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25051,6 +25326,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25142,6 +25418,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25233,6 +25510,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25324,6 +25602,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25415,6 +25694,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25506,6 +25786,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "ES6+ Features",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25597,6 +25878,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25688,6 +25970,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25779,6 +26062,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25870,6 +26154,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -25961,6 +26246,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26052,6 +26338,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26143,6 +26430,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26234,6 +26522,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26325,6 +26614,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26416,6 +26706,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Browser APIs Basics",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26507,6 +26798,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26598,6 +26890,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26689,6 +26982,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26780,6 +27074,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26871,6 +27166,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -26962,6 +27258,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27053,6 +27350,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27144,6 +27442,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27235,6 +27534,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27326,6 +27626,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Best Practices",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27417,6 +27718,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27508,6 +27810,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27599,6 +27902,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27690,6 +27994,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27781,6 +28086,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27872,6 +28178,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -27963,6 +28270,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28054,6 +28362,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28145,6 +28454,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28236,6 +28546,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28327,6 +28638,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28418,6 +28730,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28509,6 +28822,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28600,6 +28914,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28691,6 +29006,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28782,6 +29098,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28873,6 +29190,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -28964,6 +29282,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29055,6 +29374,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29146,6 +29466,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29237,6 +29558,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29328,6 +29650,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29419,6 +29742,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29510,6 +29834,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29601,6 +29926,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Beginner Coding Exercises",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29692,6 +30018,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29783,6 +30110,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29874,6 +30202,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -29965,6 +30294,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30056,6 +30386,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30147,6 +30478,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30238,6 +30570,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30329,6 +30662,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30420,6 +30754,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30511,6 +30846,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30602,6 +30938,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30693,6 +31030,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30784,6 +31122,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30875,6 +31214,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -30966,6 +31306,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31057,6 +31398,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31148,6 +31490,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31239,6 +31582,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31330,6 +31674,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31421,6 +31766,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31512,6 +31858,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31603,6 +31950,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31694,6 +32042,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31785,6 +32134,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",
@@ -31876,6 +32226,7 @@ export const MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Senior JavaScript Fundamentals",
+      "part": "JS Fundamentals",
       "concepts": [
         "Execution context",
         "lexical environment",

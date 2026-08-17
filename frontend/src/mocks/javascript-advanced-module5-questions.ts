@@ -26,6 +26,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -114,6 +115,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -202,6 +204,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -290,6 +293,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -378,6 +382,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -466,6 +471,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -554,6 +560,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -642,6 +649,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -730,6 +738,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -818,6 +827,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -906,6 +916,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -994,6 +1005,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1082,6 +1094,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1170,6 +1183,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1258,6 +1272,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1346,6 +1361,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1434,6 +1450,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1522,6 +1539,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1610,6 +1628,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1698,6 +1717,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1786,6 +1806,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1874,6 +1895,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -1962,6 +1984,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -2050,6 +2073,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",
@@ -2138,6 +2162,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "`this` Keyword",
+      "part": "Advanced JS",
       "concepts": [
         "this",
         "call()",

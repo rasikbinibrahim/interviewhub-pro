@@ -298,6 +298,7 @@ export const MOCK_FRONTEND_PERFORMANCE_MODULE12_TECHNICAL_QUESTIONS: MockTechnic
     companies: seed.companies,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Performance',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

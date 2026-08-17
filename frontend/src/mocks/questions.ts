@@ -7,6 +7,18 @@ import type {
   TechnicalQuestionAnswer,
   TechnicalQuestionDetail,
 } from '@/shared/types/question';
+import { MOCK_DSA_CODING_MODULE2_QUESTIONS } from '@/mocks/dsa-coding-module2-questions';
+import { MOCK_DSA_CODING_MODULE3_QUESTIONS } from '@/mocks/dsa-coding-module3-questions';
+import { MOCK_DSA_CODING_MODULE4_QUESTIONS } from '@/mocks/dsa-coding-module4-questions';
+import { MOCK_DSA_CODING_MODULE5_QUESTIONS } from '@/mocks/dsa-coding-module5-questions';
+import { MOCK_DSA_CODING_MODULE6_QUESTIONS } from '@/mocks/dsa-coding-module6-questions';
+import { MOCK_DSA_CODING_MODULE7_QUESTIONS } from '@/mocks/dsa-coding-module7-questions';
+import { MOCK_DSA_CODING_MODULE8_QUESTIONS } from '@/mocks/dsa-coding-module8-questions';
+import { MOCK_DSA_CODING_MODULE9_QUESTIONS } from '@/mocks/dsa-coding-module9-questions';
+import { MOCK_DSA_CODING_MODULE10_QUESTIONS } from '@/mocks/dsa-coding-module10-questions';
+import { MOCK_DSA_CODING_MODULE11_QUESTIONS } from '@/mocks/dsa-coding-module11-questions';
+import { MOCK_DSA_CODING_MODULE12_QUESTIONS } from '@/mocks/dsa-coding-module12-questions';
+import { MOCK_DSA_CODING_MODULE13_QUESTIONS } from '@/mocks/dsa-coding-module13-questions';
 import { MOCK_HTML_TECHNICAL_QUESTIONS } from '@/mocks/html-questions';
 import { MOCK_CSS_TECHNICAL_QUESTIONS } from '@/mocks/css-questions';
 import { MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS } from '@/mocks/javascript-questions';
@@ -323,6 +335,13 @@ import { MOCK_MOBILE_REACT_NATIVE_MODULE17_TECHNICAL_QUESTIONS } from '@/mocks/m
 import { MOCK_MOBILE_REACT_NATIVE_MODULE18_TECHNICAL_QUESTIONS } from '@/mocks/mobile-react-native-module18-questions';
 import { MOCK_MOBILE_REACT_NATIVE_MODULE19_TECHNICAL_QUESTIONS } from '@/mocks/mobile-react-native-module19-questions';
 import { MOCK_MOBILE_REACT_NATIVE_MODULE20_TECHNICAL_QUESTIONS } from '@/mocks/mobile-react-native-module20-questions';
+import { MOCK_FRONTEND_MACHINE_CODING_EXTRA_TECHNICAL_QUESTIONS } from '@/mocks/frontend-machine-coding-extra-questions';
+import { MOCK_JAVASCRIPT_EXTRA_PART1_TECHNICAL_QUESTIONS } from '@/mocks/javascript-extra-part1-questions';
+import { MOCK_JAVASCRIPT_EXTRA_PART2_TECHNICAL_QUESTIONS } from '@/mocks/javascript-extra-part2-questions';
+import { MOCK_JAVASCRIPT_EXTRA_PART3_TECHNICAL_QUESTIONS } from '@/mocks/javascript-extra-part3-questions';
+import { MOCK_JAVASCRIPT_TRICKY_OUTPUT_TECHNICAL_QUESTIONS } from '@/mocks/javascript-tricky-output-questions';
+import { MOCK_DSA_150_CURATED_TECHNICAL_QUESTIONS } from '@/mocks/dsa-150-curated-questions';
+import { MOCK_REACT_EXTRA_TECHNICAL_QUESTIONS } from '@/mocks/react-extra-questions';
 import { MOCK_FRONTEND_TESTING_QA_MODULE1_TECHNICAL_QUESTIONS } from '@/mocks/frontend-testing-qa-module1-questions';
 import { MOCK_FRONTEND_TESTING_QA_MODULE2_TECHNICAL_QUESTIONS } from '@/mocks/frontend-testing-qa-module2-questions';
 import { MOCK_FRONTEND_TESTING_QA_MODULE3_TECHNICAL_QUESTIONS } from '@/mocks/frontend-testing-qa-module3-questions';
@@ -694,6 +713,34 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   ...MOCK_FRONTEND_TESTING_QA_MODULE18_TECHNICAL_QUESTIONS,
   ...MOCK_FRONTEND_TESTING_QA_MODULE19_TECHNICAL_QUESTIONS,
   ...MOCK_FRONTEND_TESTING_QA_MODULE20_TECHNICAL_QUESTIONS,
+  ...MOCK_FRONTEND_MACHINE_CODING_EXTRA_TECHNICAL_QUESTIONS,
+  ...MOCK_JAVASCRIPT_EXTRA_PART1_TECHNICAL_QUESTIONS,
+  ...MOCK_JAVASCRIPT_EXTRA_PART2_TECHNICAL_QUESTIONS,
+  ...MOCK_JAVASCRIPT_EXTRA_PART3_TECHNICAL_QUESTIONS,
+  ...MOCK_JAVASCRIPT_TRICKY_OUTPUT_TECHNICAL_QUESTIONS,
+  ...MOCK_DSA_150_CURATED_TECHNICAL_QUESTIONS,
+  ...MOCK_REACT_EXTRA_TECHNICAL_QUESTIONS,
 ];
 
-export const MOCK_QUESTIONS: MockQuestion[] = [...MOCK_TECHNICAL_QUESTIONS];
+// Hand-authored coding questions (real problemStatement/examples/sampleTests
+// and working JS+TS solutions) — kept separate from MOCK_TECHNICAL_QUESTIONS
+// per the coding/technical split described in the module docblock above.
+// Currently covers DSA Module 2 (Arrays); more modules are added
+// incrementally rather than mass-generated, since every sampleTests entry
+// here is checked against its reference solution.
+export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
+  ...MOCK_DSA_CODING_MODULE2_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE3_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE4_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE5_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE6_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE7_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE8_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE9_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE10_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE11_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE12_QUESTIONS,
+  ...MOCK_DSA_CODING_MODULE13_QUESTIONS,
+];
+
+export const MOCK_QUESTIONS: MockQuestion[] = [...MOCK_TECHNICAL_QUESTIONS, ...MOCK_CODING_QUESTIONS];

@@ -383,6 +383,7 @@ export const MOCK_FRONTEND_SECURITY_MODULE1_TECHNICAL_QUESTIONS: MockTechnicalQu
     companies: seed.companies,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Security',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

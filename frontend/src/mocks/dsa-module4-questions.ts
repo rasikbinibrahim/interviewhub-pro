@@ -218,6 +218,7 @@ export const MOCK_DSA_MODULE4_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = QUE
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'DSA',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

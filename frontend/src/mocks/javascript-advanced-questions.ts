@@ -26,6 +26,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 4,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -109,6 +110,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 5,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -191,6 +193,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 5,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -273,6 +276,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 4,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -355,6 +359,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 5,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -437,6 +442,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -519,6 +525,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -601,6 +608,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 4,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -683,6 +691,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -765,6 +774,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 5,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -847,6 +857,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 4,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -929,6 +940,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 4,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -1011,6 +1023,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 4,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -1093,6 +1106,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -1175,6 +1189,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -1257,6 +1272,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 4,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -1339,6 +1355,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -1421,6 +1438,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -1503,6 +1521,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",
@@ -1585,6 +1604,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_TECHNICAL_QUESTIONS: MockTechnicalQuestion
       ],
       "frequency": 3,
       "category": "Execution Context",
+      "part": "Advanced JS",
       "concepts": [
         "Execution Context",
         "Global Context",

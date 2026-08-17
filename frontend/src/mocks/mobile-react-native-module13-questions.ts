@@ -232,6 +232,7 @@ export const MOCK_MOBILE_REACT_NATIVE_MODULE13_TECHNICAL_QUESTIONS: MockTechnica
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Advanced React',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

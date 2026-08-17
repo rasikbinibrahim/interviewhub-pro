@@ -20,6 +20,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -91,6 +92,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -165,6 +167,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -236,6 +239,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -310,6 +314,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -384,6 +389,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -455,6 +461,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -526,6 +533,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -597,6 +605,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -668,6 +677,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -739,6 +749,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -810,6 +821,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -881,6 +893,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -952,6 +965,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1023,6 +1037,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1094,6 +1109,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1165,6 +1181,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1243,6 +1260,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1314,6 +1332,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1388,6 +1407,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Fundamentals",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1459,6 +1479,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1530,6 +1551,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1604,6 +1626,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1678,6 +1701,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1749,6 +1773,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1820,6 +1845,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1891,6 +1917,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -1962,6 +1989,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2036,6 +2064,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2110,6 +2139,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2184,6 +2214,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2258,6 +2289,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2329,6 +2361,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2400,6 +2433,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2471,6 +2505,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2545,6 +2580,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2619,6 +2655,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2693,6 +2730,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2767,6 +2805,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2841,6 +2880,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML Text & Content",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2912,6 +2952,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -2986,6 +3027,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3060,6 +3102,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3134,6 +3177,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3208,6 +3252,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3279,6 +3324,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3353,6 +3399,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3424,6 +3471,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3495,6 +3543,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3569,6 +3618,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3643,6 +3693,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3717,6 +3768,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3791,6 +3843,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3865,6 +3918,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -3943,6 +3997,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Images, Audio & Video",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4014,6 +4069,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4088,6 +4144,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4162,6 +4219,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4236,6 +4294,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4310,6 +4369,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4384,6 +4444,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4458,6 +4519,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4532,6 +4594,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4606,6 +4669,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4677,6 +4741,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4748,6 +4813,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4819,6 +4885,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4893,6 +4960,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -4967,6 +5035,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5041,6 +5110,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Tables",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5112,6 +5182,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5186,6 +5257,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5260,6 +5332,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5334,6 +5407,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5405,6 +5479,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5476,6 +5551,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5547,6 +5623,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5618,6 +5695,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5692,6 +5770,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5766,6 +5845,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5840,6 +5920,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5914,6 +5995,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -5985,6 +6067,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6056,6 +6139,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6127,6 +6211,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6198,6 +6283,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6269,6 +6355,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6340,6 +6427,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6414,6 +6502,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6488,6 +6577,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6562,6 +6652,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6636,6 +6727,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6710,6 +6802,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6781,6 +6874,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6852,6 +6946,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Forms",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6923,6 +7018,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -6994,6 +7090,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7068,6 +7165,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7142,6 +7240,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7216,6 +7315,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7290,6 +7390,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7364,6 +7465,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7438,6 +7540,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7512,6 +7615,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7586,6 +7690,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7660,6 +7765,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7734,6 +7840,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7808,6 +7915,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7882,6 +7990,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -7956,6 +8065,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8030,6 +8140,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8104,6 +8215,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8178,6 +8290,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8252,6 +8365,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8326,6 +8440,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Semantic HTML",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8397,6 +8512,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8471,6 +8587,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8545,6 +8662,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8619,6 +8737,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8690,6 +8809,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8761,6 +8881,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8835,6 +8956,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8909,6 +9031,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -8983,6 +9106,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9057,6 +9181,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9131,6 +9256,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9205,6 +9331,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9279,6 +9406,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9350,6 +9478,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9424,6 +9553,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Accessibility",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9495,6 +9625,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9566,6 +9697,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9637,6 +9769,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9711,6 +9844,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9785,6 +9919,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9859,6 +9994,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -9933,6 +10069,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10007,6 +10144,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10081,6 +10219,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10152,6 +10291,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "SEO",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10223,6 +10363,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10294,6 +10435,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10365,6 +10507,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10443,6 +10586,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10517,6 +10661,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10591,6 +10736,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10665,6 +10811,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10739,6 +10886,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10813,6 +10961,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10887,6 +11036,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -10961,6 +11111,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11039,6 +11190,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11110,6 +11262,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11184,6 +11337,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11255,6 +11409,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "HTML5 APIs",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11329,6 +11484,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11403,6 +11559,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11477,6 +11634,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11551,6 +11709,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11625,6 +11784,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11699,6 +11859,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11777,6 +11938,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11851,6 +12013,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -11929,6 +12092,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12000,6 +12164,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Performance",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12078,6 +12243,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12156,6 +12322,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12234,6 +12401,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12308,6 +12476,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12386,6 +12555,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12457,6 +12627,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12531,6 +12702,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12609,6 +12781,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12687,6 +12860,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12765,6 +12939,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Security",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12843,6 +13018,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12917,6 +13093,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -12995,6 +13172,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13073,6 +13251,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13151,6 +13330,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13229,6 +13409,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13303,6 +13484,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13377,6 +13559,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13455,6 +13638,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13533,6 +13717,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13607,6 +13792,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13681,6 +13867,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13755,6 +13942,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13833,6 +14021,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13911,6 +14100,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -13989,6 +14179,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14063,6 +14254,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14141,6 +14333,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14219,6 +14412,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14297,6 +14491,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14375,6 +14570,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14453,6 +14649,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14527,6 +14724,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14601,6 +14799,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",
@@ -14675,6 +14874,7 @@ export const MOCK_HTML_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Senior Frontend Interview",
+      "part": "HTML",
       "concepts": [
         "HTML5",
         "DOM",

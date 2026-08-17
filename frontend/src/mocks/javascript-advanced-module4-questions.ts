@@ -26,6 +26,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -118,6 +119,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -210,6 +212,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -302,6 +305,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -394,6 +398,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -486,6 +491,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -578,6 +584,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -670,6 +677,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -762,6 +770,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -854,6 +863,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -946,6 +956,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1038,6 +1049,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1130,6 +1142,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1222,6 +1235,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1314,6 +1328,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1406,6 +1421,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1498,6 +1514,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1590,6 +1607,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1682,6 +1700,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1774,6 +1793,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1866,6 +1886,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -1958,6 +1979,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -2050,6 +2072,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -2142,6 +2165,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",
@@ -2234,6 +2258,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Closures",
+      "part": "Advanced JS",
       "concepts": [
         "Closures",
         "Lexical scope",

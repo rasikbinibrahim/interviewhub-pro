@@ -383,6 +383,7 @@ export const MOCK_REDUX_MODULE2_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = Q
     companies: seed.companies,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Redux/State',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

@@ -655,6 +655,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE24_TECHNICAL_QUESTIONS: MockTechnica
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Advanced JS',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

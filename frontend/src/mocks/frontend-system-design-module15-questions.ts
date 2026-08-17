@@ -383,6 +383,7 @@ export const MOCK_FRONTEND_SYSTEM_DESIGN_MODULE15_TECHNICAL_QUESTIONS: MockTechn
     companies: seed.companies,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'System Design',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

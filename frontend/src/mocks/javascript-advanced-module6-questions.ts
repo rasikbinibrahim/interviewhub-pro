@@ -26,6 +26,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -119,6 +120,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -212,6 +214,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -305,6 +308,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -398,6 +402,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -491,6 +496,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -584,6 +590,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -677,6 +684,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -770,6 +778,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -863,6 +872,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -956,6 +966,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1049,6 +1060,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1142,6 +1154,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1235,6 +1248,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1328,6 +1342,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1421,6 +1436,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1514,6 +1530,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1607,6 +1624,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1700,6 +1718,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",
@@ -1793,6 +1812,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Objects",
+      "part": "Advanced JS",
       "concepts": [
         "Objects",
         "Object literals",

@@ -14,6 +14,33 @@ import type { CompanyType } from '@/shared/constants/companies';
 export type Difficulty = 'Easy' | 'Medium' | 'Hard';
 export type QuestionType = 'coding' | 'technical';
 
+// The 18-part top-level curriculum grouping. Coarser than `category`
+// (e.g. "Prototypes", "Arrays" are `category` values within the "Advanced
+// JS" / "DSA" parts respectively) — `part` is what the top-level track
+// filter groups by; `category` stays as the finer-grained topic label
+// within a part. React Native content is grouped under "Advanced React"
+// rather than getting its own 19th part.
+export type QuestionPart =
+  | 'HTML'
+  | 'CSS'
+  | 'JS Fundamentals'
+  | 'Advanced JS'
+  | 'JS Output'
+  | 'Browser/Web APIs'
+  | 'TypeScript'
+  | 'React Fundamentals'
+  | 'Advanced React'
+  | 'Redux/State'
+  | 'Performance'
+  | 'Security'
+  | 'Machine Coding'
+  | 'System Design'
+  | 'DSA'
+  | 'Testing'
+  | 'Architecture'
+  | 'DevOps/Cloud'
+  | 'AI/LLM';
+
 export interface QuestionExample {
   input: string;
   output: string;
@@ -39,6 +66,7 @@ interface QuestionSummaryBase {
   difficulty: Difficulty;
   companies: string[];
   frequency: number; // 1-5
+  part: QuestionPart;
   category: string;
   concepts: string[];
   solved: boolean;
@@ -124,6 +152,7 @@ export interface TechnicalQuestionAnswer {
 export interface QuestionFilters {
   search?: string;
   difficulty?: Difficulty;
+  part?: QuestionPart;
   category?: string;
   company?: string;
   companyType?: CompanyType;

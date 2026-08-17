@@ -12,6 +12,7 @@ const BASE_QUESTION: QuestionSummary = {
   difficulty: 'Easy',
   companies: ['Google', 'Amazon', 'Microsoft', 'Adobe'],
   frequency: 5,
+  part: 'DSA',
   category: 'arrays',
   concepts: ['hash map'],
   solved: false,

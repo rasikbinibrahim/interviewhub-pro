@@ -27,6 +27,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -119,6 +120,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -211,6 +213,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -303,6 +306,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -395,6 +399,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -487,6 +492,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -579,6 +585,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -671,6 +678,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -763,6 +771,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -855,6 +864,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -947,6 +957,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1039,6 +1050,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1131,6 +1143,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1223,6 +1236,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1315,6 +1329,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1407,6 +1422,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1499,6 +1515,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1591,6 +1608,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1683,6 +1701,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1775,6 +1794,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Fundamentals",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1867,6 +1887,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -1959,6 +1980,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2051,6 +2073,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2143,6 +2166,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2235,6 +2259,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2327,6 +2352,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2419,6 +2445,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2511,6 +2538,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2603,6 +2631,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2695,6 +2724,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2787,6 +2817,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2879,6 +2910,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -2971,6 +3003,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3063,6 +3096,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3155,6 +3189,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "CSS Units & Colors",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3247,6 +3282,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3339,6 +3375,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3431,6 +3468,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3523,6 +3561,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3615,6 +3654,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3707,6 +3747,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3799,6 +3840,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3891,6 +3933,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -3983,6 +4026,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4075,6 +4119,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4167,6 +4212,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4259,6 +4305,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4351,6 +4398,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4443,6 +4491,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4535,6 +4584,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 5,
       "category": "Box Model",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4627,6 +4677,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4719,6 +4770,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4811,6 +4863,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4903,6 +4956,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -4995,6 +5049,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5087,6 +5142,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5179,6 +5235,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5271,6 +5328,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5363,6 +5421,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5455,6 +5514,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5547,6 +5607,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5639,6 +5700,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5731,6 +5793,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5823,6 +5886,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -5915,6 +5979,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6007,6 +6072,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6099,6 +6165,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6191,6 +6258,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6283,6 +6351,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6375,6 +6444,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Positioning",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6467,6 +6537,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6559,6 +6630,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6651,6 +6723,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6743,6 +6816,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6835,6 +6909,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -6927,6 +7002,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7019,6 +7095,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7111,6 +7188,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7203,6 +7281,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7295,6 +7374,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7387,6 +7467,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7479,6 +7560,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7571,6 +7653,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7663,6 +7746,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7755,6 +7839,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7847,6 +7932,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -7939,6 +8025,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8031,6 +8118,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8123,6 +8211,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8215,6 +8304,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Flexbox",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8307,6 +8397,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8399,6 +8490,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8491,6 +8583,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8583,6 +8676,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8675,6 +8769,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8767,6 +8862,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8859,6 +8955,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -8951,6 +9048,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9043,6 +9141,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9135,6 +9234,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9227,6 +9327,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9319,6 +9420,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9411,6 +9513,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9503,6 +9606,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9595,6 +9699,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9687,6 +9792,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9779,6 +9885,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9871,6 +9978,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -9963,6 +10071,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10055,6 +10164,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "CSS Grid",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10147,6 +10257,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10239,6 +10350,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10331,6 +10443,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10423,6 +10536,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10515,6 +10629,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10607,6 +10722,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10699,6 +10815,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10791,6 +10908,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10883,6 +11001,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -10975,6 +11094,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Typography",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11067,6 +11187,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11159,6 +11280,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11251,6 +11373,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11343,6 +11466,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11435,6 +11559,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11527,6 +11652,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11619,6 +11745,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11711,6 +11838,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11803,6 +11931,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11895,6 +12024,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -11987,6 +12117,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12079,6 +12210,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12171,6 +12303,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12263,6 +12396,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12355,6 +12489,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Responsive Design",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12447,6 +12582,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12539,6 +12675,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12631,6 +12768,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12723,6 +12861,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12815,6 +12954,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12907,6 +13047,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -12999,6 +13140,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13091,6 +13233,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13183,6 +13326,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13275,6 +13419,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13367,6 +13512,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13459,6 +13605,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13551,6 +13698,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13643,6 +13791,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13735,6 +13884,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 4,
       "category": "Animations & Transitions",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13827,6 +13977,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -13919,6 +14070,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14011,6 +14163,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14103,6 +14256,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14195,6 +14349,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14287,6 +14442,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14379,6 +14535,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14471,6 +14628,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14563,6 +14721,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14655,6 +14814,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14747,6 +14907,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14839,6 +15000,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -14931,6 +15093,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15023,6 +15186,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15115,6 +15279,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Advanced CSS",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15207,6 +15372,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15299,6 +15465,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15391,6 +15558,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15483,6 +15651,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15575,6 +15744,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15667,6 +15837,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15759,6 +15930,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15851,6 +16023,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -15943,6 +16116,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16035,6 +16209,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "CSS Architecture",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16127,6 +16302,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16219,6 +16395,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16311,6 +16488,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16403,6 +16581,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16495,6 +16674,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16587,6 +16767,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16679,6 +16860,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16771,6 +16953,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16863,6 +17046,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -16955,6 +17139,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Performance",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17047,6 +17232,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17139,6 +17325,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17231,6 +17418,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17323,6 +17511,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17415,6 +17604,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17507,6 +17697,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17599,6 +17790,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17691,6 +17883,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17783,6 +17976,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17875,6 +18069,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Accessibility",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -17967,6 +18162,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Browser Rendering",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -18059,6 +18255,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Browser Rendering",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -18151,6 +18348,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Browser Rendering",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -18243,6 +18441,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Browser Rendering",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",
@@ -18335,6 +18534,7 @@ export const MOCK_CSS_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
       ],
       "frequency": 3,
       "category": "Browser Rendering",
+      "part": "CSS",
       "concepts": [
         "Selectors",
         "cascade layers",

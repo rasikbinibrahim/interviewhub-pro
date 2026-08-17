@@ -102,7 +102,12 @@
       "Bash(git stash *)",
       "Bash(awk '/^## Question 1 /{f=1} f && /^## Question 2 /{exit} f' Part_13_Frontend_Machine_Coding_Master_Handbook.md)",
       "Bash(awk '/^## Question 1 /{f=1} f && /^## Question 2 /{exit} f' Part_14_Frontend_System_Design_Master_Handbook.md)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(mkdir -p /tmp/claude-1000/-mnt-c-Users-PTPL0267-Desktop-Example-interview-prep-master/b675dc4a-3290-4c01-a773-fc143cfb1041/scratchpad)",
+      "Bash(rm *)",
+      "Bash(timeout 90 node_modules/.bin/tsc --noEmit --skipLibCheck --target es2020 --moduleResolution node src/mocks/dsa-coding-module8-questions.ts)",
+      "Bash(/mnt/c/Users/PTPL0267/Desktop/Example/interview-prep-master/frontend/node_modules/.bin/tsc --noEmit --skipLibCheck --target es2020 --moduleResolution node m8.ts m2.ts)",
+      "Bash(/mnt/c/Users/PTPL0267/Desktop/Example/interview-prep-master/frontend/node_modules/.bin/tsc --noEmit --skipLibCheck --target es2020 m8.ts m2.ts)"
     ]
   }
 }

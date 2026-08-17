@@ -248,6 +248,7 @@ export const MOCK_DEVOPS_MODULE12_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] =
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'DevOps/Cloud',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

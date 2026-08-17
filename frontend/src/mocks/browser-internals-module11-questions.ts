@@ -297,6 +297,7 @@ export const MOCK_BROWSER_INTERNALS_MODULE11_TECHNICAL_QUESTIONS: MockTechnicalQ
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Browser/Web APIs',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

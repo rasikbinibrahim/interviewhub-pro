@@ -360,6 +360,7 @@ export const MOCK_FRONTEND_TESTING_QA_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Testing',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,

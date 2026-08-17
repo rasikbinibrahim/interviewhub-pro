@@ -26,6 +26,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -116,6 +117,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -206,6 +208,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -296,6 +299,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -386,6 +390,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -476,6 +481,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -566,6 +572,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -656,6 +663,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -746,6 +754,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -836,6 +845,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -926,6 +936,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1016,6 +1027,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1106,6 +1118,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 5,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1196,6 +1209,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1286,6 +1300,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1376,6 +1391,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1466,6 +1482,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1556,6 +1573,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1646,6 +1664,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1736,6 +1755,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1826,6 +1846,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -1916,6 +1937,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -2006,6 +2028,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -2096,6 +2119,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 3,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",
@@ -2186,6 +2210,7 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE7_TECHNICAL_QUESTIONS: MockTechnical
       ],
       "frequency": 4,
       "category": "Prototypes",
+      "part": "Advanced JS",
       "concepts": [
         "Prototype chain",
         "[[Prototype]]",

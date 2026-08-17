@@ -34,6 +34,32 @@ interface MockRequest {
   params?: QuestionFilters;
 }
 
+export function matchCategory(qCategory: string, targetCategory: string): boolean {
+  if (!targetCategory || targetCategory === 'All') return true;
+  if (qCategory === targetCategory) return true;
+
+  const normQ = qCategory.toLowerCase().trim();
+  const normTarget = targetCategory.toLowerCase().trim();
+  if (normQ === normTarget) return true;
+
+  const alphaQ = normQ.replace(/[^a-z0-9]/g, '');
+  const alphaTarget = normTarget.replace(/[^a-z0-9]/g, '');
+  return alphaQ === alphaTarget;
+}
+
+export function matchPart(qPart: string, targetPart: string): boolean {
+  if (!targetPart || targetPart === 'All') return true;
+  if (qPart === targetPart) return true;
+
+  const normQ = qPart.toLowerCase().trim();
+  const normTarget = targetPart.toLowerCase().trim();
+  if (normQ === normTarget) return true;
+
+  const alphaQ = normQ.replace(/[^a-z0-9]/g, '');
+  const alphaTarget = normTarget.replace(/[^a-z0-9]/g, '');
+  return alphaQ === alphaTarget;
+}
+
 const mockBaseQuery: BaseQueryFn<MockRequest, unknown, { message: string }> = async ({ path, params }) => {
   const listMatch = path === '/questions';
   const detailMatch = /^\/questions\/([^/]+)$/.exec(path);
@@ -51,10 +77,13 @@ const mockBaseQuery: BaseQueryFn<MockRequest, unknown, { message: string }> = as
       );
     }
     if (params?.difficulty) {
-      summaries = summaries.filter((q) => q.difficulty === params.difficulty);
+      summaries = summaries.filter((q) => q.difficulty.toLowerCase() === params.difficulty!.toLowerCase());
+    }
+    if (params?.part) {
+      summaries = summaries.filter((q) => matchPart(q.part, params.part!));
     }
     if (params?.category) {
-      summaries = summaries.filter((q) => q.category === params.category);
+      summaries = summaries.filter((q) => matchCategory(q.category, params.category!));
     }
     if (params?.company) {
       summaries = summaries.filter((q) => q.companies.includes(params.company!));
@@ -120,13 +149,14 @@ function toSummary(detail: QuestionDetail): QuestionSummary {
     difficulty,
     companies,
     frequency,
+    part,
     category,
     concepts,
     solved,
     attempted,
     bookmarked,
   } = detail;
-  const base = { id, questionNumber, title, difficulty, companies, frequency, category, concepts, solved, attempted, bookmarked };
+  const base = { id, questionNumber, title, difficulty, companies, frequency, part, category, concepts, solved, attempted, bookmarked };
   return detail.questionType === 'technical'
     ? { ...base, questionType: 'technical', experienceLevel: detail.experienceLevel }
     : { ...base, questionType: 'coding' };

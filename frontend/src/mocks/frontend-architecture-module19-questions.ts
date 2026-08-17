@@ -312,6 +312,7 @@ export const MOCK_FRONTEND_ARCHITECTURE_MODULE19_TECHNICAL_QUESTIONS: MockTechni
     companies: COMPANIES,
     frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
     category: seed.category,
+    part: 'Architecture',
     concepts: seed.relatedTopics,
     solved: false,
     attempted: false,
