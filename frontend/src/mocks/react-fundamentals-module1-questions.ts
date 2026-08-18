@@ -5,6 +5,7 @@
 // Mirrors the MockTechnicalQuestion shape defined in @/mocks/questions.
 
 import type { MockTechnicalQuestion } from '@/mocks/questions';
+import type { TechnicalQuestionExample } from '@/shared/types/question';
 
 interface QuestionSeed {
   id: string;
@@ -17,6 +18,7 @@ interface QuestionSeed {
   expectedAnswer: string;
   deepExplanation: string;
   productionExample: string;
+  example?: TechnicalQuestionExample;
   bestPractices: string[];
   tradeOffs: string;
   commonMistakes: string[];
@@ -372,6 +374,28 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     followUpQuestions: ["What causes a render?","What work happens during render versus commit?","How would you measure the performance impact?","How does accessibility change your implementation?","How would you test the behavior?","How does this design scale across an enterprise codebase?"],
     relatedTopics: ["JSX","Components","Props","State","Hooks","Context","Keys","Reconciliation","Fiber","Suspense","React Router","Testing Library","Accessibility","Performance","---","# Module 2 – JSX","**Questions 21–35**"],
   },
+  {
+    id: "reactfund-m1-21",
+    number: "REACTFUND-M1-21",
+    title: "Block Scope in React (let/const inside components and hooks)",
+    difficulty: "Easy",
+    experienceLevel: "0–2 Years",
+    companies: ["Google","Meta","Amazon","Microsoft","Netflix","Adobe","Atlassian","Stripe","Uber","Flipkart","Zoho"],
+    category: "React Introduction",
+    expectedAnswer: "React components are plain functions, so the same JavaScript block-scope rules apply inside them: a `let`/`const` declared in an `if`, a loop, or a `{}` block inside JSX logic is only visible in that block. `var` ignores those boundaries. This matters most inside hooks — using `let`/`const` per render (instead of a shared outer `var`) is what keeps closures in `useEffect`/`useCallback` capturing the correct value.",
+    deepExplanation: "Example:\n\n```ts\nfunction Panel({ items }: { items: string[] }) {\n  if (items.length > 0) {\n    let firstItem = items[0]; // block-scoped to this if-block\n    console.log(firstItem);\n  }\n  // console.log(firstItem); // ❌ Compile error: Cannot find name 'firstItem'.\n\n  return <div>{items.length} items</div>;\n}\n```\n\nProduction pattern — why `let` inside a loop matters for closures used in `useEffect`:\n\n```ts\nfunction Timers({ count }: { count: number }) {\n  useEffect(() => {\n    for (let i = 0; i < count; i++) {\n      setTimeout(() => console.log(i), 100); // ✅ each timeout logs its own `i`: 0, 1, 2...\n    }\n  }, [count]);\n\n  return null;\n}\n```\n\nWhy it matters: Every render calls the component function again, creating a fresh block scope for its `let`/`const` bindings. That's the mechanism behind 'stale closures' — a `useCallback`/`useEffect` closes over the `const` values from the render it was created in, not the latest ones.",
+    productionExample: "```ts\n// var: leaks out of the loop block — every timeout logs the same final value\nfor (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0); // ❌ 3, 3, 3\n}\n\n// let: block-scoped per iteration — each closure gets its own `i`\nfor (let j = 0; j < 3; j++) {\n  setTimeout(() => console.log(j), 0); // ✅ 0, 1, 2\n}\n```",
+    example: {
+      code: "console.log(value);\nvar value = 10;",
+      output: "undefined",
+      explanation: "`var` declarations are hoisted and initialized with `undefined`. Only the declaration is hoisted, not the assignment. Conceptually, this behaves like: `var value; console.log(value); value = 10;`. Inside a component this same hoisting happens on every render, which is why relying on a `var` declared later in the function body reads as `undefined` instead of throwing.",
+    },
+    bestPractices: ["Default to `const` for values read inside JSX and hook callbacks.","Never use `var` inside components — it defeats the per-render scoping React relies on.","Declare loop counters used inside `useEffect`/event handlers with `let` so each iteration closes over its own value.","Keep derived values scoped to the smallest block/hook that needs them instead of hoisting them to module scope."],
+    tradeOffs: "Advantages: Block-scoped `let`/`const` bindings make each render's closures predictable and prevent shared mutable state from leaking between renders. Disadvantages: Developers coming from `var`-style JavaScript can be surprised by the Temporal Dead Zone or by why a stale closure still happens even with `const` (it's about which render's scope was captured, not `let` vs `var`).",
+    commonMistakes: ["Blaming `let`/`const` for a stale closure bug that's actually about `useEffect`'s dependency array capturing an old render's scope.","Interview trap: Saying React 'shares' state across renders — each render gets its own block-scoped `let`/`const` bindings, and only state stored via `useState`/`useRef` persists.","Interview trap: Using `var` in a loop that schedules callbacks (`setTimeout`, event listeners) and getting the same final value in every callback."],
+    followUpQuestions: ["Why does a `useEffect` closure sometimes read a stale prop or state value even when the value is declared with `const`?","How does per-render block scope relate to why hooks must be called unconditionally at the top level?","What's the difference between a variable leaking due to `var` and state persisting correctly via `useState`?"],
+    relatedTopics: ["Block Scope","Closures","Stale Closures","useEffect","useCallback","let","const","var","Hoisting","---"],
+  },
 ];
 
 export const MOCK_REACT_FUNDAMENTALS_MODULE1_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = QUESTION_SEEDS.map((seed) => ({
@@ -396,6 +420,7 @@ export const MOCK_REACT_FUNDAMENTALS_MODULE1_TECHNICAL_QUESTIONS: MockTechnicalQ
     expectedAnswer: seed.expectedAnswer,
     deepExplanation: seed.deepExplanation,
     productionExample: seed.productionExample,
+    ...(seed.example ? { example: seed.example } : {}),
     bestPractices: seed.bestPractices,
     tradeOffs: seed.tradeOffs,
     commonMistakes: seed.commonMistakes,

@@ -5,6 +5,7 @@
 // Mirrors the MockTechnicalQuestion shape defined in @/mocks/questions.
 
 import type { MockTechnicalQuestion } from '@/mocks/questions';
+import type { TechnicalQuestionExample } from '@/shared/types/question';
 
 const COMPANIES = [
   "Google",
@@ -30,6 +31,7 @@ interface QuestionSeed {
   expectedAnswer: string;
   deepExplanation: string;
   productionExample: string;
+  example?: TechnicalQuestionExample;
   bestPractices: string[];
   tradeOffs: string;
   commonMistakes: string[];
@@ -221,6 +223,27 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     followUpQuestions: ["How do you create platform standards without blocking team autonomy?","How do you manage dependency upgrades?","What should be shared?","How do you establish performance budgets?","How do you define ownership boundaries?"],
     relatedTopics: ["Mobile Development Fundamentals"],
   },
+  {
+    id: "mobile-m1-12",
+    number: "MOBILE-M1-12",
+    title: "Block Scope in React Native (let/const in components and native modules)",
+    difficulty: "Easy",
+    experienceLevel: "0–2 Years",
+    category: "Mobile Development Fundamentals",
+    expectedAnswer: "React Native code runs on the Hermes/JavaScript engine, so it follows the exact same block-scope rules as JavaScript in the browser: a variable declared with `let` or `const` is only accessible inside the nearest enclosing `{ }` block. `var` ignores block boundaries and is function-scoped, which matters in RN because it's a common source of stale values inside `useEffect` callbacks and native event listeners.",
+    deepExplanation: "Example:\n\n```ts\nfunction PermissionGate() {\n  if (Platform.OS === \"ios\") {\n    let message = \"iOS permission flow\"; // block-scoped to this if\n    console.log(message);\n  }\n  // console.log(message); // ❌ ReferenceError: message is not defined\n\n  return null;\n}\n```\n\nProduction pattern — block scope keeping event-listener closures correct:\n\n```ts\nuseEffect(() => {\n  const subscriptions: Array<() => void> = [];\n\n  for (let i = 0; i < sensors.length; i++) {\n    const sensor = sensors[i]; // fresh block-scoped binding per iteration\n    const remove = sensor.addListener((value) => console.log(sensor.id, value));\n    subscriptions.push(remove);\n  }\n\n  return () => subscriptions.forEach((remove) => remove());\n}, [sensors]);\n```\n\nWhy it matters: Because each loop iteration's `let`/`const` gets its own block scope, every registered listener closes over the correct `sensor` instead of all of them sharing the last value from a `var`-declared loop.",
+    productionExample: "```ts\n// var: leaks past the if-block, function-scoped instead of block-scoped\nif (isConnected) {\n  var status = \"online\";\n}\nconsole.log(status); // ✅ \"online\" — leaked out of the if block\n\n// let: proper block scope\nif (isConnected) {\n  let status = \"online\";\n}\n// console.log(status); // ❌ ReferenceError: status is not defined\n```",
+    example: {
+      code: "console.log(value);\nvar value = 10;",
+      output: "undefined",
+      explanation: "`var` declarations are hoisted and initialized with `undefined`. Only the declaration is hoisted, not the assignment. Conceptually, Hermes/JS behaves like: `var value; console.log(value); value = 10;`. The same rule applies identically inside React Native components — it's a JavaScript engine behavior, not something the RN runtime changes.",
+    },
+    bestPractices: ["Default to `const` for values read inside components and native module wrappers.","Never use `var` in RN code — it leaks state past `if`/`for` blocks the same way it does in web JS.","Declare loop counters with `let` when registering multiple native listeners/subscriptions so each closure captures its own value.","Clean up listeners registered inside block-scoped loops in the `useEffect` cleanup function."],
+    tradeOffs: "Advantages: Predictable per-iteration bindings prevent native event listeners from all reporting the same stale value; narrower scope reduces accidental state sharing between platform-specific branches. Disadvantages: Engineers migrating older `var`-based RN code can be surprised when previously 'working' leaked variables suddenly throw ReferenceErrors after switching to `let`/`const`.",
+    commonMistakes: ["Using `var` inside a loop that registers native event listeners, causing every listener to log the same final value.","Interview trap: Assuming block scope is a DOM/browser-only concept — it's a JavaScript engine feature and applies identically under Hermes/JSC.","Interview trap: Not realizing a `let` declared inside a `Platform.OS === 'ios'` branch is unreachable in the `android` branch."],
+    followUpQuestions: ["Why would a loop that registers multiple sensor/event listeners with `var` end up reporting the same value for every listener?","How does block scope relate to cleaning up subscriptions in a `useEffect` return function?","What changes about scope if the same code runs under Hermes vs. JSC?"],
+    relatedTopics: ["Block Scope","Function Scope","Closures","let","const","var","Hoisting","useEffect"],
+  },
 ];
 
 export const MOCK_MOBILE_REACT_NATIVE_MODULE1_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = QUESTION_SEEDS.map((seed) => ({
@@ -245,6 +268,7 @@ export const MOCK_MOBILE_REACT_NATIVE_MODULE1_TECHNICAL_QUESTIONS: MockTechnical
     expectedAnswer: seed.expectedAnswer,
     deepExplanation: seed.deepExplanation,
     productionExample: seed.productionExample,
+    ...(seed.example ? { example: seed.example } : {}),
     bestPractices: seed.bestPractices,
     tradeOffs: seed.tradeOffs,
     commonMistakes: seed.commonMistakes,

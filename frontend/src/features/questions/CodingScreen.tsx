@@ -27,15 +27,33 @@ interface CodingScreenProps {
 // vs `function`/arrow declaration (see scripts/sync_mock_questions.js)
 // — never inferred from naming. PascalCase alone doesn't imply a class:
 // React component questions (e.g. `StarRating`) are PascalCase
-// *functions*, and would get the wrong stub shape from a naming guess.
-function starterCode(functionName: string, isClassBased: boolean, language: EditorLanguage): string {
+function parseParams(input: string | undefined, language: EditorLanguage): string {
+  if (!input || !input.trim()) {
+    return language === 'typescript' ? '...args: unknown[]' : '...args';
+  }
+  const trimmed = input.trim();
+  if (language === 'typescript') {
+    return trimmed;
+  }
+  const params = trimmed
+    .split(',')
+    .map((part) => part.split(':')[0]!.trim())
+    .filter(Boolean)
+    .join(', ');
+  return params || '...args';
+}
+
+function starterCode(
+  functionName: string,
+  isClassBased: boolean,
+  language: EditorLanguage,
+  input?: string
+): string {
   if (isClassBased) {
     return `class ${functionName} {\n  constructor() {\n    // Write your solution here\n  }\n}\n`;
   }
-  if (language === 'typescript') {
-    return `function ${functionName}(...args: unknown[]): unknown {\n  // Write your solution here\n}\n`;
-  }
-  return `function ${functionName}(...args) {\n  // Write your solution here\n}\n`;
+  const params = parseParams(input, language);
+  return `function ${functionName}(${params}) {\n  // Write your solution here\n}\n`;
 }
 
 export function CodingScreen({ question: propQuestion }: CodingScreenProps = {}) {
@@ -68,8 +86,8 @@ function CodingScreenContent({ question }: { question: CodingQuestionDetail }) {
 
   const effectiveCode = useMemo(() => {
     if (code !== null) return code;
-    return starterCode(question.functionName, question.isClassBased, language);
-  }, [code, question.functionName, question.isClassBased, language]);
+    return starterCode(question.functionName, question.isClassBased, language, question.input);
+  }, [code, question.functionName, question.isClassBased, language, question.input]);
 
   const bookmarked = bookmarkedIds.includes(question.id);
 

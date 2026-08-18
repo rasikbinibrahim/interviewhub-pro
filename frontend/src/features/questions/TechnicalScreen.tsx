@@ -7,6 +7,7 @@ import { DifficultyBadge, Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { useLazyGetQuestionAnswerQuery } from '@/store/api/questionsApi';
 import { BackToListButton } from './BackToListButton';
+import { deriveTechnicalExample } from '@/shared/utils/deriveTechnicalExample';
 import type { TechnicalQuestionDetail } from '@/shared/types/question';
 
 interface TechnicalScreenProps {
@@ -117,7 +118,29 @@ export function TechnicalScreen({ question }: TechnicalScreenProps) {
                   </div>
                 </Section>
 
-                {/* 3. Production Example */}
+                {/* 3. Quick Code Example & Output */}
+                {(() => {
+                  const example = deriveTechnicalExample(answer);
+                  if (!example) return null;
+                  return (
+                    <Section icon={Lightbulb} title="Code Example &amp; Output">
+                      <div className="flex flex-col gap-3">
+                        <pre className="overflow-x-auto whitespace-pre-wrap rounded-md border border-border bg-surface-raised p-4 text-sm text-text-primary">
+                          <code>{example.code}</code>
+                        </pre>
+                        {example.output && (
+                          <div className="rounded-md border border-border bg-canvas p-3 font-mono text-sm text-text-primary">
+                            <span className="mr-2 text-xs font-bold uppercase tracking-wider text-text-secondary">Output:</span>
+                            {example.output}
+                          </div>
+                        )}
+                        <p className="text-sm leading-relaxed text-text-secondary">{example.explanation}</p>
+                      </div>
+                    </Section>
+                  );
+                })()}
+
+                {/* 4. Production Example */}
                 {answer.productionExample && (
                   <Section icon={Lightbulb} title="Production Scale Example">
                     <div className="whitespace-pre-wrap text-sm text-text-primary leading-relaxed bg-surface p-4 rounded-md border border-border">

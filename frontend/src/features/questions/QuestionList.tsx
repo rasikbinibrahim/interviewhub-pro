@@ -6,7 +6,7 @@ import { useAppSelector } from '@/shared/hooks/redux';
 import { selectSolvedIds, selectBookmarkedIds } from '@/shared/selectors/progressSelectors';
 import { Button } from '@/components/ui/Button';
 import { QuestionListItem } from './QuestionListItem';
-import type { Difficulty, QuestionPart, QuestionSummary, QuestionType } from '@/shared/types/question';
+import type { Difficulty, QuestionFilters, QuestionPart, QuestionType } from '@/shared/types/question';
 
 // Every filter + the current page lives in the URL (via useSearchParams)
 // rather than local component state. /practice and /practice/:questionId
@@ -131,14 +131,13 @@ export function QuestionList() {
     );
   }
 
-  const activeFilters = {
-    search: search || undefined,
-    difficulty: difficulty === 'All' ? undefined : difficulty,
-    questionType: questionType === 'All' ? undefined : questionType,
-    part: part === 'All' ? undefined : part,
-    category: category === 'All' ? undefined : category,
-    status: status === 'All' ? undefined : status,
-  };
+  const activeFilters: QuestionFilters = {};
+  if (search) activeFilters.search = search;
+  if (difficulty !== 'All') activeFilters.difficulty = difficulty;
+  if (questionType !== 'All') activeFilters.questionType = questionType;
+  if (part !== 'All') activeFilters.part = part;
+  if (category !== 'All') activeFilters.category = category;
+  if (status !== 'All') activeFilters.status = status;
 
   const { data: questions, isLoading } = useGetQuestionsQuery(activeFilters);
   // Unfiltered, so option labels can show how many questions exist in

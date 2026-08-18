@@ -5,6 +5,7 @@
 // Mirrors the MockTechnicalQuestion shape defined in @/mocks/questions.
 
 import type { MockTechnicalQuestion } from '@/mocks/questions';
+import type { TechnicalQuestionExample } from '@/shared/types/question';
 
 interface QuestionSeed {
   id: string;
@@ -17,6 +18,7 @@ interface QuestionSeed {
   expectedAnswer: string;
   deepExplanation: string;
   productionExample: string;
+  example?: TechnicalQuestionExample;
   bestPractices: string[];
   tradeOffs: string;
   commonMistakes: string[];
@@ -372,6 +374,28 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     followUpQuestions: ["What does the compiler prove for **TypeScript best practices**?","What JavaScript is emitted?","What happens at runtime?","How would you model the same concept in a monorepo?","How would you test the runtime boundary?","What trade-off appears at scale?"],
     relatedTopics: ["Generics","Interfaces","Type Aliases","Utility Types","Conditional Types","React + TypeScript","tsconfig","Runtime Validation","Monorepos","---","# Module 2 – Types","**Questions 21–40**"],
   },
+  {
+    id: "ts-m1-21",
+    number: "TS-M1-21",
+    title: "Block Scope in TypeScript",
+    difficulty: "Easy",
+    experienceLevel: "0–2 Years",
+    companies: ["Google","Meta","Amazon","Microsoft","Netflix","Adobe","Atlassian","Stripe","Uber","Flipkart","Zoho"],
+    category: "TypeScript Fundamentals",
+    expectedAnswer: "Block scope means a variable is accessible only inside the `{ }` block where it is declared. TypeScript inherits this straight from JavaScript: `let` and `const` are block-scoped, while `var` is function-scoped and ignores block boundaries. The compiler additionally flags any out-of-scope access as a type error at compile time, before the code ever runs.",
+    deepExplanation: "Example:\n\n```ts\n{\n  let a: number = 10;\n  const b: number = 20;\n\n  console.log(a); // 10\n  console.log(b); // 20\n}\n\nconsole.log(a); // ❌ Compile error: Cannot find name 'a'.\nconsole.log(b); // ❌ Compile error: Cannot find name 'b'.\n```\n\nProduction pattern:\n\n```ts\nfunction sumPositive(values: number[]): number {\n  let total = 0;\n\n  for (let i = 0; i < values.length; i++) {\n    const value = values[i]; // block-scoped to this loop body\n    if (value > 0) {\n      total += value;\n    }\n  }\n\n  // `i` and `value` are not reachable here — the compiler enforces it\n  return total;\n}\n```\n\nWhy it matters: `let`/`const` block scope removes an entire class of bugs `var` caused — leaking loop counters, accidental reassignment, and stale closures inside callbacks. TypeScript turns the ReferenceError you'd only see at runtime with `var` misuse into a compile-time diagnostic.",
+    productionExample: "```ts\n// var: no block scope, leaks past if/for\nif (true) {\n  var leaked: number = 1;\n}\nconsole.log(leaked); // ✅ 1 — leaked out of the if block\n\n// let: proper block scope\nif (true) {\n  let contained: number = 1;\n}\n// console.log(contained); // ❌ Compile error: Cannot find name 'contained'.\n\n// for loop: each iteration gets its own block-scoped binding\nconst callbacks: Array<() => number> = [];\nfor (let i = 0; i < 3; i++) {\n  callbacks.push(() => i); // captures this iteration's own `i`\n}\ncallbacks.map((fn) => fn()); // ✅ [0, 1, 2]\n```",
+    example: {
+      code: "console.log(value);\nvar value = 10;",
+      output: "undefined",
+      explanation: "`var` declarations are hoisted and initialized with `undefined`. Only the declaration is hoisted, not the assignment. Conceptually, TypeScript (like JavaScript) behaves as: `var value; console.log(value); value = 10;`. Writing the same thing with `let value: number = 10;` instead throws `ReferenceError: Cannot access 'value' before initialization` — the binding is hoisted but left in the Temporal Dead Zone.",
+    },
+    bestPractices: ["Default to `const`; use `let` only when a binding must be reassigned.","Never use `var` in new TypeScript code — enable the `no-var` ESLint rule.","Declare loop counters with `let` inside the `for(...)` so each iteration gets its own binding.","Keep bindings scoped to the smallest block that needs them.","Let the compiler's 'Cannot find name' errors catch scope leaks before code review."],
+    tradeOffs: "Advantages: Predictable, narrow variable lifetimes; safe loop-captured closures; compile-time enforcement of scope violations instead of silent runtime bugs. Disadvantages: Migrating legacy `var`-heavy code can surface previously-hidden bugs; the Temporal Dead Zone can confuse developers new to `let`/`const` who expect `var`-style hoisting.",
+    commonMistakes: ["Assuming `var` behaves like `let` inside `if`/`for` blocks.","Reusing a `var` loop counter across async callbacks and getting the same final value in every callback.","Interview trap: Explaining block scope only in terms of `{}` without mentioning that `var` ignores it entirely.","Interview trap: Forgetting that `let`/`const` are still hoisted, just left in the Temporal Dead Zone until their declaration executes."],
+    followUpQuestions: ["What is the Temporal Dead Zone and how does it relate to block scope?","Why does `var` inside a `for` loop capture the wrong value in closures, while `let` does not?","How does TypeScript's compiler catch block-scope violations that JavaScript would only fail on at runtime?","What is illegal shadowing between `var` and `let` in the same scope?"],
+    relatedTopics: ["Block Scope","Function Scope","Temporal Dead Zone","let","const","var","Hoisting","Closures","---"],
+  },
 ];
 
 export const MOCK_TYPESCRIPT_MODULE1_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = QUESTION_SEEDS.map((seed) => ({
@@ -396,6 +420,7 @@ export const MOCK_TYPESCRIPT_MODULE1_TECHNICAL_QUESTIONS: MockTechnicalQuestion[
     expectedAnswer: seed.expectedAnswer,
     deepExplanation: seed.deepExplanation,
     productionExample: seed.productionExample,
+    ...(seed.example ? { example: seed.example } : {}),
     bestPractices: seed.bestPractices,
     tradeOffs: seed.tradeOffs,
     commonMistakes: seed.commonMistakes,

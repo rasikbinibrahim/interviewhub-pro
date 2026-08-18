@@ -358,9 +358,14 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Block Scope?"
     },
     "answer": {
-      "expectedAnswer": "Block scope is created by constructs such as: `let` and `const` are block-scoped.",
-      "deepExplanation": "Block scope is created by constructs such as: `let` and `const` are block-scoped.",
-      "productionExample": "Work through the accompanying code example for \"What is Block Scope?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "Block scope means a variable declared with `let` or `const` is accessible only inside the nearest enclosing `{ }` block. `var` ignores block boundaries and is function-scoped instead.",
+      "deepExplanation": "Any `{ }` pair — an `if`, a `for`, or a bare block — creates a new lexical scope for `let`/`const`. Each iteration of a `for (let i ...)` loop even gets its own fresh binding of `i`, which is why closures created inside the loop capture the right value. `var` has no notion of block scope: it is hoisted to the nearest enclosing function (or the global object if there is none), so it \"leaks\" out of `if`/`for`/`{}` blocks.",
+      "example": {
+        "code": "console.log(value);\nvar value = 10;",
+        "output": "undefined",
+        "explanation": "`var` declarations are hoisted and initialized with `undefined`. Only the declaration is hoisted, not the assignment. Conceptually, JavaScript behaves like: `var value; console.log(value); value = 10;`. Contrast this with `let`/`const`: `console.log(value); let value = 10;` throws a ReferenceError instead, because the binding exists in the Temporal Dead Zone until its declaration runs."
+      },
+      "productionExample": "```js\n// 1. Basic block scope\n{\n  let a = 10;\n  const b = 20;\n\n  console.log(a); // 10\n  console.log(b); // 20\n}\n\nconsole.log(a); // ❌ ReferenceError: a is not defined\nconsole.log(b); // ❌ ReferenceError: b is not defined\n\n// 2. let/const vs var\nif (true) {\n  let x = 10;\n  var y = 20;\n}\n\nconsole.log(x); // ❌ ReferenceError: x is not defined\nconsole.log(y); // ✅ 20\n\n// 3. Loops\nfor (let i = 0; i < 3; i++) {\n  console.log(i); // 0, 1, 2\n}\nconsole.log(i); // ❌ ReferenceError: i is not defined\n\nfor (var j = 0; j < 3; j++) {\n  console.log(j); // 0, 1, 2\n}\nconsole.log(j); // ✅ 3\n\n// 4. Nested blocks\nlet name = \"Rasik\";\n{\n  let age = 25;\n  {\n    console.log(name); // ✅ \"Rasik\" — visible via the scope chain\n    console.log(age);  // ✅ 25 — visible in the nested block\n  }\n}\nconsole.log(age); // ❌ ReferenceError: age is not defined\n```",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",

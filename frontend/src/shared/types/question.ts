@@ -138,10 +138,18 @@ export interface CodingQuestionSolution {
 // Returned only by GET /questions/:id/answer — the technical-question
 // equivalent of CodingQuestionSolution, same reveal-integrity intent:
 // none of this ships in QuestionDetail up front.
+export interface TechnicalQuestionExample {
+  code: string;
+  output: string;
+  explanation: string;
+}
+
 export interface TechnicalQuestionAnswer {
   expectedAnswer: string;
   deepExplanation: string;
   productionExample: string;
+  /** Short runnable snippet paired with its exact output — a quick "read the code, predict the output" check distinct from the longer productionExample. */
+  example?: TechnicalQuestionExample;
   bestPractices: string[];
   tradeOffs: string;
   commonMistakes: string[];

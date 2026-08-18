@@ -579,4 +579,532 @@ export const MOCK_FRONTEND_MACHINE_CODING_EXTRA_TECHNICAL_QUESTIONS: MockTechnic
       relatedTopics: ['Intl.RelativeTimeFormat', 'Timezone handling', 'date-fns', 'ISO 8601'],
     },
   },
+  {
+    detail: {
+      id: 'mcx-12',
+      questionNumber: 'MCX-012',
+      title: 'Polyfill for Promise.all()',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(0, 5),
+      frequency: 5,
+      category: 'Promises & Async',
+      part: 'Machine Coding',
+      concepts: ['Promise', 'Concurrency', 'Fail-fast', 'Polyfills'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How would you write a custom polyfill for Promise.all() in JavaScript?',
+    },
+    answer: {
+      expectedAnswer:
+        'Return a new Promise that takes an array of promises. Maintain a results array and a completed count. Iterate through the input array, wrapping each item in Promise.resolve() to handle non-promise values. Place each resolved value at its original index, increment the count, and resolve the main promise when count equals input length. If any input promise rejects, immediately reject the main promise.',
+      deepExplanation:
+        '```js\nfunction customPromiseAll(promises) {\n  return new Promise((resolve, reject) => {\n    if (!Array.isArray(promises)) {\n      return reject(new TypeError("Argument must be an iterable array"));\n    }\n    const results = [];\n    let completedCount = 0;\n    if (promises.length === 0) return resolve([]);\n\n    promises.forEach((promise, index) => {\n      Promise.resolve(promise)\n        .then((val) => {\n          results[index] = val;\n          completedCount++;\n          if (completedCount === promises.length) {\n            resolve(results);\n          }\n        })\n        .catch(reject); // Fail-fast on first rejection\n    });\n  });\n}\n\n// Usage example:\nconst p1 = Promise.resolve(10);\nconst p2 = 20; // Non-promise primitive\nconst p3 = new Promise((res) => setTimeout(() => res(30), 100));\n\ncustomPromiseAll([p1, p2, p3]).then(console.log); // [10, 20, 30]\n```\nKey details to keep in mind during interviews:\n1. Array indexing: Preserving original order is essential (do not use `results.push()`).\n2. Primitive values: Inputs may not be Promises (e.g. numbers, strings), so `Promise.resolve(promise)` is mandatory.\n3. Fail-fast: Rejection must short-circuit immediately on the first error.',
+      productionExample:
+        'Understanding `Promise.all()` internals is crucial for writing custom data loading pipelines, handling bulk HTTP requests, and constructing resilient fallback mechanisms in modern React/Vite frontends.',
+      bestPractices: [
+        'Wrap every input element in Promise.resolve() to normalize primitives and Promises',
+        'Store results by index (results[index] = val) rather than array push to maintain input ordering',
+        'Check for empty array input immediately and resolve with []',
+        'Reject immediately upon encountering the first error (fail-fast behavior)',
+      ],
+      tradeOffs:
+        'Advantages: simple, linear time O(N) evaluation. Disadvantages: if one promise rejects, all other resolved results are discarded from the output value.',
+      commonMistakes: [
+        'Using results.push() instead of indexing results[index], breaking the order of resolved values when async tasks finish out of sequence',
+        'Forgetting to resolve immediately on an empty input array []',
+        'Failing to wrap non-promise primitives with Promise.resolve()',
+      ],
+      followUpQuestions: [
+        'How does Promise.allSettled differ from Promise.all?',
+        'How would you limit concurrency if the input array contains 10,000 requests?',
+      ],
+      relatedTopics: ['Promise.allSettled', 'Promise.race', 'Promise.any', 'Async/Await'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-13',
+      questionNumber: 'MCX-013',
+      title: 'Polyfill for Promise.race() and Promise.any()',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(1, 6),
+      frequency: 4,
+      category: 'Promises & Async',
+      part: 'Machine Coding',
+      concepts: ['Promise.race', 'Promise.any', 'AggregateError', 'Polyfills'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How would you write polyfills for Promise.race() and Promise.any() in JavaScript?',
+    },
+    answer: {
+      expectedAnswer:
+        'Promise.race() resolves or rejects as soon as the first promise settles. Promise.any() resolves as soon as the first promise fulfills; if all promises reject, it rejects with an AggregateError containing all rejection reasons.',
+      deepExplanation:
+        '```js\n// Promise.race Polyfill\nfunction customPromiseRace(promises) {\n  return new Promise((resolve, reject) => {\n    promises.forEach((promise) => {\n      Promise.resolve(promise).then(resolve, reject);\n    });\n  });\n}\n\n// Promise.any Polyfill\nfunction customPromiseAny(promises) {\n  return new Promise((resolve, reject) => {\n    const errors = [];\n    let rejectedCount = 0;\n    if (promises.length === 0) {\n      return reject(new AggregateError([], "All promises were rejected"));\n    }\n\n    promises.forEach((promise, index) => {\n      Promise.resolve(promise)\n        .then(resolve) // Resolve immediately on first fulfillment\n        .catch((err) => {\n          errors[index] = err;\n          rejectedCount++;\n          if (rejectedCount === promises.length) {\n            reject(new AggregateError(errors, "All promises were rejected"));\n          }\n        });\n    });\n  });\n}\n```',
+      productionExample:
+        'Promise.race is used for request timeouts (`Promise.race([fetchData(), timeoutPromise()])`), while Promise.any is ideal for redundant service calls (e.g. querying mirror CDN endpoints and taking the fastest successful response).',
+      bestPractices: [
+        'Use AggregateError when all promises reject in Promise.any',
+        'Wrap all items with Promise.resolve() for safe handling',
+        'Handle empty input arrays correctly for both methods',
+      ],
+      tradeOffs:
+        'Promise.race does not cancel losing in-flight operations; explicit AbortController usage is required for cancellation.',
+      commonMistakes: [
+        'Confusing Promise.race (settles on 1st resolve OR reject) with Promise.any (settles on 1st resolve, ignores early rejects)',
+        'Not using AggregateError for Promise.any when all promises reject',
+      ],
+      followUpQuestions: [
+        'How do you cancel pending fetch requests when Promise.race settles early?',
+      ],
+      relatedTopics: ['Promise.race', 'Promise.any', 'AggregateError', 'AbortController'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-14',
+      questionNumber: 'MCX-014',
+      title: 'Async Retry Mechanism with Exponential Backoff',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(0, 6),
+      frequency: 5,
+      category: 'Promises & Async',
+      part: 'Machine Coding',
+      concepts: ['Async/Await', 'Retry Logic', 'Exponential Backoff', 'Error Handling'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How would you implement an asynchronous operation retry mechanism with N retries and exponential backoff?',
+    },
+    answer: {
+      expectedAnswer:
+        'Execute the asynchronous function inside a try block. If it fails and retries remain, wait for a calculated delay duration (`delay * 2^attempt`), then recursively call the function with `retries - 1`. If no retries remain, rethrow the final error.',
+      deepExplanation:
+        '```js\nasync function retryWithBackoff(fn, retries = 3, delay = 1000, backoffFactor = 2) {\n  try {\n    return await fn();\n  } catch (error) {\n    if (retries <= 0) throw error;\n    \n    // Add optional random jitter to prevent thundering herd\n    const jitter = Math.random() * 200;\n    const currentDelay = delay + jitter;\n    \n    console.warn(`Attempt failed. Retrying in ${Math.round(currentDelay)}ms... (${retries} retries left)`);\n    await new Promise((resolve) => setTimeout(resolve, currentDelay));\n    \n    return retryWithBackoff(fn, retries - 1, delay * backoffFactor, backoffFactor);\n  }\n}\n\n// Example usage:\nlet attempt = 0;\nconst flakyApi = async () => {\n  attempt++;\n  if (attempt < 3) throw new Error("Network Flake 503");\n  return "Data Loaded Successfully!";\n};\n\nretryWithBackoff(flakyApi, 3, 500).then(console.log);\n```',
+      productionExample:
+        'Used in HTTP client wrappers (Axios interceptors, RTK Query baseQuery, custom fetch hooks) to gracefully handle transient network drops or 503 Service Unavailable API responses.',
+      bestPractices: [
+        'Multiply delay by a factor (usually 2) for exponential backoff',
+        'Add random jitter to avoid thundering herd problem when many clients retry simultaneously',
+        'Ensure the final error is thrown once retries are exhausted',
+      ],
+      tradeOffs:
+        'Retrying non-idempotent HTTP requests (e.g. POST payments) can cause duplicate actions if not guarded by idempotency keys.',
+      commonMistakes: [
+        'Retrying infinitely without a upper retries limit',
+        'Retrying 4xx client errors (e.g. 401 Unauthorized or 404 Not Found) which will never succeed on retry',
+      ],
+      followUpQuestions: [
+        'How would you restrict retries to only 5xx or network errors?',
+        'How would you add an AbortSignal to cancel pending retries?',
+      ],
+      relatedTopics: ['Exponential Backoff', 'Jitter', 'RTK Query', 'Axios Interceptors'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-15',
+      questionNumber: 'MCX-015',
+      title: 'Implement clearAllTimeout() in JavaScript',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(2, 7),
+      frequency: 4,
+      category: 'Timers and Events',
+      part: 'Machine Coding',
+      concepts: ['setTimeout', 'clearTimeout', 'Monkey Patching', 'Timer Tracking'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How would you implement a clearAllTimeout() function in JavaScript?',
+    },
+    answer: {
+      expectedAnswer:
+        'Monkey-patch `window.setTimeout` and `window.clearTimeout`. Store active timer IDs in a Set when created. Remove timer IDs when they complete or are cleared manually. `clearAllTimeout()` iterates through all active IDs in the Set, cancels each via native `clearTimeout`, and clears the Set.',
+      deepExplanation:
+        '```js\nconst TimerManager = (() => {\n  const activeTimerIds = new Set();\n  const originalSetTimeout = window.setTimeout;\n  const originalClearTimeout = window.clearTimeout;\n\n  window.setTimeout = function (callback, delay, ...args) {\n    let timerId;\n    const wrappedCallback = () => {\n      activeTimerIds.delete(timerId);\n      callback.apply(this, args);\n    };\n    timerId = originalSetTimeout(wrappedCallback, delay, ...args);\n    activeTimerIds.add(timerId);\n    return timerId;\n  };\n\n  window.clearTimeout = function (timerId) {\n    activeTimerIds.delete(timerId);\n    originalClearTimeout(timerId);\n  };\n\n  return {\n    clearAllTimeout() {\n      for (const id of activeTimerIds) {\n        originalClearTimeout(id);\n      }\n      activeTimerIds.clear();\n    }\n  };\n})();\n```',
+      productionExample:
+        'Useful in single-page applications during route transitions or component unmounting to prevent memory leaks and unexpected state updates from pending timer callbacks.',
+      bestPractices: [
+        'Preserve argument forwarding (...args) and correct `this` context',
+        'Clean up Set items when callbacks fire normally to prevent memory leaks',
+        'Keep original references to native functions before overriding',
+      ],
+      tradeOffs:
+        'Overriding native browser globals must be done with care in shared library environments.',
+      commonMistakes: [
+        'Forgetting to delete timer IDs from the tracking Set when the callback executes naturally',
+        'Not passing extra arguments passed to setTimeout',
+      ],
+      followUpQuestions: [
+        'How would you extend this approach to build clearAllInterval()?',
+      ],
+      relatedTopics: ['setTimeout', 'clearTimeout', 'Memory Leaks', 'SPA Lifecycle'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-16',
+      questionNumber: 'MCX-016',
+      title: 'Polyfill for Array.prototype.flat()',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(0, 5),
+      frequency: 5,
+      category: 'Mastering Array Methods',
+      part: 'Machine Coding',
+      concepts: ['Array.prototype.flat', 'Recursion', 'Array.prototype.reduce', 'Polyfills'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How would you write a custom polyfill for Array.prototype.flat() in JavaScript?',
+    },
+    answer: {
+      expectedAnswer:
+        'Use Array.prototype.reduce() to iterate over elements. For each element, if it is an Array and depth > 0, recursively call flat with depth - 1 and spread the result into the accumulator. Otherwise, push the element directly.',
+      deepExplanation:
+        '```js\nArray.prototype.customFlat = function (depth = 1) {\n  if (depth < 1) return this.slice();\n\n  return this.reduce((acc, val) => {\n    if (Array.isArray(val)) {\n      acc.push(...val.customFlat(depth - 1));\n    } else {\n      acc.push(val);\n    }\n    return acc;\n  }, []);\n};\n\n// Iterative alternative (handles Infinity depth without stack overflow):\nfunction flatDeepIterative(arr) {\n  const stack = [...arr];\n  const res = [];\n  while (stack.length) {\n    const next = stack.pop();\n    if (Array.isArray(next)) {\n      stack.push(...next);\n    } else {\n      res.push(next);\n    }\n  }\n  return res.reverse();\n}\n```',
+      productionExample:
+        'Flattening deeply nested API responses (such as comments threads or category trees) for flat list rendering in React components.',
+      bestPractices: [
+        'Support dynamic depth parameter defaulting to 1',
+        'Handle depth === Infinity correctly',
+        'Preserve sparse array handling if required by strict spec compliance',
+      ],
+      tradeOffs:
+        'Recursive implementation can hit call stack limits on extremely deep nestings (> 10,000 levels); stack-based iterative approach is safer for arbitrary depth.',
+      commonMistakes: [
+        'Ignoring the depth parameter and flattening all levels unconditionally',
+        'Mutating the original array instead of returning a new one',
+      ],
+      followUpQuestions: [
+        'How does flatMap() differ from flat() followed by map()?',
+      ],
+      relatedTopics: ['Array.prototype.reduce', 'Recursion', 'Tree Flattening'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-17',
+      questionNumber: 'MCX-017',
+      title: 'Polyfill for Function.prototype.bind()',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(1, 6),
+      frequency: 5,
+      category: 'Function Prototypes',
+      part: 'Machine Coding',
+      concepts: ['Function.prototype.bind', 'this binding', 'Currying', 'Polyfills'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How would you write a custom polyfill for Function.prototype.bind() in JavaScript?',
+    },
+    answer: {
+      expectedAnswer:
+        'Return a new wrapper function that invokes the original target function using `apply()`, binding the context and combining preset argument parameters with newly passed arguments.',
+      deepExplanation:
+        '```js\nFunction.prototype.customBind = function (context, ...boundArgs) {\n  const targetFn = this;\n  if (typeof targetFn !== "function") {\n    throw new TypeError("Function.prototype.bind must be called on a function");\n  }\n\n  return function (...callArgs) {\n    return targetFn.apply(context, [...boundArgs, ...callArgs]);\n  };\n};\n\n// Usage example:\nfunction greet(greeting, punctuation) {\n  return `${greeting}, ${this.name}${punctuation}`;\n}\nconst user = { name: "Alice" };\nconst greetAlice = greet.customBind(user, "Hello");\nconsole.log(greetAlice("!")); // "Hello, Alice!"\n```',
+      productionExample:
+        'Used in event handler context binding, partial function application, and legacy class component callback bindings.',
+      bestPractices: [
+        'Validate that the target object is a function',
+        'Combine bound args and invocation call args cleanly',
+        'Handle `new` keyword instantiation if supporting constructor bindings',
+      ],
+      tradeOffs:
+        'Native bind is implemented in C++ in engines and optimized; custom polyfill adds a extra JS closure layer.',
+      commonMistakes: [
+        'Forgetting to combine bound args with newly passed arguments',
+        'Not preserving the return value of the underlying function call',
+      ],
+      followUpQuestions: [
+        'How do custom call() and apply() polyfills differ from bind()?',
+      ],
+      relatedTopics: ['Function.prototype.call', 'Function.prototype.apply', 'Lexical Context'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-18',
+      questionNumber: 'MCX-018',
+      title: 'Polyfill for compose() and pipe() Functions',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(0, 5),
+      frequency: 4,
+      category: 'Advanced Function Concepts',
+      part: 'Machine Coding',
+      concepts: ['Functional Programming', 'compose', 'pipe', 'reduceRight'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How would you create compose() and pipe() utility functions in JavaScript?',
+    },
+    answer: {
+      expectedAnswer:
+        'compose() executes functions right-to-left using `Array.prototype.reduceRight()`. pipe() executes functions left-to-right using `Array.prototype.reduce()`. Both take a list of functions and return a new function that passes the accumulated result from one function to the next.',
+      deepExplanation:
+        '```js\n// compose (Right to Left)\nconst compose = (...fns) => (initialValue) =>\n  fns.reduceRight((acc, fn) => fn(acc), initialValue);\n\n// pipe (Left to Right)\nconst pipe = (...fns) => (initialValue) =>\n  fns.reduce((acc, fn) => fn(acc), initialValue);\n\n// Usage example:\nconst add5 = (x) => x + 5;\nconst multiply2 = (x) => x * 2;\nconst square = (x) => x * x;\n\n// pipe: (2 + 5) = 7 -> (7 * 2) = 14 -> 14^2 = 196\nconsole.log(pipe(add5, multiply2, square)(2)); // 196\n\n// compose: 2^2 = 4 -> (4 * 2) = 8 -> 8 + 5 = 13\nconsole.log(compose(add5, multiply2, square)(2)); // 13\n```',
+      productionExample:
+        'Widely used in Redux middleware chains, data transformation pipelines, and functional UI component wrappers (e.g. Higher-Order Components).',
+      bestPractices: [
+        'Keep composed functions pure and single-arity',
+        'Prefer pipe() for left-to-right readable data transformation flows',
+      ],
+      tradeOffs:
+        'Deep function composition stacks can be harder to step through in devtools debugger compared to sequential variable assignments.',
+      commonMistakes: [
+        'Confusing evaluation order between compose (R-to-L) and pipe (L-to-R)',
+        'Passing multi-argument functions into intermediate composition steps',
+      ],
+      followUpQuestions: [
+        'How do Redux createStore enhancers use compose()?',
+      ],
+      relatedTopics: ['Higher-Order Functions', 'Functional Programming', 'Redux Compose'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-19',
+      questionNumber: 'MCX-019',
+      title: 'Publisher-Subscriber (Pub-Sub) Pattern Implementation',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(0, 6),
+      frequency: 5,
+      category: 'Design Patterns & Architecture',
+      part: 'Machine Coding',
+      concepts: ['Pub-Sub Pattern', 'Event Emitter', 'Decoupling', 'Observer Pattern'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How would you implement a complete Pub-Sub (Event Emitter) pattern in JavaScript?',
+    },
+    answer: {
+      expectedAnswer:
+        'Create a PubSub class with an internal events Map. Implement subscribe(event, listener) to register callbacks and return an unsubscribe function. Implement publish(event, data) to trigger all registered callbacks for that event.',
+      deepExplanation:
+        '```js\nclass PubSub {\n  constructor() {\n    this.events = new Map();\n  }\n\n  subscribe(event, listener) {\n    if (!this.events.has(event)) {\n      this.events.set(event, []);\n    }\n    this.events.get(event).push(listener);\n\n    // Return cleanup unsubscribe function\n    return () => {\n      const listeners = this.events.get(event).filter((l) => l !== listener);\n      this.events.set(event, listeners);\n    };\n  }\n\n  publish(event, data) {\n    if (this.events.has(event)) {\n      this.events.get(event).forEach((listener) => listener(data));\n    }\n  }\n}\n\n// Usage example:\nconst hub = new PubSub();\nconst unsub = hub.subscribe("USER_LOGIN", (user) => console.log(`Welcome ${user.name}`));\nhub.publish("USER_LOGIN", { name: "Sarah" }); // Output: Welcome Sarah\nunsub(); // Clean up listener\n```',
+      productionExample:
+        'Used in global micro-frontend event buses, notification toasts, and custom analytics loggers to decouple emitter components from consumers.',
+      bestPractices: [
+        'Return an unsubscribe callback from subscribe() to make cleanup in React useEffect trivial',
+        'Use Map and Set for O(1) event lookups',
+        'Safely clone listener arrays during publish to prevent issues if a listener unsubscribes while executing',
+      ],
+      tradeOffs:
+        'Overuse can make global event flow harder to trace compared to explicit props or typed Redux state.',
+      commonMistakes: [
+        'Forgetting cleanup mechanism, causing memory leaks when components unmount',
+        'Not handling non-existent event topics gracefully',
+      ],
+      followUpQuestions: [
+        'How does Pub-Sub differ from the Observer pattern?',
+        'How would you add once(event, callback) support?',
+      ],
+      relatedTopics: ['EventEmitter', 'Observer Pattern', 'Event Bus', 'Micro-frontends'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-20',
+      questionNumber: 'MCX-020',
+      title: 'Custom Debounce and Throttle Implementation',
+      difficulty: 'Medium',
+      companies: COMPANIES.slice(0, 6),
+      frequency: 5,
+      category: 'Optimization Techniques',
+      part: 'Machine Coding',
+      concepts: ['Debounce', 'Throttle', 'Higher-Order Functions', 'Timers'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '2–5 Years',
+      question: 'How do you implement custom debounce and throttle functions in JavaScript?',
+    },
+    answer: {
+      expectedAnswer:
+        'Debounce delays function execution until N ms have passed since the last call. Throttle ensures function execution occurs at most once every N ms.',
+      deepExplanation:
+        '```js\n// Debounce\nfunction debounce(fn, delay) {\n  let timerId;\n  return function (...args) {\n    clearTimeout(timerId);\n    timerId = setTimeout(() => {\n      fn.apply(this, args);\n    }, delay);\n  };\n}\n\n// Throttle\nfunction throttle(fn, limit) {\n  let inThrottle = false;\n  return function (...args) {\n    if (!inThrottle) {\n      fn.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => {\n        inThrottle = false;\n      }, limit);\n    }\n  };\n}\n```',
+      productionExample:
+        'Debounce is used for autocomplete input queries and autosave fields. Throttle is used for scroll position handlers, window resize calculations, and drag events.',
+      bestPractices: [
+        'Preserve lexical context (`this`) and arguments (`...args`)',
+        'Return cancel method on the returned debounced function if cleanup is needed',
+      ],
+      tradeOffs:
+        'Debounce delays immediate feedback until typing stops; throttle fires immediately but skips intermediate updates.',
+      commonMistakes: [
+        'Creating a new debounced instance inside a React component render body without useMemo/useCallback',
+      ],
+      followUpQuestions: [
+        'How would you implement leading and trailing options for debounce?',
+      ],
+      relatedTopics: ['Debounce', 'Throttle', 'Performance Optimization', 'Event Listeners'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-21',
+      questionNumber: 'MCX-021',
+      title: 'Block Scope vs Function Scope (let, const vs var)',
+      difficulty: 'Easy',
+      companies: ['Google', 'Meta', 'Amazon', 'Microsoft', 'Netflix'],
+      frequency: 5,
+      category: 'JS Mechanics',
+      part: 'Machine Coding',
+      concepts: ['Block scope', 'Function scope', 'Hoisting', 'Temporal Dead Zone', 'let', 'const', 'var'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '0–2 Years',
+      question:
+        'Explain Block Scope vs Function Scope in JavaScript with examples for let, const, var, loops, and nested blocks.',
+    },
+    answer: {
+      expectedAnswer:
+        'Block scope restricts a variable to the nearest enclosing `{ }` block when declared with `let` or `const`. `var` ignores blocks and is function-scoped (or globally scoped if declared outside a function).',
+      deepExplanation:
+        '```js\n// 1. Basic Block Scope with let and const\n{\n  let a = 10;\n  const b = 20;\n  console.log(a); // 10\n  console.log(b); // 20\n}\n// console.log(a); // ❌ ReferenceError: a is not defined\n// console.log(b); // ❌ ReferenceError: b is not defined\n\n// 2. Block vs Function Scope in conditional blocks\nif (true) {\n  let x = 10; // Block-scoped\n  var y = 20; // Function-scoped (hoisted to outer scope)\n}\n// console.log(x); // ❌ ReferenceError\nconsole.log(y);    // ✅ 20\n\n// 3. Loop Scoping\nfor (let i = 0; i < 3; i++) {\n  // Each iteration creates a new block binding for `i`\n}\n// console.log(i); // ❌ ReferenceError\n\nfor (var j = 0; j < 3; j++) {\n  // `j` is hoisted outside the loop\n}\nconsole.log(j);    // ✅ 3\n\n// 4. Nested Block Scoping\nlet name = "Rasik";\n{\n  let age = 25;\n  {\n    console.log(name); // ✅ "Rasik" (searches outer lexical scopes)\n    console.log(age);  // ✅ 25\n  }\n}\n// console.log(age); // ❌ ReferenceError: age is not defined\n```',
+      productionExample:
+        'Modern linter rules (ESLint `no-var`, `prefer-const`) enforce block-scoped variables to prevent unintended leakage across loop iterations and conditional branches.',
+      example: {
+        code: "// 1. Basic Block Scope with let and const\n{\n  let a = 10;\n  const b = 20;\n  console.log(a); // 10\n  console.log(b); // 20\n}\n// console.log(a); // ❌ ReferenceError: a is not defined\n// console.log(b); // ❌ ReferenceError: b is not defined\n\n// 2. Block vs Function Scope in conditional blocks\nif (true) {\n  let x = 10; // Block-scoped\n  var y = 20; // Function-scoped (hoisted to outer scope)\n}\n// console.log(x); // ❌ ReferenceError\nconsole.log(y);    // ✅ 20\n\n// 3. Loop Scoping\nfor (let i = 0; i < 3; i++) {\n  // Each iteration creates a new block binding for `i`\n}\n// console.log(i); // ❌ ReferenceError\n\nfor (var j = 0; j < 3; j++) {\n  // `j` is hoisted outside the loop\n}\nconsole.log(j);    // ✅ 3\n\n// 4. Nested Block Scoping\nlet name = \"Rasik\";\n{\n  let age = 25;\n  {\n    console.log(name); // ✅ \"Rasik\" (searches outer lexical scopes)\n    console.log(age);  // ✅ 25\n  }\n}\n// console.log(age); // ❌ ReferenceError: age is not defined",
+        output: "10",
+        explanation: "Block scope restricts a variable to the nearest enclosing `{ }` block when declared with `let` or `const`. `var` ignores blocks and is function-scoped (or globally scoped if declared outside a function)."
+      },
+      bestPractices: [
+        'Default to `const` for all variable declarations unless reassignment is required',
+        'Use `let` only for reassigned loop variables or counters',
+        'Avoid using `var` in modern JavaScript applications',
+        'Keep variable scope as narrow as possible to improve readability and prevent side-effects',
+      ],
+      tradeOffs:
+        'Block scoping with `let`/`const` prevents scope leakage bugs and enables cleaner closures in loops, but requires understanding Temporal Dead Zone (TDZ) rules.',
+      commonMistakes: [
+        'Expecting `var` declared inside an `if` block or `for` loop to stay private to that block',
+        'Confusing `const` immutability of variable binding with immutability of object properties',
+        'Referencing a `let` or `const` variable before its declaration line (TDZ ReferenceError)',
+      ],
+      followUpQuestions: [
+        'What is the Temporal Dead Zone (TDZ) and how does it affect `let` and `const`?',
+        'How does a `let`-based for loop handle asynchronous callbacks compared to `var`?',
+      ],
+      relatedTopics: ['Block Scope', 'Function Scope', 'Temporal Dead Zone', 'Hoisting'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-22',
+      questionNumber: 'MCX-022',
+      title: 'Array Operations & Custom Polyfills (forEach, push, pop)',
+      difficulty: 'Medium',
+      companies: ['Amazon', 'Meta', 'Google', 'Microsoft', 'Uber'],
+      frequency: 5,
+      category: 'Array Methods',
+      part: 'Machine Coding',
+      concepts: ['forEach', 'push', 'pop', 'shift', 'unshift', 'splice', 'slice', 'Polyfill', 'Array.prototype'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '0–2 Years',
+      question:
+        'Explain core JavaScript array operations (forEach, push, pop, shift, unshift) and implement custom polyfills without using built-in array methods.',
+    },
+    answer: {
+      expectedAnswer:
+        '`push` appends elements to the end and returns the new length. `pop` removes and returns the last element. `forEach` executes a provided callback once for each array element. Custom polyfills can be attached to `Array.prototype`.',
+      deepExplanation:
+        '```js\n// 1. Custom Array.prototype.myForEach\nArray.prototype.myForEach = function (callback, thisArg) {\n  if (typeof callback !== "function") {\n    throw new TypeError(callback + " is not a function");\n  }\n  for (let i = 0; i < this.length; i++) {\n    if (i in this) {\n      callback.call(thisArg, this[i], i, this);\n    }\n  }\n};\n\n// 2. Custom Array.prototype.myPush\nArray.prototype.myPush = function (...items) {\n  for (let i = 0; i < items.length; i++) {\n    this[this.length] = items[i];\n  }\n  return this.length;\n};\n\n// 3. Custom Array.prototype.myPop\nArray.prototype.myPop = function () {\n  if (this.length === 0) return undefined;\n  const lastItem = this[this.length - 1];\n  delete this[this.length - 1];\n  this.length--;\n  return lastItem;\n};\n\n// Example Usage:\nconst nums = [1, 2, 3];\nnums.myPush(4, 5); // Returns 5, nums is now [1, 2, 3, 4, 5]\nconst popped = nums.myPop(); // Returns 5, nums is now [1, 2, 3, 4]\nnums.myForEach((val, idx) => console.log(`Index ${idx}: ${val}`));\n```',
+      productionExample:
+        'Understanding array operation mutability (`push`/`pop` mutate in-place, `concat`/`slice` return new arrays) is critical for state immutability in React/Redux.',
+      bestPractices: [
+        'Do not mutate state directly in React — use spread operators or immutable copy operations',
+        'Verify `i in this` inside custom iteration polyfills to skip sparse/empty array slots',
+        'Preserve proper `thisArg` context execution in array iteration methods',
+      ],
+      tradeOffs:
+        'In-place mutating operations (`push`, `pop`, `shift`, `unshift`, `splice`) save memory but break immutable functional state paradigms.',
+      commonMistakes: [
+        'Confusing mutating array methods (`push`, `pop`, `splice`) with non-mutating methods (`slice`, `concat`, `map`)',
+        'Forgetting that `push` returns the new array length, not the array itself',
+        'Assuming `forEach` can be aborted early using `break` or `return` (use `some`, `every`, or `for...of` instead)',
+      ],
+      followUpQuestions: [
+        'Why can you not stop or break a `forEach` loop early?',
+        'What is the performance difference between `pop()` O(1) and `shift()` O(N)?',
+      ],
+      relatedTopics: ['Array.prototype', 'Polyfills', 'Mutation', 'Immutability', 'forEach'],
+    },
+  },
+  {
+    detail: {
+      id: 'mcx-23',
+      questionNumber: 'MCX-023',
+      title: 'The "this" Keyword & Execution Context Rules',
+      difficulty: 'Medium',
+      companies: ['Google', 'Meta', 'Amazon', 'Apple', 'Netflix', 'LinkedIn'],
+      frequency: 5,
+      category: 'JS Mechanics',
+      part: 'Machine Coding',
+      concepts: ['this', 'Execution Context', 'Implicit Binding', 'Explicit Binding', 'Lexical Scope', 'Arrow Functions'],
+      solved: false,
+      attempted: false,
+      bookmarked: false,
+      questionType: 'technical',
+      experienceLevel: '0–2 Years',
+      question:
+        'Explain how the `this` keyword behaves across global, object method, constructor, and arrow function contexts in JavaScript.',
+    },
+    answer: {
+      expectedAnswer:
+        'The value of `this` is determined by how a function is invoked at runtime. In regular functions, `this` points to the calling object (implicit binding), global object (or `undefined` in strict mode), or an explicitly bound context (`call`/`apply`/`bind`). Arrow functions inherit `this` lexically from their enclosing scope.',
+      deepExplanation:
+        '```js\n// 1. Global Context\nconsole.log(this); // window (Browser) or globalThis (Node.js)\n\n// 2. Object Method Context (Implicit Binding)\nconst person = {\n  name: "Ravi",\n  sayHello() {\n    console.log(`Hello, I am ${this.name}`);\n  }\n};\nperson.sayHello(); // "Hello, I am Ravi"\n\n// 3. Detached Method Loss\nconst unboundSay = person.sayHello;\nunboundSay(); // "Hello, I am undefined" (strict mode) or global object\n\n// 4. Explicit Binding (call, apply, bind)\nconst boundSay = person.sayHello.bind({ name: "Ram" });\nboundSay(); // "Hello, I am Ram"\n\n// 5. Constructor Context (new keyword)\nfunction Person(firstName, lastName) {\n  this.firstName = firstName;\n  this.lastName = lastName;\n}\nconst lydia = new Person("Lydia", "Hallie"); // `this` is newly instantiated object\nconst sarah = Person("Sarah", "Smith");    // Without `new`, `this` is global/undefined, returns undefined!\n\n// 6. Arrow Function Lexical `this`\nconst object = {\n  name: "Lexical Demo",\n  regularFunc: function() { console.log(this.name); },\n  arrowFunc: () => { console.log(this.name); }\n};\nobject.regularFunc(); // "Lexical Demo"\nobject.arrowFunc();   // undefined (inherits `this` from outer window/module scope)\n\n// 7. Indirect Invocation via arguments[0]()\nfunction callback() {\n  console.log(this.length);\n}\nconst callerObj = {\n  length: 5,\n  method() {\n    arguments[0](); // `this` is the `arguments` array object!\n  }\n};\ncallerObj.method(callback, 1, 2); // Output: 3 (arguments.length is 3)\n```',
+      productionExample:
+        'Class methods passed as event listeners or React callbacks lose their `this` context if not explicitly bound or converted to arrow function properties.',
+      example: {
+        code: "// 1. Global Context\nconsole.log(this); // window (Browser) or globalThis (Node.js)\n\n// 2. Object Method Context (Implicit Binding)\nconst person = {\n  name: \"Ravi\",\n  sayHello() {\n    console.log(`Hello, I am ${this.name}`);\n  }\n};\nperson.sayHello(); // \"Hello, I am Ravi\"\n\n// 3. Detached Method Loss\nconst unboundSay = person.sayHello;\nunboundSay(); // \"Hello, I am undefined\" (strict mode) or global object\n\n// 4. Explicit Binding (call, apply, bind)\nconst boundSay = person.sayHello.bind({ name: \"Ram\" });\nboundSay(); // \"Hello, I am Ram\"\n\n// 5. Constructor Context (new keyword)\nfunction Person(firstName, lastName) {\n  this.firstName = firstName;\n  this.lastName = lastName;\n}\nconst lydia = new Person(\"Lydia\", \"Hallie\"); // `this` is newly instantiated object\nconst sarah = Person(\"Sarah\", \"Smith\");    // Without `new`, `this` is global/undefined, returns undefined!\n\n// 6. Arrow Function Lexical `this`\nconst object = {\n  name: \"Lexical Demo\",\n  regularFunc: function() { console.log(this.name); },\n  arrowFunc: () => { console.log(this.name); }\n};\nobject.regularFunc(); // \"Lexical Demo\"\nobject.arrowFunc();   // undefined (inherits `this` from outer window/module scope)\n\n// 7. Indirect Invocation via arguments[0]()\nfunction callback() {\n  console.log(this.length);\n}\nconst callerObj = {\n  length: 5,\n  method() {\n    arguments[0](); // `this` is the `arguments` array object!\n  }\n};\ncallerObj.method(callback, 1, 2); // Output: 3 (arguments.length is 3)",
+        output: "window (Browser) or globalThis (Node.js)",
+        explanation: "The value of `this` is determined by how a function is invoked at runtime. In regular functions, `this` points to the calling object (implicit binding), global object (or `undefined` in strict mode), or an explicitly bound context (`call`/`apply`/`bind`). Arrow functions inherit `this` lexically from their enclosing scope."
+      },
+      bestPractices: [
+        'Use arrow functions for callbacks to automatically preserve outer lexical `this`',
+        'Use explicit `.bind()`, `.call()`, or `.apply()` when delegating context to dynamically created functions',
+        'Always instantiate constructor functions using the `new` keyword',
+        'Avoid using arrow functions as object methods if you need access to the object via `this`',
+      ],
+      tradeOffs:
+        'Arrow functions simplify callback context preserving but cannot be used as constructors and do not have their own `arguments` or `prototype`.',
+      commonMistakes: [
+        'Calling a constructor function without `new`, mutating global variables and returning `undefined`',
+        'Assuming arrow functions have their own `this` that can be set using `bind`, `call`, or `apply`',
+        'Invoking a method directly via `arguments[i]()` and expecting `this` to point to the parent object',
+      ],
+      followUpQuestions: [
+        'What happens when `call` or `bind` is used on an arrow function?',
+        'What are the 4 step-by-step operations performed by the `new` keyword?',
+      ],
+      relatedTopics: ['this Keyword', 'Execution Context', 'Implicit Binding', 'Explicit Binding', 'Arrow Functions'],
+    },
+  },
 ];
+

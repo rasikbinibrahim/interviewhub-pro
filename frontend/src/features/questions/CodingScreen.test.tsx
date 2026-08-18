@@ -134,6 +134,7 @@ describe('CodingScreen', () => {
     await user.selectOptions(screen.getByRole('combobox'), 'typescript');
 
     expect(editor).not.toHaveValue('// my in-progress work');
-    expect((editor as HTMLTextAreaElement).value).toContain(': unknown[]');
+    expect((editor as HTMLTextAreaElement).value).toContain(`function ${QUESTION.detail.functionName}`);
+    expect((editor as HTMLTextAreaElement).value).toContain(':');
   });
 });

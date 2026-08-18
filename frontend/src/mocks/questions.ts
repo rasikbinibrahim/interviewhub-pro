@@ -19,6 +19,12 @@ import { MOCK_DSA_CODING_MODULE10_QUESTIONS } from '@/mocks/dsa-coding-module10-
 import { MOCK_DSA_CODING_MODULE11_QUESTIONS } from '@/mocks/dsa-coding-module11-questions';
 import { MOCK_DSA_CODING_MODULE12_QUESTIONS } from '@/mocks/dsa-coding-module12-questions';
 import { MOCK_DSA_CODING_MODULE13_QUESTIONS } from '@/mocks/dsa-coding-module13-questions';
+import { MOCK_DSA_150_CURATED_CODING_QUESTIONS } from '@/mocks/dsa-150-curated-questions';
+import { MOCK_JAVASCRIPT_CODING_QUESTIONS } from '@/mocks/javascript-coding-questions';
+import { MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS } from '@/mocks/javascript-array-basics-coding-questions';
+import { MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS } from '@/mocks/javascript-array-reverse-rotate-coding-questions';
+import { MOCK_HTML_CODING_QUESTIONS } from '@/mocks/html-coding-questions';
+import { MOCK_CSS_CODING_QUESTIONS } from '@/mocks/css-coding-questions';
 import { MOCK_HTML_TECHNICAL_QUESTIONS } from '@/mocks/html-questions';
 import { MOCK_CSS_TECHNICAL_QUESTIONS } from '@/mocks/css-questions';
 import { MOCK_JAVASCRIPT_TECHNICAL_QUESTIONS } from '@/mocks/javascript-questions';
@@ -340,7 +346,6 @@ import { MOCK_JAVASCRIPT_EXTRA_PART1_TECHNICAL_QUESTIONS } from '@/mocks/javascr
 import { MOCK_JAVASCRIPT_EXTRA_PART2_TECHNICAL_QUESTIONS } from '@/mocks/javascript-extra-part2-questions';
 import { MOCK_JAVASCRIPT_EXTRA_PART3_TECHNICAL_QUESTIONS } from '@/mocks/javascript-extra-part3-questions';
 import { MOCK_JAVASCRIPT_TRICKY_OUTPUT_TECHNICAL_QUESTIONS } from '@/mocks/javascript-tricky-output-questions';
-import { MOCK_DSA_150_CURATED_TECHNICAL_QUESTIONS } from '@/mocks/dsa-150-curated-questions';
 import { MOCK_REACT_EXTRA_TECHNICAL_QUESTIONS } from '@/mocks/react-extra-questions';
 import { MOCK_FRONTEND_TESTING_QA_MODULE1_TECHNICAL_QUESTIONS } from '@/mocks/frontend-testing-qa-module1-questions';
 import { MOCK_FRONTEND_TESTING_QA_MODULE2_TECHNICAL_QUESTIONS } from '@/mocks/frontend-testing-qa-module2-questions';
@@ -718,16 +723,12 @@ export const MOCK_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = [
   ...MOCK_JAVASCRIPT_EXTRA_PART2_TECHNICAL_QUESTIONS,
   ...MOCK_JAVASCRIPT_EXTRA_PART3_TECHNICAL_QUESTIONS,
   ...MOCK_JAVASCRIPT_TRICKY_OUTPUT_TECHNICAL_QUESTIONS,
-  ...MOCK_DSA_150_CURATED_TECHNICAL_QUESTIONS,
   ...MOCK_REACT_EXTRA_TECHNICAL_QUESTIONS,
 ];
 
 // Hand-authored coding questions (real problemStatement/examples/sampleTests
 // and working JS+TS solutions) — kept separate from MOCK_TECHNICAL_QUESTIONS
 // per the coding/technical split described in the module docblock above.
-// Currently covers DSA Module 2 (Arrays); more modules are added
-// incrementally rather than mass-generated, since every sampleTests entry
-// here is checked against its reference solution.
 export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   ...MOCK_DSA_CODING_MODULE2_QUESTIONS,
   ...MOCK_DSA_CODING_MODULE3_QUESTIONS,
@@ -741,6 +742,12 @@ export const MOCK_CODING_QUESTIONS: MockCodingQuestion[] = [
   ...MOCK_DSA_CODING_MODULE11_QUESTIONS,
   ...MOCK_DSA_CODING_MODULE12_QUESTIONS,
   ...MOCK_DSA_CODING_MODULE13_QUESTIONS,
+  ...MOCK_DSA_150_CURATED_CODING_QUESTIONS,
+  ...MOCK_JAVASCRIPT_CODING_QUESTIONS,
+  ...MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS,
+  ...MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS,
+  ...MOCK_HTML_CODING_QUESTIONS,
+  ...MOCK_CSS_CODING_QUESTIONS,
 ];
 
 export const MOCK_QUESTIONS: MockQuestion[] = [...MOCK_TECHNICAL_QUESTIONS, ...MOCK_CODING_QUESTIONS];
