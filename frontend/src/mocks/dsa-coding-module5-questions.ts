@@ -4,8 +4,7 @@
 // CodingQuestionDetail problems: every sampleTests entry has been checked
 // against the reference solution below (run in Node against assertions
 // before being committed), and both the JavaScript and TypeScript
-// solutions are genuine, working code (no placeholder "solve(input)"
-// stubs).
+// solutions are genuine, working code with no placeholder stubs.
 //
 // LRU Cache is a stateful "design" problem: the runner (codeRunner.ts)
 // only supports calling a single plain function by name with positional
@@ -115,43 +114,186 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'For every dictionary word, compute a canonical key: the first character, the middle characters sorted alphabetically, and the last character (words of length <= 2 use the word itself as the key, since there is no middle to sort). Store word-by-key in a Map. For each token in the message, compute the same canonical key and look it up in the Map to recover the original word. Join the recovered words with spaces.',
-      dryRun:
-        'words=["listen"], key("listen") = "l" + sorted("iste") + "n" = "leistn" wait — sorted("iste")="eist" → "l"+"eist"+"n"="leistn"\ntoken "ltsien": key = "l" + sorted("tsie") + "n" = "l"+"eist"+"n" = "leistn" → matches → "listen"',
-      javascriptSolution: `function decodeWords(words, message) {
-  function getKey(word) {
+      algorithm: `Step 1: Build one canonical key for every dictionary word: first letter + sorted middle letters + last letter.
+Step 2: Store the original word under that key.
+Step 3: Create the same key for every message token.
+Step 4: Look up each token and rebuild the message in the original order.
+
+Core idea:
+For every dictionary word, compute a canonical key: the first character, the middle characters sorted alphabetically, and the last character (words of length <= 2 use the word itself as the key, since there is no middle to sort). Store word-by-key in a Map. For each token in the message, compute the same canonical key and look it up in the Map to recover the original word. Join the recovered words with spaces.`,
+      dryRun: `words=["listen"], token="ltsien"
+Key("listen") = l + sorted("iste") + n = "leistn".
+Key("ltsien") = l + sorted("tsie") + n = "leistn".
+Keys match → "listen".`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function decodeWords(words, message) {
+  function sortMiddleManual(word) {
     if (word.length <= 2) return word;
-    const middle = word.slice(1, -1).split('').sort().join('');
+
+    const chars = new Array(word.length - 2);
+    for (let i = 1; i < word.length - 1; i++) chars[i - 1] = word[i];
+
+    for (let i = 1; i < chars.length; i++) {
+      const value = chars[i];
+      let j = i - 1;
+
+      while (j >= 0 && chars[j] > value) {
+        chars[j + 1] = chars[j];
+        j--;
+      }
+
+      chars[j + 1] = value;
+    }
+
+    let middle = "";
+    for (let i = 0; i < chars.length; i++) middle += chars[i];
+
     return word[0] + middle + word[word.length - 1];
   }
+
+  const keyToWord = Object.create(null);
+
+  for (const word of words) {
+    keyToWord[sortMiddleManual(word)] = word;
+  }
+
+  const tokens = [];
+  let current = "";
+
+  for (let i = 0; i <= message.length; i++) {
+    const ch = message[i];
+
+    if (i === message.length || ch === " ") {
+      if (current.length > 0) {
+        tokens.push(current);
+        current = "";
+      }
+    } else {
+      current += ch;
+    }
+  }
+
+  let result = "";
+  for (let i = 0; i < tokens.length; i++) {
+    if (i > 0) result += " ";
+    result += keyToWord[sortMiddleManual(tokens[i])];
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function decodeWordsUsingBuiltIns(words, message){
+  const key = (word) => {
+    if (word.length <= 2) return word;
+    return (
+      word[0] +
+      word.slice(1, -1).split("").sort().join("") +
+      word[word.length - 1]
+    );
+  };
 
   const wordMap = new Map();
+
   for (const word of words) {
-    wordMap.set(getKey(word), word);
+    wordMap.set(key(word), word);
   }
 
   return message
-    .split(' ')
-    .map((token) => wordMap.get(getKey(token)))
-    .join(' ');
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((token) => wordMap.get(key(token)) ?? "")
+    .join(" ");
 }`,
-      typescriptSolution: `function decodeWords(words: string[], message: string): string {
-  function getKey(word: string): string {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function decodeWords(words: string[], message: string): string {
+  function sortMiddleManual(word: string): string {
     if (word.length <= 2) return word;
-    const middle = word.slice(1, -1).split('').sort().join('');
-    return word[0] + middle + word[word.length - 1];
+
+    const chars = new Array<string>(word.length - 2);
+
+    for (let i = 1; i < word.length - 1; i++) {
+      chars[i - 1] = word[i]!;
+    }
+
+    // Insertion sort: no sort() helper.
+    for (let i = 1; i < chars.length; i++) {
+      const value = chars[i]!;
+      let j = i - 1;
+
+      while (j >= 0 && chars[j]! > value) {
+        chars[j + 1] = chars[j]!;
+        j--;
+      }
+
+      chars[j + 1] = value;
+    }
+
+    let middle = "";
+    for (let i = 0; i < chars.length; i++) {
+      middle += chars[i];
+    }
+
+    return word[0]! + middle + word[word.length - 1]!;
   }
+
+  function key(word: string): string {
+    return sortMiddleManual(word);
+  }
+
+  const keyToWord: Record<string, string> = Object.create(null);
+
+  for (let i = 0; i < words.length; i++) {
+    keyToWord[key(words[i]!)] = words[i]!;
+  }
+
+  const tokens: string[] = [];
+  let current = "";
+
+  for (let i = 0; i <= message.length; i++) {
+    const ch = message[i];
+
+    if (i === message.length || ch === " ") {
+      if (current.length > 0) {
+        tokens.push(current);
+        current = "";
+      }
+    } else {
+      current += ch;
+    }
+  }
+
+  let result = "";
+  for (let i = 0; i < tokens.length; i++) {
+    if (i > 0) result += " ";
+    result += keyToWord[key(tokens[i]!)];
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function decodeWordsUsingBuiltIns(words: string[], message: string): string {
+  const key = (word: string): string => {
+    if (word.length <= 2) return word;
+    return (
+      word[0] +
+      word.slice(1, -1).split("").sort().join("") +
+      word[word.length - 1]
+    );
+  };
 
   const wordMap = new Map<string, string>();
+
   for (const word of words) {
-    wordMap.set(getKey(word), word);
+    wordMap.set(key(word), word);
   }
 
   return message
-    .split(' ')
-    .map((token) => wordMap.get(getKey(token))!)
-    .join(' ');
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((token) => wordMap.get(key(token)) ?? "")
+    .join(" ");
 }`,
       timeComplexity: 'O((n·k) log k) — n dictionary words and message tokens, each of average length k, each needing a sort of its middle.',
       spaceComplexity: 'O(n·k) — the map stores every dictionary word plus its key.',
@@ -232,11 +374,101 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Back the cache with a `Map`, relying on its insertion-order iteration: the least recently used key is always the first one iterated. On `get`, if the key is missing return -1; otherwise delete and reinsert it (moving it to the end / most-recently-used position) and return its value. On `put`, delete any existing entry for the key, insert the new value (placing it at the end), and if the map now exceeds capacity, delete the first (least recently used) key via `map.keys().next().value`.',
-      dryRun:
-        'capacity=2\nput(1,1): map={1:1}\nput(2,2): map={1:1,2:2}\nget(1): move 1 to end → map={2:2,1:1}, return 1\nput(3,3): map={2:2,1:1,3:3} → over capacity → evict front key 2 → map={1:1,3:3}\nget(2): missing → -1',
-      javascriptSolution: `function lruCacheOperations(capacity, operations, args) {
+      algorithm: `Step 1: Keep a key lookup plus an order of least-recent to most-recent.
+Step 2: On get, return the value and move the key to the most-recent position.
+Step 3: On put, update or insert and mark the key most-recent.
+Step 4: If capacity is exceeded, remove the least-recent key.
+
+Core idea:
+Back the cache with a \`Map\`, relying on its insertion-order iteration: the least recently used key is always the first one iterated. On \`get\`, if the key is missing return -1; otherwise delete and reinsert it (moving it to the end / most-recently-used position) and return its value. On \`put\`, delete any existing entry for the key, insert the new value (placing it at the end), and if the map now exceeds capacity, delete the first (least recently used) key via \`map.keys().next().value\`.`,
+      dryRun: `capacity=2
+put(1,1) → [1]
+put(2,2) → [1,2]
+get(1) → 1, order becomes [2,1]
+put(3,3) → evict 2
+get(2) → -1
+The cache always removes the least recently used entry.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function lruCacheOperations(capacity, operations, args) {
+  const head = { key: 0, value: 0, prev: null, next: null };
+  const tail = { key: 0, value: 0, prev: head, next: null };
+  head.next = tail;
+
+  const nodes = Object.create(null);
+  const results = [];
+  let size = 0;
+
+  function addAfterHead(node) {
+    node.next = head.next;
+    node.prev = head;
+    head.next.prev = node;
+    head.next = node;
+  }
+
+  function remove(node) {
+    node.prev.next = node.next;
+    node.next.prev = node.prev;
+  }
+
+  function moveToFront(node) {
+    remove(node);
+    addAfterHead(node);
+  }
+
+  function removeLeastRecentlyUsed() {
+    const node = tail.prev;
+    remove(node);
+    return node;
+  }
+
+  for (let i = 0; i < operations.length; i++) {
+    const op = operations[i];
+    const opArgs = args[i];
+
+    if (op === "get") {
+      const key = opArgs[0];
+      const node = nodes[String(key)];
+
+      if (!node) {
+        results.push(-1);
+      } else {
+        moveToFront(node);
+        results.push(node.value);
+      }
+    } else if (op === "put") {
+      const key = opArgs[0];
+      const value = opArgs[1];
+      const existing = nodes[String(key)];
+
+      if (existing) {
+        existing.value = value;
+        moveToFront(existing);
+      } else {
+        const node = { key, value, prev: null, next: null };
+        nodes[String(key)] = node;
+        addAfterHead(node);
+        size++;
+
+        if (size > capacity) {
+          const removed = removeLeastRecentlyUsed();
+          delete nodes[String(removed.key)];
+          size--;
+        }
+      }
+
+      results.push(null);
+    }
+  }
+
+  return results;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function lruCacheOperationsUsingBuiltIns(
+  capacity,
+  operations,
+  args,
+){
   const cache = new Map();
   const results = [];
 
@@ -244,31 +476,133 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
     const op = operations[i];
     const opArgs = args[i];
 
-    if (op === 'get') {
-      const key = opArgs[0];
+    if (op === "get") {
+      const key = opArgs[0] ;
+
       if (!cache.has(key)) {
         results.push(-1);
-        continue;
+      } else {
+        const value = cache.get(key);
+        cache.delete(key);
+        cache.set(key, value);
+        results.push(value);
       }
-      const value = cache.get(key);
-      cache.delete(key);
-      cache.set(key, value);
-      results.push(value);
-    } else if (op === 'put') {
-      const [key, value] = opArgs;
+    } else {
+      const key = opArgs[0] ;
+      const value = opArgs[1] ;
+
       if (cache.has(key)) cache.delete(key);
       cache.set(key, value);
+
       if (cache.size > capacity) {
-        const oldestKey = cache.keys().next().value;
-        cache.delete(oldestKey);
+        const oldest = cache.keys().next().value ;
+        cache.delete(oldest);
       }
+
       results.push(null);
     }
   }
 
   return results;
 }`,
-      typescriptSolution: `function lruCacheOperations(
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function lruCacheOperations(
+  capacity: number,
+  operations: readonly string[],
+  args: readonly unknown[][],
+): unknown[] {
+  type Node = {
+    key: number;
+    value: number;
+    prev: Node | null;
+    next: Node | null;
+  };
+
+  const head: Node = { key: 0, value: 0, prev: null, next: null };
+  const tail: Node = { key: 0, value: 0, prev: head, next: null };
+  head.next = tail;
+
+  const nodes: Record<string, Node | undefined> = Object.create(null);
+  const results: unknown[] = [];
+
+  function addAfterHead(node: Node): void {
+    node.next = head.next;
+    node.prev = head;
+
+    head.next!.prev = node;
+    head.next = node;
+  }
+
+  function remove(node: Node): void {
+    node.prev!.next = node.next;
+    node.next!.prev = node.prev;
+  }
+
+  function moveToFront(node: Node): void {
+    remove(node);
+    addAfterHead(node);
+  }
+
+  function removeLeastRecentlyUsed(): Node {
+    const node = tail.prev!;
+    remove(node);
+    return node;
+  }
+
+  for (let i = 0; i < operations.length; i++) {
+    const op = operations[i];
+    const opArgs = args[i]!;
+
+    if (op === "get") {
+      const key = opArgs[0] as number;
+      const node = nodes[String(key)];
+
+      if (!node) {
+        results.push(-1);
+      } else {
+        moveToFront(node);
+        results.push(node.value);
+      }
+    } else {
+      const key = opArgs[0] as number;
+      const value = opArgs[1] as number;
+      const existing = nodes[String(key)];
+
+      if (existing) {
+        existing.value = value;
+        moveToFront(existing);
+      } else {
+        const node: Node = {
+          key,
+          value,
+          prev: null,
+          next: null,
+        };
+
+        nodes[String(key)] = node;
+        addAfterHead(node);
+
+        // Count entries manually.
+        let count = 0;
+        for (const name in nodes) {
+          if (nodes[name] !== undefined) count++;
+        }
+
+        if (count > capacity) {
+          const removed = removeLeastRecentlyUsed();
+          delete nodes[String(removed.key)];
+        }
+      }
+
+      results.push(null);
+    }
+  }
+
+  return results;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function lruCacheOperationsUsingBuiltIns(
   capacity: number,
   operations: readonly string[],
   args: readonly unknown[][],
@@ -280,24 +614,29 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
     const op = operations[i];
     const opArgs = args[i]!;
 
-    if (op === 'get') {
+    if (op === "get") {
       const key = opArgs[0] as number;
+
       if (!cache.has(key)) {
         results.push(-1);
-        continue;
+      } else {
+        const value = cache.get(key)!;
+        cache.delete(key);
+        cache.set(key, value);
+        results.push(value);
       }
-      const value = cache.get(key)!;
-      cache.delete(key);
-      cache.set(key, value);
-      results.push(value);
-    } else if (op === 'put') {
-      const [key, value] = opArgs as [number, number];
+    } else {
+      const key = opArgs[0] as number;
+      const value = opArgs[1] as number;
+
       if (cache.has(key)) cache.delete(key);
       cache.set(key, value);
+
       if (cache.size > capacity) {
-        const oldestKey = cache.keys().next().value as number;
-        cache.delete(oldestKey);
+        const oldest = cache.keys().next().value as number;
+        cache.delete(oldest);
       }
+
       results.push(null);
     }
   }
@@ -366,49 +705,114 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Insert all values into a Set for O(1) lookups. For each value `n` in the array, only treat it as the start of a run if `n - 1` is not in the set (otherwise some earlier value already owns this run). From a valid start, count forward (`n`, `n+1`, `n+2`, ...) while each is present in the set, tracking the longest count found.',
-      dryRun:
-        'nums=[100,4,200,1,3,2], set={100,4,200,1,3,2}\nn=100: 99 not in set → start; 100 in set,101 not → count=1\nn=4: 3 in set → skip (not a start)\nn=1: 0 not in set → start; 1,2,3,4 in set, 5 not → count=4\nmax=4',
-      javascriptSolution: `function longestConsecutive(nums) {
-  const table = new Set(nums);
-  let max = 0;
+      algorithm: `Step 1: Put every number into a membership structure.
+Step 2: A number starts a sequence only when number-1 is absent.
+Step 3: Count number, number+1, number+2, ... while they exist.
+Step 4: Keep the largest sequence length.
+
+Core idea:
+Insert all values into a Set for O(1) lookups. For each value \`n\` in the array, only treat it as the start of a run if \`n - 1\` is not in the set (otherwise some earlier value already owns this run). From a valid start, count forward (\`n\`, \`n+1\`, \`n+2\`, ...) while each is present in the set, tracking the longest count found.`,
+      dryRun: `[100,4,200,1,3,2]
+100 starts a run of length 1.
+4 is not a start because 3 exists.
+1 starts a run: 1,2,3,4 → length 4.
+Answer = 4.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function longestConsecutive(nums) {
+  const seen = Object.create(null);
 
   for (const num of nums) {
-    if (!table.has(num - 1)) {
-      let current = num;
-      let count = 0;
+    seen[String(num)] = true;
+  }
 
-      while (table.has(current)) {
+  let best = 0;
+
+  for (const num of nums) {
+    if (seen[String(num - 1)]) continue;
+
+    let current = num;
+    let length = 0;
+
+    while (seen[String(current)]) {
+      current++;
+      length++;
+    }
+
+    if (length > best) best = length;
+  }
+
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function longestConsecutiveUsingBuiltIns(nums){
+  const values = new Set(nums);
+  let best = 0;
+
+  for (const num of values) {
+    if (!values.has(num - 1)) {
+      let current = num;
+      let length = 0;
+
+      while (values.has(current)) {
         current++;
-        count++;
+        length++;
       }
 
-      max = Math.max(max, count);
+      best = Math.max(best, length);
     }
   }
 
-  return max;
+  return best;
 }`,
-      typescriptSolution: `function longestConsecutive(nums: number[]): number {
-  const table = new Set(nums);
-  let max = 0;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function longestConsecutive(nums: number[]): number {
+  const seen: Record<string, boolean> = Object.create(null);
 
-  for (const num of nums) {
-    if (!table.has(num - 1)) {
+  for (let i = 0; i < nums.length; i++) {
+    seen[String(nums[i])] = true;
+  }
+
+  let best = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i]!;
+    if (seen[String(num - 1)]) continue;
+
+    let current = num;
+    let length = 0;
+
+    while (seen[String(current)]) {
+      current++;
+      length++;
+    }
+
+    if (length > best) best = length;
+  }
+
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function longestConsecutiveUsingBuiltIns(nums: number[]): number {
+  const values = new Set(nums);
+  let best = 0;
+
+  for (const num of values) {
+    if (!values.has(num - 1)) {
       let current = num;
-      let count = 0;
+      let length = 0;
 
-      while (table.has(current)) {
+      while (values.has(current)) {
         current++;
-        count++;
+        length++;
       }
 
-      max = Math.max(max, count);
+      best = Math.max(best, length);
     }
   }
 
-  return max;
+  return best;
 }`,
       timeComplexity: 'O(n) — each value is visited as part of an inner while-loop at most once overall, since only true run-starts trigger a scan.',
       spaceComplexity: 'O(n) — the Set holds every distinct value.',
@@ -472,47 +876,110 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Maintain a running prefix sum and a hash map from prefix-sum value to the first index it was seen at. At each index `i`: if the running sum is exactly 0, the whole prefix `arr[0..i]` is zero-sum (length i+1). Otherwise, if the running sum has been seen before at index `j`, the subarray `arr[j+1..i]` sums to 0 (length i-j). Otherwise, record this sum at this index (only if not already recorded, to keep the *earliest* occurrence). Track the maximum length found.',
-      dryRun:
-        'arr=[15,-2,2,-8,1,7,10,23]\nsum=0\ni=0: sum=15, not seen → map={15:0}\ni=1: sum=13, not seen → map={15:0,13:1}\ni=2: sum=15, seen at 0 → len=2-0=2, max=2\ni=3: sum=7, not seen → map+={7:3}\ni=4: sum=8, not seen → map+={8:4}\ni=5: sum=15, seen at 0 → len=5-0=5, max=5\n...\nmax=5',
-      javascriptSolution: `function largestSubarrayWithSumZero(arr) {
-  const map = new Map();
+      algorithm: `Step 1: Track a running prefix sum.
+Step 2: Remember the first index where each sum appeared.
+Step 3: If the same sum appears again, the values between the two indices sum to zero.
+Step 4: Keep the longest distance; a prefix sum of zero means the subarray starts at index 0.
+
+Core idea:
+Maintain a running prefix sum and a hash map from prefix-sum value to the first index it was seen at. At each index \`i\`: if the running sum is exactly 0, the whole prefix \`arr[0..i]\` is zero-sum (length i+1). Otherwise, if the running sum has been seen before at index \`j\`, the subarray \`arr[j+1..i]\` sums to 0 (length i-j). Otherwise, record this sum at this index (only if not already recorded, to keep the *earliest* occurrence). Track the maximum length found.`,
+      dryRun: `[15,-2,2,-8,1,7,10,23]
+Prefix sum 15 first appears at index 0.
+At index 2 it is 15 again → length 2.
+At index 5 it is 15 again → length 5.
+Answer = 5.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function largestSubarrayWithSumZero(arr) {
+  const firstIndex = Object.create(null);
   let sum = 0;
-  let maxLen = 0;
+  let best = 0;
 
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
 
     if (sum === 0) {
-      maxLen = i + 1;
-    } else if (map.has(sum)) {
-      maxLen = Math.max(maxLen, i - map.get(sum));
+      best = i + 1;
     } else {
-      map.set(sum, i);
+      const key = String(sum);
+
+      if (firstIndex[key] !== undefined) {
+        const length = i - firstIndex[key];
+
+        if (length > best) best = length;
+      } else {
+        firstIndex[key] = i;
+      }
     }
   }
 
-  return maxLen;
-}`,
-      typescriptSolution: `function largestSubarrayWithSumZero(arr: number[]): number {
-  const map = new Map<number, number>();
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function largestSubarrayWithSumZeroUsingBuiltIns(arr){
+  const first = new Map();
   let sum = 0;
-  let maxLen = 0;
+  let best = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+
+    if (sum === 0) {
+      best = Math.max(best, i + 1);
+    } else if (first.has(sum)) {
+      best = Math.max(best, i - first.get(sum));
+    } else {
+      first.set(sum, i);
+    }
+  }
+
+  return best;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function largestSubarrayWithSumZero(arr: number[]): number {
+  const firstIndex: Record<string, number | undefined> = Object.create(null);
+  let sum = 0;
+  let best = 0;
 
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i]!;
 
     if (sum === 0) {
-      maxLen = i + 1;
-    } else if (map.has(sum)) {
-      maxLen = Math.max(maxLen, i - map.get(sum)!);
+      best = i + 1;
     } else {
-      map.set(sum, i);
+      const key = String(sum);
+
+      if (firstIndex[key] !== undefined) {
+        const length = i - firstIndex[key]!;
+        if (length > best) best = length;
+      } else {
+        firstIndex[key] = i;
+      }
     }
   }
 
-  return maxLen;
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function largestSubarrayWithSumZeroUsingBuiltIns(arr: number[]): number {
+  const first = new Map<number, number>();
+  let sum = 0;
+  let best = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]!;
+
+    if (sum === 0) {
+      best = Math.max(best, i + 1);
+    } else if (first.has(sum)) {
+      best = Math.max(best, i - first.get(sum)!);
+    } else {
+      first.set(sum, i);
+    }
+  }
+
+  return best;
 }`,
       timeComplexity: 'O(n) — a single pass with O(1) average-case map operations.',
       spaceComplexity: 'O(n) — the map can hold up to n distinct prefix sums.',
@@ -575,45 +1042,103 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Maintain a map of character to its most recent index, and a `left` pointer marking the start of the current no-repeat window. Iterate `right` across the string: if the current character was seen before at an index >= left, move `left` to one past that previous occurrence. Update the character's last-seen index to `right`, and update the maximum window length seen so far.",
-      dryRun:
-        'Testing "pwwkew"\nleft=0, max=0\ni=0 (p): not seen, map={p:0}, max=1\ni=1 (w): not seen, map={p:0,w:1}, max=2\ni=2 (w): seen at 1 >= left(0) → left=2, map={p:0,w:2}, max=1 (2-2+1)\ni=3 (k): not seen, map+={k:3}, max=2 (3-2+1)\ni=4 (e): not seen, map+={e:4}, max=3 (4-2+1)\ni=5 (w): seen at 2 < left(2)? no, 2>=2 → left=3, max stays 3 (5-3+1=3)\nresult=3',
-      javascriptSolution: `function lengthOfLongestSubstring(s) {
+      algorithm: `Step 1: Maintain a window with no duplicate characters.
+Step 2: Store the latest index of every character.
+Step 3: On a repeated character inside the current window, jump left past its previous index.
+Step 4: Update the maximum window length on every character.
+
+Core idea:
+Maintain a map of character to its most recent index, and a \`left\` pointer marking the start of the current no-repeat window. Iterate \`right\` across the string: if the current character was seen before at an index >= left, move \`left\` to one past that previous occurrence. Update the character's last-seen index to \`right\`, and update the maximum window length seen so far.`,
+      dryRun: `pwwkew
+p → length 1
+pw → length 2
+w repeats → move left after previous w
+wke → length 3
+w repeats later → move left again
+Best = 3 ("wke").`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function lengthOfLongestSubstring(s) {
+  const lastSeen = Object.create(null);
+  let left = 0;
+  let best = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    const char = s[right];
+    const previous = lastSeen[char];
+
+    if (previous !== undefined && previous >= left) {
+      left = previous + 1;
+    }
+
+    lastSeen[char] = right;
+
+    const length = right - left + 1;
+    if (length > best) best = length;
+  }
+
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function lengthOfLongestSubstringUsingBuiltIns(s){
   const lastSeen = new Map();
   let left = 0;
-  let maxLen = 0;
+  let best = 0;
 
   for (let right = 0; right < s.length; right++) {
     const char = s[right];
 
-    if (lastSeen.has(char) && lastSeen.get(char) >= left) {
-      left = lastSeen.get(char) + 1;
+    if (lastSeen.has(char)) {
+      left = Math.max(left, lastSeen.get(char) + 1);
     }
 
     lastSeen.set(char, right);
-    maxLen = Math.max(maxLen, right - left + 1);
+    best = Math.max(best, right - left + 1);
   }
 
-  return maxLen;
+  return best;
 }`,
-      typescriptSolution: `function lengthOfLongestSubstring(s: string): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function lengthOfLongestSubstring(s: string): number {
+  const lastSeen: Record<string, number | undefined> = Object.create(null);
+  let left = 0;
+  let best = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    const char = s[right]!;
+    const previous = lastSeen[char];
+
+    if (previous !== undefined && previous >= left) {
+      left = previous + 1;
+    }
+
+    lastSeen[char] = right;
+
+    const length = right - left + 1;
+    if (length > best) best = length;
+  }
+
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function lengthOfLongestSubstringUsingBuiltIns(s: string): number {
   const lastSeen = new Map<string, number>();
   let left = 0;
-  let maxLen = 0;
+  let best = 0;
 
   for (let right = 0; right < s.length; right++) {
     const char = s[right]!;
 
-    if (lastSeen.has(char) && lastSeen.get(char)! >= left) {
-      left = lastSeen.get(char)! + 1;
+    if (lastSeen.has(char)) {
+      left = Math.max(left, lastSeen.get(char)! + 1);
     }
 
     lastSeen.set(char, right);
-    maxLen = Math.max(maxLen, right - left + 1);
+    best = Math.max(best, right - left + 1);
   }
 
-  return maxLen;
+  return best;
 }`,
       timeComplexity: 'O(n) — each character is visited by `right` exactly once; `left` only moves forward.',
       spaceComplexity: 'O(min(n, alphabet size)) — the map holds at most one entry per distinct character.',
@@ -677,43 +1202,95 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Map each symbol to its numeric value. Scan the string left to right. At each position i, compare the value of s[i] to the value of s[i+1] (if it exists): if s[i]'s value is strictly less than s[i+1]'s value, subtract s[i]'s value from the running total (it's part of a subtractive pair like IV or CM); otherwise add it. This single left-to-right pass correctly handles both additive and subtractive numerals.",
-      dryRun:
-        's="MCMXCIV"\nM(1000): next C(100), 1000>=100 → +1000 → total=1000\nC(100): next M(1000), 100<1000 → -100 → total=900\nM(1000): next X(10), 1000>=10 → +1000 → total=1900\nX(10): next C(100), 10<100 → -10 → total=1890\nC(100): next I(1), 100>=1 → +100 → total=1990\nI(1): next V(5), 1<5 → -1 → total=1989\nV(5): last char → +5 → total=1994',
-      javascriptSolution: `function romanToInt(s) {
-  const values = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+      algorithm: `Step 1: Map each Roman symbol to its value.
+Step 2: Scan from left to right.
+Step 3: Subtract a symbol when its value is smaller than the next symbol; otherwise add it.
+Step 4: Return the total.
+
+Core idea:
+Map each symbol to its numeric value. Scan the string left to right. At each position i, compare the value of s[i] to the value of s[i+1] (if it exists): if s[i]'s value is strictly less than s[i+1]'s value, subtract s[i]'s value from the running total (it's part of a subtractive pair like IV or CM); otherwise add it. This single left-to-right pass correctly handles both additive and subtractive numerals.`,
+      dryRun: `MCMXCIV
+M=1000 → +1000
+C before M → -100
+M=1000 → +1000
+X before C → -10
+C=100 → +100
+I before V → -1
+V=5 → +5
+Total = 1994.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function romanToInt(s) {
+  function value(ch) {
+    if (ch === "I") return 1;
+    if (ch === "V") return 5;
+    if (ch === "X") return 10;
+    if (ch === "L") return 50;
+    if (ch === "C") return 100;
+    if (ch === "D") return 500;
+    return 1000;
+  }
+
   let total = 0;
 
   for (let i = 0; i < s.length; i++) {
-    const current = values[s[i]];
-    const next = i + 1 < s.length ? values[s[i + 1]] : 0;
+    const current = value(s[i]);
+    const next = i + 1 < s.length ? value(s[i + 1]) : 0;
 
-    if (current < next) {
-      total -= current;
-    } else {
-      total += current;
-    }
+    if (current < next) total -= current;
+    else total += current;
   }
 
   return total;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function romanToIntUsingBuiltIns(s){
+  const values = new Map([
+    ["I",1],["V",5],["X",10],["L",50],["C",100],["D",500],["M",1000],
+  ]);
+
+  return s.split("").reduce((total, char, index) => {
+    const current = values.get(char);
+    const next = index + 1 < s.length ? values.get(s[index + 1]) : 0;
+    return total + (current < next ? -current : current);
+  }, 0);
 }`,
-      typescriptSolution: `function romanToInt(s: string): number {
-  const values: Record<string, number> = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function romanToInt(s: string): number {
+  function value(ch: string): number {
+    if (ch === "I") return 1;
+    if (ch === "V") return 5;
+    if (ch === "X") return 10;
+    if (ch === "L") return 50;
+    if (ch === "C") return 100;
+    if (ch === "D") return 500;
+    return 1000;
+  }
+
   let total = 0;
 
   for (let i = 0; i < s.length; i++) {
-    const current = values[s[i]!]!;
-    const next = i + 1 < s.length ? values[s[i + 1]!]! : 0;
+    const current = value(s[i]!);
+    const next = i + 1 < s.length ? value(s[i + 1]!) : 0;
 
-    if (current < next) {
-      total -= current;
-    } else {
-      total += current;
-    }
+    if (current < next) total -= current;
+    else total += current;
   }
 
   return total;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function romanToIntUsingBuiltIns(s: string): number {
+  const values = new Map<string, number>([
+    ["I",1],["V",5],["X",10],["L",50],["C",100],["D",500],["M",1000],
+  ]);
+
+  return s.split("").reduce((total, char, index) => {
+    const current = values.get(char)!;
+    const next = index + 1 < s.length ? values.get(s[index + 1]!)! : 0;
+    return total + (current < next ? -current : current);
+  }, 0);
 }`,
       timeComplexity: 'O(n) — a single pass over the string.',
       spaceComplexity: 'O(1) — a fixed-size lookup table, independent of input length.',
@@ -776,45 +1353,83 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Build an ordered list of [symbol, value] pairs from largest to smallest, including the six subtractive combinations (CM=900, CD=400, XC=90, XL=40, IX=9, IV=4) interleaved with the seven base symbols. Walk the list in order; for each pair, while `num >= value`, append the symbol to the result and subtract `value` from `num`. Because larger values (including subtractive pairs) are tried first, this greedy approach always produces the canonical Roman numeral.',
-      dryRun:
-        'num=1994\nM(1000): 1994>=1000 → "M", num=994\nCM(900): 994>=900 → "M"+"CM"="MCM", num=94\nXC(90): 94>=90 → "MCMXC", num=4\nIV(4): 4>=4 → "MCMXCIV", num=0\nresult="MCMXCIV"',
-      javascriptSolution: `function intToRoman(num) {
+      algorithm: `Step 1: Prepare values from largest to smallest, including subtractive pairs.
+Step 2: Take the largest symbol that fits.
+Step 3: Append it repeatedly while it fits and subtract its value.
+Step 4: Continue until the number becomes zero.
+
+Core idea:
+Build an ordered list of [symbol, value] pairs from largest to smallest, including the six subtractive combinations (CM=900, CD=400, XC=90, XL=40, IX=9, IV=4) interleaved with the seven base symbols. Walk the list in order; for each pair, while \`num >= value\`, append the symbol to the result and subtract \`value\` from \`num\`. Because larger values (including subtractive pairs) are tried first, this greedy approach always produces the canonical Roman numeral.`,
+      dryRun: `1994
+1000 fits → M, remainder 994.
+900 fits → CM, remainder 94.
+90 fits → XC, remainder 4.
+4 fits → IV.
+Result = MCMXCIV.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function intToRoman(num) {
+  const symbols = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+  const values = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+  let result = "";
+
+  for (let i = 0; i < values.length; i++) {
+    while (num >= values[i]) {
+      result += symbols[i];
+      num -= values[i];
+    }
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function intToRomanUsingBuiltIns(num){
   const table = [
-    ['M', 1000], ['CM', 900], ['D', 500], ['CD', 400],
-    ['C', 100], ['XC', 90], ['L', 50], ['XL', 40],
-    ['X', 10], ['IX', 9], ['V', 5], ['IV', 4], ['I', 1],
+    ["M",1000],["CM",900],["D",500],["CD",400],
+    ["C",100],["XC",90],["L",50],["XL",40],
+    ["X",10],["IX",9],["V",5],["IV",4],["I",1],
   ];
 
-  let result = '';
-
-  for (const [symbol, value] of table) {
+  return table.reduce((result, [symbol, value]) => {
     while (num >= value) {
       result += symbol;
       num -= value;
     }
-  }
-
-  return result;
+    return result;
+  }, "");
 }`,
-      typescriptSolution: `function intToRoman(num: number): string {
-  const table: [string, number][] = [
-    ['M', 1000], ['CM', 900], ['D', 500], ['CD', 400],
-    ['C', 100], ['XC', 90], ['L', 50], ['XL', 40],
-    ['X', 10], ['IX', 9], ['V', 5], ['IV', 4], ['I', 1],
-  ];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function intToRoman(num: number): string {
+  const symbols = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+  const values = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
 
-  let result = '';
+  let result = "";
 
-  for (const [symbol, value] of table) {
-    while (num >= value) {
-      result += symbol;
-      num -= value;
+  for (let i = 0; i < values.length; i++) {
+    while (num >= values[i]!) {
+      result += symbols[i];
+      num -= values[i]!;
     }
   }
 
   return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function intToRomanUsingBuiltIns(num: number): string {
+  const table = [
+    ["M",1000],["CM",900],["D",500],["CD",400],
+    ["C",100],["XC",90],["L",50],["XL",40],
+    ["X",10],["IX",9],["V",5],["IV",4],["I",1],
+  ] as const;
+
+  return table.reduce((result, [symbol, value]) => {
+    while (num >= value) {
+      result += symbol;
+      num -= value;
+    }
+    return result;
+  }, "");
 }`,
       timeComplexity: 'O(1) — the table has a fixed 13 entries and num <= 3999, so the total work is bounded by a small constant.',
       spaceComplexity: 'O(1) — aside from the fixed-size table and the output string.',
@@ -877,29 +1492,70 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Return false immediately if the lengths differ. Otherwise build a frequency map by incrementing a counter for each character of `s`, then decrementing for each character of `t`. If `t` is a true anagram of `s`, every counter ends at exactly 0; check that with `.every()` over the map's values.",
-      dryRun:
-        's="anagram", t="nagaram"\nafter counting s: {a:3,n:1,g:1,r:1,m:1}\nafter decrementing with t: a:3-3=0, n:1-1=0, g:1-1=0, r:1-1=0, m:1-1=0\nall zero → true',
-      javascriptSolution: `function isAnagram(s, t) {
+      algorithm: `Step 1: If lengths differ, return false.
+Step 2: Count each character from the first string.
+Step 3: Decrease the same count for every character in the second string.
+Step 4: If every count ends at zero, the strings are anagrams.
+
+Core idea:
+Return false immediately if the lengths differ. Otherwise build a frequency map by incrementing a counter for each character of \`s\`, then decrementing for each character of \`t\`. If \`t\` is a true anagram of \`s\`, every counter ends at exactly 0; check that with \`.every()\` over the map's values.`,
+      dryRun: `s="anagram", t="nagaram"
+Count s: a3,n1,g1,r1,m1.
+Subtract t: every count returns to zero.
+Answer = true.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function isAnagram(s, t) {
   if (s.length !== t.length) return false;
 
-  const counts = new Map();
+  const counts = new Array(26).fill(0);
 
-  for (const char of s) counts.set(char, (counts.get(char) ?? 0) + 1);
-  for (const char of t) counts.set(char, (counts.get(char) ?? 0) - 1);
+  for (let i = 0; i < s.length; i++) {
+    counts[s.charCodeAt(i) - 97]++;
+    counts[t.charCodeAt(i) - 97]--;
+  }
 
-  return [...counts.values()].every((count) => count === 0);
+  for (let i = 0; i < counts.length; i++) {
+    if (counts[i] !== 0) return false;
+  }
+
+  return true;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isAnagramUsingBuiltIns(s, t){
+  if (s.length !== t.length) return false;
+
+  const normalize = (value) =>
+    value.split("").sort().join("");
+
+  return normalize(s) === normalize(t);
 }`,
-      typescriptSolution: `function isAnagram(s: string, t: string): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function isAnagram(s: string, t: string): boolean {
   if (s.length !== t.length) return false;
 
-  const counts = new Map<string, number>();
+  const counts = new Array<number>(26).fill(0);
 
-  for (const char of s) counts.set(char, (counts.get(char) ?? 0) + 1);
-  for (const char of t) counts.set(char, (counts.get(char) ?? 0) - 1);
+  for (let i = 0; i < s.length; i++) {
+    counts[s.charCodeAt(i) - 97]++;
+    counts[t.charCodeAt(i) - 97]--;
+  }
 
-  return [...counts.values()].every((count) => count === 0);
+  for (let i = 0; i < counts.length; i++) {
+    if (counts[i] !== 0) return false;
+  }
+
+  return true;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isAnagramUsingBuiltIns(s: string, t: string): boolean {
+  if (s.length !== t.length) return false;
+
+  const normalize = (value: string) =>
+    value.split("").sort().join("");
+
+  return normalize(s) === normalize(t);
 }`,
       timeComplexity: 'O(n) — two linear passes over strings of length n, plus a final linear scan of the map.',
       spaceComplexity: 'O(1) — bounded by the alphabet size (at most 26 entries for lowercase letters), not the string length.',
@@ -962,41 +1618,114 @@ export const MOCK_DSA_CODING_MODULE5_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Guard the empty-array case first (no strings means no common prefix). Use `strs[0]` as the candidate and walk its characters by index; at each index, check with `.every()` whether every string in the array has that same character at that index. Append matching characters to the result and stop at the first mismatch (or when the first string runs out).',
-      dryRun:
-        'strs=["flower","flow","flight"]\ni=0: "f" in all → result="f"\ni=1: "l" in all → result="fl"\ni=2: "o" in "flower","flow" but "i" in "flight" → mismatch, stop\nresult="fl"',
-      javascriptSolution: `function longestCommonPrefix(strs) {
-  if (strs.length === 0) return '';
+      algorithm: `Step 1: Start with the first string as the candidate prefix.
+Step 2: Compare that prefix with each other string.
+Step 3: Reduce the candidate until it matches the beginning of the current string.
+Step 4: Return the remaining prefix.
 
-  const first = strs[0];
-  let result = '';
+Core idea:
+Guard the empty-array case first (no strings means no common prefix). Use \`strs[0]\` as the candidate and walk its characters by index; at each index, check with \`.every()\` whether every string in the array has that same character at that index. Append matching characters to the result and stop at the first mismatch (or when the first string runs out).`,
+      dryRun: `["flower","flow","flight"]
+Start prefix="flower".
+Compare with "flow" → "flow".
+Compare with "flight" → "fl".
+Answer = "fl".`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function longestCommonPrefix(strs) {
+  if (strs.length === 0) return "";
 
-  for (let i = 0; i < first.length; i++) {
-    if (strs.every((str) => str[i] === first[i])) {
-      result += first[i];
-    } else {
-      break;
+  let end = strs[0].length;
+
+  function samePrefix(a, b, length) {
+    for (let i = 0; i < length; i++) {
+      if (a[i] !== b[i]) return false;
     }
+
+    return true;
   }
 
+  for (let i = 1; i < strs.length; i++) {
+    while (
+      end > 0 &&
+      (strs[i].length < end || !samePrefix(strs[0], strs[i], end))
+    ) {
+      end--;
+    }
+
+    if (end === 0) return "";
+  }
+
+  let result = "";
+  for (let i = 0; i < end; i++) result += strs[0][i];
+
   return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function longestCommonPrefixUsingBuiltIns(strs){
+  if (strs.length === 0) return "";
+
+  return strs.reduce((prefix, word) => {
+    let length = Math.min(prefix.length, word.length);
+
+    while (
+      length > 0 &&
+      prefix.slice(0, length) !== word.slice(0, length)
+    ) {
+      length--;
+    }
+
+    return prefix.slice(0, length);
+  });
 }`,
-      typescriptSolution: `function longestCommonPrefix(strs: string[]): string {
-  if (strs.length === 0) return '';
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function longestCommonPrefix(strs: string[]): string {
+  if (strs.length === 0) return "";
 
-  const first = strs[0]!;
-  let result = '';
+  let end = strs[0]!.length;
 
-  for (let i = 0; i < first.length; i++) {
-    if (strs.every((str) => str[i] === first[i])) {
-      result += first[i];
-    } else {
-      break;
+  for (let i = 1; i < strs.length; i++) {
+    while (
+      end > 0 &&
+      (strs[i]!.length < end || !samePrefix(strs[0]!, strs[i]!, end))
+    ) {
+      end--;
     }
+
+    if (end === 0) return "";
+  }
+
+  let result = "";
+  for (let i = 0; i < end; i++) {
+    result += strs[0]![i];
   }
 
   return result;
+
+  function samePrefix(a: string, b: string, length: number): boolean {
+    for (let i = 0; i < length; i++) {
+      if (a[i] !== b[i]) return false;
+    }
+    return true;
+  }
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function longestCommonPrefixUsingBuiltIns(strs: string[]): string {
+  if (strs.length === 0) return "";
+
+  return strs.reduce((prefix, word) => {
+    let length = Math.min(prefix.length, word.length);
+
+    while (
+      length > 0 &&
+      prefix.slice(0, length) !== word.slice(0, length)
+    ) {
+      length--;
+    }
+
+    return prefix.slice(0, length);
+  });
 }`,
       timeComplexity: 'O(S) — where S is the sum of all characters across all strings, in the worst case (every string shares the full length of the shortest one).',
       spaceComplexity: 'O(1) extra — aside from the output string, which is bounded by the shortest input string\'s length.',

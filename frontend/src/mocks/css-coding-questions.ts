@@ -13,6 +13,7 @@ export const MOCK_CSS_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     detail: {
       id: 'css-coding-1',
+      // Answer focus: parse 3- or 6-digit hexadecimal safely, normalize shorthand, then extract the three RGB channels.
       questionNumber: 'CSSCODE-1',
       title: 'Convert Hex Color to RGB',
       difficulty: 'Easy',
@@ -80,6 +81,7 @@ export const MOCK_CSS_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     detail: {
       id: 'css-coding-2',
+      // Answer focus: under the stated simplified selector grammar, count IDs, classes and element tokens independently; real CSS specificity is a tuple/cascade model, not a single decimal score.
       questionNumber: 'CSSCODE-2',
       title: 'Compute CSS Selector Specificity',
       difficulty: 'Medium',
@@ -149,6 +151,7 @@ export const MOCK_CSS_CODING_QUESTIONS: MockCodingQuestion[] = [
   {
     detail: {
       id: 'css-coding-3',
+      // Answer focus: preserve argument order, ignore falsy values, include only truthy own object keys, and join exactly once.
       questionNumber: 'CSSCODE-3',
       title: 'Merge Conditional Class Names',
       difficulty: 'Easy',
@@ -199,33 +202,42 @@ export const MOCK_CSS_CODING_QUESTIONS: MockCodingQuestion[] = [
     if (typeof arg === 'string') {
       classes.push(arg);
     } else if (typeof arg === 'object') {
-      for (const key in arg) {
+      for (const key of Object.keys(arg)) {
         if (arg[key]) classes.push(key);
       }
     }
   }
   return classes.join(' ');
 }`,
-      typescriptSolution: `type ClassArg = string | Record<string, boolean> | null | undefined | false;
+      typescriptSolution: `type ClassArg =
+  | string
+  | Record<string, boolean>
+  | null
+  | undefined
+  | false;
+
 function classNames(...args: ClassArg[]): string {
   const classes: string[] = [];
+
   for (const arg of args) {
     if (!arg) continue;
+
     if (typeof arg === 'string') {
       classes.push(arg);
     } else {
-      for (const key in arg) {
+      for (const key of Object.keys(arg)) {
         if (arg[key]) classes.push(key);
       }
     }
   }
+
   return classes.join(' ');
 }`,
       timeComplexity: 'O(n) where n is the total number of arguments and object keys.',
       spaceComplexity: 'O(n) for the collected class name array.',
       commonMistakes: [
         'Not skipping falsy arguments up front, causing a crash when `typeof null === "object"` falls into the object branch.',
-        'Using `Object.keys(arg).filter(...)` without checking the argument is actually an object first (e.g. it could be `false`, already excluded by the falsy check, but easy to get the ordering of checks wrong).',
+        "Iterating with `for...in` without guarding against inherited enumerable properties; `Object.keys()` keeps the utility limited to the object's own keys.",
         'Joining with no separator instead of a space, producing an invalid combined class string.',
       ],
       followUpQuestions: [
@@ -239,6 +251,7 @@ function classNames(...args: ClassArg[]): string {
   {
     detail: {
       id: 'css-coding-4',
+      // Answer focus: CSS box shorthand maps 1→all, 2→vertical/horizontal, 3→top/horizontal/bottom, 4→top/right/bottom/left.
       questionNumber: 'CSSCODE-4',
       title: 'Parse CSS Box Shorthand',
       difficulty: 'Easy',
@@ -330,6 +343,7 @@ function classNames(...args: ClassArg[]): string {
   {
     detail: {
       id: 'css-coding-5',
+      // Answer focus: rem = px / root font size; default to 16 only when the optional base is absent.
       questionNumber: 'CSSCODE-5',
       title: 'Convert Pixels to Rem',
       difficulty: 'Easy',
@@ -368,11 +382,11 @@ function classNames(...args: ClassArg[]): string {
       algorithm: 'Default baseFontSize to 16 if not provided, then return px divided by baseFontSize.',
       dryRun: 'pxToRem(24, 16) -> 24/16 = 1.5',
       javascriptSolution: `function pxToRem(px, baseFontSize) {
-  const base = baseFontSize || 16;
+  const base = baseFontSize ?? 16;
   return px / base;
 }`,
       typescriptSolution: `function pxToRem(px: number, baseFontSize?: number): number {
-  const base = baseFontSize || 16;
+  const base = baseFontSize ?? 16;
   return px / base;
 }`,
       timeComplexity: 'O(1).',
@@ -393,6 +407,7 @@ function classNames(...args: ClassArg[]): string {
   {
     detail: {
       id: 'css-coding-6',
+      // Answer focus: for this simplified selector grammar, compute id*100 + class*10 + element and sort a copy of the input.
       questionNumber: 'CSSCODE-6',
       title: 'Sort Selectors by Specificity',
       difficulty: 'Medium',
@@ -466,6 +481,7 @@ function classNames(...args: ClassArg[]): string {
   {
     detail: {
       id: 'css-coding-7',
+      // Answer focus: validate the entire string against exactly #rgb or #rrggbb; do not accidentally accept substrings.
       questionNumber: 'CSSCODE-7',
       title: 'Validate a Hex Color String',
       difficulty: 'Easy',
@@ -530,6 +546,7 @@ function classNames(...args: ClassArg[]): string {
   {
     detail: {
       id: 'css-coding-8',
+      // Answer focus: convert channels to RGB, shift each channel by round(2.55 * percent), clamp to [0,255], then rebuild a zero-padded 6-digit hex color.
       questionNumber: 'CSSCODE-8',
       title: 'Lighten or Darken a Hex Color',
       difficulty: 'Medium',
@@ -552,14 +569,14 @@ function classNames(...args: ClassArg[]): string {
       functionName: 'lightenDarkenColor',
       isClassBased: false,
       sampleTests: [
-        { input: ['#000000', 50], expectedOutput: '#7f7f7f', description: 'lighten black by 50%' },
+        { input: ['#000000', 50], expectedOutput: '#808080', description: 'lighten black by 50%' },
         { input: ['#808080', -20], expectedOutput: '#4d4d4d', description: 'darken mid-gray by 20%' },
         { input: ['#ffffff', -50], expectedOutput: '#808080', description: 'darken white, clamped within range' },
       ],
     },
     hints: {
       hints: [
-        'Convert the percent to an additive amount per channel: `Math.round(2.55 * percent)` (2.55 = 255 / 100).',
+        'Convert the percent to an additive amount per channel: `Math.round((255 * percent) / 100)` (2.55 = 255 / 100).',
         'Extract each channel with bit shifting, add the amount, then clamp with `Math.max(Math.min(255, value), 0)`.',
         'Reassemble the channels into a hex string; the `(0x1000000 + r*0x10000 + g*0x100 + b).toString(16).slice(1)` trick guarantees zero-padding.',
       ],
@@ -567,11 +584,11 @@ function classNames(...args: ClassArg[]): string {
     solution: {
       algorithm:
         'Parse the hex into a number. Compute an additive amount from the percent. Add it to each of the three channels extracted via bit shifting, clamp each to [0, 255], then reassemble into a zero-padded hex string using the leading-1 trick.',
-      dryRun: "'#000000', 50 -> num=0, amt=round(2.55*50)=128\nr=0+128=128, g=128, b=128 (already in range)\nresult hex from (0x1000000+128*0x10000+128*0x100+128).toString(16).slice(1)",
+      dryRun: "'#000000', 50 -> num=0, amt=round((255*50)/100)=128\nr=128, g=128, b=128 -> #808080\nresult hex from (0x1000000+128*0x10000+128*0x100+128).toString(16).slice(1)",
       javascriptSolution: `function lightenDarkenColor(hex, percent) {
   const clean = hex.replace('#', '');
   const num = parseInt(clean, 16);
-  const amt = Math.round(2.55 * percent);
+  const amt = Math.round((255 * percent) / 100);
   let r = (num >> 16) + amt;
   let g = ((num >> 8) & 0x00ff) + amt;
   let b = (num & 0x0000ff) + amt;
@@ -583,7 +600,7 @@ function classNames(...args: ClassArg[]): string {
       typescriptSolution: `function lightenDarkenColor(hex: string, percent: number): string {
   const clean = hex.replace('#', '');
   const num = parseInt(clean, 16);
-  const amt = Math.round(2.55 * percent);
+  const amt = Math.round((255 * percent) / 100);
   let r = (num >> 16) + amt;
   let g = ((num >> 8) & 0x00ff) + amt;
   let b = (num & 0x0000ff) + amt;

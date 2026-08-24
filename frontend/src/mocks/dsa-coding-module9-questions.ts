@@ -87,85 +87,149 @@ export const MOCK_DSA_CODING_MODULE9_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Maintain a min-heap capped at size k. For each number: if the heap has fewer than k elements, push it in; otherwise, if the number is greater than the heap\'s minimum (its root), replace the root with it and sift down. After processing every element, the heap\'s root is the kth largest value, because the heap always holds exactly the k largest values seen so far, with the smallest of those k sitting at the root.',
-      dryRun:
-        'nums=[3,2,1,5,6,4], k=2\n3: heap=[3]\n2: heap=[2,3] (min-heap, root=2)\n1: 1>2? no, discard\n5: 5>2 → replace root → heap=[3,5] (root=3)\n6: 6>3 → replace root → heap=[5,6] (root=5)\n4: 4>5? no, discard\nfinal heap root = 5 → 2nd largest = 5',
-      javascriptSolution: `function findKthLargest(nums, k) {
-  const heap = [];
+      algorithm: `
+Step 1: We only need the k largest values, not the whole sorted array.
+Step 2: Keep those k values in a min-heap, so the smallest of the k is always at the root.
+Step 3: Add values until the heap has k items; afterwards replace the root only when a larger value arrives.
+Step 4: The root at the end is the kth largest value.
 
-  function siftUp(i) {
-    while (i > 0) {
-      const parent = (i - 1) >> 1;
-      if (heap[parent] <= heap[i]) break;
-      [heap[parent], heap[i]] = [heap[i], heap[parent]];
-      i = parent;
+Core idea from source:
+Maintain a min-heap capped at size k. For each number: if the heap has fewer than k elements, push it in; otherwise, if the number is greater than the heap\\\'s minimum (its root), replace the root with it and sift down. After processing every element, the heap\\\'s root is the kth largest value, because the heap always holds exactly the k largest values seen so far, with the smallest of those k sitting at the root.`,
+      dryRun: `
+nums=[3,2,1,5,6,4], k=2
+heap=[].
+3 → [3]
+2 → [2,3]
+1 → discard because 1 <= 2
+5 → replace root 2 → [3,5]
+6 → replace root 3 → [5,6]
+4 → discard because 4 <= 5
+Root = 5 → 2nd largest.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findKthLargest(nums, k) {
+    const heap = [];
+    function siftUp(index) {
+        while (index > 0) {
+            const parent = Math.floor((index - 1) / 2);
+            if (heap[parent] <= heap[index]) {
+                break;
+            }
+            const temp = heap[parent];
+            heap[parent] = heap[index];
+            heap[index] = temp;
+            index = parent;
+        }
     }
-  }
-
-  function siftDown(i) {
-    const n = heap.length;
-    while (true) {
-      let smallest = i;
-      const left = 2 * i + 1;
-      const right = 2 * i + 2;
-      if (left < n && heap[left] < heap[smallest]) smallest = left;
-      if (right < n && heap[right] < heap[smallest]) smallest = right;
-      if (smallest === i) break;
-      [heap[i], heap[smallest]] = [heap[smallest], heap[i]];
-      i = smallest;
+    function siftDown(index) {
+        while (true) {
+            let smallest = index;
+            const left = index * 2 + 1;
+            const right = index * 2 + 2;
+            if (left < heap.length &&
+                heap[left] < heap[smallest]) {
+                smallest = left;
+            }
+            if (right < heap.length &&
+                heap[right] < heap[smallest]) {
+                smallest = right;
+            }
+            if (smallest === index) {
+                break;
+            }
+            const temp = heap[index];
+            heap[index] = heap[smallest];
+            heap[smallest] = temp;
+            index = smallest;
+        }
     }
-  }
-
-  for (const num of nums) {
-    if (heap.length < k) {
-      heap.push(num);
-      siftUp(heap.length - 1);
-    } else if (num > heap[0]) {
-      heap[0] = num;
-      siftDown(0);
+    for (let i = 0; i < nums.length; i++) {
+        const value = nums[i];
+        if (heap.length < k) {
+            heap.push(value);
+            siftUp(heap.length - 1);
+        }
+        else if (value > heap[0]) {
+            heap[0] = value;
+            siftDown(0);
+        }
     }
-  }
-
-  return heap[0];
+    return heap[0];
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findKthLargestUsingBuiltIns(nums, k) {
+    return [...nums].sort((a, b) => b - a)[k - 1];
 }`,
-      typescriptSolution: `function findKthLargest(nums: number[], k: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findKthLargest(nums: number[], k: number): number {
   const heap: number[] = [];
 
-  function siftUp(i: number): void {
-    while (i > 0) {
-      const parent = (i - 1) >> 1;
-      if (heap[parent]! <= heap[i]!) break;
-      [heap[parent], heap[i]] = [heap[i]!, heap[parent]!];
-      i = parent;
+  function siftUp(index: number): void {
+    while (index > 0) {
+      const parent = Math.floor((index - 1) / 2);
+
+      if (heap[parent]! <= heap[index]!) {
+        break;
+      }
+
+      const temp = heap[parent]!;
+      heap[parent] = heap[index]!;
+      heap[index] = temp;
+      index = parent;
     }
   }
 
-  function siftDown(i: number): void {
-    const n = heap.length;
+  function siftDown(index: number): void {
     while (true) {
-      let smallest = i;
-      const left = 2 * i + 1;
-      const right = 2 * i + 2;
-      if (left < n && heap[left]! < heap[smallest]!) smallest = left;
-      if (right < n && heap[right]! < heap[smallest]!) smallest = right;
-      if (smallest === i) break;
-      [heap[i], heap[smallest]] = [heap[smallest]!, heap[i]!];
-      i = smallest;
+      let smallest = index;
+      const left = index * 2 + 1;
+      const right = index * 2 + 2;
+
+      if (
+        left < heap.length &&
+        heap[left]! < heap[smallest]!
+      ) {
+        smallest = left;
+      }
+
+      if (
+        right < heap.length &&
+        heap[right]! < heap[smallest]!
+      ) {
+        smallest = right;
+      }
+
+      if (smallest === index) {
+        break;
+      }
+
+      const temp = heap[index]!;
+      heap[index] = heap[smallest]!;
+      heap[smallest] = temp;
+      index = smallest;
     }
   }
 
-  for (const num of nums) {
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i]!;
+
     if (heap.length < k) {
-      heap.push(num);
+      heap.push(value);
       siftUp(heap.length - 1);
-    } else if (num > heap[0]!) {
-      heap[0] = num;
+    } else if (value > heap[0]!) {
+      heap[0] = value;
       siftDown(0);
     }
   }
 
   return heap[0]!;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findKthLargestUsingBuiltIns(
+  nums: number[],
+  k: number,
+): number {
+  return [...nums].sort((a, b) => b - a)[k - 1]!;
 }`,
       timeComplexity: 'O(n log k) — each of the n elements does at most one O(log k) heap operation.',
       spaceComplexity: 'O(k) — the heap never grows beyond size k.',
@@ -251,147 +315,292 @@ export const MOCK_DSA_CODING_MODULE9_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Maintain two heaps: `lo`, a max-heap holding the smaller half of the numbers, and `hi`, a min-heap holding the larger half. On addNum: push into `lo`, then move `lo`\'s new maximum into `hi` (this guarantees every value in `lo` is <= every value in `hi`), then if `hi` has grown larger than `lo`, move `hi`\'s minimum back into `lo`. This keeps `lo`\'s size equal to or exactly one more than `hi`\'s size. On findMedian: if `lo` has more elements, its top is the median; otherwise the median is the average of both heaps\' tops.',
-      dryRun:
-        'addNum(1): lo=[1], hi=[]\naddNum(2): lo.push(2)→hi.push(lo.pop())→hi=[2],lo=[]; hi bigger than lo → lo.push(hi.pop())→lo=[1],hi=[]... after rebalance lo=[1], hi=[2]? Trace via verified code: final state lo=[1], hi=[2]\nfindMedian: sizes equal → (1+2)/2=1.5\naddNum(3): lo.push(3)→hi.push(lo.pop())→hi=[2,3](min=2),lo=[1]; hi bigger → lo.push(hi.pop()=2)→lo=[2,1](max=2),hi=[3]\nfindMedian: lo bigger → 2',
-      javascriptSolution: `function medianFinderOperations(operations, args) {
-  class Heap {
-    constructor(compare) {
-      this.data = [];
-      this.compare = compare;
+      algorithm: `
+Step 1: Split all numbers into a lower half and an upper half.
+Step 2: Keep the lower half in a max-heap and the upper half in a min-heap.
+Step 3: Rebalance after every insertion so their sizes differ by at most one and every lower value <= every upper value.
+Step 4: Read the median directly from one heap root or the average of both roots.
+
+Core idea from source:
+Maintain two heaps: \`lo\`, a max-heap holding the smaller half of the numbers, and \`hi\`, a min-heap holding the larger half. On addNum: push into \`lo\`, then move \`lo\`\\\'s new maximum into \`hi\` (this guarantees every value in \`lo\` is <= every value in \`hi\`), then if \`hi\` has grown larger than \`lo\`, move \`hi\`\\\'s minimum back into \`lo\`. This keeps \`lo\`\\\'s size equal to or exactly one more than \`hi\`\\\'s size. On findMedian: if \`lo\` has more elements, its top is the median; otherwise the median is the average of both heaps\\\' tops.`,
+      dryRun: `
+addNum(1)
+lower=[1], upper=[]
+
+addNum(2)
+push 2 into lower → [2,1]
+move 2 to upper → lower=[1], upper=[2]
+sizes equal → median=(1+2)/2=1.5
+
+addNum(3)
+lower gets 3 → largest lower=3
+move 3 to upper → upper=[2,3]
+upper is bigger → move 2 back to lower
+lower=[2,1], upper=[3]
+lower is bigger → median=2.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function medianFinderOperations(operations, args) {
+    class Heap {
+        constructor(isMinHeap) {
+            this.data = [];
+            this.isMinHeap = isMinHeap;
+        }
+        size() {
+            return this.data.length;
+        }
+        peek() {
+            return this.data[0];
+        }
+        before(a, b) {
+            return this.isMinHeap ? a < b : a > b;
+        }
+        push(value) {
+            this.data.push(value);
+            let index = this.data.length - 1;
+            while (index > 0) {
+                const parent = Math.floor((index - 1) / 2);
+                if (!this.before(this.data[index], this.data[parent])) {
+                    break;
+                }
+                const temp = this.data[index];
+                this.data[index] = this.data[parent];
+                this.data[parent] = temp;
+                index = parent;
+            }
+        }
+        pop() {
+            const root = this.data[0];
+            const last = this.data.pop();
+            if (this.data.length === 0) {
+                return root;
+            }
+            this.data[0] = last;
+            let index = 0;
+            while (true) {
+                let best = index;
+                const left = index * 2 + 1;
+                const right = index * 2 + 2;
+                if (left < this.data.length &&
+                    this.before(this.data[left], this.data[best])) {
+                    best = left;
+                }
+                if (right < this.data.length &&
+                    this.before(this.data[right], this.data[best])) {
+                    best = right;
+                }
+                if (best === index) {
+                    break;
+                }
+                const temp = this.data[index];
+                this.data[index] = this.data[best];
+                this.data[best] = temp;
+                index = best;
+            }
+            return root;
+        }
     }
-    size() {
+    const lower = new Heap(false); // max-heap
+    const upper = new Heap(true); // min-heap
+    const results = [];
+    for (let i = 0; i < operations.length; i++) {
+        const operation = operations[i];
+        const operationArgs = args[i];
+        if (operation === "addNum") {
+            const value = operationArgs[0];
+            lower.push(value);
+            // Move the largest lower-half value to the upper half.
+            upper.push(lower.pop());
+            // Keep lower the same size as upper or one larger.
+            if (upper.size() > lower.size()) {
+                lower.push(upper.pop());
+            }
+            results.push(null);
+            continue;
+        }
+        if (operation === "findMedian") {
+            if (lower.size() > upper.size()) {
+                results.push(lower.peek());
+            }
+            else {
+                results.push((lower.peek() + upper.peek()) / 2);
+            }
+        }
+    }
+    return results;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function medianFinderOperationsUsingBuiltIns(operations, args) {
+    const values = [];
+    const results = [];
+    for (let i = 0; i < operations.length; i++) {
+        const operation = operations[i];
+        const operationArgs = args[i];
+        if (operation === "addNum") {
+            values.push(operationArgs[0]);
+            values.sort((a, b) => a - b);
+            results.push(null);
+        }
+        else if (operation === "findMedian") {
+            const middle = Math.floor(values.length / 2);
+            if (values.length % 2 === 1) {
+                results.push(values[middle]);
+            }
+            else {
+                results.push((values[middle - 1] + values[middle]) / 2);
+            }
+        }
+    }
+    return results;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function medianFinderOperations(
+  operations: readonly string[],
+  args: readonly unknown[][],
+): unknown[] {
+  class Heap {
+    private data: number[] = [];
+    private readonly isMinHeap: boolean;
+
+    constructor(isMinHeap: boolean) {
+      this.isMinHeap = isMinHeap;
+    }
+
+    size(): number {
       return this.data.length;
     }
-    peek() {
-      return this.data[0];
+
+    peek(): number {
+      return this.data[0]!;
     }
-    push(val) {
-      this.data.push(val);
-      let i = this.data.length - 1;
-      while (i > 0) {
-        const parent = (i - 1) >> 1;
-        if (this.compare(this.data[i], this.data[parent]) >= 0) break;
-        [this.data[i], this.data[parent]] = [this.data[parent], this.data[i]];
-        i = parent;
-      }
+
+    private before(a: number, b: number): boolean {
+      return this.isMinHeap ? a < b : a > b;
     }
-    pop() {
-      const top = this.data[0];
-      const last = this.data.pop();
-      if (this.data.length > 0) {
-        this.data[0] = last;
-        let i = 0;
-        const n = this.data.length;
-        while (true) {
-          let smallest = i;
-          const left = 2 * i + 1;
-          const right = 2 * i + 2;
-          if (left < n && this.compare(this.data[left], this.data[smallest]) < 0) smallest = left;
-          if (right < n && this.compare(this.data[right], this.data[smallest]) < 0) smallest = right;
-          if (smallest === i) break;
-          [this.data[i], this.data[smallest]] = [this.data[smallest], this.data[i]];
-          i = smallest;
+
+    push(value: number): void {
+      this.data.push(value);
+
+      let index = this.data.length - 1;
+
+      while (index > 0) {
+        const parent = Math.floor((index - 1) / 2);
+
+        if (!this.before(this.data[index]!, this.data[parent]!)) {
+          break;
         }
+
+        const temp = this.data[index]!;
+        this.data[index] = this.data[parent]!;
+        this.data[parent] = temp;
+        index = parent;
       }
-      return top;
+    }
+
+    pop(): number {
+      const root = this.data[0]!;
+      const last = this.data.pop()!;
+
+      if (this.data.length === 0) {
+        return root;
+      }
+
+      this.data[0] = last;
+
+      let index = 0;
+
+      while (true) {
+        let best = index;
+        const left = index * 2 + 1;
+        const right = index * 2 + 2;
+
+        if (
+          left < this.data.length &&
+          this.before(this.data[left]!, this.data[best]!)
+        ) {
+          best = left;
+        }
+
+        if (
+          right < this.data.length &&
+          this.before(this.data[right]!, this.data[best]!)
+        ) {
+          best = right;
+        }
+
+        if (best === index) {
+          break;
+        }
+
+        const temp = this.data[index]!;
+        this.data[index] = this.data[best]!;
+        this.data[best] = temp;
+        index = best;
+      }
+
+      return root;
     }
   }
 
-  const lo = new Heap((a, b) => b - a); // max-heap: lower half
-  const hi = new Heap((a, b) => a - b); // min-heap: upper half
-  const results = [];
+  const lower = new Heap(false); // max-heap
+  const upper = new Heap(true);  // min-heap
+  const results: unknown[] = [];
 
   for (let i = 0; i < operations.length; i++) {
-    const op = operations[i];
-    const opArgs = args[i];
+    const operation = operations[i];
+    const operationArgs = args[i]!;
 
-    if (op === 'addNum') {
-      const num = opArgs[0];
-      lo.push(num);
-      hi.push(lo.pop());
-      if (hi.size() > lo.size()) {
-        lo.push(hi.pop());
+    if (operation === "addNum") {
+      const value = operationArgs[0] as number;
+
+      lower.push(value);
+
+      // Move the largest lower-half value to the upper half.
+      upper.push(lower.pop());
+
+      // Keep lower the same size as upper or one larger.
+      if (upper.size() > lower.size()) {
+        lower.push(upper.pop());
       }
+
       results.push(null);
-    } else if (op === 'findMedian') {
-      if (lo.size() > hi.size()) {
-        results.push(lo.peek());
+      continue;
+    }
+
+    if (operation === "findMedian") {
+      if (lower.size() > upper.size()) {
+        results.push(lower.peek());
       } else {
-        results.push((lo.peek() + hi.peek()) / 2);
+        results.push((lower.peek() + upper.peek()) / 2);
       }
     }
   }
 
   return results;
-}`,
-      typescriptSolution: `function medianFinderOperations(
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function medianFinderOperationsUsingBuiltIns(
   operations: readonly string[],
   args: readonly unknown[][],
 ): unknown[] {
-  class Heap {
-    data: number[] = [];
-    constructor(private compare: (a: number, b: number) => number) {}
-    size(): number {
-      return this.data.length;
-    }
-    peek(): number {
-      return this.data[0]!;
-    }
-    push(val: number): void {
-      this.data.push(val);
-      let i = this.data.length - 1;
-      while (i > 0) {
-        const parent = (i - 1) >> 1;
-        if (this.compare(this.data[i]!, this.data[parent]!) >= 0) break;
-        [this.data[i], this.data[parent]] = [this.data[parent]!, this.data[i]!];
-        i = parent;
-      }
-    }
-    pop(): number {
-      const top = this.data[0]!;
-      const last = this.data.pop()!;
-      if (this.data.length > 0) {
-        this.data[0] = last;
-        let i = 0;
-        const n = this.data.length;
-        while (true) {
-          let smallest = i;
-          const left = 2 * i + 1;
-          const right = 2 * i + 2;
-          if (left < n && this.compare(this.data[left]!, this.data[smallest]!) < 0) smallest = left;
-          if (right < n && this.compare(this.data[right]!, this.data[smallest]!) < 0) smallest = right;
-          if (smallest === i) break;
-          [this.data[i], this.data[smallest]] = [this.data[smallest]!, this.data[i]!];
-          i = smallest;
-        }
-      }
-      return top;
-    }
-  }
-
-  const lo = new Heap((a, b) => b - a);
-  const hi = new Heap((a, b) => a - b);
+  const values: number[] = [];
   const results: unknown[] = [];
 
   for (let i = 0; i < operations.length; i++) {
-    const op = operations[i];
-    const opArgs = args[i]!;
+    const operation = operations[i];
+    const operationArgs = args[i]!;
 
-    if (op === 'addNum') {
-      const num = opArgs[0] as number;
-      lo.push(num);
-      hi.push(lo.pop());
-      if (hi.size() > lo.size()) {
-        lo.push(hi.pop());
-      }
+    if (operation === "addNum") {
+      values.push(operationArgs[0] as number);
+      values.sort((a, b) => a - b);
       results.push(null);
-    } else if (op === 'findMedian') {
-      if (lo.size() > hi.size()) {
-        results.push(lo.peek());
+    } else if (operation === "findMedian") {
+      const middle = Math.floor(values.length / 2);
+
+      if (values.length % 2 === 1) {
+        results.push(values[middle]!);
       } else {
-        results.push((lo.peek() + hi.peek()) / 2);
+        results.push((values[middle - 1]! + values[middle]!) / 2);
       }
     }
   }
@@ -460,50 +669,128 @@ export const MOCK_DSA_CODING_MODULE9_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Maintain a deque of indices with values in decreasing order from front to back. For each index i: first evict the front of the deque if it has slid out of the current window (index <= i - k); then pop from the back while the value at the back is smaller than nums[i] (those values can never be a future maximum, since nums[i] is both larger and more recent); push i onto the back. Once the window is fully formed (i >= k - 1), the front of the deque is the window\'s maximum.',
-      dryRun:
-        'nums=[1,3,-1,-3,5,3,6,7], k=3\ni=0(1): deque=[0]\ni=1(3): pop 0 (1<3) → deque=[1]\ni=2(-1): deque=[1,2] → window[0..2] max=nums[1]=3\ni=3(-3): deque=[1,2,3] → window[1..3] max=nums[1]=3\ni=4(5): evict none (front=1 still in window); pop 3,2,1(all<5) → deque=[4] → window[2..4] max=5\ni=5(3): deque=[4,5] → window[3..5] max=5\ni=6(6): pop 5,4 → deque=[6] → window[4..6] max=6\ni=7(7): pop 6 → deque=[7] → window[5..7] max=7\nresult=[3,3,5,5,6,7]',
-      javascriptSolution: `function maxSlidingWindow(nums, k) {
-  const deque = []; // indices, values decreasing front to back
-  const result = [];
+      algorithm: `
+Step 1: Store indices in a deque whose values decrease from front to back.
+Step 2: Remove indices that have left the current window.
+Step 3: Remove smaller values from the back because a newer larger value makes them useless.
+Step 4: The front index is always the maximum for the current window.
 
-  for (let i = 0; i < nums.length; i++) {
-    while (deque.length > 0 && deque[0] <= i - k) {
-      deque.shift();
+Core idea from source:
+Maintain a deque of indices with values in decreasing order from front to back. For each index i: first evict the front of the deque if it has slid out of the current window (index <= i - k); then pop from the back while the value at the back is smaller than nums[i] (those values can never be a future maximum, since nums[i] is both larger and more recent); push i onto the back. Once the window is fully formed (i >= k - 1), the front of the deque is the window\\\'s maximum.`,
+      dryRun: `
+nums=[1,3,-1,-3,5,3,6,7], k=3
+Window [1,3,-1] → 3
+Window [3,-1,-3] → 3
+Window [-1,-3,5] → 5
+Window [-3,5,3] → 5
+Window [5,3,6] → 6
+Window [3,6,7] → 7
+Result=[3,3,5,5,6,7].
+
+The deque always keeps candidate indices from largest value to smallest.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxSlidingWindow(nums, k) {
+    const deque = [];
+    let front = 0;
+    const result = [];
+    for (let right = 0; right < nums.length; right++) {
+        // Remove indices outside the current window.
+        while (front < deque.length &&
+            deque[front] <= right - k) {
+            front++;
+        }
+        // Remove smaller values from the back.
+        while (deque.length > front &&
+            nums[deque[deque.length - 1]] <= nums[right]) {
+            deque.pop();
+        }
+        deque.push(right);
+        if (right >= k - 1) {
+            result.push(nums[deque[front]]);
+        }
+        // Compact occasionally so the array does not grow forever.
+        if (front > 64 && front * 2 > deque.length) {
+            const compact = [];
+            for (let i = front; i < deque.length; i++) {
+                compact.push(deque[i]);
+            }
+            deque.length = 0;
+            for (let i = 0; i < compact.length; i++) {
+                deque.push(compact[i]);
+            }
+            front = 0;
+        }
+    }
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxSlidingWindowUsingBuiltIns(nums, k) {
+    const result = [];
+    for (let left = 0; left <= nums.length - k; left++) {
+        const window = nums.slice(left, left + k);
+        result.push(Math.max(...window));
+    }
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxSlidingWindow(nums: number[], k: number): number[] {
+  const deque: number[] = [];
+  let front = 0;
+  const result: number[] = [];
+
+  for (let right = 0; right < nums.length; right++) {
+    // Remove indices outside the current window.
+    while (
+      front < deque.length &&
+      deque[front]! <= right - k
+    ) {
+      front++;
     }
 
-    while (deque.length > 0 && nums[deque[deque.length - 1]] < nums[i]) {
+    // Remove smaller values from the back.
+    while (
+      deque.length > front &&
+      nums[deque[deque.length - 1]!]! <= nums[right]!
+    ) {
       deque.pop();
     }
 
-    deque.push(i);
+    deque.push(right);
 
-    if (i >= k - 1) {
-      result.push(nums[deque[0]]);
+    if (right >= k - 1) {
+      result.push(nums[deque[front]!]!);
+    }
+
+    // Compact occasionally so the array does not grow forever.
+    if (front > 64 && front * 2 > deque.length) {
+      const compact: number[] = [];
+
+      for (let i = front; i < deque.length; i++) {
+        compact.push(deque[i]!);
+      }
+
+      deque.length = 0;
+      for (let i = 0; i < compact.length; i++) {
+        deque.push(compact[i]!);
+      }
+
+      front = 0;
     }
   }
 
   return result;
-}`,
-      typescriptSolution: `function maxSlidingWindow(nums: number[], k: number): number[] {
-  const deque: number[] = [];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxSlidingWindowUsingBuiltIns(
+  nums: number[],
+  k: number,
+): number[] {
   const result: number[] = [];
 
-  for (let i = 0; i < nums.length; i++) {
-    while (deque.length > 0 && deque[0]! <= i - k) {
-      deque.shift();
-    }
-
-    while (deque.length > 0 && nums[deque[deque.length - 1]!]! < nums[i]!) {
-      deque.pop();
-    }
-
-    deque.push(i);
-
-    if (i >= k - 1) {
-      result.push(nums[deque[0]!]!);
-    }
+  for (let left = 0; left <= nums.length - k; left++) {
+    const window = nums.slice(left, left + k);
+    result.push(Math.max(...window));
   }
 
   return result;
@@ -570,51 +857,183 @@ export const MOCK_DSA_CODING_MODULE9_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Count the frequency of every element with a hash map. Create an array of `nums.length + 1` buckets, where `buckets[f]` holds every element whose frequency is exactly f. Walk the buckets from the highest index down to 0, collecting elements into the result until it has k elements. Because bucket index directly encodes frequency, no sorting comparison is ever needed, giving O(n) overall.',
-      dryRun:
-        'nums=[1,1,1,2,2,3], k=2\ncount: 1→3, 2→2, 3→1\nbuckets[3]=[1], buckets[2]=[2], buckets[1]=[3]\nwalk from freq=6 down: freq=3 → take 1 (result=[1]); freq=2 → take 2 (result=[1,2], length=k, stop)\nresult=[1,2]',
-      javascriptSolution: `function topKFrequent(nums, k) {
-  const count = new Map();
-  for (const num of nums) {
-    count.set(num, (count.get(num) ?? 0) + 1);
+      algorithm: `
+Step 1: Count each value and remember its first occurrence.
+Step 2: Put values into buckets indexed by frequency.
+Step 3: Scan buckets from highest frequency to lowest.
+Step 4: For tied frequencies, keep first-occurrence order and stop after k values.
+
+Core idea from source:
+Count the frequency of every element with a hash map. Create an array of \`nums.length + 1\` buckets, where \`buckets[f]\` holds every element whose frequency is exactly f. Walk the buckets from the highest index down to 0, collecting elements into the result until it has k elements. Because bucket index directly encodes frequency, no sorting comparison is ever needed, giving O(n) overall.`,
+      dryRun: `
+nums=[1,1,1,2,2,3], k=2
+Frequency: 1→3, 2→2, 3→1.
+Bucket 3: [1]
+Bucket 2: [2]
+Bucket 1: [3]
+Read from high frequency to low → 1, then 2.
+Result=[1,2].
+
+For [5,5,6,6,7,7], all frequencies tie at 2, so first occurrence gives [5,6,7].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function topKFrequent(nums, k) {
+    const frequency = Object.create(null);
+    const firstIndex = Object.create(null);
+    for (let i = 0; i < nums.length; i++) {
+        const key = String(nums[i]);
+        if (frequency[key] === undefined) {
+            frequency[key] = 0;
+            firstIndex[key] = i;
+        }
+        frequency[key]++;
+    }
+    const buckets = new Array(nums.length + 1);
+    for (let i = 0; i < buckets.length; i++) {
+        buckets[i] = [];
+    }
+    const seenValues = [];
+    for (let i = 0; i < nums.length; i++) {
+        const value = nums[i];
+        let alreadySeen = false;
+        for (let j = 0; j < seenValues.length; j++) {
+            if (seenValues[j] === value) {
+                alreadySeen = true;
+                break;
+            }
+        }
+        if (!alreadySeen) {
+            seenValues.push(value);
+        }
+    }
+    for (let i = 0; i < seenValues.length; i++) {
+        const value = seenValues[i];
+        buckets[frequency[String(value)]].push(value);
+    }
+    const result = [];
+    for (let freq = buckets.length - 1; freq >= 1 && result.length < k; freq--) {
+        const bucket = buckets[freq];
+        // Bucket order follows first occurrence because seenValues does.
+        for (let i = 0; i < bucket.length; i++) {
+            result.push(bucket[i]);
+            if (result.length === k) {
+                break;
+            }
+        }
+    }
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function topKFrequentUsingBuiltIns(nums, k) {
+    const count = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        const value = nums[i];
+        const current = count.get(value);
+        if (current) {
+            current.frequency++;
+        }
+        else {
+            count.set(value, { frequency: 1, first: i });
+        }
+    }
+    return [...count.entries()]
+        .sort((a, b) => b[1].frequency - a[1].frequency ||
+        a[1].first - b[1].first)
+        .slice(0, k)
+        .map(([value]) => value);
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function topKFrequent(nums: number[], k: number): number[] {
+  const frequency: Record<string, number> = Object.create(null);
+  const firstIndex: Record<string, number> = Object.create(null);
+
+  for (let i = 0; i < nums.length; i++) {
+    const key = String(nums[i]!);
+
+    if (frequency[key] === undefined) {
+      frequency[key] = 0;
+      firstIndex[key] = i;
+    }
+
+    frequency[key]++;
   }
 
-  const buckets = Array.from({ length: nums.length + 1 }, () => []);
-  for (const [num, freq] of count.entries()) {
-    buckets[freq].push(num);
+  const buckets: number[][] = new Array(nums.length + 1);
+
+  for (let i = 0; i < buckets.length; i++) {
+    buckets[i] = [];
   }
 
-  const result = [];
-  for (let freq = buckets.length - 1; freq >= 0 && result.length < k; freq--) {
-    for (const num of buckets[freq]) {
-      result.push(num);
-      if (result.length === k) break;
+  const seenValues: number[] = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i]!;
+    let alreadySeen = false;
+
+    for (let j = 0; j < seenValues.length; j++) {
+      if (seenValues[j] === value) {
+        alreadySeen = true;
+        break;
+      }
+    }
+
+    if (!alreadySeen) {
+      seenValues.push(value);
     }
   }
 
-  return result;
-}`,
-      typescriptSolution: `function topKFrequent(nums: number[], k: number): number[] {
-  const count = new Map<number, number>();
-  for (const num of nums) {
-    count.set(num, (count.get(num) ?? 0) + 1);
-  }
-
-  const buckets: number[][] = Array.from({ length: nums.length + 1 }, () => []);
-  for (const [num, freq] of count.entries()) {
-    buckets[freq]!.push(num);
+  for (let i = 0; i < seenValues.length; i++) {
+    const value = seenValues[i]!;
+    buckets[frequency[String(value)]!]!.push(value);
   }
 
   const result: number[] = [];
-  for (let freq = buckets.length - 1; freq >= 0 && result.length < k; freq--) {
-    for (const num of buckets[freq]!) {
-      result.push(num);
-      if (result.length === k) break;
+
+  for (
+    let freq = buckets.length - 1;
+    freq >= 1 && result.length < k;
+    freq--
+  ) {
+    const bucket = buckets[freq]!;
+
+    // Bucket order follows first occurrence because seenValues does.
+    for (let i = 0; i < bucket.length; i++) {
+      result.push(bucket[i]!);
+
+      if (result.length === k) {
+        break;
+      }
     }
   }
 
   return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function topKFrequentUsingBuiltIns(
+  nums: number[],
+  k: number,
+): number[] {
+  const count = new Map<number, { frequency: number; first: number }>();
+
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i]!;
+    const current = count.get(value);
+
+    if (current) {
+      current.frequency++;
+    } else {
+      count.set(value, { frequency: 1, first: i });
+    }
+  }
+
+  return [...count.entries()]
+    .sort(
+      (a, b) =>
+        b[1].frequency - a[1].frequency ||
+        a[1].first - b[1].first,
+    )
+    .slice(0, k)
+    .map(([value]) => value);
 }`,
       timeComplexity: 'O(n) — counting is O(n), bucketing is O(n distinct values), and the bucket walk visits at most n + 1 buckets and n elements total.',
       spaceComplexity: 'O(n) — the frequency map and the buckets together hold every distinct element once.',

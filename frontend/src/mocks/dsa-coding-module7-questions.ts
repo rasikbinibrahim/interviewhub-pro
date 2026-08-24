@@ -4,7 +4,7 @@
 // CodingQuestionDetail problems: every sampleTests entry has been checked
 // against the reference solution below by actually running it in Node, and
 // both the JavaScript and TypeScript solutions are genuine, working code
-// (no placeholder "solve(input)" stubs). The dump's "Subset Sums" snippet
+// (no placeholder solution stubs). The dump's "Subset Sums" snippet
 // had syntax errors (an unscoped `arr`/`result`, an unmatched paren) and
 // was reimplemented from scratch rather than ported literally; N-Queens had
 // no code in the dump at all and was implemented fresh.
@@ -77,51 +77,125 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Map each digit to its letters. Recurse with (index, currentCombination): if currentCombination.length equals digits.length, push it and return; otherwise, for every letter mapped to digits[index], recurse with index+1 and the letter appended. Explicitly return [] up front when digits is empty.',
+        `Step 1: Map each digit to its letters.
+Step 2: Choose one letter for the current digit.
+Step 3: Recurse to the next digit until every digit has one chosen letter.
+Step 4: Record the completed combination.
+
+Core idea from source:
+Map each digit to its letters. Recurse with (index, currentCombination): if currentCombination.length equals digits.length, push it and return; otherwise, for every letter mapped to digits[index], recurse with index+1 and the letter appended. Explicitly return [] up front when digits is empty.`,
       dryRun:
-        'digits="23"\nhelper(0,"")\n  for c of "abc": helper(1,"a"|"b"|"c")\n    for d of "def": helper(2, "ad"/"ae"/"af"/...)\n      length===2 → push\nresult=["ad","ae","af","bd","be","bf","cd","ce","cf"]',
-      javascriptSolution: `function letterCombinations(digits) {
-  if (!digits || digits.length === 0) return [];
-
-  const map = {
-    '2': 'abc', '3': 'def', '4': 'ghi', '5': 'jkl',
-    '6': 'mno', '7': 'pqrs', '8': 'tuv', '9': 'wxyz',
-  };
-  const result = [];
-
-  function helper(index, current) {
-    if (current.length === digits.length) {
-      result.push(current);
-      return;
+        `digits="23"
+2 → "abc"
+Choose a → then 3 gives ad, ae, af.
+Choose b → bd, be, bf.
+Choose c → cd, ce, cf.
+Result has 9 combinations.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function letterCombinations(digits) {
+    if (digits.length === 0)
+        return [];
+    const map = {
+        "2": "abc",
+        "3": "def",
+        "4": "ghi",
+        "5": "jkl",
+        "6": "mno",
+        "7": "pqrs",
+        "8": "tuv",
+        "9": "wxyz",
+    };
+    const result = [];
+    function helper(index, current) {
+        if (index === digits.length) {
+            result.push(current);
+            return;
+        }
+        const letters = map[digits[index]];
+        for (let i = 0; i < letters.length; i++) {
+            helper(index + 1, current + letters[i]);
+        }
     }
-    for (const letter of map[digits[index]]) {
-      helper(index + 1, current + letter);
+    helper(0, "");
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function letterCombinationsUsingBuiltIns(digits) {
+    if (digits.length === 0)
+        return [];
+    const map = {
+        "2": "abc", "3": "def", "4": "ghi", "5": "jkl",
+        "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz",
+    };
+    let result = [""];
+    for (const digit of digits) {
+        const next = [];
+        for (const prefix of result) {
+            for (const letter of map[digit]) {
+                next.push(prefix + letter);
+            }
+        }
+        result = next;
     }
-  }
-
-  helper(0, '');
-  return result;
+    return result;
 }`,
-      typescriptSolution: `function letterCombinations(digits: string): string[] {
-  if (!digits || digits.length === 0) return [];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function letterCombinations(digits: string): string[] {
+  if (digits.length === 0) return [];
 
   const map: Record<string, string> = {
-    '2': 'abc', '3': 'def', '4': 'ghi', '5': 'jkl',
-    '6': 'mno', '7': 'pqrs', '8': 'tuv', '9': 'wxyz',
+    "2": "abc",
+    "3": "def",
+    "4": "ghi",
+    "5": "jkl",
+    "6": "mno",
+    "7": "pqrs",
+    "8": "tuv",
+    "9": "wxyz",
   };
+
   const result: string[] = [];
 
   function helper(index: number, current: string): void {
-    if (current.length === digits.length) {
+    if (index === digits.length) {
       result.push(current);
       return;
     }
-    for (const letter of map[digits[index]!]!) {
-      helper(index + 1, current + letter);
+
+    const letters = map[digits[index]!]!;
+
+    for (let i = 0; i < letters.length; i++) {
+      helper(index + 1, current + letters[i]);
     }
   }
 
-  helper(0, '');
+  helper(0, "");
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function letterCombinationsUsingBuiltIns(digits: string): string[] {
+  if (digits.length === 0) return [];
+
+  const map: Record<string, string> = {
+    "2": "abc", "3": "def", "4": "ghi", "5": "jkl",
+    "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz",
+  };
+
+  let result: string[] = [""];
+
+  for (const digit of digits) {
+    const next: string[] = [];
+
+    for (const prefix of result) {
+      for (const letter of map[digit]!) {
+        next.push(prefix + letter);
+      }
+    }
+
+    result = next;
+  }
+
   return result;
 }`,
       timeComplexity: 'O(4^n · n) — up to 4 branches per digit (digits 7 and 9), n digits deep, and each combination costs O(n) to build/copy.',
@@ -187,45 +261,99 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Backtrack with helper(start): if the running combination has length k, record a copy and return. Otherwise, for i from start to n, push i, recurse with start = i + 1 (so numbers are never reused or reordered), then pop i to backtrack.',
-      dryRun:
-        'n=4,k=2\nhelper(1): ds=[]\n  i=1: ds=[1], helper(2): i=2 ds=[1,2] → push [1,2]; i=3 ds=[1,3] → push [1,3]; i=4 ds=[1,4] → push [1,4]\n  i=2: ds=[2], helper(3): i=3 → push [2,3]; i=4 → push [2,4]\n  i=3: ds=[3], helper(4): i=4 → push [3,4]\n  i=4: ds=[4], helper(5): loop does not run (5>4)\nresult=[[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]',
-      javascriptSolution: `function combine(n, k) {
-  const result = [];
-  const ds = [];
+        `Step 1: Build the combination from left to right.
+Step 2: Only consider values from the current \`start\`, preventing reused/reordered duplicates.
+Step 3: Choose a value, recurse, then remove it before trying the next value.
+Step 4: Record when the current combination reaches size \`k\`.
 
-  function helper(start) {
-    if (ds.length === k) {
-      result.push([...ds]);
+Core idea from source:
+Backtrack with helper(start): if the running combination has length k, record a copy and return. Otherwise, for i from start to n, push i, recurse with start = i + 1 (so numbers are never reused or reordered), then pop i to backtrack.`,
+      dryRun:
+        `n=4,k=2
+Start [].
+Choose 1 → [1], then 2/3/4 → [1,2], [1,3], [1,4].
+Backtrack and choose 2 → [2,3], [2,4].
+Choose 3 → [3,4].
+Total = 6 combinations.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function combine(n, k) {
+    const result = [];
+    const current = [];
+    function helper(start) {
+        if (current.length === k) {
+            const copy = new Array(k);
+            for (let i = 0; i < k; i++)
+                copy[i] = current[i];
+            result.push(copy);
+            return;
+        }
+        const need = k - current.length;
+        for (let value = start; value <= n - need + 1; value++) {
+            current.push(value);
+            helper(value + 1);
+            current.pop();
+        }
+    }
+    helper(1);
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function combineUsingBuiltIns(n, k) {
+    const result = [];
+    function helper(start, current) {
+        if (current.length === k) {
+            result.push([...current]);
+            return;
+        }
+        for (let value = start; value <= n; value++) {
+            helper(value + 1, [...current, value]);
+        }
+    }
+    helper(1, []);
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function combine(n: number, k: number): number[][] {
+  const result: number[][] = [];
+  const current: number[] = [];
+
+  function helper(start: number): void {
+    if (current.length === k) {
+      const copy: number[] = new Array(k);
+      for (let i = 0; i < k; i++) copy[i] = current[i]!;
+      result.push(copy);
       return;
     }
-    for (let i = start; i <= n; i++) {
-      ds.push(i);
-      helper(i + 1);
-      ds.pop();
+
+    const need = k - current.length;
+
+    for (let value = start; value <= n - need + 1; value++) {
+      current.push(value);
+      helper(value + 1);
+      current.pop();
     }
   }
 
   helper(1);
   return result;
-}`,
-      typescriptSolution: `function combine(n: number, k: number): number[][] {
-  const result: number[][] = [];
-  const ds: number[] = [];
+}
 
-  function helper(start: number): void {
-    if (ds.length === k) {
-      result.push([...ds]);
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function combineUsingBuiltIns(n: number, k: number): number[][] {
+  const result: number[][] = [];
+
+  function helper(start: number, current: number[]): void {
+    if (current.length === k) {
+      result.push([...current]);
       return;
     }
-    for (let i = start; i <= n; i++) {
-      ds.push(i);
-      helper(i + 1);
-      ds.pop();
+
+    for (let value = start; value <= n; value++) {
+      helper(value + 1, [...current, value]);
     }
   }
 
-  helper(1);
+  helper(1, []);
   return result;
 }`,
       timeComplexity: 'O(k · C(n, k)) — one combination is produced per valid path, each costing O(k) to copy.',
@@ -291,25 +419,61 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Recurse with (index, sum): once index reaches arr.length, record sum. Otherwise branch twice — once including arr[index] in the running sum, once skipping it — each advancing to index + 1. Sort the collected sums ascending before returning.',
+        `Step 1: At every element there are exactly two choices: include it or skip it.
+Step 2: Carry the current sum as a recursion parameter.
+Step 3: When all elements are processed, record the sum.
+Step 4: Sort all recorded sums at the end.
+
+Core idea from source:
+Recurse with (index, sum): once index reaches arr.length, record sum. Otherwise branch twice — once including arr[index] in the running sum, once skipping it — each advancing to index + 1. Sort the collected sums ascending before returning.`,
       dryRun:
-        'arr=[1,2,3]\nhelper(0,0)\n  include 1 → helper(1,1)\n    include 2 → helper(2,3)\n      include 3 → helper(3,6) → record 6\n      skip 3 → helper(3,3) → record 3\n    skip 2 → helper(2,1)\n      include 3 → helper(3,4) → record 4\n      skip 3 → helper(3,1) → record 1\n  skip 1 → helper(1,0)\n    include 2 → helper(2,2) → include3→record5, skip3→record2\n    skip 2 → helper(2,0) → include3→record3, skip3→record0\nsums=[6,3,4,1,5,2,3,0] → sorted=[0,1,2,3,3,4,5,6]',
-      javascriptSolution: `function subsetSums(arr) {
-  const sums = [];
-
-  function helper(index, sum) {
-    if (index === arr.length) {
-      sums.push(sum);
-      return;
+        `arr=[1,2,3]
+Include all → 6.
+Include 1,2 but skip 3 → 3.
+Include 1, skip 2, include 3 → 4.
+Skip 1, include 2, include 3 → 5.
+Skip everything → 0.
+All 8 subset sums are recorded, then sorted.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function subsetSums(arr) {
+    const sums = [];
+    function helper(index, sum) {
+        if (index === arr.length) {
+            sums.push(sum);
+            return;
+        }
+        helper(index + 1, sum + arr[index]);
+        helper(index + 1, sum);
     }
-    helper(index + 1, sum + arr[index]);
-    helper(index + 1, sum);
-  }
-
-  helper(0, 0);
-  return sums.sort((a, b) => a - b);
+    helper(0, 0);
+    // Manual insertion sort — no sort() helper.
+    for (let i = 1; i < sums.length; i++) {
+        const value = sums[i];
+        let j = i - 1;
+        while (j >= 0 && sums[j] > value) {
+            sums[j + 1] = sums[j];
+            j--;
+        }
+        sums[j + 1] = value;
+    }
+    return sums;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function subsetSumsUsingBuiltIns(arr) {
+    const sums = [];
+    function helper(index, sum) {
+        if (index === arr.length) {
+            sums.push(sum);
+            return;
+        }
+        helper(index + 1, sum + arr[index]);
+        helper(index + 1, sum);
+    }
+    helper(0, 0);
+    return sums.sort((a, b) => a - b);
 }`,
-      typescriptSolution: `function subsetSums(arr: number[]): number[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function subsetSums(arr: number[]): number[] {
   const sums: number[] = [];
 
   function helper(index: number, sum: number): void {
@@ -317,6 +481,39 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
       sums.push(sum);
       return;
     }
+
+    helper(index + 1, sum + arr[index]!);
+    helper(index + 1, sum);
+  }
+
+  helper(0, 0);
+
+  // Manual insertion sort — no sort() helper.
+  for (let i = 1; i < sums.length; i++) {
+    const value = sums[i]!;
+    let j = i - 1;
+
+    while (j >= 0 && sums[j]! > value) {
+      sums[j + 1] = sums[j]!;
+      j--;
+    }
+
+    sums[j + 1] = value;
+  }
+
+  return sums;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function subsetSumsUsingBuiltIns(arr: number[]): number[] {
+  const sums: number[] = [];
+
+  function helper(index: number, sum: number): void {
+    if (index === arr.length) {
+      sums.push(sum);
+      return;
+    }
+
     helper(index + 1, sum + arr[index]!);
     helper(index + 1, sum);
   }
@@ -386,43 +583,87 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Recurse with index: once index === nums.length, push a copy of the running subset `ds`. Otherwise branch twice — push nums[index] onto ds and recurse (include), then pop it and recurse again without it (exclude).',
-      dryRun:
-        'nums=[1,2,3]\nhelper(0), ds=[]\n  include 1: ds=[1], helper(1)\n    include 2: ds=[1,2], helper(2)\n      include 3: ds=[1,2,3] → push\n      exclude 3: ds=[1,2] → push\n    exclude 2: ds=[1], helper(2)\n      include 3: ds=[1,3] → push\n      exclude 3: ds=[1] → push\n  exclude 1: ds=[], helper(1) → similarly produces [2,3],[2],[3],[]\nresult=[[1,2,3],[1,2],[1,3],[1],[2,3],[2],[3],[]]',
-      javascriptSolution: `function subsets(nums) {
-  const result = [];
-  const ds = [];
+        `Step 1: At each index choose include or exclude.
+Step 2: Add the current value and recurse into the include branch.
+Step 3: Backtrack and run the exclude branch.
+Step 4: Record a copy when every input element has been considered.
 
-  function helper(index) {
+Core idea from source:
+Recurse with index: once index === nums.length, push a copy of the running subset \`ds\`. Otherwise branch twice — push nums[index] onto ds and recurse (include), then pop it and recurse again without it (exclude).`,
+      dryRun:
+        `nums=[1,2,3]
+At 1: include or exclude.
+Include 1 → at 2 include/exclude → then 3 include/exclude.
+This produces [1,2,3], [1,2], [1,3], [1].
+Exclude 1 produces [2,3], [2], [3], [].
+Total = 8.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function subsets(nums) {
+    const result = [];
+    const current = [];
+    function helper(index) {
+        if (index === nums.length) {
+            const copy = new Array(current.length);
+            for (let i = 0; i < current.length; i++) {
+                copy[i] = current[i];
+            }
+            result.push(copy);
+            return;
+        }
+        current.push(nums[index]);
+        helper(index + 1);
+        current.pop();
+        helper(index + 1);
+    }
+    helper(0);
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function subsetsUsingBuiltIns(nums) {
+    let result = [[]];
+    for (const value of nums) {
+        const additions = result.map((subset) => [...subset, value]);
+        result = result.concat(additions);
+    }
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function subsets(nums: number[]): number[][] {
+  const result: number[][] = [];
+  const current: number[] = [];
+
+  function helper(index: number): void {
     if (index === nums.length) {
-      result.push([...ds]);
+      const copy: number[] = new Array(current.length);
+
+      for (let i = 0; i < current.length; i++) {
+        copy[i] = current[i]!;
+      }
+
+      result.push(copy);
       return;
     }
-    ds.push(nums[index]);
+
+    current.push(nums[index]!);
     helper(index + 1);
-    ds.pop();
+    current.pop();
+
     helper(index + 1);
   }
 
   helper(0);
   return result;
-}`,
-      typescriptSolution: `function subsets(nums: number[]): number[][] {
-  const result: number[][] = [];
-  const ds: number[] = [];
+}
 
-  function helper(index: number): void {
-    if (index === nums.length) {
-      result.push([...ds]);
-      return;
-    }
-    ds.push(nums[index]!);
-    helper(index + 1);
-    ds.pop();
-    helper(index + 1);
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function subsetsUsingBuiltIns(nums: number[]): number[][] {
+  let result: number[][] = [[]];
+
+  for (const value of nums) {
+    const additions = result.map((subset) => [...subset, value]);
+    result = result.concat(additions);
   }
 
-  helper(0);
   return result;
 }`,
       timeComplexity: 'O(n · 2^n) — 2^n subsets, each up to O(n) to copy.',
@@ -488,43 +729,132 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Sort nums first. Recurse with (index): record a copy of the current subset ds immediately (every prefix, including the initial empty one, is a valid subset). Then for i from index to the end, skip if sorted[i] equals sorted[i-1] and i > index (avoids reusing the same value at the same decision point); otherwise push sorted[i], recurse with i + 1, and pop to backtrack.',
-      dryRun:
-        'sorted=[1,2,2]\nhelper(0): record []\n  i=0(val1): ds=[1], helper(1): record [1]\n    i=1(val2): ds=[1,2], helper(2): record [1,2]\n      i=2(val2): ds=[1,2,2], helper(3): record [1,2,2]\n    i=2(val2): skip, sorted[2]===sorted[1] and i>index\n  i=1(val2): ds=[2], helper(2): record [2]\n    i=2(val2): ds=[2,2], helper(3): record [2,2]\n  i=2(val2): skip, sorted[2]===sorted[1] and i>index\nresult=[[],[1],[1,2],[1,2,2],[2],[2,2]]',
-      javascriptSolution: `function subsetsWithDup(nums) {
-  const sorted = [...nums].sort((a, b) => a - b);
-  const result = [];
-  const ds = [];
+        `Step 1: Sort the input so equal values are adjacent.
+Step 2: Record the current subset at every recursion level.
+Step 3: Skip an equal value when it is a duplicate choice at the same recursion depth.
+Step 4: Backtrack after every chosen value.
 
-  function helper(index) {
-    result.push([...ds]);
-    for (let i = index; i < sorted.length; i++) {
-      if (i > index && sorted[i] === sorted[i - 1]) continue;
-      ds.push(sorted[i]);
+Core idea from source:
+Sort nums first. Recurse with (index): record a copy of the current subset ds immediately (every prefix, including the initial empty one, is a valid subset). Then for i from index to the end, skip if sorted[i] equals sorted[i-1] and i > index (avoids reusing the same value at the same decision point); otherwise push sorted[i], recurse with i + 1, and pop to backtrack.`,
+      dryRun:
+        `sorted=[1,2,2]
+Record [].
+Choose 1 → [1], then [1,2], [1,2,2].
+Back at root, first 2 → [2], then [2,2].
+The second root-level 2 is skipped because it is equal to the previous value at the same depth.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function subsetsWithDup(nums) {
+    const sorted = new Array(nums.length);
+    // Manual insertion sort.
+    for (let i = 0; i < nums.length; i++) {
+        const value = nums[i];
+        let j = i - 1;
+        while (j >= 0 && sorted[j] > value) {
+            sorted[j + 1] = sorted[j];
+            j--;
+        }
+        sorted[j + 1] = value;
+    }
+    const result = [];
+    const current = [];
+    function helper(start) {
+        const copy = new Array(current.length);
+        for (let i = 0; i < current.length; i++) {
+            copy[i] = current[i];
+        }
+        result.push(copy);
+        for (let i = start; i < sorted.length; i++) {
+            if (i > start && sorted[i] === sorted[i - 1])
+                continue;
+            current.push(sorted[i]);
+            helper(i + 1);
+            current.pop();
+        }
+    }
+    helper(0);
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function subsetsWithDupUsingBuiltIns(nums) {
+    const sorted = [...nums].sort((a, b) => a - b);
+    const result = [[]];
+    let previousStart = 0;
+    for (let i = 0; i < sorted.length; i++) {
+        const value = sorted[i];
+        const start = i > 0 && sorted[i] === sorted[i - 1]
+            ? previousStart
+            : 0;
+        const currentLength = result.length;
+        for (let j = start; j < currentLength; j++) {
+            result.push([...result[j], value]);
+        }
+        previousStart = currentLength;
+    }
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function subsetsWithDup(nums: number[]): number[][] {
+  const sorted = new Array<number>(nums.length);
+
+  // Manual insertion sort.
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i]!;
+    let j = i - 1;
+
+    while (j >= 0 && sorted[j]! > value) {
+      sorted[j + 1] = sorted[j]!;
+      j--;
+    }
+
+    sorted[j + 1] = value;
+  }
+
+  const result: number[][] = [];
+  const current: number[] = [];
+
+  function helper(start: number): void {
+    const copy: number[] = new Array(current.length);
+
+    for (let i = 0; i < current.length; i++) {
+      copy[i] = current[i]!;
+    }
+
+    result.push(copy);
+
+    for (let i = start; i < sorted.length; i++) {
+      if (i > start && sorted[i] === sorted[i - 1]) continue;
+
+      current.push(sorted[i]!);
       helper(i + 1);
-      ds.pop();
+      current.pop();
     }
   }
 
   helper(0);
   return result;
-}`,
-      typescriptSolution: `function subsetsWithDup(nums: number[]): number[][] {
-  const sorted = [...nums].sort((a, b) => a - b);
-  const result: number[][] = [];
-  const ds: number[] = [];
+}
 
-  function helper(index: number): void {
-    result.push([...ds]);
-    for (let i = index; i < sorted.length; i++) {
-      if (i > index && sorted[i] === sorted[i - 1]) continue;
-      ds.push(sorted[i]!);
-      helper(i + 1);
-      ds.pop();
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function subsetsWithDupUsingBuiltIns(nums: number[]): number[][] {
+  const sorted = [...nums].sort((a, b) => a - b);
+  const result: number[][] = [[]];
+  let previousStart = 0;
+
+  for (let i = 0; i < sorted.length; i++) {
+    const value = sorted[i]!;
+    const start = i > 0 && sorted[i] === sorted[i - 1]
+      ? previousStart
+      : 0;
+
+    const currentLength = result.length;
+
+    for (let j = start; j < currentLength; j++) {
+      result.push([...result[j]!, value]);
     }
+
+    previousStart = currentLength;
   }
 
-  helper(0);
   return result;
 }`,
       timeComplexity: 'O(n · 2^n) worst case (no duplicates) — bounded by the number of distinct subsets, each up to O(n) to copy.',
@@ -590,49 +920,150 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Sort candidates ascending. Recurse with (start, remaining): if remaining === 0, record a copy of ds. Otherwise, for i from start to the end, if candidates[i] > remaining, break (sorted, so nothing further can work either); otherwise push candidates[i], recurse with (i, remaining - candidates[i]) — reusing index i allows the same value again — then pop to backtrack.',
-      dryRun:
-        'sorted=[2,3,6,7], target=7\nhelper(0,7)\n  i=0(2): ds=[2], helper(0,5)\n    i=0(2): ds=[2,2], helper(0,3)\n      i=0(2): ds=[2,2,2], helper(0,1) → 2>1 break, no result\n      i=1(3): ds=[2,2,3], helper(1,0) → remaining=0 → record [2,2,3]\n      i=2(6): 6>3 break\n    i=1(3): ds=[2,3], helper(1,2) → i=1(3):3>2 break; i=2(6):break → nothing\n    i=2(6): 6>5 break\n  i=1(3): ds=[3], helper(1,4) → similar, no full match found\n  i=2(6): ds=[6], helper(2,1) → break\n  i=3(7): ds=[7], helper(3,0) → record [7]\nresult=[[2,2,3],[7]]',
-      javascriptSolution: `function combinationSum(candidates, target) {
-  const sorted = [...candidates].sort((a, b) => a - b);
-  const result = [];
-  const ds = [];
+        `Step 1: Sort candidates for pruning.
+Step 2: Choose a candidate and reduce the remaining target.
+Step 3: Recurse with the same index because a candidate can be reused.
+Step 4: Record when the remaining target becomes zero; stop when a candidate exceeds it.
 
-  function helper(start, remaining) {
+Core idea from source:
+Sort candidates ascending. Recurse with (start, remaining): if remaining === 0, record a copy of ds. Otherwise, for i from start to the end, if candidates[i] > remaining, break (sorted, so nothing further can work either); otherwise push candidates[i], recurse with (i, remaining - candidates[i]) — reusing index i allows the same value again — then pop to backtrack.`,
+      dryRun:
+        `candidates=[2,3,6,7], target=7
+Choose 2 → remaining 5.
+Choose 2 again → remaining 3.
+Choose 3 → remaining 0 → record [2,2,3].
+Backtrack to root.
+Choose 7 → remaining 0 → record [7].
+Result = [[2,2,3],[7]].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function combinationSum(candidates, target) {
+    const sorted = new Array(candidates.length);
+    // Manual insertion sort.
+    for (let i = 0; i < candidates.length; i++) {
+        const value = candidates[i];
+        let j = i - 1;
+        while (j >= 0 && sorted[j] > value) {
+            sorted[j + 1] = sorted[j];
+            j--;
+        }
+        sorted[j + 1] = value;
+    }
+    const result = [];
+    const current = [];
+    function helper(start, remaining) {
+        if (remaining === 0) {
+            const copy = new Array(current.length);
+            for (let i = 0; i < current.length; i++) {
+                copy[i] = current[i];
+            }
+            result.push(copy);
+            return;
+        }
+        for (let i = start; i < sorted.length; i++) {
+            if (sorted[i] > remaining)
+                break;
+            current.push(sorted[i]);
+            // Same i => unlimited reuse of this candidate.
+            helper(i, remaining - sorted[i]);
+            current.pop();
+        }
+    }
+    helper(0, target);
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function combinationSumUsingBuiltIns(candidates, target) {
+    const sorted = [...candidates].sort((a, b) => a - b);
+    const result = [];
+    function helper(start, remaining, current) {
+        if (remaining === 0) {
+            result.push([...current]);
+            return;
+        }
+        for (let i = start; i < sorted.length; i++) {
+            if (sorted[i] > remaining)
+                break;
+            helper(i, remaining - sorted[i], [...current, sorted[i]]);
+        }
+    }
+    helper(0, target, []);
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function combinationSum(
+  candidates: number[],
+  target: number,
+): number[][] {
+  const sorted = new Array<number>(candidates.length);
+
+  // Manual insertion sort.
+  for (let i = 0; i < candidates.length; i++) {
+    const value = candidates[i]!;
+    let j = i - 1;
+
+    while (j >= 0 && sorted[j]! > value) {
+      sorted[j + 1] = sorted[j]!;
+      j--;
+    }
+
+    sorted[j + 1] = value;
+  }
+
+  const result: number[][] = [];
+  const current: number[] = [];
+
+  function helper(start: number, remaining: number): void {
     if (remaining === 0) {
-      result.push([...ds]);
+      const copy: number[] = new Array(current.length);
+
+      for (let i = 0; i < current.length; i++) {
+        copy[i] = current[i]!;
+      }
+
+      result.push(copy);
       return;
     }
+
     for (let i = start; i < sorted.length; i++) {
-      if (sorted[i] > remaining) break;
-      ds.push(sorted[i]);
-      helper(i, remaining - sorted[i]);
-      ds.pop();
+      if (sorted[i]! > remaining) break;
+
+      current.push(sorted[i]!);
+      // Same i => unlimited reuse of this candidate.
+      helper(i, remaining - sorted[i]!);
+      current.pop();
     }
   }
 
   helper(0, target);
   return result;
-}`,
-      typescriptSolution: `function combinationSum(candidates: number[], target: number): number[][] {
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function combinationSumUsingBuiltIns(
+  candidates: number[],
+  target: number,
+): number[][] {
   const sorted = [...candidates].sort((a, b) => a - b);
   const result: number[][] = [];
-  const ds: number[] = [];
 
-  function helper(start: number, remaining: number): void {
+  function helper(start: number, remaining: number, current: number[]): void {
     if (remaining === 0) {
-      result.push([...ds]);
+      result.push([...current]);
       return;
     }
+
     for (let i = start; i < sorted.length; i++) {
       if (sorted[i]! > remaining) break;
-      ds.push(sorted[i]!);
-      helper(i, remaining - sorted[i]!);
-      ds.pop();
+
+      helper(
+        i,
+        remaining - sorted[i]!,
+        [...current, sorted[i]!],
+      );
     }
   }
 
-  helper(0, target);
+  helper(0, target, []);
   return result;
 }`,
       timeComplexity: 'O(2^target) worst case — bounded by the number of valid combinations, pruned heavily by sorting and the early break.',
@@ -697,51 +1128,154 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Sort candidates ascending. Recurse with (start, remaining): if remaining === 0, record ds. For i from start to the end: skip if i > start and sorted[i] === sorted[i-1] (avoids duplicate combinations); if sorted[i] > remaining, break (sorted, so nothing further helps); otherwise push sorted[i], recurse with (i + 1, remaining - sorted[i]) since each element is used once, then pop.',
-      dryRun:
-        'sorted=[1,1,2,5,6,7,10], target=8\nhelper(0,8)\n  i=0(1): ds=[1], helper(1,7)\n    i=1(1): ds=[1,1], helper(2,6)\n      i=2(2): ds=[1,1,2], helper(3,4) → 5>4 break eventually, no full match\n      i=3(5): ds=[1,1,5], helper(4,1) → 6>1 break\n      i=4(6): ds=[1,1,6], helper(5,0) → record [1,1,6]\n    i=2(2): ds=[1,2], helper(3,5)\n      i=3(5): ds=[1,2,5], helper(4,0) → record [1,2,5]\n    i=3(5): ds=[1,5], helper(4,2) → nothing fits\n    i=4(6): ds=[1,6], helper(5,1) → nothing\n    i=5(7): ds=[1,7], helper(6,0) → record [1,7]\n  i=1(1): skip (duplicate at same level, i>start)\n  i=2(2): ds=[2], helper(3,6)\n    i=4(6): ds=[2,6], helper(5,0) → record [2,6]\n  ... (5,6,7 alone or with smaller elements do not reach exactly 8 further)\nresult=[[1,1,6],[1,2,5],[1,7],[2,6]]',
-      javascriptSolution: `function combinationSum2(candidates, target) {
-  const sorted = [...candidates].sort((a, b) => a - b);
-  const result = [];
-  const ds = [];
+        `Step 1: Sort candidates so duplicates are adjacent.
+Step 2: Choose each array position at most once by recursing with \`i + 1\`.
+Step 3: Skip equal candidates at the same recursion depth.
+Step 4: Record when the remaining target is zero and prune values that are too large.
 
-  function helper(start, remaining) {
+Core idea from source:
+Sort candidates ascending. Recurse with (start, remaining): if remaining === 0, record ds. For i from start to the end: skip if i > start and sorted[i] === sorted[i-1] (avoids duplicate combinations); if sorted[i] > remaining, break (sorted, so nothing further helps); otherwise push sorted[i], recurse with (i + 1, remaining - sorted[i]) since each element is used once, then pop.`,
+      dryRun:
+        `sorted=[1,1,2,5,6,7,10], target=8
+Choose 1,1,6 → 8.
+Choose 1,2,5 → 8.
+Choose 1,7 → 8.
+Choose 2,6 → 8.
+The duplicate second 1 at the same recursion depth is skipped.
+Result has 4 combinations.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function combinationSum2(candidates, target) {
+    const sorted = new Array(candidates.length);
+    // Manual insertion sort.
+    for (let i = 0; i < candidates.length; i++) {
+        const value = candidates[i];
+        let j = i - 1;
+        while (j >= 0 && sorted[j] > value) {
+            sorted[j + 1] = sorted[j];
+            j--;
+        }
+        sorted[j + 1] = value;
+    }
+    const result = [];
+    const current = [];
+    function helper(start, remaining) {
+        if (remaining === 0) {
+            const copy = new Array(current.length);
+            for (let i = 0; i < current.length; i++) {
+                copy[i] = current[i];
+            }
+            result.push(copy);
+            return;
+        }
+        for (let i = start; i < sorted.length; i++) {
+            if (i > start && sorted[i] === sorted[i - 1])
+                continue;
+            if (sorted[i] > remaining)
+                break;
+            current.push(sorted[i]);
+            helper(i + 1, remaining - sorted[i]);
+            current.pop();
+        }
+    }
+    helper(0, target);
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function combinationSum2UsingBuiltIns(candidates, target) {
+    const sorted = [...candidates].sort((a, b) => a - b);
+    const result = [];
+    function helper(start, remaining, current) {
+        if (remaining === 0) {
+            result.push([...current]);
+            return;
+        }
+        for (let i = start; i < sorted.length; i++) {
+            if (i > start && sorted[i] === sorted[i - 1])
+                continue;
+            if (sorted[i] > remaining)
+                break;
+            helper(i + 1, remaining - sorted[i], [...current, sorted[i]]);
+        }
+    }
+    helper(0, target, []);
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function combinationSum2(
+  candidates: number[],
+  target: number,
+): number[][] {
+  const sorted = new Array<number>(candidates.length);
+
+  // Manual insertion sort.
+  for (let i = 0; i < candidates.length; i++) {
+    const value = candidates[i]!;
+    let j = i - 1;
+
+    while (j >= 0 && sorted[j]! > value) {
+      sorted[j + 1] = sorted[j]!;
+      j--;
+    }
+
+    sorted[j + 1] = value;
+  }
+
+  const result: number[][] = [];
+  const current: number[] = [];
+
+  function helper(start: number, remaining: number): void {
     if (remaining === 0) {
-      result.push([...ds]);
+      const copy: number[] = new Array(current.length);
+
+      for (let i = 0; i < current.length; i++) {
+        copy[i] = current[i]!;
+      }
+
+      result.push(copy);
       return;
     }
+
     for (let i = start; i < sorted.length; i++) {
       if (i > start && sorted[i] === sorted[i - 1]) continue;
-      if (sorted[i] > remaining) break;
-      ds.push(sorted[i]);
-      helper(i + 1, remaining - sorted[i]);
-      ds.pop();
+      if (sorted[i]! > remaining) break;
+
+      current.push(sorted[i]!);
+      helper(i + 1, remaining - sorted[i]!);
+      current.pop();
     }
   }
 
   helper(0, target);
   return result;
-}`,
-      typescriptSolution: `function combinationSum2(candidates: number[], target: number): number[][] {
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function combinationSum2UsingBuiltIns(
+  candidates: number[],
+  target: number,
+): number[][] {
   const sorted = [...candidates].sort((a, b) => a - b);
   const result: number[][] = [];
-  const ds: number[] = [];
 
-  function helper(start: number, remaining: number): void {
+  function helper(start: number, remaining: number, current: number[]): void {
     if (remaining === 0) {
-      result.push([...ds]);
+      result.push([...current]);
       return;
     }
+
     for (let i = start; i < sorted.length; i++) {
       if (i > start && sorted[i] === sorted[i - 1]) continue;
       if (sorted[i]! > remaining) break;
-      ds.push(sorted[i]!);
-      helper(i + 1, remaining - sorted[i]!);
-      ds.pop();
+
+      helper(
+        i + 1,
+        remaining - sorted[i]!,
+        [...current, sorted[i]!],
+      );
     }
   }
 
-  helper(0, target);
+  helper(0, target, []);
   return result;
 }`,
       timeComplexity: 'O(2^n) worst case, pruned significantly by sorting, the early break, and the duplicate skip.',
@@ -806,73 +1340,137 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Recurse with (start): if start === s.length, record a copy of the running partition ds. Otherwise, for end from start to s.length - 1, take substring s[start..end]; if it is a palindrome, push it onto ds, recurse with (end + 1), then pop to backtrack and try the next end.',
+        `Step 1: Choose the next cut position.
+Step 2: Only continue with a substring when it is a palindrome.
+Step 3: Recurse from the character immediately after that substring.
+Step 4: Record the partition after consuming the whole string.
+
+Core idea from source:
+Recurse with (start): if start === s.length, record a copy of the running partition ds. Otherwise, for end from start to s.length - 1, take substring s[start..end]; if it is a palindrome, push it onto ds, recurse with (end + 1), then pop to backtrack and try the next end.`,
       dryRun:
-        's="aab"\nhelper(0)\n  end=0: "a" is palindrome → ds=["a"], helper(1)\n    end=1: "a" is palindrome → ds=["a","a"], helper(2)\n      end=2: "b" is palindrome → ds=["a","a","b"], helper(3) → record ["a","a","b"]\n    end=2: "ab" not palindrome, skip\n  end=1: "aa" is palindrome → ds=["aa"], helper(2)\n    end=2: "b" is palindrome → ds=["aa","b"], helper(3) → record ["aa","b"]\n  end=2: "aab" not palindrome, skip\nresult=[["a","a","b"],["aa","b"]]',
-      javascriptSolution: `function partitionPalindrome(s) {
-  const result = [];
-  const ds = [];
-
-  function isPalindrome(str) {
-    let left = 0;
-    let right = str.length - 1;
-    while (left < right) {
-      if (str[left] !== str[right]) return false;
-      left++;
-      right--;
+        `s="aab"
+Start at 0.
+"a" is palindrome → continue from 1.
+"a" then "b" → record ["a","a","b"].
+Backtrack.
+"aa" is palindrome → then "b" → record ["aa","b"].
+"aab" is not a palindrome → skip.
+Result has 2 partitions.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function partitionPalindrome(s) {
+    const result = [];
+    const current = [];
+    function isPalindrome(left, right) {
+        while (left < right) {
+            if (s[left] !== s[right])
+                return false;
+            left++;
+            right--;
+        }
+        return true;
     }
-    return true;
-  }
-
-  function helper(start) {
-    if (start === s.length) {
-      result.push([...ds]);
-      return;
+    function helper(start) {
+        if (start === s.length) {
+            const copy = new Array(current.length);
+            for (let i = 0; i < current.length; i++) {
+                copy[i] = current[i];
+            }
+            result.push(copy);
+            return;
+        }
+        for (let end = start; end < s.length; end++) {
+            if (!isPalindrome(start, end))
+                continue;
+            current.push(s.slice(start, end + 1));
+            helper(end + 1);
+            current.pop();
+        }
     }
-    for (let end = start; end < s.length; end++) {
-      const substring = s.slice(start, end + 1);
-      if (isPalindrome(substring)) {
-        ds.push(substring);
-        helper(end + 1);
-        ds.pop();
-      }
+    helper(0);
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function partitionPalindromeUsingBuiltIns(s) {
+    const result = [];
+    const isPalindrome = (value) => value === value.split("").reverse().join("");
+    function helper(start, current) {
+        if (start === s.length) {
+            result.push([...current]);
+            return;
+        }
+        for (let end = start; end < s.length; end++) {
+            const part = s.slice(start, end + 1);
+            if (isPalindrome(part)) {
+                helper(end + 1, [...current, part]);
+            }
+        }
     }
-  }
-
-  helper(0);
-  return result;
+    helper(0, []);
+    return result;
 }`,
-      typescriptSolution: `function partitionPalindrome(s: string): string[][] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function partitionPalindrome(s: string): string[][] {
   const result: string[][] = [];
-  const ds: string[] = [];
+  const current: string[] = [];
 
-  function isPalindrome(str: string): boolean {
-    let left = 0;
-    let right = str.length - 1;
+  function isPalindrome(left: number, right: number): boolean {
     while (left < right) {
-      if (str[left] !== str[right]) return false;
+      if (s[left] !== s[right]) return false;
       left++;
       right--;
     }
+
     return true;
   }
 
   function helper(start: number): void {
     if (start === s.length) {
-      result.push([...ds]);
+      const copy: string[] = new Array(current.length);
+
+      for (let i = 0; i < current.length; i++) {
+        copy[i] = current[i]!;
+      }
+
+      result.push(copy);
       return;
     }
+
     for (let end = start; end < s.length; end++) {
-      const substring = s.slice(start, end + 1);
-      if (isPalindrome(substring)) {
-        ds.push(substring);
-        helper(end + 1);
-        ds.pop();
-      }
+      if (!isPalindrome(start, end)) continue;
+
+      current.push(s.slice(start, end + 1));
+      helper(end + 1);
+      current.pop();
     }
   }
 
   helper(0);
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function partitionPalindromeUsingBuiltIns(s: string): string[][] {
+  const result: string[][] = [];
+
+  const isPalindrome = (value: string): boolean =>
+    value === value.split("").reverse().join("");
+
+  function helper(start: number, current: string[]): void {
+    if (start === s.length) {
+      result.push([...current]);
+      return;
+    }
+
+    for (let end = start; end < s.length; end++) {
+      const part = s.slice(start, end + 1);
+
+      if (isPalindrome(part)) {
+        helper(end + 1, [...current, part]);
+      }
+    }
+  }
+
+  helper(0, []);
   return result;
 }`,
       timeComplexity: 'O(n · 2^n) worst case — up to 2^n partitions of an all-same-character string, each palindrome check up to O(n).',
@@ -937,53 +1535,109 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Maintain a `used` boolean array and a running array ds. Recurse: if ds.length === nums.length, record a copy. Otherwise, for every index i not yet used, mark used[i] = true, push nums[i] onto ds, recurse, then pop and unmark to backtrack, trying the next unused index.',
-      dryRun:
-        'nums=[1,2,3]\nhelper(), ds=[]\n  i=0(1): used=[T,F,F], ds=[1], helper()\n    i=1(2): ds=[1,2], helper()\n      i=2(3): ds=[1,2,3] → record [1,2,3]\n    i=2(3): ds=[1,3], helper()\n      i=1(2): ds=[1,3,2] → record [1,3,2]\n  i=1(2): ds=[2], ... → produces [2,1,3],[2,3,1]\n  i=2(3): ds=[3], ... → produces [3,1,2],[3,2,1]\nresult=[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]',
-      javascriptSolution: `function permute(nums) {
-  const result = [];
-  const ds = [];
-  const used = new Array(nums.length).fill(false);
+        `Step 1: At every position, try every unused input element.
+Step 2: Mark the chosen index as used and add its value.
+Step 3: Recurse, then backtrack and unmark it.
+Step 4: Record when the permutation length equals the input length.
 
-  function helper() {
-    if (ds.length === nums.length) {
-      result.push([...ds]);
+Core idea from source:
+Maintain a \`used\` boolean array and a running array ds. Recurse: if ds.length === nums.length, record a copy. Otherwise, for every index i not yet used, mark used[i] = true, push nums[i] onto ds, recurse, then pop and unmark to backtrack, trying the next unused index.`,
+      dryRun:
+        `nums=[1,2,3]
+Pick 1 → pick 2 → pick 3 → [1,2,3].
+Backtrack → [1,3,2].
+Then start with 2 → [2,1,3], [2,3,1].
+Then start with 3 → [3,1,2], [3,2,1].
+Total = 3! = 6.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function permute(nums) {
+    const result = [];
+    const current = [];
+    const used = new Array(nums.length).fill(false);
+    function helper() {
+        if (current.length === nums.length) {
+            const copy = new Array(current.length);
+            for (let i = 0; i < current.length; i++) {
+                copy[i] = current[i];
+            }
+            result.push(copy);
+            return;
+        }
+        for (let i = 0; i < nums.length; i++) {
+            if (used[i])
+                continue;
+            used[i] = true;
+            current.push(nums[i]);
+            helper();
+            current.pop();
+            used[i] = false;
+        }
+    }
+    helper();
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function permuteUsingBuiltIns(nums) {
+    if (nums.length === 0)
+        return [[]];
+    const result = [];
+    for (let i = 0; i < nums.length; i++) {
+        const rest = nums.slice(0, i).concat(nums.slice(i + 1));
+        for (const permutation of permuteUsingBuiltIns(rest)) {
+            result.push([nums[i], ...permutation]);
+        }
+    }
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function permute(nums: number[]): number[][] {
+  const result: number[][] = [];
+  const current: number[] = [];
+  const used = new Array<boolean>(nums.length).fill(false);
+
+  function helper(): void {
+    if (current.length === nums.length) {
+      const copy: number[] = new Array(current.length);
+
+      for (let i = 0; i < current.length; i++) {
+        copy[i] = current[i]!;
+      }
+
+      result.push(copy);
       return;
     }
+
     for (let i = 0; i < nums.length; i++) {
       if (used[i]) continue;
+
       used[i] = true;
-      ds.push(nums[i]);
+      current.push(nums[i]!);
+
       helper();
-      ds.pop();
+
+      current.pop();
       used[i] = false;
     }
   }
 
   helper();
   return result;
-}`,
-      typescriptSolution: `function permute(nums: number[]): number[][] {
-  const result: number[][] = [];
-  const ds: number[] = [];
-  const used: boolean[] = new Array(nums.length).fill(false);
+}
 
-  function helper(): void {
-    if (ds.length === nums.length) {
-      result.push([...ds]);
-      return;
-    }
-    for (let i = 0; i < nums.length; i++) {
-      if (used[i]) continue;
-      used[i] = true;
-      ds.push(nums[i]!);
-      helper();
-      ds.pop();
-      used[i] = false;
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function permuteUsingBuiltIns(nums: number[]): number[][] {
+  if (nums.length === 0) return [[]];
+
+  const result: number[][] = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    const rest = nums.slice(0, i).concat(nums.slice(i + 1));
+
+    for (const permutation of permuteUsingBuiltIns(rest)) {
+      result.push([nums[i]!, ...permutation]);
     }
   }
 
-  helper();
   return result;
 }`,
       timeComplexity: 'O(n · n!) — n! permutations, each O(n) to build/copy.',
@@ -1048,58 +1702,160 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Sort nums ascending. Use a `used` boolean array and running array ds, same shape as Permutations. At each position, for i from 0 to n-1: skip if used[i]; also skip if i > 0 and sorted[i] === sorted[i-1] and !used[i-1] (this specific ordering prevents duplicate permutations while still allowing legitimate repeats of the same value across different positions). Otherwise mark used[i], push, recurse, pop, unmark.',
-      dryRun:
-        'sorted=[1,1,2]\nhelper(), ds=[]\n  i=0(1): used[0]=T, ds=[1], helper()\n    i=1(1): used[1]=T, ds=[1,1], helper()\n      i=2(2): ds=[1,1,2] → record\n    i=2(2): ds=[1,2], helper()\n      i=1(1): ds=[1,2,1] → record\n  i=1(1): sorted[1]===sorted[0] and !used[0] → skip\n  i=2(2): used[2]=T, ds=[2], helper()\n    i=0(1): ds=[2,1], helper()\n      i=1(1): ds=[2,1,1] → record\n    i=1(1): sorted[1]===sorted[0], used[0]=T now → not skipped, but used[1] already... (handled by used check)\nresult=[[1,1,2],[1,2,1],[2,1,1]]',
-      javascriptSolution: `function permuteUnique(nums) {
-  const sorted = [...nums].sort((a, b) => a - b);
-  const result = [];
-  const ds = [];
-  const used = new Array(sorted.length).fill(false);
+        `Step 1: Sort so duplicate values are adjacent.
+Step 2: Track which indices are already used.
+Step 3: At the same depth, skip a duplicate if the previous equal index has not been used.
+Step 4: Record each complete permutation exactly once.
 
-  function helper() {
-    if (ds.length === sorted.length) {
-      result.push([...ds]);
-      return;
+Core idea from source:
+Sort nums ascending. Use a \`used\` boolean array and running array ds, same shape as Permutations. At each position, for i from 0 to n-1: skip if used[i]; also skip if i > 0 and sorted[i] === sorted[i-1] and !used[i-1] (this specific ordering prevents duplicate permutations while still allowing legitimate repeats of the same value across different positions). Otherwise mark used[i], push, recurse, pop, unmark.`,
+      dryRun:
+        `nums=[1,1,2]
+Sorted=[1,1,2].
+At the first position choose the first 1.
+At the same depth, the second 1 is skipped because the first 1 has not been used.
+The unique results are [1,1,2], [1,2,1], [2,1,1].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function permuteUnique(nums) {
+    const sorted = new Array(nums.length);
+    // Manual insertion sort.
+    for (let i = 0; i < nums.length; i++) {
+        const value = nums[i];
+        let j = i - 1;
+        while (j >= 0 && sorted[j] > value) {
+            sorted[j + 1] = sorted[j];
+            j--;
+        }
+        sorted[j + 1] = value;
     }
-    for (let i = 0; i < sorted.length; i++) {
-      if (used[i]) continue;
-      if (i > 0 && sorted[i] === sorted[i - 1] && !used[i - 1]) continue;
-      used[i] = true;
-      ds.push(sorted[i]);
-      helper();
-      ds.pop();
-      used[i] = false;
+    const result = [];
+    const current = [];
+    const used = new Array(sorted.length).fill(false);
+    function helper() {
+        if (current.length === sorted.length) {
+            const copy = new Array(current.length);
+            for (let i = 0; i < current.length; i++) {
+                copy[i] = current[i];
+            }
+            result.push(copy);
+            return;
+        }
+        for (let i = 0; i < sorted.length; i++) {
+            if (used[i])
+                continue;
+            if (i > 0 &&
+                sorted[i] === sorted[i - 1] &&
+                !used[i - 1]) {
+                continue;
+            }
+            used[i] = true;
+            current.push(sorted[i]);
+            helper();
+            current.pop();
+            used[i] = false;
+        }
     }
+    helper();
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function permuteUniqueUsingBuiltIns(nums) {
+    const sorted = [...nums].sort((a, b) => a - b);
+    const result = new Set();
+    function helper(current, remaining) {
+        if (remaining.length === 0) {
+            result.add(current.join(","));
+            return;
+        }
+        for (let i = 0; i < remaining.length; i++) {
+            helper([...current, remaining[i]], remaining.slice(0, i).concat(remaining.slice(i + 1)));
+        }
+    }
+    helper([], sorted);
+    return Array.from(result).map((value) => value.split(",").map(Number));
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function permuteUnique(nums: number[]): number[][] {
+  const sorted = new Array<number>(nums.length);
+
+  // Manual insertion sort.
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i]!;
+    let j = i - 1;
+
+    while (j >= 0 && sorted[j]! > value) {
+      sorted[j + 1] = sorted[j]!;
+      j--;
+    }
+
+    sorted[j + 1] = value;
   }
 
-  helper();
-  return result;
-}`,
-      typescriptSolution: `function permuteUnique(nums: number[]): number[][] {
-  const sorted = [...nums].sort((a, b) => a - b);
   const result: number[][] = [];
-  const ds: number[] = [];
-  const used: boolean[] = new Array(sorted.length).fill(false);
+  const current: number[] = [];
+  const used = new Array<boolean>(sorted.length).fill(false);
 
   function helper(): void {
-    if (ds.length === sorted.length) {
-      result.push([...ds]);
+    if (current.length === sorted.length) {
+      const copy: number[] = new Array(current.length);
+
+      for (let i = 0; i < current.length; i++) {
+        copy[i] = current[i]!;
+      }
+
+      result.push(copy);
       return;
     }
+
     for (let i = 0; i < sorted.length; i++) {
       if (used[i]) continue;
-      if (i > 0 && sorted[i] === sorted[i - 1] && !used[i - 1]) continue;
+
+      if (
+        i > 0 &&
+        sorted[i] === sorted[i - 1] &&
+        !used[i - 1]
+      ) {
+        continue;
+      }
+
       used[i] = true;
-      ds.push(sorted[i]!);
+      current.push(sorted[i]!);
+
       helper();
-      ds.pop();
+
+      current.pop();
       used[i] = false;
     }
   }
 
   helper();
   return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function permuteUniqueUsingBuiltIns(nums: number[]): number[][] {
+  const sorted = [...nums].sort((a, b) => a - b);
+  const result = new Set<string>();
+
+  function helper(current: number[], remaining: number[]): void {
+    if (remaining.length === 0) {
+      result.add(current.join(","));
+      return;
+    }
+
+    for (let i = 0; i < remaining.length; i++) {
+      helper(
+        [...current, remaining[i]!],
+        remaining.slice(0, i).concat(remaining.slice(i + 1)),
+      );
+    }
+  }
+
+  helper([], sorted);
+
+  return Array.from(result).map((value) =>
+    value.split(",").map(Number),
+  );
 }`,
       timeComplexity: 'O(n · n!) worst case (no duplicates) — bounded by the number of distinct permutations, pruned by the duplicate-skip.',
       spaceComplexity: 'O(n) recursion depth/used array, plus space for the output.',
@@ -1163,53 +1919,124 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'DFS/backtrack from (0,0). At each cell, if it is the destination (n-1,n-1), record the path built so far. Otherwise mark the cell visited, try moving Down/Left/Right/Up (any fixed order) into cells that are in-bounds, open, and unvisited, appending the direction letter and recursing, then unmark the cell (backtrack) so other paths can reuse it. Sort the collected paths alphabetically before returning; if the start cell is blocked, skip the search entirely.',
+        `Step 1: Start at the top-left cell and only move onto open, unvisited cells.
+Step 2: Try directions in the required D-L-R-U order.
+Step 3: Mark the current cell before exploring and unmark it when backtracking.
+Step 4: Record the path when the bottom-right cell is reached.
+
+Core idea from source:
+DFS/backtrack from (0,0). At each cell, if it is the destination (n-1,n-1), record the path built so far. Otherwise mark the cell visited, try moving Down/Left/Right/Up (any fixed order) into cells that are in-bounds, open, and unvisited, appending the direction letter and recursing, then unmark the cell (backtrack) so other paths can reuse it. Sort the collected paths alphabetically before returning; if the start cell is blocked, skip the search entirely.`,
       dryRun:
-        'grid=[[1,0,0],[1,1,0],[0,1,1]], n=3\nstart (0,0), path=""\n  D→(1,0): path="D"\n    D→(2,0)? grid=0, invalid\n    R→(1,1): path="DR"\n      D→(2,1): path="DRD"\n        R→(2,2)=dest → record "DRDR"\nresult=["DRDR"]',
-      javascriptSolution: `function ratInMaze(grid) {
-  const n = grid.length;
-  const result = [];
-  const visited = Array.from({ length: n }, () => new Array(n).fill(false));
-
-  function isSafe(row, col) {
-    return row >= 0 && row < n && col >= 0 && col < n && !visited[row][col] && grid[row][col] === 1;
-  }
-
-  function helper(row, col, path) {
-    if (row === n - 1 && col === n - 1) {
-      result.push(path);
-      return;
+        `For an open 4x4 maze, start at (0,0).
+Try D, then L, R, U in order.
+Mark a cell before recursion and unmark it when returning.
+Whenever (n-1,n-1) is reached, record the built path.
+This guarantees paths are simple and returned in traversal order.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function ratInMaze(grid) {
+    const n = grid.length;
+    const result = [];
+    if (n === 0 || grid[0][0] !== 1 || grid[n - 1][n - 1] !== 1) {
+        return result;
     }
-    visited[row][col] = true;
-
-    const rowMove = [1, -1, 0, 0];
-    const colMove = [0, 0, -1, 1];
-    const dir = ['D', 'U', 'L', 'R'];
-
-    for (let i = 0; i < 4; i++) {
-      const nextRow = row + rowMove[i];
-      const nextCol = col + colMove[i];
-      if (isSafe(nextRow, nextCol)) {
-        helper(nextRow, nextCol, path + dir[i]);
-      }
+    const visited = new Array(n);
+    for (let row = 0; row < n; row++) {
+        visited[row] = new Array(n).fill(false);
     }
-
-    visited[row][col] = false;
-  }
-
-  if (grid[0][0] === 1) {
-    helper(0, 0, '');
-  }
-
-  return result.sort();
+    const rowMove = [1, 0, 0, -1];
+    const colMove = [0, -1, 1, 0];
+    const direction = ["D", "L", "R", "U"];
+    function isSafe(row, col) {
+        return (row >= 0 &&
+            row < n &&
+            col >= 0 &&
+            col < n &&
+            grid[row][col] === 1 &&
+            !visited[row][col]);
+    }
+    function helper(row, col, path) {
+        if (row === n - 1 && col === n - 1) {
+            result.push(path);
+            return;
+        }
+        visited[row][col] = true;
+        for (let i = 0; i < 4; i++) {
+            const nextRow = row + rowMove[i];
+            const nextCol = col + colMove[i];
+            if (isSafe(nextRow, nextCol)) {
+                helper(nextRow, nextCol, path + direction[i]);
+            }
+        }
+        visited[row][col] = false;
+    }
+    helper(0, 0, "");
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function ratInMazeUsingBuiltIns(grid) {
+    const n = grid.length;
+    const result = [];
+    if (!n || grid[0][0] !== 1 || grid[n - 1][n - 1] !== 1) {
+        return result;
+    }
+    const visited = Array.from({ length: n }, () => new Array(n).fill(false));
+    const moves = [
+        [1, 0, "D"],
+        [0, -1, "L"],
+        [0, 1, "R"],
+        [-1, 0, "U"],
+    ];
+    function helper(row, col, path) {
+        if (row === n - 1 && col === n - 1) {
+            result.push(path);
+            return;
+        }
+        visited[row][col] = true;
+        for (const [dr, dc, dir] of moves) {
+            const nr = row + dr;
+            const nc = col + dc;
+            if (nr >= 0 &&
+                nr < n &&
+                nc >= 0 &&
+                nc < n &&
+                grid[nr][nc] === 1 &&
+                !visited[nr][nc]) {
+                helper(nr, nc, path + dir);
+            }
+        }
+        visited[row][col] = false;
+    }
+    helper(0, 0, "");
+    return result;
 }`,
-      typescriptSolution: `function ratInMaze(grid: number[][]): string[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function ratInMaze(grid: number[][]): string[] {
   const n = grid.length;
   const result: string[] = [];
-  const visited: boolean[][] = Array.from({ length: n }, () => new Array(n).fill(false));
+
+  if (n === 0 || grid[0]![0] !== 1 || grid[n - 1]![n - 1] !== 1) {
+    return result;
+  }
+
+  const visited: boolean[][] = new Array(n);
+
+  for (let row = 0; row < n; row++) {
+    visited[row] = new Array<boolean>(n).fill(false);
+  }
+
+  const rowMove = [1, 0, 0, -1];
+  const colMove = [0, -1, 1, 0];
+  const direction = ["D", "L", "R", "U"];
 
   function isSafe(row: number, col: number): boolean {
-    return row >= 0 && row < n && col >= 0 && col < n && !visited[row]![col] && grid[row]![col] === 1;
+    return (
+      row >= 0 &&
+      row < n &&
+      col >= 0 &&
+      col < n &&
+      grid[row]![col] === 1 &&
+      !visited[row]![col]
+    );
   }
 
   function helper(row: number, col: number, path: string): void {
@@ -1217,28 +2044,75 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
       result.push(path);
       return;
     }
-    visited[row]![col] = true;
 
-    const rowMove = [1, -1, 0, 0];
-    const colMove = [0, 0, -1, 1];
-    const dir = ['D', 'U', 'L', 'R'];
+    visited[row]![col] = true;
 
     for (let i = 0; i < 4; i++) {
       const nextRow = row + rowMove[i]!;
       const nextCol = col + colMove[i]!;
+
       if (isSafe(nextRow, nextCol)) {
-        helper(nextRow, nextCol, path + dir[i]);
+        helper(nextRow, nextCol, path + direction[i]);
       }
     }
 
     visited[row]![col] = false;
   }
 
-  if (grid[0]![0] === 1) {
-    helper(0, 0, '');
+  helper(0, 0, "");
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function ratInMazeUsingBuiltIns(grid: number[][]): string[] {
+  const n = grid.length;
+  const result: string[] = [];
+
+  if (!n || grid[0]![0] !== 1 || grid[n - 1]![n - 1] !== 1) {
+    return result;
   }
 
-  return result.sort();
+  const visited = Array.from(
+    { length: n },
+    () => new Array(n).fill(false),
+  );
+
+  const moves = [
+    [1, 0, "D"],
+    [0, -1, "L"],
+    [0, 1, "R"],
+    [-1, 0, "U"],
+  ] as const;
+
+  function helper(row: number, col: number, path: string): void {
+    if (row === n - 1 && col === n - 1) {
+      result.push(path);
+      return;
+    }
+
+    visited[row]![col] = true;
+
+    for (const [dr, dc, dir] of moves) {
+      const nr = row + dr;
+      const nc = col + dc;
+
+      if (
+        nr >= 0 &&
+        nr < n &&
+        nc >= 0 &&
+        nc < n &&
+        grid[nr]![nc] === 1 &&
+        !visited[nr]![nc]
+      ) {
+        helper(nr, nc, path + dir);
+      }
+    }
+
+    visited[row]![col] = false;
+  }
+
+  helper(0, 0, "");
+  return result;
 }`,
       timeComplexity: 'O(4^(n²)) worst case — 4 choices at every cell in the grid, heavily pruned in practice by the visited/bounds checks.',
       spaceComplexity: 'O(n²) for the visited grid plus O(n²) recursion depth.',
@@ -1302,69 +2176,203 @@ export const MOCK_DSA_CODING_MODULE7_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Backtrack row by row (0 to n-1). For each row, try every column 0..n-1; skip it if the column, or either diagonal (row-col or row+col), is already occupied by an earlier queen. Otherwise mark all three sets, record the column choice, recurse to the next row, then unmark to backtrack. When row === n, every queen is placed validly — build the string board from the recorded column choices and push it.',
-      dryRun:
-        'n=4\nrow0: try col0 → ok, place\n  row1: col0,1 conflict(col/diag); col2 → ok, place\n    row2: col0,1,2,3 all conflict → dead end, backtrack\n  row1: col3 → ok, place\n    row2: col0 → ok, place\n      row3: col0,1,2,3 all conflict → dead end\n    row2: col1 → ok, place\n      row3: col2 → ok → record [".Q..","...Q","Q...","..Q."]\n... (search continues from row0/col1, col2, col3, finding one more solution)\nresult has 2 boards total',
-      javascriptSolution: `function solveNQueens(n) {
-  const result = [];
-  const cols = new Set();
-  const diag1 = new Set(); // row - col
-  const diag2 = new Set(); // row + col
-  const placement = [];
+        `Step 1: Place exactly one queen in each row.
+Step 2: A position is safe only when its column and both diagonals are unused.
+Step 3: Place the queen, recurse to the next row, then remove it to try another column.
+Step 4: When all rows are filled, convert the placement to board strings and record it.
 
-  function helper(row) {
+Core idea from source:
+Backtrack row by row (0 to n-1). For each row, try every column 0..n-1; skip it if the column, or either diagonal (row-col or row+col), is already occupied by an earlier queen. Otherwise mark all three sets, record the column choice, recurse to the next row, then unmark to backtrack. When row === n, every queen is placed validly — build the string board from the recorded column choices and push it.`,
+      dryRun:
+        `n=4
+Row 0: place Q at column 0.
+The next rows eventually hit a diagonal conflict, so backtrack.
+Try column 1 at row 0.
+A valid completion is:
+.Q..
+...Q
+Q...
+..Q.
+Record it.
+Other valid placements are explored by the same backtracking process.
+There are 2 solutions for n=4.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function solveNQueens(n) {
+    const result = [];
+    const board = new Array(n);
+    for (let row = 0; row < n; row++) {
+        board[row] = new Array(n);
+        for (let col = 0; col < n; col++) {
+            board[row][col] = ".";
+        }
+    }
+    const usedColumn = new Array(n).fill(false);
+    const diagDown = new Array(2 * n - 1).fill(false);
+    const diagUp = new Array(2 * n - 1).fill(false);
+    function helper(row) {
+        if (row === n) {
+            const solution = new Array(n);
+            for (let r = 0; r < n; r++) {
+                let line = "";
+                for (let c = 0; c < n; c++) {
+                    line += board[r][c];
+                }
+                solution[r] = line;
+            }
+            result.push(solution);
+            return;
+        }
+        for (let col = 0; col < n; col++) {
+            const down = row - col + (n - 1);
+            const up = row + col;
+            if (usedColumn[col] || diagDown[down] || diagUp[up]) {
+                continue;
+            }
+            usedColumn[col] = true;
+            diagDown[down] = true;
+            diagUp[up] = true;
+            board[row][col] = "Q";
+            helper(row + 1);
+            board[row][col] = ".";
+            usedColumn[col] = false;
+            diagDown[down] = false;
+            diagUp[up] = false;
+        }
+    }
+    helper(0);
+    return result;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function solveNQueensUsingBuiltIns(n) {
+    const result = [];
+    const cols = new Set();
+    const diagDown = new Set();
+    const diagUp = new Set();
+    const placement = [];
+    function helper(row) {
+        if (row === n) {
+            result.push(placement.map((col) => ".".repeat(col) + "Q" + ".".repeat(n - col - 1)));
+            return;
+        }
+        for (let col = 0; col < n; col++) {
+            if (cols.has(col) ||
+                diagDown.has(row - col) ||
+                diagUp.has(row + col)) {
+                continue;
+            }
+            cols.add(col);
+            diagDown.add(row - col);
+            diagUp.add(row + col);
+            placement.push(col);
+            helper(row + 1);
+            placement.pop();
+            cols.delete(col);
+            diagDown.delete(row - col);
+            diagUp.delete(row + col);
+        }
+    }
+    helper(0);
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function solveNQueens(n: number): string[][] {
+  const result: string[][] = [];
+  const board: string[][] = new Array(n);
+
+  for (let row = 0; row < n; row++) {
+    board[row] = new Array<string>(n);
+
+    for (let col = 0; col < n; col++) {
+      board[row][col] = ".";
+    }
+  }
+
+  const usedColumn = new Array<boolean>(n).fill(false);
+  const diagDown = new Array<boolean>(2 * n - 1).fill(false);
+  const diagUp = new Array<boolean>(2 * n - 1).fill(false);
+
+  function helper(row: number): void {
     if (row === n) {
-      const board = placement.map((col) => '.'.repeat(col) + 'Q' + '.'.repeat(n - col - 1));
-      result.push(board);
+      const solution: string[] = new Array(n);
+
+      for (let r = 0; r < n; r++) {
+        let line = "";
+
+        for (let c = 0; c < n; c++) {
+          line += board[r]![c];
+        }
+
+        solution[r] = line;
+      }
+
+      result.push(solution);
       return;
     }
-    for (let col = 0; col < n; col++) {
-      if (cols.has(col) || diag1.has(row - col) || diag2.has(row + col)) continue;
 
-      cols.add(col);
-      diag1.add(row - col);
-      diag2.add(row + col);
-      placement.push(col);
+    for (let col = 0; col < n; col++) {
+      const down = row - col + (n - 1);
+      const up = row + col;
+
+      if (usedColumn[col] || diagDown[down] || diagUp[up]) {
+        continue;
+      }
+
+      usedColumn[col] = true;
+      diagDown[down] = true;
+      diagUp[up] = true;
+      board[row]![col] = "Q";
 
       helper(row + 1);
 
-      placement.pop();
-      cols.delete(col);
-      diag1.delete(row - col);
-      diag2.delete(row + col);
+      board[row]![col] = ".";
+      usedColumn[col] = false;
+      diagDown[down] = false;
+      diagUp[up] = false;
     }
   }
 
   helper(0);
   return result;
-}`,
-      typescriptSolution: `function solveNQueens(n: number): string[][] {
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function solveNQueensUsingBuiltIns(n: number): string[][] {
   const result: string[][] = [];
   const cols = new Set<number>();
-  const diag1 = new Set<number>(); // row - col
-  const diag2 = new Set<number>(); // row + col
+  const diagDown = new Set<number>();
+  const diagUp = new Set<number>();
   const placement: number[] = [];
 
   function helper(row: number): void {
     if (row === n) {
-      const board = placement.map((col) => '.'.repeat(col) + 'Q' + '.'.repeat(n - col - 1));
-      result.push(board);
+      result.push(
+        placement.map((col) =>
+          ".".repeat(col) + "Q" + ".".repeat(n - col - 1),
+        ),
+      );
       return;
     }
+
     for (let col = 0; col < n; col++) {
-      if (cols.has(col) || diag1.has(row - col) || diag2.has(row + col)) continue;
+      if (
+        cols.has(col) ||
+        diagDown.has(row - col) ||
+        diagUp.has(row + col)
+      ) {
+        continue;
+      }
 
       cols.add(col);
-      diag1.add(row - col);
-      diag2.add(row + col);
+      diagDown.add(row - col);
+      diagUp.add(row + col);
       placement.push(col);
 
       helper(row + 1);
 
       placement.pop();
       cols.delete(col);
-      diag1.delete(row - col);
-      diag2.delete(row + col);
+      diagDown.delete(row - col);
+      diagUp.delete(row + col);
     }
   }
 

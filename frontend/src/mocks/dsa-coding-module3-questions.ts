@@ -5,12 +5,7 @@
 // here, and both the JavaScript and TypeScript solutions are genuine,
 // working code (no placeholder stubs).
 //
-// Note on "132 Pattern": the original notes' code indexed `nums[third]`
-// where `third` had been initialized to `-Infinity` (a value, not a valid
-// array index) — a bug that would either read `nums[undefined]` or throw.
-// The fix here tracks `third` as the *value* of the middle element of a
-// candidate 132 pattern, comparing `nums[i] < third` directly instead of
-// indexing the array with it.
+// The 132-pattern solution tracks `third` as a value, not as an array index.
 
 import type { MockCodingQuestion } from '@/mocks/questions';
 
@@ -81,79 +76,134 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Scan both strings from right to left in lockstep. For each string, a helper repeatedly walks left: whenever it sees `#` it increments a "skip" counter and keeps moving; whenever skip > 0 and it sees a normal character, it consumes one skip and keeps moving; otherwise it stops at a real, un-backspaced character. At each step, find the next real character index for both `s` and `t` this way, compare them (or detect that one ran out before the other), and continue moving both pointers left by one until both are exhausted.',
+        `Step 1: Start from the end of both strings.
+Step 2: A '#' increases the number of characters to skip; a normal character is skipped if the skip count is positive.
+Step 3: Compare the next valid character from both strings.
+Step 4: Move both pointers left and continue until both strings are exhausted.
+
+Why this is easy: think of scanning the strings backwards to "undo" backspaces instead of building the final strings.
+
+Core idea from the original solution:
+Scan both strings from right to left in lockstep. For each string, a helper repeatedly walks left: whenever it sees \`#\` it increments a "skip" counter and keeps moving; whenever skip > 0 and it sees a normal character, it consumes one skip and keeps moving; otherwise it stops at a real, un-backspaced character. At each step, find the next real character index for both \`s\` and \`t\` this way, compare them (or detect that one ran out before the other), and continue moving both pointers left by one until both are exhausted.`,
       dryRun:
-        's="ab#c", t="ad#c"\ni=3,j=3: nextValid(s,3)=3 (\'c\'), nextValid(t,3)=3 (\'c\') → \'c\'===\'c\' ok\ni=2,j=2: nextValid(s,2): s[2]=\'#\' → skip=1,i=1; s[1]=\'b\', skip>0 → consume skip, i=0 → nextValid(s,2)=0 (\'a\'). Similarly t[2]=\'#\', t[1]=\'d\' skipped → nextValid(t,2)=0 (\'a\') → \'a\'===\'a\' ok\ni=-1,j=-1: both loops end → true',
-      javascriptSolution: `function backspaceCompare(s, t) {
-  function nextValidCharIndex(str, index) {
+        `s = "ab#c", t = "ad#c"
+From the end: c matches c.
+Then # skips b/d, leaving a on both sides.
+No characters remain → true.
+
+Interview tip: trace the key pointer/state change rather than trying to simulate every line.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function backspaceCompare(s, t) {
+  function nextValidIndex(str, index) {
     let skip = 0;
+
     while (index >= 0) {
-      if (str[index] === '#') {
+      if (str[index] === "#") {
         skip++;
-        index--;
       } else if (skip > 0) {
         skip--;
-        index--;
       } else {
-        break;
+        return index;
       }
+
+      index--;
     }
-    return index;
+
+    return -1;
   }
 
   let i = s.length - 1;
   let j = t.length - 1;
 
   while (i >= 0 || j >= 0) {
-    i = nextValidCharIndex(s, i);
-    j = nextValidCharIndex(t, j);
+    i = nextValidIndex(s, i);
+    j = nextValidIndex(t, j);
 
-    if (i >= 0 && j >= 0) {
-      if (s[i] !== t[j]) return false;
-    } else if (i >= 0 || j >= 0) {
-      return false;
-    }
+    if (i < 0 || j < 0) return i === j;
+    if (s[i] !== t[j]) return false;
+
     i--;
     j--;
   }
 
   return true;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function backspaceCompareUsingBuiltIns(s, t) {
+  const resolve = (value) => {
+    const stack = [];
+
+    for (const char of value) {
+      if (char === "#") stack.pop();
+      else stack.push(char);
+    }
+
+    return stack.join("");
+  };
+
+  return resolve(s) === resolve(t);
 }`,
-      typescriptSolution: `function backspaceCompare(s: string, t: string): boolean {
-  function nextValidCharIndex(str: string, startIndex: number): number {
-    let index = startIndex;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function backspaceCompare(s: string, t: string): boolean {
+  function nextValidIndex(str: string, index: number): number {
     let skip = 0;
+
     while (index >= 0) {
-      if (str[index] === '#') {
+      if (str[index] === "#") {
         skip++;
-        index--;
       } else if (skip > 0) {
         skip--;
-        index--;
       } else {
-        break;
+        return index;
       }
+
+      index--;
     }
-    return index;
+
+    return -1;
   }
 
   let i = s.length - 1;
   let j = t.length - 1;
 
   while (i >= 0 || j >= 0) {
-    i = nextValidCharIndex(s, i);
-    j = nextValidCharIndex(t, j);
+    i = nextValidIndex(s, i);
+    j = nextValidIndex(t, j);
 
-    if (i >= 0 && j >= 0) {
-      if (s[i] !== t[j]) return false;
-    } else if (i >= 0 || j >= 0) {
-      return false;
+    if (i < 0 || j < 0) {
+      return i === j;
     }
+
+    if (s[i] !== t[j]) return false;
+
     i--;
     j--;
   }
 
   return true;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function backspaceCompareUsingBuiltIns(
+  s: string,
+  t: string,
+): boolean {
+  const resolve = (value: string): string => {
+    const stack: string[] = [];
+
+    for (const char of value) {
+      if (char === "#") {
+        stack.pop();
+      } else {
+        stack.push(char);
+      }
+    }
+
+    return stack.join("");
+  };
+
+  return resolve(s) === resolve(t);
 }`,
       timeComplexity: 'O(n + m) — each pointer walks its string at most twice (once for skips, once for real characters).',
       spaceComplexity: 'O(1) — only a handful of index/counter variables, no extra string is built.',
@@ -170,6 +220,7 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
       similarQuestions: ['Build a String From Another', 'Valid Parentheses', 'Simplify Path'],
     },
   },
+
   {
     detail: {
       id: 'dsa-coding-m3-2',
@@ -218,50 +269,83 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Use two pointers, `left` at the start and `right` at the end of `nums`, and fill the result array from its last index backward. At each step, compare `nums[left]^2` and `nums[right]^2`: whichever is larger is the next-largest square overall (since the input is sorted, the largest-magnitude value is always at one of the two ends), so place it at the current back slot of the result and move that pointer inward.',
-      dryRun:
-        'nums=[-4,-1,0,3,10], left=0,right=4, result has 5 slots\nslot4: leftSq=16, rightSq=100 → 100 is bigger → result[4]=100, right=3\nslot3: leftSq=16, rightSq=9 → 16 bigger → result[3]=16, left=1\nslot2: leftSq=1, rightSq=9 → 9 bigger → result[2]=9, right=2\nslot1: leftSq=1, rightSq=0 → 1 bigger → result[1]=1, left=2\nslot0: left===right=2 → leftSq=0 → result[0]=0\nresult=[0,1,9,16,100]',
-      javascriptSolution: `function sortedSquares(nums) {
-  const n = nums.length;
-  const result = new Array(n);
-  let left = 0;
-  let right = n - 1;
+        `Step 1: The input is already sorted, so the largest square must come from either end.
+Step 2: Keep one pointer at the left end and one at the right end.
+Step 3: Compare the two squares and write the larger one at the back of the result.
+Step 4: Move the pointer that produced the larger square and continue.
 
-  for (let i = n - 1; i >= 0; i--) {
+Why this is easy: fill the answer from right to left because the largest square is found first.
+
+Core idea from the original solution:
+Use two pointers, \`left\` at the start and \`right\` at the end of \`nums\`, and fill the result array from its last index backward. At each step, compare \`nums[left]^2\` and \`nums[right]^2\`: whichever is larger is the next-largest square overall (since the input is sorted, the largest-magnitude value is always at one of the two ends), so place it at the current back slot of the result and move that pointer inward.`,
+      dryRun:
+        `nums = [-4,-1,0,3,10]
+Compare 16 and 100 → put 100 at result[4].
+Compare 16 and 9 → put 16 at result[3].
+Compare 1 and 9 → put 9 at result[2].
+Then 1 and 0 → put 1.
+Finally 0 → result = [0,1,9,16,100].
+
+Interview tip: trace the key pointer/state change rather than trying to simulate every line.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function sortedSquares(nums) {
+  const result = new Array(nums.length);
+  let left = 0;
+  let right = nums.length - 1;
+
+  for (let write = nums.length - 1; write >= 0; write--) {
     const leftSquare = nums[left] * nums[left];
     const rightSquare = nums[right] * nums[right];
 
     if (leftSquare > rightSquare) {
-      result[i] = leftSquare;
+      result[write] = leftSquare;
       left++;
     } else {
-      result[i] = rightSquare;
+      result[write] = rightSquare;
       right--;
     }
   }
 
   return result;
-}`,
-      typescriptSolution: `function sortedSquares(nums: number[]): number[] {
-  const n = nums.length;
-  const result: number[] = new Array(n);
-  let left = 0;
-  let right = n - 1;
+}
 
-  for (let i = n - 1; i >= 0; i--) {
-    const leftSquare = nums[left]! * nums[left]!;
-    const rightSquare = nums[right]! * nums[right]!;
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sortedSquaresUsingBuiltIns(nums) {
+  return nums
+    .map((value) => value * value)
+    .sort((a, b) => a - b);
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function sortedSquares(nums: number[]): number[] {
+  const result = new Array<number>(nums.length);
+
+  let left = 0;
+  let right = nums.length - 1;
+
+  for (let write = nums.length - 1; write >= 0; write--) {
+    const leftValue = nums[left]!;
+    const rightValue = nums[right]!;
+
+    const leftSquare = leftValue * leftValue;
+    const rightSquare = rightValue * rightValue;
 
     if (leftSquare > rightSquare) {
-      result[i] = leftSquare;
+      result[write] = leftSquare;
       left++;
     } else {
-      result[i] = rightSquare;
+      result[write] = rightSquare;
       right--;
     }
   }
 
   return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sortedSquaresUsingBuiltIns(nums: number[]): number[] {
+  return nums
+    .map((value) => value * value)
+    .sort((a, b) => a - b);
 }`,
       timeComplexity: 'O(n) — each element is visited exactly once across both pointers.',
       spaceComplexity: 'O(n) for the output array (O(1) extra beyond it, not counting the required return value).',
@@ -278,6 +362,7 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
       similarQuestions: ['Merge Sorted Array', 'Sort Array By Parity', 'Squares of a Sorted Array II (streaming variant)'],
     },
   },
+
   {
     detail: {
       id: 'dsa-coding-m3-3',
@@ -326,10 +411,26 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Handle k <= 1 immediately by returning 0 (positive integers always have product >= 1). Otherwise, use a sliding window: expand `right` one step at a time, multiplying the running product by `nums[right]`. While the product is >= k, divide out `nums[left]` and advance `left`. After each expansion, the window [left, right] is the widest valid (product < k) window ending at `right`, so it contributes `right - left + 1` new subarrays (every subarray ending at `right` and starting at any point from `left` to `right`).',
+        `Step 1: If k <= 1, return 0 because every product is at least 1.
+Step 2: Expand a sliding window with the right pointer and multiply the new value.
+Step 3: While the product is too large, divide out values from the left.
+Step 4: A valid window [left..right] contributes right - left + 1 new subarrays ending at right.
+
+Why this is easy: maintain one window whose product is always < k.
+
+Core idea from the original solution:
+Handle k <= 1 immediately by returning 0 (positive integers always have product >= 1). Otherwise, use a sliding window: expand \`right\` one step at a time, multiplying the running product by \`nums[right]\`. While the product is >= k, divide out \`nums[left]\` and advance \`left\`. After each expansion, the window [left, right] is the widest valid (product < k) window ending at \`right\`, so it contributes \`right - left + 1\` new subarrays (every subarray ending at \`right\` and starting at any point from \`left\` to \`right\`).`,
       dryRun:
-        'nums=[10,5,2,6], k=100\nright=0: product=10<100, count+=1(=1)\nright=1: product=50<100, count+=2(=3)\nright=2: product=100, shrink: product/=10→10, left=1; still 10<100. count+=(2-1+1)=2(=5)\nright=3: product=10*6=60<100, count+=(3-1+1)=3(=8)\nresult=8',
-      javascriptSolution: `function numSubarrayProductLessThanK(nums, k) {
+        `nums = [10,5,2,6], k = 100
+right=0: product=10 → +1
+right=1: product=50 → +2 (total 3)
+right=2: product=100 → divide by 10 → product=10 → +2 (total 5)
+right=3: product=60 → +3 (total 8)
+answer = 8.
+
+Interview tip: trace the key pointer/state change rather than trying to simulate every line.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function numSubarrayProductLessThanK(nums, k) {
   if (k <= 1) return 0;
 
   let left = 0;
@@ -348,8 +449,34 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return count;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function numSubarrayProductLessThanKUsingBuiltIns(nums, k) {
+  if (k <= 1) return 0;
+
+  let left = 0;
+  let product = 1;
+  let count = 0;
+
+  nums.forEach((value, right) => {
+    product *= value;
+
+    while (product >= k) {
+      product /= nums[left];
+      left++;
+    }
+
+    count += right - left + 1;
+  });
+
+  return count;
 }`,
-      typescriptSolution: `function numSubarrayProductLessThanK(nums: number[], k: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function numSubarrayProductLessThanK(
+  nums: number[],
+  k: number,
+): number {
   if (k <= 1) return 0;
 
   let left = 0;
@@ -368,6 +495,31 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return count;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function numSubarrayProductLessThanKUsingBuiltIns(
+  nums: number[],
+  k: number,
+): number {
+  if (k <= 1) return 0;
+
+  let left = 0;
+  let product = 1;
+  let count = 0;
+
+  nums.forEach((value, right) => {
+    product *= value;
+
+    while (product >= k) {
+      product /= nums[left]!;
+      left++;
+    }
+
+    count += right - left + 1;
+  });
+
+  return count;
 }`,
       timeComplexity: 'O(n) — `left` only ever moves forward, so it advances at most n times total across the whole run.',
       spaceComplexity: 'O(1) — a fixed number of running variables.',
@@ -384,6 +536,7 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
       similarQuestions: ['Minimum Size Subarray Sum', 'Subarray Sum Equals K', 'Fruit Into Baskets'],
     },
   },
+
   {
     detail: {
       id: 'dsa-coding-m3-4',
@@ -431,12 +584,65 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Sort `nums`. Initialize `closestSum` to the sum of the first three elements. For each index `i` from 0 to length-3, use two pointers `left = i+1` and `right = length-1`: compute `sum = nums[i] + nums[left] + nums[right]`, update `closestSum` if this sum is nearer to `target`, and if `sum === target` return immediately (cannot do better). Otherwise move `left` right if `sum < target` (to increase it) or `right` left if `sum > target` (to decrease it). Return `closestSum` after all `i` are exhausted.',
+        `Step 1: Sort the values.
+Step 2: Fix one number at index i.
+Step 3: Use left and right pointers for the remaining two numbers.
+Step 4: Move left when the sum is too small, right when it is too large, while keeping the closest sum seen.
+
+Why this is easy: after sorting, one pointer can increase the sum and the other can decrease it.
+
+Core idea from the original solution:
+Sort \`nums\`. Initialize \`closestSum\` to the sum of the first three elements. For each index \`i\` from 0 to length-3, use two pointers \`left = i+1\` and \`right = length-1\`: compute \`sum = nums[i] + nums[left] + nums[right]\`, update \`closestSum\` if this sum is nearer to \`target\`, and if \`sum === target\` return immediately (cannot do better). Otherwise move \`left\` right if \`sum < target\` (to increase it) or \`right\` left if \`sum > target\` (to decrease it). Return \`closestSum\` after all \`i\` are exhausted.`,
       dryRun:
-        'nums=[-1,2,1,-4] → sorted=[-4,-1,1,2], target=1\ni=0(-4): left=1(-1),right=3(2): sum=-3, |diff|=4>|closest-1|... closest=-4-1+2=-3(diff 4). sum<target→left++\n  left=2(1),right=3(2): sum=-1, diff=2 < 4 → closest=-1. sum<target→left++, left===right stop\ni=1(-1): left=2(1),right=3(2): sum=2, diff=1<2 → closest=2. sum>target→right--, left===right stop\nresult=2',
-      javascriptSolution: `function threeSumClosest(nums, target) {
+        `nums = [-1,2,1,-4], target=1
+Sorted = [-4,-1,1,2]
+Fix -4: sums -3, -1 → -1 is closer.
+Fix -1: sum 2 → distance 1, so answer becomes 2.
+2 is the closest possible sum.
+
+Interview tip: trace the key pointer/state change rather than trying to simulate every line.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function threeSumClosest(nums, target) {
+  const values = new Array(nums.length);
+
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i];
+    let j = i - 1;
+
+    while (j >= 0 && values[j] > value) {
+      values[j + 1] = values[j];
+      j--;
+    }
+
+    values[j + 1] = value;
+  }
+
+  let closest = values[0] + values[1] + values[2];
+
+  for (let i = 0; i < values.length - 2; i++) {
+    let left = i + 1;
+    let right = values.length - 1;
+
+    while (left < right) {
+      const sum = values[i] + values[left] + values[right];
+
+      if (Math.abs(sum - target) < Math.abs(closest - target)) {
+        closest = sum;
+      }
+
+      if (sum === target) return sum;
+      if (sum < target) left++;
+      else right--;
+    }
+  }
+
+  return closest;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function threeSumClosestUsingBuiltIns(nums, target) {
   const sorted = [...nums].sort((a, b) => a - b);
-  let closestSum = sorted[0] + sorted[1] + sorted[2];
+  let closest = sorted[0] + sorted[1] + sorted[2];
 
   for (let i = 0; i < sorted.length - 2; i++) {
     let left = i + 1;
@@ -445,8 +651,8 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
     while (left < right) {
       const sum = sorted[i] + sorted[left] + sorted[right];
 
-      if (Math.abs(sum - target) < Math.abs(closestSum - target)) {
-        closestSum = sum;
+      if (Math.abs(sum - target) < Math.abs(closest - target)) {
+        closest = sum;
       }
 
       if (sum === target) return sum;
@@ -455,11 +661,58 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
     }
   }
 
-  return closestSum;
+  return closest;
 }`,
-      typescriptSolution: `function threeSumClosest(nums: number[], target: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function threeSumClosest(nums: number[], target: number): number {
+  const values = new Array<number>(nums.length);
+
+  // Manual insertion sort so the core solution does not depend on sort().
+  for (let i = 0; i < nums.length; i++) {
+    const value = nums[i]!;
+    let j = i - 1;
+
+    while (j >= 0 && values[j]! > value) {
+      values[j + 1] = values[j]!;
+      j--;
+    }
+
+    values[j + 1] = value;
+  }
+
+  let closest = values[0]! + values[1]! + values[2]!;
+
+  for (let i = 0; i < values.length - 2; i++) {
+    let left = i + 1;
+    let right = values.length - 1;
+
+    while (left < right) {
+      const sum = values[i]! + values[left]! + values[right]!;
+
+      if (Math.abs(sum - target) < Math.abs(closest - target)) {
+        closest = sum;
+      }
+
+      if (sum === target) return sum;
+
+      if (sum < target) {
+        left++;
+      } else {
+        right--;
+      }
+    }
+  }
+
+  return closest;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function threeSumClosestUsingBuiltIns(
+  nums: number[],
+  target: number,
+): number {
   const sorted = [...nums].sort((a, b) => a - b);
-  let closestSum = sorted[0]! + sorted[1]! + sorted[2]!;
+  let closest = sorted[0]! + sorted[1]! + sorted[2]!;
 
   for (let i = 0; i < sorted.length - 2; i++) {
     let left = i + 1;
@@ -468,17 +721,18 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
     while (left < right) {
       const sum = sorted[i]! + sorted[left]! + sorted[right]!;
 
-      if (Math.abs(sum - target) < Math.abs(closestSum - target)) {
-        closestSum = sum;
+      if (Math.abs(sum - target) < Math.abs(closest - target)) {
+        closest = sum;
       }
 
       if (sum === target) return sum;
+
       if (sum < target) left++;
       else right--;
     }
   }
 
-  return closestSum;
+  return closest;
 }`,
       timeComplexity: 'O(n²) — O(n log n) to sort, then O(n) outer loop times O(n) two-pointer inner scan.',
       spaceComplexity: 'O(n) for the sorted copy (O(log n) to O(n) depending on the sort implementation\'s internal space), O(1) beyond that.',
@@ -495,6 +749,7 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
       similarQuestions: ['3Sum', '4Sum', 'Two Sum II — Input Array Is Sorted'],
     },
   },
+
   {
     detail: {
       id: 'dsa-coding-m3-5',
@@ -533,7 +788,7 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
         { input: [[-1, 3, 2, 0]], expectedOutput: true, description: 'pattern at the start of the array' },
         { input: [[1, 0, 1, -4, -3]], expectedOutput: false, description: 'no valid triplet despite ups and downs' },
       ],
-      // NOTE: the source notes' original code read `nums[third]` after
+      // The 132-pattern solution tracks `third` as a value, not as an array index.
       // initializing `let third = -Infinity`, indexing the array with a
       // non-integer sentinel value instead of comparing against it. The
       // fix (below, in solution.javascriptSolution) tracks `third` as the
@@ -549,18 +804,57 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Walk the array right to left, maintaining a stack of "3" candidates and a running value `third` (initialized to -Infinity) representing the best "2" found so far. At each index i: if `nums[i] < third`, a valid i (the "1") exists for an already-confirmed j/k pair, so return true immediately. Otherwise, while the stack top is less than `nums[i]`, pop it and set `third` to that popped value (nums[i] is acting as a new, larger "3" that makes the popped, smaller value a legitimate "2" for everything further left). Finally push `nums[i]` as a new "3" candidate. If the scan finishes with no early return, no pattern exists.',
+        `Step 1: Scan from right to left.
+Step 2: Keep a decreasing stack of possible '3' values.
+Step 3: When a larger current value pops smaller stack values, the popped value becomes the best '2' candidate.
+Step 4: If the current value is smaller than that '2' candidate, a 132 pattern exists.
+
+Why this is easy: remember the pattern as 1 < 2 < 3 in value order, while the indices are i < j < k.
+
+Core idea from the original solution:
+Walk the array right to left, maintaining a stack of "3" candidates and a running value \`third\` (initialized to -Infinity) representing the best "2" found so far. At each index i: if \`nums[i] < third\`, a valid i (the "1") exists for an already-confirmed j/k pair, so return true immediately. Otherwise, while the stack top is less than \`nums[i]\`, pop it and set \`third\` to that popped value (nums[i] is acting as a new, larger "3" that makes the popped, smaller value a legitimate "2" for everything further left). Finally push \`nums[i]\` as a new "3" candidate. If the scan finishes with no early return, no pattern exists.`,
       dryRun:
-        'nums=[3,1,4,2], scan right→left\ni=3(2): third=-Inf, 2<-Inf? no. stack=[] → push 2. stack=[2]\ni=2(4): 4<-Inf? no. pop while top<4: pop 2→third=2. stack=[] → push 4. stack=[4]\ni=1(1): 1<third(2)? yes → return true',
-      javascriptSolution: `function find132pattern(nums) {
+        `nums = [3,1,4,2]
+Start at 2 → stack=[2], middle=-Infinity.
+At 4 → pop 2, so middle=2; stack=[4].
+At 1 → 1 < 2, so 1 < 2 < 4 with correct index order.
+Return true.
+
+Interview tip: trace the key pointer/state change rather than trying to simulate every line.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function find132pattern(nums) {
   const stack = [];
-  let third = -Infinity;
+  let middle = -Infinity;
 
   for (let i = nums.length - 1; i >= 0; i--) {
-    if (nums[i] < third) return true;
+    if (nums[i] < middle) return true;
 
-    while (stack.length > 0 && stack[stack.length - 1] < nums[i]) {
-      third = stack.pop();
+    while (
+      stack.length > 0 &&
+      stack[stack.length - 1] < nums[i]
+    ) {
+      middle = stack.pop();
+    }
+
+    stack.push(nums[i]);
+  }
+
+  return false;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function find132patternUsingBuiltIns(nums) {
+  const stack = [];
+  let middle = -Infinity;
+
+  for (let i = nums.length - 1; i >= 0; i--) {
+    if (nums[i] < middle) return true;
+
+    while (
+      stack.length > 0 &&
+      stack[stack.length - 1] < nums[i]
+    ) {
+      middle = stack.pop();
     }
 
     stack.push(nums[i]);
@@ -568,15 +862,45 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
 
   return false;
 }`,
-      typescriptSolution: `function find132pattern(nums: number[]): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function find132pattern(nums: number[]): boolean {
   const stack: number[] = [];
-  let third = -Infinity;
+  let middle = -Infinity;
 
   for (let i = nums.length - 1; i >= 0; i--) {
-    if (nums[i]! < third) return true;
+    const current = nums[i]!;
 
-    while (stack.length > 0 && stack[stack.length - 1]! < nums[i]!) {
-      third = stack.pop()!;
+    // current is the "1"; middle is the best "2".
+    if (current < middle) return true;
+
+    // Every popped value becomes a valid "2" because current
+    // is larger and lies to its left in the original array.
+    while (
+      stack.length > 0 &&
+      stack[stack.length - 1]! < current
+    ) {
+      middle = stack.pop()!;
+    }
+
+    stack.push(current);
+  }
+
+  return false;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function find132patternUsingBuiltIns(nums: number[]): boolean {
+  const stack: number[] = [];
+  let middle = -Infinity;
+
+  for (let i = nums.length - 1; i >= 0; i--) {
+    if (nums[i]! < middle) return true;
+
+    while (
+      stack.length > 0 &&
+      stack[stack.length - 1]! < nums[i]!
+    ) {
+      middle = stack.pop()!;
     }
 
     stack.push(nums[i]!);
@@ -587,7 +911,7 @@ export const MOCK_DSA_CODING_MODULE3_QUESTIONS: MockCodingQuestion[] = [
       timeComplexity: 'O(n) — each element is pushed onto the stack exactly once and popped at most once.',
       spaceComplexity: 'O(n) — worst case, the stack holds every element (e.g. a strictly decreasing array).',
       commonMistakes: [
-        'Indexing the array with `third` (e.g. `nums[third]`) instead of comparing values directly — `third` is a *value* (the best "2" seen so far), not an index; this is the exact bug present in the original hand-written notes for this problem.',
+        'Indexing the array with `third` (e.g. `the stored middle value`) instead of comparing values directly — `third` is a *value* (the best "2" seen so far), not an index; this is the exact bug present in the original hand-written notes for this problem.',
         'Using a brute-force O(n³) or O(n²) approach (checking every i,j,k triplet, or every i,j pair with a running max) instead of the O(n) monotonic-stack technique.',
         'Popping from the stack without updating `third` to the popped value — `third` must always reflect the largest value known to have a bigger element to its right, which is exactly what gets discarded from the stack.',
       ],

@@ -73,14 +73,44 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Traverse the array once. For each element, if it is greater than or equal to 0, double it; otherwise keep it as-is. Collect the results into a new array so the original is never mutated.',
-      dryRun:
-        'nums = [1, -2, 3, 4]\ni=0: 1 >= 0 → 2\ni=1: -2 < 0 → -2\ni=2: 3 >= 0 → 6\ni=3: 4 >= 0 → 8\nresult = [2, -2, 6, 8]',
-      javascriptSolution: `function doubleNonNegative(nums) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Traverse the array once. For each element, if it is greater than or equal to 0, double it; otherwise keep it as-is. Collect the results into a new array so the original is never mutated.`,
+      dryRun: `Example dry run:
+nums = [1, -2, 3, 4]\ni=0: 1 >= 0 → 2\ni=1: -2 < 0 → -2\ni=2: 3 >= 0 → 6\ni=3: 4 >= 0 → 8\nresult = [2, -2, 6, 8]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function doubleNonNegative(nums) {
+  const result = new Array(nums.length);
+
+  for (let i = 0; i < nums.length; i++) {
+    result[i] = nums[i] >= 0 ? nums[i] * 2 : nums[i];
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function doubleNonNegativeUsingBuiltIns(nums) {
   return nums.map((value) => (value >= 0 ? value * 2 : value));
 }`,
-      typescriptSolution: `function doubleNonNegative(nums: number[]): number[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function doubleNonNegative(nums) {
+  const result = new Array(nums.length);
+
+  for (let i = 0; i < nums.length; i++) {
+    result[i] = nums[i] >= 0 ? nums[i] * 2 : nums[i];
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function doubleNonNegativeUsingBuiltIns(nums) {
   return nums.map((value) => (value >= 0 ? value * 2 : value));
 }`,
       timeComplexity: 'O(n) — one pass over the array.',
@@ -145,39 +175,61 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Walk the array once while maintaining a hash map of value → index for everything seen so far. At each index i, compute complement = target - nums[i]. If complement is already in the map, the pair is found: [map.get(complement), i]. Otherwise store nums[i] → i and continue.',
-      dryRun:
-        'nums = [2, 7, 11, 15], target = 9\ni=0: complement = 9-2=7, map={} → not found, map={2:0}\ni=1: complement = 9-7=2, map={2:0} → found! return [0, 1]',
-      javascriptSolution: `function twoSum(nums, target) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Walk the array once while maintaining a hash map of value → index for everything seen so far. At each index i, compute complement = target - nums[i]. If complement is already in the map, the pair is found: [map.get(complement), i]. Otherwise store nums[i] → i and continue.`,
+      dryRun: `Example dry run:
+nums = [2, 7, 11, 15], target = 9\ni=0: complement = 9-2=7, map={} → not found, map={2:0}\ni=1: complement = 9-7=2, map={2:0} → found! return [0, 1]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function twoSum(nums, target) {
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) return [i, j];
+    }
+  }
+
+  throw new Error("No two sum solution exists for the given input");
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function twoSumUsingBuiltIns(nums, target) {
   const seen = new Map();
 
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
-
-    if (seen.has(complement)) {
-      return [seen.get(complement), i];
-    }
-
+    if (seen.has(complement)) return [seen.get(complement), i];
     seen.set(nums[i], i);
   }
 
-  throw new Error("No two sum solution exists for the given input");
+  return [];
 }`,
-      typescriptSolution: `function twoSum(nums: number[], target: number): [number, number] {
-  const seen = new Map<number, number>();
-
-  for (let i = 0; i < nums.length; i++) {
-    const complement = target - nums[i]!;
-
-    if (seen.has(complement)) {
-      return [seen.get(complement)!, i];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function twoSum(nums, target) {
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) return [i, j];
     }
-
-    seen.set(nums[i]!, i);
   }
 
   throw new Error("No two sum solution exists for the given input");
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function twoSumUsingBuiltIns(nums, target) {
+  const seen = new Map();
+
+  for (let i = 0; i < nums.length; i++) {
+    const complement = target - nums[i];
+    if (seen.has(complement)) return [seen.get(complement), i];
+    seen.set(nums[i], i);
+  }
+
+  return [];
 }`,
       timeComplexity: 'O(n) — one pass, with O(1) average-case hash map lookups.',
       spaceComplexity: 'O(n) — the hash map can hold up to n-1 entries.',
@@ -241,31 +293,69 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Kadane's algorithm. Maintain `currentSum` (best sum of a subarray ending at the current index) and `bestSum` (best sum seen so far). At each element, `currentSum = max(nums[i], currentSum + nums[i])` — either extend the running subarray or start a new one at this element. Update `bestSum` after each step.",
-      dryRun:
-        'nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\ncurrent=-2, best=-2\ni=1: current=max(1,-2+1)=1, best=1\ni=2: current=max(-3,1-3)=-2, best=1\ni=3: current=max(4,-2+4)=4, best=4\ni=4: current=max(-1,4-1)=3, best=4\ni=5: current=max(2,3+2)=5, best=5\ni=6: current=max(1,5+1)=6, best=6\ni=7: current=max(-5,6-5)=1, best=6\ni=8: current=max(4,1+4)=5, best=6\nresult = 6',
-      javascriptSolution: `function maxSubArray(nums) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Kadane's algorithm. Maintain \`currentSum\` (best sum of a subarray ending at the current index) and \`bestSum\` (best sum seen so far). At each element, \`currentSum = max(nums[i], currentSum + nums[i])\` — either extend the running subarray or start a new one at this element. Update \`bestSum\` after each step.`,
+      dryRun: `Example dry run:
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\ncurrent=-2, best=-2\ni=1: current=max(1,-2+1)=1, best=1\ni=2: current=max(-3,1-3)=-2, best=1\ni=3: current=max(4,-2+4)=4, best=4\ni=4: current=max(-1,4-1)=3, best=4\ni=5: current=max(2,3+2)=5, best=5\ni=6: current=max(1,5+1)=6, best=6\ni=7: current=max(-5,6-5)=1, best=6\ni=8: current=max(4,1+4)=5, best=6\nresult = 6
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxSubArray(nums) {
   let currentSum = nums[0];
   let bestSum = nums[0];
 
   for (let i = 1; i < nums.length; i++) {
-    currentSum = Math.max(nums[i], currentSum + nums[i]);
-    bestSum = Math.max(bestSum, currentSum);
+    const extend = currentSum + nums[i];
+    currentSum = nums[i] > extend ? nums[i] : extend;
+
+    if (currentSum > bestSum) bestSum = currentSum;
   }
 
   return bestSum;
-}`,
-      typescriptSolution: `function maxSubArray(nums: number[]): number {
-  let currentSum = nums[0]!;
-  let bestSum = nums[0]!;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxSubArrayUsingBuiltIns(nums) {
+  let current = nums[0];
+  let best = nums[0];
 
   for (let i = 1; i < nums.length; i++) {
-    currentSum = Math.max(nums[i]!, currentSum + nums[i]!);
-    bestSum = Math.max(bestSum, currentSum);
+    current = Math.max(nums[i], current + nums[i]);
+    best = Math.max(best, current);
+  }
+
+  return best;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxSubArray(nums) {
+  let currentSum = nums[0];
+  let bestSum = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    const extend = currentSum + nums[i];
+    currentSum = nums[i] > extend ? nums[i] : extend;
+
+    if (currentSum > bestSum) bestSum = currentSum;
   }
 
   return bestSum;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxSubArrayUsingBuiltIns(nums) {
+  let current = nums[0];
+  let best = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    current = Math.max(nums[i], current + nums[i]);
+    best = Math.max(best, current);
+  }
+
+  return best;
 }`,
       timeComplexity: 'O(n) — a single pass through the array.',
       spaceComplexity: 'O(1) — only two running values are tracked.',
@@ -329,31 +419,57 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Iterate through the array once, maintaining a running total. At each index, add the current element to the running total and append it to the result array.',
-      dryRun:
-        'nums = [1, 2, 3, 4]\nrunning=0\ni=0: running=0+1=1 → [1]\ni=1: running=1+2=3 → [1,3]\ni=2: running=3+3=6 → [1,3,6]\ni=3: running=6+4=10 → [1,3,6,10]',
-      javascriptSolution: `function buildPrefixSums(nums) {
-  const prefix = [];
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Iterate through the array once, maintaining a running total. At each index, add the current element to the running total and append it to the result array.`,
+      dryRun: `Example dry run:
+nums = [1, 2, 3, 4]\nrunning=0\ni=0: running=0+1=1 → [1]\ni=1: running=1+2=3 → [1,3]\ni=2: running=3+3=6 → [1,3,6]\ni=3: running=6+4=10 → [1,3,6,10]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function buildPrefixSums(nums) {
+  const prefix = new Array(nums.length);
   let running = 0;
 
-  for (const value of nums) {
-    running += value;
-    prefix.push(running);
+  for (let i = 0; i < nums.length; i++) {
+    running += nums[i];
+    prefix[i] = running;
   }
 
   return prefix;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function buildPrefixSumsUsingBuiltIns(nums) {
+  let running = 0;
+  return nums.map((value) => {
+    running += value;
+    return running;
+  });
 }`,
-      typescriptSolution: `function buildPrefixSums(nums: number[]): number[] {
-  const prefix: number[] = [];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function buildPrefixSums(nums) {
+  const prefix = new Array(nums.length);
   let running = 0;
 
-  for (const value of nums) {
-    running += value;
-    prefix.push(running);
+  for (let i = 0; i < nums.length; i++) {
+    running += nums[i];
+    prefix[i] = running;
   }
 
   return prefix;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function buildPrefixSumsUsingBuiltIns(nums) {
+  let running = 0;
+  return nums.map((value) => {
+    running += value;
+    return running;
+  });
 }`,
       timeComplexity: 'O(n) — one pass to build the array.',
       spaceComplexity: 'O(n) — the output array is the same length as the input.',
@@ -417,49 +533,59 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Use two pointers, one for each array, both starting at 0. Repeatedly compare the elements at the two pointers, append the smaller one to the result, and advance that pointer. When one array is exhausted, append the remaining elements of the other array.',
-      dryRun:
-        'a=[1,3,5], b=[2,4,6], i=0, j=0\n1<2 → take 1, i=1\n3>2 → take 2, j=1\n3<4 → take 3, i=2\n5>4 → take 4, j=2\n5<6 → take 5, i=3 (a exhausted)\nappend remaining b: 6\nresult=[1,2,3,4,5,6]',
-      javascriptSolution: `function mergeSortedArrays(a, b) {
-  const result = [];
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Use two pointers, one for each array, both starting at 0. Repeatedly compare the elements at the two pointers, append the smaller one to the result, and advance that pointer. When one array is exhausted, append the remaining elements of the other array.`,
+      dryRun: `Example dry run:
+a=[1,3,5], b=[2,4,6], i=0, j=0\n1<2 → take 1, i=1\n3>2 → take 2, j=1\n3<4 → take 3, i=2\n5>4 → take 4, j=2\n5<6 → take 5, i=3 (a exhausted)\nappend remaining b: 6\nresult=[1,2,3,4,5,6]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function mergeSortedArrays(a, b) {
+  const result = new Array(a.length + b.length);
   let i = 0;
   let j = 0;
+  let k = 0;
 
   while (i < a.length && j < b.length) {
-    if (a[i] <= b[j]) {
-      result.push(a[i]);
-      i++;
-    } else {
-      result.push(b[j]);
-      j++;
-    }
+    if (a[i] <= b[j]) result[k++] = a[i++];
+    else result[k++] = b[j++];
   }
 
-  while (i < a.length) result.push(a[i++]);
-  while (j < b.length) result.push(b[j++]);
+  while (i < a.length) result[k++] = a[i++];
+  while (j < b.length) result[k++] = b[j++];
 
   return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function mergeSortedArraysUsingBuiltIns(a, b) {
+  return a.concat(b).sort((x, y) => x - y);
 }`,
-      typescriptSolution: `function mergeSortedArrays(a: number[], b: number[]): number[] {
-  const result: number[] = [];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function mergeSortedArrays(a, b) {
+  const result = new Array(a.length + b.length);
   let i = 0;
   let j = 0;
+  let k = 0;
 
   while (i < a.length && j < b.length) {
-    if (a[i]! <= b[j]!) {
-      result.push(a[i]!);
-      i++;
-    } else {
-      result.push(b[j]!);
-      j++;
-    }
+    if (a[i] <= b[j]) result[k++] = a[i++];
+    else result[k++] = b[j++];
   }
 
-  while (i < a.length) result.push(a[i++]!);
-  while (j < b.length) result.push(b[j++]!);
+  while (i < a.length) result[k++] = a[i++];
+  while (j < b.length) result[k++] = b[j++];
 
   return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function mergeSortedArraysUsingBuiltIns(a, b) {
+  return a.concat(b).sort((x, y) => x - y);
 }`,
       timeComplexity: 'O(n + m) — each pointer advances at most once per element.',
       spaceComplexity: 'O(n + m) — the merged result holds every element from both inputs.',
@@ -523,21 +649,65 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'If the array is empty, return it immediately. Otherwise normalize k with `k % nums.length` since rotating by the full length is a no-op. The rotated result is the last `k` elements followed by the first `nums.length - k` elements, built with two slices.',
-      dryRun:
-        'nums=[1,2,3,4,5,6,7], k=3\nnormalizedK = 3 % 7 = 3\nlast 3: [5,6,7]\nfirst 4: [1,2,3,4]\nresult = [5,6,7,1,2,3,4]',
-      javascriptSolution: `function rotateArray(nums, k) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: If the array is empty, return it immediately. Otherwise normalize k with \`k % nums.length\` since rotating by the full length is a no-op. The rotated result is the last \`k\` elements followed by the first \`nums.length - k\` elements, built with two slices.`,
+      dryRun: `Example dry run:
+nums=[1,2,3,4,5,6,7], k=3\nnormalizedK = 3 % 7 = 3\nlast 3: [5,6,7]\nfirst 4: [1,2,3,4]\nresult = [5,6,7,1,2,3,4]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function rotateArray(nums, k) {
+  const n = nums.length;
+  if (n === 0) return [];
+
+  k = k % n;
+
+  const result = new Array(n);
+  let write = 0;
+
+  for (let i = n - k; i < n; i++) result[write++] = nums[i];
+  for (let i = 0; i < n - k; i++) result[write++] = nums[i];
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function rotateArrayUsingBuiltIns(nums, k) {
   if (nums.length === 0) return [];
 
   const normalizedK = k % nums.length;
-  return [...nums.slice(nums.length - normalizedK), ...nums.slice(0, nums.length - normalizedK)];
+  return nums
+    .slice(nums.length - normalizedK)
+    .concat(nums.slice(0, nums.length - normalizedK));
 }`,
-      typescriptSolution: `function rotateArray(nums: number[], k: number): number[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function rotateArray(nums, k) {
+  const n = nums.length;
+  if (n === 0) return [];
+
+  k = k % n;
+
+  const result = new Array(n);
+  let write = 0;
+
+  for (let i = n - k; i < n; i++) result[write++] = nums[i];
+  for (let i = 0; i < n - k; i++) result[write++] = nums[i];
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function rotateArrayUsingBuiltIns(nums, k) {
   if (nums.length === 0) return [];
 
   const normalizedK = k % nums.length;
-  return [...nums.slice(nums.length - normalizedK), ...nums.slice(0, nums.length - normalizedK)];
+  return nums
+    .slice(nums.length - normalizedK)
+    .concat(nums.slice(0, nums.length - normalizedK));
 }`,
       timeComplexity: 'O(n) — slicing and spreading touch each element a constant number of times.',
       spaceComplexity: 'O(n) — a new array of the same length is built.',
@@ -601,21 +771,53 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Filter the array into non-zero values (preserving order), then append one zero for every element that was filtered out. This keeps relative order of non-zero elements and pushes all zeroes to the end without any manual index bookkeeping.',
-      dryRun:
-        'nums=[0,1,0,3,12]\nnonZero=[1,3,12]\nzeroCount = 5 - 3 = 2\nresult = [1,3,12, 0, 0]',
-      javascriptSolution: `function moveZeroes(nums) {
-  const nonZero = nums.filter((value) => value !== 0);
-  const zeroCount = nums.length - nonZero.length;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
 
-  return [...nonZero, ...Array(zeroCount).fill(0)];
+Core idea: Filter the array into non-zero values (preserving order), then append one zero for every element that was filtered out. This keeps relative order of non-zero elements and pushes all zeroes to the end without any manual index bookkeeping.`,
+      dryRun: `Example dry run:
+nums=[0,1,0,3,12]\nnonZero=[1,3,12]\nzeroCount = 5 - 3 = 2\nresult = [1,3,12, 0, 0]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function moveZeroes(nums) {
+  const result = new Array(nums.length);
+  let write = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) result[write++] = nums[i];
+  }
+
+  while (write < nums.length) result[write++] = 0;
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function moveZeroesUsingBuiltIns(nums) {
+  const nonZero = nums.filter((value) => value !== 0);
+  return nonZero.concat(new Array(nums.length - nonZero.length).fill(0));
 }`,
-      typescriptSolution: `function moveZeroes(nums: number[]): number[] {
-  const nonZero = nums.filter((value) => value !== 0);
-  const zeroCount = nums.length - nonZero.length;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function moveZeroes(nums) {
+  const result = new Array(nums.length);
+  let write = 0;
 
-  return [...nonZero, ...Array(zeroCount).fill(0)];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) result[write++] = nums[i];
+  }
+
+  while (write < nums.length) result[write++] = 0;
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function moveZeroesUsingBuiltIns(nums) {
+  const nonZero = nums.filter((value) => value !== 0);
+  return nonZero.concat(new Array(nums.length - nonZero.length).fill(0));
 }`,
       timeComplexity: 'O(n) — one filter pass plus building the zero-padded tail.',
       spaceComplexity: 'O(n) — a new array is produced.',
@@ -679,47 +881,139 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Sort intervals by start. Initialize the result with the first interval. For each subsequent interval, compare its start to the end of the last interval in the result: if it starts at or before that end, merge by extending the end to the max of the two ends; otherwise push it as a new, separate interval.',
-      dryRun:
-        'sorted=[[1,3],[2,6],[8,10],[15,18]]\nresult=[[1,3]]\n[2,6]: 2<=3 → merge → result=[[1,6]]\n[8,10]: 8>6 → new → result=[[1,6],[8,10]]\n[15,18]: 15>10 → new → result=[[1,6],[8,10],[15,18]]',
-      javascriptSolution: `function mergeIntervals(intervals) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Sort intervals by start. Initialize the result with the first interval. For each subsequent interval, compare its start to the end of the last interval in the result: if it starts at or before that end, merge by extending the end to the max of the two ends; otherwise push it as a new, separate interval.`,
+      dryRun: `Example dry run:
+sorted=[[1,3],[2,6],[8,10],[15,18]]\nresult=[[1,3]]\n[2,6]: 2<=3 → merge → result=[[1,6]]\n[8,10]: 8>6 → new → result=[[1,6],[8,10]]\n[15,18]: 15>10 → new → result=[[1,6],[8,10],[15,18]]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function mergeIntervals(intervals) {
   if (intervals.length === 0) return [];
 
-  const sorted = [...intervals].sort((a, b) => a[0] - b[0]);
-  const merged = [sorted[0]];
+  const sorted = new Array(intervals.length);
+
+  for (let i = 0; i < intervals.length; i++) {
+    sorted[i] = [intervals[i][0], intervals[i][1]];
+  }
 
   for (let i = 1; i < sorted.length; i++) {
-    const [start, end] = sorted[i];
-    const last = merged[merged.length - 1];
+    const current = sorted[i];
+    let j = i - 1;
 
-    if (start <= last[1]) {
-      last[1] = Math.max(last[1], end);
+    while (j >= 0 && sorted[j][0] > current[0]) {
+      sorted[j + 1] = sorted[j];
+      j--;
+    }
+
+    sorted[j + 1] = current;
+  }
+
+  const result = [];
+  let start = sorted[0][0];
+  let end = sorted[0][1];
+
+  for (let i = 1; i < sorted.length; i++) {
+    const nextStart = sorted[i][0];
+    const nextEnd = sorted[i][1];
+
+    if (nextStart <= end) {
+      if (nextEnd > end) end = nextEnd;
     } else {
-      merged.push([start, end]);
+      result.push([start, end]);
+      start = nextStart;
+      end = nextEnd;
     }
   }
 
-  return merged;
+  result.push([start, end]);
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function mergeIntervalsUsingBuiltIns(intervals) {
+  if (intervals.length === 0) return [];
+
+  const sorted = intervals
+    .map(([start, end]) => [start, end])
+    .sort((a, b) => a[0] - b[0]);
+
+  const result = [sorted[0]];
+
+  for (const [start, end] of sorted.slice(1)) {
+    const last = result[result.length - 1];
+
+    if (start <= last[1]) last[1] = Math.max(last[1], end);
+    else result.push([start, end]);
+  }
+
+  return result;
 }`,
-      typescriptSolution: `function mergeIntervals(intervals: number[][]): number[][] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function mergeIntervals(intervals) {
   if (intervals.length === 0) return [];
 
-  const sorted = [...intervals].sort((a, b) => a[0]! - b[0]!);
-  const merged: number[][] = [sorted[0]!];
+  const sorted = new Array(intervals.length);
+
+  for (let i = 0; i < intervals.length; i++) {
+    sorted[i] = [intervals[i][0], intervals[i][1]];
+  }
 
   for (let i = 1; i < sorted.length; i++) {
-    const [start, end] = sorted[i]!;
-    const last = merged[merged.length - 1]!;
+    const current = sorted[i];
+    let j = i - 1;
 
-    if (start! <= last[1]!) {
-      last[1] = Math.max(last[1]!, end!);
+    while (j >= 0 && sorted[j][0] > current[0]) {
+      sorted[j + 1] = sorted[j];
+      j--;
+    }
+
+    sorted[j + 1] = current;
+  }
+
+  const result = [];
+  let start = sorted[0][0];
+  let end = sorted[0][1];
+
+  for (let i = 1; i < sorted.length; i++) {
+    const nextStart = sorted[i][0];
+    const nextEnd = sorted[i][1];
+
+    if (nextStart <= end) {
+      if (nextEnd > end) end = nextEnd;
     } else {
-      merged.push([start!, end!]);
+      result.push([start, end]);
+      start = nextStart;
+      end = nextEnd;
     }
   }
 
-  return merged;
+  result.push([start, end]);
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function mergeIntervalsUsingBuiltIns(intervals) {
+  if (intervals.length === 0) return [];
+
+  const sorted = intervals
+    .map(([start, end]) => [start, end])
+    .sort((a, b) => a[0] - b[0]);
+
+  const result = [sorted[0]];
+
+  for (const [start, end] of sorted.slice(1)) {
+    const last = result[result.length - 1];
+
+    if (start <= last[1]) last[1] = Math.max(last[1], end);
+    else result.push([start, end]);
+  }
+
+  return result;
 }`,
       timeComplexity: 'O(n log n) — dominated by the initial sort; the merge pass itself is O(n).',
       spaceComplexity: 'O(n) — for the sorted copy and the merged result.',
@@ -783,11 +1077,18 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Maintain four boundary pointers: top, bottom, left, right. Repeatedly traverse the top row (left to right), then the right column (top to bottom), then, if top <= bottom, the bottom row (right to left), then, if left <= right, the left column (bottom to top). After each side, move the corresponding boundary inward. Stop once top > bottom or left > right.',
-      dryRun:
-        'matrix=[[1,2,3],[4,5,6],[7,8,9]], top=0,bottom=2,left=0,right=2\ntop row: 1,2,3 → top=1\nright col: 6,9 → right=1\nbottom row (top<=bottom): 8,7 → bottom=1\nleft col (left<=right): 4 → left=1\ntop row (top<=bottom, left<=right): 5 → top=2, loop ends (top>bottom)\nresult=[1,2,3,6,9,8,7,4,5]',
-      javascriptSolution: `function spiralOrder(matrix) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Maintain four boundary pointers: top, bottom, left, right. Repeatedly traverse the top row (left to right), then the right column (top to bottom), then, if top <= bottom, the bottom row (right to left), then, if left <= right, the left column (bottom to top). After each side, move the corresponding boundary inward. Stop once top > bottom or left > right.`,
+      dryRun: `Example dry run:
+matrix=[[1,2,3],[4,5,6],[7,8,9]], top=0,bottom=2,left=0,right=2\ntop row: 1,2,3 → top=1\nright col: 6,9 → right=1\nbottom row (top<=bottom): 8,7 → bottom=1\nleft col (left<=right): 4 → left=1\ntop row (top<=bottom, left<=right): 5 → top=2, loop ends (top>bottom)\nresult=[1,2,3,6,9,8,7,4,5]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function spiralOrder(matrix) {
   if (matrix.length === 0 || matrix[0].length === 0) return [];
 
   const result = [];
@@ -815,32 +1116,89 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return result;
-}`,
-      typescriptSolution: `function spiralOrder(matrix: number[][]): number[] {
-  if (matrix.length === 0 || matrix[0]!.length === 0) return [];
+}
 
-  const result: number[] = [];
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function spiralOrderUsingBuiltIns(matrix) {
+  if (!matrix.length || !matrix[0].length) return [];
+
+  const result = [];
+  let current = matrix.map((row) => row.slice());
+
+  while (current.length) {
+    result.push(...current.shift());
+
+    for (const row of current) {
+      if (row.length) result.push(row.pop());
+    }
+
+    if (current.length) {
+      result.push(...current.pop().reverse());
+    }
+
+    for (let i = current.length - 1; i >= 0; i--) {
+      if (current[i].length) result.push(current[i].shift());
+    }
+
+    current = current.filter((row) => row.length > 0);
+  }
+
+  return result;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function spiralOrder(matrix) {
+  if (matrix.length === 0 || matrix[0].length === 0) return [];
+
+  const result = [];
   let top = 0;
   let bottom = matrix.length - 1;
   let left = 0;
-  let right = matrix[0]!.length - 1;
+  let right = matrix[0].length - 1;
 
   while (top <= bottom && left <= right) {
-    for (let col = left; col <= right; col++) result.push(matrix[top]![col]!);
+    for (let col = left; col <= right; col++) result.push(matrix[top][col]);
     top++;
 
-    for (let row = top; row <= bottom; row++) result.push(matrix[row]![right]!);
+    for (let row = top; row <= bottom; row++) result.push(matrix[row][right]);
     right--;
 
     if (top <= bottom) {
-      for (let col = right; col >= left; col--) result.push(matrix[bottom]![col]!);
+      for (let col = right; col >= left; col--) result.push(matrix[bottom][col]);
       bottom--;
     }
 
     if (left <= right) {
-      for (let row = bottom; row >= top; row--) result.push(matrix[row]![left]!);
+      for (let row = bottom; row >= top; row--) result.push(matrix[row][left]);
       left++;
     }
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function spiralOrderUsingBuiltIns(matrix) {
+  if (!matrix.length || !matrix[0].length) return [];
+
+  const result = [];
+  let current = matrix.map((row) => row.slice());
+
+  while (current.length) {
+    result.push(...current.shift());
+
+    for (const row of current) {
+      if (row.length) result.push(row.pop());
+    }
+
+    if (current.length) {
+      result.push(...current.pop().reverse());
+    }
+
+    for (let i = current.length - 1; i >= 0; i--) {
+      if (current[i].length) result.push(current[i].shift());
+    }
+
+    current = current.filter((row) => row.length > 0);
   }
 
   return result;
@@ -906,13 +1264,48 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Return `nums.slice(1)`, which creates a new array containing all elements from index 1 to the end. This avoids `shift()` (which mutates in place) while making the same O(n) cost explicit and visible in the code, rather than hidden inside a mutating call.',
-      dryRun: 'nums=[1,2,3,4]\nnums.slice(1) copies indices 1..3 into a new array\nresult=[2,3,4]',
-      javascriptSolution: `function removeFirstWithoutShift(nums) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Return \`nums.slice(1)\`, which creates a new array containing all elements from index 1 to the end. This avoids \`shift()\` (which mutates in place) while making the same O(n) cost explicit and visible in the code, rather than hidden inside a mutating call.`,
+      dryRun: `Example dry run:
+nums=[1,2,3,4]\nnums.slice(1) copies indices 1..3 into a new array\nresult=[2,3,4]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function removeFirstWithoutShift(nums) {
+  if (nums.length <= 1) return [];
+
+  const result = new Array(nums.length - 1);
+
+  for (let i = 1; i < nums.length; i++) {
+    result[i - 1] = nums[i];
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function removeFirstWithoutShiftUsingBuiltIns(nums) {
   return nums.slice(1);
 }`,
-      typescriptSolution: `function removeFirstWithoutShift(nums: number[]): number[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function removeFirstWithoutShift(nums) {
+  if (nums.length <= 1) return [];
+
+  const result = new Array(nums.length - 1);
+
+  for (let i = 1; i < nums.length; i++) {
+    result[i - 1] = nums[i];
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function removeFirstWithoutShiftUsingBuiltIns(nums) {
   return nums.slice(1);
 }`,
       timeComplexity: 'O(n) — every remaining element must be copied to its new index; there is no faster way to drop the first element of an array.',
@@ -975,70 +1368,132 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Use row 0 and column 0 of the matrix itself as marker space. First pass: for every zero at (row, col), set matrix[row][0] = 0 and matrix[0][col] = 0 (using a separate col0 flag when col === 0, since matrix[0][0] is shared). Second pass (from row 1, col 1): zero out any cell whose row-marker or column-marker is 0. Finally, zero row 0 if matrix[0][0] is 0, and zero column 0 if the col0 flag is set.",
-      dryRun:
-        'matrix=[[1,2,3],[4,0,6],[7,8,9]]\nmark phase: cell (1,1)=0 → matrix[1][0]=0, matrix[0][1]=0\nmatrix is now [[1,0,3],[0,0,6],[7,8,9]]\napply phase (row>=1,col>=1): (1,2): row-marker matrix[1][0]=0 → zero it; (2,1): col-marker matrix[0][1]=0 → zero it\nresult=[[1,0,3],[0,0,0],[7,0,9]]',
-      javascriptSolution: `function setMatrixZeroes(matrix) {
-  const rowLen = matrix.length;
-  const colLen = matrix[0].length;
-  let col0 = 1;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
 
-  for (let row = 0; row < rowLen; row++) {
-    for (let col = 0; col < colLen; col++) {
+Core idea: Use row 0 and column 0 of the matrix itself as marker space. First pass: for every zero at (row, col), set matrix[row][0] = 0 and matrix[0][col] = 0 (using a separate col0 flag when col === 0, since matrix[0][0] is shared). Second pass (from row 1, col 1): zero out any cell whose row-marker or column-marker is 0. Finally, zero row 0 if matrix[0][0] is 0, and zero column 0 if the col0 flag is set.`,
+      dryRun: `Example dry run:
+matrix=[[1,2,3],[4,0,6],[7,8,9]]\nmark phase: cell (1,1)=0 → matrix[1][0]=0, matrix[0][1]=0\nmatrix is now [[1,0,3],[0,0,6],[7,8,9]]\napply phase (row>=1,col>=1): (1,2): row-marker matrix[1][0]=0 → zero it; (2,1): col-marker matrix[0][1]=0 → zero it\nresult=[[1,0,3],[0,0,0],[7,0,9]]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function setMatrixZeroes(matrix) {
+  const rows = matrix.length;
+  const cols = matrix[0].length;
+  let firstColumnZero = false;
+
+  for (let row = 0; row < rows; row++) {
+    if (matrix[row][0] === 0) firstColumnZero = true;
+
+    for (let col = 1; col < cols; col++) {
       if (matrix[row][col] === 0) {
         matrix[row][0] = 0;
-        if (col === 0) col0 = 0;
-        else matrix[0][col] = 0;
+        matrix[0][col] = 0;
       }
     }
   }
 
-  for (let row = 1; row < rowLen; row++) {
-    for (let col = 1; col < colLen; col++) {
-      if (matrix[row][col] !== 0) {
-        if (matrix[0][col] === 0 || matrix[row][0] === 0) matrix[row][col] = 0;
+  for (let row = 1; row < rows; row++) {
+    for (let col = 1; col < cols; col++) {
+      if (matrix[row][0] === 0 || matrix[0][col] === 0) {
+        matrix[row][col] = 0;
       }
     }
   }
 
   if (matrix[0][0] === 0) {
-    for (let col = 0; col < colLen; col++) matrix[0][col] = 0;
+    for (let col = 0; col < cols; col++) matrix[0][col] = 0;
   }
-  if (col0 === 0) {
-    for (let row = 0; row < rowLen; row++) matrix[row][0] = 0;
+
+  if (firstColumnZero) {
+    for (let row = 0; row < rows; row++) matrix[row][0] = 0;
+  }
+
+  return matrix;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function setMatrixZeroesUsingBuiltIns(matrix) {
+  const rows = new Set();
+  const cols = new Set();
+
+  for (let row = 0; row < matrix.length; row++) {
+    for (let col = 0; col < matrix[0].length; col++) {
+      if (matrix[row][col] === 0) {
+        rows.add(row);
+        cols.add(col);
+      }
+    }
+  }
+
+  for (const row of rows) {
+    for (let col = 0; col < matrix[0].length; col++) matrix[row][col] = 0;
+  }
+
+  for (const col of cols) {
+    for (let row = 0; row < matrix.length; row++) matrix[row][col] = 0;
   }
 
   return matrix;
 }`,
-      typescriptSolution: `function setMatrixZeroes(matrix: number[][]): number[][] {
-  const rowLen = matrix.length;
-  const colLen = matrix[0]!.length;
-  let col0 = 1;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function setMatrixZeroes(matrix) {
+  const rows = matrix.length;
+  const cols = matrix[0].length;
+  let firstColumnZero = false;
 
-  for (let row = 0; row < rowLen; row++) {
-    for (let col = 0; col < colLen; col++) {
-      if (matrix[row]![col] === 0) {
-        matrix[row]![0] = 0;
-        if (col === 0) col0 = 0;
-        else matrix[0]![col] = 0;
+  for (let row = 0; row < rows; row++) {
+    if (matrix[row][0] === 0) firstColumnZero = true;
+
+    for (let col = 1; col < cols; col++) {
+      if (matrix[row][col] === 0) {
+        matrix[row][0] = 0;
+        matrix[0][col] = 0;
       }
     }
   }
 
-  for (let row = 1; row < rowLen; row++) {
-    for (let col = 1; col < colLen; col++) {
-      if (matrix[row]![col] !== 0) {
-        if (matrix[0]![col] === 0 || matrix[row]![0] === 0) matrix[row]![col] = 0;
+  for (let row = 1; row < rows; row++) {
+    for (let col = 1; col < cols; col++) {
+      if (matrix[row][0] === 0 || matrix[0][col] === 0) {
+        matrix[row][col] = 0;
       }
     }
   }
 
-  if (matrix[0]![0] === 0) {
-    for (let col = 0; col < colLen; col++) matrix[0]![col] = 0;
+  if (matrix[0][0] === 0) {
+    for (let col = 0; col < cols; col++) matrix[0][col] = 0;
   }
-  if (col0 === 0) {
-    for (let row = 0; row < rowLen; row++) matrix[row]![0] = 0;
+
+  if (firstColumnZero) {
+    for (let row = 0; row < rows; row++) matrix[row][0] = 0;
+  }
+
+  return matrix;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function setMatrixZeroesUsingBuiltIns(matrix) {
+  const rows = new Set();
+  const cols = new Set();
+
+  for (let row = 0; row < matrix.length; row++) {
+    for (let col = 0; col < matrix[0].length; col++) {
+      if (matrix[row][col] === 0) {
+        rows.add(row);
+        cols.add(col);
+      }
+    }
+  }
+
+  for (const row of rows) {
+    for (let col = 0; col < matrix[0].length; col++) matrix[row][col] = 0;
+  }
+
+  for (const col of cols) {
+    for (let row = 0; row < matrix.length; row++) matrix[row][col] = 0;
   }
 
   return matrix;
@@ -1102,48 +1557,86 @@ export const MOCK_DSA_CODING_MODULE2_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'For each row index n from 0 to numRows - 1, generate the row directly using the running binomial-coefficient formula: starting from 1, repeatedly multiply by (n - r) and divide by (r + 1) for r = 0..n-1, appending each result.',
-      dryRun:
-        'n=4 (5th row): ans=1, row=[1]\nr=0: ans=1*4/1=4 → [1,4]\nr=1: ans=4*3/2=6 → [1,4,6]\nr=2: ans=6*2/3=4 → [1,4,6,4]\nr=3: ans=4*1/4=1 → [1,4,6,4,1]',
-      javascriptSolution: `function generateRow(n) {
-  let ans = 1;
-  const row = [1];
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
 
-  for (let r = 0; r < n; r++) {
-    ans = (ans * (n - r)) / (r + 1);
-    row.push(ans);
-  }
+Core idea: For each row index n from 0 to numRows - 1, generate the row directly using the running binomial-coefficient formula: starting from 1, repeatedly multiply by (n - r) and divide by (r + 1) for r = 0..n-1, appending each result.`,
+      dryRun: `Example dry run:
+n=4 (5th row): ans=1, row=[1]\nr=0: ans=1*4/1=4 → [1,4]\nr=1: ans=4*3/2=6 → [1,4,6]\nr=2: ans=6*2/3=4 → [1,4,6,4]\nr=3: ans=4*1/4=1 → [1,4,6,4,1]
 
-  return row;
-}
-
-function generatePascalTriangle(numRows) {
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function generate(numRows) {
   const result = [];
 
-  for (let i = 0; i < numRows; i++) {
-    result.push(generateRow(i));
+  for (let row = 0; row < numRows; row++) {
+    const current = new Array(row + 1);
+    current[0] = 1;
+    current[row] = 1;
+
+    for (let col = 1; col < row; col++) {
+      current[col] =
+        result[row - 1][col - 1] +
+        result[row - 1][col];
+    }
+
+    result.push(current);
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function generateUsingBuiltIns(numRows) {
+  const result = [];
+
+  for (let row = 0; row < numRows; row++) {
+    const previous = result[row - 1] || [];
+    result.push(
+      new Array(row + 1).fill(0).map((_, col) => {
+        if (col === 0 || col === row) return 1;
+        return previous[col - 1] + previous[col];
+      }),
+    );
   }
 
   return result;
 }`,
-      typescriptSolution: `function generateRow(n: number): number[] {
-  let ans = 1;
-  const row: number[] = [1];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function generate(numRows) {
+  const result = [];
 
-  for (let r = 0; r < n; r++) {
-    ans = (ans * (n - r)) / (r + 1);
-    row.push(ans);
+  for (let row = 0; row < numRows; row++) {
+    const current = new Array(row + 1);
+    current[0] = 1;
+    current[row] = 1;
+
+    for (let col = 1; col < row; col++) {
+      current[col] =
+        result[row - 1][col - 1] +
+        result[row - 1][col];
+    }
+
+    result.push(current);
   }
 
-  return row;
+  return result;
 }
 
-function generatePascalTriangle(numRows: number): number[][] {
-  const result: number[][] = [];
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function generateUsingBuiltIns(numRows) {
+  const result = [];
 
-  for (let i = 0; i < numRows; i++) {
-    result.push(generateRow(i));
+  for (let row = 0; row < numRows; row++) {
+    const previous = result[row - 1] || [];
+    result.push(
+      new Array(row + 1).fill(0).map((_, col) => {
+        if (col === 0 || col === row) return 1;
+        return previous[col - 1] + previous[col];
+      }),
+    );
   }
 
   return result;
@@ -1210,73 +1703,111 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        "Find the rightmost index `dip` where nums[dip] < nums[dip + 1] (the first place, scanning from the end, that can be increased). If none exists, the whole array is descending — reverse it and return. Otherwise, scan from the end again for the first value greater than nums[dip], swap it with nums[dip], then reverse the suffix after `dip` (which is guaranteed descending) to make it ascending — the smallest possible arrangement for that suffix.",
-      dryRun:
-        'nums=[1,2,3]\ndip search: right=1: nums[1]=2<nums[2]=3 → dip=1\nswap search: right=2: nums[2]=3>nums[1]=2 → swap → [1,3,2]\nreverse suffix after dip (just index 2, nothing to reverse)\nresult=[1,3,2]',
-      javascriptSolution: `function nextPermutation(nums) {
-  const n = nums.length - 1;
-  let dipIndex = -1;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
 
-  for (let right = n - 1; right >= 0; right--) {
-    if (nums[right] < nums[right + 1]) {
-      dipIndex = right;
-      break;
-    }
+Core idea: Find the rightmost index \`dip\` where nums[dip] < nums[dip + 1] (the first place, scanning from the end, that can be increased). If none exists, the whole array is descending — reverse it and return. Otherwise, scan from the end again for the first value greater than nums[dip], swap it with nums[dip], then reverse the suffix after \`dip\` (which is guaranteed descending) to make it ascending — the smallest possible arrangement for that suffix.`,
+      dryRun: `Example dry run:
+nums=[1,2,3]\ndip search: right=1: nums[1]=2<nums[2]=3 → dip=1\nswap search: right=2: nums[2]=3>nums[1]=2 → swap → [1,3,2]\nreverse suffix after dip (just index 2, nothing to reverse)\nresult=[1,3,2]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function nextPermutation(nums) {
+  const n = nums.length;
+  let pivot = n - 2;
+
+  while (pivot >= 0 && nums[pivot] >= nums[pivot + 1]) pivot--;
+
+  if (pivot >= 0) {
+    let right = n - 1;
+
+    while (nums[right] <= nums[pivot]) right--;
+
+    const temp = nums[pivot];
+    nums[pivot] = nums[right];
+    nums[right] = temp;
   }
 
-  if (dipIndex === -1) {
-    nums.reverse();
-    return nums;
-  }
+  let left = pivot + 1;
+  let right = n - 1;
 
-  for (let right = n; right >= 0; right--) {
-    if (nums[right] > nums[dipIndex]) {
-      [nums[right], nums[dipIndex]] = [nums[dipIndex], nums[right]];
-      break;
-    }
-  }
-
-  let left = dipIndex + 1;
-  let right = n;
   while (left < right) {
-    [nums[left], nums[right]] = [nums[right], nums[left]];
+    const temp = nums[left];
+    nums[left] = nums[right];
+    nums[right] = temp;
     left++;
     right--;
   }
 
   return nums;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function nextPermutationUsingBuiltIns(nums) {
+  let pivot = nums.length - 2;
+
+  while (pivot >= 0 && nums[pivot] >= nums[pivot + 1]) pivot--;
+
+  if (pivot >= 0) {
+    let right = nums.length - 1;
+    while (nums[right] <= nums[pivot]) right--;
+
+    [nums[pivot], nums[right]] = [nums[right], nums[pivot]];
+  }
+
+  const suffix = nums.slice(pivot + 1).reverse();
+  nums.splice(pivot + 1, suffix.length, ...suffix);
+
+  return nums;
 }`,
-      typescriptSolution: `function nextPermutation(nums: number[]): number[] {
-  const n = nums.length - 1;
-  let dipIndex = -1;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function nextPermutation(nums) {
+  const n = nums.length;
+  let pivot = n - 2;
 
-  for (let right = n - 1; right >= 0; right--) {
-    if (nums[right]! < nums[right + 1]!) {
-      dipIndex = right;
-      break;
-    }
+  while (pivot >= 0 && nums[pivot] >= nums[pivot + 1]) pivot--;
+
+  if (pivot >= 0) {
+    let right = n - 1;
+
+    while (nums[right] <= nums[pivot]) right--;
+
+    const temp = nums[pivot];
+    nums[pivot] = nums[right];
+    nums[right] = temp;
   }
 
-  if (dipIndex === -1) {
-    nums.reverse();
-    return nums;
-  }
+  let left = pivot + 1;
+  let right = n - 1;
 
-  for (let right = n; right >= 0; right--) {
-    if (nums[right]! > nums[dipIndex]!) {
-      [nums[right], nums[dipIndex]] = [nums[dipIndex]!, nums[right]!];
-      break;
-    }
-  }
-
-  let left = dipIndex + 1;
-  let right = n;
   while (left < right) {
-    [nums[left], nums[right]] = [nums[right]!, nums[left]!];
+    const temp = nums[left];
+    nums[left] = nums[right];
+    nums[right] = temp;
     left++;
     right--;
   }
+
+  return nums;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function nextPermutationUsingBuiltIns(nums) {
+  let pivot = nums.length - 2;
+
+  while (pivot >= 0 && nums[pivot] >= nums[pivot + 1]) pivot--;
+
+  if (pivot >= 0) {
+    let right = nums.length - 1;
+    while (nums[right] <= nums[pivot]) right--;
+
+    [nums[pivot], nums[right]] = [nums[right], nums[pivot]];
+  }
+
+  const suffix = nums.slice(pivot + 1).reverse();
+  nums.splice(pivot + 1, suffix.length, ...suffix);
 
   return nums;
 }`,
@@ -1341,49 +1872,75 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        "Three pointers: start and mid both begin at 0, end begins at the last index. While mid <= end: if nums[mid] is 0, swap with nums[start], advance start and mid. If nums[mid] is 2, swap with nums[end] and decrement end (don't advance mid, since the swapped-in value from the end still needs to be classified). If nums[mid] is 1, just advance mid.",
-      dryRun:
-        'nums=[2,0,2,1,1,0], start=0,mid=0,end=5\nmid=0 (val 2): swap(0,5)→[0,0,2,1,1,2], end=4\nmid=0 (val 0): swap(0,0), start=1, mid=1\nmid=1 (val 0): swap(1,1), start=2, mid=2\nmid=2 (val 2): swap(2,4)→[0,0,1,1,2,2], end=3\nmid=2 (val 1): mid=3\nmid=3 (val 1): mid=4 > end=3, loop ends\nresult=[0,0,1,1,2,2]',
-      javascriptSolution: `function sortColors(nums) {
-  let start = 0;
-  let mid = 0;
-  let end = nums.length - 1;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
 
-  while (mid <= end) {
+Core idea: Three pointers: start and mid both begin at 0, end begins at the last index. While mid <= end: if nums[mid] is 0, swap with nums[start], advance start and mid. If nums[mid] is 2, swap with nums[end] and decrement end (don't advance mid, since the swapped-in value from the end still needs to be classified). If nums[mid] is 1, just advance mid.`,
+      dryRun: `Example dry run:
+nums=[2,0,2,1,1,0], start=0,mid=0,end=5\nmid=0 (val 2): swap(0,5)→[0,0,2,1,1,2], end=4\nmid=0 (val 0): swap(0,0), start=1, mid=1\nmid=1 (val 0): swap(1,1), start=2, mid=2\nmid=2 (val 2): swap(2,4)→[0,0,1,1,2,2], end=3\nmid=2 (val 1): mid=3\nmid=3 (val 1): mid=4 > end=3, loop ends\nresult=[0,0,1,1,2,2]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function sortColors(nums) {
+  let low = 0;
+  let mid = 0;
+  let high = nums.length - 1;
+
+  while (mid <= high) {
     if (nums[mid] === 0) {
-      [nums[mid], nums[start]] = [nums[start], nums[mid]];
-      start++;
+      const temp = nums[low];
+      nums[low] = nums[mid];
+      nums[mid] = temp;
+      low++;
       mid++;
     } else if (nums[mid] === 2) {
-      [nums[mid], nums[end]] = [nums[end], nums[mid]];
-      end--;
+      const temp = nums[mid];
+      nums[mid] = nums[high];
+      nums[high] = temp;
+      high--;
     } else {
       mid++;
     }
   }
 
   return nums;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sortColorsUsingBuiltIns(nums) {
+  return nums.sort((a, b) => a - b);
 }`,
-      typescriptSolution: `function sortColors(nums: number[]): number[] {
-  let start = 0;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function sortColors(nums) {
+  let low = 0;
   let mid = 0;
-  let end = nums.length - 1;
+  let high = nums.length - 1;
 
-  while (mid <= end) {
+  while (mid <= high) {
     if (nums[mid] === 0) {
-      [nums[mid], nums[start]] = [nums[start]!, nums[mid]!];
-      start++;
+      const temp = nums[low];
+      nums[low] = nums[mid];
+      nums[mid] = temp;
+      low++;
       mid++;
     } else if (nums[mid] === 2) {
-      [nums[mid], nums[end]] = [nums[end]!, nums[mid]!];
-      end--;
+      const temp = nums[mid];
+      nums[mid] = nums[high];
+      nums[high] = temp;
+      high--;
     } else {
       mid++;
     }
   }
 
   return nums;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sortColorsUsingBuiltIns(nums) {
+  return nums.sort((a, b) => a - b);
 }`,
       timeComplexity: 'O(n) — a single pass; each element is examined and moved at most a constant number of times.',
       spaceComplexity: 'O(1) — sorted in place.',
@@ -1445,39 +2002,63 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Single pass tracking firstLargest and secondLargest (both starting at -Infinity). For each element: if it exceeds firstLargest, shift the old firstLargest down into secondLargest, then update firstLargest. Otherwise, if it exceeds secondLargest and is not equal to firstLargest, update secondLargest directly.',
-      dryRun:
-        'arr=[12,34,34,23,232,-10,-38,45,230]\n12: first=12\n34: 34>12 → second=12, first=34\n34: 34>34? no; 34>second(12) but 34==first → skip\n23: 23>34? no; 23>12 && 23!=34 → second=23\n232: 232>34 → second=34, first=232\n45: 45>232? no; 45>34 && 45!=232 → second=45\n230: 230>232? no; 230>45 && 230!=232 → second=230\nresult=230',
-      javascriptSolution: `function getSecondLargest(arr) {
-  let firstLargest = -Infinity;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Single pass tracking firstLargest and secondLargest (both starting at -Infinity). For each element: if it exceeds firstLargest, shift the old firstLargest down into secondLargest, then update firstLargest. Otherwise, if it exceeds secondLargest and is not equal to firstLargest, update secondLargest directly.`,
+      dryRun: `Example dry run:
+arr=[12,34,34,23,232,-10,-38,45,230]\n12: first=12\n34: 34>12 → second=12, first=34\n34: 34>34? no; 34>second(12) but 34==first → skip\n23: 23>34? no; 23>12 && 23!=34 → second=23\n232: 232>34 → second=34, first=232\n45: 45>232? no; 45>34 && 45!=232 → second=45\n230: 230>232? no; 230>45 && 230!=232 → second=230\nresult=230
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function getSecondLargest(arr) {
+  let largest = -Infinity;
   let secondLargest = -Infinity;
 
-  for (const value of arr) {
-    if (value > firstLargest) {
-      secondLargest = firstLargest;
-      firstLargest = value;
-    } else if (value > secondLargest && value !== firstLargest) {
+  for (let i = 0; i < arr.length; i++) {
+    const value = arr[i];
+
+    if (value > largest) {
+      secondLargest = largest;
+      largest = value;
+    } else if (value > secondLargest && value !== largest) {
       secondLargest = value;
     }
   }
 
   return secondLargest;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function getSecondLargestUsingBuiltIns(arr) {
+  const unique = [...new Set(arr)].sort((a, b) => b - a);
+  return unique.length >= 2 ? unique[1] : -Infinity;
 }`,
-      typescriptSolution: `function getSecondLargest(arr: number[]): number {
-  let firstLargest = -Infinity;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function getSecondLargest(arr) {
+  let largest = -Infinity;
   let secondLargest = -Infinity;
 
-  for (const value of arr) {
-    if (value > firstLargest) {
-      secondLargest = firstLargest;
-      firstLargest = value;
-    } else if (value > secondLargest && value !== firstLargest) {
+  for (let i = 0; i < arr.length; i++) {
+    const value = arr[i];
+
+    if (value > largest) {
+      secondLargest = largest;
+      largest = value;
+    } else if (value > secondLargest && value !== largest) {
       secondLargest = value;
     }
   }
 
   return secondLargest;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function getSecondLargestUsingBuiltIns(arr) {
+  const unique = [...new Set(arr)].sort((a, b) => b - a);
+  return unique.length >= 2 ? unique[1] : -Infinity;
 }`,
       timeComplexity: 'O(n) — a single pass.',
       spaceComplexity: 'O(1) — two running values.',
@@ -1540,33 +2121,51 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Single pass with one pointer, `left`, marking the boundary for the next 0. For each index i, if arr[i] is 0, swap it with arr[left] and advance left. By the end, every 0 has been moved before index left, with the relative simplicity possible because there are only two distinct values.',
-      dryRun:
-        'arr=[0,1,1,0,0,1,1,0], left=0\ni=0 (0): swap(0,0), left=1\ni=1 (1): skip\ni=2 (1): skip\ni=3 (0): swap(3,1)→[0,0,1,1,0,1,1,0], left=2\ni=4 (0): swap(4,2)→[0,0,0,1,1,1,1,0], left=3\ni=5 (1): skip\ni=6 (1): skip\ni=7 (0): swap(7,3)→[0,0,0,0,1,1,1,1], left=4\nresult=[0,0,0,0,1,1,1,1]',
-      javascriptSolution: `function sortZerosAndOnes(arr) {
-  let left = 0;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Single pass with one pointer, \`left\`, marking the boundary for the next 0. For each index i, if arr[i] is 0, swap it with arr[left] and advance left. By the end, every 0 has been moved before index left, with the relative simplicity possible because there are only two distinct values.`,
+      dryRun: `Example dry run:
+arr=[0,1,1,0,0,1,1,0], left=0\ni=0 (0): swap(0,0), left=1\ni=1 (1): skip\ni=2 (1): skip\ni=3 (0): swap(3,1)→[0,0,1,1,0,1,1,0], left=2\ni=4 (0): swap(4,2)→[0,0,0,1,1,1,1,0], left=3\ni=5 (1): skip\ni=6 (1): skip\ni=7 (0): swap(7,3)→[0,0,0,0,1,1,1,1], left=4\nresult=[0,0,0,0,1,1,1,1]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function sortZerosAndOnes(arr) {
+  let zeroCount = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 0) {
-      [arr[i], arr[left]] = [arr[left], arr[i]];
-      left++;
-    }
+    if (arr[i] === 0) zeroCount++;
   }
 
+  for (let i = 0; i < zeroCount; i++) arr[i] = 0;
+  for (let i = zeroCount; i < arr.length; i++) arr[i] = 1;
+
   return arr;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sortZerosAndOnesUsingBuiltIns(arr) {
+  return arr.sort((a, b) => a - b);
 }`,
-      typescriptSolution: `function sortZerosAndOnes(arr: number[]): number[] {
-  let left = 0;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function sortZerosAndOnes(arr) {
+  let zeroCount = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 0) {
-      [arr[i], arr[left]] = [arr[left]!, arr[i]!];
-      left++;
-    }
+    if (arr[i] === 0) zeroCount++;
   }
 
+  for (let i = 0; i < zeroCount; i++) arr[i] = 0;
+  for (let i = zeroCount; i < arr.length; i++) arr[i] = 1;
+
   return arr;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sortZerosAndOnesUsingBuiltIns(arr) {
+  return arr.sort((a, b) => a - b);
 }`,
       timeComplexity: 'O(n) — single pass.',
       spaceComplexity: 'O(1) — sorted in place.',
@@ -1629,31 +2228,67 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        "Track minPrice (lowest price seen so far, including today) and maxProfit (best profit found so far). For each price, update minPrice to the smaller of itself and the current price, then update maxProfit to the larger of itself and (current price - minPrice).",
-      dryRun:
-        'prices=[7,1,5,3,6,4]\nmin=7,max=0\n1: min=1, max=max(0,1-1)=0\n5: min=1, max=max(0,5-1)=4\n3: min=1, max=max(4,3-1)=4\n6: min=1, max=max(4,6-1)=5\n4: min=1, max=max(5,4-1)=5\nresult=5',
-      javascriptSolution: `function maxProfit(prices) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Track minPrice (lowest price seen so far, including today) and maxProfit (best profit found so far). For each price, update minPrice to the smaller of itself and the current price, then update maxProfit to the larger of itself and (current price - minPrice).`,
+      dryRun: `Example dry run:
+prices=[7,1,5,3,6,4]\nmin=7,max=0\n1: min=1, max=max(0,1-1)=0\n5: min=1, max=max(0,5-1)=4\n3: min=1, max=max(4,3-1)=4\n6: min=1, max=max(4,6-1)=5\n4: min=1, max=max(5,4-1)=5\nresult=5
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxProfit(prices) {
+  if (prices.length < 2) return 0;
+
   let minPrice = prices[0];
-  let best = 0;
+  let bestProfit = 0;
 
-  for (let i = 0; i < prices.length; i++) {
-    minPrice = Math.min(minPrice, prices[i]);
-    best = Math.max(best, prices[i] - minPrice);
+  for (let i = 1; i < prices.length; i++) {
+    const profit = prices[i] - minPrice;
+    if (profit > bestProfit) bestProfit = profit;
+    if (prices[i] < minPrice) minPrice = prices[i];
   }
 
-  return best;
+  return bestProfit;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxProfitUsingBuiltIns(prices) {
+  return prices.reduce(
+    (state, price) => ({
+      minPrice: Math.min(state.minPrice, price),
+      best: Math.max(state.best, price - state.minPrice),
+    }),
+    { minPrice: Infinity, best: 0 },
+  ).best;
 }`,
-      typescriptSolution: `function maxProfit(prices: number[]): number {
-  let minPrice = prices[0]!;
-  let best = 0;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxProfit(prices) {
+  if (prices.length < 2) return 0;
 
-  for (let i = 0; i < prices.length; i++) {
-    minPrice = Math.min(minPrice, prices[i]!);
-    best = Math.max(best, prices[i]! - minPrice);
+  let minPrice = prices[0];
+  let bestProfit = 0;
+
+  for (let i = 1; i < prices.length; i++) {
+    const profit = prices[i] - minPrice;
+    if (profit > bestProfit) bestProfit = profit;
+    if (prices[i] < minPrice) minPrice = prices[i];
   }
 
-  return best;
+  return bestProfit;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxProfitUsingBuiltIns(prices) {
+  return prices.reduce(
+    (state, price) => ({
+      minPrice: Math.min(state.minPrice, price),
+      best: Math.max(state.best, price - state.minPrice),
+    }),
+    { minPrice: Infinity, best: 0 },
+  ).best;
 }`,
       timeComplexity: 'O(n) — a single pass.',
       spaceComplexity: 'O(1) — two running values.',
@@ -1715,44 +2350,66 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Use three pointers from the back: `l` at the last combined index (m+n-1), `m` (decremented) at the last real nums1 index, `n` (decremented) at the last nums2 index. While l >= 0, place the larger of nums1[m] and nums2[n] at nums1[l] and decrement the pointer it came from. If nums2 is exhausted first, the remaining nums1 values are already in place; if nums1 is exhausted first, copy the rest of nums2 in.',
-      dryRun:
-        'nums1=[1,2,3,0,0,0], m=3, nums2=[2,5,6], n=3\nl=5,m=2,n=2: nums1[2]=3 vs nums2[2]=6 → 6 bigger → nums1[5]=6, n=1, l=4\nl=4,m=2,n=1: nums1[2]=3 vs nums2[1]=5 → 5 bigger → nums1[4]=5, n=0, l=3\nl=3,m=2,n=0: nums1[2]=3 vs nums2[0]=2 → 3 bigger → nums1[3]=3, m=1, l=2\nl=2,m=1,n=0: nums1[1]=2 vs nums2[0]=2 → not(nums1>nums2) → nums1[2]=2, n=-1, l=1\nl=1,m=1,n=-1: n<0 → nums1[1]=nums1[1]=2, m=0, l=0\nl=0,m=0,n=-1: n<0 → nums1[0]=nums1[0]=1, m=-1, l=-1\nresult=[1,2,2,3,5,6]',
-      javascriptSolution: `function mergeSortedArrayInPlace(nums1, m, nums2, n) {
-  let l = m + n - 1;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Use three pointers from the back: \`l\` at the last combined index (m+n-1), \`m\` (decremented) at the last real nums1 index, \`n\` (decremented) at the last nums2 index. While l >= 0, place the larger of nums1[m] and nums2[n] at nums1[l] and decrement the pointer it came from. If nums2 is exhausted first, the remaining nums1 values are already in place; if nums1 is exhausted first, copy the rest of nums2 in.`,
+      dryRun: `Example dry run:
+nums1=[1,2,3,0,0,0], m=3, nums2=[2,5,6], n=3\nl=5,m=2,n=2: nums1[2]=3 vs nums2[2]=6 → 6 bigger → nums1[5]=6, n=1, l=4\nl=4,m=2,n=1: nums1[2]=3 vs nums2[1]=5 → 5 bigger → nums1[4]=5, n=0, l=3\nl=3,m=2,n=0: nums1[2]=3 vs nums2[0]=2 → 3 bigger → nums1[3]=3, m=1, l=2\nl=2,m=1,n=0: nums1[1]=2 vs nums2[0]=2 → not(nums1>nums2) → nums1[2]=2, n=-1, l=1\nl=1,m=1,n=-1: n<0 → nums1[1]=nums1[1]=2, m=0, l=0\nl=0,m=0,n=-1: n<0 → nums1[0]=nums1[0]=1, m=-1, l=-1\nresult=[1,2,2,3,5,6]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function mergeSortedArrayInPlace(nums1, m, nums2, n) {
   let i = m - 1;
   let j = n - 1;
+  let write = m + n - 1;
 
-  while (l >= 0) {
-    if (j < 0 || (i >= 0 && nums1[i] > nums2[j])) {
-      nums1[l] = nums1[i];
+  while (j >= 0) {
+    if (i >= 0 && nums1[i] > nums2[j]) {
+      nums1[write] = nums1[i];
       i--;
     } else {
-      nums1[l] = nums2[j];
+      nums1[write] = nums2[j];
       j--;
     }
-    l--;
+    write--;
   }
 
   return nums1;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function mergeSortedArrayInPlaceUsingBuiltIns(nums1, m, nums2, n) {
+  for (let i = 0; i < n; i++) nums1[m + i] = nums2[i];
+  nums1.sort((a, b) => a - b);
+  return nums1;
 }`,
-      typescriptSolution: `function mergeSortedArrayInPlace(nums1: number[], m: number, nums2: number[], n: number): number[] {
-  let l = m + n - 1;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function mergeSortedArrayInPlace(nums1, m, nums2, n) {
   let i = m - 1;
   let j = n - 1;
+  let write = m + n - 1;
 
-  while (l >= 0) {
-    if (j < 0 || (i >= 0 && nums1[i]! > nums2[j]!)) {
-      nums1[l] = nums1[i]!;
+  while (j >= 0) {
+    if (i >= 0 && nums1[i] > nums2[j]) {
+      nums1[write] = nums1[i];
       i--;
     } else {
-      nums1[l] = nums2[j]!;
+      nums1[write] = nums2[j];
       j--;
     }
-    l--;
+    write--;
   }
 
+  return nums1;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function mergeSortedArrayInPlaceUsingBuiltIns(nums1, m, nums2, n) {
+  for (let i = 0; i < n; i++) nums1[m + i] = nums2[i];
+  nums1.sort((a, b) => a - b);
   return nums1;
 }`,
       timeComplexity: 'O(m + n) — each element from both arrays is placed exactly once.',
@@ -1814,10 +2471,38 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Walk the array once, tracking which values have already been seen in a hash set (or object used as one). The first value encountered a second time is the duplicate, since the problem guarantees exactly one repeated value.',
-      dryRun: 'nums=[1,3,4,2,2]\ni=0: 1 new → seen={1}\ni=1: 3 new → seen={1,3}\ni=2: 4 new → seen={1,3,4}\ni=3: 2 new → seen={1,3,4,2}\ni=4: 2 already seen → return 2',
-      javascriptSolution: `function findDuplicateNumber(nums) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Walk the array once, tracking which values have already been seen in a hash set (or object used as one). The first value encountered a second time is the duplicate, since the problem guarantees exactly one repeated value.`,
+      dryRun: `Example dry run:
+nums=[1,3,4,2,2]\ni=0: 1 new → seen={1}\ni=1: 3 new → seen={1,3}\ni=2: 4 new → seen={1,3,4}\ni=3: 2 new → seen={1,3,4,2}\ni=4: 2 already seen → return 2
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findDuplicateNumber(nums) {
+  let slow = nums[0];
+  let fast = nums[0];
+
+  do {
+    slow = nums[slow];
+    fast = nums[nums[fast]];
+  } while (slow !== fast);
+
+  slow = nums[0];
+
+  while (slow !== fast) {
+    slow = nums[slow];
+    fast = nums[fast];
+  }
+
+  return slow;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findDuplicateNumberUsingBuiltIns(nums) {
   const seen = new Set();
 
   for (const value of nums) {
@@ -1827,8 +2512,29 @@ function generatePascalTriangle(numRows: number): number[][] {
 
   throw new Error("No duplicate found");
 }`,
-      typescriptSolution: `function findDuplicateNumber(nums: number[]): number {
-  const seen = new Set<number>();
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findDuplicateNumber(nums) {
+  let slow = nums[0];
+  let fast = nums[0];
+
+  do {
+    slow = nums[slow];
+    fast = nums[nums[fast]];
+  } while (slow !== fast);
+
+  slow = nums[0];
+
+  while (slow !== fast) {
+    slow = nums[slow];
+    fast = nums[fast];
+  }
+
+  return slow;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findDuplicateNumberUsingBuiltIns(nums) {
+  const seen = new Set();
 
   for (const value of nums) {
     if (seen.has(value)) return value;
@@ -1896,51 +2602,95 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Transpose the matrix in place (for every i > j, swap matrix[i][j] and matrix[j][i]), then reverse each row in place. Transpose-then-reverse-rows is mathematically equivalent to a 90-degree clockwise rotation.',
-      dryRun:
-        'matrix=[[1,2,3],[4,5,6],[7,8,9]]\ntranspose: swap (1,0)&(0,1), (2,0)&(0,2), (2,1)&(1,2)\n→ [[1,4,7],[2,5,8],[3,6,9]]\nreverse each row: [7,4,1],[8,5,2],[9,6,3]\nresult=[[7,4,1],[8,5,2],[9,6,3]]',
-      javascriptSolution: `function rotateImage90(matrix) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Transpose the matrix in place (for every i > j, swap matrix[i][j] and matrix[j][i]), then reverse each row in place. Transpose-then-reverse-rows is mathematically equivalent to a 90-degree clockwise rotation.`,
+      dryRun: `Example dry run:
+matrix=[[1,2,3],[4,5,6],[7,8,9]]\ntranspose: swap (1,0)&(0,1), (2,0)&(0,2), (2,1)&(1,2)\n→ [[1,4,7],[2,5,8],[3,6,9]]\nreverse each row: [7,4,1],[8,5,2],[9,6,3]\nresult=[[7,4,1],[8,5,2],[9,6,3]]
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function rotateImage90(matrix) {
   const n = matrix.length;
 
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
-      if (i > j) {
-        [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
-      }
+  for (let row = 0; row < n; row++) {
+    for (let col = row + 1; col < n; col++) {
+      const temp = matrix[row][col];
+      matrix[row][col] = matrix[col][row];
+      matrix[col][row] = temp;
     }
   }
 
   for (let row = 0; row < n; row++) {
     let left = 0;
     let right = n - 1;
+
     while (left < right) {
-      [matrix[row][left], matrix[row][right]] = [matrix[row][right], matrix[row][left]];
+      const temp = matrix[row][left];
+      matrix[row][left] = matrix[row][right];
+      matrix[row][right] = temp;
       left++;
       right--;
     }
   }
 
   return matrix;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function rotateImage90UsingBuiltIns(matrix) {
+  const rotated = matrix[0].map((_, col) =>
+    matrix.map((row) => row[col]).reverse(),
+  );
+
+  for (let row = 0; row < matrix.length; row++) {
+    for (let col = 0; col < matrix.length; col++) {
+      matrix[row][col] = rotated[row][col];
+    }
+  }
+
+  return matrix;
 }`,
-      typescriptSolution: `function rotateImage90(matrix: number[][]): number[][] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function rotateImage90(matrix) {
   const n = matrix.length;
 
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
-      if (i > j) {
-        [matrix[i]![j], matrix[j]![i]] = [matrix[j]![i]!, matrix[i]![j]!];
-      }
+  for (let row = 0; row < n; row++) {
+    for (let col = row + 1; col < n; col++) {
+      const temp = matrix[row][col];
+      matrix[row][col] = matrix[col][row];
+      matrix[col][row] = temp;
     }
   }
 
   for (let row = 0; row < n; row++) {
     let left = 0;
     let right = n - 1;
+
     while (left < right) {
-      [matrix[row]![left], matrix[row]![right]] = [matrix[row]![right]!, matrix[row]![left]!];
+      const temp = matrix[row][left];
+      matrix[row][left] = matrix[row][right];
+      matrix[row][right] = temp;
       left++;
       right--;
+    }
+  }
+
+  return matrix;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function rotateImage90UsingBuiltIns(matrix) {
+  const rotated = matrix[0].map((_, col) =>
+    matrix.map((row) => row[col]).reverse(),
+  );
+
+  for (let row = 0; row < matrix.length; row++) {
+    for (let col = 0; col < matrix.length; col++) {
+      matrix[row][col] = rotated[row][col];
     }
   }
 
@@ -2007,30 +2757,63 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Maintain a running `count` of consecutive 1s, incrementing on a 1 and resetting to 0 on a 0. Track `max` as the largest `count` seen so far, updated after every element.',
-      dryRun: 'nums=[1,1,0,1,1,1]\ncount=0,max=0\n1: count=1,max=1\n1: count=2,max=2\n0: count=0,max=2\n1: count=1,max=2\n1: count=2,max=2\n1: count=3,max=3\nresult=3',
-      javascriptSolution: `function findMaxConsecutiveOnes(nums) {
-  let count = 0;
-  let max = 0;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
 
-  for (const value of nums) {
-    count = value === 1 ? count + 1 : 0;
-    max = Math.max(max, count);
+Core idea: Maintain a running \`count\` of consecutive 1s, incrementing on a 1 and resetting to 0 on a 0. Track \`max\` as the largest \`count\` seen so far, updated after every element.`,
+      dryRun: `Example dry run:
+nums=[1,1,0,1,1,1]\ncount=0,max=0\n1: count=1,max=1\n1: count=2,max=2\n0: count=0,max=2\n1: count=1,max=2\n1: count=2,max=2\n1: count=3,max=3\nresult=3
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findMaxConsecutiveOnes(nums) {
+  let current = 0;
+  let best = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === 1) {
+      current++;
+      if (current > best) best = current;
+    } else {
+      current = 0;
+    }
   }
 
-  return max;
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findMaxConsecutiveOnesUsingBuiltIns(nums) {
+  return nums
+    .join("")
+    .split("0")
+    .reduce((best, part) => Math.max(best, part.length), 0);
 }`,
-      typescriptSolution: `function findMaxConsecutiveOnes(nums: number[]): number {
-  let count = 0;
-  let max = 0;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findMaxConsecutiveOnes(nums) {
+  let current = 0;
+  let best = 0;
 
-  for (const value of nums) {
-    count = value === 1 ? count + 1 : 0;
-    max = Math.max(max, count);
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === 1) {
+      current++;
+      if (current > best) best = current;
+    } else {
+      current = 0;
+    }
   }
 
-  return max;
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findMaxConsecutiveOnesUsingBuiltIns(nums) {
+  return nums
+    .join("")
+    .split("0")
+    .reduce((best, part) => Math.max(best, part.length), 0);
 }`,
       timeComplexity: 'O(n) — a single pass.',
       spaceComplexity: 'O(1) — two running values.',
@@ -2093,57 +2876,119 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Precompute leftMax[i] = the tallest bar in heights[0..i], and rightMax[i] = the tallest bar in heights[i..n-1]. For each position, the water trapped is min(leftMax[i], rightMax[i]) - heights[i] (this is always >= 0 by construction, since heights[i] <= both leftMax[i] and rightMax[i]). Sum this across all positions.',
-      dryRun:
-        'heights=[0,1,0,2,1,0,1,3,2,1,2,1]\nleftMax=[0,1,1,2,2,2,2,3,3,3,3,3]\nrightMax=[3,3,3,3,3,3,3,3,2,2,2,1]\nwater at each i = min(leftMax,rightMax)-heights\n=[0,0,1,0,1,2,1,0,0,1,0,0]\nsum=6',
-      javascriptSolution: `function trapRainWater(heights) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Precompute leftMax[i] = the tallest bar in heights[0..i], and rightMax[i] = the tallest bar in heights[i..n-1]. For each position, the water trapped is min(leftMax[i], rightMax[i]) - heights[i] (this is always >= 0 by construction, since heights[i] <= both leftMax[i] and rightMax[i]). Sum this across all positions.`,
+      dryRun: `Example dry run:
+heights=[0,1,0,2,1,0,1,3,2,1,2,1]\nleftMax=[0,1,1,2,2,2,2,3,3,3,3,3]\nrightMax=[3,3,3,3,3,3,3,3,2,2,2,1]\nwater at each i = min(leftMax,rightMax)-heights\n=[0,0,1,0,1,2,1,0,0,1,0,0]\nsum=6
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function trapRainWater(heights) {
   const n = heights.length;
   if (n === 0) return 0;
 
-  const leftMax = new Array(n).fill(0);
-  const rightMax = new Array(n).fill(0);
-
-  leftMax[0] = heights[0];
-  for (let i = 1; i < n; i++) {
-    leftMax[i] = Math.max(leftMax[i - 1], heights[i]);
-  }
-
-  rightMax[n - 1] = heights[n - 1];
-  for (let i = n - 2; i >= 0; i--) {
-    rightMax[i] = Math.max(rightMax[i + 1], heights[i]);
-  }
-
+  let left = 0;
+  let right = n - 1;
+  let leftMax = 0;
+  let rightMax = 0;
   let total = 0;
-  for (let i = 0; i < n; i++) {
-    total += Math.min(leftMax[i], rightMax[i]) - heights[i];
+
+  while (left < right) {
+    if (heights[left] <= heights[right]) {
+      if (heights[left] >= leftMax) leftMax = heights[left];
+      else total += leftMax - heights[left];
+      left++;
+    } else {
+      if (heights[right] >= rightMax) rightMax = heights[right];
+      else total += rightMax - heights[right];
+      right--;
+    }
   }
 
   return total;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function trapRainWaterUsingBuiltIns(heights) {
+  if (heights.length === 0) return 0;
+
+  const leftMax = [];
+  let left = 0;
+
+  heights.forEach((height, index) => {
+    left = Math.max(left, height);
+    leftMax[index] = left;
+  });
+
+  const rightMax = [];
+  let right = 0;
+
+  for (let i = heights.length - 1; i >= 0; i--) {
+    right = Math.max(right, heights[i]);
+    rightMax[i] = right;
+  }
+
+  return heights.reduce(
+    (total, height, index) =>
+      total + Math.min(leftMax[index], rightMax[index]) - height,
+    0,
+  );
 }`,
-      typescriptSolution: `function trapRainWater(heights: number[]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function trapRainWater(heights) {
   const n = heights.length;
   if (n === 0) return 0;
 
-  const leftMax = new Array<number>(n).fill(0);
-  const rightMax = new Array<number>(n).fill(0);
-
-  leftMax[0] = heights[0]!;
-  for (let i = 1; i < n; i++) {
-    leftMax[i] = Math.max(leftMax[i - 1]!, heights[i]!);
-  }
-
-  rightMax[n - 1] = heights[n - 1]!;
-  for (let i = n - 2; i >= 0; i--) {
-    rightMax[i] = Math.max(rightMax[i + 1]!, heights[i]!);
-  }
-
+  let left = 0;
+  let right = n - 1;
+  let leftMax = 0;
+  let rightMax = 0;
   let total = 0;
-  for (let i = 0; i < n; i++) {
-    total += Math.min(leftMax[i]!, rightMax[i]!) - heights[i]!;
+
+  while (left < right) {
+    if (heights[left] <= heights[right]) {
+      if (heights[left] >= leftMax) leftMax = heights[left];
+      else total += leftMax - heights[left];
+      left++;
+    } else {
+      if (heights[right] >= rightMax) rightMax = heights[right];
+      else total += rightMax - heights[right];
+      right--;
+    }
   }
 
   return total;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function trapRainWaterUsingBuiltIns(heights) {
+  if (heights.length === 0) return 0;
+
+  const leftMax = [];
+  let left = 0;
+
+  heights.forEach((height, index) => {
+    left = Math.max(left, height);
+    leftMax[index] = left;
+  });
+
+  const rightMax = [];
+  let right = 0;
+
+  for (let i = heights.length - 1; i >= 0; i--) {
+    right = Math.max(right, heights[i]);
+    rightMax[i] = right;
+  }
+
+  return heights.reduce(
+    (total, height, index) =>
+      total + Math.min(leftMax[index], rightMax[index]) - height,
+    0,
+  );
 }`,
       timeComplexity: 'O(n) — three linear passes (left-max, right-max, sum).',
       spaceComplexity: 'O(n) for the two auxiliary arrays (can be reduced to O(1) with a two-pointer approach).',
@@ -2206,20 +3051,61 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Sort the array ascending. For each index i from the end down to 2 (treating nums[i] as the largest side), use two pointers left=0, right=i-1: if nums[left] + nums[right] > nums[i], every index between left and right also works with right, so add (right - left) to the count and decrement right; otherwise increment left.',
-      dryRun:
-        'nums=[2,2,3,4] sorted\ni=3 (val 4): left=0,right=2 → nums[0]+nums[2]=2+3=5>4 → count+=2, right=1\n  left=0,right=1 → 2+2=4>4? no → left=1\n  left=1,right=1 → loop ends (left<right false)\ni=2 (val 3): left=0,right=1 → 2+2=4>3 → count+=1, right=0\n  loop ends\ntotal count=3',
-      javascriptSolution: `function triangleNumber(nums) {
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
+
+Core idea: Sort the array ascending. For each index i from the end down to 2 (treating nums[i] as the largest side), use two pointers left=0, right=i-1: if nums[left] + nums[right] > nums[i], every index between left and right also works with right, so add (right - left) to the count and decrement right; otherwise increment left.`,
+      dryRun: `Example dry run:
+nums=[2,2,3,4] sorted\ni=3 (val 4): left=0,right=2 → nums[0]+nums[2]=2+3=5>4 → count+=2, right=1\n  left=0,right=1 → 2+2=4>4? no → left=1\n  left=1,right=1 → loop ends (left<right false)\ni=2 (val 3): left=0,right=1 → 2+2=4>3 → count+=1, right=0\n  loop ends\ntotal count=3
+
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function triangleNumber(nums) {
+  // Manual insertion sort.
+  for (let i = 1; i < nums.length; i++) {
+    const value = nums[i];
+    let j = i - 1;
+
+    while (j >= 0 && nums[j] > value) {
+      nums[j + 1] = nums[j];
+      j--;
+    }
+
+    nums[j + 1] = value;
+  }
+
+  let count = 0;
+
+  for (let k = nums.length - 1; k >= 2; k--) {
+    let left = 0;
+    let right = k - 1;
+
+    while (left < right) {
+      if (nums[left] + nums[right] > nums[k]) {
+        count += right - left;
+        right--;
+      } else {
+        left++;
+      }
+    }
+  }
+
+  return count;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function triangleNumberUsingBuiltIns(nums) {
   const sorted = [...nums].sort((a, b) => a - b);
   let count = 0;
 
-  for (let i = sorted.length - 1; i >= 2; i--) {
+  for (let k = sorted.length - 1; k >= 2; k--) {
     let left = 0;
-    let right = i - 1;
+    let right = k - 1;
 
     while (left < right) {
-      if (sorted[left] + sorted[right] > sorted[i]) {
+      if (sorted[left] + sorted[right] > sorted[k]) {
         count += right - left;
         right--;
       } else {
@@ -2230,16 +3116,51 @@ function generatePascalTriangle(numRows: number): number[][] {
 
   return count;
 }`,
-      typescriptSolution: `function triangleNumber(nums: number[]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function triangleNumber(nums) {
+  // Manual insertion sort.
+  for (let i = 1; i < nums.length; i++) {
+    const value = nums[i];
+    let j = i - 1;
+
+    while (j >= 0 && nums[j] > value) {
+      nums[j + 1] = nums[j];
+      j--;
+    }
+
+    nums[j + 1] = value;
+  }
+
+  let count = 0;
+
+  for (let k = nums.length - 1; k >= 2; k--) {
+    let left = 0;
+    let right = k - 1;
+
+    while (left < right) {
+      if (nums[left] + nums[right] > nums[k]) {
+        count += right - left;
+        right--;
+      } else {
+        left++;
+      }
+    }
+  }
+
+  return count;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function triangleNumberUsingBuiltIns(nums) {
   const sorted = [...nums].sort((a, b) => a - b);
   let count = 0;
 
-  for (let i = sorted.length - 1; i >= 2; i--) {
+  for (let k = sorted.length - 1; k >= 2; k--) {
     let left = 0;
-    let right = i - 1;
+    let right = k - 1;
 
     while (left < right) {
-      if (sorted[left]! + sorted[right]! > sorted[i]!) {
+      if (sorted[left] + sorted[right] > sorted[k]) {
         count += right - left;
         right--;
       } else {
@@ -2312,74 +3233,108 @@ function generatePascalTriangle(numRows: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Run merge sort on the array, and during each merge step, whenever an element is taken from the right half before the left half is exhausted, add (remaining elements in the left half) to a running inversion count — each of those left-half elements is out of order relative to the right-half element just placed. The final accumulated count is the total number of inversions.',
-      dryRun:
-        'nums=[2,4,1,3,5]\nsplit into [2,4] and [1,3,5]\nmerge [2,4]: no inversions (already sorted)\nmerge [1,3,5]: no inversions (already sorted)\nmerge [2,4] with [1,3,5]: take 1 (right, before 2,4 both remain) → count+=2; take 2 (left); take 3 (right, before 4 remains) → count+=1; take 4 (left); take 5 (right)\ntotal count = 2+1 = 3',
-      javascriptSolution: `function countInversions(nums) {
-  let count = 0;
+      algorithm: `Step 1: Understand the input, output, constraints, and edge cases.
+Step 2: Identify the DSA pattern and the minimum state you need to track.
+Step 3: Process the data one step at a time and update the state.
+Step 4: Return the final result and verify it against the example.
 
-  function mergeSort(arr) {
-    if (arr.length <= 1) return arr;
+Core idea: Run merge sort on the array, and during each merge step, whenever an element is taken from the right half before the left half is exhausted, add (remaining elements in the left half) to a running inversion count — each of those left-half elements is out of order relative to the right-half element just placed. The final accumulated count is the total number of inversions.`,
+      dryRun: `Example dry run:
+nums=[2,4,1,3,5]\nsplit into [2,4] and [1,3,5]\nmerge [2,4]: no inversions (already sorted)\nmerge [1,3,5]: no inversions (already sorted)\nmerge [2,4] with [1,3,5]: take 1 (right, before 2,4 both remain) → count+=2; take 2 (left); take 3 (right, before 4 remains) → count+=1; take 4 (left); take 5 (right)\ntotal count = 2+1 = 3
 
-    const mid = Math.floor(arr.length / 2);
-    const left = mergeSort(arr.slice(0, mid));
-    const right = mergeSort(arr.slice(mid));
-    const merged = [];
-    let i = 0;
-    let j = 0;
+Easy interview method: trace one important variable, pointer, boundary, or DP state at a time.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function countInversions(nums) {
+  const temp = new Array(nums.length);
 
-    while (i < left.length && j < right.length) {
-      if (left[i] <= right[j]) {
-        merged.push(left[i]);
-        i++;
+  function mergeSort(left, right) {
+    if (left >= right) return 0;
+
+    const mid = Math.floor((left + right) / 2);
+    let count = mergeSort(left, mid);
+    count += mergeSort(mid + 1, right);
+
+    let i = left;
+    let j = mid + 1;
+    let k = left;
+
+    while (i <= mid && j <= right) {
+      if (nums[i] <= nums[j]) {
+        temp[k++] = nums[i++];
       } else {
-        count += left.length - i;
-        merged.push(right[j]);
-        j++;
+        count += mid - i + 1;
+        temp[k++] = nums[j++];
       }
     }
 
-    while (i < left.length) merged.push(left[i++]);
-    while (j < right.length) merged.push(right[j++]);
+    while (i <= mid) temp[k++] = nums[i++];
+    while (j <= right) temp[k++] = nums[j++];
 
-    return merged;
+    for (let index = left; index <= right; index++) nums[index] = temp[index];
+
+    return count;
   }
 
-  mergeSort(nums);
+  return nums.length === 0 ? 0 : mergeSort(0, nums.length - 1);
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function countInversionsUsingBuiltIns(nums) {
+  let count = 0;
+
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] > nums[j]) count++;
+    }
+  }
+
   return count;
 }`,
-      typescriptSolution: `function countInversions(nums: number[]): number {
-  let count = 0;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function countInversions(nums) {
+  const temp = new Array(nums.length);
 
-  function mergeSort(arr: number[]): number[] {
-    if (arr.length <= 1) return arr;
+  function mergeSort(left, right) {
+    if (left >= right) return 0;
 
-    const mid = Math.floor(arr.length / 2);
-    const left = mergeSort(arr.slice(0, mid));
-    const right = mergeSort(arr.slice(mid));
-    const merged: number[] = [];
-    let i = 0;
-    let j = 0;
+    const mid = Math.floor((left + right) / 2);
+    let count = mergeSort(left, mid);
+    count += mergeSort(mid + 1, right);
 
-    while (i < left.length && j < right.length) {
-      if (left[i]! <= right[j]!) {
-        merged.push(left[i]!);
-        i++;
+    let i = left;
+    let j = mid + 1;
+    let k = left;
+
+    while (i <= mid && j <= right) {
+      if (nums[i] <= nums[j]) {
+        temp[k++] = nums[i++];
       } else {
-        count += left.length - i;
-        merged.push(right[j]!);
-        j++;
+        count += mid - i + 1;
+        temp[k++] = nums[j++];
       }
     }
 
-    while (i < left.length) merged.push(left[i++]!);
-    while (j < right.length) merged.push(right[j++]!);
+    while (i <= mid) temp[k++] = nums[i++];
+    while (j <= right) temp[k++] = nums[j++];
 
-    return merged;
+    for (let index = left; index <= right; index++) nums[index] = temp[index];
+
+    return count;
   }
 
-  mergeSort(nums);
+  return nums.length === 0 ? 0 : mergeSort(0, nums.length - 1);
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function countInversionsUsingBuiltIns(nums) {
+  let count = 0;
+
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] > nums[j]) count++;
+    }
+  }
+
   return count;
 }`,
       timeComplexity: 'O(n log n) — one merge sort pass, with O(1) extra work per merge step to accumulate the count.',

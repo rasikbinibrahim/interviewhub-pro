@@ -39,7 +39,8 @@ export type QuestionPart =
   | 'Testing'
   | 'Architecture'
   | 'DevOps/Cloud'
-  | 'AI/LLM';
+  | 'AI/LLM'
+  | 'Python';
 
 export interface QuestionExample {
   input: string;

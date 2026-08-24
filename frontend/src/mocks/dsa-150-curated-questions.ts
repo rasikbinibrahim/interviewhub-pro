@@ -1,10 +1,12 @@
+// Curated 32 DSA Coding Questions — cleaned TypeScript source.
+// Formatting and explicit TypeScript types have been normalized while preserving the supplied structure/content.
+
 // Curated 32 DSA Coding Questions completing the 150 Foundation / Core / Advanced DSA Interview Problems list.
 // Formatted as MockCodingQuestion objects with interactive test suites, solutions, hints, and problem specs.
 
 import type { MockCodingQuestion } from '@/mocks/questions';
 
 export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
-  // --- EASY FOUNDATION PROBLEMS ---
   {
     detail: {
       id: 'dsa-150-easy-160',
@@ -23,7 +25,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       problemStatement: 'Given the heads of two singly linked lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.\n\nFor testing, linked lists are passed as array values `[listA, listB, skipA, skipB]`. Your function receives `headA` and `headB`.',
       input: 'headA: ListNode | null, headB: ListNode | null',
       output: 'ListNode | null — the intersection node or null',
-      constraints: ['The number of nodes of listA is in the m.', 'The number of nodes of listB is in the n.', '1 <= m, n <= 3 * 10^4', '1 <= Node.val <= 10^5'],
+      constraints: ['The number of nodes in listA is m.', 'The number of nodes in listB is n.', '1 <= m, n <= 3 * 10^4', '1 <= Node.val <= 10^5'],
       examples: [
         { input: 'headA = [4,1,8,4,5], headB = [5,6,1,8,4,5]', output: 'Reference to node with value 8', explanation: 'The two lists intersect at node 8.' },
       ],
@@ -46,33 +48,69 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Maintain two pointers `pA` and `pB` initialized to `headA` and `headB`. Advance each by 1 step. When a pointer reaches null, redirect it to the head of the other list. Stop when `pA === pB`.',
-      dryRun: 'pA: A1 -> A2 -> C1 -> C2 -> B1 -> B2 -> C1\npB: B1 -> B2 -> C1 -> C2 -> A1 -> A2 -> C1\nBoth meet at C1.',
-      javascriptSolution: `function getIntersectionNode(headA, headB) {
-  if (!headA || !headB) return null;
-  if (Array.isArray(headA) && Array.isArray(headB)) {
-    return headA.includes(8) && headB.includes(8) ? 8 : null;
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Maintain two pointers `pA` and `pB` initialized to `headA` and `headB`. Advance each by 1 step. When a pointer reaches null, redirect it to the head of the other list. Stop when `pA === pB`.',
+      dryRun: "Easy dry-run:pA: A1 -> A2 -> C1 -> C2 -> B1 -> B2 -> C1\npB: B1 -> B2 -> C1 -> C2 -> A1 -> A2 -> C1\nBoth meet at C1.Interview method: follow one pointer/state change at a time.",
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function getIntersectionNode(headA, headB) {
+  let a = headA;
+  let b = headB;
+
+  while (a !== b) {
+    a = a === null ? headB : a.next;
+    b = b === null ? headA : b.next;
   }
-  let pA = headA;
-  let pB = headB;
-  while (pA !== pB) {
-    pA = pA === null ? headB : pA.next;
-    pB = pB === null ? headA : pB.next;
+
+  return a;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function getIntersectionNode(headA, headB) {
+  const seen = new Set();
+  let node = headA;
+
+  while (node) {
+    seen.add(node);
+    node = node.next;
   }
-  return pA;
+
+  node = headB;
+  while (node) {
+    if (seen.has(node)) return node;
+    node = node.next;
+  }
+
+  return null;
 }`,
-      typescriptSolution: `function getIntersectionNode(headA: any, headB: any): any {
-  if (!headA || !headB) return null;
-  if (Array.isArray(headA) && Array.isArray(headB)) {
-    return headA.includes(8) && headB.includes(8) ? 8 : null;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function getIntersectionNode(headA: any, headB: any): any {
+  let a = headA;
+  let b = headB;
+
+  while (a !== b) {
+    a = a === null ? headB : a.next;
+    b = b === null ? headA : b.next;
   }
-  let pA = headA;
-  let pB = headB;
-  while (pA !== pB) {
-    pA = pA === null ? headB : pA.next;
-    pB = pB === null ? headA : pB.next;
+
+  return a;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function getIntersectionNode(headA: any, headB: any): any {
+  const seen = new Set();
+  let node = headA;
+
+  while (node) {
+    seen.add(node);
+    node = node.next;
   }
-  return pA;
+
+  node = headB;
+  while (node) {
+    if (seen.has(node)) return node;
+    node = node.next;
+  }
+
+  return null;
 }`,
       timeComplexity: 'O(N + M)',
       spaceComplexity: 'O(1)',
@@ -96,7 +134,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given an array `nums` of size `n`, return the majority element.\n\nThe majority element is the element that appears more than `⌊n / 2⌋` times. You may assume that the majority element always exists in the array.',
+      problemStatement: 'Given an array \`nums\` of size \`n\`, return the majority element.\n\nThe majority element is the element that appears more than \`⌊n / 2⌋\` times. You may assume that the majority element always exists in the array.',
       input: 'nums: number[]',
       output: 'number — the majority element',
       constraints: ['n == nums.length', '1 <= n <= 5 * 10^4', '-10^9 <= nums[i] <= 10^9'],
@@ -124,9 +162,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Initialize candidate = null, count = 0. Iterate num in nums: if count == 0, candidate = num. count += (num == candidate ? 1 : -1). Return candidate.',
-      dryRun: 'nums=[2,2,1,1,1,2,2]\ncount=1,cand=2\ncount=2,cand=2\ncount=1,cand=2\ncount=0,cand=2\ncount=1,cand=1\ncount=0,cand=1\ncount=1,cand=2 -> returns 2',
-      javascriptSolution: `function majorityElement(nums) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Initialize candidate = null, count = 0. Iterate num in nums: if count == 0, candidate = num. count += (num == candidate ? 1 : -1). Return candidate.',
+      dryRun: 'Easy dry-run:\nnums=[2,2,1,1,1,2,2]\ncount=1,cand=2\ncount=2,cand=2\ncount=1,cand=2\ncount=0,cand=2\ncount=1,cand=1\ncount=0,cand=1\ncount=1,cand=2 -> returns 2\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function majorityElement(nums) {
   let count = 0;
   let candidate = null;
   for (const num of nums) {
@@ -136,8 +175,23 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     count += (num === candidate) ? 1 : -1;
   }
   return candidate;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function majorityElement(nums) {
+  const counts = new Map();
+
+  for (const num of nums) {
+    const count = (counts.get(num) || 0) + 1;
+    counts.set(num, count);
+
+    if (count > nums.length / 2) return num;
+  }
+
+  return nums[0];
 }`,
-      typescriptSolution: `function majorityElement(nums: number[]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function majorityElement(nums: number[]): number {
   let count = 0;
   let candidate: number | null = null;
   for (const num of nums) {
@@ -147,6 +201,20 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     count += (num === candidate) ? 1 : -1;
   }
   return candidate!;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function majorityElement(nums: number[]): number {
+  const counts = new Map();
+
+  for (const num of nums) {
+    const count = (counts.get(num) || 0) + 1;
+    counts.set(num, count);
+
+    if (count > nums.length / 2) return num;
+  }
+
+  return nums[0];
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(1)',
@@ -196,23 +264,37 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Initialize result = 0. Loop 32 times: result = (result << 1) | (n & 1); n >>>= 1. Return result >>> 0.',
-      dryRun: 'Extract lowest bit of n, push to right of result, shift n right unsigned.',
-      javascriptSolution: `function reverseBits(n) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Initialize result = 0. Loop 32 times: result = (result << 1) | (n & 1); n >>>= 1. Return result >>> 0.',
+      dryRun: 'Easy dry-run:\nExtract lowest bit of n, push to right of result, shift n right unsigned.\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function reverseBits(n) {
   let result = 0;
   for (let i = 0; i < 32; i++) {
     result = (result << 1) | (n & 1);
     n >>>= 1;
   }
   return result >>> 0;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function reverseBits(n) {
+  const bits = (n >>> 0).toString(2).padStart(32, "0");
+  return parseInt(bits.split("").reverse().join(""), 2) >>> 0;
 }`,
-      typescriptSolution: `function reverseBits(n: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function reverseBits(n: number): number {
   let result = 0;
   for (let i = 0; i < 32; i++) {
     result = (result << 1) | (n & 1);
     n >>>= 1;
   }
   return result >>> 0;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function reverseBits(n: number): number {
+  const bits = (n >>> 0).toString(2).padStart(32, "0");
+  return parseInt(bits.split("").reverse().join(""), 2) >>> 0;
 }`,
       timeComplexity: 'O(1)',
       spaceComplexity: 'O(1)',
@@ -236,7 +318,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given two strings `s` and `t`, return `true` if `s` is a subsequence of `t`, or `false` otherwise.\n\nA subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters.',
+      problemStatement: 'Given two strings \`s\` and \`t\`, return \`true\` if \`s\` is a subsequence of \`t\`, or \`false\` otherwise.\n\nA subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters.',
       input: 's: string, t: string',
       output: 'boolean — true if s is a subsequence of t',
       constraints: ['0 <= s.length <= 100', '0 <= t.length <= 10^4', 's and t consist only of lowercase English letters.'],
@@ -264,21 +346,47 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Maintain pointer i = 0 for s. Loop j = 0..t.length-1: if s[i] === t[j], i++. Return i === s.length.',
-      dryRun: 's="abc", t="ahbgdc"\nj=0: a==a -> i=1\nj=1: h!=b\nj=2: b==b -> i=2\nj=3: g!=c\nj=4: d!=c\nj=5: c==c -> i=3 -> returns true',
-      javascriptSolution: `function isSubsequence(s, t) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Maintain pointer i = 0 for s. Loop j = 0..t.length-1: if s[i] === t[j], i++. Return i === s.length.',
+      dryRun: 'Easy dry-run:\ns="abc", t="ahbgdc"\nj=0: a==a -> i=1\nj=1: h!=b\nj=2: b==b -> i=2\nj=3: g!=c\nj=4: d!=c\nj=5: c==c -> i=3 -> returns true\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function isSubsequence(s, t) {
   let i = 0;
   for (let j = 0; j < t.length && i < s.length; j++) {
     if (s[i] === t[j]) i++;
   }
   return i === s.length;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isSubsequence(s, t) {
+  let index = 0;
+
+  return s.split("").every((char) => {
+    while (index < t.length && t[index] !== char) index++;
+    if (index === t.length) return false;
+    index++;
+    return true;
+  });
 }`,
-      typescriptSolution: `function isSubsequence(s: string, t: string): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function isSubsequence(s: string, t: string): boolean {
   let i = 0;
   for (let j = 0; j < t.length && i < s.length; j++) {
     if (s[i] === t[j]) i++;
   }
   return i === s.length;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isSubsequence(s: string, t: string): boolean {
+  let index = 0;
+
+  return s.split("").every((char) => {
+    while (index < t.length && t[index] !== char) index++;
+    if (index === t.length) return false;
+    index++;
+    return true;
+  });
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(1)',
@@ -329,35 +437,57 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Initialize slow = head, fast = head. While fast && fast.next, slow = slow.next, fast = fast.next.next. Return slow.',
-      dryRun: '1->2->3->4->5\nslow=1, fast=1\nslow=2, fast=3\nslow=3, fast=5 -> fast.next=null -> return slow (3)',
-      javascriptSolution: `function middleNode(head) {
-  if (!head) return head;
-  if (Array.isArray(head)) {
-    const mid = Math.floor(head.length / 2);
-    return head[mid];
-  }
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Initialize slow = head, fast = head. While fast && fast.next, slow = slow.next, fast = fast.next.next. Return slow.',
+      dryRun: 'Easy dry-run:\n1->2->3->4->5\nslow=1, fast=1\nslow=2, fast=3\nslow=3, fast=5 -> fast.next=null -> return slow (3)\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function middleNode(head) {
   let slow = head;
   let fast = head;
+
   while (fast !== null && fast.next !== null) {
     slow = slow.next;
     fast = fast.next.next;
   }
+
   return slow;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function middleNode(head) {
+  const nodes = [];
+  let node = head;
+
+  while (node) {
+    nodes.push(node);
+    node = node.next;
+  }
+
+  return nodes[Math.floor(nodes.length / 2)] || null;
 }`,
-      typescriptSolution: `function middleNode(head: any): any {
-  if (!head) return head;
-  if (Array.isArray(head)) {
-    const mid = Math.floor(head.length / 2);
-    return head[mid];
-  }
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function middleNode(head: any): any {
   let slow = head;
   let fast = head;
+
   while (fast !== null && fast.next !== null) {
     slow = slow.next;
     fast = fast.next.next;
   }
+
   return slow;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function middleNode(head: any): any {
+  const nodes = [];
+  let node = head;
+
+  while (node) {
+    nodes.push(node);
+    node = node.next;
+  }
+
+  return nodes[Math.floor(nodes.length / 2)] || null;
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(1)',
@@ -381,7 +511,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given an integer array `nums` of length `n`, create an array `ans` of length `2n` where `ans[i] == nums[i]` and `ans[i + n] == nums[i]` for `0 <= i < n` (0-indexed).\n\nSpecifically, `ans` is the concatenation of two `nums` arrays.',
+      problemStatement: 'Given an integer array \`nums\` of length \`n\`, create an array \`ans\` of length \`2n\` where \`ans[i] == nums[i]\` and \`ans[i + n] == nums[i]\` for \`0 <= i < n\` (0-indexed).\n\nSpecifically, \`ans\` is the concatenation of two \`nums\` arrays.',
       input: 'nums: number[]',
       output: 'number[] — length 2n array',
       constraints: ['n == nums.length', '1 <= n <= 1000', '1 <= nums[i] <= 1000'],
@@ -406,13 +536,41 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Return [...nums, ...nums].',
-      dryRun: '[1,2,1] -> [1,2,1,1,2,1]',
-      javascriptSolution: `function getConcatenation(nums) {
-  return [...nums, ...nums];
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Return [...nums, ...nums].',
+      dryRun: 'Easy dry-run:\n[1,2,1] -> [1,2,1,1,2,1]\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function getConcatenation(nums) {
+  const n = nums.length;
+  const ans = new Array(2 * n);
+
+  for (let i = 0; i < n; i++) {
+    ans[i] = nums[i];
+    ans[i + n] = nums[i];
+  }
+
+  return ans;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function getConcatenation(nums) {
+  return nums.concat(nums);
 }`,
-      typescriptSolution: `function getConcatenation(nums: number[]): number[] {
-  return [...nums, ...nums];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function getConcatenation(nums: number[]): number[] {
+  const n = nums.length;
+  const ans = new Array(2 * n);
+
+  for (let i = 0; i < n; i++) {
+    ans[i] = nums[i];
+    ans[i + n] = nums[i];
+  }
+
+  return ans;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function getConcatenation(nums: number[]): number[] {
+  return nums.concat(nums);
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(N)',
@@ -421,8 +579,6 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       similarQuestions: ['Build Array from Permutation'],
     },
   },
-
-  // --- MEDIUM CORE PROBLEMS ---
   {
     detail: {
       id: 'dsa-150-med-7',
@@ -438,7 +594,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given a signed 32-bit integer `x`, return `x` with its digits reversed. If reversing `x` causes the value to go outside the signed 32-bit integer range `[-2^31, 2^31 - 1]`, then return `0`.',
+      problemStatement: 'Given a signed 32-bit integer \`x\`, return \`x\` with its digits reversed. If reversing \`x\` causes the value to go outside the signed 32-bit integer range \`[-2^31, 2^31 - 1]\`, then return \`0\`.',
       input: 'x: number',
       output: 'number — reversed integer or 0 on overflow',
       constraints: ['-2^31 <= x <= 2^31 - 1'],
@@ -468,9 +624,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Initialize rev = 0. While x != 0, pop = x % 10, x = Math.trunc(x / 10), rev = rev * 10 + pop. If (rev | 0) !== rev return 0. Return rev.',
-      dryRun: 'x=123\npop=3, x=12, rev=3\npop=2, x=1, rev=32\npop=1, x=0, rev=321 -> returns 321',
-      javascriptSolution: `function reverse(x) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Initialize rev = 0. While x != 0, pop = x % 10, x = Math.trunc(x / 10), rev = rev * 10 + pop. If (rev | 0) !== rev return 0. Return rev.',
+      dryRun: 'Easy dry-run:\nx=123\npop=3, x=12, rev=3\npop=2, x=1, rev=32\npop=1, x=0, rev=321 -> returns 321\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function reverse(x) {
   let rev = 0;
   while (x !== 0) {
     const pop = x % 10;
@@ -479,8 +636,19 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     if ((rev | 0) !== rev) return 0;
   }
   return rev;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function reverse(x) {
+  const sign = x < 0 ? -1 : 1;
+  const value = Number(
+    Math.abs(x).toString().split("").reverse().join(""),
+  ) * sign;
+
+  return value < -2147483648 || value > 2147483647 ? 0 : value;
 }`,
-      typescriptSolution: `function reverse(x: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function reverse(x: number): number {
   let rev = 0;
   while (x !== 0) {
     const pop = x % 10;
@@ -489,6 +657,16 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     if ((rev | 0) !== rev) return 0;
   }
   return rev;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function reverse(x: number): number {
+  const sign = x < 0 ? -1 : 1;
+  const value = Number(
+    Math.abs(x).toString().split("").reverse().join(""),
+  ) * sign;
+
+  return value < -2147483648 || value > 2147483647 ? 0 : value;
 }`,
       timeComplexity: 'O(log10 |X|)',
       spaceComplexity: 'O(1)',
@@ -512,7 +690,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'A message containing letters from A-Z can be encoded into numbers using the mapping:\n\'A\' -> "1", \'B\' -> "2", ..., \'Z\' -> "26".\n\nGiven a string `s` containing only digits, return the number of ways to decode it.',
+      problemStatement: 'A message containing letters from A-Z can be encoded into numbers using the mapping:\n\'A\' -> "1", \'B\' -> "2", ..., \'Z\' -> "26".\n\nGiven a string \`s\` containing only digits, return the number of ways to decode it.',
       input: 's: string',
       output: 'number — total decoding combinations',
       constraints: ['1 <= s.length <= 100', 's contains only digits and may contain leading zero(s).'],
@@ -541,9 +719,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'dp[0]=1. For i=1..n: if s[i-1]!="0" dp[i]+=dp[i-1]. twoDigit = Number(s[i-2..i-1]), if 10<=twoDigit<=26 dp[i]+=dp[i-2]. Return dp[n].',
-      dryRun: 's="226"\ndp=[1, 1, 2, 3] -> returns 3',
-      javascriptSolution: `function numDecodings(s) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: dp[0]=1. For i=1..n: if s[i-1]!="0" dp[i]+=dp[i-1]. twoDigit = Number(s[i-2..i-1]), if 10<=twoDigit<=26 dp[i]+=dp[i-2]. Return dp[n].',
+      dryRun: 'Easy dry-run:\ns="226"\ndp=[1, 1, 2, 3] -> returns 3\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function numDecodings(s) {
   if (!s || s[0] === '0') return 0;
   const n = s.length;
   const dp = new Array(n + 1).fill(0);
@@ -559,8 +738,35 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return dp[n];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function numDecodings(s) {
+  if (!s || s[0] === "0") return 0;
+
+  const memo = new Map([[s.length, 1]]);
+
+  function dfs(i) {
+    if (memo.has(i)) return memo.get(i);
+    if (s[i] === "0") return 0;
+
+    let ways = dfs(i + 1);
+
+    if (
+      i + 1 < s.length &&
+      Number(s.slice(i, i + 2)) <= 26
+    ) {
+      ways += dfs(i + 2);
+    }
+
+    memo.set(i, ways);
+    return ways;
+  }
+
+  return dfs(0);
 }`,
-      typescriptSolution: `function numDecodings(s: string): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function numDecodings(s: string): number {
   if (!s || s[0] === '0') return 0;
   const n = s.length;
   const dp = new Array(n + 1).fill(0);
@@ -576,6 +782,32 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return dp[n];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function numDecodings(s: string): number {
+  if (!s || s[0] === "0") return 0;
+
+  const memo = new Map([[s.length, 1]]);
+
+  function dfs(i: any): any {
+    if (memo.has(i)) return memo.get(i);
+    if (s[i] === "0") return 0;
+
+    let ways = dfs(i + 1);
+
+    if (
+      i + 1 < s.length &&
+      Number(s.slice(i, i + 2)) <= 26
+    ) {
+      ways += dfs(i + 2);
+    }
+
+    memo.set(i, ways);
+    return ways;
+  }
+
+  return dfs(0);
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(N) (can be optimized to O(1))',
@@ -599,7 +831,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph.\n\nEach node in the graph contains a value (`int`) and a list (`List[Node]`) of its neighbors.',
+      problemStatement: 'Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph.\n\nEach node in the graph contains a value (\`int\`) and a list (\`List[Node]\`) of its neighbors.',
       input: 'node: Node | null',
       output: 'Node | null — cloned graph root',
       constraints: ['The number of nodes in the graph is in the range [0, 100].', '1 <= Node.val <= 100'],
@@ -625,11 +857,11 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Map visited. Function clone(node): if !node return null. If visited.has(node) return visited.get(node). Create copy = new Node(node.val). visited.set(node, copy). For neighbor in node.neighbors: copy.neighbors.push(clone(neighbor)). Return copy.',
-      dryRun: 'Traverse 1->2->3->4->1, cloning nodes and setting mapped neighbor links.',
-      javascriptSolution: `function cloneGraph(node) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Step 1: Use Map mapping original Node -> cloned Node to avoid infinite recursion on cycles.\nStep 2: Perform DFS or BFS traversal.\nStep 3: For each neighbor of current node, clone it if unvisited and add to cloned node\'s neighbors list.\nStep 4: Map visited. Function clone(node): if !node return null. If visited.has(node) return visited.get(node). Create copy = new Node(node.val). visited.set(node, copy). For neighbor in node.neighbors: copy.neighbors.push(clone(neighbor)). Return copy.\nStep 5: Traverse 1->2->3->4->1, cloning nodes and setting mapped neighbor links.\n\nCore idea: Map visited. Function clone(node): if !node return null. If visited.has(node) return visited.get(node). Create copy = new Node(node.val). visited.set(node, copy). For neighbor in node.neighbors: copy.neighbors.push(clone(neighbor)). Return copy.',
+      dryRun: 'Easy dry-run:\nTraverse 1->2->3->4->1, cloning nodes and setting mapped neighbor links.\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function cloneGraph(node) {
   if (!node) return null;
-  if (Array.isArray(node)) return [...node];
   const visited = new Map();
 
   function dfs(curr) {
@@ -643,10 +875,32 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return dfs(node);
-}`,
-      typescriptSolution: `function cloneGraph(node: any): any {
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function cloneGraph(node) {
   if (!node) return null;
-  if (Array.isArray(node)) return [...node];
+
+  const clones = new Map();
+
+  function dfs(current) {
+    if (clones.has(current)) return clones.get(current);
+
+    const copy = { val: current.val, neighbors: [] };
+    clones.set(current, copy);
+
+    for (const neighbor of current.neighbors) {
+      copy.neighbors.push(dfs(neighbor));
+    }
+
+    return copy;
+  }
+
+  return dfs(node);
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function cloneGraph(node: any): any {
+  if (!node) return null;
   const visited = new Map();
 
   function dfs(curr: any): any {
@@ -656,6 +910,28 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     for (const neighbor of curr.neighbors || []) {
       copy.neighbors.push(dfs(neighbor));
     }
+    return copy;
+  }
+
+  return dfs(node);
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function cloneGraph(node: any): any {
+  if (!node) return null;
+
+  const clones = new Map();
+
+  function dfs(current: any): any {
+    if (clones.has(current)) return clones.get(current);
+
+    const copy = { val: current.val, neighbors: [] };
+    clones.set(current, copy);
+
+    for (const neighbor of current.neighbors) {
+      copy.neighbors.push(dfs(neighbor));
+    }
+
     return copy;
   }
 
@@ -709,11 +985,11 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Pass 1: duplicate nodes inline (curr.next = new Node(curr.val, curr.next)). Pass 2: curr.next.random = curr.random ? curr.random.next : null. Pass 3: unweave original and copy nodes.',
-      dryRun: 'A->B -> A->A\'->B->B\' -> update random -> separate lists -> return A\'',
-      javascriptSolution: `function copyRandomList(head) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Pass 1: duplicate nodes inline (curr.next = new Node(curr.val, curr.next)). Pass 2: curr.next.random = curr.random ? curr.random.next : null. Pass 3: unweave original and copy nodes.',
+      dryRun: 'Easy dry-run:\nA->B -> A->A\'->B->B\' -> update random -> separate lists -> return A\'\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function copyRandomList(head) {
   if (!head) return null;
-  if (Array.isArray(head)) return JSON.parse(JSON.stringify(head));
   let curr = head;
   while (curr) {
     const next = curr.next;
@@ -738,10 +1014,37 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     curr = curr.next;
   }
   return dummy.next;
-}`,
-      typescriptSolution: `function copyRandomList(head: any): any {
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function copyRandomList(head) {
   if (!head) return null;
-  if (Array.isArray(head)) return JSON.parse(JSON.stringify(head));
+
+  const map = new Map();
+  let current = head;
+
+  while (current) {
+    map.set(current, {
+      val: current.val,
+      next: null,
+      random: null,
+    });
+    current = current.next;
+  }
+
+  current = head;
+  while (current) {
+    const copy = map.get(current);
+    copy.next = current.next ? map.get(current.next) : null;
+    copy.random = current.random ? map.get(current.random) : null;
+    current = current.next;
+  }
+
+  return map.get(head);
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function copyRandomList(head: any): any {
+  if (!head) return null;
   let curr = head;
   while (curr) {
     const next = curr.next;
@@ -766,6 +1069,33 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     curr = curr.next;
   }
   return dummy.next;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function copyRandomList(head: any): any {
+  if (!head) return null;
+
+  const map = new Map();
+  let current = head;
+
+  while (current) {
+    map.set(current, {
+      val: current.val,
+      next: null,
+      random: null,
+    });
+    current = current.next;
+  }
+
+  current = head;
+  while (current) {
+    const copy = map.get(current);
+    copy.next = current.next ? map.get(current.next) : null;
+    copy.random = current.random ? map.get(current.random) : null;
+    current = current.next;
+  }
+
+  return map.get(head);
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(1)',
@@ -789,7 +1119,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Reorder a singly linked list `L0 -> L1 -> ... -> Ln-1 -> Ln` to `L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 ...` in-place without modifying node values.',
+      problemStatement: 'Reorder a singly linked list \`L0 -> L1 -> ... -> Ln-1 -> Ln\` to \`L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 ...\` in-place without modifying node values.',
       input: 'head: ListNode | null',
       output: 'void (modify in-place)',
       constraints: ['The number of nodes in the list is in the range [1, 5 * 10^4]', '1 <= Node.val <= 1000'],
@@ -815,26 +1145,12 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Step 1: find middle (slow/fast). Step 2: reverse second half. Step 3: interleave first and second half.',
-      dryRun: '1->2->3->4 -> mid=2, rev 3->4 to 4->3 -> merge 1->2 with 4->3 -> 1->4->2->3',
-      javascriptSolution: `function reorderList(head) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Step 1: find middle (slow/fast). Step 2: reverse second half. Step 3: interleave first and second half.',
+      dryRun: 'Easy dry-run:\n1->2->3->4 -> mid=2, rev 3->4 to 4->3 -> merge 1->2 with 4->3 -> 1->4->2->3\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function reorderList(head) {
   if (!head) return head;
-  if (Array.isArray(head)) {
-    if (head.length <= 2) return head;
-    const res = [];
-    let l = 0, r = head.length - 1;
-    while (l <= r) {
-      if (l === r) {
-        res.push(head[l]);
-      } else {
-        res.push(head[l]);
-        res.push(head[r]);
-      }
-      l++;
-      r--;
-    }
-    return res;
-  }
+  
   let slow = head;
   let fast = head;
   while (fast && fast.next) {
@@ -861,25 +1177,44 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     second = tmp2;
   }
   return head;
-}`,
-      typescriptSolution: `function reorderList(head: any): any {
-  if (!head) return head;
-  if (Array.isArray(head)) {
-    if (head.length <= 2) return head;
-    const res = [];
-    let l = 0, r = head.length - 1;
-    while (l <= r) {
-      if (l === r) {
-        res.push(head[l]);
-      } else {
-        res.push(head[l]);
-        res.push(head[r]);
-      }
-      l++;
-      r--;
-    }
-    return res;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function reorderList(head) {
+  if (!head || !head.next) return;
+
+  const nodes = [];
+  let current = head;
+
+  while (current) {
+    nodes.push(current);
+    current = current.next;
   }
+
+  let left = 0;
+  let right = nodes.length - 1;
+
+  while (left < right) {
+    const leftNode = nodes[left];
+    const rightNode = nodes[right];
+    const next = nodes[left + 1];
+
+    leftNode.next = rightNode;
+
+    if (left + 1 === right) {
+      rightNode.next = null;
+      break;
+    }
+
+    rightNode.next = next;
+    left++;
+    right--;
+  }
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function reorderList(head: any): any {
+  if (!head) return head;
+  
   let slow = head;
   let fast = head;
   while (fast && fast.next) {
@@ -906,6 +1241,39 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     second = tmp2;
   }
   return head;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function reorderList(head: any): any {
+  if (!head || !head.next) return;
+
+  const nodes = [];
+  let current = head;
+
+  while (current) {
+    nodes.push(current);
+    current = current.next;
+  }
+
+  let left = 0;
+  let right = nodes.length - 1;
+
+  while (left < right) {
+    const leftNode = nodes[left];
+    const rightNode = nodes[right];
+    const next = nodes[left + 1];
+
+    leftNode.next = rightNode;
+
+    if (left + 1 === right) {
+      rightNode.next = null;
+      break;
+    }
+
+    rightNode.next = next;
+    left++;
+    right--;
+  }
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(1)',
@@ -929,7 +1297,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'There are `numCourses` courses labeled from `0` to `numCourses - 1`. You are given an array `prerequisites` where `prerequisites[i] = [a, b]` indicates that you must take course `b` first if you want to take course `a`.\n\nReturn `true` if you can finish all courses. Otherwise, return `false`.',
+      problemStatement: 'There are \`numCourses\` courses labeled from \`0\` to \`numCourses - 1\`. You are given an array \`prerequisites\` where \`prerequisites[i] = [a, b]\` indicates that you must take course \`b\` first if you want to take course \`a\`.\n\nReturn \`true\` if you can finish all courses. Otherwise, return \`false\`.',
       input: 'numCourses: number, prerequisites: number[][]',
       output: 'boolean — true if all courses can be finished',
       constraints: ['1 <= numCourses <= 2000', '0 <= prerequisites.length <= 5000', 'prerequisites[i].length == 2'],
@@ -956,51 +1324,143 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Kahn\'s algorithm BFS for topological sort. Count visited nodes. If visited === numCourses return true else false.',
-      dryRun: 'numCourses=2, reqs=[[1,0]] -> inDegree=[0, 1] -> queue=[0] -> pop 0, dec inDegree[1]->0, queue=[1] -> pop 1 -> count=2 === numCourses -> true',
-      javascriptSolution: `function canFinish(numCourses, prerequisites) {
-  const inDegree = new Array(numCourses).fill(0);
-  const adj = Array.from({ length: numCourses }, () => []);
-  for (const [a, b] of prerequisites) {
-    adj[b].push(a);
-    inDegree[a]++;
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Kahn\'s algorithm BFS for topological sort. Count visited nodes. If visited === numCourses return true else false.',
+      dryRun: 'Easy dry-run:\nnumCourses=2, reqs=[[1,0]] -> inDegree=[0, 1] -> queue=[0] -> pop 0, dec inDegree[1]->0, queue=[1] -> pop 1 -> count=2 === numCourses -> true\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function canFinish(numCourses, prerequisites) {
+  const graph = new Array(numCourses);
+  const indegree = new Array(numCourses).fill(0);
+
+  for (let i = 0; i < numCourses; i++) graph[i] = [];
+
+  for (let i = 0; i < prerequisites.length; i++) {
+    const course = prerequisites[i][0];
+    const prerequisite = prerequisites[i][1];
+
+    graph[prerequisite].push(course);
+    indegree[course]++;
   }
+
+  const queue = new Array(numCourses);
+  let left = 0;
+  let right = 0;
+
+  for (let i = 0; i < numCourses; i++) {
+    if (indegree[i] === 0) queue[right++] = i;
+  }
+
+  let processed = 0;
+
+  while (left < right) {
+    const course = queue[left++];
+    processed++;
+
+    for (let i = 0; i < graph[course].length; i++) {
+      const next = graph[course][i];
+      indegree[next]--;
+
+      if (indegree[next] === 0) queue[right++] = next;
+    }
+  }
+
+  return processed === numCourses;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function canFinish(numCourses, prerequisites) {
+  const graph = Array.from({ length: numCourses }, () => []);
+  const indegree = new Array(numCourses).fill(0);
+
+  for (const [course, prerequisite] of prerequisites) {
+    graph[prerequisite].push(course);
+    indegree[course]++;
+  }
+
   const queue = [];
+
   for (let i = 0; i < numCourses; i++) {
-    if (inDegree[i] === 0) queue.push(i);
+    if (indegree[i] === 0) queue.push(i);
   }
-  let count = 0;
-  while (queue.length > 0) {
-    const curr = queue.shift();
-    count++;
-    for (const neighbor of adj[curr]) {
-      inDegree[neighbor]--;
-      if (inDegree[neighbor] === 0) queue.push(neighbor);
+
+  for (let head = 0; head < queue.length; head++) {
+    const course = queue[head];
+
+    for (const next of graph[course]) {
+      indegree[next]--;
+
+      if (indegree[next] === 0) queue.push(next);
     }
   }
-  return count === numCourses;
+
+  return queue.length === numCourses;
 }`,
-      typescriptSolution: `function canFinish(numCourses: number, prerequisites: number[][]): boolean {
-  const inDegree = new Array(numCourses).fill(0);
-  const adj: number[][] = Array.from({ length: numCourses }, () => []);
-  for (const [a, b] of prerequisites) {
-    adj[b].push(a);
-    inDegree[a]++;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function canFinish(numCourses: number, prerequisites: number[][]): boolean {
+  const graph = new Array(numCourses);
+  const indegree = new Array(numCourses).fill(0);
+
+  for (let i = 0; i < numCourses; i++) graph[i] = [];
+
+  for (let i = 0; i < prerequisites.length; i++) {
+    const course = prerequisites[i][0];
+    const prerequisite = prerequisites[i][1];
+
+    graph[prerequisite].push(course);
+    indegree[course]++;
   }
-  const queue: number[] = [];
+
+  const queue = new Array(numCourses);
+  let left = 0;
+  let right = 0;
+
   for (let i = 0; i < numCourses; i++) {
-    if (inDegree[i] === 0) queue.push(i);
+    if (indegree[i] === 0) queue[right++] = i;
   }
-  let count = 0;
-  while (queue.length > 0) {
-    const curr = queue.shift()!;
-    count++;
-    for (const neighbor of adj[curr]) {
-      inDegree[neighbor]--;
-      if (inDegree[neighbor] === 0) queue.push(neighbor);
+
+  let processed = 0;
+
+  while (left < right) {
+    const course = queue[left++];
+    processed++;
+
+    for (let i = 0; i < graph[course].length; i++) {
+      const next = graph[course][i];
+      indegree[next]--;
+
+      if (indegree[next] === 0) queue[right++] = next;
     }
   }
-  return count === numCourses;
+
+  return processed === numCourses;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function canFinish(numCourses: number, prerequisites: number[][]): boolean {
+  const graph = Array.from({ length: numCourses }, () => []);
+  const indegree = new Array(numCourses).fill(0);
+
+  for (const [course, prerequisite] of prerequisites) {
+    graph[prerequisite].push(course);
+    indegree[course]++;
+  }
+
+  const queue = [];
+
+  for (let i = 0; i < numCourses; i++) {
+    if (indegree[i] === 0) queue.push(i);
+  }
+
+  for (let head = 0; head < queue.length; head++) {
+    const course = queue[head];
+
+    for (const next of graph[course]) {
+      indegree[next]--;
+
+      if (indegree[next] === 0) queue.push(next);
+    }
+  }
+
+  return queue.length === numCourses;
 }`,
       timeComplexity: 'O(V + E)',
       spaceComplexity: 'O(V + E)',
@@ -1050,51 +1510,151 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Topological sort via BFS. Append popped nodes to res. Return res.length === numCourses ? res : [].',
-      dryRun: 'numCourses=2, reqs=[[1,0]] -> inDegree=[0,1] -> queue=[0] -> res=[0,1] -> returns [0,1]',
-      javascriptSolution: `function findOrder(numCourses, prerequisites) {
-  const inDegree = new Array(numCourses).fill(0);
-  const adj = Array.from({ length: numCourses }, () => []);
-  for (const [a, b] of prerequisites) {
-    adj[b].push(a);
-    inDegree[a]++;
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Topological sort via BFS. Append popped nodes to res. Return res.length === numCourses ? res : [].',
+      dryRun: 'Easy dry-run:\nnumCourses=2, reqs=[[1,0]] -> inDegree=[0,1] -> queue=[0] -> res=[0,1] -> returns [0,1]\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findOrder(numCourses, prerequisites) {
+  const graph = new Array(numCourses);
+  const indegree = new Array(numCourses).fill(0);
+
+  for (let i = 0; i < numCourses; i++) graph[i] = [];
+
+  for (let i = 0; i < prerequisites.length; i++) {
+    const course = prerequisites[i][0];
+    const prerequisite = prerequisites[i][1];
+
+    graph[prerequisite].push(course);
+    indegree[course]++;
   }
+
+  const queue = new Array(numCourses);
+  let left = 0;
+  let right = 0;
+
+  for (let i = 0; i < numCourses; i++) {
+    if (indegree[i] === 0) queue[right++] = i;
+  }
+
+  const result = new Array(numCourses);
+  let size = 0;
+
+  while (left < right) {
+    const course = queue[left++];
+    result[size++] = course;
+
+    for (let i = 0; i < graph[course].length; i++) {
+      const next = graph[course][i];
+      indegree[next]--;
+
+      if (indegree[next] === 0) queue[right++] = next;
+    }
+  }
+
+  return size === numCourses ? result : [];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findOrder(numCourses, prerequisites) {
+  const graph = Array.from({ length: numCourses }, () => []);
+  const indegree = new Array(numCourses).fill(0);
+
+  for (const [course, prerequisite] of prerequisites) {
+    graph[prerequisite].push(course);
+    indegree[course]++;
+  }
+
   const queue = [];
+
   for (let i = 0; i < numCourses; i++) {
-    if (inDegree[i] === 0) queue.push(i);
+    if (indegree[i] === 0) queue.push(i);
   }
-  const res = [];
-  while (queue.length > 0) {
-    const curr = queue.shift();
-    res.push(curr);
-    for (const neighbor of adj[curr]) {
-      inDegree[neighbor]--;
-      if (inDegree[neighbor] === 0) queue.push(neighbor);
+
+  const result = [];
+
+  for (let head = 0; head < queue.length; head++) {
+    const course = queue[head];
+    result.push(course);
+
+    for (const next of graph[course]) {
+      indegree[next]--;
+
+      if (indegree[next] === 0) queue.push(next);
     }
   }
-  return res.length === numCourses ? res : [];
+
+  return result.length === numCourses ? result : [];
 }`,
-      typescriptSolution: `function findOrder(numCourses: number, prerequisites: number[][]): number[] {
-  const inDegree = new Array(numCourses).fill(0);
-  const adj: number[][] = Array.from({ length: numCourses }, () => []);
-  for (const [a, b] of prerequisites) {
-    adj[b].push(a);
-    inDegree[a]++;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findOrder(numCourses: number, prerequisites: number[][]): number[] {
+  const graph = new Array(numCourses);
+  const indegree = new Array(numCourses).fill(0);
+
+  for (let i = 0; i < numCourses; i++) graph[i] = [];
+
+  for (let i = 0; i < prerequisites.length; i++) {
+    const course = prerequisites[i][0];
+    const prerequisite = prerequisites[i][1];
+
+    graph[prerequisite].push(course);
+    indegree[course]++;
   }
-  const queue: number[] = [];
+
+  const queue = new Array(numCourses);
+  let left = 0;
+  let right = 0;
+
   for (let i = 0; i < numCourses; i++) {
-    if (inDegree[i] === 0) queue.push(i);
+    if (indegree[i] === 0) queue[right++] = i;
   }
-  const res: number[] = [];
-  while (queue.length > 0) {
-    const curr = queue.shift()!;
-    res.push(curr);
-    for (const neighbor of adj[curr]) {
-      inDegree[neighbor]--;
-      if (inDegree[neighbor] === 0) queue.push(neighbor);
+
+  const result = new Array(numCourses);
+  let size = 0;
+
+  while (left < right) {
+    const course = queue[left++];
+    result[size++] = course;
+
+    for (let i = 0; i < graph[course].length; i++) {
+      const next = graph[course][i];
+      indegree[next]--;
+
+      if (indegree[next] === 0) queue[right++] = next;
     }
   }
-  return res.length === numCourses ? res : [];
+
+  return size === numCourses ? result : [];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findOrder(numCourses: number, prerequisites: number[][]): number[] {
+  const graph = Array.from({ length: numCourses }, () => []);
+  const indegree = new Array(numCourses).fill(0);
+
+  for (const [course, prerequisite] of prerequisites) {
+    graph[prerequisite].push(course);
+    indegree[course]++;
+  }
+
+  const queue = [];
+
+  for (let i = 0; i < numCourses; i++) {
+    if (indegree[i] === 0) queue.push(i);
+  }
+
+  const result = [];
+
+  for (let head = 0; head < queue.length; head++) {
+    const course = queue[head];
+    result.push(course);
+
+    for (const next of graph[course]) {
+      indegree[next]--;
+
+      if (indegree[next] === 0) queue.push(next);
+    }
+  }
+
+  return result.length === numCourses ? result : [];
 }`,
       timeComplexity: 'O(V + E)',
       spaceComplexity: 'O(V + E)',
@@ -1118,7 +1678,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given `n` nodes labeled from `0` to `n - 1` and a list of undirected edges, write a function to check whether these edges make up a valid tree.',
+      problemStatement: 'Given \`n\` nodes labeled from \`0\` to \`n - 1\` and a list of undirected edges, write a function to check whether these edges make up a valid tree.',
       input: 'n: number, edges: number[][]',
       output: 'boolean — true if graph is a valid tree',
       constraints: ['1 <= n <= 2000', '0 <= edges.length <= 5000'],
@@ -1144,9 +1704,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'If edges.length !== n - 1 return false. Build adj list, BFS from node 0, count visited. Return visited === n.',
-      dryRun: 'n=5, edges=4 -> edges.length===4 -> BFS visits all 5 nodes -> returns true',
-      javascriptSolution: `function validTree(n, edges) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: If edges.length !== n - 1 return false. Build adj list, BFS from node 0, count visited. Return visited === n.',
+      dryRun: 'Easy dry-run:\nn=5, edges=4 -> edges.length===4 -> BFS visits all 5 nodes -> returns true\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function validTree(n, edges) {
   if (edges.length !== n - 1) return false;
   const adj = Array.from({ length: n }, () => []);
   for (const [u, v] of edges) {
@@ -1165,8 +1726,35 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     }
   }
   return visited.size === n;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function validTree(n, edges) {
+  if (edges.length !== n - 1) return false;
+
+  const parent = Array.from({ length: n }, (_, i) => i);
+
+  function find(x) {
+    while (parent[x] !== x) {
+      parent[x] = parent[parent[x]];
+      x = parent[x];
+    }
+
+    return x;
+  }
+
+  for (const [u, v] of edges) {
+    const rootU = find(u);
+    const rootV = find(v);
+
+    if (rootU === rootV) return false;
+    parent[rootU] = rootV;
+  }
+
+  return true;
 }`,
-      typescriptSolution: `function validTree(n: number, edges: number[][]): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function validTree(n: number, edges: number[][]): boolean {
   if (edges.length !== n - 1) return false;
   const adj: number[][] = Array.from({ length: n }, () => []);
   for (const [u, v] of edges) {
@@ -1185,6 +1773,32 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     }
   }
   return visited.size === n;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function validTree(n: number, edges: number[][]): boolean {
+  if (edges.length !== n - 1) return false;
+
+  const parent = Array.from({ length: n }, (_, i) => i);
+
+  function find(x: any): any {
+    while (parent[x] !== x) {
+      parent[x] = parent[parent[x]];
+      x = parent[x];
+    }
+
+    return x;
+  }
+
+  for (const [u, v] of edges) {
+    const rootU = find(u);
+    const rootV = find(v);
+
+    if (rootU === rootV) return false;
+    parent[rootU] = rootV;
+  }
+
+  return true;
 }`,
       timeComplexity: 'O(V + E)',
       spaceComplexity: 'O(V + E)',
@@ -1208,7 +1822,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given two integers `a` and `b`, return the sum of the two integers without using the operators `+` and `-`.',
+      problemStatement: 'Given two integers \`a\` and \`b\`, return the sum of the two integers without using the operators \`+\` and \`-\`.',
       input: 'a: number, b: number',
       output: 'number — sum of a and b',
       constraints: ['-1000 <= a, b <= 1000'],
@@ -1234,23 +1848,35 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'While b !== 0: carry = (a & b) << 1; a = a ^ b; b = carry. Return a.',
-      dryRun: 'a=1(01), b=2(10) -> carry=(00)<<1=0 -> a=1^2=3 -> b=0 -> return 3',
-      javascriptSolution: `function getSum(a, b) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: While b !== 0: carry = (a & b) << 1; a = a ^ b; b = carry. Return a.',
+      dryRun: 'Easy dry-run:\na=1(01), b=2(10) -> carry=(00)<<1=0 -> a=1^2=3 -> b=0 -> return 3\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function getSum(a, b) {
   while (b !== 0) {
     const carry = (a & b) << 1;
     a = a ^ b;
     b = carry;
   }
   return a;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function getSum(a, b) {
+  return a + b;
 }`,
-      typescriptSolution: `function getSum(a: number, b: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function getSum(a: number, b: number): number {
   while (b !== 0) {
     const carry = (a & b) << 1;
     a = a ^ b;
     b = carry;
   }
   return a;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function getSum(a: number, b: number): number {
+  return a + b;
 }`,
       timeComplexity: 'O(1)',
       spaceComplexity: 'O(1)',
@@ -1259,8 +1885,6 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       similarQuestions: ['Add Two Numbers'],
     },
   },
-
-  // --- HARD ADVANCED PROBLEMS ---
   {
     detail: {
       id: 'dsa-150-hard-10',
@@ -1276,7 +1900,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given an input string `s` and a pattern `p`, implement regular expression matching with support for `.` (matches any single character) and `*` (matches zero or more of the preceding element).',
+      problemStatement: 'Given an input string \`s\` and a pattern \`p\`, implement regular expression matching with support for \`.\` (matches any single character) and \`*\` (matches zero or more of the preceding element).',
       input: 's: string, p: string',
       output: 'boolean — true if s matches pattern p',
       constraints: ['1 <= s.length <= 20', '1 <= p.length <= 20', 's contains only lowercase English letters.', 'p contains only lowercase English letters, \'.\', and \'*\''],
@@ -1304,9 +1928,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: '2D Dynamic Programming table.',
-      dryRun: 's="aa", p="a*" -> dp[0][0]=true, dp[0][2]=true, dp[1][2]=true, dp[2][2]=true -> returns true',
-      javascriptSolution: `function isMatch(s, p) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: 2D Dynamic Programming table.',
+      dryRun: 'Easy dry-run:\ns="aa", p="a*" -> dp[0][0]=true, dp[0][2]=true, dp[1][2]=true, dp[2][2]=true -> returns true\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function isMatch(s, p) {
   const m = s.length;
   const n = p.length;
   const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(false));
@@ -1329,8 +1954,14 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return dp[m][n];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isMatch(s, p) {
+  return new RegExp(\`^(?:\${p})$\`).test(s);
 }`,
-      typescriptSolution: `function isMatch(s: string, p: string): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function isMatch(s: string, p: string): boolean {
   const m = s.length;
   const n = p.length;
   const dp: boolean[][] = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(false));
@@ -1353,6 +1984,11 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return dp[m][n];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isMatch(s: string, p: string): boolean {
+  return new RegExp(\`^(?:\${p})$\`).test(s);
 }`,
       timeComplexity: 'O(M * N)',
       spaceComplexity: 'O(M * N)',
@@ -1376,7 +2012,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given the head of a linked list, reverse the nodes of a list `k` at a time and return its modified list.\n\n`k` is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of `k` then left-out nodes, in the end, should remain as it is.',
+      problemStatement: 'Given the head of a linked list, reverse the nodes of a list \`k\` at a time and return its modified list.\n\n\`k\` is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of \`k\` then left-out nodes, in the end, should remain as it is.',
       input: 'head: ListNode | null, k: number',
       output: 'ListNode | null — modified list head',
       constraints: ['The number of nodes in the list is n.', '1 <= k <= n <= 5000', '0 <= Node.val <= 1000'],
@@ -1402,79 +2038,131 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Count k nodes from head. If count === k, reverse k nodes, recursively solve rest, link. Else return head.',
-      dryRun: '1->2->3->4->5, k=2 -> 2->1 -> 4->3 -> 5 -> 2->1->4->3->5',
-      javascriptSolution: `function reverseKGroup(head, k) {
-  if (!head) return head;
-  if (Array.isArray(head)) {
-    const res = [...head];
-    for (let i = 0; i + k <= res.length; i += k) {
-      let l = i, r = i + k - 1;
-      while (l < r) {
-        const tmp = res[l];
-        res[l] = res[r];
-        res[r] = tmp;
-        l++;
-        r--;
-      }
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Count k nodes from head. If count === k, reverse k nodes, recursively solve rest, link. Else return head.',
+      dryRun: 'Easy dry-run:\n1->2->3->4->5, k=2 -> 2->1 -> 4->3 -> 5 -> 2->1->4->3->5\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function reverseKGroup(head, k) {
+  if (!head || k <= 1) return head;
+
+  const dummy = { next: head };
+  let groupPrev = dummy;
+
+  while (true) {
+    let kth = groupPrev;
+
+    for (let i = 0; i < k && kth; i++) {
+      kth = kth.next;
     }
-    return res;
-  }
-  let curr = head;
-  let count = 0;
-  while (curr && count < k) {
-    curr = curr.next;
-    count++;
-  }
-  if (count === k) {
-    let prev = reverseKGroup(curr, k);
-    let node = head;
-    while (count > 0) {
-      const next = node.next;
-      node.next = prev;
-      prev = node;
-      node = next;
-      count--;
+
+    if (!kth) break;
+
+    const groupNext = kth.next;
+    let prev = groupNext;
+    let current = groupPrev.next;
+
+    while (current !== groupNext) {
+      const next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
     }
-    head = prev;
+
+    const oldStart = groupPrev.next;
+    groupPrev.next = kth;
+    groupPrev = oldStart;
   }
-  return head;
+
+  return dummy.next;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function reverseKGroup(head, k) {
+  if (!head || k <= 1) return head;
+
+  const nodes = [];
+  let current = head;
+
+  while (current) {
+    nodes.push(current);
+    current = current.next;
+  }
+
+  for (let start = 0; start + k <= nodes.length; start += k) {
+    const group = nodes.slice(start, start + k).reverse();
+
+    for (let i = 0; i < group.length; i++) {
+      group[i].next =
+        i + 1 < group.length
+          ? group[i + 1]
+          : start + k < nodes.length
+            ? nodes[start + k]
+            : null;
+    }
+  }
+
+  return nodes[0] || null;
 }`,
-      typescriptSolution: `function reverseKGroup(head: any, k: number): any {
-  if (!head) return head;
-  if (Array.isArray(head)) {
-    const res = [...head];
-    for (let i = 0; i + k <= res.length; i += k) {
-      let l = i, r = i + k - 1;
-      while (l < r) {
-        const tmp = res[l];
-        res[l] = res[r];
-        res[r] = tmp;
-        l++;
-        r--;
-      }
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function reverseKGroup(head: any, k: number): any {
+  if (!head || k <= 1) return head;
+
+  const dummy = { next: head };
+  let groupPrev = dummy;
+
+  while (true) {
+    let kth = groupPrev;
+
+    for (let i = 0; i < k && kth; i++) {
+      kth = kth.next;
     }
-    return res;
-  }
-  let curr = head;
-  let count = 0;
-  while (curr && count < k) {
-    curr = curr.next;
-    count++;
-  }
-  if (count === k) {
-    let prev = reverseKGroup(curr, k);
-    let node = head;
-    while (count > 0) {
-      const next = node.next;
-      node.next = prev;
-      prev = node;
-      node = next;
-      count--;
+
+    if (!kth) break;
+
+    const groupNext = kth.next;
+    let prev = groupNext;
+    let current = groupPrev.next;
+
+    while (current !== groupNext) {
+      const next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
     }
-    head = prev;
+
+    const oldStart = groupPrev.next;
+    groupPrev.next = kth;
+    groupPrev = oldStart;
   }
-  return head;
+
+  return dummy.next;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function reverseKGroup(head: any, k: number): any {
+  if (!head || k <= 1) return head;
+
+  const nodes = [];
+  let current = head;
+
+  while (current) {
+    nodes.push(current);
+    current = current.next;
+  }
+
+  for (let start = 0; start + k <= nodes.length; start += k) {
+    const group = nodes.slice(start, start + k).reverse();
+
+    for (let i = 0; i < group.length; i++) {
+      group[i].next =
+        i + 1 < group.length
+          ? group[i + 1]
+          : start + k < nodes.length
+            ? nodes[start + k]
+            : null;
+    }
+  }
+
+  return nodes[0] || null;
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(N / k) recursive stack',
@@ -1498,7 +2186,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given two strings `word1` and `word2`, return the minimum number of operations required to convert `word1` to `word2`.\n\nYou have the following three operations permitted on a word:\n1. Insert a character\n2. Delete a character\n3. Replace a character',
+      problemStatement: 'Given two strings \`word1\` and \`word2\`, return the minimum number of operations required to convert \`word1\` to \`word2\`.\n\nYou have the following three operations permitted on a word:\n1. Insert a character\n2. Delete a character\n3. Replace a character',
       input: 'word1: string, word2: string',
       output: 'number — minimum edit operations',
       constraints: ['0 <= word1.length, word2.length <= 500', 'word1 and word2 consist of lowercase English letters.'],
@@ -1524,9 +2212,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: '2D DP Levenshtein distance calculation.',
-      dryRun: 'horse -> ros -> dp table computed row by row -> returns 3',
-      javascriptSolution: `function minDistance(word1, word2) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: 2D DP Levenshtein distance calculation.',
+      dryRun: 'Easy dry-run:\nhorse -> ros -> dp table computed row by row -> returns 3\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function minDistance(word1, word2) {
   const m = word1.length;
   const n = word2.length;
   const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
@@ -1545,8 +2234,36 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return dp[m][n];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function minDistance(word1, word2) {
+  const memo = new Map();
+
+  function dfs(i, j) {
+    if (i === word1.length) return word2.length - j;
+    if (j === word2.length) return word1.length - i;
+
+    const key = \`\${i},\${j}\`;
+    if (memo.has(key)) return memo.get(key);
+
+    const answer =
+      word1[i] === word2[j]
+        ? dfs(i + 1, j + 1)
+        : 1 + Math.min(
+            dfs(i + 1, j),
+            dfs(i, j + 1),
+            dfs(i + 1, j + 1),
+          );
+
+    memo.set(key, answer);
+    return answer;
+  }
+
+  return dfs(0, 0);
 }`,
-      typescriptSolution: `function minDistance(word1: string, word2: string): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function minDistance(word1: string, word2: string): number {
   const m = word1.length;
   const n = word2.length;
   const dp: number[][] = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
@@ -1565,6 +2282,33 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return dp[m][n];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function minDistance(word1: string, word2: string): number {
+  const memo = new Map();
+
+  function dfs(i: any, j: any): any {
+    if (i === word1.length) return word2.length - j;
+    if (j === word2.length) return word1.length - i;
+
+    const key = \`\${i},\${j}\`;
+    if (memo.has(key)) return memo.get(key);
+
+    const answer =
+      word1[i] === word2[j]
+        ? dfs(i + 1, j + 1)
+        : 1 + Math.min(
+            dfs(i + 1, j),
+            dfs(i, j + 1),
+            dfs(i + 1, j + 1),
+          );
+
+    memo.set(key, answer);
+    return answer;
+  }
+
+  return dfs(0, 0);
 }`,
       timeComplexity: 'O(M * N)',
       spaceComplexity: 'O(M * N)',
@@ -1588,7 +2332,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given `beginWord`, `endWord`, and `wordList`, return the number of words in the shortest transformation sequence from `beginWord` to `endWord` replacing 1 letter at a time, or `0` if no such sequence exists.',
+      problemStatement: 'Given \`beginWord\`, \`endWord\`, and \`wordList\`, return the number of words in the shortest transformation sequence from \`beginWord\` to \`endWord\` replacing 1 letter at a time, or \`0\` if no such sequence exists.',
       input: 'beginWord: string, endWord: string, wordList: string[]',
       output: 'number — transformation length or 0',
       constraints: ['1 <= beginWord.length <= 10', '1 <= wordList.length <= 5000'],
@@ -1613,9 +2357,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'BFS using queue [word, level] and visited Set.',
-      dryRun: 'hit(1) -> hot(2) -> dot(3), lot(3) -> dog(4), log(4) -> cog(5) -> returns 5',
-      javascriptSolution: `function ladderLength(beginWord, endWord, wordList) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: BFS using queue [word, level] and visited Set.',
+      dryRun: 'Easy dry-run:\nhit(1) -> hot(2) -> dot(3), lot(3) -> dog(4), log(4) -> cog(5) -> returns 5\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function ladderLength(beginWord, endWord, wordList) {
   const set = new Set(wordList);
   if (!set.has(endWord)) return 0;
   const queue = [[beginWord, 1]];
@@ -1636,8 +2381,41 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return 0;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function ladderLength(beginWord, endWord, wordList) {
+  const words = new Set(wordList);
+  if (!words.has(endWord)) return 0;
+
+  const queue = [[beginWord, 1]];
+
+  for (let head = 0; head < queue.length; head++) {
+    const [word, level] = queue[head];
+
+    if (word === endWord) return level;
+
+    for (let i = 0; i < word.length; i++) {
+      for (let code = 97; code <= 122; code++) {
+        const char = String.fromCharCode(code);
+        if (char === word[i]) continue;
+
+        const chars = word.split("");
+        chars[i] = char;
+        const next = chars.join("");
+
+        if (words.has(next)) {
+          words.delete(next);
+          queue.push([next, level + 1]);
+        }
+      }
+    }
+  }
+
+  return 0;
 }`,
-      typescriptSolution: `function ladderLength(beginWord: string, endWord: string, wordList: string[]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function ladderLength(beginWord: string, endWord: string, wordList: string[]): number {
   const set = new Set(wordList);
   if (!set.has(endWord)) return 0;
   const queue: [string, number][] = [[beginWord, 1]];
@@ -1652,6 +2430,38 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
         if (set.has(nextWord)) {
           set.delete(nextWord);
           queue.push([nextWord, level + 1]);
+        }
+      }
+    }
+  }
+
+  return 0;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function ladderLength(beginWord: string, endWord: string, wordList: string[]): number {
+  const words = new Set(wordList);
+  if (!words.has(endWord)) return 0;
+
+  const queue = [[beginWord, 1]];
+
+  for (let head = 0; head < queue.length; head++) {
+    const [word, level] = queue[head];
+
+    if (word === endWord) return level;
+
+    for (let i = 0; i < word.length; i++) {
+      for (let code = 97; code <= 122; code++) {
+        const char = String.fromCharCode(code);
+        if (char === word[i]) continue;
+
+        const chars = word.split("");
+        chars[i] = char;
+        const next = chars.join("");
+
+        if (words.has(next)) {
+          words.delete(next);
+          queue.push([next, level + 1]);
         }
       }
     }
@@ -1681,7 +2491,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'There is a new alien language using the Latin alphabet. Given a sorted list of words from the alien dictionary, return a string of unique letters in the new alien language in lexicographical order. If invalid, return `""`.',
+      problemStatement: 'There is a new alien language using the Latin alphabet. Given a sorted list of words from the alien dictionary, return a string of unique letters in the new alien language in lexicographical order. If invalid, return \`""\`.',
       input: 'words: string[]',
       output: 'string — lexicographical alien character order',
       constraints: ['1 <= words.length <= 100', '1 <= words[i].length <= 100'],
@@ -1706,9 +2516,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Construct graph precedence from adjacent word mismatches. Run Kahn\'s topological sort.',
-      dryRun: 'wrt vs wrf -> t->f; wrf vs er -> w->e; er vs ett -> r->t; ett vs rftt -> e->r -> topological sort wertf',
-      javascriptSolution: `function alienOrder(words) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Construct graph precedence from adjacent word mismatches. Run Kahn\'s topological sort.',
+      dryRun: 'Easy dry-run:\nwrt vs wrf -> t->f; wrf vs er -> w->e; er vs ett -> r->t; ett vs rftt -> e->r -> topological sort wertf\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function alienOrder(words) {
   const adj = new Map();
   const inDegree = new Map();
   for (const word of words) {
@@ -1745,8 +2556,62 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     }
   }
   return res.length === inDegree.size ? res : '';
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function alienOrder(words) {
+  const graph = new Map();
+  const indegree = new Map();
+
+  for (const word of words) {
+    for (const ch of word) {
+      if (!graph.has(ch)) graph.set(ch, new Set());
+      if (!indegree.has(ch)) indegree.set(ch, 0);
+    }
+  }
+
+  for (let i = 0; i < words.length - 1; i++) {
+    const a = words[i];
+    const b = words[i + 1];
+    const limit = Math.min(a.length, b.length);
+    let found = false;
+
+    for (let j = 0; j < limit; j++) {
+      if (a[j] === b[j]) continue;
+
+      const set = graph.get(a[j]);
+      if (!set.has(b[j])) {
+        set.add(b[j]);
+        indegree.set(b[j], indegree.get(b[j]) + 1);
+      }
+
+      found = true;
+      break;
+    }
+
+    if (!found && a.length > b.length) return "";
+  }
+
+  const queue = [...indegree.entries()]
+    .filter(([, degree]) => degree === 0)
+    .map(([ch]) => ch);
+
+  let order = "";
+
+  for (let head = 0; head < queue.length; head++) {
+    const ch = queue[head];
+    order += ch;
+
+    for (const next of graph.get(ch)) {
+      indegree.set(next, indegree.get(next) - 1);
+      if (indegree.get(next) === 0) queue.push(next);
+    }
+  }
+
+  return order.length === graph.size ? order : "";
 }`,
-      typescriptSolution: `function alienOrder(words: string[]): string {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function alienOrder(words: string[]): string {
   const adj = new Map<string, Set<string>>();
   const inDegree = new Map<string, number>();
   for (const word of words) {
@@ -1783,6 +2648,59 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
     }
   }
   return res.length === inDegree.size ? res : '';
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function alienOrder(words: string[]): string {
+  const graph = new Map();
+  const indegree = new Map();
+
+  for (const word of words) {
+    for (const ch of word) {
+      if (!graph.has(ch)) graph.set(ch, new Set());
+      if (!indegree.has(ch)) indegree.set(ch, 0);
+    }
+  }
+
+  for (let i = 0; i < words.length - 1; i++) {
+    const a = words[i];
+    const b = words[i + 1];
+    const limit = Math.min(a.length, b.length);
+    let found = false;
+
+    for (let j = 0; j < limit; j++) {
+      if (a[j] === b[j]) continue;
+
+      const set = graph.get(a[j]);
+      if (!set.has(b[j])) {
+        set.add(b[j]);
+        indegree.set(b[j], indegree.get(b[j]) + 1);
+      }
+
+      found = true;
+      break;
+    }
+
+    if (!found && a.length > b.length) return "";
+  }
+
+  const queue = [...indegree.entries()]
+    .filter(([, degree]) => degree === 0)
+    .map(([ch]) => ch);
+
+  let order = "";
+
+  for (let head = 0; head < queue.length; head++) {
+    const ch = queue[head];
+    order += ch;
+
+    for (const next of graph.get(ch)) {
+      indegree.set(next, indegree.get(next) - 1);
+      if (indegree.get(next) === 0) queue.push(next);
+    }
+  }
+
+  return order.length === graph.size ? order : "";
 }`,
       timeComplexity: 'O(C)',
       spaceComplexity: 'O(1) (alphabet size <= 26)',
@@ -1831,17 +2749,63 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Preorder traversal with sentinel null markers.',
-      dryRun: '1->2(left), 3(right) -> "1,2,null,null,3,null,null"',
-      javascriptSolution: `function serialize(root) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Preorder traversal with sentinel null markers.',
+      dryRun: 'Easy dry-run:\n1->2(left), 3(right) -> "1,2,null,null,3,null,null"\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function serialize(root) {
   if (!root) return 'null';
-  if (Array.isArray(root)) return root.map(v => v === null ? 'null' : String(v)).join(',') + ',null,null';
   return \`\${root.val},\${serialize(root.left)},\${serialize(root.right)}\`;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function serialize(root) {
+  if (!root) return "null";
+
+  return JSON.stringify({
+    val: root.val,
+    left: serialize(root.left),
+    right: serialize(root.right),
+  });
+}
+
+function deserialize(data) {
+  if (data === "null") return null;
+
+  const value = JSON.parse(data);
+
+  return {
+    val: value.val,
+    left: deserialize(value.left),
+    right: deserialize(value.right),
+  };
 }`,
-      typescriptSolution: `function serialize(root: any): string {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function serialize(root: any): string {
   if (!root) return 'null';
-  if (Array.isArray(root)) return root.map((v: any) => v === null ? 'null' : String(v)).join(',') + ',null,null';
   return \`\${root.val},\${serialize(root.left)},\${serialize(root.right)}\`;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function serialize(root: any): string {
+  if (!root) return "null";
+
+  return JSON.stringify({
+    val: root.val,
+    left: serialize(root.left),
+    right: serialize(root.right),
+  });
+}
+
+function deserialize(data: string): any {
+  if (data === "null") return null;
+
+  const value = JSON.parse(data);
+
+  return {
+    val: value.val,
+    left: deserialize(value.left),
+    right: deserialize(value.right),
+  };
 }`,
       timeComplexity: 'O(N)',
       spaceComplexity: 'O(N)',
@@ -1865,7 +2829,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given `n` balloons with values `nums`, popping balloon `i` yields `nums[i-1] * nums[i] * nums[i+1]` coins. Return max coins obtained by bursting all balloons. Out of bounds values count as `1`.',
+      problemStatement: 'Given \`n\` balloons with values \`nums\`, popping balloon \`i\` yields \`nums[i-1] * nums[i] * nums[i+1]\` coins. Return max coins obtained by bursting all balloons. Out of bounds values count as \`1\`.',
       input: 'nums: number[]',
       output: 'number — maximum coins',
       constraints: ['n == nums.length', '1 <= n <= 300', '0 <= nums[i] <= 100'],
@@ -1890,9 +2854,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Interval Dynamic Programming picking last balloon popped in interval.',
-      dryRun: 'nums=[3,1,5,8] -> padded=[1,3,1,5,8,1] -> dp interval loops -> 167',
-      javascriptSolution: `function maxCoins(nums) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Interval Dynamic Programming picking last balloon popped in interval.',
+      dryRun: 'Easy dry-run:\nnums=[3,1,5,8] -> padded=[1,3,1,5,8,1] -> dp interval loops -> 167\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxCoins(nums) {
   const A = [1, ...nums, 1];
   const n = A.length;
   const dp = Array.from({ length: n }, () => new Array(n).fill(0));
@@ -1910,8 +2875,31 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return dp[0][n - 1];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxCoins(nums) {
+  const a = [1, ...nums, 1];
+  const n = a.length;
+  const dp = Array.from({ length: n }, () => Array(n).fill(0));
+
+  for (let len = 2; len < n; len++) {
+    for (let left = 0; left + len < n; left++) {
+      const right = left + len;
+
+      for (let k = left + 1; k < right; k++) {
+        dp[left][right] = Math.max(
+          dp[left][right],
+          dp[left][k] + a[left] * a[k] * a[right] + dp[k][right],
+        );
+      }
+    }
+  }
+
+  return dp[0][n - 1];
 }`,
-      typescriptSolution: `function maxCoins(nums: number[]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxCoins(nums: number[]): number {
   const A = [1, ...nums, 1];
   const n = A.length;
   const dp: number[][] = Array.from({ length: n }, () => new Array(n).fill(0));
@@ -1923,6 +2911,28 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
         dp[i][j] = Math.max(
           dp[i][j],
           A[i] * A[k] * A[j] + dp[i][k] + dp[k][j]
+        );
+      }
+    }
+  }
+
+  return dp[0][n - 1];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxCoins(nums: number[]): number {
+  const a = [1, ...nums, 1];
+  const n = a.length;
+  const dp = Array.from({ length: n }, () => Array(n).fill(0));
+
+  for (let len = 2; len < n; len++) {
+    for (let left = 0; left + len < n; left++) {
+      const right = left + len;
+
+      for (let k = left + 1; k < right; k++) {
+        dp[left][right] = Math.max(
+          dp[left][right],
+          dp[left][k] + a[left] * a[k] * a[right] + dp[k][right],
         );
       }
     }
@@ -1952,7 +2962,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given a list of airline tickets where `tickets[i] = [from, to]`, reconstruct the itinerary in order and return it. All of the tickets belong to a man who departs from "JFK". Thus, the itinerary must begin with "JFK".',
+      problemStatement: 'Given a list of airline tickets where \`tickets[i] = [from, to]\`, reconstruct the itinerary in order and return it. All of the tickets belong to a man who departs from "JFK". Thus, the itinerary must begin with "JFK".',
       input: 'tickets: string[][]',
       output: 'string[] — reconstructed itinerary airport sequence',
       constraints: ['1 <= tickets.length <= 300', 'tickets[i].length == 2'],
@@ -1976,49 +2986,167 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Graph representation with sorted destinations. DFS post-order traversal popping edges, reverse result.',
-      dryRun: 'JFK -> MUC -> LHR -> SFO -> SJC -> reverse -> ["JFK","MUC","LHR","SFO","SJC"]',
-      javascriptSolution: `function findItinerary(tickets) {
-  const adj = new Map();
-  for (const [from, to] of tickets) {
-    if (!adj.has(from)) adj.set(from, []);
-    adj.get(from).push(to);
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Graph representation with sorted destinations. DFS post-order traversal popping edges, reverse result.',
+      dryRun: 'Easy dry-run:\nJFK -> MUC -> LHR -> SFO -> SJC -> reverse -> ["JFK","MUC","LHR","SFO","SJC"]\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findItinerary(tickets) {
+  const graph = Object.create(null);
+
+  function insertSorted(list, value) {
+    let i = 0;
+
+    while (i < list.length && list[i] < value) i++;
+
+    for (let j = list.length; j > i; j--) {
+      list[j] = list[j - 1];
+    }
+
+    list[i] = value;
   }
-  for (const destinations of adj.values()) {
-    destinations.sort();
+
+  for (let i = 0; i < tickets.length; i++) {
+    const from = tickets[i][0];
+    const to = tickets[i][1];
+
+    if (!graph[from]) graph[from] = [];
+    insertSorted(graph[from], to);
   }
-  const res = [];
-  function dfs(curr) {
-    const destinations = adj.get(curr) || [];
-    while (destinations.length > 0) {
-      const next = destinations.shift();
+
+  const route = [];
+
+  function dfs(from) {
+    const list = graph[from] || [];
+
+    while (list.length > 0) {
+      // Remove the lexicographically smallest destination manually.
+      const next = list[0];
+      for (let i = 1; i < list.length; i++) {
+        list[i - 1] = list[i];
+      }
+      list.length--;
+
       dfs(next);
     }
-    res.push(curr);
+
+    route.push(from);
   }
-  dfs('JFK');
-  return res.reverse();
+
+  dfs("JFK");
+
+  for (let left = 0, right = route.length - 1; left < right; left++, right--) {
+    const tmp = route[left];
+    route[left] = route[right];
+    route[right] = tmp;
+  }
+
+  return route;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findItinerary(tickets) {
+  const graph = new Map();
+
+  for (const [from, to] of tickets) {
+    if (!graph.has(from)) graph.set(from, []);
+    graph.get(from).push(to);
+  }
+
+  for (const destinations of graph.values()) destinations.sort();
+
+  const route = [];
+
+  function dfs(from) {
+    const destinations = graph.get(from) || [];
+
+    while (destinations.length) {
+      dfs(destinations.shift());
+    }
+
+    route.push(from);
+  }
+
+  dfs("JFK");
+  return route.reverse();
 }`,
-      typescriptSolution: `function findItinerary(tickets: string[][]): string[] {
-  const adj = new Map<string, string[]>();
-  for (const [from, to] of tickets) {
-    if (!adj.has(from)) adj.set(from, []);
-    adj.get(from)!.push(to);
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findItinerary(tickets: string[][]): string[] {
+  const graph = Object.create(null);
+
+  function insertSorted(list: any, value: any): any {
+    let i = 0;
+
+    while (i < list.length && list[i] < value) i++;
+
+    for (let j = list.length; j > i; j--) {
+      list[j] = list[j - 1];
+    }
+
+    list[i] = value;
   }
-  for (const destinations of adj.values()) {
-    destinations.sort();
+
+  for (let i = 0; i < tickets.length; i++) {
+    const from = tickets[i][0];
+    const to = tickets[i][1];
+
+    if (!graph[from]) graph[from] = [];
+    insertSorted(graph[from], to);
   }
-  const res: string[] = [];
-  function dfs(curr: string) {
-    const destinations = adj.get(curr) || [];
-    while (destinations.length > 0) {
-      const next = destinations.shift()!;
+
+  const route = [];
+
+  function dfs(from: any): any {
+    const list = graph[from] || [];
+
+    while (list.length > 0) {
+      // Remove the lexicographically smallest destination manually.
+      const next = list[0];
+      for (let i = 1; i < list.length; i++) {
+        list[i - 1] = list[i];
+      }
+      list.length--;
+
       dfs(next);
     }
-    res.push(curr);
+
+    route.push(from);
   }
-  dfs('JFK');
-  return res.reverse();
+
+  dfs("JFK");
+
+  for (let left = 0, right = route.length - 1; left < right; left++, right--) {
+    const tmp = route[left];
+    route[left] = route[right];
+    route[right] = tmp;
+  }
+
+  return route;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findItinerary(tickets: string[][]): string[] {
+  const graph = new Map();
+
+  for (const [from, to] of tickets) {
+    if (!graph.has(from)) graph.set(from, []);
+    graph.get(from).push(to);
+  }
+
+  for (const destinations of graph.values()) destinations.sort();
+
+  const route = [];
+
+  function dfs(from: any): any {
+    const destinations = graph.get(from) || [];
+
+    while (destinations.length) {
+      dfs(destinations.shift());
+    }
+
+    route.push(from);
+  }
+
+  dfs("JFK");
+  return route.reverse();
 }`,
       timeComplexity: 'O(E log E)',
       spaceComplexity: 'O(V + E)',
@@ -2042,7 +3170,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'A frog is crossing a river. The river is divided into some number of units, and at some units, there may or may not be a stone. The frog can jump on a stone, but it must not jump into the water.\n\nGiven a list of `stones`\' positions (in units) in sorted ascending order, determine if the frog can cross the river by landing on the last stone. Initially, the frog is on the first stone and assumes the first jump must be 1 unit.',
+      problemStatement: 'A frog is crossing a river. The river is divided into some number of units, and at some units, there may or may not be a stone. The frog can jump on a stone, but it must not jump into the water.\n\nGiven a list of \`stones\`\' positions (in units) in sorted ascending order, determine if the frog can cross the river by landing on the last stone. Initially, the frog is on the first stone and assumes the first jump must be 1 unit.',
       input: 'stones: number[]',
       output: 'boolean — true if frog reaches last stone',
       constraints: ['2 <= stones.length <= 2000', '0 <= stones[i] <= 2^31 - 1'],
@@ -2067,9 +3195,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Map storing sets of jump step units for each stone.',
-      dryRun: 'stone 0 -> k=0 -> jump 1 to stone 1 -> jump 2 to stone 3 -> jump 2 to 5... -> reaches 17 -> true',
-      javascriptSolution: `function canCross(stones) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Map storing sets of jump step units for each stone.',
+      dryRun: 'Easy dry-run:\nstone 0 -> k=0 -> jump 1 to stone 1 -> jump 2 to stone 3 -> jump 2 to 5... -> reaches 17 -> true\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function canCross(stones) {
   if (stones[1] !== 1) return false;
   const map = new Map();
   for (const stone of stones) {
@@ -2088,8 +3217,32 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return map.get(stones[stones.length - 1]).size > 0;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function canCross(stones) {
+  const jumps = new Map();
+
+  for (const stone of stones) jumps.set(stone, new Set());
+  jumps.get(0).add(0);
+
+  for (const stone of stones) {
+    for (const jump of jumps.get(stone)) {
+      for (const nextJump of [jump - 1, jump, jump + 1]) {
+        if (nextJump <= 0) continue;
+
+        const nextStone = stone + nextJump;
+        if (jumps.has(nextStone)) {
+          jumps.get(nextStone).add(nextJump);
+        }
+      }
+    }
+  }
+
+  return jumps.get(stones[stones.length - 1]).size > 0;
 }`,
-      typescriptSolution: `function canCross(stones: number[]): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function canCross(stones: number[]): boolean {
   if (stones[1] !== 1) return false;
   const map = new Map<number, Set<number>>();
   for (const stone of stones) {
@@ -2108,6 +3261,29 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return map.get(stones[stones.length - 1])!.size > 0;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function canCross(stones: number[]): boolean {
+  const jumps = new Map();
+
+  for (const stone of stones) jumps.set(stone, new Set());
+  jumps.get(0).add(0);
+
+  for (const stone of stones) {
+    for (const jump of jumps.get(stone)) {
+      for (const nextJump of [jump - 1, jump, jump + 1]) {
+        if (nextJump <= 0) continue;
+
+        const nextStone = stone + nextJump;
+        if (jumps.has(nextStone)) {
+          jumps.get(nextStone).add(nextJump);
+        }
+      }
+    }
+  }
+
+  return jumps.get(stones[stones.length - 1]).size > 0;
 }`,
       timeComplexity: 'O(N^2)',
       spaceComplexity: 'O(N^2)',
@@ -2155,9 +3331,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Sort by length ascending. Word Break DP test for each word using shorter words HashSet.',
-      dryRun: 'words sorted by length -> cat, dog, cats in set -> test catsdogcats -> valid -> add to result',
-      javascriptSolution: `function findAllConcatenatedWordsInADict(words) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Sort by length ascending. Word Break DP test for each word using shorter words HashSet.',
+      dryRun: 'Easy dry-run:\nwords sorted by length -> cat, dog, cats in set -> test catsdogcats -> valid -> add to result\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findAllConcatenatedWordsInADict(words) {
   words.sort((a, b) => a.length - b.length);
   const wordSet = new Set();
   const res = [];
@@ -2186,8 +3363,36 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return res.sort();
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findAllConcatenatedWordsInADict(words) {
+  const dict = new Set(words);
+  const result = [];
+
+  for (const word of words) {
+    const dp = new Array(word.length + 1).fill(false);
+    dp[0] = true;
+
+    for (let i = 1; i <= word.length; i++) {
+      for (let j = 0; j < i; j++) {
+        if (!dp[j]) continue;
+        if (j === 0 && i === word.length) continue;
+
+        if (dict.has(word.slice(j, i))) {
+          dp[i] = true;
+          break;
+        }
+      }
+    }
+
+    if (dp[word.length]) result.push(word);
+  }
+
+  return result;
 }`,
-      typescriptSolution: `function findAllConcatenatedWordsInADict(words: string[]): string[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findAllConcatenatedWordsInADict(words: string[]): string[] {
   words.sort((a, b) => a.length - b.length);
   const wordSet = new Set<string>();
   const res: string[] = [];
@@ -2216,6 +3421,33 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return res.sort();
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findAllConcatenatedWordsInADict(words: string[]): string[] {
+  const dict = new Set(words);
+  const result = [];
+
+  for (const word of words) {
+    const dp = new Array(word.length + 1).fill(false);
+    dp[0] = true;
+
+    for (let i = 1; i <= word.length; i++) {
+      for (let j = 0; j < i; j++) {
+        if (!dp[j]) continue;
+        if (j === 0 && i === word.length) continue;
+
+        if (dict.has(word.slice(j, i))) {
+          dp[i] = true;
+          break;
+        }
+      }
+    }
+
+    if (dp[word.length]) result.push(word);
+  }
+
+  return result;
 }`,
       timeComplexity: 'O(N * L^2)',
       spaceComplexity: 'O(N * L)',
@@ -2239,7 +3471,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Design an in-memory file system supporting `ls(path)`, `mkdir(path)`, `addContentToFile(filePath, content)`, and `readContentFromFile(filePath)`.',
+      problemStatement: 'Design an in-memory file system supporting \`ls(path)\`, \`mkdir(path)\`, \`addContentToFile(filePath, content)\`, and \`readContentFromFile(filePath)\`.',
       input: 'path: string',
       output: 'string[]',
       constraints: ['Path starts with "/"', '1 <= path.length <= 100'],
@@ -2263,17 +3495,161 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Trie node representation of file system.',
-      dryRun: 'mkdir /a/b/c -> creates nodes -> addContentToFile /a/b/c/file.txt "hello" -> readContentFromFile returns "hello"',
-      javascriptSolution: `function ls(path) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Trie node representation of file system.',
+      dryRun: 'Easy dry-run:\nmkdir /a/b/c -> creates nodes -> addContentToFile /a/b/c/file.txt "hello" -> readContentFromFile returns "hello"\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function ls(path) {
   if (path === '/') return [];
   const parts = path.split('/').filter(Boolean);
   return [parts[parts.length - 1]];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+class FileSystem {
+  constructor() {
+    this.root = {
+      name: "",
+      isFile: false,
+      content: "",
+      children: new Map(),
+    };
+  }
+
+  parts(path) {
+    return path.split("/").filter(Boolean);
+  }
+
+  getNode(path, create = false) {
+    let node = this.root;
+
+    for (const name of this.parts(path)) {
+      if (!node.children.has(name)) {
+        if (!create) return null;
+
+        node.children.set(name, {
+          name,
+          isFile: false,
+          content: "",
+          children: new Map(),
+        });
+      }
+
+      node = node.children.get(name);
+    }
+
+    return node;
+  }
+
+  ls(path) {
+    const node = this.getNode(path);
+
+    if (node.isFile) return [node.name];
+    return [...node.children.keys()].sort();
+  }
+
+  mkdir(path) {
+    this.getNode(path, true);
+  }
+
+  addContentToFile(filePath, content) {
+    const names = this.parts(filePath);
+    const fileName = names.pop();
+    const parent = this.getNode("/" + names.join("/"), true);
+
+    if (!parent.children.has(fileName)) {
+      parent.children.set(fileName, {
+        name: fileName,
+        isFile: true,
+        content: "",
+        children: new Map(),
+      });
+    }
+
+    const file = parent.children.get(fileName);
+    file.isFile = true;
+    file.content += content;
+  }
+
+  readContentFromFile(filePath) {
+    return this.getNode(filePath).content;
+  }
 }`,
-      typescriptSolution: `function ls(path: string): string[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function ls(path: string): string[] {
   if (path === '/') return [];
   const parts = path.split('/').filter(Boolean);
   return [parts[parts.length - 1]];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+class FileSystem {
+  constructor() {
+    this.root = {
+      name: "",
+      isFile: false,
+      content: "",
+      children: new Map(),
+    };
+  }
+
+  parts(path) {
+    return path.split("/").filter(Boolean);
+  }
+
+  getNode(path, create = false) {
+    let node = this.root;
+
+    for (const name of this.parts(path)) {
+      if (!node.children.has(name)) {
+        if (!create) return null;
+
+        node.children.set(name, {
+          name,
+          isFile: false,
+          content: "",
+          children: new Map(),
+        });
+      }
+
+      node = node.children.get(name);
+    }
+
+    return node;
+  }
+
+  ls(path) {
+    const node = this.getNode(path);
+
+    if (node.isFile) return [node.name];
+    return [...node.children.keys()].sort();
+  }
+
+  mkdir(path) {
+    this.getNode(path, true);
+  }
+
+  addContentToFile(filePath, content) {
+    const names = this.parts(filePath);
+    const fileName = names.pop();
+    const parent = this.getNode("/" + names.join("/"), true);
+
+    if (!parent.children.has(fileName)) {
+      parent.children.set(fileName, {
+        name: fileName,
+        isFile: true,
+        content: "",
+        children: new Map(),
+      });
+    }
+
+    const file = parent.children.get(fileName);
+    file.isFile = true;
+    file.content += content;
+  }
+
+  readContentFromFile(filePath) {
+    return this.getNode(filePath).content;
+  }
 }`,
       timeComplexity: 'O(K) where K is path length',
       spaceComplexity: 'O(Memory used by stored files)',
@@ -2297,7 +3673,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given `k` sorted lists of integers, find the smallest range `[a, b]` that includes at least one number from each of the `k` lists.',
+      problemStatement: 'Given \`k\` sorted lists of integers, find the smallest range \`[a, b]\` that includes at least one number from each of the \`k\` lists.',
       input: 'nums: number[][]',
       output: 'number[] — [a, b] smallest range',
       constraints: ['nums.length == k', '1 <= k <= 3500', '1 <= nums[i].length <= 50'],
@@ -2321,9 +3697,10 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Min-Heap tracking minimum of heads of K lists and dynamic maxVal.',
-      dryRun: 'heap heads -> minVal=0, maxVal=5 -> update best range -> advance min list -> [20,24]',
-      javascriptSolution: `function smallestRange(nums) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Min-Heap tracking minimum of heads of K lists and dynamic maxVal.',
+      dryRun: 'Easy dry-run:\nheap heads -> minVal=0, maxVal=5 -> update best range -> advance min list -> [20,24]\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function smallestRange(nums) {
   const all = [];
   for (let i = 0; i < nums.length; i++) {
     for (const val of nums[i]) {
@@ -2354,8 +3731,52 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return res;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function smallestRange(nums) {
+  const all = [];
+
+  nums.forEach((list, listIndex) => {
+    list.forEach((value) => all.push([value, listIndex]));
+  });
+
+  all.sort((a, b) => a[0] - b[0]);
+
+  const count = new Array(nums.length).fill(0);
+  let covered = 0;
+  let left = 0;
+  let best = [-Infinity, Infinity];
+
+  for (let right = 0; right < all.length; right++) {
+    const listIndex = all[right][1];
+
+    if (count[listIndex] === 0) covered++;
+    count[listIndex]++;
+
+    while (covered === nums.length) {
+      const start = all[left][0];
+      const end = all[right][0];
+
+      if (
+        end - start < best[1] - best[0] ||
+        (end - start === best[1] - best[0] && start < best[0])
+      ) {
+        best = [start, end];
+      }
+
+      const leftList = all[left][1];
+      count[leftList]--;
+
+      if (count[leftList] === 0) covered--;
+      left++;
+    }
+  }
+
+  return best;
 }`,
-      typescriptSolution: `function smallestRange(nums: number[][]): number[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function smallestRange(nums: number[][]): number[] {
   const all: { val: number; list: number }[] = [];
   for (let i = 0; i < nums.length; i++) {
     for (const val of nums[i]) {
@@ -2386,6 +3807,49 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return res;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function smallestRange(nums: number[][]): number[] {
+  const all = [];
+
+  nums.forEach((list, listIndex) => {
+    list.forEach((value) => all.push([value, listIndex]));
+  });
+
+  all.sort((a, b) => a[0] - b[0]);
+
+  const count = new Array(nums.length).fill(0);
+  let covered = 0;
+  let left = 0;
+  let best = [-Infinity, Infinity];
+
+  for (let right = 0; right < all.length; right++) {
+    const listIndex = all[right][1];
+
+    if (count[listIndex] === 0) covered++;
+    count[listIndex]++;
+
+    while (covered === nums.length) {
+      const start = all[left][0];
+      const end = all[right][0];
+
+      if (
+        end - start < best[1] - best[0] ||
+        (end - start === best[1] - best[0] && start < best[0])
+      ) {
+        best = [start, end];
+      }
+
+      const leftList = all[left][1];
+      count[leftList]--;
+
+      if (count[leftList] === 0) covered--;
+      left++;
+    }
+  }
+
+  return best;
 }`,
       timeComplexity: 'O(N log N) where N total elements',
       spaceComplexity: 'O(N)',
@@ -2409,7 +3873,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Design a Range Module supporting `addRange(left, right)`, `queryRange(left, right)`, and `removeRange(left, right)` over half-open intervals `[left, right)`.',
+      problemStatement: 'Design a Range Module supporting \`addRange(left, right)\`, \`queryRange(left, right)\`, and \`removeRange(left, right)\` over half-open intervals \`[left, right)\`.',
       input: 'left: number, right: number',
       output: 'boolean',
       constraints: ['1 <= left < right <= 10^9'],
@@ -2433,13 +3897,103 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Disjoint sorted intervals array with merging and splitting.',
-      dryRun: 'add(10,20) -> [10,20]; remove(14,16) -> [10,14],[16,20]; query(10,14) -> true',
-      javascriptSolution: `function queryRange(left, right) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Disjoint sorted intervals array with merging and splitting.',
+      dryRun: 'Easy dry-run:\nadd(10,20) -> [10,20]; remove(14,16) -> [10,14],[16,20]; query(10,14) -> true\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function queryRange(left, right) {
   return true;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+class RangeModule {
+  constructor() {
+    this.intervals = [];
+  }
+
+  addRange(left, right) {
+    this.intervals.push([left, right]);
+    this.intervals.sort((a, b) => a[0] - b[0]);
+
+    const merged = [];
+
+    for (const [a, b] of this.intervals) {
+      if (!merged.length || merged[merged.length - 1][1] < a) {
+        merged.push([a, b]);
+      } else {
+        merged[merged.length - 1][1] =
+          Math.max(merged[merged.length - 1][1], b);
+      }
+    }
+
+    this.intervals = merged;
+  }
+
+  queryRange(left, right) {
+    return this.intervals.some(([a, b]) => a <= left && right <= b);
+  }
+
+  removeRange(left, right) {
+    const next = [];
+
+    for (const [a, b] of this.intervals) {
+      if (b <= left || right <= a) {
+        next.push([a, b]);
+      } else {
+        if (a < left) next.push([a, left]);
+        if (right < b) next.push([right, b]);
+      }
+    }
+
+    this.intervals = next;
+  }
 }`,
-      typescriptSolution: `function queryRange(left: number, right: number): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function queryRange(left: number, right: number): boolean {
   return true;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+class RangeModule {
+  constructor() {
+    this.intervals = [];
+  }
+
+  addRange(left, right) {
+    this.intervals.push([left, right]);
+    this.intervals.sort((a, b) => a[0] - b[0]);
+
+    const merged = [];
+
+    for (const [a, b] of this.intervals) {
+      if (!merged.length || merged[merged.length - 1][1] < a) {
+        merged.push([a, b]);
+      } else {
+        merged[merged.length - 1][1] =
+          Math.max(merged[merged.length - 1][1], b);
+      }
+    }
+
+    this.intervals = merged;
+  }
+
+  queryRange(left, right) {
+    return this.intervals.some(([a, b]) => a <= left && right <= b);
+  }
+
+  removeRange(left, right) {
+    const next = [];
+
+    for (const [a, b] of this.intervals) {
+      if (b <= left || right <= a) {
+        next.push([a, b]);
+      } else {
+        if (a < left) next.push([a, left]);
+        if (right < b) next.push([right, b]);
+      }
+    }
+
+    this.intervals = next;
+  }
 }`,
       timeComplexity: 'O(N) per add/remove, O(N) query',
       spaceComplexity: 'O(N)',
@@ -2487,51 +4041,127 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Flatten & sort intervals, find gaps between non-overlapping merged bounds.',
-      dryRun: 'schedule flattened & sorted -> [1,2],[1,3],[4,10],[5,6] -> merged [1,3],[4,10] -> gap [3,4] -> returns [[3,4]]',
-      javascriptSolution: `function employeeFreeTime(schedule) {
-  const intervals = [];
-  for (const emp of schedule) {
-    for (const [start, end] of emp) {
-      intervals.push([start, end]);
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Flatten & sort intervals, find gaps between non-overlapping merged bounds.',
+      dryRun: 'Easy dry-run:\nschedule flattened & sorted -> [1,2],[1,3],[4,10],[5,6] -> merged [1,3],[4,10] -> gap [3,4] -> returns [[3,4]]\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function employeeFreeTime(schedule) {
+  const all = [];
+
+  for (let i = 0; i < schedule.length; i++) {
+    for (let j = 0; j < schedule[i].length; j++) {
+      all.push([schedule[i][j][0], schedule[i][j][1]]);
     }
   }
-  intervals.sort((a, b) => a[0] - b[0]);
 
-  const res = [];
-  let prevEnd = intervals[0][1];
+  // Manual insertion sort by start time.
+  for (let i = 1; i < all.length; i++) {
+    const value = all[i];
+    let j = i - 1;
+
+    while (j >= 0 && all[j][0] > value[0]) {
+      all[j + 1] = all[j];
+      j--;
+    }
+
+    all[j + 1] = value;
+  }
+
+  const free = [];
+  let end = all[0][1];
+
+  for (let i = 1; i < all.length; i++) {
+    const start = all[i][0];
+    const finish = all[i][1];
+
+    if (start > end) {
+      free.push([end, start]);
+      end = finish;
+    } else if (finish > end) {
+      end = finish;
+    }
+  }
+
+  return free;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function employeeFreeTime(schedule) {
+  const intervals = schedule.flat().slice().sort((a, b) => a[0] - b[0]);
+  const free = [];
+  let end = intervals[0][1];
 
   for (let i = 1; i < intervals.length; i++) {
-    const [start, end] = intervals[i];
-    if (start > prevEnd) {
-      res.push([prevEnd, start]);
+    const [start, finish] = intervals[i];
+
+    if (start > end) {
+      free.push([end, start]);
+      end = finish;
+    } else {
+      end = Math.max(end, finish);
     }
-    prevEnd = Math.max(prevEnd, end);
   }
 
-  return res;
+  return free;
 }`,
-      typescriptSolution: `function employeeFreeTime(schedule: number[][][]): number[][] {
-  const intervals: [number, number][] = [];
-  for (const emp of schedule) {
-    for (const [start, end] of emp) {
-      intervals.push([start as number, end as number]);
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function employeeFreeTime(schedule: any): any {
+  const all = [];
+
+  for (let i = 0; i < schedule.length; i++) {
+    for (let j = 0; j < schedule[i].length; j++) {
+      all.push([schedule[i][j][0], schedule[i][j][1]]);
     }
   }
-  intervals.sort((a, b) => a[0] - b[0]);
 
-  const res: [number, number][] = [];
-  let prevEnd = intervals[0][1];
+  // Manual insertion sort by start time.
+  for (let i = 1; i < all.length; i++) {
+    const value = all[i];
+    let j = i - 1;
+
+    while (j >= 0 && all[j][0] > value[0]) {
+      all[j + 1] = all[j];
+      j--;
+    }
+
+    all[j + 1] = value;
+  }
+
+  const free = [];
+  let end = all[0][1];
+
+  for (let i = 1; i < all.length; i++) {
+    const start = all[i][0];
+    const finish = all[i][1];
+
+    if (start > end) {
+      free.push([end, start]);
+      end = finish;
+    } else if (finish > end) {
+      end = finish;
+    }
+  }
+
+  return free;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function employeeFreeTime(schedule: any): any {
+  const intervals = schedule.flat().slice().sort((a, b) => a[0] - b[0]);
+  const free = [];
+  let end = intervals[0][1];
 
   for (let i = 1; i < intervals.length; i++) {
-    const [start, end] = intervals[i];
-    if (start > prevEnd) {
-      res.push([prevEnd, start]);
+    const [start, finish] = intervals[i];
+
+    if (start > end) {
+      free.push([end, start]);
+      end = finish;
+    } else {
+      end = Math.max(end, finish);
     }
-    prevEnd = Math.max(prevEnd, end);
   }
 
-  return res;
+  return free;
 }`,
       timeComplexity: 'O(N log N)',
       spaceComplexity: 'O(N)',
@@ -2555,7 +4185,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'In an `n x n` grid, elevation at `(r, c)` is `grid[r][c]`. Rain falls such that water depth at time `t` is `t`. Find min time `t` to reach `(n-1, n-1)` starting from `(0, 0)`.',
+      problemStatement: 'In an \`n x n\` grid, elevation at \`(r, c)\` is \`grid[r][c]\`. Rain falls such that water depth at time \`t\` is \`t\`. Find min time \`t\` to reach \`(n-1, n-1)\` starting from \`(0, 0)\`.',
       input: 'grid: number[][]',
       output: 'number — minimum time t',
       constraints: ['n == grid.length == grid[i].length', '1 <= n <= 50', '0 <= grid[r][c] < n^2'],
@@ -2579,57 +4209,239 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Min-Heap Dijkstra finding path that minimizes bottleneck maximum elevation.',
-      dryRun: 'grid=[[0,2],[1,3]] -> start (0,0) max=0 -> pop (0,0) -> add neighbors (0,1) max=2, (1,0) max=1 -> pop (1,0) -> add (1,1) max=3 -> pop (1,1) -> returns 3',
-      javascriptSolution: `function swimInWater(grid) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Min-Heap Dijkstra finding path that minimizes bottleneck maximum elevation.',
+      dryRun: 'Easy dry-run:\ngrid=[[0,2],[1,3]] -> start (0,0) max=0 -> pop (0,0) -> add neighbors (0,1) max=2, (1,0) max=1 -> pop (1,0) -> add (1,1) max=3 -> pop (1,1) -> returns 3\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function swimInWater(grid) {
   const n = grid.length;
-  const visited = Array.from({ length: n }, () => new Array(n).fill(false));
-  const pq = [[grid[0][0], 0, 0]];
-  visited[0][0] = true;
+  const dist = new Array(n);
 
-  const dirs = [[0,1],[1,0],[0,-1],[-1,0]];
+  for (let i = 0; i < n; i++) {
+    dist[i] = new Array(n).fill(Infinity);
+  }
 
-  while (pq.length > 0) {
-    pq.sort((a, b) => a[0] - b[0]);
-    const [elevation, r, c] = pq.shift();
-    if (r === n - 1 && c === n - 1) return elevation;
+  function push(heap, item) {
+    let i = heap.length;
+    heap.push(item);
 
-    for (const [dr, dc] of dirs) {
-      const nr = r + dr;
-      const nc = c + dc;
-      if (nr >= 0 && nr < n && nc >= 0 && nc < n && !visited[nr][nc]) {
-        visited[nr][nc] = true;
-        pq.push([Math.max(elevation, grid[nr][nc]), nr, nc]);
+    while (i > 0) {
+      const parent = Math.floor((i - 1) / 2);
+      if (heap[parent][0] <= heap[i][0]) break;
+
+      const tmp = heap[parent];
+      heap[parent] = heap[i];
+      heap[i] = tmp;
+      i = parent;
+    }
+  }
+
+  function pop(heap) {
+    const top = heap[0];
+    const last = heap.pop();
+
+    if (heap.length > 0) {
+      heap[0] = last;
+      let i = 0;
+
+      while (true) {
+        const left = i * 2 + 1;
+        const right = left + 1;
+        let smallest = i;
+
+        if (left < heap.length && heap[left][0] < heap[smallest][0]) {
+          smallest = left;
+        }
+
+        if (right < heap.length && heap[right][0] < heap[smallest][0]) {
+          smallest = right;
+        }
+
+        if (smallest === i) break;
+
+        const tmp = heap[i];
+        heap[i] = heap[smallest];
+        heap[smallest] = tmp;
+        i = smallest;
+      }
+    }
+
+    return top;
+  }
+
+  const heap = [];
+  push(heap, [grid[0][0], 0, 0]);
+  dist[0][0] = grid[0][0];
+
+  const directions = [[1,0],[-1,0],[0,1],[0,-1]];
+
+  while (heap.length > 0) {
+    const [cost, r, c] = pop(heap);
+
+    if (cost !== dist[r][c]) continue;
+    if (r === n - 1 && c === n - 1) return cost;
+
+    for (let i = 0; i < directions.length; i++) {
+      const nr = r + directions[i][0];
+      const nc = c + directions[i][1];
+
+      if (nr < 0 || nr >= n || nc < 0 || nc >= n) continue;
+
+      const nextCost =
+        cost > grid[nr][nc] ? cost : grid[nr][nc];
+
+      if (nextCost < dist[nr][nc]) {
+        dist[nr][nc] = nextCost;
+        push(heap, [nextCost, nr, nc]);
       }
     }
   }
 
-  return 0;
+  return -1;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function swimInWater(grid) {
+  const n = grid.length;
+  const heap = [[grid[0][0], 0, 0]];
+  const visited = new Set();
+
+  while (heap.length) {
+    heap.sort((a, b) => a[0] - b[0]);
+    const [cost, r, c] = heap.shift();
+    const key = \`\${r},\${c}\`;
+
+    if (visited.has(key)) continue;
+    visited.add(key);
+
+    if (r === n - 1 && c === n - 1) return cost;
+
+    for (const [dr, dc] of [[1,0],[-1,0],[0,1],[0,-1]]) {
+      const nr = r + dr;
+      const nc = c + dc;
+
+      if (nr < 0 || nr >= n || nc < 0 || nc >= n) continue;
+
+      heap.push([Math.max(cost, grid[nr][nc]), nr, nc]);
+    }
+  }
+
+  return -1;
 }`,
-      typescriptSolution: `function swimInWater(grid: number[][]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function swimInWater(grid: number[][]): number {
   const n = grid.length;
-  const visited: boolean[][] = Array.from({ length: n }, () => new Array(n).fill(false));
-  const pq: [number, number, number][] = [[grid[0][0], 0, 0]];
-  visited[0][0] = true;
+  const dist = new Array(n);
 
-  const dirs = [[0,1],[1,0],[0,-1],[-1,0]];
+  for (let i = 0; i < n; i++) {
+    dist[i] = new Array(n).fill(Infinity);
+  }
 
-  while (pq.length > 0) {
-    pq.sort((a, b) => a[0] - b[0]);
-    const [elevation, r, c] = pq.shift()!;
-    if (r === n - 1 && c === n - 1) return elevation;
+  function push(heap: any, item: any): any {
+    let i = heap.length;
+    heap.push(item);
 
-    for (const [dr, dc] of dirs) {
-      const nr = r + dr;
-      const nc = c + dc;
-      if (nr >= 0 && nr < n && nc >= 0 && nc < n && !visited[nr][nc]) {
-        visited[nr][nc] = true;
-        pq.push([Math.max(elevation, grid[nr][nc]), nr, nc]);
+    while (i > 0) {
+      const parent = Math.floor((i - 1) / 2);
+      if (heap[parent][0] <= heap[i][0]) break;
+
+      const tmp = heap[parent];
+      heap[parent] = heap[i];
+      heap[i] = tmp;
+      i = parent;
+    }
+  }
+
+  function pop(heap: any): any {
+    const top = heap[0];
+    const last = heap.pop();
+
+    if (heap.length > 0) {
+      heap[0] = last;
+      let i = 0;
+
+      while (true) {
+        const left = i * 2 + 1;
+        const right = left + 1;
+        let smallest = i;
+
+        if (left < heap.length && heap[left][0] < heap[smallest][0]) {
+          smallest = left;
+        }
+
+        if (right < heap.length && heap[right][0] < heap[smallest][0]) {
+          smallest = right;
+        }
+
+        if (smallest === i) break;
+
+        const tmp = heap[i];
+        heap[i] = heap[smallest];
+        heap[smallest] = tmp;
+        i = smallest;
+      }
+    }
+
+    return top;
+  }
+
+  const heap = [];
+  push(heap, [grid[0][0], 0, 0]);
+  dist[0][0] = grid[0][0];
+
+  const directions = [[1,0],[-1,0],[0,1],[0,-1]];
+
+  while (heap.length > 0) {
+    const [cost, r, c] = pop(heap);
+
+    if (cost !== dist[r][c]) continue;
+    if (r === n - 1 && c === n - 1) return cost;
+
+    for (let i = 0; i < directions.length; i++) {
+      const nr = r + directions[i][0];
+      const nc = c + directions[i][1];
+
+      if (nr < 0 || nr >= n || nc < 0 || nc >= n) continue;
+
+      const nextCost =
+        cost > grid[nr][nc] ? cost : grid[nr][nc];
+
+      if (nextCost < dist[nr][nc]) {
+        dist[nr][nc] = nextCost;
+        push(heap, [nextCost, nr, nc]);
       }
     }
   }
 
-  return 0;
+  return -1;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function swimInWater(grid: number[][]): number {
+  const n = grid.length;
+  const heap = [[grid[0][0], 0, 0]];
+  const visited = new Set();
+
+  while (heap.length) {
+    heap.sort((a, b) => a[0] - b[0]);
+    const [cost, r, c] = heap.shift();
+    const key = \`\${r},\${c}\`;
+
+    if (visited.has(key)) continue;
+    visited.add(key);
+
+    if (r === n - 1 && c === n - 1) return cost;
+
+    for (const [dr, dc] of [[1,0],[-1,0],[0,1],[0,-1]]) {
+      const nr = r + dr;
+      const nc = c + dc;
+
+      if (nr < 0 || nr >= n || nc < 0 || nc >= n) continue;
+
+      heap.push([Math.max(cost, grid[nr][nc]), nr, nc]);
+    }
+  }
+
+  return -1;
 }`,
       timeComplexity: 'O(N^2 log N)',
       spaceComplexity: 'O(N^2)',
@@ -2653,7 +4465,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Design a stack-like data structure `FreqStack` that pushes integers and pops the most frequent element. If there is a tie, pop the element closest to top of stack.',
+      problemStatement: 'Design a stack-like data structure \`FreqStack\` that pushes integers and pops the most frequent element. If there is a tie, pop the element closest to top of stack.',
       input: 'val: number',
       output: 'number',
       constraints: ['0 <= val <= 10^9', 'At most 2 * 10^4 calls will be made to push and pop.'],
@@ -2677,13 +4489,81 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Frequency-indexed stacks maintaining O(1) push and O(1) pop.',
-      dryRun: 'push 5,7,5,7,4,5 -> maxFreq=3 -> groupMap[3]=[5] -> pop returns 5, maxFreq=2',
-      javascriptSolution: `function maxFreqStack(val) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Frequency-indexed stacks maintaining O(1) push and O(1) pop.',
+      dryRun: 'Easy dry-run:\npush 5,7,5,7,4,5 -> maxFreq=3 -> groupMap[3]=[5] -> pop returns 5, maxFreq=2\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxFreqStack(val) {
   return val;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+class FreqStack {
+  constructor() {
+    this.frequency = new Map();
+    this.groups = new Map();
+    this.maxFreq = 0;
+  }
+
+  push(val) {
+    const freq = (this.frequency.get(val) || 0) + 1;
+    this.frequency.set(val, freq);
+
+    if (!this.groups.has(freq)) this.groups.set(freq, []);
+    this.groups.get(freq).push(val);
+
+    this.maxFreq = Math.max(this.maxFreq, freq);
+  }
+
+  pop() {
+    const group = this.groups.get(this.maxFreq);
+    const val = group.pop();
+
+    this.frequency.set(val, this.frequency.get(val) - 1);
+
+    if (group.length === 0) {
+      this.groups.delete(this.maxFreq);
+      this.maxFreq--;
+    }
+
+    return val;
+  }
 }`,
-      typescriptSolution: `function maxFreqStack(val: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function maxFreqStack(val: number): number {
   return val;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+class FreqStack {
+  constructor() {
+    this.frequency = new Map();
+    this.groups = new Map();
+    this.maxFreq = 0;
+  }
+
+  push(val) {
+    const freq = (this.frequency.get(val) || 0) + 1;
+    this.frequency.set(val, freq);
+
+    if (!this.groups.has(freq)) this.groups.set(freq, []);
+    this.groups.get(freq).push(val);
+
+    this.maxFreq = Math.max(this.maxFreq, freq);
+  }
+
+  pop() {
+    const group = this.groups.get(this.maxFreq);
+    const val = group.pop();
+
+    this.frequency.set(val, this.frequency.get(val) - 1);
+
+    if (group.length === 0) {
+      this.groups.delete(this.maxFreq);
+      this.maxFreq--;
+    }
+
+    return val;
+  }
 }`,
       timeComplexity: 'O(1) push and pop',
       spaceComplexity: 'O(N)',
@@ -2707,7 +4587,7 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       attempted: false,
       bookmarked: false,
       questionType: 'coding',
-      problemStatement: 'Given `n` jobs where job `i` starts at `startTime[i]`, ends at `endTime[i]`, and yields `profit[i]`, return max profit such that no two jobs in subset overlap.',
+      problemStatement: 'Given \`n\` jobs where job \`i\` starts at \`startTime[i]\`, ends at \`endTime[i]\`, and yields \`profit[i]\`, return max profit such that no two jobs in subset overlap.',
       input: 'startTime: number[], endTime: number[], profit: number[]',
       output: 'number — maximum non-overlapping profit',
       constraints: ['1 <= startTime.length == endTime.length == profit.length <= 5 * 10^4', '1 <= startTime[i] < endTime[i] <= 10^9'],
@@ -2731,67 +4611,189 @@ export const MOCK_DSA_150_CURATED_CODING_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm: 'Sort jobs by end time, 1D DP with Binary Search.',
-      dryRun: 'jobs sorted by end -> job 1 (1-3, 50), job 4 (3-6, 70) -> binary search previous non-overlapping -> max 120',
-      javascriptSolution: `function jobScheduling(startTime, endTime, profit) {
+      algorithm: 'Step 1: Understand the input, output, and edge cases.\nStep 2: Identify the data structure / DSA pattern and initialize the required state.\nStep 3: Process the input one step at a time and update that state using the core idea.\nStep 4: Return the final state/value after all required checks.\n\nCore idea: Step 1: Sort jobs by end time ascending.\nStep 2: Use DP table where dp[i] is max profit considering first i jobs.\nStep 3: For job i, binary search latest job j whose end <= job.start. dp[i] = max(dp[i-1], job.profit + dp[j]).\nStep 4: Sort jobs by end time, 1D DP with Binary Search.\nStep 5: jobs sorted by end -> job 1 (1-3, 50), job 4 (3-6, 70) -> binary search previous non-overlapping -> max 120\n\nCore idea: Sort jobs by end time, 1D DP with Binary Search.',
+      dryRun: 'Easy dry-run:\njobs sorted by end -> job 1 (1-3, 50), job 4 (3-6, 70) -> binary search previous non-overlapping -> max 120\n\nInterview method: follow one pointer/state change at a time.',
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function jobScheduling(startTime, endTime, profit) {
   const jobs = [];
+
+  // Manual insertion sort by end time.
   for (let i = 0; i < startTime.length; i++) {
-    jobs.push({ start: startTime[i], end: endTime[i], profit: profit[i] });
+    const job = [startTime[i], endTime[i], profit[i]];
+    let position = 0;
+
+    while (position < jobs.length && jobs[position][1] <= job[1]) {
+      position++;
+    }
+
+    for (let j = jobs.length; j > position; j--) {
+      jobs[j] = jobs[j - 1];
+    }
+
+    jobs[position] = job;
   }
-  jobs.sort((a, b) => a.end - b.end);
 
-  const dp = [[0, 0]]; // [endTime, maxProfit]
+  const dp = new Array(jobs.length + 1).fill(0);
 
-  for (const job of jobs) {
-    let l = 0;
-    let r = dp.length - 1;
-    let idx = 0;
-    while (l <= r) {
-      const mid = Math.floor((l + r) / 2);
-      if (dp[mid][0] <= job.start) {
-        idx = mid;
-        l = mid + 1;
+  function previousJob(index, start) {
+    let left = 0;
+    let right = index - 1;
+    let answer = 0;
+
+    while (left <= right) {
+      const mid = Math.floor((left + right) / 2);
+
+      if (jobs[mid][1] <= start) {
+        answer = mid + 1;
+        left = mid + 1;
       } else {
-        r = mid - 1;
+        right = mid - 1;
       }
     }
-    const maxProfitWithJob = dp[idx][1] + job.profit;
-    if (maxProfitWithJob > dp[dp.length - 1][1]) {
-      dp.push([job.end, maxProfitWithJob]);
-    }
+
+    return answer;
   }
 
-  return dp[dp.length - 1][1];
+  for (let i = 1; i <= jobs.length; i++) {
+    const job = jobs[i - 1];
+    const previous = previousJob(i - 1, job[0]);
+    const take = job[2] + dp[previous];
+
+    dp[i] = take > dp[i - 1] ? take : dp[i - 1];
+  }
+
+  return dp[jobs.length];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function jobScheduling(startTime, endTime, profit) {
+  const jobs = startTime
+    .map((start, i) => [start, endTime[i], profit[i]])
+    .sort((a, b) => a[1] - b[1]);
+
+  const dp = new Array(jobs.length + 1).fill(0);
+
+  function previousJob(index, start) {
+    let left = 0;
+    let right = index - 1;
+    let answer = 0;
+
+    while (left <= right) {
+      const mid = Math.floor((left + right) / 2);
+
+      if (jobs[mid][1] <= start) {
+        answer = mid + 1;
+        left = mid + 1;
+      } else {
+        right = mid - 1;
+      }
+    }
+
+    return answer;
+  }
+
+  for (let i = 1; i <= jobs.length; i++) {
+    const [start, end, money] = jobs[i - 1];
+    const previous = previousJob(i - 1, start);
+
+    dp[i] = Math.max(
+      dp[i - 1],
+      money + dp[previous],
+    );
+  }
+
+  return dp[jobs.length];
 }`,
-      typescriptSolution: `function jobScheduling(startTime: number[], endTime: number[], profit: number[]): number {
-  const jobs: { start: number; end: number; profit: number }[] = [];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function jobScheduling(startTime: number[], endTime: number[], profit: number[]): number {
+  const jobs = [];
+
+  // Manual insertion sort by end time.
   for (let i = 0; i < startTime.length; i++) {
-    jobs.push({ start: startTime[i], end: endTime[i], profit: profit[i] });
+    const job = [startTime[i], endTime[i], profit[i]];
+    let position = 0;
+
+    while (position < jobs.length && jobs[position][1] <= job[1]) {
+      position++;
+    }
+
+    for (let j = jobs.length; j > position; j--) {
+      jobs[j] = jobs[j - 1];
+    }
+
+    jobs[position] = job;
   }
-  jobs.sort((a, b) => a.end - b.end);
 
-  const dp: [number, number][] = [[0, 0]];
+  const dp = new Array(jobs.length + 1).fill(0);
 
-  for (const job of jobs) {
-    let l = 0;
-    let r = dp.length - 1;
-    let idx = 0;
-    while (l <= r) {
-      const mid = Math.floor((l + r) / 2);
-      if (dp[mid][0] <= job.start) {
-        idx = mid;
-        l = mid + 1;
+  function previousJob(index: any, start: any): any {
+    let left = 0;
+    let right = index - 1;
+    let answer = 0;
+
+    while (left <= right) {
+      const mid = Math.floor((left + right) / 2);
+
+      if (jobs[mid][1] <= start) {
+        answer = mid + 1;
+        left = mid + 1;
       } else {
-        r = mid - 1;
+        right = mid - 1;
       }
     }
-    const maxProfitWithJob = dp[idx][1] + job.profit;
-    if (maxProfitWithJob > dp[dp.length - 1][1]) {
-      dp.push([job.end, maxProfitWithJob]);
-    }
+
+    return answer;
   }
 
-  return dp[dp.length - 1][1];
+  for (let i = 1; i <= jobs.length; i++) {
+    const job = jobs[i - 1];
+    const previous = previousJob(i - 1, job[0]);
+    const take = job[2] + dp[previous];
+
+    dp[i] = take > dp[i - 1] ? take : dp[i - 1];
+  }
+
+  return dp[jobs.length];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function jobScheduling(startTime: number[], endTime: number[], profit: number[]): number {
+  const jobs = startTime
+    .map((start, i) => [start, endTime[i], profit[i]])
+    .sort((a, b) => a[1] - b[1]);
+
+  const dp = new Array(jobs.length + 1).fill(0);
+
+  function previousJob(index: any, start: any): any {
+    let left = 0;
+    let right = index - 1;
+    let answer = 0;
+
+    while (left <= right) {
+      const mid = Math.floor((left + right) / 2);
+
+      if (jobs[mid][1] <= start) {
+        answer = mid + 1;
+        left = mid + 1;
+      } else {
+        right = mid - 1;
+      }
+    }
+
+    return answer;
+  }
+
+  for (let i = 1; i <= jobs.length; i++) {
+    const [start, end, money] = jobs[i - 1];
+    const previous = previousJob(i - 1, start);
+
+    dp[i] = Math.max(
+      dp[i - 1],
+      money + dp[previous],
+    );
+  }
+
+  return dp[jobs.length];
 }`,
       timeComplexity: 'O(N log N)',
       spaceComplexity: 'O(N)',

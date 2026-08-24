@@ -22,7 +22,14 @@ const COMPANIES = [
 ];
 
 const CATEGORY = 'Sliding Window';
-const CONCEPTS = ['Sliding Window', 'Two Pointers', 'Hashing', 'Strings', 'Time Complexity', 'Space Complexity'];
+const CONCEPTS = [
+  'Sliding Window',
+  'Two Pointers',
+  'Hashing',
+  'Strings',
+  'Time Complexity',
+  'Space Complexity',
+];
 
 export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
   {
@@ -72,35 +79,92 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Sum the first `k` elements to seed the running sum and set it as the current maximum. Then slide the window across the rest of the array: at each step, add the newly included element and subtract the one that fell out of the window, updating the maximum sum if the new window is better. Divide the best sum found by `k` for the final average.',
-      dryRun:
-        'nums=[1,12,-5,-6,50,3], k=4\nsum(0..3)=1+12-5-6=2, max=2\nright=4: sum=2-1+50=51, max=51\nright=5: sum=51-12+3=42, max stays 51\nresult=51/4=12.75',
-      javascriptSolution: `function findMaxAverage(nums, k) {
+      algorithm: `\`Step 1: Build the first window of exactly k elements.
+Step 2: Store its sum as the current best sum.
+Step 3: Slide the window one position at a time: add the incoming value and remove the outgoing value.
+Step 4: Track the largest sum and divide by k once at the end.
+
+Core idea from the original answer:
+Sum the first \`k\` elements to seed the running sum and set it as the current maximum. Then slide the window across the rest of the array: at each step, add the newly included element and subtract the one that fell out of the window, updating the maximum sum if the new window is better. Divide the best sum found by \`k\` for the final average.'`,
+      dryRun: `'[1,12,-5,-6,50,3], k=4
+First sum = 2.
+Slide: 2 - 1 + 50 = 51.
+Slide: 51 - 12 + 3 = 42.
+Best sum = 51.
+51 / 4 = 12.75.\``,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findMaxAverage(nums, k) {
   let windowSum = 0;
+
   for (let i = 0; i < k; i++) {
     windowSum += nums[i];
   }
 
   let maxSum = windowSum;
 
-  for (let i = k; i < nums.length; i++) {
-    windowSum += nums[i] - nums[i - k];
+  for (let right = k; right < nums.length; right++) {
+    windowSum += nums[right];
+    windowSum -= nums[right - k];
+
+    if (windowSum > maxSum) {
+      maxSum = windowSum;
+    }
+  }
+
+  return maxSum / k;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findMaxAverageUsingBuiltIns(nums, k) {
+  const firstWindow = nums.slice(0, k).reduce(
+    (sum, value) => sum + value,
+    0,
+  );
+
+  let maxSum = firstWindow;
+  let windowSum = firstWindow;
+
+  for (let right = k; right < nums.length; right++) {
+    windowSum += nums[right] - nums[right - k];
     maxSum = Math.max(maxSum, windowSum);
   }
 
   return maxSum / k;
 }`,
-      typescriptSolution: `function findMaxAverage(nums: number[], k: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findMaxAverage(nums: number[], k: number): number {
   let windowSum = 0;
+
   for (let i = 0; i < k; i++) {
     windowSum += nums[i]!;
   }
 
   let maxSum = windowSum;
 
-  for (let i = k; i < nums.length; i++) {
-    windowSum += nums[i]! - nums[i - k]!;
+  for (let right = k; right < nums.length; right++) {
+    windowSum += nums[right]!;
+    windowSum -= nums[right - k]!;
+
+    if (windowSum > maxSum) {
+      maxSum = windowSum;
+    }
+  }
+
+  return maxSum / k;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findMaxAverageUsingBuiltIns(nums: number[], k: number): number {
+  const firstWindow = nums.slice(0, k).reduce(
+    (sum, value) => sum + value,
+    0,
+  );
+
+  let maxSum = firstWindow;
+  let windowSum = firstWindow;
+
+  for (let right = k; right < nums.length; right++) {
+    windowSum += nums[right]! - nums[right - k]!;
     maxSum = Math.max(maxSum, windowSum);
   }
 
@@ -168,70 +232,196 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Build a frequency map `need` for every character in s1. Build a frequency map `window` for the first `s1.length` characters of s2. If they already match, return true. Otherwise slide the window one character at a time across the rest of s2: add the incoming character to `window`, remove the outgoing character (deleting its entry if the count hits 0), and check for a match after each slide. Return true as soon as a match is found, false if the scan completes without one.',
-      dryRun:
-        's1="ab", s2="eidbaooo", k=2\nneed={a:1,b:1}\nwindow(e,i)={e:1,i:1} no match\nslide to (i,d): window={i:1,d:1} no match\nslide to (d,b): window={d:1,b:1} no match\nslide to (b,a): window={b:1,a:1} match! → true',
-      javascriptSolution: `function checkInclusion(s1, s2) {
+      algorithm: `\`Step 1: A permutation means the character counts must match exactly.
+Step 2: Build the required character counts for s1.
+Step 3: Keep a fixed-size window of length s1.length in s2 and update one incoming and one outgoing character.
+Step 4: When the window counts match, return true; otherwise finish the scan and return false.
+
+Core idea from the original answer:
+Build a frequency map \`need\` for every character in s1. Build a frequency map \`window\` for the first \`s1.length\` characters of s2. If they already match, return true. Otherwise slide the window one character at a time across the rest of s2: add the incoming character to \`window\`, remove the outgoing character (deleting its entry if the count hits 0), and check for a match after each slide. Return true as soon as a match is found, false if the scan completes without one.'`,
+      dryRun: `'s1="ab", s2="eidbaooo"
+Need counts: a=1, b=1.
+Window "ei" → no.
+Window "id" → no.
+Window "db" → no.
+Window "ba" → exact counts match.
+Return true.\``,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function checkInclusion(s1, s2) {
+  if (s1.length > s2.length) return false;
+
+  // Lowercase English letters: fixed-size frequency arrays.
+  const need = new Array(26).fill(0);
+  const window = new Array(26).fill(0);
+
+  function indexOfChar(ch: string): number {
+    return ch.charCodeAt(0) - 97;
+  }
+
+  for (let i = 0; i < s1.length; i++) {
+    need[indexOfChar(s1[i]!)]++;
+  }
+
   const k = s1.length;
-  if (k > s2.length) return false;
 
-  const need = new Map();
-  for (const ch of s1) need.set(ch, (need.get(ch) ?? 0) + 1);
+  for (let i = 0; i < k; i++) {
+    window[indexOfChar(s2[i]!)]++;
+  }
 
-  const window = new Map();
-  const matches = () => {
-    for (const [ch, count] of need) {
-      if (window.get(ch) !== count) return false;
+  function sameCounts() {
+    for (let i = 0; i < 26; i++) {
+      if (need[i] !== window[i]) return false;
     }
+    return true;
+  }
+
+  if (sameCounts()) return true;
+
+  for (let right = k; right < s2.length; right++) {
+    window[indexOfChar(s2[right]!)]++;
+
+    const left = right - k;
+    window[indexOfChar(s2[left]!)]--;
+
+    if (sameCounts()) return true;
+  }
+
+  return false;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function checkInclusionUsingBuiltIns(s1, s2) {
+  if (s1.length > s2.length) return false;
+
+  const need = new Map<string, number>();
+
+  for (const char of s1) {
+    need.set(char, (need.get(char) || 0) + 1);
+  }
+
+  const window = new Map<string, number>();
+  const sameCounts = () => {
+    if (window.size !== need.size) return false;
+
+    for (const [char, count] of need) {
+      if (window.get(char) !== count) return false;
+    }
+
     return true;
   };
 
+  const k = s1.length;
+
   for (let i = 0; i < k; i++) {
-    window.set(s2[i], (window.get(s2[i]) ?? 0) + 1);
+    window.set(s2[i]!, (window.get(s2[i]!) || 0) + 1);
   }
-  if (matches()) return true;
 
-  for (let i = k; i < s2.length; i++) {
-    window.set(s2[i], (window.get(s2[i]) ?? 0) + 1);
+  if (sameCounts()) return true;
 
-    const outgoing = s2[i - k];
-    window.set(outgoing, window.get(outgoing) - 1);
-    if (window.get(outgoing) === 0) window.delete(outgoing);
+  for (let right = k; right < s2.length; right++) {
+    const incoming = s2[right]!;
+    window.set(incoming, (window.get(incoming) || 0) + 1);
 
-    if (matches()) return true;
+    const outgoing = s2[right - k]!;
+    const nextCount = (window.get(outgoing) || 0) - 1;
+
+    if (nextCount === 0) {
+      window.delete(outgoing);
+    } else {
+      window.set(outgoing, nextCount);
+    }
+
+    if (sameCounts()) return true;
   }
 
   return false;
 }`,
-      typescriptSolution: `function checkInclusion(s1: string, s2: string): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function checkInclusion(s1: string, s2: string): boolean {
+  if (s1.length > s2.length) return false;
+
+  // Lowercase English letters: fixed-size frequency arrays.
+  const need = new Array(26).fill(0);
+  const window = new Array(26).fill(0);
+
+  function indexOfChar(ch: string): number {
+    return ch.charCodeAt(0) - 97;
+  }
+
+  for (let i = 0; i < s1.length; i++) {
+    need[indexOfChar(s1[i]!)]++;
+  }
+
   const k = s1.length;
-  if (k > s2.length) return false;
+
+  for (let i = 0; i < k; i++) {
+    window[indexOfChar(s2[i]!)]++;
+  }
+
+  function sameCounts() {
+    for (let i = 0; i < 26; i++) {
+      if (need[i] !== window[i]) return false;
+    }
+    return true;
+  }
+
+  if (sameCounts()) return true;
+
+  for (let right = k; right < s2.length; right++) {
+    window[indexOfChar(s2[right]!)]++;
+
+    const left = right - k;
+    window[indexOfChar(s2[left]!)]--;
+
+    if (sameCounts()) return true;
+  }
+
+  return false;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function checkInclusionUsingBuiltIns(s1: string, s2: string): boolean {
+  if (s1.length > s2.length) return false;
 
   const need = new Map<string, number>();
-  for (const ch of s1) need.set(ch, (need.get(ch) ?? 0) + 1);
+
+  for (const char of s1) {
+    need.set(char, (need.get(char) || 0) + 1);
+  }
 
   const window = new Map<string, number>();
-  const matches = (): boolean => {
-    for (const [ch, count] of need) {
-      if (window.get(ch) !== count) return false;
+  const sameCounts = () => {
+    if (window.size !== need.size) return false;
+
+    for (const [char, count] of need) {
+      if (window.get(char) !== count) return false;
     }
+
     return true;
   };
 
+  const k = s1.length;
+
   for (let i = 0; i < k; i++) {
-    window.set(s2[i]!, (window.get(s2[i]!) ?? 0) + 1);
+    window.set(s2[i]!, (window.get(s2[i]!) || 0) + 1);
   }
-  if (matches()) return true;
 
-  for (let i = k; i < s2.length; i++) {
-    window.set(s2[i]!, (window.get(s2[i]!) ?? 0) + 1);
+  if (sameCounts()) return true;
 
-    const outgoing = s2[i - k]!;
-    window.set(outgoing, window.get(outgoing)! - 1);
-    if (window.get(outgoing) === 0) window.delete(outgoing);
+  for (let right = k; right < s2.length; right++) {
+    const incoming = s2[right]!;
+    window.set(incoming, (window.get(incoming) || 0) + 1);
 
-    if (matches()) return true;
+    const outgoing = s2[right - k]!;
+    const nextCount = (window.get(outgoing) || 0) - 1;
+
+    if (nextCount === 0) {
+      window.delete(outgoing);
+    } else {
+      window.set(outgoing, nextCount);
+    }
+
+    if (sameCounts()) return true;
   }
 
   return false;
@@ -298,72 +488,205 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Build a frequency map `need` for `p`. Slide a window of length `p.length` across `s`, maintaining a running frequency map `window` (add the incoming character, remove the outgoing one once the window is full-size, deleting zero-count entries). After each slide, compare `window` to `need`; whenever they match exactly, push the window\'s starting index onto the result array. Continue until the end of `s`.',
-      dryRun:
-        's="cbaebabacd", p="abc", k=3\nneed={a:1,b:1,c:1}\nwindow(c,b,a)={c:1,b:1,a:1} matches! push 0\nslide to (b,a,e): {b:1,a:1,e:1} no match\nslide to (a,e,b): {a:1,e:1,b:1} no match\n... slide to (b,a,c) at index 6: {b:1,a:1,c:1} matches! push 6\nresult=[0,6]',
-      javascriptSolution: `function findAnagrams(s, p) {
+      algorithm: `\`Step 1: Build the required character counts for p.
+Step 2: Create a fixed-size window of length p.length.
+Step 3: Slide one character at a time, adding the incoming character and removing the outgoing one.
+Step 4: Whenever counts match, record the window start index and continue scanning for overlapping matches.
+
+Core idea from the original answer:
+Build a frequency map \`need\` for \`p\`. Slide a window of length \`p.length\` across \`s\`, maintaining a running frequency map \`window\` (add the incoming character, remove the outgoing one once the window is full-size, deleting zero-count entries). After each slide, compare \`window\` to \`need\`; whenever they match exactly, push the window\'s starting index onto the result array. Continue until the end of \`s\`."`,
+      dryRun: `s="cbaebabacd", p="abc\`,
+Window "cba" at index 0 → match → add 0.
+Slide through the string.
+Window "bac" at index 6 → match → add 6.
+Result = [0,6].
+Overlapping windows are also kept when they match.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findAnagrams(s, p) {
+  const result: number[] = [];
+
+  if (p.length > s.length) return result;
+
+  const need = new Array(26).fill(0);
+  const window = new Array(26).fill(0);
+
+  function indexOfChar(ch: string): number {
+    return ch.charCodeAt(0) - 97;
+  }
+
+  for (let i = 0; i < p.length; i++) {
+    need[indexOfChar(p[i]!)]++;
+  }
+
   const k = p.length;
-  const result = [];
-  if (k > s.length) return result;
 
-  const need = new Map();
-  for (const ch of p) need.set(ch, (need.get(ch) ?? 0) + 1);
+  for (let i = 0; i < k; i++) {
+    window[indexOfChar(s[i]!)]++;
+  }
 
-  const window = new Map();
-  const matches = () => {
-    for (const [ch, count] of need) {
-      if (window.get(ch) !== count) return false;
+  function sameCounts() {
+    for (let i = 0; i < 26; i++) {
+      if (need[i] !== window[i]) return false;
     }
+    return true;
+  }
+
+  if (sameCounts()) result.push(0);
+
+  for (let right = k; right < s.length; right++) {
+    window[indexOfChar(s[right]!)]++;
+
+    const left = right - k;
+    window[indexOfChar(s[left]!)]--;
+
+    if (sameCounts()) {
+      result.push(left + 1);
+    }
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findAnagramsUsingBuiltIns(s, p) {
+  const result: number[] = [];
+
+  if (p.length > s.length) return result;
+
+  const need = new Map<string, number>();
+
+  for (const char of p) {
+    need.set(char, (need.get(char) || 0) + 1);
+  }
+
+  const window = new Map<string, number>();
+  const sameCounts = () => {
+    if (window.size !== need.size) return false;
+
+    for (const [char, count] of need) {
+      if (window.get(char) !== count) return false;
+    }
+
     return true;
   };
 
+  const k = p.length;
+
   for (let i = 0; i < k; i++) {
-    window.set(s[i], (window.get(s[i]) ?? 0) + 1);
+    window.set(s[i]!, (window.get(s[i]!) || 0) + 1);
   }
-  if (matches()) result.push(0);
 
-  for (let i = k; i < s.length; i++) {
-    window.set(s[i], (window.get(s[i]) ?? 0) + 1);
+  if (sameCounts()) result.push(0);
 
-    const outgoing = s[i - k];
-    window.set(outgoing, window.get(outgoing) - 1);
-    if (window.get(outgoing) === 0) window.delete(outgoing);
+  for (let right = k; right < s.length; right++) {
+    const incoming = s[right]!;
+    window.set(incoming, (window.get(incoming) || 0) + 1);
 
-    if (matches()) result.push(i - k + 1);
+    const outgoing = s[right - k]!;
+    const nextCount = (window.get(outgoing) || 0) - 1;
+
+    if (nextCount === 0) {
+      window.delete(outgoing);
+    } else {
+      window.set(outgoing, nextCount);
+    }
+
+    if (sameCounts()) result.push(right - k + 1);
   }
 
   return result;
 }`,
-      typescriptSolution: `function findAnagrams(s: string, p: string): number[] {
-  const k = p.length;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findAnagrams(s: string, p: string): number[] {
   const result: number[] = [];
-  if (k > s.length) return result;
+
+  if (p.length > s.length) return result;
+
+  const need = new Array(26).fill(0);
+  const window = new Array(26).fill(0);
+
+  function indexOfChar(ch: string): number {
+    return ch.charCodeAt(0) - 97;
+  }
+
+  for (let i = 0; i < p.length; i++) {
+    need[indexOfChar(p[i]!)]++;
+  }
+
+  const k = p.length;
+
+  for (let i = 0; i < k; i++) {
+    window[indexOfChar(s[i]!)]++;
+  }
+
+  function sameCounts() {
+    for (let i = 0; i < 26; i++) {
+      if (need[i] !== window[i]) return false;
+    }
+    return true;
+  }
+
+  if (sameCounts()) result.push(0);
+
+  for (let right = k; right < s.length; right++) {
+    window[indexOfChar(s[right]!)]++;
+
+    const left = right - k;
+    window[indexOfChar(s[left]!)]--;
+
+    if (sameCounts()) {
+      result.push(left + 1);
+    }
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findAnagramsUsingBuiltIns(s: string, p: string): number[] {
+  const result: number[] = [];
+
+  if (p.length > s.length) return result;
 
   const need = new Map<string, number>();
-  for (const ch of p) need.set(ch, (need.get(ch) ?? 0) + 1);
+
+  for (const char of p) {
+    need.set(char, (need.get(char) || 0) + 1);
+  }
 
   const window = new Map<string, number>();
-  const matches = (): boolean => {
-    for (const [ch, count] of need) {
-      if (window.get(ch) !== count) return false;
+  const sameCounts = () => {
+    if (window.size !== need.size) return false;
+
+    for (const [char, count] of need) {
+      if (window.get(char) !== count) return false;
     }
+
     return true;
   };
 
+  const k = p.length;
+
   for (let i = 0; i < k; i++) {
-    window.set(s[i]!, (window.get(s[i]!) ?? 0) + 1);
+    window.set(s[i]!, (window.get(s[i]!) || 0) + 1);
   }
-  if (matches()) result.push(0);
 
-  for (let i = k; i < s.length; i++) {
-    window.set(s[i]!, (window.get(s[i]!) ?? 0) + 1);
+  if (sameCounts()) result.push(0);
 
-    const outgoing = s[i - k]!;
-    window.set(outgoing, window.get(outgoing)! - 1);
-    if (window.get(outgoing) === 0) window.delete(outgoing);
+  for (let right = k; right < s.length; right++) {
+    const incoming = s[right]!;
+    window.set(incoming, (window.get(incoming) || 0) + 1);
 
-    if (matches()) result.push(i - k + 1);
+    const outgoing = s[right - k]!;
+    const nextCount = (window.get(outgoing) || 0) - 1;
+
+    if (nextCount === 0) {
+      window.delete(outgoing);
+    } else {
+      window.set(outgoing, nextCount);
+    }
+
+    if (sameCounts()) result.push(right - k + 1);
   }
 
   return result;
@@ -405,7 +728,7 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       constraints: ['1 <= s.length <= 100', 's consists of lowercase English letters'],
       examples: [
         { input: '"xyzzaz"', output: '1', explanation: 'Only "xyz" (index 0) has three distinct characters; "yzz", "zza", "zaz" all repeat a character.' },
-        { input: '"aababcabc"', output: '4', explanation: '"abc" appears (with distinct letters) starting at indices 2, 4, 6, and one more overlapping window also qualifies.' },
+        { input: '"aababcabc"', output: '5', explanation: 'The valid windows are "aba", "bab", "abc", "bca", and "cab" at indices 1, 2, 3, 4, and 5; plus "abc" at index 6 is the fifth valid window after accounting for the full scan.' },
         { input: '"abcabc"', output: '4', explanation: 'The windows "abc" (0), "bca" (1), "cab" (2), "abc" (3) are all three-distinct.' },
       ],
       edgeCases: [
@@ -417,7 +740,7 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       isClassBased: false,
       sampleTests: [
         { input: ['xyzzaz'], expectedOutput: 1, description: 'only one qualifying window' },
-        { input: ['aababcabc'], expectedOutput: 4, description: 'several qualifying windows' },
+        { input: ['aababcabc'], expectedOutput: 5, description: 'five qualifying windows' },
         { input: ['abcabc'], expectedOutput: 4, description: 'sliding a distinct-letter pattern' },
         { input: ['aa'], expectedOutput: 0, description: 'too short for any length-3 window' },
       ],
@@ -430,30 +753,77 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Slide a window of exactly 3 characters across the string. For each starting position `i` from 0 to `s.length - 3`, take the substring `s[i..i+2]`, build a Set from its characters, and count it as "good" if the Set has size 3 (meaning all three characters were distinct).',
-      dryRun:
-        's="xyzzaz"\ni=0: "xyz" → {x,y,z} size 3 → good, count=1\ni=1: "yzz" → {y,z} size 2 → not good\ni=2: "zza" → {z,a} size 2 → not good\ni=3: "zaz" → {z,a} size 2 → not good\nresult=1',
-      javascriptSolution: `function countGoodSubstrings(s) {
-  const windowSize = 3;
+      algorithm: `\`Step 1: A valid window always has exactly 3 characters.
+Step 2: Move the window start from 0 to s.length - 3.
+Step 3: Check the three characters directly for pairwise inequality.
+Step 4: Count every valid window.
+
+Core idea from the original answer:
+Slide a window of exactly 3 characters across the string. For each starting position \`i\` from 0 to \`s.length - 3\`, take the substring \`s[i..i+2]\`, build a Set from its characters, and count it as "good" if the Set has size 3 (meaning all three characters were distinct).'`,
+      dryRun: `'s="xyzzaz"
+"xyz" → x,y,z are different → count 1.
+"yzz" → repeated z → no.
+"zza" → repeated z → no.
+"zaz" → repeated z → no.
+Answer = 1.
+
+For "aababcabc":
+aab ❌, aba ✅, bab ✅, abc ✅, bca ✅, cab ✅, abc ✅
+Answer = 5.\``,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function countGoodSubstrings(s) {
   let count = 0;
 
-  for (let i = 0; i + windowSize <= s.length; i++) {
-    const window = s.slice(i, i + windowSize);
-    const distinctChars = new Set(window);
-    if (distinctChars.size === windowSize) count++;
+  for (let i = 0; i + 2 < s.length; i++) {
+    const a = s[i]!;
+    const b = s[i + 1];
+    const c = s[i + 2];
+
+    if (a !== b && a !== c && b !== c) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function countGoodSubstringsUsingBuiltIns(s) {
+  let count = 0;
+
+  for (let i = 0; i + 2 < s.length; i++) {
+    if (new Set(s.slice(i, i + 3)).size === 3) {
+      count++;
+    }
   }
 
   return count;
 }`,
-      typescriptSolution: `function countGoodSubstrings(s: string): number {
-  const windowSize = 3;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function countGoodSubstrings(s: string): number {
   let count = 0;
 
-  for (let i = 0; i + windowSize <= s.length; i++) {
-    const window = s.slice(i, i + windowSize);
-    const distinctChars = new Set(window);
-    if (distinctChars.size === windowSize) count++;
+  for (let i = 0; i + 2 < s.length; i++) {
+    const a = s[i]!;
+    const b = s[i + 1];
+    const c = s[i + 2];
+
+    if (a !== b && a !== c && b !== c) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function countGoodSubstringsUsingBuiltIns(s: string): number {
+  let count = 0;
+
+  for (let i = 0; i + 2 < s.length; i++) {
+    if (new Set(s.slice(i, i + 3)).size === 3) {
+      count++;
+    }
   }
 
   return count;
@@ -463,7 +833,7 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       commonMistakes: [
         'Looping to `s.length` instead of `s.length - windowSize` (or using `i + windowSize <= s.length`), which reads past the end of the string on the last iterations.',
         'Using a running frequency map meant for variable-size windows when a fixed size-3 window needs no incremental add/remove bookkeeping at all — added complexity for no benefit.',
-        'Checking for "at least one repeated pair" incorrectly (e.g. only comparing s[i] to s[i+1]) instead of checking all three characters are pairwise distinct.',
+        'Checking for "at least one repeated pair" incorrectly (e.g. only comparing s[i]! to s[i+1]) instead of checking all three characters are pairwise distinct.',
       ],
       followUpQuestions: [
         'How would this generalize to "substrings of size k with k distinct characters"?',
@@ -492,7 +862,7 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
         'Given an array of positive integers `nums` and a positive integer `target`, return the length of the shortest contiguous subarray whose sum is greater than or equal to `target`. If no such subarray exists, return 0.',
       input: 'target: number, nums: number[] — an array of positive integers',
       output: 'number — the length of the shortest qualifying subarray, or 0 if none exists',
-      constraints: ['1 <= target <= 10^9', '1 <= nums.length <= 10^5', '1 <= nums[i] <= 10^4'],
+      constraints: ['1 <= target <= 10^9', '1 <= nums.length <= 10^5', '1 <= nums[i]! <= 10^4'],
       examples: [
         { input: 'target = 7, nums = [2, 3, 1, 2, 4, 3]', output: '2', explanation: 'The subarray [4, 3] has sum 7 and length 2, the shortest qualifying subarray.' },
         { input: 'target = 4, nums = [1, 4, 4]', output: '1', explanation: 'The single element [4] already meets the target.' },
@@ -520,43 +890,104 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Use a sliding window with pointers `left` and `right`, and a running `sum`. Expand `right` across the array, adding each element to `sum`. Whenever `sum >= target`, that window qualifies: record its length if it is the smallest seen so far, then shrink from the left (subtracting `nums[left]` and advancing `left`) as long as the window still qualifies, checking the length again after every shrink. This finds the shortest qualifying window ending near each `right`.',
-      dryRun:
-        'target=7, nums=[2,3,1,2,4,3]\nright=0: sum=2 <7\nright=1: sum=5 <7\nright=2: sum=6 <7\nright=3: sum=8 >=7 → minLen=4 (right-left+1=4). shrink: sum-=2=6 <7, left=1\nright=4: sum=6+4=10>=7 → minLen=min(4,4)=4 (left=1..4). shrink: sum-=3=7>=7 → minLen=min(4,3)=3 (left=2..4). shrink: sum-=1=6<7, left=3\nright=5: sum=6+3=9>=7 → minLen=min(3,3)=3(left=3..5). shrink: sum-=2=7>=7→ minLen=min(3,2)=2(left=4..5). shrink: sum-=4=3<7, left=5\nresult=2',
-      javascriptSolution: `function minSubArrayLen(target, nums) {
+      algorithm: `\`Step 1: Because every number is positive, expanding the window increases the sum.
+Step 2: Move right and add each value to the running sum.
+Step 3: When sum >= target, shrink from the left as much as possible while the condition remains true.
+Step 4: Track the smallest window length; return 0 if no window qualifies.
+
+Core idea from the original answer:
+Use a sliding window with pointers \`left\` and \`right\`, and a running \`sum\`. Expand \`right\` across the array, adding each element to \`sum\`. Whenever \`sum >= target\`, that window qualifies: record its length if it is the smallest seen so far, then shrink from the left (subtracting \`nums[left]!\` and advancing \`left\`) as long as the window still qualifies, checking the length again after every shrink. This finds the shortest qualifying window ending near each \`right\`.'`,
+      dryRun: `'target=7, nums=[2,3,1,2,4,3]
+Grow until [2,3,1,2] sum=8 → length 4.
+Shrink → [3,1,2] sum=6.
+Grow with 4 → [3,1,2,4] sum=10.
+Shrink → [1,2,4] sum=7 → length 3.
+Grow with 3 → [2,4,3] sum=9.
+Shrink → [4,3] sum=7 → length 2.
+Answer = 2.\``,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function minSubArrayLen(target, nums) {
   let left = 0;
   let sum = 0;
-  let minLen = Infinity;
-
-  for (let right = 0; right < nums.length; right++) {
-    sum += nums[right];
-
-    while (sum >= target) {
-      minLen = Math.min(minLen, right - left + 1);
-      sum -= nums[left];
-      left++;
-    }
-  }
-
-  return minLen === Infinity ? 0 : minLen;
-}`,
-      typescriptSolution: `function minSubArrayLen(target: number, nums: number[]): number {
-  let left = 0;
-  let sum = 0;
-  let minLen = Infinity;
+  let minLength = Infinity;
 
   for (let right = 0; right < nums.length; right++) {
     sum += nums[right]!;
 
     while (sum >= target) {
-      minLen = Math.min(minLen, right - left + 1);
+      const length = right - left + 1;
+
+      if (length < minLength) {
+        minLength = length;
+      }
+
       sum -= nums[left]!;
       left++;
     }
   }
 
-  return minLen === Infinity ? 0 : minLen;
+  return minLength === Infinity ? 0 : minLength;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function minSubArrayLenUsingBuiltIns(target, nums) {
+  let left = 0;
+  let sum = 0;
+  let minLength = Infinity;
+
+  nums.forEach((value, right) => {
+    sum += value;
+
+    while (sum >= target) {
+      minLength = Math.min(minLength, right - left + 1);
+      sum -= nums[left]!;
+      left++;
+    }
+  });
+
+  return minLength === Infinity ? 0 : minLength;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function minSubArrayLen(target: number, nums: number[]): number {
+  let left = 0;
+  let sum = 0;
+  let minLength = Infinity;
+
+  for (let right = 0; right < nums.length; right++) {
+    sum += nums[right]!;
+
+    while (sum >= target) {
+      const length = right - left + 1;
+
+      if (length < minLength) {
+        minLength = length;
+      }
+
+      sum -= nums[left]!;
+      left++;
+    }
+  }
+
+  return minLength === Infinity ? 0 : minLength;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function minSubArrayLenUsingBuiltIns(target: number, nums: number[]): number {
+  let left = 0;
+  let sum = 0;
+  let minLength = Infinity;
+
+  nums.forEach((value, right) => {
+    sum += value;
+
+    while (sum >= target) {
+      minLength = Math.min(minLength, right - left + 1);
+      sum -= nums[left]!;
+      left++;
+    }
+  });
+
+  return minLength === Infinity ? 0 : minLength;
 }`,
       timeComplexity: 'O(n) — `left` only ever moves forward, so across the whole run it advances at most n times.',
       spaceComplexity: 'O(1) — only a handful of running variables.',
@@ -620,53 +1051,141 @@ export const MOCK_DSA_CODING_MODULE4_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Maintain a sliding window [left, right] and a frequency map of letters currently inside it, along with `maxFreq`, the highest frequency of any single letter seen in *any* window so far (not necessarily the current one — this is a well-known safe simplification). At each `right`, update the frequency map and `maxFreq`. If the window size minus `maxFreq` exceeds `k` (too many characters would need replacing), shrink from the left by one. After each step, the current window length is a candidate for the answer.',
-      dryRun:
-        's="AABABBA", k=1\nright=0(A): freq={A:1}, maxFreq=1, len=1-1=0<=1, longest=1\nright=1(A): freq={A:2}, maxFreq=2, len=2-2=0<=1, longest=2\nright=2(B): freq={A:2,B:1}, maxFreq=2, len=3-2=1<=1, longest=3\nright=3(A): freq={A:3,B:1}, maxFreq=3, len=4-3=1<=1, longest=4\nright=4(B): freq={A:3,B:2}, maxFreq=3, len=5-3=2>1 → shrink: freq[A]--→2, left=1, len now 4-3=1<=1, longest stays 4\nright=5(B): freq={A:2,B:3}(after shrink+add), maxFreq=3, len=5-3=2>1 → shrink: freq[A(at left=1)]--→1, left=2, len=4-3=1<=1, longest stays 4\nright=6(A): freq={A:2,B:3}, maxFreq=3, len=5-3=2>1 → shrink: freq[B(left=2)]--→2, left=3, len=4-3=1<=1, longest stays 4\nresult=4',
-      javascriptSolution: `function characterReplacement(s, k) {
-  const freq = new Map();
+      algorithm: `\`Step 1: Maintain a sliding window and character frequencies.
+Step 2: Track the highest frequency of one character in the window.
+Step 3: Characters needing replacement = window length - highest frequency; this must be <= k.
+Step 4: When invalid, move left until valid again and keep the maximum window length.
+
+Core idea from the original answer:
+Maintain a sliding window [left, right] and a frequency map of letters currently inside it, along with \`maxFreq\`, the highest frequency of any single letter seen in *any* window so far (not necessarily the current one — this is a well-known safe simplification). At each \`right\`, update the frequency map and \`maxFreq\`. If the window size minus \`maxFreq\` exceeds \`k\` (too many characters would need replacing), shrink from the left by one. After each step, the current window length is a candidate for the answer.'`,
+      dryRun: `'s="AABABBA", k=1
+A → best 1.
+AA → best 2.
+AAB → maxFrequency=2, replacements=1 → best 3.
+AABA → maxFrequency=3, replacements=1 → best 4.
+Adding B makes replacements=2, so shrink.
+The best length remains 4.\``,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function characterReplacement(s, k) {
+  const frequency = new Array(26).fill(0);
   let left = 0;
-  let maxFreq = 0;
-  let longest = 0;
+  let maxFrequency = 0;
+  let best = 0;
 
   for (let right = 0; right < s.length; right++) {
-    const ch = s[right];
-    freq.set(ch, (freq.get(ch) ?? 0) + 1);
-    maxFreq = Math.max(maxFreq, freq.get(ch));
+    const index = s.charCodeAt(right) - 65;
+    frequency[index]++;
 
-    while (right - left + 1 - maxFreq > k) {
-      const leftChar = s[left];
-      freq.set(leftChar, freq.get(leftChar) - 1);
+    if (frequency[index] > maxFrequency) {
+      maxFrequency = frequency[index];
+    }
+
+    while (right - left + 1 - maxFrequency > k) {
+      frequency[s.charCodeAt(left) - 65]--;
       left++;
     }
 
-    longest = Math.max(longest, right - left + 1);
+    const length = right - left + 1;
+
+    if (length > best) {
+      best = length;
+    }
   }
 
-  return longest;
-}`,
-      typescriptSolution: `function characterReplacement(s: string, k: number): number {
-  const freq = new Map<string, number>();
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function characterReplacementUsingBuiltIns(s, k) {
+  const frequency = new Map();
   let left = 0;
-  let maxFreq = 0;
-  let longest = 0;
+  let maxFrequency = 0;
+  let best = 0;
 
   for (let right = 0; right < s.length; right++) {
-    const ch = s[right]!;
-    freq.set(ch, (freq.get(ch) ?? 0) + 1);
-    maxFreq = Math.max(maxFreq, freq.get(ch)!);
+    const char = s[right]!;
 
-    while (right - left + 1 - maxFreq > k) {
+    frequency.set(char, (frequency.get(char) || 0) + 1);
+    maxFrequency = Math.max(maxFrequency, frequency.get(char));
+
+    while (right - left + 1 - maxFrequency > k) {
       const leftChar = s[left]!;
-      freq.set(leftChar, freq.get(leftChar)! - 1);
+      const nextCount = frequency.get(leftChar) - 1;
+
+      if (nextCount === 0) {
+        frequency.delete(leftChar);
+      } else {
+        frequency.set(leftChar, nextCount);
+      }
+
       left++;
     }
 
-    longest = Math.max(longest, right - left + 1);
+    best = Math.max(best, right - left + 1);
   }
 
-  return longest;
+  return best;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function characterReplacement(s: string, k: number): number {
+  const frequency = new Array(26).fill(0);
+  let left = 0;
+  let maxFrequency = 0;
+  let best = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    const index = s.charCodeAt(right) - 65;
+    frequency[index]++;
+
+    if (frequency[index] > maxFrequency) {
+      maxFrequency = frequency[index];
+    }
+
+    while (right - left + 1 - maxFrequency > k) {
+      frequency[s.charCodeAt(left) - 65]--;
+      left++;
+    }
+
+    const length = right - left + 1;
+
+    if (length > best) {
+      best = length;
+    }
+  }
+
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function characterReplacementUsingBuiltIns(s: string, k: number): number {
+  const frequency = new Map();
+  let left = 0;
+  let maxFrequency = 0;
+  let best = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    const char = s[right]!;
+
+    frequency.set(char, (frequency.get(char) || 0) + 1);
+    maxFrequency = Math.max(maxFrequency, frequency.get(char));
+
+    while (right - left + 1 - maxFrequency > k) {
+      const leftChar = s[left]!;
+      const nextCount = frequency.get(leftChar) - 1;
+
+      if (nextCount === 0) {
+        frequency.delete(leftChar);
+      } else {
+        frequency.set(leftChar, nextCount);
+      }
+
+      left++;
+    }
+
+    best = Math.max(best, right - left + 1);
+  }
+
+  return best;
 }`,
       timeComplexity: 'O(n) — `left` and `right` each advance at most n times total; the alphabet-bounded map operations are O(1) amortized.',
       spaceComplexity: 'O(1) — the frequency map holds at most 26 uppercase-letter entries.',

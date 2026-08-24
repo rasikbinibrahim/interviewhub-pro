@@ -4,7 +4,7 @@
 // files, these are real CodingQuestionDetail problems: every sampleTests
 // entry has been checked against the reference solution below by running
 // it in Node, and both the JavaScript and TypeScript solutions are
-// genuine, working code (no placeholder "solve(input)" stubs).
+// genuine, working code with no placeholder solution stubs.
 
 import type { MockCodingQuestion } from '@/mocks/questions';
 
@@ -74,53 +74,114 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Binary search on the pairing pattern. Before the single element, a pair starts at an even index; after it, pairs start at an odd index. Check boundary elements first. Then at each mid, if nums[mid] differs from both neighbors it is the answer. Otherwise, determine whether the "broken" pairing pattern is to the left or right of mid using its parity, and search that half.',
+        `Step 1: Because pairs are adjacent, before the single value pairs start at even indices.
+Step 2: Check the middle element and its paired neighbor.
+Step 3: Use the parity pattern to decide which half contains the single value.
+Step 4: Keep halving until the single element is found.
+
+Core idea from source:
+`,
       dryRun:
-        'nums=[1,1,2,3,3,4,4,8,8], start=0,end=8\nmid=4: nums[4]=3, equals nums[3]=3 (mid even, matches next) → pattern intact on left → start=5\nmid=6: nums[6]=4, equals nums[5]=4 (mid even, matches previous, mismatched expectation) → search left → end=5\nmid=5: nums[5]=4, differs from nums[4]=3 and nums[6]=4? nums[6]=4 so equals next → continue\n... converges to index 2 → nums[2]=2',
-      javascriptSolution: `function singleNonDuplicate(nums) {
-  let start = 0;
-  let end = nums.length - 1;
+        `[1,1,2,3,3,4,4,8,8]
+mid=4 → value 3 is paired with index 3, so the pairing pattern is broken to the left.
+Move to the left half.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function singleNonDuplicate(nums){
+  if (nums.length === 1) return nums[0];
 
-  if (end === 0) return nums[0];
-  if (nums[start] !== nums[start + 1]) return nums[start];
-  if (nums[end] !== nums[end - 1]) return nums[end];
+  let low = 0;
+  let high = nums.length - 1;
 
-  while (start <= end) {
-    const mid = Math.floor((start + end) / 2);
+  if (nums[0] !== nums[1]) return nums[0];
+  if (nums[high] !== nums[high - 1]) return nums[high];
 
-    if (nums[mid] !== nums[mid + 1] && nums[mid] !== nums[mid - 1]) {
+  while (low <= high) {
+    const mid = Math.floor((low + high) / 2);
+
+    if (
+      nums[mid] !== nums[mid - 1] &&
+      nums[mid] !== nums[mid + 1]
+    ) {
       return nums[mid];
     }
 
-    if ((mid % 2 === 0 && nums[mid] === nums[mid + 1]) || (mid % 2 === 1 && nums[mid] === nums[mid - 1])) {
-      start = mid + 1;
+    const pairedCorrectly =
+      (mid % 2 === 0 && nums[mid] === nums[mid + 1]) ||
+      (mid % 2 === 1 && nums[mid] === nums[mid - 1]);
+
+    if (pairedCorrectly) {
+      low = mid + 1;
     } else {
-      end = mid - 1;
+      high = mid - 1;
     }
   }
 
   return -1;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function singleNonDuplicateUsingBuiltIns(
+  nums,
+){
+  const counts = new Map();
+
+  for (const value of nums) {
+    counts.set(value, (counts.get(value) ?? 0) + 1);
+  }
+
+  for (const value of nums) {
+    if (counts.get(value) === 1) return value;
+  }
+
+  return -1;
 }`,
-      typescriptSolution: `function singleNonDuplicate(nums: number[]): number {
-  let start = 0;
-  let end = nums.length - 1;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function singleNonDuplicate(nums: number[]): number {
+  if (nums.length === 1) return nums[0]!;
 
-  if (end === 0) return nums[0]!;
-  if (nums[start] !== nums[start + 1]) return nums[start]!;
-  if (nums[end] !== nums[end - 1]) return nums[end]!;
+  let low = 0;
+  let high = nums.length - 1;
 
-  while (start <= end) {
-    const mid = Math.floor((start + end) / 2);
+  if (nums[0] !== nums[1]) return nums[0]!;
+  if (nums[high] !== nums[high - 1]) return nums[high]!;
 
-    if (nums[mid] !== nums[mid + 1] && nums[mid] !== nums[mid - 1]) {
+  while (low <= high) {
+    const mid = Math.floor((low + high) / 2);
+
+    if (
+      nums[mid] !== nums[mid - 1] &&
+      nums[mid] !== nums[mid + 1]
+    ) {
       return nums[mid]!;
     }
 
-    if ((mid % 2 === 0 && nums[mid] === nums[mid + 1]) || (mid % 2 === 1 && nums[mid] === nums[mid - 1])) {
-      start = mid + 1;
+    const pairedCorrectly =
+      (mid % 2 === 0 && nums[mid] === nums[mid + 1]) ||
+      (mid % 2 === 1 && nums[mid] === nums[mid - 1]);
+
+    if (pairedCorrectly) {
+      low = mid + 1;
     } else {
-      end = mid - 1;
+      high = mid - 1;
     }
+  }
+
+  return -1;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function singleNonDuplicateUsingBuiltIns(
+  nums: number[],
+): number {
+  const counts = new Map<number, number>();
+
+  for (const value of nums) {
+    counts.set(value, (counts.get(value) ?? 0) + 1);
+  }
+
+  for (const value of nums) {
+    if (counts.get(value) === 1) return value;
   }
 
   return -1;
@@ -188,10 +249,25 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Standard binary search, but at each step first determine which half (low..mid or mid..high) is contiguously sorted by comparing nums[low] to nums[mid]. If the left half is sorted and target lies within [nums[low], nums[mid]], search left; otherwise search right. If the right half is sorted instead, apply the mirrored check.',
+        `Step 1: Check the middle value first.
+Step 2: Determine which half is normally sorted.
+Step 3: Check whether the target lies inside that sorted half.
+Step 4: Keep the half that can contain the target and discard the other half.
+
+Core idea from source:
+`,
       dryRun:
-        'nums=[4,5,6,7,0,1,2], target=0, low=0,high=6\nmid=3: nums[mid]=7, nums[low]=4<=7 so left sorted; is 0 in [4,7]? no → low=4\nmid=5: nums[mid]=1, nums[low]=0<=1 so left sorted; is 0 in [0,1]? yes → high=4\nmid=4: nums[mid]=0 === target → return 4',
-      javascriptSolution: `function searchRotated(nums, target) {
+        `[4,5,6,7,0,1,2], target=0
+mid=3 → 7.
+Left half [4,5,6,7] is sorted, but 0 is not inside it → search right.
+mid=5 → 1.
+Left half [0,1] contains 0 → search left.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function searchRotated(
+  nums,
+  target,
+){
   let low = 0;
   let high = nums.length - 1;
 
@@ -201,13 +277,15 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     if (nums[mid] === target) return mid;
 
     if (nums[low] <= nums[mid]) {
-      if (target >= nums[low] && target <= nums[mid]) {
+      // Left half is normally sorted.
+      if (nums[low] <= target && target < nums[mid]) {
         high = mid - 1;
       } else {
         low = mid + 1;
       }
     } else {
-      if (target >= nums[mid] && target <= nums[high]) {
+      // Right half is normally sorted.
+      if (nums[mid] < target && target <= nums[high]) {
         low = mid + 1;
       } else {
         high = mid - 1;
@@ -216,8 +294,20 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return -1;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function searchRotatedUsingBuiltIns(
+  nums,
+  target,
+){
+  return nums.indexOf(target);
 }`,
-      typescriptSolution: `function searchRotated(nums: number[], target: number): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function searchRotated(
+  nums: number[],
+  target: number,
+): number {
   let low = 0;
   let high = nums.length - 1;
 
@@ -227,13 +317,15 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     if (nums[mid] === target) return mid;
 
     if (nums[low]! <= nums[mid]!) {
-      if (target >= nums[low]! && target <= nums[mid]!) {
+      // Left half is normally sorted.
+      if (nums[low]! <= target && target < nums[mid]!) {
         high = mid - 1;
       } else {
         low = mid + 1;
       }
     } else {
-      if (target >= nums[mid]! && target <= nums[high]!) {
+      // Right half is normally sorted.
+      if (nums[mid]! < target && target <= nums[high]!) {
         low = mid + 1;
       } else {
         high = mid - 1;
@@ -242,6 +334,14 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return -1;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function searchRotatedUsingBuiltIns(
+  nums: number[],
+  target: number,
+): number {
+  return nums.indexOf(target);
 }`,
       timeComplexity: 'O(log n) — one binary search pass, no separate pivot-finding step.',
       spaceComplexity: 'O(1) — only pointer variables.',
@@ -306,72 +406,146 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Ensure nums1 is the smaller array (swap if needed). Binary search a partition index cut1 in nums1; the matching partition cut2 in nums2 is (m+n+1)/2 - cut1. Compare the boundary elements l1/r1 (around cut1 in nums1) and l2/r2 (around cut2 in nums2). If l1 <= r2 and l2 <= r1, the partition is correct: return max(l1,l2) for odd total length, or the average of max(l1,l2) and min(r1,r2) for even. Otherwise shrink the binary search range based on which side is too large.',
+        `Step 1: Binary-search the smaller array.
+Step 2: Choose a partition so the combined left side has half the elements.
+Step 3: Verify left-max <= right-min across both arrays.
+Step 4: Return the middle value for odd length or the average of the two middle values for even length.
+
+Core idea from source:
+`,
       dryRun:
-        'nums1=[1,3], nums2=[2], m=2,n=1, total=3 (odd)\nlow=0,high=2\ncut1=1: cut2=(2+1+1)/2-1=1\nl1=nums1[0]=1, r1=nums1[1]=3\nl2=nums2[0]=2, r2=Infinity (cut2==n)\nl1<=r2(1<=Inf) and l2<=r1(2<=3) → correct partition\ntotal odd → return max(l1,l2)=max(1,2)=2',
-      javascriptSolution: `function findMedianSortedArrays(nums1, nums2) {
-  if (nums1.length > nums2.length) {
-    [nums1, nums2] = [nums2, nums1];
-  }
-
-  const m = nums1.length;
-  const n = nums2.length;
-  let low = 0;
-  let high = m;
-
-  while (low <= high) {
-    const cut1 = Math.floor((low + high) / 2);
-    const cut2 = Math.floor((m + n + 1) / 2) - cut1;
-
-    const l1 = cut1 === 0 ? -Infinity : nums1[cut1 - 1];
-    const l2 = cut2 === 0 ? -Infinity : nums2[cut2 - 1];
-    const r1 = cut1 === m ? Infinity : nums1[cut1];
-    const r2 = cut2 === n ? Infinity : nums2[cut2];
-
-    if (l1 <= r2 && l2 <= r1) {
-      if ((m + n) % 2 === 1) return Math.max(l1, l2);
-      return (Math.max(l1, l2) + Math.min(r1, r2)) / 2;
-    } else if (l1 > r2) {
-      high = cut1 - 1;
-    } else {
-      low = cut1 + 1;
-    }
-  }
-
-  return 0;
-}`,
-      typescriptSolution: `function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
+        `[1,3] and [2]
+Search the smaller array [2].
+Choose cutA=0 and cutB=2.
+Left side contains 1,2; right side contains 3.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findMedianSortedArrays(
+  nums1,
+  nums2,
+){
   let a = nums1;
   let b = nums2;
+
   if (a.length > b.length) {
-    [a, b] = [b, a];
+    const temp = a;
+    a = b;
+    b = temp;
   }
 
   const m = a.length;
   const n = b.length;
   let low = 0;
   let high = m;
+  const half = Math.floor((m + n + 1) / 2);
 
   while (low <= high) {
-    const cut1 = Math.floor((low + high) / 2);
-    const cut2 = Math.floor((m + n + 1) / 2) - cut1;
+    const cutA = Math.floor((low + high) / 2);
+    const cutB = half - cutA;
 
-    const l1 = cut1 === 0 ? -Infinity : a[cut1 - 1]!;
-    const l2 = cut2 === 0 ? -Infinity : b[cut2 - 1]!;
-    const r1 = cut1 === m ? Infinity : a[cut1]!;
-    const r2 = cut2 === n ? Infinity : b[cut2]!;
+    const leftA = cutA === 0 ? -Infinity : a[cutA - 1];
+    const rightA = cutA === m ? Infinity : a[cutA];
+    const leftB = cutB === 0 ? -Infinity : b[cutB - 1];
+    const rightB = cutB === n ? Infinity : b[cutB];
 
-    if (l1 <= r2 && l2 <= r1) {
-      if ((m + n) % 2 === 1) return Math.max(l1, l2);
-      return (Math.max(l1, l2) + Math.min(r1, r2)) / 2;
-    } else if (l1 > r2) {
-      high = cut1 - 1;
+    if (leftA <= rightB && leftB <= rightA) {
+      const leftMax = Math.max(leftA, leftB);
+
+      if ((m + n) % 2 === 1) {
+        return leftMax;
+      }
+
+      const rightMin = Math.min(rightA, rightB);
+      return (leftMax + rightMin) / 2;
+    }
+
+    if (leftA > rightB) {
+      high = cutA - 1;
     } else {
-      low = cut1 + 1;
+      low = cutA + 1;
     }
   }
 
-  return 0;
+  throw new Error("Invalid input: arrays must be sorted.");
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findMedianSortedArraysUsingBuiltIns(
+  nums1,
+  nums2,
+){
+  const merged = [...nums1, ...nums2].sort((a, b) => a - b);
+  const mid = Math.floor(merged.length / 2);
+
+  if (merged.length % 2 === 1) {
+    return merged[mid];
+  }
+
+  return (merged[mid - 1] + merged[mid]) / 2;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findMedianSortedArrays(
+  nums1: number[],
+  nums2: number[],
+): number {
+  let a = nums1;
+  let b = nums2;
+
+  if (a.length > b.length) {
+    const temp = a;
+    a = b;
+    b = temp;
+  }
+
+  const m = a.length;
+  const n = b.length;
+  let low = 0;
+  let high = m;
+  const half = Math.floor((m + n + 1) / 2);
+
+  while (low <= high) {
+    const cutA = Math.floor((low + high) / 2);
+    const cutB = half - cutA;
+
+    const leftA = cutA === 0 ? -Infinity : a[cutA - 1]!;
+    const rightA = cutA === m ? Infinity : a[cutA]!;
+    const leftB = cutB === 0 ? -Infinity : b[cutB - 1]!;
+    const rightB = cutB === n ? Infinity : b[cutB]!;
+
+    if (leftA <= rightB && leftB <= rightA) {
+      const leftMax = Math.max(leftA, leftB);
+
+      if ((m + n) % 2 === 1) {
+        return leftMax;
+      }
+
+      const rightMin = Math.min(rightA, rightB);
+      return (leftMax + rightMin) / 2;
+    }
+
+    if (leftA > rightB) {
+      high = cutA - 1;
+    } else {
+      low = cutA + 1;
+    }
+  }
+
+  throw new Error("Invalid input: arrays must be sorted.");
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findMedianSortedArraysUsingBuiltIns(
+  nums1: number[],
+  nums2: number[],
+): number {
+  const merged = [...nums1, ...nums2].sort((a, b) => a - b);
+  const mid = Math.floor(merged.length / 2);
+
+  if (merged.length % 2 === 1) {
+    return merged[mid]!;
+  }
+
+  return (merged[mid - 1]! + merged[mid]!) / 2;
 }`,
       timeComplexity: 'O(log(min(m, n))) — binary search over the smaller array only.',
       spaceComplexity: 'O(1) — no auxiliary arrays are built.',
@@ -436,72 +610,134 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Ensure A is the smaller array. Binary search cut1 in A within [max(0, k - B.length), min(k, A.length)]. cut2 = k - cut1. Compute boundary values l1, r1 (around cut1 in A) and l2, r2 (around cut2 in B) using -Infinity/Infinity sentinels at the edges. If l1 <= r2 and l2 <= r1, the partition places exactly k elements on the left, and the answer is max(l1, l2) (the largest element in that left partition, i.e. the kth smallest overall). Otherwise adjust the binary search range based on which boundary violated the order.',
+        `Step 1: Binary-search the smaller array.
+Step 2: Put exactly k elements on the combined left side.
+Step 3: Verify the two partition boundaries are ordered correctly.
+Step 4: The maximum value on the left side is the kth smallest element.
+
+Core idea from source:
+`,
       dryRun:
-        'A=[2,3,6,7,9], B=[1,4,8,10], k=5\nlow=max(0,5-4)=1, high=min(5,5)=5\ncut1=3: cut2=5-3=2\nl1=A[2]=6, r1=A[3]=7\nl2=B[1]=4, r2=B[2]=8\nl1<=r2(6<=8) but l2<=r1(4<=7) both hold → answer = max(l1,l2)=max(6,4)=6',
-      javascriptSolution: `function kthElement(a, b, k) {
-  let A = a;
-  let B = b;
-  if (A.length > B.length) {
-    [A, B] = [B, A];
+        `A=[2,3,6,7,9], B=[1,4,8,10], k=5
+Choose cutA=3, cutB=2.
+Left side = [2,3,6] + [1,4].
+Largest value on the left = 6.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function kthElement(
+  a,
+  b,
+  k,
+){
+  let small = a;
+  let large = b;
+
+  if (small.length > large.length) {
+    const temp = small;
+    small = large;
+    large = temp;
   }
 
-  const n = A.length;
-  const m = B.length;
-  let low = Math.max(0, k - m);
-  let high = Math.min(k, n);
+  const m = small.length;
+  const n = large.length;
+
+  let low = Math.max(0, k - n);
+  let high = Math.min(k, m);
 
   while (low <= high) {
-    const cut1 = Math.floor((low + high) / 2);
-    const cut2 = k - cut1;
+    const cutSmall = Math.floor((low + high) / 2);
+    const cutLarge = k - cutSmall;
 
-    const l1 = cut1 === 0 ? -Infinity : A[cut1 - 1];
-    const l2 = cut2 === 0 ? -Infinity : B[cut2 - 1];
-    const r1 = cut1 === n ? Infinity : A[cut1];
-    const r2 = cut2 === m ? Infinity : B[cut2];
+    const leftSmall =
+      cutSmall === 0 ? -Infinity : small[cutSmall - 1];
+    const rightSmall =
+      cutSmall === m ? Infinity : small[cutSmall];
 
-    if (l1 <= r2 && l2 <= r1) {
-      return Math.max(l1, l2);
-    } else if (l1 > r2) {
-      high = cut1 - 1;
+    const leftLarge =
+      cutLarge === 0 ? -Infinity : large[cutLarge - 1];
+    const rightLarge =
+      cutLarge === n ? Infinity : large[cutLarge];
+
+    if (leftSmall <= rightLarge && leftLarge <= rightSmall) {
+      return Math.max(leftSmall, leftLarge);
+    }
+
+    if (leftSmall > rightLarge) {
+      high = cutSmall - 1;
     } else {
-      low = cut1 + 1;
+      low = cutSmall + 1;
     }
   }
 
-  return -1;
+  throw new Error("k must be between 1 and a.length + b.length.");
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function kthElementUsingBuiltIns(
+  a,
+  b,
+  k,
+){
+  const merged = [...a, ...b].sort((x, y) => x - y);
+  return merged[k - 1];
 }`,
-      typescriptSolution: `function kthElement(a: number[], b: number[], k: number): number {
-  let A = a;
-  let B = b;
-  if (A.length > B.length) {
-    [A, B] = [B, A];
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function kthElement(
+  a: number[],
+  b: number[],
+  k: number,
+): number {
+  let small = a;
+  let large = b;
+
+  if (small.length > large.length) {
+    const temp = small;
+    small = large;
+    large = temp;
   }
 
-  const n = A.length;
-  const m = B.length;
-  let low = Math.max(0, k - m);
-  let high = Math.min(k, n);
+  const m = small.length;
+  const n = large.length;
+
+  let low = Math.max(0, k - n);
+  let high = Math.min(k, m);
 
   while (low <= high) {
-    const cut1 = Math.floor((low + high) / 2);
-    const cut2 = k - cut1;
+    const cutSmall = Math.floor((low + high) / 2);
+    const cutLarge = k - cutSmall;
 
-    const l1 = cut1 === 0 ? -Infinity : A[cut1 - 1]!;
-    const l2 = cut2 === 0 ? -Infinity : B[cut2 - 1]!;
-    const r1 = cut1 === n ? Infinity : A[cut1]!;
-    const r2 = cut2 === m ? Infinity : B[cut2]!;
+    const leftSmall =
+      cutSmall === 0 ? -Infinity : small[cutSmall - 1]!;
+    const rightSmall =
+      cutSmall === m ? Infinity : small[cutSmall]!;
 
-    if (l1 <= r2 && l2 <= r1) {
-      return Math.max(l1, l2);
-    } else if (l1 > r2) {
-      high = cut1 - 1;
+    const leftLarge =
+      cutLarge === 0 ? -Infinity : large[cutLarge - 1]!;
+    const rightLarge =
+      cutLarge === n ? Infinity : large[cutLarge]!;
+
+    if (leftSmall <= rightLarge && leftLarge <= rightSmall) {
+      return Math.max(leftSmall, leftLarge);
+    }
+
+    if (leftSmall > rightLarge) {
+      high = cutSmall - 1;
     } else {
-      low = cut1 + 1;
+      low = cutSmall + 1;
     }
   }
 
-  return -1;
+  throw new Error("k must be between 1 and a.length + b.length.");
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function kthElementUsingBuiltIns(
+  a: number[],
+  b: number[],
+  k: number,
+): number {
+  const merged = [...a, ...b].sort((x, y) => x - y);
+  return merged[k - 1]!;
 }`,
       timeComplexity: 'O(log(min(m, n))) — binary search over the smaller array.',
       spaceComplexity: 'O(1) — no auxiliary structures.',
@@ -566,37 +802,88 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Two pointers start=0 and end=floor(sqrt(c)). While start <= end, compute sum = start² + end². If sum === c, return true. If sum < c, increment start (need a bigger contribution). If sum > c, decrement end (need a smaller contribution). If the pointers cross without finding a match, return false.',
+        `Step 1: \`a\` and \`b\` cannot exceed floor(sqrt(c)).
+Step 2: Start one pointer at 0 and the other at sqrt(c).
+Step 3: If a²+b² is too small, increase the low pointer; if too large, decrease the high pointer.
+Step 4: Return true only when the sum exactly equals c.
+
+Core idea from source:
+`,
       dryRun:
-        'c=5, start=0, end=2 (floor(sqrt(5)))\nsum=0+4=4 < 5 → start=1\nsum=1+4=5 === 5 → return true',
-      javascriptSolution: `function sumOfTwoSquaresExists(c) {
+        `c=5
+low=0, high=2.
+0²+2²=4 < 5 → increase low to 1.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function sumOfTwoSquaresExists(c){
   if (c < 0) return false;
 
-  let start = 0;
-  let end = Math.floor(Math.sqrt(c));
+  let low = 0;
+  let high = Math.floor(Math.sqrt(c));
 
-  while (start <= end) {
-    const sum = start * start + end * end;
+  while (low <= high) {
+    const sum = low * low + high * high;
 
     if (sum === c) return true;
-    if (sum < c) start++;
-    else end--;
+
+    if (sum < c) {
+      low++;
+    } else {
+      high--;
+    }
+  }
+
+  return false;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sumOfTwoSquaresExistsUsingBuiltIns(
+  c,
+){
+  const end = Math.floor(Math.sqrt(c));
+
+  for (let a = 0; a <= end; a++) {
+    const remaining = c - a * a;
+    const root = Math.floor(Math.sqrt(remaining));
+
+    if (root * root === remaining) return true;
   }
 
   return false;
 }`,
-      typescriptSolution: `function sumOfTwoSquaresExists(c: number): boolean {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function sumOfTwoSquaresExists(c: number): boolean {
   if (c < 0) return false;
 
-  let start = 0;
-  let end = Math.floor(Math.sqrt(c));
+  let low = 0;
+  let high = Math.floor(Math.sqrt(c));
 
-  while (start <= end) {
-    const sum = start * start + end * end;
+  while (low <= high) {
+    const sum = low * low + high * high;
 
     if (sum === c) return true;
-    if (sum < c) start++;
-    else end--;
+
+    if (sum < c) {
+      low++;
+    } else {
+      high--;
+    }
+  }
+
+  return false;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sumOfTwoSquaresExistsUsingBuiltIns(
+  c: number,
+): boolean {
+  const end = Math.floor(Math.sqrt(c));
+
+  for (let a = 0; a <= end; a++) {
+    const remaining = c - a * a;
+    const root = Math.floor(Math.sqrt(remaining));
+
+    if (root * root === remaining) return true;
   }
 
   return false;
@@ -664,44 +951,79 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Binary search for the leftmost index where letters[index] > target. Maintain `ans` as the best candidate found so far. At each mid: if letters[mid] > target, record it as a candidate and move high left (there might be a smaller qualifying letter); otherwise move low right. If no candidate is ever found, wrap around and return letters[0].',
+        `Step 1: Search for the first position whose letter is strictly greater than target.
+Step 2: When the middle letter qualifies, save it and search left.
+Step 3: Otherwise search right.
+Step 4: If no qualifying position exists, return the first letter for wraparound.
+
+Core idea from source:
+`,
       dryRun:
-        'letters=["c","f","j"], target="c", low=0,high=2\nmid=1: letters[1]="f">"c" → ans="f", high=0\nmid=0: letters[0]="c">"c"? no → low=1\nloop ends (low>high) → return ans="f"',
-      javascriptSolution: `function nextGreatestLetter(letters, target) {
+        `letters=[c,f,j], target=c
+mid=1 → f > c, so f is a candidate; search left.
+mid=0 → c is not strictly greater.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function nextGreatestLetter(
+  letters,
+  target,
+){
   let low = 0;
   let high = letters.length - 1;
-  let ans = null;
+  let answerIndex = 0;
 
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
 
     if (letters[mid] > target) {
-      ans = letters[mid];
+      answerIndex = mid;
       high = mid - 1;
     } else {
       low = mid + 1;
     }
   }
 
-  return ans === null ? letters[0] : ans;
+  return letters[answerIndex];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function nextGreatestLetterUsingBuiltIns(
+  letters,
+  target,
+){
+  const answer = letters.find((letter) => letter > target);
+  return answer ?? letters[0];
 }`,
-      typescriptSolution: `function nextGreatestLetter(letters: string[], target: string): string {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function nextGreatestLetter(
+  letters: string[],
+  target: string,
+): string {
   let low = 0;
   let high = letters.length - 1;
-  let ans: string | null = null;
+  let answerIndex = 0;
 
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
 
     if (letters[mid]! > target) {
-      ans = letters[mid]!;
+      answerIndex = mid;
       high = mid - 1;
     } else {
       low = mid + 1;
     }
   }
 
-  return ans === null ? letters[0]! : ans;
+  return letters[answerIndex]!;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function nextGreatestLetterUsingBuiltIns(
+  letters: string[],
+  target: string,
+): string {
+  const answer = letters.find((letter) => letter > target);
+  return answer ?? letters[0]!;
 }`,
       timeComplexity: 'O(log n) — binary search over the sorted letters array.',
       spaceComplexity: 'O(1) — only a few scalar variables.',
@@ -766,10 +1088,21 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Binary search using nums[mid] vs nums[mid + 1]. If nums[mid] < nums[mid + 1], the function is still increasing, so move low = mid + 1 (a peak is to the right). Otherwise, move high = mid (a peak is at mid or to the left). Stop when low === high — that index is a valid peak by the -infinity boundary guarantee.',
+        `Step 1: Look at nums[mid] and nums[mid+1].
+Step 2: If the slope is rising, a peak must exist to the right.
+Step 3: If the slope is falling, a peak is at mid or to the left.
+Step 4: Continue until low == high; that index is a valid peak.
+
+Core idea from source:
+`,
       dryRun:
-        'nums=[1,2,1,3,5,6,4], low=0,high=6\nmid=3: nums[3]=3<nums[4]=5 → low=4\nmid=5: nums[5]=6>nums[6]=4 → high=5\nmid=4: nums[4]=5<nums[5]=6 → low=5\nlow===high===5 → return 5',
-      javascriptSolution: `function findPeakElement(nums) {
+        `[1,2,1,3,5,6,4]
+mid=3 → 3 < 5, so move right.
+mid=5 → 6 > 4, so keep the left side through 5.
+mid=4 → 5 < 6, move right.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findPeakElement(nums){
   let low = 0;
   let high = nums.length - 1;
 
@@ -784,8 +1117,24 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return low;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findPeakElementUsingBuiltIns(
+  nums,
+){
+  let peak = 0;
+
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] > nums[peak]) {
+      peak = i;
+    }
+  }
+
+  return peak;
 }`,
-      typescriptSolution: `function findPeakElement(nums: number[]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findPeakElement(nums: number[]): number {
   let low = 0;
   let high = nums.length - 1;
 
@@ -800,6 +1149,21 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return low;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findPeakElementUsingBuiltIns(
+  nums: number[],
+): number {
+  let peak = 0;
+
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i]! > nums[peak]!) {
+      peak = i;
+    }
+  }
+
+  return peak;
 }`,
       timeComplexity: 'O(log n) — binary search halves the range each step.',
       spaceComplexity: 'O(1) — only two pointers.',
@@ -864,10 +1228,22 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
       },
     solution: {
       algorithm:
-        'Binary search comparing arr[mid] to arr[mid + 1]. If arr[mid] < arr[mid + 1], the array is still ascending, so move low = mid + 1. Otherwise move high = mid. The loop ends when low === high, which is guaranteed (by the mountain-array property) to be the peak index.',
+        `Step 1: The array has exactly one peak.
+Step 2: Compare arr[mid] with arr[mid+1].
+Step 3: Rising means move right; falling means move left including mid.
+Step 4: Return the final converged index.
+
+Core idea from source:
+`,
       dryRun:
-        'arr=[0,10,5,2], low=0,high=3\nmid=1: arr[1]=10>arr[2]=5 → high=1\nmid=0: arr[0]=0<arr[1]=10 → low=1\nlow===high===1 → return 1',
-      javascriptSolution: `function peakIndexInMountainArray(arr) {
+        `[0,10,5,2]
+mid=1 → 10 > 5, so the peak is at mid or left.
+mid=0 → 0 < 10, so move right.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function peakIndexInMountainArray(
+  arr,
+){
   let low = 0;
   let high = arr.length - 1;
 
@@ -882,8 +1258,18 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return low;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function peakIndexInMountainArrayUsingBuiltIns(
+  arr,
+){
+  return arr.indexOf(Math.max(...arr));
 }`,
-      typescriptSolution: `function peakIndexInMountainArray(arr: number[]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function peakIndexInMountainArray(
+  arr: number[],
+): number {
   let low = 0;
   let high = arr.length - 1;
 
@@ -898,6 +1284,13 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
   }
 
   return low;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function peakIndexInMountainArrayUsingBuiltIns(
+  arr: number[],
+): number {
+  return arr.indexOf(Math.max(...arr));
 }`,
       timeComplexity: 'O(log n) — binary search over the array.',
       spaceComplexity: 'O(1) — only two pointers.',
@@ -962,46 +1355,67 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Binary search while tracking the smallest candidate seen. At each step, if nums[low] <= nums[mid], the left half is sorted, so nums[low] is a valid candidate for the minimum, and the rotation point (if any) must be to the right — move low = mid + 1. Otherwise, the rotation point is within [low..mid], so nums[mid] is a candidate and high = mid - 1. Return the smallest candidate seen.',
+        `Step 1: Compare nums[mid] with nums[high].
+Step 2: If nums[mid] > nums[high], the minimum is strictly to the right of mid.
+Step 3: Otherwise the minimum is at mid or to its left.
+Step 4: Continue until low == high and return nums[low].
+
+Core idea from source:
+`,
       dryRun:
-        'nums=[4,5,6,7,0,1,2], low=0,high=6, res=Infinity\nmid=3: nums[0]=4<=nums[3]=7 → res=min(Inf,4)=4, low=4\nmid=5: nums[4]=0<=nums[5]=1 → res=min(4,0)=0, low=6\nmid=6: nums[6]=2<=nums[6]=2 → res=min(0,2)=0, low=7\nloop ends → return 0',
-      javascriptSolution: `function findMinRotated(nums) {
+        `[4,5,6,7,0,1,2]
+mid=3 → 7 > 2, so the minimum is right of 3.
+low=4, high=6.
+mid=5 → 1 <= 2, so keep [4,5].
+mid=4 → 0 <= 1, so keep [4,4].
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findMinRotated(nums){
   let low = 0;
   let high = nums.length - 1;
-  let res = Infinity;
 
-  while (low <= high) {
+  while (low < high) {
     const mid = Math.floor((low + high) / 2);
 
-    if (nums[low] <= nums[mid]) {
-      res = Math.min(res, nums[low]);
+    if (nums[mid] > nums[high]) {
       low = mid + 1;
     } else {
-      res = Math.min(res, nums[mid]);
-      high = mid - 1;
+      high = mid;
     }
   }
 
-  return res;
+  return nums[low];
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findMinRotatedUsingBuiltIns(
+  nums,
+){
+  return Math.min(...nums);
 }`,
-      typescriptSolution: `function findMinRotated(nums: number[]): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function findMinRotated(nums: number[]): number {
   let low = 0;
   let high = nums.length - 1;
-  let res = Infinity;
 
-  while (low <= high) {
+  while (low < high) {
     const mid = Math.floor((low + high) / 2);
 
-    if (nums[low]! <= nums[mid]!) {
-      res = Math.min(res, nums[low]!);
+    if (nums[mid]! > nums[high]!) {
       low = mid + 1;
     } else {
-      res = Math.min(res, nums[mid]!);
-      high = mid - 1;
+      high = mid;
     }
   }
 
-  return res;
+  return nums[low]!;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function findMinRotatedUsingBuiltIns(
+  nums: number[],
+): number {
+  return Math.min(...nums);
 }`,
       timeComplexity: 'O(log n) — binary search over the array.',
       spaceComplexity: 'O(1) — only a running minimum and two pointers.',
@@ -1066,43 +1480,92 @@ export const MOCK_DSA_CODING_MODULE8_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Start at row=0, col=lastColumn (top-right corner). While within bounds: if matrix[row][col] === target, return true. If it is less than target, the entire row to the left is also too small, so move down (row++). If it is greater than target, the entire column below is also too large, so move left (col--). Return false if the pointers walk off the matrix.',
+        `Step 1: Start at the top-right corner.
+Step 2: If the value is too large, move left.
+Step 3: If the value is too small, move down.
+Step 4: Stop when the target is found or the row/column bounds are crossed.
+
+Core idea from source:
+`,
       dryRun:
-        'matrix=[[1,3,5,7],[10,11,16,20],[23,30,34,60]], target=3, row=0,col=3\nmatrix[0][3]=7>3 → col=2\nmatrix[0][2]=5>3 → col=1\nmatrix[0][1]=3===3 → return true',
-      javascriptSolution: `function searchMatrix2D(matrix, target) {
-  if (matrix.length === 0 || matrix[0].length === 0) return false;
+        `matrix=[[1,3,5,7],[10,11,16,20],[23,30,34,60]], target=3
+Start at 7.
+7 > 3 → move left to 5.
+5 > 3 → move left to 3.
+`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function searchMatrix(
+  matrix,
+  target,
+){
+  if (matrix.length === 0 || matrix[0].length === 0) {
+    return false;
+  }
+
+  const rows = matrix.length;
+  const cols = matrix[0].length;
 
   let row = 0;
-  let col = matrix[0].length - 1;
+  let col = cols - 1;
 
-  while (row < matrix.length && col >= 0) {
-    if (matrix[row][col] === target) return true;
-    if (matrix[row][col] < target) {
-      row++;
-    } else {
+  while (row < rows && col >= 0) {
+    const value = matrix[row][col];
+
+    if (value === target) return true;
+
+    if (value > target) {
       col--;
+    } else {
+      row++;
     }
   }
 
   return false;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function searchMatrixUsingBuiltIns(
+  matrix,
+  target,
+){
+  return matrix.some((row) => row.includes(target));
 }`,
-      typescriptSolution: `function searchMatrix2D(matrix: number[][], target: number): boolean {
-  if (matrix.length === 0 || matrix[0]!.length === 0) return false;
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function searchMatrix(
+  matrix: number[][],
+  target: number,
+): boolean {
+  if (matrix.length === 0 || matrix[0]!.length === 0) {
+    return false;
+  }
+
+  const rows = matrix.length;
+  const cols = matrix[0]!.length;
 
   let row = 0;
-  let col = matrix[0]!.length - 1;
+  let col = cols - 1;
 
-  while (row < matrix.length && col >= 0) {
-    const cell = matrix[row]![col]!;
-    if (cell === target) return true;
-    if (cell < target) {
-      row++;
-    } else {
+  while (row < rows && col >= 0) {
+    const value = matrix[row]![col]!;
+
+    if (value === target) return true;
+
+    if (value > target) {
       col--;
+    } else {
+      row++;
     }
   }
 
   return false;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function searchMatrixUsingBuiltIns(
+  matrix: number[][],
+  target: number,
+): boolean {
+  return matrix.some((row) => row.includes(target));
 }`,
       timeComplexity: 'O(m + n) — each step eliminates exactly one row or one column.',
       spaceComplexity: 'O(1) — two pointer variables.',

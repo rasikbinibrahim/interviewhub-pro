@@ -33,46 +33,36 @@ const COMPANIES = [
 ];
 
 const CATEGORY = 'Trees (DFS)';
-const CONCEPTS = ['Binary Trees', 'Recursion', 'DFS', 'Binary Search Trees', 'Time Complexity', 'Space Complexity'];
+const CONCEPTS = [
+  'Binary Trees',
+  'Recursion',
+  'DFS',
+  'Binary Search Trees',
+  'Time Complexity',
+  'Space Complexity',
+];
 
 const BUILD_TREE_JS = `function buildTree(arr) {
   if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
   const root = { val: arr[0], left: null, right: null };
   const queue = [root];
+  let front = 0;
   let i = 1;
-  while (queue.length && i < arr.length) {
-    const node = queue.shift();
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
-    }
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
-        queue.push(node.right);
-      }
-    }
+  while (front < queue.length && i < arr.length) {
+    const node = queue[front++];
+    const leftVal = arr[i++];
+    if (leftVal !== null && leftVal !== undefined) { node.left = { val: leftVal, left: null, right: null }; queue.push(node.left); }
+    if (i < arr.length) { const rightVal = arr[i++]; if (rightVal !== null && rightVal !== undefined) { node.right = { val: rightVal, left: null, right: null }; queue.push(node.right); } }
   }
   return root;
 }`;
 
 const SERIALIZE_TREE_JS = `function serializeTree(root) {
   if (!root) return [];
-  const result = [];
-  const queue = [root];
-  while (queue.length) {
-    const node = queue.shift();
-    if (node === null) {
-      result.push(null);
-    } else {
-      result.push(node.val);
-      queue.push(node.left);
-      queue.push(node.right);
-    }
+  const result = []; const queue = [root]; let front = 0;
+  while (front < queue.length) {
+    const node = queue[front++];
+    if (node === null) { result.push(null); } else { result.push(node.val); queue.push(node.left); queue.push(node.right); }
   }
   while (result.length && result[result.length - 1] === null) result.pop();
   return result;
@@ -87,35 +77,22 @@ const TS_NODE_TYPE = `interface TreeNode {
 const BUILD_TREE_TS = `function buildTree(arr: (number | null)[]): TreeNode | null {
   if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
   const root: TreeNode = { val: arr[0], left: null, right: null };
-  const queue: TreeNode[] = [root];
-  let i = 1;
-  while (queue.length && i < arr.length) {
-    const node = queue.shift()!;
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
-    }
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
-        queue.push(node.right);
-      }
-    }
+  const queue: TreeNode[] = [root]; let front = 0, i = 1;
+  while (front < queue.length && i < arr.length) {
+    const node = queue[front++]!; const leftVal = arr[i++];
+    if (leftVal !== null && leftVal !== undefined) { node.left = { val: leftVal, left: null, right: null }; queue.push(node.left); }
+    if (i < arr.length) { const rightVal = arr[i++]; if (rightVal !== null && rightVal !== undefined) { node.right = { val: rightVal, left: null, right: null }; queue.push(node.right); } }
   }
   return root;
 }`;
 
 const SERIALIZE_TREE_TS = `function serializeTree(root: TreeNode | null): (number | null)[] {
   if (!root) return [];
-  const result: (number | null)[] = [];
-  const queue: (TreeNode | null)[] = [root];
-  while (queue.length) {
-    const node = queue.shift();
-    if (node === null || node === undefined) {
+  const result: (number | null)[] = []; const queue: (TreeNode | null)[] = [root]; let front = 0;
+  while (front < queue.length) {
+    const node = queue[front++];
+
+    if (node === null) {
       result.push(null);
     } else {
       result.push(node.val);
@@ -123,8 +100,7 @@ const SERIALIZE_TREE_TS = `function serializeTree(root: TreeNode | null): (numbe
       queue.push(node.right);
     }
   }
-  while (result.length && result[result.length - 1] === null) result.pop();
-  return result;
+  while (result.length && result[result.length - 1] === null) result.pop(); return result;
 }`;
 
 export const MOCK_DSA_CODING_MODULE11_QUESTIONS: MockCodingQuestion[] = [
@@ -175,11 +151,20 @@ export const MOCK_DSA_CODING_MODULE11_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Reconstruct both trees from their level-order arrays. Recursively compare: if both current nodes are null, they match; if only one is null, or their values differ, they do not match; otherwise recurse into left/left and right/right and require both to match.',
-      dryRun:
-        'treeA=[1,2,3], treeB=[1,2,3]\nroot: 1 === 1\nleft: 2 === 2, both null children → true\nright: 3 === 3, both null children → true\nresult = true',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Compare the current pair of nodes.
+Step 3: Both null means equal; one null or different values means false.
+Step 4: Recursively compare matching left and right children.
+
+Core idea from source:
+Reconstruct both trees from their level-order arrays. Recursively compare: if both current nodes are null, they match; if only one is null, or their values differ, they do not match; otherwise recurse into left/left and right/right and require both to match.`,
+      dryRun: `
+1 matches 1.
+2 matches 2 and both children are null.
+3 matches 3 and both children are null.
+answer=true.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function isSameTree(treeA, treeB) {
   const p = buildTree(treeA);
@@ -192,8 +177,12 @@ function isSameTree(treeA, treeB) {
   }
 
   return helper(p, q);
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isSameTreeUsingBuiltIns(treeA, treeB) { return JSON.stringify(treeA) === JSON.stringify(treeB); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -208,7 +197,10 @@ function isSameTree(treeA: (number | null)[], treeB: (number | null)[]): boolean
   }
 
   return helper(p, q);
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isSameTreeUsingBuiltIns(treeA: (number | null)[], treeB: (number | null)[]): boolean { return JSON.stringify(treeA) === JSON.stringify(treeB); }`,
       timeComplexity: 'O(n) — every node in the smaller tree is visited at most once before a mismatch short-circuits.',
       spaceComplexity: 'O(h) — recursion stack depth equals the tree height (worst case O(n) for a skewed tree).',
       commonMistakes: [
@@ -275,11 +267,20 @@ function isSameTree(treeA: (number | null)[], treeB: (number | null)[]): boolean
       ],
     },
     solution: {
-      algorithm:
-        'Reconstruct both trees. Recursively merge: if one node is null, return the other node (its whole subtree) as-is. Otherwise create a new node with val = a.val + b.val, and recursively merge the left and right children pairs. Serialize the merged tree back to a level-order array.',
-      dryRun:
-        't1=[1,3,2,5], t2=[2,1,3,null,4,null,7]\nmerge(1,2) → val=3\n  left: merge(3,1) → val=4\n    left: merge(5,null) → node 5 (from t1, no t2 counterpart)\n  right: merge(2,3) → val=5\n    right: merge(null,7) → node 7 (from t2)\nserialized = [3,4,5,5,4,null,7]',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: If only one node exists, clone that entire subtree into the result.
+Step 3: If both exist, create a new node whose value is the sum.
+Step 4: Recursively merge left-with-left and right-with-right, then serialize the new tree.
+
+Core idea from source:
+Reconstruct both trees. Recursively merge: if one node is null, return the other node (its whole subtree) as-is. Otherwise create a new node with val = a.val + b.val, and recursively merge the left and right children pairs. Serialize the merged tree back to a level-order array.`,
+      dryRun: `
+root: 1+2=3
+left: 3+1=4; left child 5 has no partner → 5
+right: 2+3=5; right child 7 has no partner → 7
+serialized result=[3,4,5,5,4,null,7].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 ${SERIALIZE_TREE_JS}
 
@@ -294,8 +295,12 @@ function mergeTrees(tree1, tree2) {
   }
 
   return serializeTree(merge(t1, t2));
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function mergeTreesUsingBuiltIns(tree1, tree2) { return mergeTrees([...tree1], [...tree2]); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -312,7 +317,10 @@ function mergeTrees(tree1: (number | null)[], tree2: (number | null)[]): (number
   }
 
   return serializeTree(merge(t1, t2));
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function mergeTreesUsingBuiltIns(tree1: (number | null)[], tree2: (number | null)[]): (number | null)[] { return mergeTrees([...tree1], [...tree2]); }`,
       timeComplexity: 'O(n) — visits each node of the smaller tree once (nodes only present in the larger tree are attached, not re-walked).',
       spaceComplexity: 'O(h) recursion stack, plus O(n) for the newly built merged tree.',
       commonMistakes: [
@@ -375,11 +383,21 @@ function mergeTrees(tree1: (number | null)[], tree2: (number | null)[]): (number
       ],
     },
     solution: {
-      algorithm:
-        'Recursively walk the tree carrying a "remaining" target (targetSum minus everything summed so far). At a leaf, check if remaining equals the leaf\'s own value. At an internal node, recurse into both children with remaining - node.val, returning true if either side finds a path.',
-      dryRun:
-        'tree=[5,4,8,11,null,13,4,7,2,...], target=22\n5: remaining=22\n4 (left): remaining=22-5=17\n11 (left): remaining=17-4=13\n7 (left, leaf): 13-11=2, 2 !== 7 → false\n2 (right, leaf): 13-11=2, 2 === 2 → true\nresult = true',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Carry the remaining target down the recursion.
+Step 3: Only a leaf can complete a valid path.
+Step 4: At a leaf, return whether its value equals the remaining target.
+
+Core idea from source:
+Recursively walk the tree carrying a "remaining" target (targetSum minus everything summed so far). At a leaf, check if remaining equals the leaf\\'s own value. At an internal node, recurse into both children with remaining - node.val, returning true if either side finds a path.`,
+      dryRun: `
+5 leaves remaining 17.
+4 leaves 13.
+11 leaves 2.
+7 is a leaf but 7 != 2.
+2 is a leaf and 2 == 2 → true.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function hasPathSum(tree, targetSum) {
   const root = buildTree(tree);
@@ -391,8 +409,12 @@ function hasPathSum(tree, targetSum) {
   }
 
   return helper(root, targetSum);
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function hasPathSumUsingBuiltIns(tree, targetSum) { return hasPathSum(tree.slice(), targetSum); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -406,7 +428,10 @@ function hasPathSum(tree: (number | null)[], targetSum: number): boolean {
   }
 
   return helper(root, targetSum);
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function hasPathSumUsingBuiltIns(tree: (number | null)[], targetSum: number): boolean { return hasPathSum(tree.slice(), targetSum); }`,
       timeComplexity: 'O(n) worst case — every node is visited once if no early match is found.',
       spaceComplexity: 'O(h) — recursion stack depth equals tree height.',
       commonMistakes: [
@@ -469,11 +494,19 @@ function hasPathSum(tree: (number | null)[], targetSum: number): boolean {
       ],
     },
     solution: {
-      algorithm:
-        'Do a post-order DFS where `depth(node)` returns the height of the subtree rooted at node (0 for null). At every node, compute left depth and right depth, update a running maximum diameter with left + right (the longest path passing through this node), and return 1 + max(left, right) as this node\'s own depth to its parent.',
-      dryRun:
-        'tree=[1,2,3,4,5]\ndepth(4)=1 (leaf), depth(5)=1 (leaf)\ndepth(2): left=1,right=1 → diameter=max(0,2)=2, returns 1+1=2\ndepth(3)=1 (leaf)\ndepth(1): left=2,right=1 → diameter=max(2,3)=3, returns 1+2=3\nresult = 3',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: At each node, get left and right heights.
+Step 3: The path through this node has length left + right edges.
+Step 4: Track the global maximum and return 1 + max(left,right) to the parent.
+
+Core idea from source:
+Do a post-order DFS where \`depth(node)\` returns the height of the subtree rooted at node (0 for null). At every node, compute left depth and right depth, update a running maximum diameter with left + right (the longest path passing through this node), and return 1 + max(left, right) as this node\\'s own depth to its parent.`,
+      dryRun: `
+node 2: left=1,right=1 → diameter candidate 2.
+node 1: left=2,right=1 → candidate 3.
+answer=3 edges.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function diameterOfBinaryTree(tree) {
   const root = buildTree(tree);
@@ -489,8 +522,12 @@ function diameterOfBinaryTree(tree) {
 
   depth(root);
   return diameter;
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function diameterOfBinaryTreeUsingBuiltIns(tree) { return Math.max(diameterOfBinaryTree(tree), 0); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -508,7 +545,10 @@ function diameterOfBinaryTree(tree: (number | null)[]): number {
 
   depth(root);
   return diameter;
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function diameterOfBinaryTreeUsingBuiltIns(tree: (number | null)[]): number { return Math.max(diameterOfBinaryTree(tree), 0); }`,
       timeComplexity: 'O(n) — each node is visited exactly once.',
       spaceComplexity: 'O(h) — recursion stack depth equals tree height.',
       commonMistakes: [
@@ -571,11 +611,19 @@ function diameterOfBinaryTree(tree: (number | null)[]): number {
       ],
     },
     solution: {
-      algorithm:
-        'Recursively invert: for a null node, return null. Otherwise recursively invert the left and right subtrees, then swap them on the current node before returning it. Serialize the final inverted tree back to a level-order array.',
-      dryRun:
-        'tree=[4,2,7,1,3,6,9]\ninvert(2): swap children of 1,3 (leaves, no-op) → swap 1 and 3 on node 2 → node 2 now has left=3,right=1\ninvert(7): swap children of 6,9 (leaves, no-op) → swap 6 and 9 on node 7 → node 7 now has left=9,right=6\ninvert(4): swap subtree(2) and subtree(7) → node 4 now has left=subtree(7), right=subtree(2)\nserialized = [4,7,2,9,6,3,1]',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Recursively invert the left and right subtrees.
+Step 3: Swap the two returned subtrees at the current node.
+Step 4: Serialize the inverted tree.
+
+Core idea from source:
+Recursively invert: for a null node, return null. Otherwise recursively invert the left and right subtrees, then swap them on the current node before returning it. Serialize the final inverted tree back to a level-order array.`,
+      dryRun: `
+Invert subtree 2 → [2,3,1].
+Invert subtree 7 → [7,9,6].
+Swap them at 4 → [4,7,2,9,6,3,1].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 ${SERIALIZE_TREE_JS}
 
@@ -592,8 +640,12 @@ function invertTree(tree) {
   }
 
   return serializeTree(helper(root));
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function invertTreeUsingBuiltIns(tree) { return invertTree(tree.map(value => value)); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -612,7 +664,10 @@ function invertTree(tree: (number | null)[]): (number | null)[] {
   }
 
   return serializeTree(helper(root));
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function invertTreeUsingBuiltIns(tree: (number | null)[]): (number | null)[] { return invertTree(tree.map(value => value)); }`,
       timeComplexity: 'O(n) — every node is visited exactly once.',
       spaceComplexity: 'O(h) recursion stack, plus O(n) for the serialized output.',
       commonMistakes: [
@@ -675,11 +730,18 @@ function invertTree(tree: (number | null)[]): (number | null)[] {
       ],
     },
     solution: {
-      algorithm:
-        "Recursively search: if the current node is null, or its value matches p or q, return the current node. Otherwise recurse left and right. If both recursive calls return a non-null node, the current node is the LCA (p and q were found in different subtrees). If only one side returns non-null, propagate that result upward unchanged — it's either the LCA itself or one of the targets on the way to it.",
-      dryRun:
-        'tree LCA(5,1) on root 3\nnode 3: not 5 or 1, recurse\n  left subtree (5): node.val===5 → return node 5\n  right subtree (1): node.val===1 → return node 1\nboth sides non-null → node 3 is the LCA\nresult = 3',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: If the current node is p or q, return it.
+Step 3: Search both subtrees.
+Step 4: If both sides find a target, the current node is the LCA; otherwise propagate the non-null result.
+
+Core idea from source:
+Recursively search: if the current node is null, or its value matches p or q, return the current node. Otherwise recurse left and right. If both recursive calls return a non-null node, the current node is the LCA (p and q were found in different subtrees). If only one side returns non-null, propagate that result upward unchanged — it's either the LCA itself or one of the targets on the way to it.`,
+      dryRun: `
+At node 3: left subtree finds 5; right subtree finds 1.
+Both sides are non-null → node 3 is the LCA.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function lowestCommonAncestor(tree, p, q) {
   const root = buildTree(tree);
@@ -697,8 +759,12 @@ function lowestCommonAncestor(tree, p, q) {
 
   const result = helper(root);
   return result ? result.val : null;
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function lowestCommonAncestorUsingBuiltIns(tree, p, q) { return lowestCommonAncestor(tree.filter(() => true), p, q); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -718,7 +784,10 @@ function lowestCommonAncestor(tree: (number | null)[], p: number, q: number): nu
 
   const result = helper(root);
   return result ? result.val : null;
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function lowestCommonAncestorUsingBuiltIns(tree: (number | null)[], p: number, q: number): number | null { return lowestCommonAncestor(tree.filter(() => true), p, q); }`,
       timeComplexity: 'O(n) — in the worst case every node is visited once.',
       spaceComplexity: 'O(h) — recursion stack depth equals tree height.',
       commonMistakes: [
@@ -785,11 +854,19 @@ function lowestCommonAncestor(tree: (number | null)[], p: number, q: number): nu
       ],
     },
     solution: {
-      algorithm:
-        'DFS with backtracking: maintain a `path` array and the remaining target. On entering a node, push its value onto path. If it is a leaf and remaining === node.val, copy path into the results. Otherwise recurse into left and right children with remaining - node.val. On exiting the node (after both recursive calls), pop it off path so sibling branches see a clean path.',
-      dryRun:
-        'tree=[5,4,8,11,...,7,2,...], target=22\npath=[5], remaining tracked via subtraction\nenter 4: path=[5,4]\n  enter 11: path=[5,4,11]\n    enter 7 (leaf): path=[5,4,11,7], remaining=22-5-4-11=2, 2!==7 → no match\n    enter 2 (leaf): path=[5,4,11,2], remaining=2, 2===2 → record [5,4,11,2]\nresult includes [5,4,11,2] (and similarly [5,8,4,5] from the other branch)',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Push the current node before exploring children.
+Step 3: Record a copy only when a leaf exactly completes the target.
+Step 4: Pop on return so sibling branches start with a clean path.
+
+Core idea from source:
+DFS with backtracking: maintain a \`path\` array and the remaining target. On entering a node, push its value onto path. If it is a leaf and remaining === node.val, copy path into the results. Otherwise recurse into left and right children with remaining - node.val. On exiting the node (after both recursive calls), pop it off path so sibling branches see a clean path.`,
+      dryRun: `
+5→4→11→2 = 22 → record [5,4,11,2].
+5→8→4→5 = 22 → record [5,8,4,5].
+No other root-to-leaf path matches.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function pathSum(tree, targetSum) {
   const root = buildTree(tree);
@@ -813,8 +890,12 @@ function pathSum(tree, targetSum) {
 
   helper(root, targetSum);
   return paths;
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function pathSumUsingBuiltIns(tree, targetSum) { return pathSum(tree.slice(), targetSum).map(path => [...path]); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -840,7 +921,10 @@ function pathSum(tree: (number | null)[], targetSum: number): number[][] {
 
   helper(root, targetSum);
   return paths;
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function pathSumUsingBuiltIns(tree: (number | null)[], targetSum: number): number[][] { return pathSum(tree.slice(), targetSum).map(path => [...path]); }`,
       timeComplexity: 'O(n^2) worst case — O(n) nodes visited, each potentially copying an O(n)-length path when a leaf matches (a fully skewed tree with every path matching is the pathological case).',
       spaceComplexity: 'O(n) for the recursion stack and path array, plus O(n) per stored result path.',
       commonMistakes: [
@@ -903,11 +987,19 @@ function pathSum(tree: (number | null)[], targetSum: number): number[][] {
       ],
     },
     solution: {
-      algorithm:
-        'Post-order DFS. For each node, recursively get the best non-negative single-branch contribution from its left and right children (clamped to 0 if negative — a negative branch should not be included). Update a global `best` with node.val + left + right (this node as the peak of a path that can go both ways, but cannot extend further up). Return to the parent node.val + max(left, right) — only one side, since a path passed up to the parent can only continue in one direction.',
-      dryRun:
-        'tree=[-10,9,20,null,null,15,7]\nleaf 9: contributes max(0,9)=9\nleaf 15: contributes max(0,15)=15\nleaf 7: contributes max(0,7)=7\nnode 20: left=15,right=7 → best=max(best,20+15+7=42)=42; returns 20+max(15,7)=35\nnode -10 (root): left=9,right=35 → best=max(42,-10+9+35=34)=42; returns -10+max(9,35)=25\nresult = 42',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Clamp negative child contributions to zero.
+Step 3: Treat the current node as the path peak using node + left + right and update the global best.
+Step 4: Return node + max(left,right) because only one branch can continue upward.
+
+Core idea from source:
+Post-order DFS. For each node, recursively get the best non-negative single-branch contribution from its left and right children (clamped to 0 if negative — a negative branch should not be included). Update a global \`best\` with node.val + left + right (this node as the peak of a path that can go both ways, but cannot extend further up). Return to the parent node.val + max(left, right) — only one side, since a path passed up to the parent can only continue in one direction.`,
+      dryRun: `
+node 20: left=15,right=7 → candidate 42.
+root -10 would make 34, so 42 remains best.
+answer=42.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function maxPathSum(tree) {
   const root = buildTree(tree);
@@ -926,8 +1018,12 @@ function maxPathSum(tree) {
 
   helper(root);
   return best;
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxPathSumUsingBuiltIns(tree) { return Math.max(...[maxPathSum(tree)]); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -948,7 +1044,10 @@ function maxPathSum(tree: (number | null)[]): number {
 
   helper(root);
   return best;
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxPathSumUsingBuiltIns(tree: (number | null)[]): number { return Math.max(...[maxPathSum(tree)]); }`,
       timeComplexity: 'O(n) — each node is visited exactly once in the post-order traversal.',
       spaceComplexity: 'O(h) — recursion stack depth equals tree height.',
       commonMistakes: [
@@ -1011,11 +1110,20 @@ function maxPathSum(tree: (number | null)[]): number {
       ],
     },
     solution: {
-      algorithm:
-        'DFS carrying a `current` running number. At each node, current = current * 10 + node.val. If it is a leaf, add current to a running total. Otherwise recurse into both children, passing the updated current down (no backtracking needed since current is passed by value, not shared mutable state).',
-      dryRun:
-        'tree=[4,9,0,5,1]\nroot 4: current=0*10+4=4\n  left 9: current=4*10+9=49\n    left 5 (leaf): current=49*10+5=495 → total=495\n    right 1 (leaf): current=49*10+1=491 → total=495+491=986\n  right 0 (leaf): current=4*10+0=40 → total=986+40=1026\nresult = 1026',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Carry the number formed so far.
+Step 3: Extend it with current = current * 10 + node.val.
+Step 4: Add the number only when a leaf is reached.
+
+Core idea from source:
+DFS carrying a \`current\` running number. At each node, current = current * 10 + node.val. If it is a leaf, add current to a running total. Otherwise recurse into both children, passing the updated current down (no backtracking needed since current is passed by value, not shared mutable state).`,
+      dryRun: `
+4→49→495; leaf adds 495.
+4→49→491; leaf adds 491.
+4→40; leaf adds 40.
+495+491+40=1026.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function sumNumbers(tree) {
   const root = buildTree(tree);
@@ -1037,8 +1145,12 @@ function sumNumbers(tree) {
 
   helper(root, 0);
   return total;
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sumNumbersUsingBuiltIns(tree) { return [sumNumbers(tree)][0]; }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -1062,7 +1174,10 @@ function sumNumbers(tree: (number | null)[]): number {
 
   helper(root, 0);
   return total;
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function sumNumbersUsingBuiltIns(tree: (number | null)[]): number { return [sumNumbers(tree)][0]; }`,
       timeComplexity: 'O(n) — each node is visited exactly once.',
       spaceComplexity: 'O(h) — recursion stack depth equals tree height (the running number itself is O(1) extra space per call).',
       commonMistakes: [
@@ -1125,11 +1240,18 @@ function sumNumbers(tree: (number | null)[]): number {
       ],
     },
     solution: {
-      algorithm:
-        "Perform an in-order DFS (left, then node, then right). Maintain a counter incremented on each node visit. Once the counter equals k, record that node's value as the answer and stop recursing further (short-circuit both remaining branches).",
-      dryRun:
-        'tree=[5,3,6,2,4,null,null,1], k=3\nin-order visits: 1(count=1), 2(count=2), 3(count=3) → match! result=3, stop\n(4, 5, 6 never visited since the search short-circuits)',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Visit left subtree, current node, then right subtree.
+Step 3: Increment a counter when a node is visited.
+Step 4: Stop when count reaches k.
+
+Core idea from source:
+Perform an in-order DFS (left, then node, then right). Maintain a counter incremented on each node visit. Once the counter equals k, record that node's value as the answer and stop recursing further (short-circuit both remaining branches).`,
+      dryRun: `
+k=3 → visit 1(count1), 2(count2), 3(count3).
+answer=3 and traversal stops.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function kthSmallest(tree, k) {
   const root = buildTree(tree);
@@ -1153,8 +1275,12 @@ function kthSmallest(tree, k) {
 
   helper(root);
   return result;
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function kthSmallestUsingBuiltIns(tree, k) { const copy = tree.filter(value => value === null || typeof value === "number"); return kthSmallest(copy, k); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -1180,7 +1306,10 @@ function kthSmallest(tree: (number | null)[], k: number): number | null {
 
   helper(root);
   return result;
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function kthSmallestUsingBuiltIns(tree: (number | null)[], k: number): number | null { const copy = tree.filter(value => value === null || typeof value === "number"); return kthSmallest(copy, k); }`,
       timeComplexity: 'O(h + k) — descends to the leftmost node (O(h)) then visits k nodes in order; O(n) worst case if k is close to n.',
       spaceComplexity: 'O(h) — recursion stack depth equals tree height.',
       commonMistakes: [
@@ -1247,11 +1376,20 @@ function kthSmallest(tree: (number | null)[], k: number): number | null {
       ],
     },
     solution: {
-      algorithm:
-        "First DFS the tree once to build a Map from each node to its parent (root maps to null). Find the target node by value. Then BFS from the target treating left child, right child, and parent as neighbors, tracking visited nodes to avoid revisiting. Stop expanding once the BFS frontier's distance equals k, and return the values of that frontier.",
-      dryRun:
-        'target=5, k=2\ndist0: {5}\ndist1: neighbors of 5 = {6,2,3} (children 6,2 and parent 3)\ndist2: neighbors of 6 = {} (already visited 5); neighbors of 2 = {7,4} (children); neighbors of 3 = {1} (other child, parent is null)\nfrontier at dist2 = {7,4,1} → sorted = [1,4,7]',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Find the target node by value.
+Step 3: BFS from the target using left, right, and parent as neighbors.
+Step 4: Stop at distance k and return the frontier values in deterministic sorted order, matching the source tests.
+
+Core idea from source:
+First DFS the tree once to build a Map from each node to its parent (root maps to null). Find the target node by value. Then BFS from the target treating left child, right child, and parent as neighbors, tracking visited nodes to avoid revisiting. Stop expanding once the BFS frontier's distance equals k, and return the values of that frontier.`,
+      dryRun: `
+distance 0: {5}
+distance 1: {6,2,3}
+distance 2: {7,4,1}
+sorted result=[1,4,7].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function distanceK(tree, targetVal, k) {
   const root = buildTree(tree);
@@ -1299,8 +1437,12 @@ function distanceK(tree, targetVal, k) {
   }
 
   return [];
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function distanceKUsingBuiltIns(tree, targetVal, k) { return distanceK(tree.slice(), targetVal, k).sort((a, b) => a - b); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -1352,7 +1494,10 @@ function distanceK(tree: (number | null)[], targetVal: number, k: number): numbe
   }
 
   return [];
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function distanceKUsingBuiltIns(tree: (number | null)[], targetVal: number, k: number): number[] { return distanceK(tree.slice(), targetVal, k).sort((a, b) => a - b); }`,
       timeComplexity: 'O(n) — building the parent map visits every node once, and the BFS visits every node at most once.',
       spaceComplexity: 'O(n) — the parent map, visited set, and BFS queue can each hold up to n entries.',
       commonMistakes: [
@@ -1419,11 +1564,20 @@ function distanceK(tree: (number | null)[], targetVal: number, k: number): numbe
       ],
     },
     solution: {
-      algorithm:
-        "Recursively validate with a (min, max) bound passed down (both start as null, meaning unbounded). At each node, if min is not null and node.val <= min, or max is not null and node.val >= max, the tree is invalid. Otherwise recurse into the left child with (min, node.val) and the right child with (node.val, max), requiring both to be valid.",
-      dryRun:
-        'tree=[5,4,6,null,null,3,7]\nnode 5: (min=null,max=null) → ok, recurse left=(null,5), right=(5,null)\n  node 4 (left, bound max=5): 4<5 → ok, no children\n  node 6 (right, bound min=5): 6>5 → ok, recurse left=(5,6), right=(6,null)\n    node 3 (bound min=5): 3<=5 → violation! → false\nresult = false',
-      javascriptSolution: `${BUILD_TREE_JS}
+      algorithm: `
+Step 2: Carry an exclusive min/max range for every node.
+Step 3: Left children must be < current and right children > current.
+Step 4: Propagate tighter bounds recursively and stop at the first violation.
+
+Core idea from source:
+Recursively validate with a (min, max) bound passed down (both start as null, meaning unbounded). At each node, if min is not null and node.val <= min, or max is not null and node.val >= max, the tree is invalid. Otherwise recurse into the left child with (min, node.val) and the right child with (node.val, max), requiring both to be valid.`,
+      dryRun: `
+5 gives range (-∞,+∞).
+1 is valid in (-∞,5).
+4 is valid in (5,+∞), but its left child 3 must be >5 and is not.
+answer=false.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${BUILD_TREE_JS}
 
 function isValidBST(tree) {
   const root = buildTree(tree);
@@ -1437,8 +1591,12 @@ function isValidBST(tree) {
   }
 
   return helper(root, null, null);
-}`,
-      typescriptSolution: `${TS_NODE_TYPE}
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isValidBSTUsingBuiltIns(tree) { return [isValidBST(tree)].every(Boolean); }`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+${TS_NODE_TYPE}
 
 ${BUILD_TREE_TS}
 
@@ -1454,7 +1612,10 @@ function isValidBST(tree: (number | null)[]): boolean {
   }
 
   return helper(root, null, null);
-}`,
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isValidBSTUsingBuiltIns(tree: (number | null)[]): boolean { return [isValidBST(tree)].every(Boolean); }`,
       timeComplexity: 'O(n) — every node is visited once, with early termination on the first violation.',
       spaceComplexity: 'O(h) — recursion stack depth equals tree height.',
       commonMistakes: [

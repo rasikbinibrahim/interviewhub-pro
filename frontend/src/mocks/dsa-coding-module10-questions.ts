@@ -3,7 +3,7 @@
 // files, these are real CodingQuestionDetail problems: every sampleTests
 // entry has been checked against the reference solution below by actually
 // running it in Node, and both the JavaScript and TypeScript solutions are
-// genuine, working code (no placeholder "solve(input)" stubs).
+// genuine, working code with no placeholder solution stubs.
 //
 // Trees can't cross the test-runner's function-call boundary as objects
 // (frontend/src/shared/services/codeRunner.ts calls `functionName(...args)`
@@ -30,7 +30,12 @@ const COMPANIES = [
 ];
 
 const CATEGORY = 'Trees (BFS)';
-const CONCEPTS = ['Binary Trees', 'Breadth-First Search', 'Queues', 'Level Order Traversal'];
+const CONCEPTS = [
+  'Binary Trees',
+  'Breadth-First Search',
+  'Queues',
+  'Level Order Traversal',
+];
 
 export const MOCK_DSA_CODING_MODULE10_QUESTIONS: MockCodingQuestion[] = [
   {
@@ -81,91 +86,129 @@ export const MOCK_DSA_CODING_MODULE10_QUESTIONS: MockCodingQuestion[] = [
     },
     solution: {
       algorithm:
-        'Rebuild the tree from the level-order array with `buildTree`. If the tree is empty, return 0. Otherwise run a level-by-level BFS with a queue, tracking the current depth (starting at 1 for the root level). At each level, check every node in the queue: if any node has neither a left nor a right child, it is a leaf, so return the current depth immediately. Otherwise enqueue its existing children and move to the next depth.',
+        `Step 1: Rebuild the input array into a binary tree.
+Step 2: Traverse level by level with BFS.
+Step 3: A node is a leaf only when both children are missing.
+Step 4: Return immediately when the first leaf is dequeued because BFS reaches nodes in increasing depth.
+
+Core idea from source:
+Rebuild the tree from the level-order array with \`buildTree\`. If the tree is empty, return 0. Otherwise run a level-by-level BFS with a queue, tracking the current depth (starting at 1 for the root level). At each level, check every node in the queue: if any node has neither a left nor a right child, it is a leaf, so return the current depth immediately. Otherwise enqueue its existing children and move to the next depth.`,
       dryRun:
-        'tree=[3,9,20,null,null,15,7], depth=1\nlevel [3]: 3 has both children → enqueue 9,20\ndepth=2\nlevel [9,20]: 9 has no children → leaf found at depth 2 → return 2',
-      javascriptSolution: `function buildTree(arr) {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
-
-  const root = { val: arr[0], left: null, right: null };
-  const queue = [root];
-  let i = 1;
-
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift();
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
-    }
-
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
-        queue.push(node.right);
-      }
-    }
-  }
-
-  return root;
-}
-
+        `tree=[3,9,20,null,null,15,7]
+depth 1: [3] → not a leaf → enqueue 9,20
+depth 2: [9,20]
+9 has no children → first leaf found
+answer = 2.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
 function minDepthOfTree(tree) {
-  const root = buildTree(tree);
-  if (!root) return 0;
-
-  const queue = [root];
-  let depth = 1;
-
-  while (queue.length > 0) {
-    const size = queue.length;
-
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift();
-
-      if (!node.left && !node.right) return depth;
-
-      if (node.left) queue.push(node.left);
-      if (node.right) queue.push(node.right);
+    if (tree.length === 0 || tree[0] === null || tree[0] === undefined) {
+        return 0;
     }
+    function buildTree(arr) {
+        if (arr.length === 0 || arr[0] === null || arr[0] === undefined) {
+            return null;
+        }
+        const root = {
+            val: arr[0],
+            left: null,
+            right: null,
+        };
+        const queue = [root];
+        let front = 0;
+        let index = 1;
+        while (front < queue.length && index < arr.length) {
+            const node = queue[front++];
+            const leftValue = arr[index++];
+            if (leftValue !== null && leftValue !== undefined) {
+                node.left = {
+                    val: leftValue,
+                    left: null,
+                    right: null,
+                };
+                queue.push(node.left);
+            }
+            if (index < arr.length) {
+                const rightValue = arr[index++];
+                if (rightValue !== null && rightValue !== undefined) {
+                    node.right = {
+                        val: rightValue,
+                        left: null,
+                        right: null,
+                    };
+                    queue.push(node.right);
+                }
+            }
+        }
+        return root;
+    }
+    const root = buildTree(tree);
+    if (!root)
+        return 0;
+    const queue = [root];
+    let front = 0;
+    let depth = 1;
+    while (front < queue.length) {
+        const levelEnd = queue.length;
+        while (front < levelEnd) {
+            const node = queue[front++];
+            if (!node.left && !node.right) {
+                return depth;
+            }
+            if (node.left)
+                queue.push(node.left);
+            if (node.right)
+                queue.push(node.right);
+        }
+        depth++;
+    }
+    return 0;
+}`,
+      typescriptSolution: `/* ==================== WITH BUILT-IN HELPERS ==================== */
+type Module10TreeNode = {
+  val: number;
+  left: Module10TreeNode | null;
+  right: Module10TreeNode | null;
+};
 
-    depth++;
+function buildTreeForModule10(
+  arr: readonly (number | null)[],
+): Module10TreeNode | null {
+  if (!arr.length || arr[0] === null || arr[0] === undefined) {
+    return null;
   }
 
-  return depth;
-}`,
-      typescriptSolution: `interface TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-}
+  const root: Module10TreeNode = {
+    val: arr[0],
+    left: null,
+    right: null,
+  };
 
-function buildTree(arr: readonly (number | null)[]): TreeNode | null {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
+  const queue: Module10TreeNode[] = [root];
+  let front = 0;
+  let index = 1;
 
-  const root: TreeNode = { val: arr[0], left: null, right: null };
-  const queue: TreeNode[] = [root];
-  let i = 1;
+  while (front < queue.length && index < arr.length) {
+    const node = queue[front++]!;
 
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift()!;
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
+    const leftValue = arr[index++];
+    if (leftValue !== null && leftValue !== undefined) {
+      node.left = {
+        val: leftValue,
+        left: null,
+        right: null,
+      };
+      queue.push(node.left);
     }
 
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
+    if (index < arr.length) {
+      const rightValue = arr[index++];
+
+      if (rightValue !== null && rightValue !== undefined) {
+        node.right = {
+          val: rightValue,
+          left: null,
+          right: null,
+        };
         queue.push(node.right);
       }
     }
@@ -174,18 +217,54 @@ function buildTree(arr: readonly (number | null)[]): TreeNode | null {
   return root;
 }
 
-function minDepthOfTree(tree: readonly (number | null)[]): number {
-  const root = buildTree(tree);
-  if (!root) return 0;
+function minDepthOfTreeUsingBuiltIns(
+  tree: readonly (number | null)[],
+): number {
+  if (!tree.length || tree[0] === null || tree[0] === undefined) {
+    return 0;
+  }
 
-  const queue: TreeNode[] = [root];
+  type Node = {
+    val: number;
+    left: Node | null;
+    right: Node | null;
+  };
+
+  const root: Node = { val: tree[0], left: null, right: null };
+  const queue: Node[] = [root];
+  let front = 0;
+  let index = 1;
+
+  while (front < queue.length && index < tree.length) {
+    const node = queue[front++]!;
+    const leftValue = tree[index++];
+
+    if (leftValue !== null && leftValue !== undefined) {
+      node.left = { val: leftValue, left: null, right: null };
+      queue.push(node.left);
+    }
+
+    if (index < tree.length) {
+      const rightValue = tree[index++];
+
+      if (rightValue !== null && rightValue !== undefined) {
+        node.right = { val: rightValue, left: null, right: null };
+        queue.push(node.right);
+      }
+    }
+  }
+
+  front = 0;
+  queue.length = 1;
+  queue[0] = root;
+
   let depth = 1;
 
-  while (queue.length > 0) {
-    const size = queue.length;
+  while (front < queue.length) {
+    const levelEnd = queue.length;
 
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift()!;
+    while (front < levelEnd) {
+      const node = queue[front++]!;
 
       if (!node.left && !node.right) return depth;
 
@@ -196,7 +275,7 @@ function minDepthOfTree(tree: readonly (number | null)[]): number {
     depth++;
   }
 
-  return depth;
+  return 0;
 }`,
       timeComplexity: 'O(n) — each node is visited at most once in the worst case (a tree with no early leaf).',
       spaceComplexity: 'O(n) — the queue can hold up to the widest level of the tree.',
@@ -261,93 +340,138 @@ function minDepthOfTree(tree: readonly (number | null)[]): number {
     },
     solution: {
       algorithm:
-        'Rebuild the tree, then run a standard BFS level-order traversal with a queue, processing one full level per outer loop iteration and tracking a `level` counter starting at 0. For each level, collect every node\'s value into `values` in the natural left-to-right dequeue order, enqueueing children as usual. After collecting a level, reverse `values` if `level` is odd, push it to the result, and increment `level`.',
+        `Step 1: Rebuild the tree and process one level at a time.
+Step 2: Collect each level in normal left-to-right BFS order.
+Step 3: Reverse only odd-numbered levels.
+Step 4: Keep child enqueue order left-then-right for every level.
+
+Core idea from source:
+Rebuild the tree, then run a standard BFS level-order traversal with a queue, processing one full level per outer loop iteration and tracking a \`level\` counter starting at 0. For each level, collect every node\\\'s value into \`values\` in the natural left-to-right dequeue order, enqueueing children as usual. After collecting a level, reverse \`values\` if \`level\` is odd, push it to the result, and increment \`level\`.`,
       dryRun:
-        'tree=[3,9,20,null,null,15,7], level=0\nlevel0: queue=[3] → values=[3], 0 is even → [3], level=1\nlevel1: queue=[9,20] → values=[9,20], 1 is odd → reverse → [20,9], level=2\nlevel2: queue=[15,7] → values=[15,7], 2 is even → [15,7]\nresult=[[3],[20,9],[15,7]]',
-      javascriptSolution: `function buildTree(arr) {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
-
-  const root = { val: arr[0], left: null, right: null };
-  const queue = [root];
-  let i = 1;
-
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift();
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
-    }
-
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
-        queue.push(node.right);
-      }
-    }
-  }
-
-  return root;
-}
-
+        `[3,9,20,null,null,15,7]
+level 0: [3] → normal
+level 1: [9,20] → reverse → [20,9]
+level 2: [15,7] → normal
+answer=[[3],[20,9],[15,7]].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
 function zigzagLevelOrder(tree) {
-  const root = buildTree(tree);
-  if (!root) return [];
-
-  const result = [];
-  const queue = [root];
-  let level = 0;
-
-  while (queue.length > 0) {
-    const size = queue.length;
-    const values = [];
-
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift();
-      values.push(node.val);
-
-      if (node.left) queue.push(node.left);
-      if (node.right) queue.push(node.right);
+    function buildTree(arr) {
+        if (arr.length === 0 || arr[0] === null || arr[0] === undefined) {
+            return null;
+        }
+        const root = {
+            val: arr[0],
+            left: null,
+            right: null,
+        };
+        const queue = [root];
+        let front = 0;
+        let index = 1;
+        while (front < queue.length && index < arr.length) {
+            const node = queue[front++];
+            const leftValue = arr[index++];
+            if (leftValue !== null && leftValue !== undefined) {
+                node.left = {
+                    val: leftValue,
+                    left: null,
+                    right: null,
+                };
+                queue.push(node.left);
+            }
+            if (index < arr.length) {
+                const rightValue = arr[index++];
+                if (rightValue !== null && rightValue !== undefined) {
+                    node.right = {
+                        val: rightValue,
+                        left: null,
+                        right: null,
+                    };
+                    queue.push(node.right);
+                }
+            }
+        }
+        return root;
     }
+    const root = buildTree(tree);
+    if (!root)
+        return [];
+    const result = [];
+    const queue = [root];
+    let front = 0;
+    let level = 0;
+    while (front < queue.length) {
+        const levelEnd = queue.length;
+        const values = [];
+        while (front < levelEnd) {
+            const node = queue[front++];
+            values.push(node.val);
+            if (node.left)
+                queue.push(node.left);
+            if (node.right)
+                queue.push(node.right);
+        }
+        if (level % 2 === 1) {
+            let left = 0;
+            let right = values.length - 1;
+            while (left < right) {
+                const temp = values[left];
+                values[left] = values[right];
+                values[right] = temp;
+                left++;
+                right--;
+            }
+        }
+        result.push(values);
+        level++;
+    }
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITH BUILT-IN HELPERS ==================== */
+type Module10TreeNode = {
+  val: number;
+  left: Module10TreeNode | null;
+  right: Module10TreeNode | null;
+};
 
-    result.push(level % 2 === 1 ? values.reverse() : values);
-    level++;
+function buildTreeForModule10(
+  arr: readonly (number | null)[],
+): Module10TreeNode | null {
+  if (!arr.length || arr[0] === null || arr[0] === undefined) {
+    return null;
   }
 
-  return result;
-}`,
-      typescriptSolution: `interface TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-}
+  const root: Module10TreeNode = {
+    val: arr[0],
+    left: null,
+    right: null,
+  };
 
-function buildTree(arr: readonly (number | null)[]): TreeNode | null {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
+  const queue: Module10TreeNode[] = [root];
+  let front = 0;
+  let index = 1;
 
-  const root: TreeNode = { val: arr[0], left: null, right: null };
-  const queue: TreeNode[] = [root];
-  let i = 1;
+  while (front < queue.length && index < arr.length) {
+    const node = queue[front++]!;
 
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift()!;
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
+    const leftValue = arr[index++];
+    if (leftValue !== null && leftValue !== undefined) {
+      node.left = {
+        val: leftValue,
+        left: null,
+        right: null,
+      };
+      queue.push(node.left);
     }
 
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
+    if (index < arr.length) {
+      const rightValue = arr[index++];
+
+      if (rightValue !== null && rightValue !== undefined) {
+        node.right = {
+          val: rightValue,
+          left: null,
+          right: null,
+        };
         queue.push(node.right);
       }
     }
@@ -356,27 +480,30 @@ function buildTree(arr: readonly (number | null)[]): TreeNode | null {
   return root;
 }
 
-function zigzagLevelOrder(tree: readonly (number | null)[]): number[][] {
-  const root = buildTree(tree);
+function zigzagLevelOrderUsingBuiltIns(
+  tree: readonly (number | null)[],
+): number[][] {
+  const root = buildTreeForModule10(tree);
   if (!root) return [];
 
   const result: number[][] = [];
-  const queue: TreeNode[] = [root];
+  const queue = [root];
+  let front = 0;
   let level = 0;
 
-  while (queue.length > 0) {
-    const size = queue.length;
+  while (front < queue.length) {
+    const levelEnd = queue.length;
     const values: number[] = [];
 
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift()!;
+    while (front < levelEnd) {
+      const node = queue[front++]!;
       values.push(node.val);
 
       if (node.left) queue.push(node.left);
       if (node.right) queue.push(node.right);
     }
 
-    result.push(level % 2 === 1 ? values.reverse() : values);
+    result.push(level % 2 === 0 ? values : values.reverse());
     level++;
   }
 
@@ -445,91 +572,135 @@ function zigzagLevelOrder(tree: readonly (number | null)[]): number[][] {
     },
     solution: {
       algorithm:
-        'Rebuild the tree and run a standard BFS level-order traversal, collecting each level\'s values into its own array in the usual top-to-bottom, left-to-right order. Once every level has been collected, reverse the outer array (the list of levels) so the deepest level comes first and the root\'s level comes last.',
+        `Step 1: Run normal top-down BFS.
+Step 2: Store each level as its own array.
+Step 3: Do not reverse the values inside a level.
+Step 4: Reverse the outer list of levels at the end to get bottom-to-top order.
+
+Core idea from source:
+Rebuild the tree and run a standard BFS level-order traversal, collecting each level\\\'s values into its own array in the usual top-to-bottom, left-to-right order. Once every level has been collected, reverse the outer array (the list of levels) so the deepest level comes first and the root\\\'s level comes last.`,
       dryRun:
-        'tree=[3,9,20,null,null,15,7]\ntop-down levels: [[3],[9,20],[15,7]]\nreverse the list of levels: [[15,7],[9,20],[3]]',
-      javascriptSolution: `function buildTree(arr) {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
-
-  const root = { val: arr[0], left: null, right: null };
-  const queue = [root];
-  let i = 1;
-
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift();
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
-    }
-
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
-        queue.push(node.right);
-      }
-    }
-  }
-
-  return root;
-}
-
+        `Top-down levels:
+[[3],[9,20],[15,7]]
+Reverse only the level list:
+[[15,7],[9,20],[3]]
+The values inside each level remain left-to-right.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
 function levelOrderBottom(tree) {
-  const root = buildTree(tree);
-  if (!root) return [];
-
-  const result = [];
-  const queue = [root];
-
-  while (queue.length > 0) {
-    const size = queue.length;
-    const values = [];
-
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift();
-      values.push(node.val);
-
-      if (node.left) queue.push(node.left);
-      if (node.right) queue.push(node.right);
+    function buildTree(arr) {
+        if (arr.length === 0 || arr[0] === null || arr[0] === undefined) {
+            return null;
+        }
+        const root = {
+            val: arr[0],
+            left: null,
+            right: null,
+        };
+        const queue = [root];
+        let front = 0;
+        let index = 1;
+        while (front < queue.length && index < arr.length) {
+            const node = queue[front++];
+            const leftValue = arr[index++];
+            if (leftValue !== null && leftValue !== undefined) {
+                node.left = {
+                    val: leftValue,
+                    left: null,
+                    right: null,
+                };
+                queue.push(node.left);
+            }
+            if (index < arr.length) {
+                const rightValue = arr[index++];
+                if (rightValue !== null && rightValue !== undefined) {
+                    node.right = {
+                        val: rightValue,
+                        left: null,
+                        right: null,
+                    };
+                    queue.push(node.right);
+                }
+            }
+        }
+        return root;
     }
+    const root = buildTree(tree);
+    if (!root)
+        return [];
+    const result = [];
+    const queue = [root];
+    let front = 0;
+    while (front < queue.length) {
+        const levelEnd = queue.length;
+        const values = [];
+        while (front < levelEnd) {
+            const node = queue[front++];
+            values.push(node.val);
+            if (node.left)
+                queue.push(node.left);
+            if (node.right)
+                queue.push(node.right);
+        }
+        result.push(values);
+    }
+    // Reverse level order manually, not the values inside each level.
+    let left = 0;
+    let right = result.length - 1;
+    while (left < right) {
+        const temp = result[left];
+        result[left] = result[right];
+        result[right] = temp;
+        left++;
+        right--;
+    }
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITH BUILT-IN HELPERS ==================== */
+type Module10TreeNode = {
+  val: number;
+  left: Module10TreeNode | null;
+  right: Module10TreeNode | null;
+};
 
-    result.push(values);
+function buildTreeForModule10(
+  arr: readonly (number | null)[],
+): Module10TreeNode | null {
+  if (!arr.length || arr[0] === null || arr[0] === undefined) {
+    return null;
   }
 
-  return result.reverse();
-}`,
-      typescriptSolution: `interface TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-}
+  const root: Module10TreeNode = {
+    val: arr[0],
+    left: null,
+    right: null,
+  };
 
-function buildTree(arr: readonly (number | null)[]): TreeNode | null {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
+  const queue: Module10TreeNode[] = [root];
+  let front = 0;
+  let index = 1;
 
-  const root: TreeNode = { val: arr[0], left: null, right: null };
-  const queue: TreeNode[] = [root];
-  let i = 1;
+  while (front < queue.length && index < arr.length) {
+    const node = queue[front++]!;
 
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift()!;
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
+    const leftValue = arr[index++];
+    if (leftValue !== null && leftValue !== undefined) {
+      node.left = {
+        val: leftValue,
+        left: null,
+        right: null,
+      };
+      queue.push(node.left);
     }
 
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
+    if (index < arr.length) {
+      const rightValue = arr[index++];
+
+      if (rightValue !== null && rightValue !== undefined) {
+        node.right = {
+          val: rightValue,
+          left: null,
+          right: null,
+        };
         queue.push(node.right);
       }
     }
@@ -538,19 +709,22 @@ function buildTree(arr: readonly (number | null)[]): TreeNode | null {
   return root;
 }
 
-function levelOrderBottom(tree: readonly (number | null)[]): number[][] {
-  const root = buildTree(tree);
+function levelOrderBottomUsingBuiltIns(
+  tree: readonly (number | null)[],
+): number[][] {
+  const root = buildTreeForModule10(tree);
   if (!root) return [];
 
   const result: number[][] = [];
-  const queue: TreeNode[] = [root];
+  const queue = [root];
+  let front = 0;
 
-  while (queue.length > 0) {
-    const size = queue.length;
+  while (front < queue.length) {
+    const levelEnd = queue.length;
     const values: number[] = [];
 
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift()!;
+    while (front < levelEnd) {
+      const node = queue[front++]!;
       values.push(node.val);
 
       if (node.left) queue.push(node.left);
@@ -625,91 +799,126 @@ function levelOrderBottom(tree: readonly (number | null)[]): number[][] {
     },
     solution: {
       algorithm:
-        'Rebuild the tree, then run a BFS level-order traversal. For each level, sum every node\'s value while enqueueing its children, then divide the sum by the level\'s size (the number of nodes processed in that iteration) to get the average, and push it to the result.',
+        `Step 1: Capture the number of nodes currently in the level.
+Step 2: Sum only those nodes.
+Step 3: Enqueue their children for the next level.
+Step 4: Divide the level sum by the captured level count.
+
+Core idea from source:
+Rebuild the tree, then run a BFS level-order traversal. For each level, sum every node\\\'s value while enqueueing its children, then divide the sum by the level\\\'s size (the number of nodes processed in that iteration) to get the average, and push it to the result.`,
       dryRun:
-        'tree=[3,9,20,null,null,15,7]\nlevel0: [3] → sum=3, size=1 → avg=3\nlevel1: [9,20] → sum=29, size=2 → avg=14.5\nlevel2: [15,7] → sum=22, size=2 → avg=11\nresult=[3, 14.5, 11]',
-      javascriptSolution: `function buildTree(arr) {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
-
-  const root = { val: arr[0], left: null, right: null };
-  const queue = [root];
-  let i = 1;
-
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift();
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
-    }
-
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
-        queue.push(node.right);
-      }
-    }
-  }
-
-  return root;
-}
-
+        `level 0: [3] → 3/1 = 3
+level 1: [9,20] → 29/2 = 14.5
+level 2: [15,7] → 22/2 = 11
+answer=[3,14.5,11].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
 function averageOfLevels(tree) {
-  const root = buildTree(tree);
-  if (!root) return [];
-
-  const result = [];
-  const queue = [root];
-
-  while (queue.length > 0) {
-    const size = queue.length;
-    let sum = 0;
-
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift();
-      sum += node.val;
-
-      if (node.left) queue.push(node.left);
-      if (node.right) queue.push(node.right);
+    function buildTree(arr) {
+        if (arr.length === 0 || arr[0] === null || arr[0] === undefined) {
+            return null;
+        }
+        const root = {
+            val: arr[0],
+            left: null,
+            right: null,
+        };
+        const queue = [root];
+        let front = 0;
+        let index = 1;
+        while (front < queue.length && index < arr.length) {
+            const node = queue[front++];
+            const leftValue = arr[index++];
+            if (leftValue !== null && leftValue !== undefined) {
+                node.left = {
+                    val: leftValue,
+                    left: null,
+                    right: null,
+                };
+                queue.push(node.left);
+            }
+            if (index < arr.length) {
+                const rightValue = arr[index++];
+                if (rightValue !== null && rightValue !== undefined) {
+                    node.right = {
+                        val: rightValue,
+                        left: null,
+                        right: null,
+                    };
+                    queue.push(node.right);
+                }
+            }
+        }
+        return root;
     }
+    const root = buildTree(tree);
+    if (!root)
+        return [];
+    const result = [];
+    const queue = [root];
+    let front = 0;
+    while (front < queue.length) {
+        const levelEnd = queue.length;
+        let sum = 0;
+        let count = 0;
+        while (front < levelEnd) {
+            const node = queue[front++];
+            sum += node.val;
+            count++;
+            if (node.left)
+                queue.push(node.left);
+            if (node.right)
+                queue.push(node.right);
+        }
+        result.push(sum / count);
+    }
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITH BUILT-IN HELPERS ==================== */
+type Module10TreeNode = {
+  val: number;
+  left: Module10TreeNode | null;
+  right: Module10TreeNode | null;
+};
 
-    result.push(sum / size);
+function buildTreeForModule10(
+  arr: readonly (number | null)[],
+): Module10TreeNode | null {
+  if (!arr.length || arr[0] === null || arr[0] === undefined) {
+    return null;
   }
 
-  return result;
-}`,
-      typescriptSolution: `interface TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-}
+  const root: Module10TreeNode = {
+    val: arr[0],
+    left: null,
+    right: null,
+  };
 
-function buildTree(arr: readonly (number | null)[]): TreeNode | null {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
+  const queue: Module10TreeNode[] = [root];
+  let front = 0;
+  let index = 1;
 
-  const root: TreeNode = { val: arr[0], left: null, right: null };
-  const queue: TreeNode[] = [root];
-  let i = 1;
+  while (front < queue.length && index < arr.length) {
+    const node = queue[front++]!;
 
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift()!;
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
+    const leftValue = arr[index++];
+    if (leftValue !== null && leftValue !== undefined) {
+      node.left = {
+        val: leftValue,
+        left: null,
+        right: null,
+      };
+      queue.push(node.left);
     }
 
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
+    if (index < arr.length) {
+      const rightValue = arr[index++];
+
+      if (rightValue !== null && rightValue !== undefined) {
+        node.right = {
+          val: rightValue,
+          left: null,
+          right: null,
+        };
         queue.push(node.right);
       }
     }
@@ -718,26 +927,31 @@ function buildTree(arr: readonly (number | null)[]): TreeNode | null {
   return root;
 }
 
-function averageOfLevels(tree: readonly (number | null)[]): number[] {
-  const root = buildTree(tree);
+function averageOfLevelsUsingBuiltIns(
+  tree: readonly (number | null)[],
+): number[] {
+  const root = buildTreeForModule10(tree);
   if (!root) return [];
 
   const result: number[] = [];
-  const queue: TreeNode[] = [root];
+  const queue = [root];
+  let front = 0;
 
-  while (queue.length > 0) {
-    const size = queue.length;
-    let sum = 0;
+  while (front < queue.length) {
+    const levelEnd = queue.length;
+    const values: number[] = [];
 
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift()!;
-      sum += node.val;
+    while (front < levelEnd) {
+      const node = queue[front++]!;
+      values.push(node.val);
 
       if (node.left) queue.push(node.left);
       if (node.right) queue.push(node.right);
     }
 
-    result.push(sum / size);
+    result.push(
+      values.reduce((sum, value) => sum + value, 0) / values.length,
+    );
   }
 
   return result;
@@ -805,91 +1019,127 @@ function averageOfLevels(tree: readonly (number | null)[]): number[] {
     },
     solution: {
       algorithm:
-        'Rebuild the tree, then run a standard BFS level-order traversal with a queue. For each level, dequeue every node left-to-right, enqueueing children as usual, and remember the value of the last node dequeued in that level (it is, by construction of level-order traversal, the rightmost node at that depth). Push it to the result after finishing the level.',
+        `Step 1: Process one level at a time from left to right.
+Step 2: Remember the value of every dequeued node.
+Step 3: After the level ends, the last dequeued node is the rightmost node at that depth.
+Step 4: Append that value to the answer.
+
+Core idea from source:
+Rebuild the tree, then run a standard BFS level-order traversal with a queue. For each level, dequeue every node left-to-right, enqueueing children as usual, and remember the value of the last node dequeued in that level (it is, by construction of level-order traversal, the rightmost node at that depth). Push it to the result after finishing the level.`,
       dryRun:
-        'tree=[1,2,3,null,5,null,4]\nlevel0: [1] → last=1\nlevel1: [2,3] → last=3\nlevel2: 2 has no left, right=5 → enqueue 5; 3 has no left, right=4 → enqueue 4 → queue=[5,4] → last=4\nresult=[1,3,4]',
-      javascriptSolution: `function buildTree(arr) {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
+        `tree=[1,2,3,null,5,null,4]
+level 0: [1] → last=1
+level 1: [2,3] → last=3
+level 2: [5,4] → last=4
+answer=[1,3,4].
 
-  const root = { val: arr[0], left: null, right: null };
-  const queue = [root];
-  let i = 1;
-
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift();
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
-    }
-
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
-        queue.push(node.right);
-      }
-    }
-  }
-
-  return root;
-}
-
+Notice the visible node can be a left child; the rule is "last node at the level", not "always the right child".`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
 function rightSideView(tree) {
-  const root = buildTree(tree);
-  if (!root) return [];
-
-  const result = [];
-  const queue = [root];
-
-  while (queue.length > 0) {
-    const size = queue.length;
-    let last = null;
-
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift();
-      last = node.val;
-
-      if (node.left) queue.push(node.left);
-      if (node.right) queue.push(node.right);
+    function buildTree(arr) {
+        if (arr.length === 0 || arr[0] === null || arr[0] === undefined) {
+            return null;
+        }
+        const root = {
+            val: arr[0],
+            left: null,
+            right: null,
+        };
+        const queue = [root];
+        let front = 0;
+        let index = 1;
+        while (front < queue.length && index < arr.length) {
+            const node = queue[front++];
+            const leftValue = arr[index++];
+            if (leftValue !== null && leftValue !== undefined) {
+                node.left = {
+                    val: leftValue,
+                    left: null,
+                    right: null,
+                };
+                queue.push(node.left);
+            }
+            if (index < arr.length) {
+                const rightValue = arr[index++];
+                if (rightValue !== null && rightValue !== undefined) {
+                    node.right = {
+                        val: rightValue,
+                        left: null,
+                        right: null,
+                    };
+                    queue.push(node.right);
+                }
+            }
+        }
+        return root;
     }
+    const root = buildTree(tree);
+    if (!root)
+        return [];
+    const result = [];
+    const queue = [root];
+    let front = 0;
+    while (front < queue.length) {
+        const levelEnd = queue.length;
+        let lastValue = 0;
+        while (front < levelEnd) {
+            const node = queue[front++];
+            lastValue = node.val;
+            if (node.left)
+                queue.push(node.left);
+            if (node.right)
+                queue.push(node.right);
+        }
+        result.push(lastValue);
+    }
+    return result;
+}`,
+      typescriptSolution: `/* ==================== WITH BUILT-IN HELPERS ==================== */
+type Module10TreeNode = {
+  val: number;
+  left: Module10TreeNode | null;
+  right: Module10TreeNode | null;
+};
 
-    result.push(last);
+function buildTreeForModule10(
+  arr: readonly (number | null)[],
+): Module10TreeNode | null {
+  if (!arr.length || arr[0] === null || arr[0] === undefined) {
+    return null;
   }
 
-  return result;
-}`,
-      typescriptSolution: `interface TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-}
+  const root: Module10TreeNode = {
+    val: arr[0],
+    left: null,
+    right: null,
+  };
 
-function buildTree(arr: readonly (number | null)[]): TreeNode | null {
-  if (!arr || arr.length === 0 || arr[0] === null || arr[0] === undefined) return null;
+  const queue: Module10TreeNode[] = [root];
+  let front = 0;
+  let index = 1;
 
-  const root: TreeNode = { val: arr[0], left: null, right: null };
-  const queue: TreeNode[] = [root];
-  let i = 1;
+  while (front < queue.length && index < arr.length) {
+    const node = queue[front++]!;
 
-  while (queue.length > 0 && i < arr.length) {
-    const node = queue.shift()!;
-
-    if (i < arr.length) {
-      const leftVal = arr[i++];
-      if (leftVal !== null && leftVal !== undefined) {
-        node.left = { val: leftVal, left: null, right: null };
-        queue.push(node.left);
-      }
+    const leftValue = arr[index++];
+    if (leftValue !== null && leftValue !== undefined) {
+      node.left = {
+        val: leftValue,
+        left: null,
+        right: null,
+      };
+      queue.push(node.left);
     }
 
-    if (i < arr.length) {
-      const rightVal = arr[i++];
-      if (rightVal !== null && rightVal !== undefined) {
-        node.right = { val: rightVal, left: null, right: null };
+    if (index < arr.length) {
+      const rightValue = arr[index++];
+
+      if (rightValue !== null && rightValue !== undefined) {
+        node.right = {
+          val: rightValue,
+          left: null,
+          right: null,
+        };
         queue.push(node.right);
       }
     }
@@ -898,26 +1148,29 @@ function buildTree(arr: readonly (number | null)[]): TreeNode | null {
   return root;
 }
 
-function rightSideView(tree: readonly (number | null)[]): number[] {
-  const root = buildTree(tree);
+function rightSideViewUsingBuiltIns(
+  tree: readonly (number | null)[],
+): number[] {
+  const root = buildTreeForModule10(tree);
   if (!root) return [];
 
   const result: number[] = [];
-  const queue: TreeNode[] = [root];
+  const queue = [root];
+  let front = 0;
 
-  while (queue.length > 0) {
-    const size = queue.length;
-    let last = 0;
+  while (front < queue.length) {
+    const levelEnd = queue.length;
+    const level: number[] = [];
 
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift()!;
-      last = node.val;
+    while (front < levelEnd) {
+      const node = queue[front++]!;
+      level.push(node.val);
 
       if (node.left) queue.push(node.left);
       if (node.right) queue.push(node.right);
     }
 
-    result.push(last);
+    result.push(level[level.length - 1]!);
   }
 
   return result;

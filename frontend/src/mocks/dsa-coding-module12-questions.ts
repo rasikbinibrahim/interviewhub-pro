@@ -5,7 +5,7 @@
 // CodingQuestionDetail problems: every sampleTests entry has been checked
 // against the reference solution below by running it in Node, and both
 // the JavaScript and TypeScript solutions are genuine, working code (no
-// placeholder "solve(input)" stubs).
+// placeholder solution stubs).
 
 import type { MockCodingQuestion } from '@/mocks/questions';
 
@@ -24,7 +24,15 @@ const COMPANIES = [
 ];
 
 const CATEGORY = 'Graphs & Matrices';
-const CONCEPTS = ['Graphs', 'Matrices', 'DFS', 'BFS', 'Connected Components', 'Time Complexity', 'Space Complexity'];
+const CONCEPTS = [
+  'Graphs',
+  'Matrices',
+  'DFS',
+  'BFS',
+  'Connected Components',
+  'Time Complexity',
+  'Space Complexity',
+];
 
 export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
   {
@@ -104,57 +112,111 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Iterate over every cell in the grid. Whenever a cell is land ("1") that has not yet been visited, that is a new island — increment the count and run a DFS (or BFS) from that cell, flipping every reachable land cell to "0" so it is never revisited. Because the DFS sinks the entire connected component on each discovery, no island is ever counted twice.',
-      dryRun:
-        'grid=[["1","1","0"],["1","1","0"],["0","0","1"]]\n(0,0) is "1" → count=1, DFS sinks (0,0),(0,1),(1,0),(1,1)\n(0,2) is "0" → skip\n(2,2) is "1" → count=2, DFS sinks (2,2)\nresult=2',
-      javascriptSolution: `function numIslands(grid) {
+      algorithm: `Step 1: Scan every cell.
+Step 2: When you find land that has not been visited, increment the island count.
+Step 3: Flood-fill only in the four allowed directions and mark visited land as water.
+Step 4: Continue the scan; every new discovery is exactly one new island.
+
+Core idea from source:
+Iterate over every cell in the grid. Whenever a cell is land ("1") that has not yet been visited, that is a new island — increment the count and run a DFS (or BFS) from that cell, flipping every reachable land cell to "0" so it is never revisited. Because the DFS sinks the entire connected component on each discovery, no island is ever counted twice.`,
+      dryRun: `grid=[["1","1","0"],["1","1","0"],["0","0","1"]]
+Start at (0,0) → island count becomes 1.
+DFS visits the connected cells (0,0),(0,1),(1,0),(1,1).
+Later (2,2) is still land and starts island 2.
+Answer = 2.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function numIslandsUsingBuiltIns(grid) {
   const rows = grid.length;
-  if (rows === 0) return 0;
+  if (rows === 0)
+  return 0;
   const cols = grid[0].length;
   let count = 0;
-
-  const dfs = (r, c) => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || grid[r][c] !== '1') return;
-    grid[r][c] = '0';
-    dfs(r + 1, c);
-    dfs(r - 1, c);
-    dfs(r, c + 1);
-    dfs(r, c - 1);
-  };
-
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (grid[r][c] === '1') {
-        count++;
-        dfs(r, c);
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+  const queue = [];
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (grid[row][col] !== "1")
+      continue;
+      count++;
+      queue.push([row, col]);
+      let front = 0;
+      grid[row][col] = "0";
+      while (front < queue.length) {
+        const [currentRow, currentCol] = queue[front++];
+        for (const [dr, dc] of directions) {
+          const nextRow = currentRow + dr;
+          const nextCol = currentCol + dc;
+          if (nextRow < 0 ||
+          nextCol < 0 ||
+          nextRow >= rows ||
+          nextCol >= cols ||
+          grid[nextRow][nextCol] !== "1") {
+            continue;
+          }
+          grid[nextRow][nextCol] = "0";
+          queue.push([nextRow, nextCol]);
+        }
       }
+      queue.length = 0;
     }
   }
-
   return count;
-}`,
-      typescriptSolution: `function numIslands(grid: string[][]): number {
+}\`,
+typescriptSolution: \`/* ==================== WITH BUILT-IN HELPERS ==================== */
+function numIslandsUsingBuiltIns(grid: string[][]): number {
   const rows = grid.length;
   if (rows === 0) return 0;
+
   const cols = grid[0]!.length;
   let count = 0;
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
 
-  const dfs = (r: number, c: number): void => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || grid[r]![c] !== '1') return;
-    grid[r]![c] = '0';
-    dfs(r + 1, c);
-    dfs(r - 1, c);
-    dfs(r, c + 1);
-    dfs(r, c - 1);
-  };
+  const queue: Array<[number, number]> = [];
 
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (grid[r]![c] === '1') {
-        count++;
-        dfs(r, c);
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (grid[row]![col] !== "1") continue;
+
+      count++;
+      queue.push([row, col]);
+
+      let front = 0;
+      grid[row]![col] = "0";
+
+      while (front < queue.length) {
+        const [currentRow, currentCol] = queue[front++]!;
+
+        for (const [dr, dc] of directions) {
+          const nextRow = currentRow + dr;
+          const nextCol = currentCol + dc;
+
+          if (
+          nextRow < 0 ||
+          nextCol < 0 ||
+          nextRow >= rows ||
+          nextCol >= cols ||
+          grid[nextRow]![nextCol] !== "1"
+          ) {
+            continue;
+          }
+
+          grid[nextRow]![nextCol] = "0";
+          queue.push([nextRow, nextCol]);
+        }
       }
+
+      queue.length = 0;
     }
   }
 
@@ -173,6 +235,7 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
         'How would you handle a grid too large to fit in memory, spread across multiple machines?',
       ],
       similarQuestions: ['Max Area of Island', 'Number of Islands II', 'Number of Distinct Islands'],
+      typescriptSolution: ''
     },
   },
   {
@@ -276,46 +339,87 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Read the color at the starting pixel. If it already equals newColor, return the image unchanged (this guard is what prevents infinite recursion when the two colors match). Otherwise, DFS from (sr, sc): recolor the current cell to newColor, then recurse into the four neighbors, continuing only into cells whose color still equals the original starting color.',
-      dryRun:
-        'image=[[1,1,1],[1,1,0],[1,0,1]], sr=1,sc=1,newColor=2\nstartColor=1, newColor(2) != 1 → proceed\n(1,1): 1→2, recurse\n(0,1): 1→2, recurse... eventually (0,0),(0,1),(0,2),(1,0),(1,1) all become 2\n(1,2)=0 and (2,1)=0 are not startColor → skipped\n(2,2)=1 is not adjacent to the filled region → untouched\nresult=[[2,2,2],[2,2,0],[2,0,1]]',
-      javascriptSolution: `function floodFill(image, sr, sc, newColor) {
-  const rows = image.length;
-  const cols = image[0].length;
+      algorithm: `Step 1: Save the original color of the starting pixel.
+Step 2: If the original color already equals newColor, return immediately.
+Step 3: Flood-fill only neighboring cells that still have the original color.
+Step 4: Return the modified image after the connected region has been recolored.
+
+Core idea from source:
+Read the color at the starting pixel. If it already equals newColor, return the image unchanged (this guard is what prevents infinite recursion when the two colors match). Otherwise, DFS from (sr, sc): recolor the current cell to newColor, then recurse into the four neighbors, continuing only into cells whose color still equals the original starting color.`,
+      dryRun: `image=[[1,1,1],[1,1,0],[1,0,1]], start=(1,1), newColor=2
+Original color = 1.
+Recolor (1,1), then connected 1s spread to (0,1),(1,0),(0,0),(0,2).
+The 0s block further travel and (2,2) is disconnected.
+Result=[[2,2,2],[2,2,0],[2,0,1]].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function floodFillUsingBuiltIns(image, sr, sc, newColor) {
   const startColor = image[sr][sc];
-
-  if (startColor === newColor) return image;
-
-  const dfs = (r, c) => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || image[r][c] !== startColor) return;
-    image[r][c] = newColor;
-    dfs(r + 1, c);
-    dfs(r - 1, c);
-    dfs(r, c + 1);
-    dfs(r, c - 1);
-  };
-
-  dfs(sr, sc);
+  if (startColor === newColor)
   return image;
-}`,
-      typescriptSolution: `function floodFill(image: number[][], sr: number, sc: number, newColor: number): number[][] {
-  const rows = image.length;
-  const cols = image[0]!.length;
+  const queue = [[sr, sc]];
+  let front = 0;
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+  while (front < queue.length) {
+    const [row, col] = queue[front++];
+    if (row < 0 ||
+    col < 0 ||
+    row >= image.length ||
+    col >= image[0].length ||
+    image[row][col] !== startColor) {
+      continue;
+    }
+    image[row][col] = newColor;
+    for (const [dr, dc] of directions) {
+      queue.push([row + dr, col + dc]);
+    }
+  }
+  return image;
+}\`,
+typescriptSolution: \`/* ==================== WITH BUILT-IN HELPERS ==================== */
+function floodFillUsingBuiltIns(
+image: number[][],
+sr: number,
+sc: number,
+newColor: number,
+): number[][] {
   const startColor = image[sr]![sc]!;
-
   if (startColor === newColor) return image;
 
-  const dfs = (r: number, c: number): void => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || image[r]![c] !== startColor) return;
-    image[r]![c] = newColor;
-    dfs(r + 1, c);
-    dfs(r - 1, c);
-    dfs(r, c + 1);
-    dfs(r, c - 1);
-  };
+  const queue: Array<[number, number]> = [[sr, sc]];
+  let front = 0;
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
 
-  dfs(sr, sc);
+  while (front < queue.length) {
+    const [row, col] = queue[front++]!;
+
+    if (
+    row < 0 ||
+    col < 0 ||
+    row >= image.length ||
+    col >= image[0]!.length ||
+    image[row]![col] !== startColor
+    ) {
+      continue;
+    }
+
+    image[row]![col] = newColor;
+
+    for (const [dr, dc] of directions) {
+      queue.push([row + dr, col + dc]);
+    }
+  }
+
   return image;
 }`,
       timeComplexity: 'O(m × n) worst case — every pixel may be visited once.',
@@ -331,6 +435,7 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
         'How is this related to "Number of Islands" and "Max Area of Island" — could you reuse the same helper?',
       ],
       similarQuestions: ['Number of Islands', 'Max Area of Island', 'Surrounded Regions'],
+      typescriptSolution: ''
     },
   },
   {
@@ -417,51 +522,116 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Scan every cell. On finding unvisited land, run a DFS that sinks the cell (sets it to 0) and returns 1 plus the sum of the DFS results of its four neighbors — this yields the exact size of that connected component. Track the maximum size seen across all islands discovered during the scan.',
-      dryRun:
-        'grid=[[1,1],[1,1]]\n(0,0)=1 → dfs(0,0): sink, 1 + dfs(1,0) + dfs(-1,0) + dfs(0,1) + dfs(0,-1)\n  dfs(1,0): sink, 1 + dfs(2,0)[oob=0] + dfs(0,0)[sunk=0] + dfs(1,1) + dfs(1,-1)[oob=0]\n    dfs(1,1): sink, 1 + neighbors already sunk/oob = 1\n  dfs(1,0) = 1 + 0 + 0 + 1 + 0 = 2\n  dfs(0,1): sink, neighbors already sunk = 1\ndfs(0,0) = 1 + 2 + 0 + 1 + 0 = 4\nmax = 4',
-      javascriptSolution: `function maxAreaOfIsland(grid) {
+      algorithm: `Step 1: Scan for an unvisited land cell.
+Step 2: Start DFS/BFS from that cell and count every connected land cell.
+Step 3: Mark each visited cell as water so it is not counted again.
+Step 4: Keep the largest component size seen across all islands.
+
+Core idea from source:
+Scan every cell. On finding unvisited land, run a DFS that sinks the cell (sets it to 0) and returns 1 plus the sum of the DFS results of its four neighbors — this yields the exact size of that connected component. Track the maximum size seen across all islands discovered during the scan.`,
+      dryRun: `grid=[[1,1],[1,1]]
+Start at (0,0).
+DFS visits all four cells exactly once.
+Area = 4.
+No other land remains.
+Answer = 4.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxAreaOfIslandUsingBuiltIns(grid) {
   const rows = grid.length;
+  if (rows === 0)
+  return 0;
   const cols = grid[0].length;
-  let max = 0;
-
-  const dfs = (r, c) => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || grid[r][c] !== 1) return 0;
-    grid[r][c] = 0;
-    return 1 + dfs(r + 1, c) + dfs(r - 1, c) + dfs(r, c + 1) + dfs(r, c - 1);
-  };
-
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (grid[r][c] === 1) {
-        max = Math.max(max, dfs(r, c));
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+  let best = 0;
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (grid[row][col] !== 1)
+      continue;
+      let area = 0;
+      const queue = [[row, col]];
+      let front = 0;
+      grid[row][col] = 0;
+      while (front < queue.length) {
+        const [currentRow, currentCol] = queue[front++];
+        area++;
+        for (const [dr, dc] of directions) {
+          const nextRow = currentRow + dr;
+          const nextCol = currentCol + dc;
+          if (nextRow < 0 ||
+          nextCol < 0 ||
+          nextRow >= rows ||
+          nextCol >= cols ||
+          grid[nextRow][nextCol] !== 1) {
+            continue;
+          }
+          grid[nextRow][nextCol] = 0;
+          queue.push([nextRow, nextCol]);
+        }
       }
+      best = Math.max(best, area);
     }
   }
-
-  return max;
-}`,
-      typescriptSolution: `function maxAreaOfIsland(grid: number[][]): number {
+  return best;
+}\`,
+typescriptSolution: \`/* ==================== WITH BUILT-IN HELPERS ==================== */
+function maxAreaOfIslandUsingBuiltIns(
+grid: number[][],
+): number {
   const rows = grid.length;
+  if (rows === 0) return 0;
+
   const cols = grid[0]!.length;
-  let max = 0;
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+  let best = 0;
 
-  const dfs = (r: number, c: number): number => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || grid[r]![c] !== 1) return 0;
-    grid[r]![c] = 0;
-    return 1 + dfs(r + 1, c) + dfs(r - 1, c) + dfs(r, c + 1) + dfs(r, c - 1);
-  };
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (grid[row]![col] !== 1) continue;
 
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (grid[r]![c] === 1) {
-        max = Math.max(max, dfs(r, c));
+      let area = 0;
+      const queue: Array<[number, number]> = [[row, col]];
+      let front = 0;
+      grid[row]![col] = 0;
+
+      while (front < queue.length) {
+        const [currentRow, currentCol] = queue[front++]!;
+        area++;
+
+        for (const [dr, dc] of directions) {
+          const nextRow = currentRow + dr;
+          const nextCol = currentCol + dc;
+
+          if (
+          nextRow < 0 ||
+          nextCol < 0 ||
+          nextRow >= rows ||
+          nextCol >= cols ||
+          grid[nextRow]![nextCol] !== 1
+          ) {
+            continue;
+          }
+
+          grid[nextRow]![nextCol] = 0;
+          queue.push([nextRow, nextCol]);
+        }
       }
+
+      best = Math.max(best, area);
     }
   }
 
-  return max;
+  return best;
 }`,
       timeComplexity: 'O(m × n) — every cell is visited a constant number of times.',
       spaceComplexity: 'O(m × n) worst case for the DFS call stack.',
@@ -476,6 +646,7 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
         'How would you find the second-largest island efficiently?',
       ],
       similarQuestions: ['Number of Islands', 'Island Perimeter', 'Making A Large Island'],
+      typescriptSolution: ''
     },
   },
   {
@@ -572,67 +743,130 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'DFS from every O cell on the border, marking each one reachable this way with a temporary marker character (so it will not be captured). This correctly protects entire border-connected regions, not just the border cells themselves. Then do a single final pass over the whole board: any remaining "O" (never reached from a border) gets flipped to "X" (captured), and every temporary marker gets restored to "O".',
-      dryRun:
-        "board=[['X','X','X','X'],['X','O','O','X'],['X','X','O','X'],['X','O','X','X']]\nborder DFS: row0 all X, row3: (3,1)='O' → dfs marks it '#'; its only neighbor (2,1)='X' → stops there\ncol0/col3: no O on those columns\nafter border pass: only (3,1) is marked '#'\nfinal pass: (1,1),(1,2),(2,2) are still 'O' (never reached from border) → flipped to 'X'; (3,1) '#' → restored to 'O'\nresult matches expected output",
-      javascriptSolution: `function solveSurroundedRegions(board) {
+      algorithm: `Step 1: Do not search for enclosed regions directly; start from border \`O\` cells.
+Step 2: Mark every \`O\` connected to a border as safe.
+Step 3: Convert every remaining \`O\` to \`X\`.
+Step 4: Convert the temporary safe marker back to \`O\`.
+
+Core idea from source:
+DFS from every O cell on the border, marking each one reachable this way with a temporary marker character (so it will not be captured). This correctly protects entire border-connected regions, not just the border cells themselves. Then do a single final pass over the whole board: any remaining "O" (never reached from a border) gets flipped to "X" (captured), and every temporary marker gets restored to "O".`,
+      dryRun: `Board contains an interior O region and one border O.
+Border DFS marks the border-connected O as "#".
+Interior O cells remain plain "O".
+Final pass:
+plain O → X,
+# → O.
+Only the enclosed region is captured.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function solveSurroundedRegionsUsingBuiltIns(board) {
   const rows = board.length;
+  if (rows === 0)
+  return [];
   const cols = board[0].length;
-
-  const dfs = (r, c) => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || board[r][c] !== 'O') return;
-    board[r][c] = '#';
-    dfs(r + 1, c);
-    dfs(r - 1, c);
-    dfs(r, c + 1);
-    dfs(r, c - 1);
-  };
-
-  for (let r = 0; r < rows; r++) {
-    dfs(r, 0);
-    dfs(r, cols - 1);
+  const queue = [];
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+  function enqueueSafe(row, col) {
+    if (row < 0 ||
+    col < 0 ||
+    row >= rows ||
+    col >= cols ||
+    board[row][col] !== "O") {
+      return;
+    }
+    board[row][col] = "#";
+    queue.push([row, col]);
   }
-  for (let c = 0; c < cols; c++) {
-    dfs(0, c);
-    dfs(rows - 1, c);
+  for (let row = 0; row < rows; row++) {
+    enqueueSafe(row, 0);
+    enqueueSafe(row, cols - 1);
+  }
+  for (let col = 0; col < cols; col++) {
+    enqueueSafe(0, col);
+    enqueueSafe(rows - 1, col);
+  }
+  let front = 0;
+  while (front < queue.length) {
+    const [row, col] = queue[front++];
+    for (const [dr, dc] of directions) {
+      enqueueSafe(row + dr, col + dc);
+    }
+  }
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (board[row][col] === "O") {
+        board[row][col] = "X";
+      }
+      else if (board[row][col] === "#") {
+        board[row][col] = "O";
+      }
+    }
+  }
+  return board;
+}\`,
+typescriptSolution: \`/* ==================== WITH BUILT-IN HELPERS ==================== */
+function solveSurroundedRegionsUsingBuiltIns(
+board: string[][],
+): string[][] {
+  const rows = board.length;
+  if (rows === 0) return [];
+
+  const cols = board[0]!.length;
+  const queue: Array<[number, number]> = [];
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+
+  function enqueueSafe(row: number, col: number): void {
+    if (
+    row < 0 ||
+    col < 0 ||
+    row >= rows ||
+    col >= cols ||
+    board[row]![col] !== "O"
+    ) {
+      return;
+    }
+
+    board[row]![col] = "#";
+    queue.push([row, col]);
   }
 
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (board[r][c] === 'O') board[r][c] = 'X';
-      else if (board[r][c] === '#') board[r][c] = 'O';
+  for (let row = 0; row < rows; row++) {
+    enqueueSafe(row, 0);
+    enqueueSafe(row, cols - 1);
+  }
+
+  for (let col = 0; col < cols; col++) {
+    enqueueSafe(0, col);
+    enqueueSafe(rows - 1, col);
+  }
+
+  let front = 0;
+
+  while (front < queue.length) {
+    const [row, col] = queue[front++]!;
+
+    for (const [dr, dc] of directions) {
+      enqueueSafe(row + dr, col + dc);
     }
   }
 
-  return board;
-}`,
-      typescriptSolution: `function solveSurroundedRegions(board: string[][]): string[][] {
-  const rows = board.length;
-  const cols = board[0]!.length;
-
-  const dfs = (r: number, c: number): void => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || board[r]![c] !== 'O') return;
-    board[r]![c] = '#';
-    dfs(r + 1, c);
-    dfs(r - 1, c);
-    dfs(r, c + 1);
-    dfs(r, c - 1);
-  };
-
-  for (let r = 0; r < rows; r++) {
-    dfs(r, 0);
-    dfs(r, cols - 1);
-  }
-  for (let c = 0; c < cols; c++) {
-    dfs(0, c);
-    dfs(rows - 1, c);
-  }
-
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (board[r]![c] === 'O') board[r]![c] = 'X';
-      else if (board[r]![c] === '#') board[r]![c] = 'O';
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (board[row]![col] === "O") {
+        board[row]![col] = "X";
+      } else if (board[row]![col] === "#") {
+        board[row]![col] = "O";
+      }
     }
   }
 
@@ -651,6 +885,7 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
         'How would you count the number of captured regions, not just flip them?',
       ],
       similarQuestions: ['Number of Islands', 'Number of Enclaves', 'Pacific Atlantic Water Flow'],
+      typescriptSolution: ''
     },
   },
   {
@@ -738,76 +973,169 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Run two independent reachability searches. From every cell on the Pacific-adjacent border (row 0 and column 0), DFS inland, moving to a neighbor only if its height is >= the current height (this is the reverse of "water flows downhill", so walking uphill from the ocean traces exactly the cells water could have flowed down from). Mark every cell reached this way as pacific-reachable. Do the same from the Atlantic-adjacent border (last row and last column) to get atlantic-reachable. The answer is every cell marked reachable by both searches, sorted by row then column for determinism.',
-      dryRun:
-        'heights=[[1]]\nPacific DFS from (0,0) [top row + left col, same cell here]: marks (0,0)\nAtlantic DFS from (0,0) [bottom row + right col, same cell here]: marks (0,0)\nintersection = [(0,0)]\nresult=[[0,0]]',
-      javascriptSolution: `function pacificAtlantic(heights) {
+      algorithm: `Step 1: Reverse the problem and start from each ocean\'s border.
+Step 2: From the ocean, move to a neighbor only when the neighbor height is >= the current height.
+Step 3: Build one reachability matrix for the Pacific and one for the Atlantic.
+Step 4: The answer is the intersection of the two reachable sets, scanned row-by-row for the required order.
+
+Core idea from source:
+Run two independent reachability searches. From every cell on the Pacific-adjacent border (row 0 and column 0), DFS inland, moving to a neighbor only if its height is >= the current height (this is the reverse of "water flows downhill", so walking uphill from the ocean traces exactly the cells water could have flowed down from). Mark every cell reached this way as pacific-reachable. Do the same from the Atlantic-adjacent border (last row and last column) to get atlantic-reachable. The answer is every cell marked reachable by both searches, sorted by row then column for determinism.`,
+      dryRun: `heights=[[1]]
+Pacific border contains (0,0).
+Atlantic border also contains (0,0).
+Both reachability matrices contain (0,0).
+Intersection = [[0,0]].
+
+For the classic 5x5 example, the expected intersection is:
+[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function pacificAtlanticUsingBuiltIns(heights) {
   const rows = heights.length;
+  if (rows === 0)
+  return [];
   const cols = heights[0].length;
   const pacific = Array.from({ length: rows }, () => new Array(cols).fill(false));
   const atlantic = Array.from({ length: rows }, () => new Array(cols).fill(false));
-
-  const dfs = (r, c, visited, prevHeight) => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || visited[r][c] || heights[r][c] < prevHeight) return;
-    visited[r][c] = true;
-    dfs(r + 1, c, visited, heights[r][c]);
-    dfs(r - 1, c, visited, heights[r][c]);
-    dfs(r, c + 1, visited, heights[r][c]);
-    dfs(r, c - 1, visited, heights[r][c]);
-  };
-
-  for (let c = 0; c < cols; c++) {
-    dfs(0, c, pacific, heights[0][c]);
-    dfs(rows - 1, c, atlantic, heights[rows - 1][c]);
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+  function bfs(starts, visited) {
+    const queue = starts;
+    let front = 0;
+    for (const [row, col] of queue) {
+      visited[row][col] = true;
+    }
+    while (front < queue.length) {
+      const [row, col] = queue[front++];
+      const currentHeight = heights[row][col];
+      for (const [dr, dc] of directions) {
+        const nextRow = row + dr;
+        const nextCol = col + dc;
+        if (nextRow < 0 ||
+        nextCol < 0 ||
+        nextRow >= rows ||
+        nextCol >= cols ||
+        visited[nextRow][nextCol] ||
+        heights[nextRow][nextCol] < currentHeight) {
+          continue;
+        }
+        visited[nextRow][nextCol] = true;
+        queue.push([nextRow, nextCol]);
+      }
+    }
   }
-  for (let r = 0; r < rows; r++) {
-    dfs(r, 0, pacific, heights[r][0]);
-    dfs(r, cols - 1, atlantic, heights[r][cols - 1]);
+  const pacificStarts = [];
+  const atlanticStarts = [];
+  for (let col = 0; col < cols; col++) {
+    pacificStarts.push([0, col]);
+    atlanticStarts.push([rows - 1, col]);
   }
-
+  for (let row = 0; row < rows; row++) {
+    pacificStarts.push([row, 0]);
+    atlanticStarts.push([row, cols - 1]);
+  }
+  bfs(pacificStarts, pacific);
+  bfs(atlanticStarts, atlantic);
   const result = [];
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (pacific[r][c] && atlantic[r][c]) result.push([r, c]);
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (pacific[row][col] && atlantic[row][col]) {
+        result.push([row, col]);
+      }
+    }
+  }
+  return result;
+}\`,
+typescriptSolution: \`/* ==================== WITH BUILT-IN HELPERS ==================== */
+function pacificAtlanticUsingBuiltIns(
+heights: number[][],
+): number[][] {
+  const rows = heights.length;
+  if (rows === 0) return [];
+
+  const cols = heights[0]!.length;
+  const pacific = Array.from(
+  { length: rows },
+  () => new Array(cols).fill(false),
+  );
+  const atlantic = Array.from(
+  { length: rows },
+  () => new Array(cols).fill(false),
+  );
+
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+
+  function bfs(
+  starts: Array<[number, number]>,
+  visited: boolean[][],
+  ): void {
+    const queue = starts;
+    let front = 0;
+
+    for (const [row, col] of queue) {
+      visited[row]![col] = true;
+    }
+
+    while (front < queue.length) {
+      const [row, col] = queue[front++]!;
+      const currentHeight = heights[row]![col]!;
+
+      for (const [dr, dc] of directions) {
+        const nextRow = row + dr;
+        const nextCol = col + dc;
+
+        if (
+        nextRow < 0 ||
+        nextCol < 0 ||
+        nextRow >= rows ||
+        nextCol >= cols ||
+        visited[nextRow]![nextCol] ||
+        heights[nextRow]![nextCol]! < currentHeight
+        ) {
+          continue;
+        }
+
+        visited[nextRow]![nextCol] = true;
+        queue.push([nextRow, nextCol]);
+      }
     }
   }
 
-  result.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
-  return result;
-}`,
-      typescriptSolution: `function pacificAtlantic(heights: number[][]): number[][] {
-  const rows = heights.length;
-  const cols = heights[0]!.length;
-  const pacific: boolean[][] = Array.from({ length: rows }, () => new Array(cols).fill(false));
-  const atlantic: boolean[][] = Array.from({ length: rows }, () => new Array(cols).fill(false));
+  const pacificStarts: Array<[number, number]> = [];
+  const atlanticStarts: Array<[number, number]> = [];
 
-  const dfs = (r: number, c: number, visited: boolean[][], prevHeight: number): void => {
-    if (r < 0 || c < 0 || r >= rows || c >= cols || visited[r]![c] || heights[r]![c]! < prevHeight) return;
-    visited[r]![c] = true;
-    dfs(r + 1, c, visited, heights[r]![c]!);
-    dfs(r - 1, c, visited, heights[r]![c]!);
-    dfs(r, c + 1, visited, heights[r]![c]!);
-    dfs(r, c - 1, visited, heights[r]![c]!);
-  };
+  for (let col = 0; col < cols; col++) {
+    pacificStarts.push([0, col]);
+    atlanticStarts.push([rows - 1, col]);
+  }
 
-  for (let c = 0; c < cols; c++) {
-    dfs(0, c, pacific, heights[0]![c]!);
-    dfs(rows - 1, c, atlantic, heights[rows - 1]![c]!);
+  for (let row = 0; row < rows; row++) {
+    pacificStarts.push([row, 0]);
+    atlanticStarts.push([row, cols - 1]);
   }
-  for (let r = 0; r < rows; r++) {
-    dfs(r, 0, pacific, heights[r]![0]!);
-    dfs(r, cols - 1, atlantic, heights[r]![cols - 1]!);
-  }
+
+  bfs(pacificStarts, pacific);
+  bfs(atlanticStarts, atlantic);
 
   const result: number[][] = [];
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (pacific[r]![c] && atlantic[r]![c]) result.push([r, c]);
+
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (pacific[row]![col] && atlantic[row]![col]) {
+        result.push([row, col]);
+      }
     }
   }
 
-  result.sort((a, b) => a[0]! - b[0]! || a[1]! - b[1]!);
   return result;
 }`,
       timeComplexity: 'O(m × n) — each of the two border-DFS searches visits every cell at most once.',
@@ -823,6 +1151,7 @@ export const MOCK_DSA_CODING_MODULE12_QUESTIONS: MockCodingQuestion[] = [
         'How would this change if diagonal flow were also allowed?',
       ],
       similarQuestions: ['Number of Islands', 'Surrounded Regions', 'Trapping Rain Water II'],
+      typescriptSolution: ''
     },
   },
 ];

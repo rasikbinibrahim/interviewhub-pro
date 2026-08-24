@@ -51,6 +51,7 @@ const PART_OPTIONS: Array<{ label: string; value: QuestionPart | 'All' }> = [
   { label: 'Architecture', value: 'Architecture' },
   { label: 'DevOps/Cloud', value: 'DevOps/Cloud' },
   { label: 'AI/LLM', value: 'AI/LLM' },
+  { label: 'Python', value: 'Python' },
 ];
 const CATEGORY_OPTIONS: Array<{ label: string; value: string }> = [
   { label: 'All Categories', value: 'All' },

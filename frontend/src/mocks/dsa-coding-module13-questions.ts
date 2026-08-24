@@ -36,7 +36,13 @@ const COMPANIES = [
 ];
 
 const CATEGORY = 'Trie';
-const CONCEPTS = ['Trie', 'Prefix Tree', 'Hashing', 'Time Complexity', 'Space Complexity'];
+const CONCEPTS = [
+  'Trie',
+  'Prefix Tree',
+  'Hashing',
+  'Time Complexity',
+  'Space Complexity',
+];
 
 export const MOCK_DSA_CODING_MODULE13_QUESTIONS: MockCodingQuestion[] = [
   {
@@ -108,102 +114,213 @@ export const MOCK_DSA_CODING_MODULE13_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Each TrieNode holds a Map from character to child TrieNode and an `isWord` boolean. `insert(word)` walks the trie from the root, creating a child node for each character not yet present, then marks the final node\'s `isWord = true`. A shared `traverse(str)` helper walks the trie following `str`\'s characters and returns the final node reached, or null if the path breaks partway through. `search(word)` returns true only if `traverse(word)` finds a node AND that node\'s `isWord` flag is set. `startsWith(prefix)` returns true if `traverse(prefix)` finds any node at all — it does not care whether that node ends a complete word.',
-      dryRun:
-        'insert("apple"): a→p→p→l→e, mark e.isWord=true\nsearch("apple"): traverse reaches the "e" node, isWord=true → true\nsearch("app"): traverse reaches the second "p" node, isWord=false (no word ends there yet) → false\nstartsWith("app"): traverse reaches the second "p" node — path exists → true\ninsert("app"): mark the second "p" node\'s isWord=true\nsearch("app"): now isWord=true → true',
-      javascriptSolution: `function trieOperations(operations, args) {
+      algorithm: `Step 1: Understand that a Trie stores one node per character along a shared prefix.
+Step 2: On insert, create missing character nodes and mark the final node as a complete word.
+Step 3: For search, the entire word path must exist and the final node must have isWord=true.
+Step 4: For startsWith, only the prefix path must exist; the final node does not need to be a complete word.
+
+Easy interview rule:
+search = path exists + complete-word flag
+startsWith = path exists only
+
+Core idea from source:
+Each TrieNode holds a Map from character to child TrieNode and an \`isWord\` boolean. \`insert(word)\` walks the trie from the root, creating a child node for each character not yet present, then marks the final node\\\'s \`isWord = true\`. A shared \`traverse(str)\` helper walks the trie following \`str\`\\\'s characters and returns the final node reached, or null if the path breaks partway through. \`search(word)\` returns true only if \`traverse(word)\` finds a node AND that node\\\'s \`isWord\` flag is set. \`startsWith(prefix)\` returns true if \`traverse(prefix)\` finds any node at all — it does not care whether that node ends a complete word.`,
+      dryRun: `Operations:
+insert("apple")
+search("apple")
+search("app")
+startsWith("app")
+insert("app")
+search("app")
+
+After insert("apple"):
+a → p → p → l → e, with e.isWord = true.
+
+search("apple"):
+the complete path exists and e.isWord = true → true.
+
+search("app"):
+the path exists, but the second p is not marked as a complete word yet → false.
+
+startsWith("app"):
+the path exists → true.
+
+insert("app"):
+mark the existing second-p node as isWord=true.
+
+search("app"):
+path exists + isWord=true → true.
+
+Result:
+[null, true, false, true, null, true]`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE + WITH BUILT-IN HELPERS ==================== */
+/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function trieOperations(operations, args) {
+  class TrieNode {
+    constructor() {
+      this.children = new Array(26).fill(null);
+      this.isWord = false;
+    }
+  }
+  class Trie {
+    constructor() {
+      this.root = new TrieNode();
+    }
+    indexOf(char) {
+      return char.charCodeAt(0) - 97;
+    }
+    insert(word) {
+      let node = this.root;
+      for (let i = 0; i < word.length; i++) {
+        const index = this.indexOf(word[i]);
+        if (node.children[index] === null) {
+          node.children[index] = new TrieNode();
+        }
+        node = node.children[index];
+      }
+      node.isWord = true;
+    }
+    traverse(value) {
+      let node = this.root;
+      for (let i = 0; i < value.length; i++) {
+        const index = this.indexOf(value[i]);
+        const next = node.children[index];
+        if (next === null)
+        return null;
+        node = next;
+      }
+      return node;
+    }
+    search(word) {
+      const node = this.traverse(word);
+      return node !== null && node.isWord;
+    }
+    startsWith(prefix) {
+      return this.traverse(prefix) !== null;
+    }
+  }
+  const trie = new Trie();
+  const results = [];
+  for (let i = 0; i < operations.length; i++) {
+    const operation = operations[i];
+    const operationArgs = args[i];
+    if (operation === "insert") {
+      trie.insert(operationArgs[0]);
+      results.push(null);
+    }
+    else if (operation === "search") {
+      results.push(trie.search(operationArgs[0]));
+    }
+    else if (operation === "startsWith") {
+      results.push(trie.startsWith(operationArgs[0]));
+    }
+  }
+  return results;
+}
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function trieOperationsUsingBuiltIns(operations, args) {
   class TrieNode {
     constructor() {
       this.children = new Map();
       this.isWord = false;
     }
   }
-
   class Trie {
     constructor() {
       this.root = new TrieNode();
     }
-
     insert(word) {
       let node = this.root;
-      for (const ch of word) {
-        if (!node.children.has(ch)) {
-          node.children.set(ch, new TrieNode());
+      for (const char of word) {
+        let next = node.children.get(char);
+        if (!next) {
+          next = new TrieNode();
+          node.children.set(char, next);
         }
-        node = node.children.get(ch);
+        node = next;
       }
       node.isWord = true;
     }
-
-    traverse(str) {
+    traverse(value) {
       let node = this.root;
-      for (const ch of str) {
-        if (!node.children.has(ch)) return null;
-        node = node.children.get(ch);
+      for (const char of value) {
+        const next = node.children.get(char);
+        if (!next)
+        return null;
+        node = next;
       }
       return node;
     }
-
     search(word) {
       const node = this.traverse(word);
       return node !== null && node.isWord;
     }
-
     startsWith(prefix) {
       return this.traverse(prefix) !== null;
     }
   }
-
   const trie = new Trie();
   const results = [];
-
   for (let i = 0; i < operations.length; i++) {
-    const op = operations[i];
-    const opArgs = args[i];
-
-    if (op === 'insert') {
-      trie.insert(opArgs[0]);
+    const operation = operations[i];
+    const operationArgs = args[i];
+    if (operation === "insert") {
+      trie.insert(operationArgs[0]);
       results.push(null);
-    } else if (op === 'search') {
-      results.push(trie.search(opArgs[0]));
-    } else if (op === 'startsWith') {
-      results.push(trie.startsWith(opArgs[0]));
+    }
+    else if (operation === "search") {
+      results.push(trie.search(operationArgs[0]));
+    }
+    else if (operation === "startsWith") {
+      results.push(trie.startsWith(operationArgs[0]));
     }
   }
-
   return results;
-}`,
-      typescriptSolution: `function trieOperations(
-  operations: readonly string[],
-  args: readonly unknown[][],
+}\`,
+typescriptSolution: \`/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function trieOperations(
+operations: readonly string[],
+args: readonly unknown[][],
 ): unknown[] {
   class TrieNode {
-    children = new Map<string, TrieNode>();
+    children: Array<TrieNode | null> = new Array<TrieNode | null>(26).fill(null);
     isWord = false;
   }
 
   class Trie {
-    root = new TrieNode();
+    private readonly root = new TrieNode();
+
+    private indexOf(char: string): number {
+      return char.charCodeAt(0) - 97;
+    }
 
     insert(word: string): void {
       let node = this.root;
-      for (const ch of word) {
-        if (!node.children.has(ch)) {
-          node.children.set(ch, new TrieNode());
+
+      for (let i = 0; i < word.length; i++) {
+        const index = this.indexOf(word[i]!);
+
+        if (node.children[index] === null) {
+          node.children[index] = new TrieNode();
         }
-        node = node.children.get(ch)!;
+
+        node = node.children[index]!;
       }
+
       node.isWord = true;
     }
 
-    traverse(str: string): TrieNode | null {
+    private traverse(value: string): TrieNode | null {
       let node = this.root;
-      for (const ch of str) {
-        const next = node.children.get(ch);
-        if (!next) return null;
+
+      for (let i = 0; i < value.length; i++) {
+        const index = this.indexOf(value[i]!);
+        const next = node.children[index];
+
+        if (next === null) return null;
         node = next;
       }
+
       return node;
     }
 
@@ -221,16 +338,89 @@ export const MOCK_DSA_CODING_MODULE13_QUESTIONS: MockCodingQuestion[] = [
   const results: unknown[] = [];
 
   for (let i = 0; i < operations.length; i++) {
-    const op = operations[i];
-    const opArgs = args[i]!;
+    const operation = operations[i];
+    const operationArgs = args[i]!;
 
-    if (op === 'insert') {
-      trie.insert(opArgs[0] as string);
+    if (operation === "insert") {
+      trie.insert(operationArgs[0] as string);
       results.push(null);
-    } else if (op === 'search') {
-      results.push(trie.search(opArgs[0] as string));
-    } else if (op === 'startsWith') {
-      results.push(trie.startsWith(opArgs[0] as string));
+    } else if (operation === "search") {
+      results.push(trie.search(operationArgs[0] as string));
+    } else if (operation === "startsWith") {
+      results.push(trie.startsWith(operationArgs[0] as string));
+    }
+  }
+
+  return results;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function trieOperationsUsingBuiltIns(
+operations: readonly string[],
+args: readonly unknown[][],
+): unknown[] {
+  class TrieNode {
+    children = new Map<string, TrieNode>();
+    isWord = false;
+  }
+
+  class Trie {
+    private readonly root = new TrieNode();
+
+    insert(word: string): void {
+      let node = this.root;
+
+      for (const char of word) {
+        let next = node.children.get(char);
+
+        if (!next) {
+          next = new TrieNode();
+          node.children.set(char, next);
+        }
+
+        node = next;
+      }
+
+      node.isWord = true;
+    }
+
+    private traverse(value: string): TrieNode | null {
+      let node = this.root;
+
+      for (const char of value) {
+        const next = node.children.get(char);
+
+        if (!next) return null;
+        node = next;
+      }
+
+      return node;
+    }
+
+    search(word: string): boolean {
+      const node = this.traverse(word);
+      return node !== null && node.isWord;
+    }
+
+    startsWith(prefix: string): boolean {
+      return this.traverse(prefix) !== null;
+    }
+  }
+
+  const trie = new Trie();
+  const results: unknown[] = [];
+
+  for (let i = 0; i < operations.length; i++) {
+    const operation = operations[i];
+    const operationArgs = args[i]!;
+
+    if (operation === "insert") {
+      trie.insert(operationArgs[0] as string);
+      results.push(null);
+    } else if (operation === "search") {
+      results.push(trie.search(operationArgs[0] as string));
+    } else if (operation === "startsWith") {
+      results.push(trie.startsWith(operationArgs[0] as string));
     }
   }
 
@@ -249,6 +439,7 @@ export const MOCK_DSA_CODING_MODULE13_QUESTIONS: MockCodingQuestion[] = [
         'How would you use this structure to build autocomplete suggestions (return all words with a given prefix, not just true/false)?',
       ],
       similarQuestions: ['Design Add and Search Words Data Structure', 'Word Search II', 'Replace Words'],
+      typescriptSolution: ''
     },
   },
 ];

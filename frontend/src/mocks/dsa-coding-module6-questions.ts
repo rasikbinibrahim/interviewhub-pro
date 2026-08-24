@@ -80,50 +80,115 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Maintain a stack and a map from each closing bracket to its matching opening bracket. For each character: if it's a closing bracket, it must match the top of the stack (pop it if so, otherwise return false immediately); if it's an opening bracket, push it. At the end, the string is valid only if the stack is empty.",
-      dryRun:
-        's="{[()]}"\n{ → push → [{]\n[ → push → [{,[]\n( → push → [{,[,(]\n) → matches top ( → pop → [{,[]\n] → matches top [ → pop → [{]\n} → matches top { → pop → []\nstack empty → true',
-      javascriptSolution: `function isValidParentheses(s) {
-  const stack = [];
-  const closingToOpening = new Map([
-    ['}', '{'],
-    [')', '('],
-    [']', '['],
-  ]);
+      algorithm: `Step 1: Push every opening bracket.
+Step 2: When a closing bracket appears, it must match the current stack top.
+Step 3: Pop the matched opening bracket; otherwise return false immediately.
+Step 4: After the scan, the stack must be empty.
 
-  for (const char of s) {
-    if (closingToOpening.has(char)) {
-      if (stack.length > 0 && stack[stack.length - 1] === closingToOpening.get(char)) {
-        stack.pop();
-      } else {
-        return false;
-      }
-    } else {
+Core idea from source:
+Maintain a stack and a map from each closing bracket to its matching opening bracket. For each character: if it\'s a closing bracket, it must match the top of the stack (pop it if so, otherwise return false immediately); if it\'s an opening bracket, push it. At the end, the string is valid only if the stack is empty.`,
+      dryRun: `s="{[()]}"
+{ → push
+[ → push
+( → push
+) → pop (
+] → pop [
+} → pop {
+Stack is empty → true.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function isValidParentheses(s){
+  const stack = [];
+
+  function matches(open, close){
+    return (
+      (open === "(" && close === ")") ||
+      (open === "[" && close === "]") ||
+      (open === "{" && close === "}")
+    );
+  }
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+
+    if (char === "(" || char === "[" || char === "{") {
       stack.push(char);
+    } else {
+      if (stack.length === 0) return false;
+
+      const open = stack.pop();
+
+      if (!matches(open, char)) return false;
     }
   }
 
   return stack.length === 0;
-}`,
-      typescriptSolution: `function isValidParentheses(s: string): boolean {
-  const stack: string[] = [];
-  const closingToOpening = new Map<string, string>([
-    ['}', '{'],
-    [')', '('],
-    [']', '['],
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isValidParenthesesUsingBuiltIns(s){
+  const stack = [];
+  const pairs = new Map([
+    [")", "("],
+    ["]", "["],
+    ["}", "{"],
   ]);
 
   for (const char of s) {
-    if (closingToOpening.has(char)) {
-      if (stack.length > 0 && stack[stack.length - 1] === closingToOpening.get(char)) {
-        stack.pop();
-      } else {
-        return false;
-      }
-    } else {
+    if (!pairs.has(char)) {
       stack.push(char);
+      continue;
     }
+
+    if (stack.pop() !== pairs.get(char)) return false;
+  }
+
+  return stack.length === 0;
+}`,
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function isValidParentheses(s: string): boolean {
+  const stack: string[] = [];
+
+  function matches(open: string, close: string): boolean {
+    return (
+      (open === "(" && close === ")") ||
+      (open === "[" && close === "]") ||
+      (open === "{" && close === "}")
+    );
+  }
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i]!;
+
+    if (char === "(" || char === "[" || char === "{") {
+      stack.push(char);
+    } else {
+      if (stack.length === 0) return false;
+
+      const open = stack.pop()!;
+
+      if (!matches(open, char)) return false;
+    }
+  }
+
+  return stack.length === 0;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function isValidParenthesesUsingBuiltIns(s: string): boolean {
+  const stack: string[] = [];
+  const pairs = new Map<string, string>([
+    [")", "("],
+    ["]", "["],
+    ["}", "{"],
+  ]);
+
+  for (const char of s) {
+    if (!pairs.has(char)) {
+      stack.push(char);
+      continue;
+    }
+
+    if (stack.pop() !== pairs.get(char)) return false;
   }
 
   return stack.length === 0;
@@ -189,15 +254,46 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Maintain a stack. For each character: if it's ')' and the stack's top is '(', pop (they match); otherwise push the character (an unmatched ')' or any '('). At the end, the stack's length is exactly the number of insertions needed — every remaining character is unmatched and needs a partner.",
-      dryRun:
-        's="(()"\n( → push → [(]\n( → push → [(,(]\n) → matches top ( → pop → [(]\nend: stack=[(] → length 1',
-      javascriptSolution: `function minAddToMakeValid(s) {
+      algorithm: `Step 1: Count unmatched opening brackets.
+Step 2: A \')\' can cancel one unmatched \'(\'.
+Step 3: A \')\' with no unmatched \'(\' requires one inserted \'(\'.
+Step 4: At the end, add the remaining unmatched \'(\' count because each needs one \')\'. 
+
+Core idea from source:
+Maintain a stack. For each character: if it\'s \')\' and the stack\'s top is \'(\', pop (they match); otherwise push the character (an unmatched \')\' or any \'(\'). At the end, the stack\'s length is exactly the number of insertions needed — every remaining character is unmatched and needs a partner.`,
+      dryRun: `s="()))(("
+( → unmatchedOpen=1
+) → unmatchedOpen=0
+) → no open available → insertions=1
+) → insertions=2
+( → unmatchedOpen=1
+( → unmatchedOpen=2
+Answer = insertions 2 + unmatchedOpen 2 = 4.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function minAddToMakeValid(s){
+  let unmatchedOpen = 0;
+  let insertions = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(") {
+      unmatchedOpen++;
+    } else if (unmatchedOpen > 0) {
+      unmatchedOpen--;
+    } else {
+      // This ')' has no matching '(' before it.
+      insertions++;
+    }
+  }
+
+  return insertions + unmatchedOpen;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function minAddToMakeValidUsingBuiltIns(s){
   const stack = [];
 
   for (const char of s) {
-    if (char === ')' && stack.length > 0 && stack[stack.length - 1] === '(') {
+    if (char === ")" && stack[stack.length - 1] === "(") {
       stack.pop();
     } else {
       stack.push(char);
@@ -206,11 +302,31 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
 
   return stack.length;
 }`,
-      typescriptSolution: `function minAddToMakeValid(s: string): number {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function minAddToMakeValid(s: string): number {
+  let unmatchedOpen = 0;
+  let insertions = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(") {
+      unmatchedOpen++;
+    } else if (unmatchedOpen > 0) {
+      unmatchedOpen--;
+    } else {
+      // This ')' has no matching '(' before it.
+      insertions++;
+    }
+  }
+
+  return insertions + unmatchedOpen;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function minAddToMakeValidUsingBuiltIns(s: string): number {
   const stack: string[] = [];
 
   for (const char of s) {
-    if (char === ')' && stack.length > 0 && stack[stack.length - 1] === '(') {
+    if (char === ")" && stack[stack.length - 1] === "(") {
       stack.pop();
     } else {
       stack.push(char);
@@ -280,37 +396,99 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Maintain a stack of indices representing days still waiting for a warmer day, kept in decreasing-temperature order. For each day i, while the stack is non-empty and temperatures[i] is greater than the temperature at the index on top of the stack, pop that index and set answer[popped] = i - popped. Push i. Any indices remaining on the stack at the end never found a warmer day and keep their default 0.",
-      dryRun:
-        'temps=[73,74,75,71,69,72,76,73]\ni=0(73): stack=[0]\ni=1(74): 74>73 → pop 0, ans[0]=1; stack=[1]\ni=2(75): 75>74 → pop 1, ans[1]=1; stack=[2]\ni=3(71): stack=[2,3]\ni=4(69): stack=[2,3,4]\ni=5(72): 72>69 → pop 4, ans[4]=1; 72>71 → pop 3, ans[3]=2; 72>75? no; stack=[2,5]\ni=6(76): 76>72 → pop 5, ans[5]=1; 76>75 → pop 2, ans[2]=4; stack=[6]\ni=7(73): stack=[6,7]\nresult=[1,1,4,2,1,1,0,0]',
-      javascriptSolution: `function dailyTemperatures(temperatures) {
-  const n = temperatures.length;
-  const answer = new Array(n).fill(0);
+      algorithm: `Step 1: Keep indices whose warmer day has not been found.
+Step 2: Maintain the stack so temperatures decrease from bottom to top.
+Step 3: When today\'s temperature is warmer than the stack top, resolve that previous day.
+Step 4: Push today; unresolved entries naturally keep answer 0.
+
+Core idea from source:
+Maintain a stack of indices representing days still waiting for a warmer day, kept in decreasing-temperature order. For each day i, while the stack is non-empty and temperatures[i] is greater than the temperature at the index on top of the stack, pop that index and set answer[popped] = i - popped. Push i. Any indices remaining on the stack at the end never found a warmer day and keep their default 0.`,
+      dryRun: `[73,74,75,71,69,72,76,73]
+74 resolves 73 → 1 day.
+75 resolves 74 → 1 day.
+72 resolves 69 → 1 and 71 → 2.
+76 resolves 72 → 1 and 75 → 4.
+Remaining 76 and final 73 have no warmer day.
+Result = [1,1,4,2,1,1,0,0].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function dailyTemperatures(temperatures){
+  const answer = new Array<number>(temperatures.length).fill(0);
   const stack = [];
 
-  for (let i = 0; i < n; i++) {
-    while (stack.length > 0 && temperatures[i] > temperatures[stack[stack.length - 1]]) {
-      const dayIndex = stack.pop();
-      answer[dayIndex] = i - dayIndex;
+  for (let i = 0; i < temperatures.length; i++) {
+    while (
+      stack.length > 0 &&
+      temperatures[i] > temperatures[stack[stack.length - 1]]
+    ) {
+      const previousDay = stack.pop();
+      answer[previousDay] = i - previousDay;
     }
+
     stack.push(i);
   }
 
   return answer;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function dailyTemperaturesUsingBuiltIns(
+  temperatures,
+){
+  const answer = new Array<number>(temperatures.length).fill(0);
+  const stack = [];
+
+  temperatures.forEach((temperature, index) => {
+    while (
+      stack.length > 0 &&
+      temperature > temperatures[stack[stack.length - 1]]
+    ) {
+      const previousDay = stack.pop();
+      answer[previousDay] = index - previousDay;
+    }
+
+    stack.push(index);
+  });
+
+  return answer;
 }`,
-      typescriptSolution: `function dailyTemperatures(temperatures: number[]): number[] {
-  const n = temperatures.length;
-  const answer = new Array<number>(n).fill(0);
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function dailyTemperatures(temperatures: number[]): number[] {
+  const answer = new Array<number>(temperatures.length).fill(0);
   const stack: number[] = [];
 
-  for (let i = 0; i < n; i++) {
-    while (stack.length > 0 && temperatures[i]! > temperatures[stack[stack.length - 1]!]!) {
-      const dayIndex = stack.pop()!;
-      answer[dayIndex] = i - dayIndex;
+  for (let i = 0; i < temperatures.length; i++) {
+    while (
+      stack.length > 0 &&
+      temperatures[i]! > temperatures[stack[stack.length - 1]!]!
+    ) {
+      const previousDay = stack.pop()!;
+      answer[previousDay] = i - previousDay;
     }
+
     stack.push(i);
   }
+
+  return answer;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function dailyTemperaturesUsingBuiltIns(
+  temperatures: number[],
+): number[] {
+  const answer = new Array<number>(temperatures.length).fill(0);
+  const stack: number[] = [];
+
+  temperatures.forEach((temperature, index) => {
+    while (
+      stack.length > 0 &&
+      temperature > temperatures[stack[stack.length - 1]]!
+    ) {
+      const previousDay = stack.pop()!;
+      answer[previousDay] = index - previousDay;
+    }
+
+    stack.push(index);
+  });
 
   return answer;
 }`,
@@ -375,46 +553,114 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Conceptually process the array twice (length 2n, using index % n to read values). Maintain a monotonic decreasing stack of original indices. At each step, while the current value beats the value at the index on top of the stack, pop it and record the current value as its next-greater result. Indices remaining unresolved after both passes keep their default -1.',
-      dryRun:
-        'nums=[1,2,1], doubled scan i=0..5 (values via i%3)\ni=0(1): stack=[0]\ni=1(2): 2>1 → pop 0, dp[0]=2; stack=[1]\ni=2(1): stack=[1,2]\ni=3(1,i%3=0): 1>1?no; stack=[1,2,0](but 0 already resolved, still fine to push again, harmless)\ni=4(2,i%3=1): 2>1(idx0 top)→ pop; 2>1(idx2)? pop dp[2]=2; 2>2(idx1)? no; stack=[1]\ni=5(1,i%3=2): stack=[1,2]\nfinal dp=[2,-1,2] (dp[1] never resolved)',
-      javascriptSolution: `function nextGreaterElementsCircular(nums) {
+      algorithm: `Step 1: Think of the array as if it were visited twice.
+Step 2: Use a decreasing monotonic stack of original indices.
+Step 3: When the current value is greater, it resolves every smaller unresolved index on top.
+Step 4: Push indices only during the first pass so each original index enters once.
+
+Core idea from source:
+Conceptually process the array twice (length 2n, using index % n to read values). Maintain a monotonic decreasing stack of original indices. At each step, while the current value beats the value at the index on top of the stack, pop it and record the current value as its next-greater result. Indices remaining unresolved after both passes keep their default -1.`,
+      dryRun: `[1,2,1]
+1 → stack [index 0]
+2 → resolves index 0 with 2
+1 → stack keeps unresolved index 2
+Second pass sees 1 again, then 2 resolves index 2.
+Index 1 has no greater value.
+Result = [2,-1,2].`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function nextGreaterElementsCircular(nums){
   const n = nums.length;
-  const result = new Array(n).fill(-1);
+  const result = new Array<number>(n).fill(-1);
   const stack = [];
 
   for (let i = 0; i < 2 * n; i++) {
-    const value = nums[i % n];
+    const currentIndex = i % n;
+    const currentValue = nums[currentIndex];
 
-    while (stack.length > 0 && value > nums[stack[stack.length - 1]]) {
+    while (
+      stack.length > 0 &&
+      currentValue > nums[stack[stack.length - 1]]
+    ) {
       const index = stack.pop();
-      result[index] = value;
+      result[index] = currentValue;
     }
 
     if (i < n) {
-      stack.push(i);
+      stack.push(currentIndex);
     }
   }
 
   return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function nextGreaterElementsCircularUsingBuiltIns(
+  nums,
+){
+  const n = nums.length;
+  const result = new Array<number>(n).fill(-1);
+  const stack = [];
+
+  for (let i = 0; i < 2 * n; i++) {
+    const index = i % n;
+
+    while (
+      stack.length > 0 &&
+      nums[index] > nums[stack[stack.length - 1]]
+    ) {
+      result[stack.pop()] = nums[index];
+    }
+
+    if (i < n) stack.push(index);
+  }
+
+  return result;
 }`,
-      typescriptSolution: `function nextGreaterElementsCircular(nums: number[]): number[] {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function nextGreaterElementsCircular(nums: number[]): number[] {
   const n = nums.length;
   const result = new Array<number>(n).fill(-1);
   const stack: number[] = [];
 
   for (let i = 0; i < 2 * n; i++) {
-    const value = nums[i % n]!;
+    const currentIndex = i % n;
+    const currentValue = nums[currentIndex]!;
 
-    while (stack.length > 0 && value > nums[stack[stack.length - 1]!]!) {
+    while (
+      stack.length > 0 &&
+      currentValue > nums[stack[stack.length - 1]!]!
+    ) {
       const index = stack.pop()!;
-      result[index] = value;
+      result[index] = currentValue;
     }
 
     if (i < n) {
-      stack.push(i);
+      stack.push(currentIndex);
     }
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function nextGreaterElementsCircularUsingBuiltIns(
+  nums: number[],
+): number[] {
+  const n = nums.length;
+  const result = new Array<number>(n).fill(-1);
+  const stack: number[] = [];
+
+  for (let i = 0; i < 2 * n; i++) {
+    const index = i % n;
+
+    while (
+      stack.length > 0 &&
+      nums[index]! > nums[stack[stack.length - 1]]!
+    ) {
+      result[stack.pop()!] = nums[index]!;
+    }
+
+    if (i < n) stack.push(index);
   }
 
   return result;
@@ -480,81 +726,126 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Pad heights with a sentinel -1 at index 0 to simplify boundary handling. For each bar, find the nearest strictly-shorter bar to the right (nextSmaller) and to the left (prevSmaller) using two monotonic increasing stacks. The largest rectangle using bar i as its height spans from just after prevSmaller[i] to just before nextSmaller[i], giving width = nextSmaller[i] - prevSmaller[i] - 1. Track the maximum height * width across all bars.",
-      dryRun:
-        'heights=[2,1,5,6,2,3]\nfor bar height=5 (index 2, 1-indexed 3 after padding): nextSmaller at value 2 (index 4), prevSmaller at value 1 (index 1)\nwidth = 4-1-1 = 2, area = 5*2=10\nfor bar height=6: nextSmaller also index4, prevSmaller index2(the 5) → width=1, area=6\nmax area found = 10',
-      javascriptSolution: `function largestRectangleInHistogram(heights) {
-  const padded = [-1, ...heights];
-  const n = padded.length;
-  const nextSmaller = new Array(n).fill(n - 1);
-  const prevSmaller = new Array(n).fill(0);
+      algorithm: `Step 1: A bar\'s best rectangle extends until a shorter bar appears on each side.
+Step 2: Maintain an increasing stack of bar indices.
+Step 3: When a shorter bar arrives, pop the taller bar and compute its maximal width.
+Step 4: Use a final sentinel height 0 to flush the remaining stack.
 
-  let stack = [];
-  for (let i = 1; i < n; i++) {
-    while (stack.length > 0 && padded[i] < padded[stack[stack.length - 1]]) {
-      nextSmaller[stack.pop()] = i - 1;
+Core idea from source:
+Pad heights with a sentinel -1 at index 0 to simplify boundary handling. For each bar, find the nearest strictly-shorter bar to the right (nextSmaller) and to the left (prevSmaller) using two monotonic increasing stacks. The largest rectangle using bar i as its height spans from just after prevSmaller[i] to just before nextSmaller[i], giving width = nextSmaller[i] - prevSmaller[i] - 1. Track the maximum height * width across all bars.`,
+      dryRun: `[2,1,5,6,2,3]
+When 2 arrives after 6:
+6 has width 1 → area 6.
+5 then has width 2 → area 10.
+No later rectangle exceeds 10.
+Answer = 10.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function largestRectangleInHistogram(heights){
+  const stack = [];
+  let best = 0;
+
+  for (let i = 0; i <= heights.length; i++) {
+    const currentHeight = i === heights.length ? 0 : heights[i];
+
+    while (
+      stack.length > 0 &&
+      currentHeight < heights[stack[stack.length - 1]]
+    ) {
+      const heightIndex = stack.pop();
+      const height = heights[heightIndex];
+
+      const leftBoundary =
+        stack.length > 0 ? stack[stack.length - 1] : -1;
+
+      const width = i - leftBoundary - 1;
+      const area = height * width;
+
+      if (area > best) best = area;
     }
+
     stack.push(i);
   }
-  while (stack.length > 0) {
-    nextSmaller[stack.pop()] = n - 1;
-  }
 
-  stack = [];
-  for (let i = n - 1; i > 0; i--) {
-    while (stack.length > 0 && padded[i] < padded[stack[stack.length - 1]]) {
-      prevSmaller[stack.pop()] = i + 1;
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function largestRectangleInHistogramUsingBuiltIns(
+  heights,
+){
+  const stack = [];
+  let best = 0;
+
+  for (let i = 0; i <= heights.length; i++) {
+    const current = heights[i] ?? 0;
+
+    while (
+      stack.length > 0 &&
+      current < heights[stack[stack.length - 1]]
+    ) {
+      const index = stack.pop();
+      const left = stack.length > 0 ? stack[stack.length - 1] : -1;
+      best = Math.max(best, heights[index] * (i - left - 1));
     }
+
     stack.push(i);
   }
-  while (stack.length > 0) {
-    prevSmaller[stack.pop()] = 1;
-  }
 
-  let maxArea = 0;
-  for (let i = 1; i < n; i++) {
-    const width = nextSmaller[i] - prevSmaller[i] + 1;
-    maxArea = Math.max(maxArea, padded[i] * width);
-  }
-
-  return maxArea;
+  return best;
 }`,
-      typescriptSolution: `function largestRectangleInHistogram(heights: number[]): number {
-  const padded = [-1, ...heights];
-  const n = padded.length;
-  const nextSmaller = new Array<number>(n).fill(n - 1);
-  const prevSmaller = new Array<number>(n).fill(0);
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function largestRectangleInHistogram(heights: number[]): number {
+  const stack: number[] = [];
+  let best = 0;
 
-  let stack: number[] = [];
-  for (let i = 1; i < n; i++) {
-    while (stack.length > 0 && padded[i]! < padded[stack[stack.length - 1]!]!) {
-      nextSmaller[stack.pop()!] = i - 1;
+  for (let i = 0; i <= heights.length; i++) {
+    const currentHeight = i === heights.length ? 0 : heights[i]!;
+
+    while (
+      stack.length > 0 &&
+      currentHeight < heights[stack[stack.length - 1]!]!
+    ) {
+      const heightIndex = stack.pop()!;
+      const height = heights[heightIndex]!;
+
+      const leftBoundary =
+        stack.length > 0 ? stack[stack.length - 1]! : -1;
+
+      const width = i - leftBoundary - 1;
+      const area = height * width;
+
+      if (area > best) best = area;
     }
+
     stack.push(i);
   }
-  while (stack.length > 0) {
-    nextSmaller[stack.pop()!] = n - 1;
-  }
 
-  stack = [];
-  for (let i = n - 1; i > 0; i--) {
-    while (stack.length > 0 && padded[i]! < padded[stack[stack.length - 1]!]!) {
-      prevSmaller[stack.pop()!] = i + 1;
+  return best;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function largestRectangleInHistogramUsingBuiltIns(
+  heights: number[],
+): number {
+  const stack: number[] = [];
+  let best = 0;
+
+  for (let i = 0; i <= heights.length; i++) {
+    const current = heights[i] ?? 0;
+
+    while (
+      stack.length > 0 &&
+      current < heights[stack[stack.length - 1]]!
+    ) {
+      const index = stack.pop()!;
+      const left = stack.length > 0 ? stack[stack.length - 1]! : -1;
+      best = Math.max(best, heights[index]! * (i - left - 1));
     }
+
     stack.push(i);
   }
-  while (stack.length > 0) {
-    prevSmaller[stack.pop()!] = 1;
-  }
 
-  let maxArea = 0;
-  for (let i = 1; i < n; i++) {
-    const width = nextSmaller[i]! - prevSmaller[i]! + 1;
-    maxArea = Math.max(maxArea, padded[i]! * width);
-  }
-
-  return maxArea;
+  return best;
 }`,
       timeComplexity: 'O(n) — each index is pushed/popped from each of the two monotonic stacks at most once.',
       spaceComplexity: 'O(n) — the padded array, the two boundary arrays, and the stack.',
@@ -618,18 +909,76 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Maintain a stack of digits (as characters) that is kept non-decreasing where possible. For each digit, while k > 0 and the stack's top is greater than the current digit, pop it and decrement k. Push the current digit. If k still remains after the scan, remove the last k digits (they are the largest and sit at the end of the now-non-decreasing stack). Join the stack, strip leading zeroes, and return \"0\" if the result is empty.",
-      dryRun:
-        'num="1432219", k=3\n1: stack=[1]\n4: stack=[1,4]\n3: 4>3,k>0 → pop 4, k=2; stack=[1,3]\n2: 3>2,k>0 → pop 3, k=1; stack=[1,2]\n2: 2>2? no; stack=[1,2,2]\n1: 2>1,k>0 → pop 2, k=0; stack=[1,2,1]... wait k reaches 0 so stop popping further\nactually retrace carefully: after popping once (k=0), no more pops allowed\nstack=[1,2,1]? — let\'s trust code: final stack after full scan (with k exhausted) = "1219" per verified test',
-      javascriptSolution: `function removeKDigits(num, k) {
+      algorithm: `Step 1: Build a non-decreasing stack of digits.
+Step 2: If the new digit is smaller than the stack top, remove larger previous digits while removals remain.
+Step 3: After the scan, remove remaining digits from the end if k is still positive.
+Step 4: Strip leading zeroes and return \'0\' if nothing remains.
+
+Core idea from source:
+Maintain a stack of digits (as characters) that is kept non-decreasing where possible. For each digit, while k > 0 and the stack\'s top is greater than the current digit, pop it and decrement k. Push the current digit. If k still remains after the scan, remove the last k digits (they are the largest and sit at the end of the now-non-decreasing stack). Join the stack, strip leading zeroes, and return \\"0\\" if the result is empty.`,
+      dryRun: `num="1432219", k=3
+1 → [1]
+4 → [1,4]
+3 → remove 4 → [1,3], k=2
+2 → remove 3 → [1,2], k=1
+2 → [1,2,2]
+1 → remove 2 → [1,2,1], k=0
+9 → [1,2,1,9]
+Result = "1219".`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function removeKDigits(num, k){
+  const stack = [];
+
+  for (let i = 0; i < num.length; i++) {
+    const digit = num[i];
+
+    while (
+      k > 0 &&
+      stack.length > 0 &&
+      digit < stack[stack.length - 1]
+    ) {
+      stack.pop();
+      k--;
+    }
+
+    stack.push(digit);
+  }
+
+  while (k > 0 && stack.length > 0) {
+    stack.pop();
+    k--;
+  }
+
+  let result = "";
+
+  let started = false;
+  for (let i = 0; i < stack.length; i++) {
+    if (!started && stack[i] === "0") continue;
+
+    started = true;
+    result += stack[i];
+  }
+
+  return result.length === 0 ? "0" : result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function removeKDigitsUsingBuiltIns(
+  num,
+  k,
+){
   const stack = [];
 
   for (const digit of num) {
-    while (k > 0 && stack.length > 0 && digit < stack[stack.length - 1]) {
+    while (
+      k > 0 &&
+      stack.length > 0 &&
+      digit < stack[stack.length - 1]
+    ) {
       stack.pop();
       k--;
     }
+
     stack.push(digit);
   }
 
@@ -638,17 +987,63 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
     k--;
   }
 
-  const withoutLeadingZeroes = stack.join('').replace(/^0+/, '');
-  return withoutLeadingZeroes === '' ? '0' : withoutLeadingZeroes;
+  const result = stack.join("").replace(/^0+/, "");
+  return result === "" ? "0" : result;
 }`,
-      typescriptSolution: `function removeKDigits(num: string, k: number): string {
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function removeKDigits(num: string, k: number): string {
+  const stack: string[] = [];
+
+  for (let i = 0; i < num.length; i++) {
+    const digit = num[i]!;
+
+    while (
+      k > 0 &&
+      stack.length > 0 &&
+      digit < stack[stack.length - 1]!
+    ) {
+      stack.pop();
+      k--;
+    }
+
+    stack.push(digit);
+  }
+
+  while (k > 0 && stack.length > 0) {
+    stack.pop();
+    k--;
+  }
+
+  let result = "";
+
+  let started = false;
+  for (let i = 0; i < stack.length; i++) {
+    if (!started && stack[i] === "0") continue;
+
+    started = true;
+    result += stack[i];
+  }
+
+  return result.length === 0 ? "0" : result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function removeKDigitsUsingBuiltIns(
+  num: string,
+  k: number,
+): string {
   const stack: string[] = [];
 
   for (const digit of num) {
-    while (k > 0 && stack.length > 0 && digit < stack[stack.length - 1]!) {
+    while (
+      k > 0 &&
+      stack.length > 0 &&
+      digit < stack[stack.length - 1]!
+    ) {
       stack.pop();
       k--;
     }
+
     stack.push(digit);
   }
 
@@ -657,8 +1052,8 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
     k--;
   }
 
-  const withoutLeadingZeroes = stack.join('').replace(/^0+/, '');
-  return withoutLeadingZeroes === '' ? '0' : withoutLeadingZeroes;
+  const result = stack.join("").replace(/^0+/, "");
+  return result === "" ? "0" : result;
 }`,
       timeComplexity: 'O(n) — each digit is pushed and popped from the stack at most once.',
       spaceComplexity: 'O(n) — the stack holds up to n digits.',
@@ -736,70 +1131,177 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        'Maintain two parallel stacks: `stack` for all pushed values, and `min` where min[top] is always the minimum of everything currently in `stack`. On push, also push onto `min` if the new value is <= the current min-stack top (or the min stack is empty). On pop, pop `stack`, and if the popped value equals the min-stack top, pop `min` too. `top` reads `stack`\'s top; `getMin` reads `min`\'s top. The whole thing is wrapped in `minStackOperations` which replays a sequence of operations against a fresh instance and collects results.',
-      dryRun:
-        'ops=[push(-2),push(0),push(-3),getMin,pop,top,getMin]\npush(-2): stack=[-2], min=[-2]\npush(0): stack=[-2,0], 0<=-2? no → min=[-2]\npush(-3): stack=[-2,0,-3], -3<=-2 → min=[-2,-3]\ngetMin: -3\npop: popped=-3, matches min top -3 → min=[-2]; stack=[-2,0]\ntop: 0\ngetMin: -2\nresults=[null,null,null,-3,null,0,-2]',
-      javascriptSolution: `function minStackOperations(operations, args) {
+      algorithm: `Step 1: Keep a normal stack for values.
+Step 2: Keep a second stack whose top is the current minimum.
+Step 3: On push, also push into the min stack when the new value is <= the current minimum.
+Step 4: On pop, remove the min-stack value only when it equals the popped value.
+
+Core idea from source:
+Maintain two parallel stacks: \`stack\` for all pushed values, and \`min\` where min[top] is always the minimum of everything currently in \`stack\`. On push, also push onto \`min\` if the new value is <= the current min-stack top (or the min stack is empty). On pop, pop \`stack\`, and if the popped value equals the min-stack top, pop \`min\` too. \`top\` reads \`stack\`\\\'s top; \`getMin\` reads \`min\`\\\'s top. The whole thing is wrapped in \`minStackOperations\` which replays a sequence of operations against a fresh instance and collects results.`,
+      dryRun: `push(-2) → stack=[-2], min=[-2]
+push(0) → stack=[-2,0], min=[-2]
+push(-3) → min=[-2,-3]
+getMin → -3
+pop → removes -3 from both stacks
+top → 0
+getMin → -2.`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function minStackOperations(
+  operations,
+  args,
+){
   const stack = [];
-  const min = [];
+  const minStack = [];
   const results = [];
 
   for (let i = 0; i < operations.length; i++) {
-    const op = operations[i];
-    const opArgs = args[i];
+    const operation = operations[i];
+    const operationArgs = args[i];
 
-    if (op === 'push') {
-      const value = opArgs[0];
+    if (operation === "push") {
+      const value = operationArgs[0];
+
       stack.push(value);
-      if (min.length === 0 || value <= min[min.length - 1]) {
-        min.push(value);
+
+      if (
+        minStack.length === 0 ||
+        value <= minStack[minStack.length - 1]
+      ) {
+        minStack.push(value);
       }
+
       results.push(null);
-    } else if (op === 'pop') {
-      const popped = stack.pop();
-      if (popped === min[min.length - 1]) {
-        min.pop();
+    } else if (operation === "pop") {
+      const removed = stack.pop();
+
+      if (removed === minStack[minStack.length - 1]) {
+        minStack.pop();
       }
+
       results.push(null);
-    } else if (op === 'top') {
+    } else if (operation === "top") {
       results.push(stack[stack.length - 1]);
-    } else if (op === 'getMin') {
-      results.push(min[min.length - 1]);
+    } else if (operation === "getMin") {
+      results.push(minStack[minStack.length - 1]);
+    }
+  }
+
+  return results;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function minStackOperationsUsingBuiltIns(
+  operations,
+  args,
+){
+  const cache = [];
+  const mins = [];
+  const results = [];
+
+  for (let i = 0; i < operations.length; i++) {
+    const operation = operations[i];
+    const operationArgs = args[i];
+
+    if (operation === "push") {
+      const value = operationArgs[0];
+
+      cache.push(value);
+      mins.push(
+        mins.length === 0
+          ? value
+          : Math.min(value, mins[mins.length - 1]),
+      );
+
+      results.push(null);
+    } else if (operation === "pop") {
+      cache.pop();
+      mins.pop();
+      results.push(null);
+    } else if (operation === "top") {
+      results.push(cache[cache.length - 1]);
+    } else if (operation === "getMin") {
+      results.push(mins[mins.length - 1]);
     }
   }
 
   return results;
 }`,
-      typescriptSolution: `function minStackOperations(
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function minStackOperations(
   operations: readonly string[],
   args: readonly unknown[][],
 ): unknown[] {
   const stack: number[] = [];
-  const min: number[] = [];
+  const minStack: number[] = [];
   const results: unknown[] = [];
 
   for (let i = 0; i < operations.length; i++) {
-    const op = operations[i];
-    const opArgs = args[i]!;
+    const operation = operations[i];
+    const operationArgs = args[i]!;
 
-    if (op === 'push') {
-      const value = opArgs[0] as number;
+    if (operation === "push") {
+      const value = operationArgs[0] as number;
+
       stack.push(value);
-      if (min.length === 0 || value <= min[min.length - 1]!) {
-        min.push(value);
+
+      if (
+        minStack.length === 0 ||
+        value <= minStack[minStack.length - 1]!
+      ) {
+        minStack.push(value);
       }
+
       results.push(null);
-    } else if (op === 'pop') {
-      const popped = stack.pop();
-      if (popped === min[min.length - 1]) {
-        min.pop();
+    } else if (operation === "pop") {
+      const removed = stack.pop()!;
+
+      if (removed === minStack[minStack.length - 1]) {
+        minStack.pop();
       }
+
       results.push(null);
-    } else if (op === 'top') {
+    } else if (operation === "top") {
       results.push(stack[stack.length - 1]);
-    } else if (op === 'getMin') {
-      results.push(min[min.length - 1]);
+    } else if (operation === "getMin") {
+      results.push(minStack[minStack.length - 1]);
+    }
+  }
+
+  return results;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function minStackOperationsUsingBuiltIns(
+  operations: readonly string[],
+  args: readonly unknown[][],
+): unknown[] {
+  const cache: number[] = [];
+  const mins: number[] = [];
+  const results: unknown[] = [];
+
+  for (let i = 0; i < operations.length; i++) {
+    const operation = operations[i];
+    const operationArgs = args[i]!;
+
+    if (operation === "push") {
+      const value = operationArgs[0] as number;
+
+      cache.push(value);
+      mins.push(
+        mins.length === 0
+          ? value
+          : Math.min(value, mins[mins.length - 1]!),
+      );
+
+      results.push(null);
+    } else if (operation === "pop") {
+      cache.pop();
+      mins.pop();
+      results.push(null);
+    } else if (operation === "top") {
+      results.push(cache[cache.length - 1]);
+    } else if (operation === "getMin") {
+      results.push(mins[mins.length - 1]);
     }
   }
 
@@ -867,61 +1369,159 @@ export const MOCK_DSA_CODING_MODULE6_QUESTIONS: MockCodingQuestion[] = [
       ],
     },
     solution: {
-      algorithm:
-        "Precompute each character's last occurrence index in a map. Walk the string maintaining a stack (the in-progress result) and a Set of characters currently on it. Skip a character if it is already in the Set (it is already represented). Otherwise, while the stack's top character is lexicographically greater than the current character AND that top character occurs again later in the string (its last-seen index is after the current position), pop it off the stack and remove it from the Set — it is safe to drop now and re-add later. Then push the current character and add it to the Set.",
-      dryRun:
-        's="cbacdcbc"\nlastOccur: c=7,b=6,a=2,d=4\ni=0 c: stack=[c], set={c}\ni=1 b: b<c and c reoccurs at 7>1 → pop c; stack=[b], set={b}\ni=2 a: a<b and b reoccurs at 6>2 → pop b; stack=[a], set={a}\ni=3 c: stack=[a,c], set={a,c}\ni=4 d: stack=[a,c,d], set={a,c,d}\ni=5 c: already in set → skip\ni=6 b: b<d, d reoccurs? lastOccur[d]=4, 4<6 → cannot pop d; stack=[a,c,d,b]\ni=7 c: already in set → skip\nresult="acdb"',
-      javascriptSolution: `function removeDuplicateLetters(s) {
-  const lastOccur = new Map();
-  for (let i = 0; i < s.length; i++) lastOccur.set(s[i], i);
+      algorithm: `Step 1: Record the last position of every character.
+Step 2: Keep a stack containing the current lexicographically smallest unique result.
+Step 3: If the current character is smaller than the stack top and that top appears later, safely pop the top.
+Step 4: Skip characters already in the stack and return the stack in order.
 
+Core idea from source:
+Precompute each character\'s last occurrence index in a map. Walk the string maintaining a stack (the in-progress result) and a Set of characters currently on it. Skip a character if it is already in the Set (it is already represented). Otherwise, while the stack\'s top character is lexicographically greater than the current character AND that top character occurs again later in the string (its last-seen index is after the current position), pop it off the stack and remove it from the Set — it is safe to drop now and re-add later. Then push the current character and add it to the Set.`,
+      dryRun: `s="cbacdcbc"
+c → [c]
+b → c can appear later, so pop c → [b]
+a → b can appear later, so pop b → [a]
+c → [a,c]
+d → [a,c,d]
+c already exists → skip
+b → d cannot be popped because d is already at its last occurrence
+Result = "acdb".`,
+      javascriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function removeDuplicateLetters(s){
+  const lastIndex = new Array<number>(26).fill(-1);
+  const inStack = new Array<boolean>(26).fill(false);
   const stack = [];
-  const inStack = new Set();
+
+  for (let i = 0; i < s.length; i++) {
+    lastIndex[s.charCodeAt(i) - 97] = i;
+  }
 
   for (let i = 0; i < s.length; i++) {
     const char = s[i];
+    const index = char.charCodeAt(0) - 97;
+
+    if (inStack[index]) continue;
+
+    while (stack.length > 0) {
+      const top = stack[stack.length - 1];
+      const topIndex = top.charCodeAt(0) - 97;
+
+      if (top <= char || lastIndex[topIndex] <= i) break;
+
+      stack.pop();
+      inStack[topIndex] = false;
+    }
+
+    stack.push(char);
+    inStack[index] = true;
+  }
+
+  let result = "";
+  for (let i = 0; i < stack.length; i++) {
+    result += stack[i];
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function removeDuplicateLettersUsingBuiltIns(
+  s,
+){
+  const lastIndex = new Map();
+  const inStack = new Set();
+  const stack = [];
+
+  s.split("").forEach((char, index) => {
+    lastIndex.set(char, index);
+  });
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+
     if (inStack.has(char)) continue;
 
     while (
       stack.length > 0 &&
       char < stack[stack.length - 1] &&
-      i < lastOccur.get(stack[stack.length - 1])
+      lastIndex.get(stack[stack.length - 1]) > i
     ) {
-      const removed = stack.pop();
-      inStack.delete(removed);
+      inStack.delete(stack.pop());
     }
 
     stack.push(char);
     inStack.add(char);
   }
 
-  return stack.join('');
+  return stack.join("");
 }`,
-      typescriptSolution: `function removeDuplicateLetters(s: string): string {
-  const lastOccur = new Map<string, number>();
-  for (let i = 0; i < s.length; i++) lastOccur.set(s[i]!, i);
-
+      typescriptSolution: `/* ==================== WITHOUT BUILT-IN / CORE ==================== */
+function removeDuplicateLetters(s: string): string {
+  const lastIndex = new Array<number>(26).fill(-1);
+  const inStack = new Array<boolean>(26).fill(false);
   const stack: string[] = [];
-  const inStack = new Set<string>();
+
+  for (let i = 0; i < s.length; i++) {
+    lastIndex[s.charCodeAt(i) - 97] = i;
+  }
 
   for (let i = 0; i < s.length; i++) {
     const char = s[i]!;
+    const index = char.charCodeAt(0) - 97;
+
+    if (inStack[index]) continue;
+
+    while (stack.length > 0) {
+      const top = stack[stack.length - 1]!;
+      const topIndex = top.charCodeAt(0) - 97;
+
+      if (top <= char || lastIndex[topIndex] <= i) break;
+
+      stack.pop();
+      inStack[topIndex] = false;
+    }
+
+    stack.push(char);
+    inStack[index] = true;
+  }
+
+  let result = "";
+  for (let i = 0; i < stack.length; i++) {
+    result += stack[i];
+  }
+
+  return result;
+}
+
+/* ==================== WITH BUILT-IN HELPERS ==================== */
+function removeDuplicateLettersUsingBuiltIns(
+  s: string,
+): string {
+  const lastIndex = new Map<string, number>();
+  const inStack = new Set<string>();
+  const stack: string[] = [];
+
+  s.split("").forEach((char, index) => {
+    lastIndex.set(char, index);
+  });
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i]!;
+
     if (inStack.has(char)) continue;
 
     while (
       stack.length > 0 &&
       char < stack[stack.length - 1]! &&
-      i < lastOccur.get(stack[stack.length - 1]!)!
+      lastIndex.get(stack[stack.length - 1]!)! > i
     ) {
-      const removed = stack.pop()!;
-      inStack.delete(removed);
+      inStack.delete(stack.pop()!);
     }
 
     stack.push(char);
     inStack.add(char);
   }
 
-  return stack.join('');
+  return stack.join("");
 }`,
       timeComplexity: 'O(n) — each character is pushed onto the stack and popped at most once.',
       spaceComplexity: 'O(1) — the stack and set hold at most 26 lowercase letters, independent of string length.',
