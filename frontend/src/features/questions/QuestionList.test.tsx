@@ -21,7 +21,7 @@ const JAVASCRIPT_COUNT = MOCK_QUESTIONS.filter((q) => q.detail.category === 'jav
 const PAGE_SIZE = 8;
 
 async function waitForLoaded() {
-  await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument());
+  await waitFor(() => expect(screen.queryByText('Loading questions…')).not.toBeInTheDocument());
 }
 
 describe('QuestionList — counts, topics, and pagination', () => {

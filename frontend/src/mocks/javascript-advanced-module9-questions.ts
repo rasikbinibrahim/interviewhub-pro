@@ -131,27 +131,27 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Are First-Class Functions?',
     difficulty: 'Easy',
     expectedAnswer:
-      'In JavaScript, functions are first-class values that can be assigned to variables, passed as arguments, returned from other functions, and stored in objects or arrays.',
+      "Functions are first-class values in JavaScript, so a function reference can be stored, passed, returned, or placed in a collection just like other values.",
     deepExplanation:
-      "`const fn = greet; fn('Rasik')` still returns `Hello Rasik` because assigning a function to `fn` just copies the reference. This is what enables callbacks, higher-order functions, functional programming, event handlers, middleware, composition, and dependency injection.",
+      "Step 1 — Understand the concept.\n\nFunctions are first-class values in JavaScript, so a function reference can be stored, passed, returned, or placed in a collection just like other values.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction applyTwice<T>(fn: (value: T) => T, value: T): T {\n  return fn(fn(value));\n}\n\nconst result = applyTwice(\n  (value) => value + \"!\",\n  \"Hi\",\n);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst addBang = (value: string) => value + \"!\";\n\nconst result = addBang(addBang(\"Hi\"));\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-177',
     number: 'JSADV-M9-177',
     title: 'What Is a Higher-Order Function?',
     difficulty: 'Medium',
-    expectedAnswer: 'A higher-order function either accepts a function as an argument or returns a function.',
+    expectedAnswer: "Higher-order functions treat functions as data and enable reusable control-flow/data-transformation patterns.",
     deepExplanation:
-      '`calculate(10, 20, add)` accepts a function argument and returns `30`. `multiplier(2)` returns a new function `double`, and `double(10)` returns `20` — demonstrating both directions: accepting a function and returning one.',
+      "Step 1 — Understand the concept.\n\nHigher-order functions treat functions as data and enable reusable control-flow/data-transformation patterns.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction multiplier(factor: number): (value: number) => number {\n  return function apply(value: number): number {\n    return value * factor;\n  };\n}\n\nconst double = multiplier(2);\nconst result = double(10);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst double = (value: number) => value * 2;\nconst result = double(10);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-178',
     number: 'JSADV-M9-178',
     title: 'What Is a Callback Function?',
     difficulty: 'Easy',
-    expectedAnswer: 'A callback is a function supplied to another function so it can be invoked later or during an operation.',
+    expectedAnswer: "A callback is a function supplied to another function to be invoked later or under the caller's control.",
     deepExplanation:
-      "`processUser('Rasik', (message) => message.toUpperCase())` returns `HELLO RASIK` because `processUser` invokes the supplied callback. Callbacks are common in array methods, browser events, timers, and async/Node.js APIs — a callback does not necessarily mean asynchronous execution, e.g. `[1, 2, 3].map((value) => value * 2)` runs its callback synchronously.",
+      "Step 1 — Understand the concept.\n\nA callback is a function supplied to another function to be invoked later or under the caller's control.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction runLater(\n  value: number,\n  callback: (value: number) => number,\n): number {\n  return callback(value);\n}\n\nconst result = runLater(5, (value) => value * 2);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = [5].map(\n  (value) => value * 2,\n)[0];\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-179',
@@ -159,9 +159,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Is the Difference Between Anonymous and Named Functions?',
     difficulty: 'Easy',
     expectedAnswer:
-      "An anonymous function expression has no name, while a named function expression carries a name usable inside its own body and in stack traces.",
+      "An anonymous function has no function name at its declaration site; naming functions is often preferable when stack traces, recursion, or debugging matter.",
     deepExplanation:
-      "`const greet = function (name) {...}` is anonymous, while `const greet = function greetUser(name) {...}` is named. A name improves stack traces, debugging, and recursive function expressions — e.g. `const factorial = function calculateFactorial(n) { ... return n * calculateFactorial(n - 1); }` can recurse via its own name even though the outer binding is `factorial`, returning `120` for `factorial(5)`.",
+      "Step 1 — Understand the concept.\n\nAn anonymous function has no function name at its declaration site; naming functions is often preferable when stack traces, recursion, or debugging matter.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-180',
@@ -169,18 +169,18 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Is an IIFE?',
     difficulty: 'Medium',
     expectedAnswer:
-      'IIFE stands for Immediately Invoked Function Expression — a function that is created and executed immediately.',
+      "An IIFE is an immediately invoked function expression used to create an isolated scope and run initialization immediately.",
     deepExplanation:
-      "`(function () { const secret = 'private'; console.log(secret); })();` logs `private` right away, with `secret` scoped only to the IIFE. IIFEs (including arrow-function IIFEs) were widely used before ES modules to create private scopes; today, a block scope (`{ const privateValue = 42; }`) or ES modules are generally preferred for the same encapsulation.",
+      "Step 1 — Understand the concept.\n\nAn IIFE is an immediately invoked function expression used to create an isolated scope and run initialization immediately.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconst value = (function (): number {\n  const internal = 10;\n  return internal * 2;\n})();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = (() => {\n  const internal = 10;\n  return internal * 2;\n})();\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-181',
     number: 'JSADV-M9-181',
     title: 'What Are Arrow Functions?',
     difficulty: 'Easy',
-    expectedAnswer: 'Arrow functions provide concise function syntax and capture `this` lexically from their enclosing scope.',
+    expectedAnswer: "Arrow functions provide concise syntax and lexical `this`; they do not have their own `arguments`, `prototype`, or constructor behavior.",
     deepExplanation:
-      "`const add = (a, b) => a + b; add(10, 20)` returns `30`. Unlike regular functions, arrow functions do not have their own `this`, do not have their own `arguments`, cannot be used as constructors with `new`, and do not have a `prototype` property.",
+      "Step 1 — Understand the concept.\n\nArrow functions provide concise syntax and lexical `this`; they do not have their own `arguments`, `prototype`, or constructor behavior.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconst add = function (a: number, b: number): number {\n  return a + b;\n};\n\nconst result = add(2, 3);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst add = (a: number, b: number): number =>\n  a + b;\n\nconst result = add(2, 3);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-182',
@@ -188,36 +188,36 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Is the Difference Between Arrow Functions and Regular Functions?',
     difficulty: 'Hard',
     expectedAnswer:
-      "Regular functions have their own `this`, `arguments`, and `prototype`, and can be used as constructors; arrow functions have none of those and instead capture `this` lexically.",
+      "Arrow functions provide concise syntax and lexical `this`; they do not have their own `arguments`, `prototype`, or constructor behavior.",
     deepExplanation:
-      "In `{ name: 'Rasik', regular() { return this.name; }, arrow: () => { return this.name; } }`, `user.regular()` returns `'Rasik'` because a regular method's `this` is the calling object, while `user.arrow()` does not receive `this` from the object — it uses whatever `this` was lexically in scope where the object literal was written. Interview trap: do not choose arrow functions for object methods merely because they are shorter.",
+      "Step 1 — Understand the concept.\n\nArrow functions provide concise syntax and lexical `this`; they do not have their own `arguments`, `prototype`, or constructor behavior.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconst add = function (a: number, b: number): number {\n  return a + b;\n};\n\nconst result = add(2, 3);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst add = (a: number, b: number): number =>\n  a + b;\n\nconst result = add(2, 3);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-183',
     number: 'JSADV-M9-183',
     title: 'What Are Rest Parameters?',
     difficulty: 'Easy',
-    expectedAnswer: 'Rest parameters collect the remaining arguments passed to a function into a real array.',
+    expectedAnswer: "Rest parameters collect remaining arguments into an array; spread expands an iterable into individual arguments/elements.",
     deepExplanation:
-      "`function sum(...numbers) { return numbers.reduce((total, number) => total + number, 0); } sum(10, 20, 30)` returns `60`, whether implemented with `reduce()` or a manual `for...of` loop. Rest is useful whenever the number of arguments is dynamic.",
+      "Step 1 — Understand the concept.\n\nRest parameters collect remaining arguments into an array; spread expands an iterable into individual arguments/elements.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction collect(first: string, rest: readonly string[]): string {\n  let result = first;\n\n  for (let i = 0; i < rest.length; i += 1) {\n    result += \"-\" + rest[i];\n  }\n\n  return result;\n}\n\nconst value = collect(\"a\", [\"b\", \"c\"]);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nfunction collect(\n  first: string,\n  ...rest: string[],\n): string {\n  return [first, ...rest].join(\"-\");\n}\n\nconst value = collect(\"a\", \"b\", \"c\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-184',
     number: 'JSADV-M9-184',
     title: 'What Are Spread Parameters?',
     difficulty: 'Easy',
-    expectedAnswer: 'Spread syntax expands an iterable or object into individual values or properties.',
+    expectedAnswer: "Rest parameters collect remaining arguments into an array; spread expands an iterable into individual arguments/elements.",
     deepExplanation:
-      "`Math.max(...[10, 20, 30])` returns `30`, and `add(...[10, 20, 30])` for `function add(a, b, c)` returns `60`. Rest and spread are conceptual inverses: rest gathers `arguments` into `[10, 20, 30]`, while spread expands `[10, 20, 30]` back into individual `10, 20, 30` values.",
+      "Step 1 — Understand the concept.\n\nRest parameters collect remaining arguments into an array; spread expands an iterable into individual arguments/elements.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction collect(first: string, rest: readonly string[]): string {\n  let result = first;\n\n  for (let i = 0; i < rest.length; i += 1) {\n    result += \"-\" + rest[i];\n  }\n\n  return result;\n}\n\nconst value = collect(\"a\", [\"b\", \"c\"]);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nfunction collect(\n  first: string,\n  ...rest: string[],\n): string {\n  return [first, ...rest].join(\"-\");\n}\n\nconst value = collect(\"a\", \"b\", \"c\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-185',
     number: 'JSADV-M9-185',
     title: 'What Are Default Parameters?',
     difficulty: 'Easy',
-    expectedAnswer: "Default parameters provide a fallback value when an argument is `undefined`.",
+    expectedAnswer: "Rest parameters collect remaining arguments into an array; spread expands an iterable into individual arguments/elements.",
     deepExplanation:
-      "`function greet(name = 'Guest') { ... } greet()` logs `Hello Guest` and `greet('Rasik')` logs `Hello Rasik`. Interview trap: calling `greet(undefined)` uses the default, but calling `greet(null)` does not — `null` is a real value, not a missing one.",
+      "Step 1 — Understand the concept.\n\nRest parameters collect remaining arguments into an array; spread expands an iterable into individual arguments/elements.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction collect(first: string, rest: readonly string[]): string {\n  let result = first;\n\n  for (let i = 0; i < rest.length; i += 1) {\n    result += \"-\" + rest[i];\n  }\n\n  return result;\n}\n\nconst value = collect(\"a\", [\"b\", \"c\"]);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nfunction collect(\n  first: string,\n  ...rest: string[],\n): string {\n  return [first, ...rest].join(\"-\");\n}\n\nconst value = collect(\"a\", \"b\", \"c\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-186',
@@ -225,126 +225,126 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'Function Declaration vs Function Expression',
     difficulty: 'Medium',
     expectedAnswer:
-      'A function declaration (`function add() {}`) is fully hoisted and callable before its line runs; a function expression (`const add = function () {}`) is only hoisted as a binding and is in the temporal dead zone until its assignment executes.',
+      "**Function Declaration vs Function Expression** should be explained through its runtime rule, one small example, edge cases, and the production trade-off that matters for maintainable TypeScript/JavaScript.",
     deepExplanation:
-      "Calling `add(2, 3)` before a `function add(a, b) { return a + b; }` declaration works because declarations are initialized during execution-context setup. Calling `add(2, 3)` before `const add = function (a, b) { return a + b; }` throws, because `add` sits in the TDZ until the `const` assignment runs.",
+      "Step 1 — Understand the concept.\n\n**Function Declaration vs Function Expression** should be explained through its runtime rule, one small example, edge cases, and the production trade-off that matters for maintainable TypeScript/JavaScript.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-187',
     number: 'JSADV-M9-187',
     title: 'What Are Generator Functions?',
     difficulty: 'Hard',
-    expectedAnswer: "Generator functions, declared with `function*` and using `yield`, can pause and resume execution, producing a sequence of values on demand.",
+    expectedAnswer: "A generator can pause with `yield` and later resume, making it useful for lazy sequences and custom iteration.",
     deepExplanation:
-      "Calling `numbers()` for `function* numbers() { yield 1; yield 2; yield 3; }` returns an iterator; each `.next()` call resumes execution to the next `yield`, producing `{ value: 1, done: false }`, `{ value: 2, done: false }`, `{ value: 3, done: false }`, then `{ value: undefined, done: true }`. Generators are useful for custom iterators, lazy sequences, controlled execution, state machines, and advanced async abstractions.",
+      "Step 1 — Understand the concept.\n\nA generator can pause with `yield` and later resume, making it useful for lazy sequences and custom iteration.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction* ids(): Generator<number, void, void> {\n  let id = 1;\n  while (id <= 3) {\n    yield id;\n    id += 1;\n  }\n}\n\nconst generator = ids();\nconst first = generator.next().value;\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nfunction* ids() {\n  yield* [1, 2, 3];\n}\n\nconst first = ids().next().value;\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-188',
     number: 'JSADV-M9-188',
     title: 'What Are Async Functions?',
     difficulty: 'Medium',
-    expectedAnswer: 'An `async` function always returns a Promise, even when its body returns a plain value.',
+    expectedAnswer: "An async function always returns a Promise; `await` suspends only that function's continuation until the awaited value settles.",
     deepExplanation:
-      "`async function getUser() { return { id: 1, name: 'Rasik' }; } getUser().then(console.log)` logs `{ id: 1, name: 'Rasik' }` because JavaScript wraps the returned object in a resolved Promise. Conceptually, `async function getUser() { return value; }` behaves like `function getUser() { return Promise.resolve(value); }`.",
+      "Step 1 — Understand the concept.\n\nAn async function always returns a Promise; `await` suspends only that function's continuation until the awaited value settles.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nasync function loadName(): Promise<string> {\n  const value = \"Rasik\";\n  return value;\n}\n\nconst promise = loadName();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst loadName = async (): Promise<string> =>\n  \"Rasik\";\n\nconst promise = loadName();\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-189',
     number: 'JSADV-M9-189',
     title: 'What Is a Pure Function?',
     difficulty: 'Medium',
-    expectedAnswer: 'A pure function produces the same output for the same input and has no observable side effects.',
+    expectedAnswer: "Pure functions return the same output for the same input and avoid observable side effects.",
     deepExplanation:
-      "`function add(a, b) { return a + b; }` is pure — `add(2, 3)` always returns `5`. By contrast, `addToTotal(value)` that mutates an outer `total` variable is impure, since its result depends on external mutable state. Pure functions are easier to test, reason about, cache, reuse, conceptually parallelize, and debug.",
+      "Step 1 — Understand the concept.\n\nPure functions return the same output for the same input and avoid observable side effects.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n\nconst result = add(2, 3);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = [2, 3].reduce(\n  (sum, value) => sum + value,\n  0,\n);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-190',
     number: 'JSADV-M9-190',
     title: 'What Are Side Effects?',
     difficulty: 'Medium',
-    expectedAnswer: "A side effect is an observable interaction outside a function's local computation.",
+    expectedAnswer: "**What Are Side Effects?** should be explained through its runtime rule, one small example, edge cases, and the production trade-off that matters for maintainable TypeScript/JavaScript.",
     deepExplanation:
-      "Examples include modifying global state, changing the DOM, network requests, writing storage, logging, mutating external objects, and timers — e.g. `saveUser(user)` calling `localStorage.setItem(...)` performs a storage side effect. Side effects are not automatically bad; production applications need them — the goal is to isolate and control them, keeping pure domain logic separate from an explicit side-effect boundary (API/DOM/storage).",
+      "Step 1 — Understand the concept.\n\n**What Are Side Effects?** should be explained through its runtime rule, one small example, edge cases, and the production trade-off that matters for maintainable TypeScript/JavaScript.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-191',
     number: 'JSADV-M9-191',
     title: 'What Is Function Composition?',
     difficulty: 'Medium',
-    expectedAnswer: 'Composition combines smaller functions to build a larger operation, feeding the output of one into the input of the next.',
+    expectedAnswer: "Function composition builds larger transformations from small functions while preserving explicit data flow.",
     deepExplanation:
-      "`compose(double, increment)` builds `transform`, so `transform(5)` first applies `increment` (→ `6`) then `double` (→ `12`), matching `f(g(value))`.",
+      "Step 1 — Understand the concept.\n\nFunction composition builds larger transformations from small functions while preserving explicit data flow.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction double(value: number): number {\n  return value * 2;\n}\n\nfunction toText(value: number): string {\n  return String(value);\n}\n\nconst result = toText(double(5));\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\n  [5].map((value) => value * 2)[0],\n);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-192',
     number: 'JSADV-M9-192',
     title: 'What Is Currying?',
     difficulty: 'Hard',
-    expectedAnswer: 'Currying transforms a multi-argument function into a sequence of nested one-argument functions.',
+    expectedAnswer: "Currying transforms a function into nested unary functions and can help create reusable specialized functions.",
     deepExplanation:
-      "Instead of `add(a, b, c) { return a + b + c; }` called as `add(1, 2, 3)`, a curried form `const add = (a) => (b) => (c) => a + b + c;` is called as `add(1)(2)(3)`, also returning `6`. Currying is useful for creating specialized functions, e.g. `const addGST = addTax(0.18); addGST(100)` returns `118`.",
+      "Step 1 — Understand the concept.\n\nCurrying transforms a function into nested unary functions and can help create reusable specialized functions.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number): (b: number) => number {\n  return function addSecond(b: number): number {\n    return a + b;\n  };\n}\n\nconst result = add(2)(3);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst add =\n  (a: number) =>\n  (b: number): number =>\n    a + b;\n\nconst result = add(2)(3);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-193',
     number: 'JSADV-M9-193',
     title: 'What Is Partial Application?',
     difficulty: 'Hard',
-    expectedAnswer: 'Partial application fixes some arguments of a function up front and returns a new function awaiting the rest.',
+    expectedAnswer: "Partial application fixes selected arguments and returns a function for the remaining arguments.",
     deepExplanation:
-      "`partialMultiply(2, 3)` fixes `a` and `b` for `multiply(a, b, c)`, returning `multiplyBySix`; calling `multiplyBySix(4)` returns `24`. Unlike currying's one-argument-at-a-time nested calls (`f(a)(b)(c)`), partial application fixes a batch of arguments at once and produces a single specialized function (`partial(f, a, b)(c)`).",
+      "Step 1 — Understand the concept.\n\nPartial application fixes selected arguments and returns a function for the remaining arguments.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction multiply(a: number, b: number): number {\n  return a * b;\n}\n\nfunction partialMultiply(\n  a: number,\n): (b: number) => number {\n  return function apply(b: number): number {\n    return multiply(a, b);\n  };\n}\n\nconst double = partialMultiply(2);\nconst result = double(5);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst multiply = (a: number, b: number) =>\n  a * b;\n\nconst double = (b: number) =>\n  multiply(2, b);\n\nconst result = double(5);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-194',
     number: 'JSADV-M9-194',
     title: 'What Is Memoization?',
     difficulty: 'Hard',
-    expectedAnswer: 'Memoization caches a function\'s results keyed by its arguments so repeated calls with the same input can be returned from cache.',
+    expectedAnswer: "Memoization caches previous results based on stable inputs; production implementations need bounded/appropriate cache keys.",
     deepExplanation:
-      "A `memoize(fn)` wrapper stores results in a `Map` keyed by `JSON.stringify(args)`; calling `square(10)` twice logs `100` both times, with the second call served from cache. The naive implementation has real limitations — `JSON.stringify()` can be expensive, object-argument identity may be inappropriate, cache growth can be unbounded, and stale values can persist indefinitely — so production use may need a bounded cache, TTL, `WeakMap` keys for objects, stable key generation, and explicit invalidation.",
+      "Step 1 — Understand the concept.\n\nMemoization caches previous results based on stable inputs; production implementations need bounded/appropriate cache keys.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction memoizeSquare(): (value: number) => number {\n  const cache: Record<string, number> = Object.create(null);\n\n  return function square(value: number): number {\n    const key = String(value);\n\n    if (cache[key] !== undefined) {\n      return cache[key];\n    }\n\n    const result = value * value;\n    cache[key] = result;\n    return result;\n  };\n}\n\nconst square = memoizeSquare();\nconst result = square(5);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst cache = new Map<number, number>();\n\nconst square = (value: number): number => {\n  if (!cache.has(value)) {\n    cache.set(value, value * value);\n  }\n\n  return cache.get(value)!;\n};\n\nconst result = square(5);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-195',
     number: 'JSADV-M9-195',
     title: 'What Is Debouncing?',
     difficulty: 'Hard',
-    expectedAnswer: 'Debouncing delays a function\'s execution until activity has stopped for a specified period.',
+    expectedAnswer: "Debouncing delays execution until calls stop for the chosen interval, making it useful for search input and other bursty events.",
     deepExplanation:
-      "Each call to a debounced `search(query)` clears the previous timer and starts a new one; only after 300ms of no further calls does the underlying function actually run — so rapid calls like `search('r')`, `search('re')`, `search('rea')`, `search('react')` end up triggering just one execution for `'react'`. Common uses: autocomplete, search, resize handling, expensive validation, and filtering. Debouncing does not cancel a request already sent to the server — combine it with `AbortController` or request identity handling for network operations.",
+      "Step 1 — Understand the concept.\n\nDebouncing delays execution until calls stop for the chosen interval, making it useful for search input and other bursty events.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction debounce(\n  callback: () => void,\n  delay: number,\n): () => void {\n  let timer: ReturnType<typeof setTimeout> | undefined;\n\n  return function trigger(): void {\n    if (timer !== undefined) {\n      clearTimeout(timer);\n    }\n\n    timer = setTimeout(callback, delay);\n  };\n}\n\nconst run = debounce(() => {}, 200);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst debounce = (\n  callback: () => void,\n  delay: number,\n) => {\n  let timer: ReturnType<typeof setTimeout> | undefined;\n\n  return () => {\n    if (timer) clearTimeout(timer);\n    timer = setTimeout(callback, delay);\n  };\n};\n\nconst run = debounce(() => {}, 200);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-196',
     number: 'JSADV-M9-196',
     title: 'What Is Throttling?',
     difficulty: 'Hard',
-    expectedAnswer: 'Throttling limits how often a function can execute within a given period, regardless of how often it is invoked.',
+    expectedAnswer: "**What Is Throttling?** should be explained through its runtime rule, one small example, edge cases, and the production trade-off that matters for maintainable TypeScript/JavaScript.",
     deepExplanation:
-      "A throttled `handleScroll` tracks `lastExecution` and only runs `fn` again once at least `delay` (e.g. 200ms) has passed since the last run, ignoring calls in between. Debounce waits for activity to stop and suits input/search, while throttle executes at controlled intervals and suits continuous events like scroll/resize.",
+      "Step 1 — Understand the concept.\n\n**What Is Throttling?** should be explained through its runtime rule, one small example, edge cases, and the production trade-off that matters for maintainable TypeScript/JavaScript.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-197',
     number: 'JSADV-M9-197',
     title: 'What Is the Difference Between `call`, `apply`, and `bind`?',
     difficulty: 'Hard',
-    expectedAnswer: '`call` and `apply` invoke a function immediately with an explicit `this` (comma-separated args vs an array), while `bind` returns a new function permanently bound to a given `this`.',
+    expectedAnswer: "`call`, `apply`, and `bind` control `this` for normal functions; arrow functions keep lexical `this` and cannot be rebound.",
     deepExplanation:
-      "`greet.call(user, 'Coimbatore', 'India')` and `greet.apply(user, ['Coimbatore', 'India'])` both invoke `greet` immediately with `this` set to `user`; `greet.bind(user, 'Coimbatore', 'India')` instead returns `boundGreet`, callable later as `boundGreet()`. Arrow functions do not have their own `this`, so `call`, `apply`, and `bind` cannot override their lexical `this`.",
+      "Step 1 — Understand the concept.\n\n`call`, `apply`, and `bind` control `this` for normal functions; arrow functions keep lexical `this` and cannot be rebound.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n}\n\nfunction greet(this: User, suffix: string): string {\n  return this.name + suffix;\n}\n\nconst result = greet.call({ name: \"Rasik\" }, \"!\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet(suffix: string) {\n    return this.name + suffix;\n  },\n};\n\nconst result = user.greet(\"!\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-198',
     number: 'JSADV-M9-198',
     title: 'What Is Recursion?',
     difficulty: 'Medium',
-    expectedAnswer: 'Recursion occurs when a function calls itself, typically progressing toward a base case that stops the recursive calls.',
+    expectedAnswer: "Recursion solves a problem by reducing it to smaller instances of itself and must have a terminating base case.",
     deepExplanation:
-      "`factorial(5)` calls `factorial(4)`, then `factorial(3)`, `factorial(2)`, and `factorial(1)`, which returns `1` and lets each stacked call multiply its way back up to `120`. A common mistake is missing a base case, which causes unbounded recursion and a stack overflow.",
+      "Step 1 — Understand the concept.\n\nRecursion solves a problem by reducing it to smaller instances of itself and must have a terminating base case.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction factorial(n: number): number {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\n\nconst result = factorial(5);\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nfunction factorial(n: number): number {\n  if (n <= 1) return 1;\n\n  return Array.from(\n    { length: n },\n    (_, index) => index + 1,\n  ).reduce(\n    (result, value) => result * value,\n    1,\n  );\n}\n\nconst result = factorial(5);\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-199',
     number: 'JSADV-M9-199',
     title: 'What Is Function Chaining?',
     difficulty: 'Hard',
-    expectedAnswer: 'Function chaining lets successive method calls run on the same object by having each method return `this` (or another chainable value).',
+    expectedAnswer: "Function chaining or composition connects transformations so each step feeds the next, but excessive chaining can reduce readability.",
     deepExplanation:
-      "`new Calculator(10).add(5).multiply(2).subtract(4)` works because `add()`, `multiply()`, and `subtract()` each mutate `this.value` and `return this`, giving `10 → 15 → 30 → 26`. Modern code can also achieve a similar effect with pipelines or explicit composition patterns, depending on project tooling and language support.",
+      "Step 1 — Understand the concept.\n\nFunction chaining or composition connects transformations so each step feeds the next, but excessive chaining can reduce readability.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction trim(value: string): string {\n  return value.trim();\n}\n\nfunction lower(value: string): string {\n  return value.toLowerCase();\n}\n\nconst result = lower(trim(\"  HELLO  \"));\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = \"  HELLO  \"\n  .trim()\n  .toLowerCase();\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m9-200',
@@ -352,9 +352,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Are Function Best Practices?',
     difficulty: 'Hard',
     experienceLevel: '5–8 Years+',
-    expectedAnswer: 'Production functions stay focused, minimize hidden side effects, validate external input, and keep parameter counts and contracts manageable.',
+    expectedAnswer: "**What Are Function Best Practices?** should be explained through its runtime rule, one small example, edge cases, and the production trade-off that matters for maintainable TypeScript/JavaScript.",
     deepExplanation:
-      "Splitting a monolithic `process(data, a, b, c, d, e, f)` into focused functions — `validateOrder(order)`, `calculateOrderTotal(order)`, `saveOrder(order)`, and an orchestrating `async function createOrder(order)` that calls each in turn — illustrates the guideline: prefer composition over duplicated logic, avoid unnecessary mutation, use pure functions for domain transformations where practical, keep async error handling explicit, avoid accidental closure retention, avoid creating functions repeatedly inside hot paths unless necessary, don't overuse memoization, use debounce/throttle intentionally, document non-obvious contracts, and keep functions easy to test.",
+      "Step 1 — Understand the concept.\n\n**What Are Function Best Practices?** should be explained through its runtime rule, one small example, edge cases, and the production trade-off that matters for maintainable TypeScript/JavaScript.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
 ];
 

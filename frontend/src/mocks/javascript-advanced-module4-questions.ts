@@ -43,9 +43,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is a Closure?"
     },
     "answer": {
-      "expectedAnswer": "A closure occurs when a function retains access to variables from its surrounding lexical scope even after that surrounding function has finished executing.",
-      "deepExplanation": "Example: Expected output: The returned `increment` function still has access to `count`.",
-      "productionExample": "Work through the accompanying code example for \"What is a Closure?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is a Closure?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is a Closure?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is a Closure?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -136,9 +136,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Why Does a Closure Retain Variables?"
     },
     "answer": {
-      "expectedAnswer": "JavaScript functions are created with lexical information that allows identifier resolution through their surrounding environment.",
-      "deepExplanation": "Example: Output: Although `outer()` has returned, `inner()` still needs `message`. Conceptually: The exact internal implementation is engine-specific; `[[Environment]]` is a useful ECMAScript-level model.",
-      "productionExample": "Work through the accompanying code example for \"Why Does a Closure Retain Variables?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Why Does a Closure Retain Variables?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Why Does a Closure Retain Variables?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Why Does a Closure Retain Variables?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -229,9 +229,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Lexical Scope?"
     },
     "answer": {
-      "expectedAnswer": "Lexical scope means variable visibility is determined by where code is written.",
-      "deepExplanation": "Example: Output: The scope relationship is established by source-code structure, not by where a function happens to be called.",
-      "productionExample": "Work through the accompanying code example for \"What is Lexical Scope?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Lexical Scope?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Lexical Scope?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Lexical Scope?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -322,9 +322,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Scope Chain in a Closure?"
     },
     "answer": {
-      "expectedAnswer": "A closure can resolve identifiers through its lexical environment chain.",
-      "deepExplanation": "Example: Output:",
-      "productionExample": "Work through the accompanying code example for \"What is the Scope Chain in a Closure?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Scope Chain in a Closure?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Scope Chain in a Closure?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Scope Chain in a Closure?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -415,9 +415,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Does a Closure Keep the Entire Outer Function Alive?"
     },
     "answer": {
-      "expectedAnswer": "Not necessarily in the simplistic sense.",
-      "deepExplanation": "A closure allows access to bindings required by the function. JavaScript engines can optimize environment representation and garbage collection. Example: Do not claim: The entire outer function is permanently kept in memory. A better answer: The reachable lexical state needed by the closure can remain reachable. Actual memory retention and optimization are engine-dependent.",
-      "productionExample": "Work through the accompanying code example for \"Does a Closure Keep the Entire Outer Function Alive?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Does a Closure Keep the Entire Outer Function Alive?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Does a Closure Keep the Entire Outer Function Alive?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Does a Closure Keep the Entire Outer Function Alive?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -508,9 +508,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Closures for Private Variables"
     },
     "answer": {
-      "expectedAnswer": "Closures can provide encapsulation without exposing internal variables directly.",
-      "deepExplanation": "Output: External code cannot directly access: because `balance` is not a property.",
-      "productionExample": "Work through the accompanying code example for \"Closures for Private Variables\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Closures for Private Variables** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Closures for Private Variables** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Closures for Private Variables** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -601,9 +601,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Closure-Based Data Hiding"
     },
     "answer": {
-      "expectedAnswer": "The properties are directly accessible.",
-      "deepExplanation": "The variables are accessible through controlled operations. Useful for: service factories configuration stateful utilities private implementation details test doubles adapters",
-      "productionExample": "Work through the accompanying code example for \"Closure-Based Data Hiding\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Closure-Based Data Hiding** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Closure-Based Data Hiding** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Closure-Based Data Hiding** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -694,9 +694,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Module Pattern Using Closures"
     },
     "answer": {
-      "expectedAnswer": "Output: The module exposes an API while keeping `items` private.",
-      "deepExplanation": "Modern ES modules are generally preferred for module organization, but the closure-based module pattern remains useful for understanding encapsulation.",
-      "productionExample": "Work through the accompanying code example for \"Module Pattern Using Closures\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Module Pattern Using Closures** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Module Pattern Using Closures** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Module Pattern Using Closures** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -787,9 +787,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Counter Example"
     },
     "answer": {
-      "expectedAnswer": "Counter Example — see the accompanying code example in this Closures module for a concrete demonstration and its expected output.",
-      "deepExplanation": "Output:",
-      "productionExample": "Work through the accompanying code example for \"Counter Example\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Counter Example** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Counter Example** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Counter Example** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -880,9 +880,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Multiple Closures and Shared State"
     },
     "answer": {
-      "expectedAnswer": "Output: Each invocation creates a separate lexical environment.",
-      "deepExplanation": "Diagram:",
-      "productionExample": "Work through the accompanying code example for \"Multiple Closures and Shared State\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Multiple Closures and Shared State** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Multiple Closures and Shared State** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Multiple Closures and Shared State** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -973,9 +973,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Closures in Loops"
     },
     "answer": {
-      "expectedAnswer": "A classic problem occurs with `var`.",
-      "deepExplanation": "Output: There is one function-scoped `i`. By the time callbacks execute:",
-      "productionExample": "Work through the accompanying code example for \"Closures in Loops\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Closures in Loops** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Closures in Loops** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Closures in Loops** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1066,9 +1066,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Fix Loop Closure with `let`"
     },
     "answer": {
-      "expectedAnswer": "Output: `let` provides per-iteration lexical bindings for this loop form.",
-      "deepExplanation": "Output: `let` provides per-iteration lexical bindings for this loop form.",
-      "productionExample": "Work through the accompanying code example for \"Fix Loop Closure with `let`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Fix Loop Closure with `let`** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Fix Loop Closure with `let`** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Fix Loop Closure with `let`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1159,9 +1159,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Fix Loop Closure Without Built-in Functions"
     },
     "answer": {
-      "expectedAnswer": "A classic closure factory can explicitly capture the value.",
-      "deepExplanation": "Expected: No array helper is required.",
-      "productionExample": "Work through the accompanying code example for \"Fix Loop Closure Without Built-in Functions\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Fix Loop Closure Without Built-in Functions** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Fix Loop Closure Without Built-in Functions** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Fix Loop Closure Without Built-in Functions** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1252,9 +1252,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Closures with `setTimeout`"
     },
     "answer": {
-      "expectedAnswer": "The callback closes over `name`.",
-      "deepExplanation": "Conceptually:",
-      "productionExample": "Work through the accompanying code example for \"Closures with `setTimeout`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Closures with `setTimeout`** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Closures with `setTimeout`** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Closures with `setTimeout`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1345,9 +1345,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Closures with Asynchronous Code"
     },
     "answer": {
-      "expectedAnswer": "The returned function retains access to `requestId`.",
-      "deepExplanation": "Closures are common in: event callbacks promise callbacks timers API handlers React hooks subscriptions",
-      "productionExample": "Work through the accompanying code example for \"Closures with Asynchronous Code\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Closures with Asynchronous Code** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Closures with Asynchronous Code** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Closures with Asynchronous Code** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1438,9 +1438,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Currying with Closures"
     },
     "answer": {
-      "expectedAnswer": "Currying transforms a multi-argument function into a sequence of single-argument functions.",
-      "deepExplanation": "Output: The inner function closes over `a`.",
-      "productionExample": "Work through the accompanying code example for \"Currying with Closures\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Currying with Closures** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Currying with Closures** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Currying with Closures** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1531,9 +1531,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Currying with Arrow Functions"
     },
     "answer": {
-      "expectedAnswer": "Output: Equivalent conceptual structure:",
-      "deepExplanation": "Output: Equivalent conceptual structure:",
-      "productionExample": "Work through the accompanying code example for \"Currying with Arrow Functions\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Currying with Arrow Functions** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Currying with Arrow Functions** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Currying with Arrow Functions** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1624,9 +1624,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Memoization Using Closures"
     },
     "answer": {
-      "expectedAnswer": "A closure can store cached results.",
-      "deepExplanation": "Output: `Map` gives cleaner lookup semantics and expected average O(1) lookup.",
-      "productionExample": "Work through the accompanying code example for \"Memoization Using Closures\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Memoization Using Closures** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Memoization Using Closures** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Memoization Using Closures** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1717,9 +1717,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Event Listeners and Closures"
     },
     "answer": {
-      "expectedAnswer": "Closures are commonly used by event listeners.",
-      "deepExplanation": "The callback closes over `userId`. Returning cleanup is important.",
-      "productionExample": "Work through the accompanying code example for \"Event Listeners and Closures\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Event Listeners and Closures** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Event Listeners and Closures** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Event Listeners and Closures** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1810,9 +1810,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Can Closures Cause Memory Leaks?"
     },
     "answer": {
-      "expectedAnswer": "A closure is not inherently a memory leak.",
-      "deepExplanation": "A leak can occur when a long-lived object retains a callback that retains a large object graph unnecessarily. Example: If `element` remains alive indefinitely, the listener may keep `handleClick` reachable, which can keep `largeData` reachable. Always clean up long-lived subscriptions.",
-      "productionExample": "Work through the accompanying code example for \"How Can Closures Cause Memory Leaks?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Can Closures Cause Memory Leaks?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Can Closures Cause Memory Leaks?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Can Closures Cause Memory Leaks?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1903,9 +1903,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Closures and Garbage Collection"
     },
     "answer": {
-      "expectedAnswer": "Garbage collection is based on reachability, not simply whether a function has returned.",
-      "deepExplanation": "Simplified: If the chain remains reachable, the captured object cannot be collected. If no reachable reference remains: The exact GC algorithm is engine-specific.",
-      "productionExample": "Work through the accompanying code example for \"Closures and Garbage Collection\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Closures and Garbage Collection** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Closures and Garbage Collection** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Closures and Garbage Collection** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -1996,9 +1996,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Stale Closures in React"
     },
     "answer": {
-      "expectedAnswer": "A closure can capture a value from a particular render.",
-      "deepExplanation": "Example: The interval callback captures the `count` from the render in which the effect was created. Depending on the desired behavior, use appropriate dependencies or a ref-based/latest-value strategy. Now the effect is recreated when `count` changes.",
-      "productionExample": "Work through the accompanying code example for \"Stale Closures in React\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Stale Closures in React** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Stale Closures in React** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Stale Closures in React** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -2089,9 +2089,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Closures and React Event Handlers"
     },
     "answer": {
-      "expectedAnswer": "React handlers commonly close over props and state.",
-      "deepExplanation": "The handler accesses `user` from its lexical scope. In modern React applications, this is normal and expected. The optimization question is not: “How do I eliminate all closures?” Instead ask: “Is this closure causing unnecessary allocations, stale state, or unnecessary rendering?”",
-      "productionExample": "Work through the accompanying code example for \"Closures and React Event Handlers\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Closures and React Event Handlers** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Closures and React Event Handlers** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Closures and React Event Handlers** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -2182,9 +2182,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Closure Performance"
     },
     "answer": {
-      "expectedAnswer": "Closures have a runtime cost, but usually not one worth avoiding indiscriminately.",
-      "deepExplanation": "Potential costs include: retained memory additional function objects captured environment state unnecessary callback recreation retained DOM references large captured objects But closures are fundamental to JavaScript and React. Prefer: Do not avoid closures based on assumptions.",
-      "productionExample": "Work through the accompanying code example for \"Closure Performance\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Closure Performance** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Closure Performance** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Closure Performance** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",
@@ -2275,9 +2275,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE4_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Do You Debug Closure Problems?"
     },
     "answer": {
-      "expectedAnswer": "Use browser DevTools.",
-      "deepExplanation": "Open Chrome DevTools. Add a breakpoint inside the closure. Inspect the Scope panel. Check Local / Closure / Global scopes. Inspect the Call Stack. Use the Memory panel for retention problems. Take heap snapshots. Compare snapshots before and after repeated operations. Look for detached DOM nodes. Check event listeners and subscriptions. Example:",
-      "productionExample": "Work through the accompanying code example for \"How Do You Debug Closure Problems?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Do You Debug Closure Problems?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Do You Debug Closure Problems?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction createCounter(): () => number {\n  let count = 0;\n\n  function increment(): number {\n    count += 1;\n    return count;\n  }\n\n  return increment;\n}\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst createCounter = () => {\n  let count = 0;\n  return () => ++count;\n};\n\nconst increment = createCounter();\nconst value = increment();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Do You Debug Closure Problems?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Capture only the bindings a closure actually needs.",
         "Release large captured objects when they are no longer required.",

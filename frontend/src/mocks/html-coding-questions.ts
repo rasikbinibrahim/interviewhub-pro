@@ -49,20 +49,47 @@ export const MOCK_HTML_CODING_QUESTIONS: MockCodingQuestion[] = [
         'A lookup map from character to its entity keeps the replacer function simple.',
         'Escape `&` conceptually first in your head even though the regex handles it in one pass — otherwise you would double-escape entities.',
       ],
-    },
-    solution: {
-      algorithm: 'Replace every occurrence of &, <, >, ", and \' in one regex pass using a lookup table mapping each character to its HTML entity.',
-      dryRun: '\'<b>\' -> "<" -> "&lt;", "b" unchanged, ">" -> "&gt;" -> result "&lt;b&gt;"',
-      javascriptSolution: `function escapeHtml(str) {
-  const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-  return str.replace(/[&<>"']/g, (ch) => map[ch]);
+    },solution: {
+      algorithm: 'Step 1: Understand the input and edge cases. Step 2: Write the core algorithm explicitly with loops, recursion, a stack, or the required data structure. Step 3: Verify the same behavior with the practical built-in alternative. Step 4: Check empty, boundary, duplicate, malformed, and maximum-size cases.',
+      dryRun: 'Walk left-to-right; replace only the five required characters so generated entities are not escaped a second time.',
+      javascriptSolution: `function escapeHtml(str: string): string {
+  const map: Record<string, string> = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  };
+
+  let result = "";
+
+  for (let i = 0; i < str.length; i += 1) {
+    const ch = str[i];
+    result += map[ch] ?? ch;
+  }
+
+  return result;
 }`,
       typescriptSolution: `function escapeHtml(str: string): string {
-  const map: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-  return str.replace(/[&<>"']/g, (ch) => map[ch]!);
+  const map: Record<string, string> = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  };
+
+  let result = "";
+
+  for (let i = 0; i < str.length; i += 1) {
+    const ch = str[i];
+    result += map[ch] ?? ch;
+  }
+
+  return result;
 }`,
-      timeComplexity: 'O(n) — one pass over the string.',
-      spaceComplexity: 'O(n) for the resulting string.',
+      timeComplexity: 'O(n) for the manual scan/traversal; native helpers preserve the same asymptotic order unless sorting is involved.',
+      spaceComplexity: 'O(n) for output or intermediate storage when a new collection is created.',
       commonMistakes: [
         'Escaping `&` in a separate later pass, which double-escapes entities produced by the first pass (e.g. `&lt;` becomes `&amp;lt;`).',
         'Missing single quotes, which matters when the escaped value is later placed inside a single-quoted HTML attribute.',
@@ -114,18 +141,59 @@ export const MOCK_HTML_CODING_QUESTIONS: MockCodingQuestion[] = [
         'Replacing every match with an empty string leaves only text nodes behind.',
         'This is a lossy heuristic — it assumes well-formed tags, not arbitrary malformed markup.',
       ],
-    },
-    solution: {
-      algorithm: 'Replace every substring matching `<[^>]*>` (an opening `<`, any non-`>` characters, a closing `>`) with an empty string.',
-      dryRun: "'<p>Hi</p>' -> match '<p>' -> remove -> 'Hi</p>' -> match '</p>' -> remove -> 'Hi'",
-      javascriptSolution: `function stripHtmlTags(html) {
-  return html.replace(/<[^>]*>/g, '');
+    },solution: {
+      algorithm: 'Step 1: Understand the input and edge cases. Step 2: Write the core algorithm explicitly with loops, recursion, a stack, or the required data structure. Step 3: Verify the same behavior with the practical built-in alternative. Step 4: Check empty, boundary, duplicate, malformed, and maximum-size cases.',
+      dryRun: 'Because the input guarantees well-formed tags, scan between `<` and `>` and keep only text outside tag ranges.',
+      javascriptSolution: `function stripHtmlTags(html: string): string {
+  let result = "";
+  let insideTag = false;
+
+  for (let i = 0; i < html.length; i += 1) {
+    const ch = html[i];
+
+    if (ch === "<") {
+      insideTag = true;
+      continue;
+    }
+
+    if (ch === ">") {
+      insideTag = false;
+      continue;
+    }
+
+    if (!insideTag) {
+      result += ch;
+    }
+  }
+
+  return result;
 }`,
       typescriptSolution: `function stripHtmlTags(html: string): string {
-  return html.replace(/<[^>]*>/g, '');
+  let result = "";
+  let insideTag = false;
+
+  for (let i = 0; i < html.length; i += 1) {
+    const ch = html[i];
+
+    if (ch === "<") {
+      insideTag = true;
+      continue;
+    }
+
+    if (ch === ">") {
+      insideTag = false;
+      continue;
+    }
+
+    if (!insideTag) {
+      result += ch;
+    }
+  }
+
+  return result;
 }`,
-      timeComplexity: 'O(n) — a single regex pass over the string.',
-      spaceComplexity: 'O(n) for the resulting string.',
+      timeComplexity: 'O(n) for the manual scan/traversal; native helpers preserve the same asymptotic order unless sorting is involved.',
+      spaceComplexity: 'O(n) for output or intermediate storage when a new collection is created.',
       commonMistakes: [
         'Using a greedy `.*` instead of `[^>]*`, which can span across multiple tags on malformed input.',
         'Not handling self-closing tags like `<br/>`, though the same regex actually covers them since it just matches up to the next `>`.',
@@ -179,39 +247,57 @@ export const MOCK_HTML_CODING_QUESTIONS: MockCodingQuestion[] = [
         'On an opening tag, push its name. On a closing tag, pop and check the popped name matches.',
         'At the end, the stack must be empty for the tags to be balanced.',
       ],
-    },
-    solution: {
-      algorithm:
-        'Use a stack of tag names. For each token: if it opens a tag, push the name; if it closes a tag, pop the stack and return false immediately if the popped name does not match or the stack was empty. After processing all tokens, the tags are balanced only if the stack is empty.',
-      dryRun: "['<div>','<span>','</span>','</div>']\n<div> -> push div -> [div]\n<span> -> push span -> [div,span]\n</span> -> pop span, matches -> [div]\n</div> -> pop div, matches -> []\nstack empty -> true",
-      javascriptSolution: `function isBalancedTags(tags) {
-  const stack = [];
-  for (const t of tags) {
-    if (t.startsWith('</')) {
-      const name = t.slice(2, -1);
-      if (stack.pop() !== name) return false;
-    } else {
-      const name = t.slice(1, -1);
-      stack.push(name);
-    }
-  }
-  return stack.length === 0;
-}`,
-      typescriptSolution: `function isBalancedTags(tags: string[]): boolean {
+    },solution: {
+      algorithm: 'Step 1: Understand the input and edge cases. Step 2: Write the core algorithm explicitly with loops, recursion, a stack, or the required data structure. Step 3: Verify the same behavior with the practical built-in alternative. Step 4: Check empty, boundary, duplicate, malformed, and maximum-size cases.',
+      dryRun: 'Treat opening tags as pushes and closing tags as pops; order matters, not just counts.',
+      javascriptSolution: `function validateBalancedHtmlTags(
+  tags: readonly string[],
+): boolean {
   const stack: string[] = [];
-  for (const t of tags) {
-    if (t.startsWith('</')) {
-      const name = t.slice(2, -1);
-      if (stack.pop() !== name) return false;
-    } else {
-      const name = t.slice(1, -1);
+
+  for (let i = 0; i < tags.length; i += 1) {
+    const tag = tags[i];
+
+    if (tag.startsWith("</")) {
+      const name = tag.slice(2, -1);
+
+      if (stack.length === 0) return false;
+      if (stack[stack.length - 1] !== name) return false;
+
+      stack.pop();
+    } else if (!tag.endsWith("/>")) {
+      const name = tag.slice(1, -1);
       stack.push(name);
     }
   }
+
   return stack.length === 0;
 }`,
-      timeComplexity: 'O(n) — each token is pushed or popped at most once.',
-      spaceComplexity: 'O(n) worst case for the stack, when tags are deeply nested without closing.',
+      typescriptSolution: `function validateBalancedHtmlTags(
+  tags: readonly string[],
+): boolean {
+  const stack: string[] = [];
+
+  for (let i = 0; i < tags.length; i += 1) {
+    const tag = tags[i];
+
+    if (tag.startsWith("</")) {
+      const name = tag.slice(2, -1);
+
+      if (stack.length === 0) return false;
+      if (stack[stack.length - 1] !== name) return false;
+
+      stack.pop();
+    } else if (!tag.endsWith("/>")) {
+      const name = tag.slice(1, -1);
+      stack.push(name);
+    }
+  }
+
+  return stack.length === 0;
+}`,
+      timeComplexity: 'O(n) for the manual scan/traversal; native helpers preserve the same asymptotic order unless sorting is involved.',
+      spaceComplexity: 'O(n) for output or intermediate storage when a new collection is created.',
       commonMistakes: [
         'Popping without checking for an empty stack first — `stack.pop()` on an empty array returns `undefined`, which happens to compare unequal safely here, but relying on that is fragile.',
         'Forgetting to check the final stack is empty, missing the case of unclosed trailing tags.',
@@ -285,51 +371,97 @@ export const MOCK_HTML_CODING_QUESTIONS: MockCodingQuestion[] = [
         'Second pass: for each item, if parentId is null it is a root; otherwise look up the parent in the map and push the node onto its children.',
         'Doing this in two passes avoids depending on parents appearing before children in the input order.',
       ],
-    },
-    solution: {
-      algorithm:
-        'Build a Map from id to a cloned node (spread of the item plus an empty children array). Walk the items again: push each node to its parent\'s children array via the map, or to the roots array if parentId is null.',
-      dryRun: "[{id:1,parentId:null},{id:2,parentId:1}]\nmap={1:{...,children:[]}, 2:{...,children:[]}}\nitem1: parentId null -> roots=[node1]\nitem2: parentId 1 -> map.get(1).children.push(node2)\nresult=roots with node1.children=[node2]",
-      javascriptSolution: `function buildTreeFromFlatList(items) {
-  const map = new Map();
-  items.forEach((item) => map.set(item.id, { ...item, children: [] }));
-  const roots = [];
-  items.forEach((item) => {
-    const node = map.get(item.id);
-    if (item.parentId === null || item.parentId === undefined) {
-      roots.push(node);
-    } else {
-      const parent = map.get(item.parentId);
-      if (parent) parent.children.push(node);
-    }
-  });
-  return roots;
-}`,
-      typescriptSolution: `interface FlatItem {
+    },solution: {
+      algorithm: 'Step 1: Understand the input and edge cases. Step 2: Write the core algorithm explicitly with loops, recursion, a stack, or the required data structure. Step 3: Verify the same behavior with the practical built-in alternative. Step 4: Check empty, boundary, duplicate, malformed, and maximum-size cases.',
+      dryRun: 'First create every node, then connect it to its parent; use a map for O(1)-average parent lookup.',
+      javascriptSolution: `interface FlatNode {
   id: number;
   parentId: number | null;
-  name: string;
 }
-interface TreeNode extends FlatItem {
+
+interface TreeNode {
+  id: number;
   children: TreeNode[];
 }
-function buildTreeFromFlatList(items: FlatItem[]): TreeNode[] {
-  const map = new Map<number, TreeNode>();
-  items.forEach((item) => map.set(item.id, { ...item, children: [] }));
+
+function buildTree(nodes: readonly FlatNode[]): TreeNode[] {
+  const byId: { id: number; node: TreeNode }[] = [];
   const roots: TreeNode[] = [];
-  items.forEach((item) => {
-    const node = map.get(item.id)!;
-    if (item.parentId === null || item.parentId === undefined) {
-      roots.push(node);
-    } else {
-      const parent = map.get(item.parentId);
-      if (parent) parent.children.push(node);
+
+  for (let i = 0; i < nodes.length; i += 1) {
+    byId.push({
+      id: nodes[i].id,
+      node: { id: nodes[i].id, children: [] },
+    });
+  }
+
+  for (let i = 0; i < nodes.length; i += 1) {
+    const current = byId[i].node;
+
+    if (nodes[i].parentId === null) {
+      roots.push(current);
+      continue;
     }
-  });
+
+    let parent: TreeNode | null = null;
+
+    for (let j = 0; j < byId.length; j += 1) {
+      if (byId[j].id === nodes[i].parentId) {
+        parent = byId[j].node;
+        break;
+      }
+    }
+
+    if (parent) parent.children.push(current);
+  }
+
   return roots;
 }`,
-      timeComplexity: 'O(n) — two linear passes over the items.',
-      spaceComplexity: 'O(n) for the map and the resulting tree.',
+      typescriptSolution: `interface FlatNode {
+  id: number;
+  parentId: number | null;
+}
+
+interface TreeNode {
+  id: number;
+  children: TreeNode[];
+}
+
+function buildTree(nodes: readonly FlatNode[]): TreeNode[] {
+  const byId: { id: number; node: TreeNode }[] = [];
+  const roots: TreeNode[] = [];
+
+  for (let i = 0; i < nodes.length; i += 1) {
+    byId.push({
+      id: nodes[i].id,
+      node: { id: nodes[i].id, children: [] },
+    });
+  }
+
+  for (let i = 0; i < nodes.length; i += 1) {
+    const current = byId[i].node;
+
+    if (nodes[i].parentId === null) {
+      roots.push(current);
+      continue;
+    }
+
+    let parent: TreeNode | null = null;
+
+    for (let j = 0; j < byId.length; j += 1) {
+      if (byId[j].id === nodes[i].parentId) {
+        parent = byId[j].node;
+        break;
+      }
+    }
+
+    if (parent) parent.children.push(current);
+  }
+
+  return roots;
+}`,
+      timeComplexity: 'O(n) — each node is visited once.',
+      spaceComplexity: 'O(h) auxiliary recursion space plus O(n) output when materialized.',
       commonMistakes: [
         'Trying to build the tree in a single pass assuming parents always appear before their children in the input.',
         'Mutating the original items instead of cloning them before adding a `children` array.',
@@ -378,18 +510,29 @@ function buildTreeFromFlatList(items: FlatItem[]): TreeNode[] {
         'Wrap the joined string in `<ul>...</ul>`.',
         'This intentionally does not escape the item text — assume trusted input for this exercise (see the related escapeHtml problem for untrusted input).',
       ],
-    },
-    solution: {
-      algorithm: 'Map every item to an `<li>` element string, join them with no separator, and wrap the result in `<ul>` tags.',
-      dryRun: "['Apple','Banana'] -> ['<li>Apple</li>','<li>Banana</li>'] -> join -> '<li>Apple</li><li>Banana</li>' -> wrap -> '<ul>...</ul>'",
-      javascriptSolution: `function renderListToHtml(items) {
-  return \`<ul>\${items.map((item) => \`<li>\${item}</li>\`).join('')}</ul>\`;
+    },solution: {
+      algorithm: 'Step 1: Understand the input and edge cases. Step 2: Write the core algorithm explicitly with loops, recursion, a stack, or the required data structure. Step 3: Verify the same behavior with the practical built-in alternative. Step 4: Check empty, boundary, duplicate, malformed, and maximum-size cases.',
+      dryRun: 'Build the wrapper once and append one list item per input in source order.',
+      javascriptSolution: `function renderList(items: readonly string[]): string {
+  let html = "<ul>";
+
+  for (let i = 0; i < items.length; i += 1) {
+    html += "<li>" + items[i] + "</li>";
+  }
+
+  return html + "</ul>";
 }`,
-      typescriptSolution: `function renderListToHtml(items: string[]): string {
-  return \`<ul>\${items.map((item) => \`<li>\${item}</li>\`).join('')}</ul>\`;
+      typescriptSolution: `function renderList(items: readonly string[]): string {
+  let html = "<ul>";
+
+  for (let i = 0; i < items.length; i += 1) {
+    html += "<li>" + items[i] + "</li>";
+  }
+
+  return html + "</ul>";
 }`,
-      timeComplexity: 'O(n) — one pass to build each <li>, one join.',
-      spaceComplexity: 'O(n) for the resulting HTML string.',
+      timeComplexity: 'O(n) for the manual scan/traversal; native helpers preserve the same asymptotic order unless sorting is involved.',
+      spaceComplexity: 'O(n) for output or intermediate storage when a new collection is created.',
       commonMistakes: [
         'Adding a separator (like a comma) between `<li>` elements, which is not valid or expected here.',
         'Not escaping user-provided item text in a real application, opening an XSS hole — call out that this exercise assumes trusted input.',
@@ -456,32 +599,45 @@ function buildTreeFromFlatList(items: FlatItem[]): TreeNode[] {
         'Base case: a null/undefined tree contributes 0.',
         'Sum 1 (if the current tag matches) plus the counts recursively returned from every child.',
       ],
-    },
-    solution: {
-      algorithm: 'If tree is falsy, return 0. Otherwise count 1 if tree.tag matches tagName, then add the recursive counts from every child in tree.children.',
-      dryRun: "tree=div>[span, div>[span]], tagName='span'\ndiv: no match, recurse children\n  span: match -> 1\n  div: no match, recurse children\n    span: match -> 1\n  subtotal for inner div: 0+1=1\ntotal: 0+1+1=2",
-      javascriptSolution: `function countElementOccurrences(tree, tagName) {
-  if (!tree) return 0;
-  let count = tree.tag === tagName ? 1 : 0;
-  for (const child of tree.children || []) {
-    count += countElementOccurrences(child, tagName);
+    },solution: {
+      algorithm: 'Step 1: Understand the input and edge cases. Step 2: Write the core algorithm explicitly with loops, recursion, a stack, or the required data structure. Step 3: Verify the same behavior with the practical built-in alternative. Step 4: Check empty, boundary, duplicate, malformed, and maximum-size cases.',
+      dryRun: 'Visit every node exactly once and increment when the current tag matches the target.',
+      javascriptSolution: `interface DomNode {
+  tag: string;
+  children: DomNode[];
+}
+
+function countTag(
+  root: DomNode,
+  target: string,
+): number {
+  let count = root.tag === target ? 1 : 0;
+
+  for (let i = 0; i < root.children.length; i += 1) {
+    count += countTag(root.children[i], target);
   }
+
   return count;
 }`,
       typescriptSolution: `interface DomNode {
   tag: string;
   children: DomNode[];
 }
-function countElementOccurrences(tree: DomNode | null, tagName: string): number {
-  if (!tree) return 0;
-  let count = tree.tag === tagName ? 1 : 0;
-  for (const child of tree.children || []) {
-    count += countElementOccurrences(child, tagName);
+
+function countTag(
+  root: DomNode,
+  target: string,
+): number {
+  let count = root.tag === target ? 1 : 0;
+
+  for (let i = 0; i < root.children.length; i += 1) {
+    count += countTag(root.children[i], target);
   }
+
   return count;
 }`,
-      timeComplexity: 'O(n) where n is the number of nodes in the tree.',
-      spaceComplexity: 'O(h) recursion stack, where h is the tree height.',
+      timeComplexity: 'O(n) — each node is visited once.',
+      spaceComplexity: 'O(h) auxiliary recursion space plus O(n) output when materialized.',
       commonMistakes: [
         'Forgetting the null-tree base case, causing a TypeError on `tree.tag`.',
         'Not defaulting `tree.children` to an empty array, breaking on leaf nodes without a children field.',
@@ -535,32 +691,47 @@ function countElementOccurrences(tree: DomNode | null, tagName: string): number 
         'Base case: a null tree contributes an empty array.',
         'Use `result.push(...flattenDomTree(child))` per child, or concat, to merge nested results in order.',
       ],
-    },
-    solution: {
-      algorithm: 'If tree is null, return []. Otherwise start with [tree.tag] and append the flattened result of every child in order.',
-      dryRun: "tree=div>[span, div>[span]]\nresult=['div']\nchild span -> flatten -> ['span'] -> result=['div','span']\nchild div -> flatten -> ['div','span'] -> result=['div','span','div','span']",
-      javascriptSolution: `function flattenDomTree(tree) {
-  if (!tree) return [];
-  const result = [tree.tag];
-  for (const child of tree.children || []) {
-    result.push(...flattenDomTree(child));
+    },solution: {
+      algorithm: 'Step 1: Understand the input and edge cases. Step 2: Write the core algorithm explicitly with loops, recursion, a stack, or the required data structure. Step 3: Verify the same behavior with the practical built-in alternative. Step 4: Check empty, boundary, duplicate, malformed, and maximum-size cases.',
+      dryRun: 'Use preorder traversal: record the current tag, then recursively visit children from left to right.',
+      javascriptSolution: `interface DomNode {
+  tag: string;
+  children: DomNode[];
+}
+
+function flattenTags(root: DomNode): string[] {
+  const result: string[] = [root.tag];
+
+  for (let i = 0; i < root.children.length; i += 1) {
+    const childTags = flattenTags(root.children[i]);
+
+    for (let j = 0; j < childTags.length; j += 1) {
+      result.push(childTags[j]);
+    }
   }
+
   return result;
 }`,
       typescriptSolution: `interface DomNode {
   tag: string;
   children: DomNode[];
 }
-function flattenDomTree(tree: DomNode | null): string[] {
-  if (!tree) return [];
-  const result: string[] = [tree.tag];
-  for (const child of tree.children || []) {
-    result.push(...flattenDomTree(child));
+
+function flattenTags(root: DomNode): string[] {
+  const result: string[] = [root.tag];
+
+  for (let i = 0; i < root.children.length; i += 1) {
+    const childTags = flattenTags(root.children[i]);
+
+    for (let j = 0; j < childTags.length; j += 1) {
+      result.push(childTags[j]);
+    }
   }
+
   return result;
 }`,
-      timeComplexity: 'O(n) where n is the number of nodes.',
-      spaceComplexity: 'O(n) for the output array plus O(h) recursion stack.',
+      timeComplexity: 'O(n) — each node is visited once.',
+      spaceComplexity: 'O(h) auxiliary recursion space plus O(n) output when materialized.',
       commonMistakes: [
         'Visiting children before the current node, which produces a post-order result instead of the required pre-order.',
         'Using `concat` in a way that accidentally flattens by one level too many or too few.',
@@ -614,24 +785,55 @@ function flattenDomTree(tree: DomNode | null): string[] {
         'Otherwise, the depth is 1 plus the maximum depth among all children.',
         '`Math.max(...tree.children.map(domTreeDepth))` computes the deepest child branch in one line.',
       ],
-    },
-    solution: {
-      algorithm: 'If the node has no children, its depth is 1. Otherwise, recursively compute the depth of every child and return 1 plus the maximum of those depths.',
-      dryRun: "div>[span(leaf,d1), div>[span(leaf,d1)](d2)]\nmax(1,2)=2\nroot depth = 1+2 = 3",
-      javascriptSolution: `function domTreeDepth(tree) {
-  if (!tree.children || tree.children.length === 0) return 1;
-  return 1 + Math.max(...tree.children.map(domTreeDepth));
+    },solution: {
+      algorithm: 'Step 1: Understand the input and edge cases. Step 2: Write the core algorithm explicitly with loops, recursion, a stack, or the required data structure. Step 3: Verify the same behavior with the practical built-in alternative. Step 4: Check empty, boundary, duplicate, malformed, and maximum-size cases.',
+      dryRun: 'Depth is one plus the maximum child depth; a leaf has depth 1 under this definition.',
+      javascriptSolution: `interface DomNode {
+  tag: string;
+  children: DomNode[];
+}
+
+function depth(root: DomNode): number {
+  if (root.children.length === 0) {
+    return 1;
+  }
+
+  let maxChildDepth = 0;
+
+  for (let i = 0; i < root.children.length; i += 1) {
+    const childDepth = depth(root.children[i]);
+
+    if (childDepth > maxChildDepth) {
+      maxChildDepth = childDepth;
+    }
+  }
+
+  return maxChildDepth + 1;
 }`,
       typescriptSolution: `interface DomNode {
   tag: string;
   children: DomNode[];
 }
-function domTreeDepth(tree: DomNode): number {
-  if (!tree.children || tree.children.length === 0) return 1;
-  return 1 + Math.max(...tree.children.map(domTreeDepth));
+
+function depth(root: DomNode): number {
+  if (root.children.length === 0) {
+    return 1;
+  }
+
+  let maxChildDepth = 0;
+
+  for (let i = 0; i < root.children.length; i += 1) {
+    const childDepth = depth(root.children[i]);
+
+    if (childDepth > maxChildDepth) {
+      maxChildDepth = childDepth;
+    }
+  }
+
+  return maxChildDepth + 1;
 }`,
-      timeComplexity: 'O(n) where n is the number of nodes — every node is visited once.',
-      spaceComplexity: 'O(h) recursion stack, where h is the tree height.',
+      timeComplexity: 'O(n) — each node is visited once.',
+      spaceComplexity: 'O(h) auxiliary recursion space plus O(n) output when materialized.',
       commonMistakes: [
         'Returning 0 for a leaf node instead of 1, off-by-one against the stated depth definition.',
         'Using `Math.max` on an empty children array without the guard, which returns `-Infinity` and corrupts the result.',

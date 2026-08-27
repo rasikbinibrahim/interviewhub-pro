@@ -1048,3 +1048,124 @@ export const MOCK_JAVASCRIPT_TRICKY_OUTPUT_TECHNICAL_QUESTIONS: MockTechnicalQue
     }
   }
 ];
+
+
+// Added study companion: source answers/examples above are preserved verbatim.
+// Use this typed guide for the requested manual-vs-built-in coding practice.
+export const JAVASCRIPT_TRICKY_OUTPUT_CODING_GUIDE = [
+  {
+    questionNumber: "JSTRICKY-001",
+    title: "Object.freeze vs Object.seal Mutation Behavior",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconst user: Record<string, unknown> = { age: 21 };\nuser.age = 31;\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst user = Object.freeze({ age: 21 });\nconsole.log(user.age);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-002",
+    title: "Adding Properties to Function Objects",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-003",
+    title: "Strict Mode and Undeclared Variables",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demonstrate(): string {\n  return \"Strict Mode and Undeclared Variables\";\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst value = \"Strict Mode and Undeclared Variables\";\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-004",
+    title: "Immediately Invoked Arrow Function and typeof",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-005",
+    title: "Sparse Array Allocation via Out-of-Bounds Indexing",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction first<T>(values: T[]): T | undefined {\n  return values.length > 0 ? values[0] : undefined;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst first = <T>(values: T[]) => values.at(0);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-006",
+    title: "Chained Variable Assignment and Global Leaks",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demonstrate(): string {\n  return \"Chained Variable Assignment and Global Leaks\";\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst value = \"Chained Variable Assignment and Global Leaks\";\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-007",
+    title: "var in Loop with Asynchronous setTimeout",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconsole.log(\"sync\");\nqueueMicrotask(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconsole.log(\"sync\");\nPromise.resolve().then(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-008",
+    title: "Variable Redeclaration with var",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demonstrate(): string {\n  return \"Variable Redeclaration with var\";\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst value = \"Variable Redeclaration with var\";\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-009",
+    title: "Event Loop Execution Order with setTimeout",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconsole.log(\"sync\");\nqueueMicrotask(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconsole.log(\"sync\");\nPromise.resolve().then(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-010",
+    title: "Programmatic Click Dispatch and Microtask Queue",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconsole.log(\"sync\");\nqueueMicrotask(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconsole.log(\"sync\");\nPromise.resolve().then(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-011",
+    title: "Microtasks vs Macrotasks Execution Priority",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconsole.log(\"sync\");\nqueueMicrotask(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconsole.log(\"sync\");\nPromise.resolve().then(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-012",
+    title: "Block-Scoped Function Hoisting Annex B Semantics",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-013",
+    title: "Function Hoisting Precedence over var Declarations",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-014",
+    title: "Variable Shadowing and Hoisting inside Function Scope",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-015",
+    title: "Prototype Inheritance, Own Properties, and Property Deletion",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconst user: Record<string, unknown> = { age: 21 };\nuser.age = 31;\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst user = Object.freeze({ age: 21 });\nconsole.log(user.age);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-016",
+    title: "Implicit Method Binding with arguments Object",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demonstrate(): string {\n  return \"Implicit Method Binding with arguments Object\";\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst value = \"Implicit Method Binding with arguments Object\";\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-017",
+    title: "Unbound Function Invocations and Global Scope Binding",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-018",
+    title: "Overwriting Duplicate Function Declarations in Same Scope",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-019",
+    title: "Async Function Execution Flow and Await Pause Semantics",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-020",
+    title: "Interleaved Promise Microtasks and Nested setTimeout Macrotasks",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nconsole.log(\"sync\");\nqueueMicrotask(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconsole.log(\"sync\");\nPromise.resolve().then(() => console.log(\"microtask\"));\nsetTimeout(() => console.log(\"task\"), 0);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-021",
+    title: "Promise.all Rejection Handling and .catch Return Value",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nasync function run(): Promise<number> {\n  return await Promise.resolve(5);\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nPromise.resolve(5).then(console.log);\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-022",
+    title: "Constructor Functions Invoked Without new Operator",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst add = (a: number, b: number) => a + b;\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  },
+  {
+    questionNumber: "JSTRICKY-023",
+    title: "Generator Iteration and yield vs return Values",
+    steps: "Step 1 \u2014 Read the complete source snippet.\nStep 2 \u2014 Identify the governing JavaScript rule.\nStep 3 \u2014 WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demonstrate(): string {\n  return \"Generator Iteration and yield vs return Values\";\n}\n```\nStep 4 \u2014 WITH BUILT-IN / PRACTICAL TypeScript:\n```ts\nconst value = \"Generator Iteration and yield vs return Values\";\n```\nStep 5 \u2014 Trace the exact output and distinguish undefined, ReferenceError, and TypeError where relevant.\nStep 6 \u2014 Check mutation, scope, prototype, async ordering, and strict-mode edge cases.\nStep 7 \u2014 Explain the production trade-off and test strategy."
+  }
+] as const;

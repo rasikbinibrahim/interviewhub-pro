@@ -43,9 +43,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is `this`?"
     },
     "answer": {
-      "expectedAnswer": "`this` is a special value available during function execution that usually refers to the receiver or execution context determined by the call site.",
-      "deepExplanation": "Example: Output: Here: `this` is a runtime value whose meaning depends primarily on how a function is invoked. For normal functions it can be determined by the call site, while arrow functions inherit `this` lexically from their surrounding scope.",
-      "productionExample": "Work through the accompanying code example for \"What is `this`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is `this`?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is `this`?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is `this`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -132,9 +132,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Global `this`?"
     },
     "answer": {
-      "expectedAnswer": "Global `this` differs between environments.",
-      "deepExplanation": "In a browser script: Typically: In an ES module: Top-level `this` is: In Node.js, top-level behavior differs between CommonJS and ES modules. Do not say: `this` always means window. That is incorrect.",
-      "productionExample": "Work through the accompanying code example for \"What is Global `this`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Global `this`?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Global `this`?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Global `this`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -221,9 +221,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is `this` in a Normal Function?"
     },
     "answer": {
-      "expectedAnswer": "In strict mode: Output: Without strict mode, browser behavior can provide the global object for a simple function call.",
-      "deepExplanation": "In strict mode: Output: Without strict mode, browser behavior can provide the global object for a simple function call.",
-      "productionExample": "Work through the accompanying code example for \"What is `this` in a Normal Function?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is `this` in a Normal Function?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is `this` in a Normal Function?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is `this` in a Normal Function?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -310,9 +310,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is `this` in an Object Method?"
     },
     "answer": {
-      "expectedAnswer": "Output: The call expression: provides the receiver `user`.",
-      "deepExplanation": "Therefore:",
-      "productionExample": "Work through the accompanying code example for \"What is `this` in an Object Method?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is `this` in an Object Method?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is `this` in an Object Method?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is `this` in an Object Method?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -399,9 +399,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Happens When a Method Is Detached?"
     },
     "answer": {
-      "expectedAnswer": "The method has been extracted from the object.",
-      "deepExplanation": "The receiver information from: is lost. With strict mode, `this` becomes `undefined`. Output:",
-      "productionExample": "Work through the accompanying code example for \"What Happens When a Method Is Detached?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Happens When a Method Is Detached?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Happens When a Method Is Detached?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Happens When a Method Is Detached?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -488,9 +488,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Implicit Binding?"
     },
     "answer": {
-      "expectedAnswer": "Implicit binding occurs when a function is called as a property of an object.",
-      "deepExplanation": "Conceptually: The object before the dot is normally the receiver for that call.",
-      "productionExample": "Work through the accompanying code example for \"What is Implicit Binding?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Implicit Binding?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Implicit Binding?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction bindLike<T, A extends unknown[], R>(\n  fn: (this: T, ...args: A) => R,\n  receiver: T,\n  ...bound: A,\n) {\n  return (...rest: A) =>\n    fn.apply(receiver, [...bound, ...rest] as A);\n}\n\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst bound = bindLike(greet, { name: \"Rasik\" }, \"!\");\nconst value = bound();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst value = greet.call(\n  { name: \"Rasik\" },\n  \"!\",\n);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Implicit Binding?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -577,9 +577,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Default Binding?"
     },
     "answer": {
-      "expectedAnswer": "For a normal function called without a receiver: Strict mode:",
-      "deepExplanation": "Output: Non-strict behavior may resolve `this` to the global object.",
-      "productionExample": "Work through the accompanying code example for \"What is Default Binding?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Default Binding?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Default Binding?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction bindLike<T, A extends unknown[], R>(\n  fn: (this: T, ...args: A) => R,\n  receiver: T,\n  ...bound: A,\n) {\n  return (...rest: A) =>\n    fn.apply(receiver, [...bound, ...rest] as A);\n}\n\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst bound = bindLike(greet, { name: \"Rasik\" }, \"!\");\nconst value = bound();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst value = greet.call(\n  { name: \"Rasik\" },\n  \"!\",\n);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Default Binding?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -666,9 +666,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Explicit Binding?"
     },
     "answer": {
-      "expectedAnswer": "JavaScript provides: `call` `apply` `bind`",
-      "deepExplanation": "Example: Output: The receiver is explicitly supplied.",
-      "productionExample": "Work through the accompanying code example for \"What is Explicit Binding?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Explicit Binding?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Explicit Binding?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction bindLike<T, A extends unknown[], R>(\n  fn: (this: T, ...args: A) => R,\n  receiver: T,\n  ...bound: A,\n) {\n  return (...rest: A) =>\n    fn.apply(receiver, [...bound, ...rest] as A);\n}\n\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst bound = bindLike(greet, { name: \"Rasik\" }, \"!\");\nconst value = bound();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst value = greet.call(\n  { name: \"Rasik\" },\n  \"!\",\n);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Explicit Binding?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -755,9 +755,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does `call()` Work?"
     },
     "answer": {
-      "expectedAnswer": "How Does `call()` Work — see the accompanying code example in this `this` Keyword module for a concrete demonstration and its expected output.",
-      "deepExplanation": "Output: Syntax:",
-      "productionExample": "Work through the accompanying code example for \"How Does `call()` Work?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does `call()` Work?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does `call()` Work?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does `call()` Work?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -844,9 +844,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does `apply()` Work?"
     },
     "answer": {
-      "expectedAnswer": "`apply()` is similar to `call()`, but arguments are supplied as an array-like value.",
-      "deepExplanation": "Output: Method – Arguments `call()` – Individual arguments `apply()` – Array-like argument collection `bind()` – Returns a new bound function",
-      "productionExample": "Work through the accompanying code example for \"How Does `apply()` Work?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does `apply()` Work?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does `apply()` Work?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does `apply()` Work?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -933,9 +933,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does `bind()` Work?"
     },
     "answer": {
-      "expectedAnswer": "`bind()` returns a new function whose `this` is fixed to the supplied value.",
-      "deepExplanation": "Output: Important: does not execute the function immediately.",
-      "productionExample": "Work through the accompanying code example for \"How Does `bind()` Work?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does `bind()` Work?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does `bind()` Work?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction bindLike<T, A extends unknown[], R>(\n  fn: (this: T, ...args: A) => R,\n  receiver: T,\n  ...bound: A,\n) {\n  return (...rest: A) =>\n    fn.apply(receiver, [...bound, ...rest] as A);\n}\n\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst bound = bindLike(greet, { name: \"Rasik\" }, \"!\");\nconst value = bound();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst value = greet.call(\n  { name: \"Rasik\" },\n  \"!\",\n);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does `bind()` Work?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1022,9 +1022,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "`call()` vs `apply()` vs `bind()`"
     },
     "answer": {
-      "expectedAnswer": "`call()` vs `apply()` vs `bind()` — see the accompanying code example in this `this` Keyword module for a concrete demonstration and its expected output.",
-      "deepExplanation": "Feature – `call` – `apply` – `bind` Executes immediately – Yes – Yes – No Sets `this` – Yes – Yes – Yes Arguments – Separate – Array-like – Separate / partial Returns – Function result – Function result – New function Partial application – Possible – Possible – Common Example:",
-      "productionExample": "Work through the accompanying code example for \"`call()` vs `apply()` vs `bind()`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**`call()` vs `apply()` vs `bind()`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**`call()` vs `apply()` vs `bind()`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction bindLike<T, A extends unknown[], R>(\n  fn: (this: T, ...args: A) => R,\n  receiver: T,\n  ...bound: A,\n) {\n  return (...rest: A) =>\n    fn.apply(receiver, [...bound, ...rest] as A);\n}\n\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst bound = bindLike(greet, { name: \"Rasik\" }, \"!\");\nconst value = bound();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst value = greet.call(\n  { name: \"Rasik\" },\n  \"!\",\n);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **`call()` vs `apply()` vs `bind()`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1111,9 +1111,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Arrow Function `this`?"
     },
     "answer": {
-      "expectedAnswer": "Arrow functions do not have their own `this`.",
-      "deepExplanation": "They capture `this` from the surrounding lexical scope. Output: The arrow function inherits the `this` of `greet()`.",
-      "productionExample": "Work through the accompanying code example for \"What is Arrow Function `this`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Arrow Function `this`?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Arrow Function `this`?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Arrow Function `this`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1200,9 +1200,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Why Doesn't `call()` Change Arrow `this`?"
     },
     "answer": {
-      "expectedAnswer": "`call()` cannot dynamically replace the lexical `this` of an arrow function.",
-      "deepExplanation": "`call()` cannot dynamically replace the lexical `this` of an arrow function.",
-      "productionExample": "Work through the accompanying code example for \"Why Doesn't `call()` Change Arrow `this`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Why Doesn't `call()` Change Arrow `this`?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Why Doesn't `call()` Change Arrow `this`?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Why Doesn't `call()` Change Arrow `this`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1289,9 +1289,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Constructor `this`"
     },
     "answer": {
-      "expectedAnswer": "When a function is invoked with `new`, a new object is created and becomes the function's `this`.",
-      "deepExplanation": "Output: Conceptually:",
-      "productionExample": "Work through the accompanying code example for \"Constructor `this`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Constructor `this`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Constructor `this`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Constructor `this`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1378,9 +1378,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "`this` in Classes"
     },
     "answer": {
-      "expectedAnswer": "Output: Class methods are still normal functions with call-site-dependent `this`.",
-      "deepExplanation": "Output: Class methods are still normal functions with call-site-dependent `this`.",
-      "productionExample": "Work through the accompanying code example for \"`this` in Classes\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**`this` in Classes** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**`this` in Classes** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **`this` in Classes** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1467,9 +1467,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Private Class Fields and `this`"
     },
     "answer": {
-      "expectedAnswer": "Output: `this` identifies the instance.",
-      "deepExplanation": "The `#balance` field provides stronger language-level encapsulation than a conventional underscored property.",
-      "productionExample": "Work through the accompanying code example for \"Private Class Fields and `this`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Private Class Fields and `this`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Private Class Fields and `this`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Private Class Fields and `this`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1556,9 +1556,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "DOM Event `this`"
     },
     "answer": {
-      "expectedAnswer": "With a traditional event listener function: Output: For a traditional DOM event listener, `this` is generally the element on which the listener is registered.",
-      "deepExplanation": "The arrow does not receive its own DOM-event `this`.",
-      "productionExample": "Work through the accompanying code example for \"DOM Event `this`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**DOM Event `this`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**DOM Event `this`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **DOM Event `this`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1645,9 +1645,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "`this` in React Event Handlers"
     },
     "answer": {
-      "expectedAnswer": "Modern React function components generally use lexical closures instead of class-based `this`.",
-      "deepExplanation": "There is no need to write: in function components. Legacy class components often required:",
-      "productionExample": "Work through the accompanying code example for \"`this` in React Event Handlers\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**`this` in React Event Handlers** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**`this` in React Event Handlers** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **`this` in React Event Handlers** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1734,9 +1734,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Why Is `this` Lost in Callbacks?"
     },
     "answer": {
-      "expectedAnswer": "The callback is a separate normal function call.",
-      "deepExplanation": "The object receiver from: does not automatically transfer to the callback. The arrow inherits `this` from `greet()`.",
-      "productionExample": "Work through the accompanying code example for \"Why Is `this` Lost in Callbacks?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Why Is `this` Lost in Callbacks?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Why Is `this` Lost in Callbacks?** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Why Is `this` Lost in Callbacks?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1823,9 +1823,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Fix Lost `this` with `bind()`"
     },
     "answer": {
-      "expectedAnswer": "`bind(this)` creates a function whose `this` is fixed to the current `greet()` receiver.",
-      "deepExplanation": "`bind(this)` creates a function whose `this` is fixed to the current `greet()` receiver.",
-      "productionExample": "Work through the accompanying code example for \"Fix Lost `this` with `bind()`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Fix Lost `this` with `bind()`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Fix Lost `this` with `bind()`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction bindLike<T, A extends unknown[], R>(\n  fn: (this: T, ...args: A) => R,\n  receiver: T,\n  ...bound: A,\n) {\n  return (...rest: A) =>\n    fn.apply(receiver, [...bound, ...rest] as A);\n}\n\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst bound = bindLike(greet, { name: \"Rasik\" }, \"!\");\nconst value = bound();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst value = greet.call(\n  { name: \"Rasik\" },\n  \"!\",\n);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Fix Lost `this` with `bind()`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -1912,9 +1912,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Hard Binding"
     },
     "answer": {
-      "expectedAnswer": "Hard binding means creating a permanently bound function.",
-      "deepExplanation": "Attempts to change the receiver during normal invocation do not replace the bound `this`. Output:",
-      "productionExample": "Work through the accompanying code example for \"Hard Binding\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Hard Binding** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Hard Binding** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction bindLike<T, A extends unknown[], R>(\n  fn: (this: T, ...args: A) => R,\n  receiver: T,\n  ...bound: A,\n) {\n  return (...rest: A) =>\n    fn.apply(receiver, [...bound, ...rest] as A);\n}\n\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst bound = bindLike(greet, { name: \"Rasik\" }, \"!\");\nconst value = bound();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst value = greet.call(\n  { name: \"Rasik\" },\n  \"!\",\n);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Hard Binding** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -2001,9 +2001,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Implement `bind()` Without the Built-in"
     },
     "answer": {
-      "expectedAnswer": "A simplified educational implementation: Output: This is an interview-oriented simplified polyfill.",
-      "deepExplanation": "A full native-quality `bind()` implementation must also account for: constructor behavior prototype semantics function length function name callable/constructable distinctions edge cases involving `new`",
-      "productionExample": "Work through the accompanying code example for \"Implement `bind()` Without the Built-in\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Implement `bind()` Without the Built-in** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Implement `bind()` Without the Built-in** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction bindLike<T, A extends unknown[], R>(\n  fn: (this: T, ...args: A) => R,\n  receiver: T,\n  ...bound: A,\n) {\n  return (...rest: A) =>\n    fn.apply(receiver, [...bound, ...rest] as A);\n}\n\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst bound = bindLike(greet, { name: \"Rasik\" }, \"!\");\nconst value = bound();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst greet = function (\n  this: { name: string },\n  suffix: string,\n): string {\n  return this.name + suffix;\n};\n\nconst value = greet.call(\n  { name: \"Rasik\" },\n  \"!\",\n);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Implement `bind()` Without the Built-in** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -2090,9 +2090,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Implement `call()` Without Built-in `call()`"
     },
     "answer": {
-      "expectedAnswer": "Educational implementation: Output: The implementation is useful for demonstrating the mechanism, but production code should use the native method rather than modifying `Function.prototype`.",
-      "deepExplanation": "Educational implementation: Output: The implementation is useful for demonstrating the mechanism, but production code should use the native method rather than modifying `Function.prototype`.",
-      "productionExample": "Work through the accompanying code example for \"Implement `call()` Without Built-in `call()`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Implement `call()` Without Built-in `call()`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Implement `call()` Without Built-in `call()`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Implement `call()` Without Built-in `call()`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",
@@ -2179,9 +2179,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE5_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Implement `apply()` Without Built-in `apply()`"
     },
     "answer": {
-      "expectedAnswer": "Implement `apply()` Without Built-in `apply()` — see the accompanying code example in this `this` Keyword module for a concrete demonstration and its expected output.",
-      "deepExplanation": "Output:",
-      "productionExample": "Work through the accompanying code example for \"Implement `apply()` Without Built-in `apply()`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Implement `apply()` Without Built-in `apply()`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Implement `apply()` Without Built-in `apply()`** should explain that `this` is determined by call-site/receiver rules for normal functions, while arrow functions capture lexical `this`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  name: string;\n  greet(this: User): string;\n}\n\nconst user: User = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  name: \"Rasik\",\n  greet() {\n    return this.name;\n  },\n};\n\nconst value = user.greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Implement `apply()` Without Built-in `apply()`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Determine `this` from the call site, not from where the function is defined.",
         "Prefer arrow functions for callbacks that should retain the enclosing lexical `this`.",

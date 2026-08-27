@@ -43,9 +43,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Can You Create an Object?"
     },
     "answer": {
-      "expectedAnswer": "Common approaches include: Generally prefer object literals for ordinary objects.",
-      "deepExplanation": "This creates an object with no `Object.prototype` in its prototype chain.",
-      "productionExample": "Work through the accompanying code example for \"How Can You Create an Object?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Can You Create an Object?** should explain `Object.create()` as direct prototype selection and when a null-prototype dictionary is useful.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Can You Create an Object?** should explain `Object.create()` as direct prototype selection and when a null-prototype dictionary is useful.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Can You Create an Object?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -137,9 +137,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is an Object Literal?"
     },
     "answer": {
-      "expectedAnswer": "An object literal is the concise syntax for creating an object.",
-      "deepExplanation": "Output: Modern object literals support: shorthand properties shorthand methods computed properties getters/setters spread properties Example: Output:",
-      "productionExample": "Work through the accompanying code example for \"What Is an Object Literal?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is an Object Literal?** should show object-literal syntax, shorthand properties, methods, computed keys, and spread while keeping ownership and mutation clear.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is an Object Literal?** should show object-literal syntax, shorthand properties, methods, computed keys, and spread while keeping ownership and mutation clear.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is an Object Literal?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -231,9 +231,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is a Constructor Function?"
     },
     "answer": {
-      "expectedAnswer": "Before ES6 classes, constructor functions were commonly used for creating object instances.",
-      "deepExplanation": "Output: With `new`, JavaScript creates an object and uses it as `this`. Conceptually:",
-      "productionExample": "Work through the accompanying code example for \"What Is a Constructor Function?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is a Constructor Function?** should distinguish constructor functions, instance properties, prototype methods, and the behavior of `new`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is a Constructor Function?** should distinguish constructor functions, instance properties, prototype methods, and the behavior of `new`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is a Constructor Function?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -325,9 +325,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is `Object.create()`?"
     },
     "answer": {
-      "expectedAnswer": "`Object.create(proto)` creates a new object whose internal prototype is the supplied object.",
-      "deepExplanation": "Output: Prototype chain: unless the supplied prototype chain differs.",
-      "productionExample": "Work through the accompanying code example for \"What Is `Object.create()`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is `Object.create()`?** should explain `Object.create()` as direct prototype selection and when a null-prototype dictionary is useful.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is `Object.create()`?** should explain `Object.create()` as direct prototype selection and when a null-prototype dictionary is useful.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is `Object.create()`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -419,9 +419,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Are Property Descriptors?"
     },
     "answer": {
-      "expectedAnswer": "Every ordinary object property can have descriptor attributes.",
-      "deepExplanation": "For a data property: `value` `writable` `enumerable` `configurable` Example: Typical output: Descriptors allow low-level control over object properties.",
-      "productionExample": "Work through the accompanying code example for \"What Are Property Descriptors?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Are Property Descriptors?** should explain data/accessor descriptors, enumerability, writability/configurability, and why descriptor changes affect object semantics.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Are Property Descriptors?** should explain data/accessor descriptors, enumerability, writability/configurability, and why descriptor changes affect object semantics.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Are Property Descriptors?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -513,9 +513,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is `writable`?"
     },
     "answer": {
-      "expectedAnswer": "`writable` determines whether the value of a data property can be changed.",
-      "deepExplanation": "In strict mode, assigning to a non-writable property throws. In non-strict mode, the assignment can fail silently. Output:",
-      "productionExample": "Work through the accompanying code example for \"What Is `writable`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is `writable`?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is `writable`?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is `writable`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -607,9 +607,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is `enumerable`?"
     },
     "answer": {
-      "expectedAnswer": "`enumerable` controls whether a property appears in common enumeration operations.",
-      "deepExplanation": "Output: The non-enumerable `name` property is not returned by `Object.keys()`.",
-      "productionExample": "Work through the accompanying code example for \"What Is `enumerable`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is `enumerable`?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is `enumerable`?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is `enumerable`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -701,9 +701,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is `configurable`?"
     },
     "answer": {
-      "expectedAnswer": "`configurable` determines whether the property's descriptor can generally be changed and whether the property can be deleted.",
-      "deepExplanation": "Output in non-strict code: In strict mode, deleting a non-configurable property throws. Once a property becomes non-configurable, descriptor changes become heavily restricted.",
-      "productionExample": "Work through the accompanying code example for \"What Is `configurable`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is `configurable`?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is `configurable`?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is `configurable`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -795,9 +795,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Does `Object.freeze()` Do?"
     },
     "answer": {
-      "expectedAnswer": "`Object.freeze()` prevents direct structural changes to an object.",
-      "deepExplanation": "It effectively makes existing own data properties non-writable and non-configurable and prevents extensions. Output: `Object.freeze()` is shallow. Output: The nested object is still mutable.",
-      "productionExample": "Work through the accompanying code example for \"What Does `Object.freeze()` Do?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Does `Object.freeze()` Do?** should explain that `Object.freeze()` prevents mutation of an object's own properties but is shallow.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Does `Object.freeze()` Do?** should explain that `Object.freeze()` prevents mutation of an object's own properties but is shallow.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Does `Object.freeze()` Do?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -889,9 +889,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Does `Object.seal()` Do?"
     },
     "answer": {
-      "expectedAnswer": "`Object.seal()`: prevents adding properties prevents deleting properties makes existing properties non-configurable",
-      "deepExplanation": "But existing writable properties can still be changed. Output: Comparison: Feature – `freeze` – `seal` Add properties – No – No Delete properties – No – No Change writable values – No – Yes Change descriptors – Very restricted – Very restricted",
-      "productionExample": "Work through the accompanying code example for \"What Does `Object.seal()` Do?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Does `Object.seal()` Do?** should explain that `Object.seal()` prevents adding/removing/configuring own properties while still allowing writable data properties.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Does `Object.seal()` Do?** should explain that `Object.seal()` prevents adding/removing/configuring own properties while still allowing writable data properties.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Does `Object.seal()` Do?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -983,9 +983,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Does `Object.preventExtensions()` Do?"
     },
     "answer": {
-      "expectedAnswer": "It prevents new own properties from being added.",
-      "deepExplanation": "Existing properties can still generally be changed or deleted according to their descriptors. Output:",
-      "productionExample": "Work through the accompanying code example for \"What Does `Object.preventExtensions()` Do?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Does `Object.preventExtensions()` Do?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Does `Object.preventExtensions()` Do?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Does `Object.preventExtensions()` Do?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1077,9 +1077,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is `Object.assign()`?"
     },
     "answer": {
-      "expectedAnswer": "`Object.assign(target, ...sources)` copies enumerable own properties from source objects into the target.",
-      "deepExplanation": "Output: `Object.assign()` performs a shallow copy.",
-      "productionExample": "Work through the accompanying code example for \"What Is `Object.assign()`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is `Object.assign()`?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is `Object.assign()`?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is `Object.assign()`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1171,9 +1171,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Object Spread vs `Object.assign()`"
     },
     "answer": {
-      "expectedAnswer": "Both can create shallow copies.",
-      "deepExplanation": "Both contain the same top-level values. Feature – `Object.assign()` – Spread Syntax – More verbose – Concise Mutates target – Yes – Creates new object Shallow – Yes – Yes Multiple sources – Yes – Yes Common React usage – Less common – Very common",
-      "productionExample": "Work through the accompanying code example for \"Object Spread vs `Object.assign()`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Object Spread vs `Object.assign()`** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Object Spread vs `Object.assign()`** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Object Spread vs `Object.assign()`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1265,9 +1265,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is a Shallow Copy?"
     },
     "answer": {
-      "expectedAnswer": "A shallow copy creates a new outer object but preserves references to nested objects.",
-      "deepExplanation": "Output: Why? Both point to the same nested object.",
-      "productionExample": "Work through the accompanying code example for \"What Is a Shallow Copy?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is a Shallow Copy?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is a Shallow Copy?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is a Shallow Copy?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1359,9 +1359,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Is a Deep Clone?"
     },
     "answer": {
-      "expectedAnswer": "A deep clone creates independent nested structures.",
-      "deepExplanation": "Modern JavaScript provides `structuredClone()` for many cloneable data types. Output: has limitations involving values such as: `undefined` functions symbols special numeric values `Date` `Map` `Set` circular references `structuredClone()` is generally preferable when its supported clone semantics match your data.",
-      "productionExample": "Work through the accompanying code example for \"What Is a Deep Clone?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Is a Deep Clone?** should distinguish shallow copies from deep clones and choose `structuredClone()` only when true deep cloning is necessary and supported.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Is a Deep Clone?** should distinguish shallow copies from deep clones and choose `structuredClone()` only when true deep cloning is necessary and supported.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Is a Deep Clone?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1453,9 +1453,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Do You Deep Clone Without a Built-in?"
     },
     "answer": {
-      "expectedAnswer": "For interview purposes, a recursive clone can be demonstrated.",
-      "deepExplanation": "Output: This is an educational implementation, not a complete replacement for the structured clone algorithm. Production cloning may need support for: `Date` `Map` `Set` typed arrays `ArrayBuffer` special objects custom prototypes property descriptors",
-      "productionExample": "Work through the accompanying code example for \"How Do You Deep Clone Without a Built-in?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Do You Deep Clone Without a Built-in?** should distinguish shallow copies from deep clones and choose `structuredClone()` only when true deep cloning is necessary and supported.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Do You Deep Clone Without a Built-in?** should distinguish shallow copies from deep clones and choose `structuredClone()` only when true deep cloning is necessary and supported.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Do You Deep Clone Without a Built-in?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1547,9 +1547,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Do You Clone an Object Without Built-in Copy Helpers?"
     },
     "answer": {
-      "expectedAnswer": "Basic enumerable object clone: Output: This is still a shallow clone.",
-      "deepExplanation": "Basic enumerable object clone: Output: This is still a shallow clone.",
-      "productionExample": "Work through the accompanying code example for \"How Do You Clone an Object Without Built-in Copy Helpers?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Do You Clone an Object Without Built-in Copy Helpers?** should distinguish shallow copies from deep clones and choose `structuredClone()` only when true deep cloning is necessary and supported.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Do You Clone an Object Without Built-in Copy Helpers?** should distinguish shallow copies from deep clones and choose `structuredClone()` only when true deep cloning is necessary and supported.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Do You Clone an Object Without Built-in Copy Helpers?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1641,9 +1641,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Are Object Methods?"
     },
     "answer": {
-      "expectedAnswer": "JavaScript provides many important object utilities.",
-      "deepExplanation": "Output:",
-      "productionExample": "Work through the accompanying code example for \"What Are Object Methods?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Are Object Methods?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Are Object Methods?** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Are Object Methods?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1735,9 +1735,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Do Objects Affect Performance?"
     },
     "answer": {
-      "expectedAnswer": "Objects are optimized heavily by JavaScript engines, but object shape consistency can matter.",
-      "deepExplanation": "Consider: Repeatedly creating objects with consistent property structures can help engines optimize property access. Avoid unnecessary shape changes in hot code: This does not mean property assignment is always bad. Modern engines optimize many patterns. Do not optimize object creation based on folklore. Measure actual workloads with profiling tools.",
-      "productionExample": "Work through the accompanying code example for \"How Do Objects Affect Performance?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Do Objects Affect Performance?** should connect object shape, allocation, cloning, prototype changes, and hot-path access to measured performance rather than assumptions.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Do Objects Affect Performance?** should connect object shape, allocation, cloning, prototype changes, and hot-path access to measured performance rather than assumptions.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Do Objects Affect Performance?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",
@@ -1829,9 +1829,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE6_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Object Best Practices"
     },
     "answer": {
-      "expectedAnswer": "Recommended practices: Prefer clear object literals. Use `const` for object bindings unless reassignment is required. Avoid unnecessary mutation. Use object spread for readable immutable updates. Use `structuredClone()` when deep cloning is actually required and supported. Avoid JSON cloning for arbitrary data. Use `Object.freeze()` deliberately, not blindly. Avoid prototype pollution vulnerabilities. Validate untrusted input. Keep object shapes predictable in performance-sensitive paths. Avoid using objects as maps when arbitrary keys can introduce prototype-related issues. Consider `Map` for dynamic key/value collections. Avoid unnecessary deep cloning. Document ownership and mutation expectations. Prefer domain-specific types and validation at application boundaries.",
-      "deepExplanation": "Recommended practices: Prefer clear object literals. Use `const` for object bindings unless reassignment is required. Avoid unnecessary mutation. Use object spread for readable immutable updates. Use `structuredClone()` when deep cloning is actually required and supported. Avoid JSON cloning for arbitrary data. Use `Object.freeze()` deliberately, not blindly. Avoid prototype pollution vulnerabilities. Validate untrusted input. Keep object shapes predictable in performance-sensitive paths. Avoid using objects as maps when arbitrary keys can introduce prototype-related issues. Consider `Map` for dynamic key/value collections. Avoid unnecessary deep cloning. Document ownership and mutation expectations. Prefer domain-specific types and validation at application boundaries.",
-      "productionExample": "Work through the accompanying code example for \"Object Best Practices\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Object Best Practices** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Object Best Practices** should explain the object model, property ownership, mutation/immutability, and the right creation or cloning mechanism for the requirement.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\ninterface User {\n  id: number;\n  name: string;\n}\n\nfunction cloneUser(user: User): User {\n  return {\n    id: user.id,\n    name: user.name,\n  };\n}\n\nconst copy = cloneUser({\n  id: 1,\n  name: \"Rasik\",\n});\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst user = {\n  id: 1,\n  name: \"Rasik\",\n};\n\nconst copy = structuredClone(user);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Object Best Practices** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Prefer clear object literals",
         "Use `const` for object bindings unless reassignment is required",

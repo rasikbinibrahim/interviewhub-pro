@@ -21,9 +21,17 @@ import type {
   TechnicalQuestionAnswer,
 } from '@/shared/types/question';
 
-const MOCK_LATENCY_MS = 200;
+const MOCK_LATENCY_MS =
+  typeof globalThis !== 'undefined' &&
+  ((globalThis as { process?: { env?: { NODE_ENV?: string; VITEST?: string } } }).process?.env?.NODE_ENV === 'test' ||
+    Boolean((globalThis as { process?: { env?: { NODE_ENV?: string; VITEST?: string } } }).process?.env?.VITEST))
+    ? 0
+    : 200;
 
 function simulateNetwork<T>(data: T): Promise<{ data: T }> {
+  if (MOCK_LATENCY_MS === 0) {
+    return Promise.resolve({ data });
+  }
   return new Promise((resolve) => {
     setTimeout(() => resolve({ data }), MOCK_LATENCY_MS);
   });

@@ -43,16 +43,31 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Arrays expose their size via the `.length` property.', 'No loop is needed — `.length` is O(1).', 'Works identically for empty arrays, returning 0.'],
     },
     solution: {
-      algorithm: 'Return arr.length directly.',
-      dryRun: '[1,2,3].length -> 3',
-      javascriptSolution: `function getArrayLength(arr) {
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function getArrayLength<T>(arr: T[]): number {
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i += 1) {
+    count += 1;
+  }
+
+  return count;
+}`,
+      typescriptSolution: `function getArrayLength<T>(arr: T[]): number {
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i += 1) {
+    count += 1;
+  }
+
+  return count;
+}`,
+      builtInSolution: `function getArrayLength<T>(arr: T[]): number {
   return arr.length;
 }`,
-      typescriptSolution: `function getArrayLength(arr: unknown[]): number {
-  return arr.length;
-}`,
-      timeComplexity: 'O(1).',
-      spaceComplexity: 'O(1).',
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Looping to count elements manually instead of using `.length`.', 'Confusing `.length` (property) with `.length()` (calling it as a function, which throws).'],
       followUpQuestions: ['How does `.length` stay in sync when you push/pop elements?', 'How would you get the length of an array-like object (e.g. `arguments`)?'],
       similarQuestions: ['Print All Elements of an Array', 'Find the First Element'],
@@ -90,24 +105,31 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['A `for...of` loop visits every element in order.', 'Push each visited element into a result array to make the traversal observable/testable.', 'This is the traversal building block every later array problem reuses.'],
     },
     solution: {
-      algorithm: 'Loop over arr with for...of, collecting each element into a result array in order.',
-      dryRun: '[1,2,3] -> visit 1, 2, 3 -> result=[1,2,3]',
-      javascriptSolution: `function listAllElements(arr) {
-  const result = [];
-  for (const item of arr) {
-    result.push(item);
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function listAllElements<T>(arr: T[]): T[] {
+  const result: T[] = [];
+
+  for (let i = 0; i < arr.length; i += 1) {
+    result.push(arr[i]);
   }
+
   return result;
 }`,
       typescriptSolution: `function listAllElements<T>(arr: T[]): T[] {
   const result: T[] = [];
-  for (const item of arr) {
-    result.push(item);
+
+  for (let i = 0; i < arr.length; i += 1) {
+    result.push(arr[i]);
   }
+
   return result;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the output copy.',
+      builtInSolution: `function listAllElements<T>(arr: T[]): T[] {
+  return [...arr];
+}`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using a `for...in` loop, which iterates indices (as strings) rather than values.', 'Mutating and returning the original array reference instead of a fresh traversal.'],
       followUpQuestions: ['How does `for...of` differ from `.forEach()` in terms of `break`/`continue` support?', 'How would you print index alongside value using `.entries()`?'],
       similarQuestions: ['Find the Length of an Array', 'Sum All Array Elements'],
@@ -146,16 +168,17 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Index 0 is the first element for any non-empty array.', 'Indexing an empty array at 0 naturally yields `undefined` — no special-casing needed.', 'No loop required.'],
     },
     solution: {
-      algorithm: 'Return arr[0].',
-      dryRun: '[10,20,30][0] -> 10',
-      javascriptSolution: `function getFirstElement(arr) {
-  return arr[0];
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function findFirst<T>(arr: T[]): T | undefined {
+  return arr.length > 0 ? arr[0] : undefined;
 }`,
-      typescriptSolution: `function getFirstElement<T>(arr: T[]): T | undefined {
-  return arr[0];
+      typescriptSolution: `function findFirst<T>(arr: T[]): T | undefined {
+  return arr.length > 0 ? arr[0] : undefined;
 }`,
-      timeComplexity: 'O(1).',
-      spaceComplexity: 'O(1).',
+      builtInSolution: `const findFirst = <T>(arr: T[]) => arr.at(0);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using `.shift()`, which mutates the original array by removing the first element as a side effect.', 'Adding an unnecessary length check before indexing, when `arr[0]` already handles the empty case gracefully.'],
       followUpQuestions: ['How would `arr.at(0)` compare to `arr[0]`?', 'How do you get the first element of an array-like `NodeList`?'],
       similarQuestions: ['Find the Last Element', 'Find the Middle Element'],
@@ -194,16 +217,19 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['The last index of any array is `arr.length - 1`.', 'For an empty array, `arr.length - 1` is `-1`, and indexing at `-1` still yields `undefined` in plain JS.', 'No loop required.'],
     },
     solution: {
-      algorithm: 'Return arr[arr.length - 1].',
-      dryRun: '[10,20,30], length=3 -> arr[2] -> 30',
-      javascriptSolution: `function getLastElement(arr) {
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function findLast<T>(arr: T[]): T | undefined {
+  if (arr.length === 0) return undefined;
   return arr[arr.length - 1];
 }`,
-      typescriptSolution: `function getLastElement<T>(arr: T[]): T | undefined {
+      typescriptSolution: `function findLast<T>(arr: T[]): T | undefined {
+  if (arr.length === 0) return undefined;
   return arr[arr.length - 1];
 }`,
-      timeComplexity: 'O(1).',
-      spaceComplexity: 'O(1).',
+      builtInSolution: `const findLast = <T>(arr: T[]) => arr.at(-1);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using `.pop()`, which mutates the array by removing the last element.', 'Off-by-one: indexing `arr[arr.length]`, which is always out of bounds.'],
       followUpQuestions: ['How does `arr.at(-1)` avoid the `arr.length - 1` arithmetic?', 'How would this work for a linked list instead of an array?'],
       similarQuestions: ['Find the First Element', 'Find the Middle Element'],
@@ -250,16 +276,21 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       ],
     },
     solution: {
-      algorithm: 'Compute the index Math.floor((arr.length - 1) / 2) and return arr at that index.',
-      dryRun: '[1,2,3,4], length=4 -> floor(3/2)=1 -> arr[1]=2',
-      javascriptSolution: `function getMiddleElement(arr) {
-  return arr[Math.floor((arr.length - 1) / 2)];
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function findMiddle<T>(arr: T[]): T | undefined {
+  if (arr.length === 0) return undefined;
+  const index = Math.floor((arr.length - 1) / 2);
+  return arr[index];
 }`,
-      typescriptSolution: `function getMiddleElement<T>(arr: T[]): T {
-  return arr[Math.floor((arr.length - 1) / 2)] as T;
+      typescriptSolution: `function findMiddle<T>(arr: T[]): T | undefined {
+  if (arr.length === 0) return undefined;
+  const index = Math.floor((arr.length - 1) / 2);
+  return arr[index];
 }`,
-      timeComplexity: 'O(1).',
-      spaceComplexity: 'O(1).',
+      builtInSolution: `const findMiddle = <T>(arr: T[]) => arr[Math.floor((arr.length - 1) / 2)];`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Using `Math.floor(length / 2)` instead of `Math.floor((length - 1) / 2)`, which picks the upper-middle for even lengths instead of the lower-middle.',
         'Not deciding up front which of the two middles to return for even-length arrays, leading to inconsistent behavior.',
@@ -301,16 +332,21 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['`Array.prototype.reduce` accumulates a running total in one pass.', 'Seed the accumulator at 0 so an empty array correctly returns 0.', 'No need for a separate loop variable — reduce handles the accumulation.'],
     },
     solution: {
-      algorithm: 'Reduce the array with an addition accumulator starting at 0.',
-      dryRun: '[1,2,3,4] -> 0+1=1 -> 1+2=3 -> 3+3=6 -> 6+4=10',
-      javascriptSolution: `function sumArrayElements(arr) {
-  return arr.reduce((total, num) => total + num, 0);
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function sumArray(arr: number[]): number {
+  let total = 0;
+  for (let i = 0; i < arr.length; i += 1) total += arr[i];
+  return total;
 }`,
-      typescriptSolution: `function sumArrayElements(arr: number[]): number {
-  return arr.reduce((total, num) => total + num, 0);
+      typescriptSolution: `function sumArray(arr: number[]): number {
+  let total = 0;
+  for (let i = 0; i < arr.length; i += 1) total += arr[i];
+  return total;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(1).',
+      builtInSolution: `const sumArray = (arr: number[]) => arr.reduce((sum, value) => sum + value, 0);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Omitting the initial value `0` in `reduce`, which throws on an empty array instead of returning 0.', 'Using `+` to concatenate instead of add when array elements are numeric strings.'],
       followUpQuestions: ['How would you sum only even-indexed elements?', 'How would you compute a running (prefix) sum array instead of a single total?'],
       similarQuestions: ['Find Average of Array Elements', 'Find Maximum Element'],
@@ -349,20 +385,23 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Sum the array first, then divide by its length.', 'Guard the empty-array case explicitly — `0 / 0` is `NaN`, not `0`.', 'Reuse the same reduce-based sum as the "Sum All Array Elements" problem.'],
     },
     solution: {
-      algorithm: 'If the array is empty, return 0. Otherwise sum all elements and divide by arr.length.',
-      dryRun: '[1,2,3,4] -> sum=10, length=4 -> 10/4=2.5',
-      javascriptSolution: `function averageArrayElements(arr) {
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function average(arr: number[]): number {
   if (arr.length === 0) return 0;
-  const sum = arr.reduce((total, num) => total + num, 0);
-  return sum / arr.length;
+  let total = 0;
+  for (let i = 0; i < arr.length; i += 1) total += arr[i];
+  return total / arr.length;
 }`,
-      typescriptSolution: `function averageArrayElements(arr: number[]): number {
+      typescriptSolution: `function average(arr: number[]): number {
   if (arr.length === 0) return 0;
-  const sum = arr.reduce((total, num) => total + num, 0);
-  return sum / arr.length;
+  let total = 0;
+  for (let i = 0; i < arr.length; i += 1) total += arr[i];
+  return total / arr.length;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(1).',
+      builtInSolution: `const average = (arr: number[]) => arr.length === 0 ? 0 : arr.reduce((s, v) => s + v, 0) / arr.length;`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Not guarding the empty-array case, producing `NaN` from a `0 / 0` division.', 'Dividing by a hardcoded count instead of `arr.length`, breaking for any input other than the example.'],
       followUpQuestions: ['How would you compute a running average as elements stream in?', 'How would you compute the weighted average given a parallel weights array?'],
       similarQuestions: ['Sum All Array Elements', 'Find Minimum Element'],
@@ -401,24 +440,23 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['`Math.min(...arr)` spreads the array as arguments to find the minimum in one call.', 'For very large arrays, a manual loop avoids the call-stack limits of spreading into `Math.min`.', 'Track a running minimum, initialized to the first element.'],
     },
     solution: {
-      algorithm: 'Initialize min to the first element, then walk the rest of the array, updating min whenever a smaller value is found.',
-      dryRun: '[5,2,8,1,9] -> min=5 -> 2<5 -> min=2 -> 8 not< -> 1<2 -> min=1 -> 9 not<',
-      javascriptSolution: `function findMinElement(arr) {
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function findMin(arr: number[]): number | undefined {
+  if (arr.length === 0) return undefined;
   let min = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < min) min = arr[i];
-  }
+  for (let i = 1; i < arr.length; i += 1) if (arr[i] < min) min = arr[i];
   return min;
 }`,
-      typescriptSolution: `function findMinElement(arr: number[]): number {
-  let min = arr[0]!;
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i]! < min) min = arr[i]!;
-  }
+      typescriptSolution: `function findMin(arr: number[]): number | undefined {
+  if (arr.length === 0) return undefined;
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i += 1) if (arr[i] < min) min = arr[i];
   return min;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(1).',
+      builtInSolution: `const findMin = (arr: number[]) => arr.length === 0 ? undefined : Math.min(...arr);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using `Math.min(...arr)` on very large arrays, risking "Maximum call stack size exceeded" from argument spreading.', 'Initializing `min` to `0` instead of `arr[0]`, which breaks when every element is positive or every element is negative.'],
       followUpQuestions: ['How would you find the minimum in a single pass while also tracking its index?', 'How does this compare to sorting the array and taking the first element?'],
       similarQuestions: ['Find Maximum Element', 'Find Second Smallest Element'],
@@ -457,24 +495,23 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Same running-comparison technique as finding the minimum, flipped to `>`.', 'Initialize the running max to the first element, not 0.', 'One pass is sufficient — no sorting required.'],
     },
     solution: {
-      algorithm: 'Initialize max to the first element, then walk the rest of the array, updating max whenever a larger value is found.',
-      dryRun: '[5,2,8,1,9] -> max=5 -> 2 not> -> 8>5 -> max=8 -> 1 not> -> 9>8 -> max=9',
-      javascriptSolution: `function findMaxElement(arr) {
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function findMax(arr: number[]): number | undefined {
+  if (arr.length === 0) return undefined;
   let max = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) max = arr[i];
-  }
+  for (let i = 1; i < arr.length; i += 1) if (arr[i] > max) max = arr[i];
   return max;
 }`,
-      typescriptSolution: `function findMaxElement(arr: number[]): number {
-  let max = arr[0]!;
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i]! > max) max = arr[i]!;
-  }
+      typescriptSolution: `function findMax(arr: number[]): number | undefined {
+  if (arr.length === 0) return undefined;
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i += 1) if (arr[i] > max) max = arr[i];
   return max;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(1).',
+      builtInSolution: `const findMax = (arr: number[]) => arr.length === 0 ? undefined : Math.max(...arr);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Initializing `max` to `0`, which fails when every element is negative.', 'Using `Math.max(...arr)`, which is fine for small arrays but risks a stack overflow on very large ones.'],
       followUpQuestions: ['How would you track both the maximum and its index in one pass?', 'How would you find the max of an array of objects by a specific property?'],
       similarQuestions: ['Find Minimum Element', 'Find Second Largest Element'],
@@ -514,48 +551,31 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Deduplicate first with a `Set`, since "second largest" is defined over distinct values.', 'Sort the distinct values descending.', 'The element at index 1 of the sorted distinct list is the answer, or undefined if the list is shorter than 2.'],
     },
     solution: {
-      algorithm: 'Built-in approach: [...new Set(arr)].sort((a, b) => b - a)[1]. Manual single-pass approach: track top two distinct values (first and second) in a single loop without sorting.',
-      dryRun: '[3,1,4,1,5,9,2,6] -> distinct {3,1,4,5,9,2,6} -> sorted desc [9,6,5,4,3,2,1] -> index1=6',
-      javascriptSolution: `function findSecondLargest(arr) {
-  // Built-in approach:
-  // const unique = [...new Set(arr)].sort((a, b) => b - a);
-  // return unique.length > 1 ? unique[1] : undefined;
-
-  // Manual single-pass approach (without built-in sorting/Set):
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function secondLargest(arr: number[]): number | undefined {
   let first = -Infinity;
   let second = -Infinity;
-  for (let i = 0; i < arr.length; i++) {
-    const val = arr[i];
-    if (val > first) {
-      second = first;
-      first = val;
-    } else if (val < first && val > second) {
-      second = val;
-    }
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value > first) { second = first; first = value; }
+    else if (value > second && value !== first) second = value;
   }
   return second === -Infinity ? undefined : second;
 }`,
-      typescriptSolution: `function findSecondLargest(arr: number[]): number | undefined {
-  // Built-in approach:
-  // const unique = [...new Set(arr)].sort((a, b) => b - a);
-  // return unique.length > 1 ? unique[1] : undefined;
-
-  // Manual single-pass approach (without built-in sorting/Set):
+      typescriptSolution: `function secondLargest(arr: number[]): number | undefined {
   let first = -Infinity;
   let second = -Infinity;
-  for (let i = 0; i < arr.length; i++) {
-    const val = arr[i]!;
-    if (val > first) {
-      second = first;
-      first = val;
-    } else if (val < first && val > second) {
-      second = val;
-    }
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value > first) { second = first; first = value; }
+    else if (value > second && value !== first) second = value;
   }
   return second === -Infinity ? undefined : second;
 }`,
-      timeComplexity: 'O(n log n) dominated by the sort.',
-      spaceComplexity: 'O(n) for the deduplicated array.',
+      builtInSolution: `const secondLargest = (arr: number[]) => [...new Set(arr)].sort((a,b)=>b-a)[1];`,
+      timeComplexity: 'O(n) for the manual scan where applicable; built-in sorting versions are O(n log n) average and use additional storage for copies/uniqueness.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Sorting without deduplicating first, so `[9, 9, 6]` incorrectly returns 9 (the duplicate) instead of 6.',
         'Using `.sort()` without a comparator on numbers, which sorts lexicographically (e.g. 10 before 2).',
@@ -598,18 +618,31 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Mirror the second-largest solution, sorting ascending instead of descending.', 'Deduplicate with a `Set` before sorting.', 'Index 1 of the sorted distinct list is the answer.'],
     },
     solution: {
-      algorithm: 'Build a Set of distinct values, sort ascending, and return the element at index 1 (or undefined if fewer than 2 distinct values exist).',
-      dryRun: '[3,1,4,1,5,9,2,6] -> distinct sorted asc [1,2,3,4,5,6,9] -> index1=2',
-      javascriptSolution: `function findSecondSmallest(arr) {
-  const unique = [...new Set(arr)].sort((a, b) => a - b);
-  return unique.length > 1 ? unique[1] : undefined;
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function secondSmallest(arr: number[]): number | undefined {
+  let first = Infinity;
+  let second = Infinity;
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value < first) { second = first; first = value; }
+    else if (value < second && value !== first) second = value;
+  }
+  return second === Infinity ? undefined : second;
 }`,
-      typescriptSolution: `function findSecondSmallest(arr: number[]): number | undefined {
-  const unique = [...new Set(arr)].sort((a, b) => a - b);
-  return unique.length > 1 ? unique[1] : undefined;
+      typescriptSolution: `function secondSmallest(arr: number[]): number | undefined {
+  let first = Infinity;
+  let second = Infinity;
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value < first) { second = first; first = value; }
+    else if (value < second && value !== first) second = value;
+  }
+  return second === Infinity ? undefined : second;
 }`,
-      timeComplexity: 'O(n log n) dominated by the sort.',
-      spaceComplexity: 'O(n) for the deduplicated array.',
+      builtInSolution: `const secondSmallest = (arr: number[]) => [...new Set(arr)].sort((a,b)=>a-b)[1];`,
+      timeComplexity: 'O(n) for the manual scan where applicable; built-in sorting versions are O(n log n) average and use additional storage for copies/uniqueness.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Forgetting the numeric sort comparator, causing lexicographic ordering bugs.', 'Not deduplicating, so a repeated minimum is mistaken for the second-smallest.'],
       followUpQuestions: ['How would you find this in a single O(n) pass with two tracking variables?', 'How would negative numbers or floats affect this solution (they do not, since numeric sort handles them)?'],
       similarQuestions: ['Find Minimum Element', 'Find Third Smallest Element'],
@@ -648,18 +681,33 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Same pattern as second-largest, but read index 2 of the sorted distinct list.', 'Deduplicate before sorting — a repeated max should not occupy two positions.', 'Guard against fewer than 3 distinct values by returning undefined.'],
     },
     solution: {
-      algorithm: 'Build a Set of distinct values, sort descending, and return the element at index 2 (or undefined if fewer than 3 distinct values exist).',
-      dryRun: '[3,1,4,1,5,9,2,6] -> distinct sorted desc [9,6,5,4,3,2,1] -> index2=5',
-      javascriptSolution: `function findThirdLargest(arr) {
-  const unique = [...new Set(arr)].sort((a, b) => b - a);
-  return unique.length > 2 ? unique[2] : undefined;
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function thirdLargest(arr: number[]): number | undefined {
+  const top = [-Infinity, -Infinity, -Infinity];
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value === top[0] || value === top[1] || value === top[2]) continue;
+    if (value > top[0]) { top[2]=top[1]; top[1]=top[0]; top[0]=value; }
+    else if (value > top[1]) { top[2]=top[1]; top[1]=value; }
+    else if (value > top[2]) top[2]=value;
+  }
+  return top[2] === -Infinity ? undefined : top[2];
 }`,
-      typescriptSolution: `function findThirdLargest(arr: number[]): number | undefined {
-  const unique = [...new Set(arr)].sort((a, b) => b - a);
-  return unique.length > 2 ? unique[2] : undefined;
+      typescriptSolution: `function thirdLargest(arr: number[]): number | undefined {
+  const top = [-Infinity, -Infinity, -Infinity];
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value === top[0] || value === top[1] || value === top[2]) continue;
+    if (value > top[0]) { top[2]=top[1]; top[1]=top[0]; top[0]=value; }
+    else if (value > top[1]) { top[2]=top[1]; top[1]=value; }
+    else if (value > top[2]) top[2]=value;
+  }
+  return top[2] === -Infinity ? undefined : top[2];
 }`,
-      timeComplexity: 'O(n log n) dominated by the sort.',
-      spaceComplexity: 'O(n).',
+      builtInSolution: `const thirdLargest = (arr: number[]) => [...new Set(arr)].sort((a,b)=>b-a)[2];`,
+      timeComplexity: 'O(n) for the manual scan where applicable; built-in sorting versions are O(n log n) average and use additional storage for copies/uniqueness.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Off-by-one indexing (reading index 3 instead of index 2 for "third").', 'Not deduplicating, so a triple-repeated max is miscounted as three distinct ranks.'],
       followUpQuestions: ['How would you generalize this to the Kth largest distinct element?', 'How would a min-heap of size K solve this more efficiently for large arrays?'],
       similarQuestions: ['Find Second Largest Element', 'Find Third Smallest Element'],
@@ -698,18 +746,33 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Mirror the third-largest solution, sorting ascending instead.', 'Deduplicate with a `Set` first.', 'Index 2 of the sorted distinct list is the answer.'],
     },
     solution: {
-      algorithm: 'Build a Set of distinct values, sort ascending, and return the element at index 2 (or undefined if fewer than 3 distinct values exist).',
-      dryRun: '[3,1,4,1,5,9,2,6] -> distinct sorted asc [1,2,3,4,5,6,9] -> index2=3',
-      javascriptSolution: `function findThirdSmallest(arr) {
-  const unique = [...new Set(arr)].sort((a, b) => a - b);
-  return unique.length > 2 ? unique[2] : undefined;
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function thirdSmallest(arr: number[]): number | undefined {
+  const low = [Infinity, Infinity, Infinity];
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value === low[0] || value === low[1] || value === low[2]) continue;
+    if (value < low[0]) { low[2]=low[1]; low[1]=low[0]; low[0]=value; }
+    else if (value < low[1]) { low[2]=low[1]; low[1]=value; }
+    else if (value < low[2]) low[2]=value;
+  }
+  return low[2] === Infinity ? undefined : low[2];
 }`,
-      typescriptSolution: `function findThirdSmallest(arr: number[]): number | undefined {
-  const unique = [...new Set(arr)].sort((a, b) => a - b);
-  return unique.length > 2 ? unique[2] : undefined;
+      typescriptSolution: `function thirdSmallest(arr: number[]): number | undefined {
+  const low = [Infinity, Infinity, Infinity];
+  for (let i = 0; i < arr.length; i += 1) {
+    const value = arr[i];
+    if (value === low[0] || value === low[1] || value === low[2]) continue;
+    if (value < low[0]) { low[2]=low[1]; low[1]=low[0]; low[0]=value; }
+    else if (value < low[1]) { low[2]=low[1]; low[1]=value; }
+    else if (value < low[2]) low[2]=value;
+  }
+  return low[2] === Infinity ? undefined : low[2];
 }`,
-      timeComplexity: 'O(n log n).',
-      spaceComplexity: 'O(n).',
+      builtInSolution: `const thirdSmallest = (arr: number[]) => [...new Set(arr)].sort((a,b)=>a-b)[2];`,
+      timeComplexity: 'O(n) for the manual scan where applicable; built-in sorting versions are O(n log n) average and use additional storage for copies/uniqueness.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Reusing the descending comparator by mistake, returning the third-largest instead.', 'Not handling the undefined case when fewer than 3 distinct values exist.'],
       followUpQuestions: ['How would you generalize to the Kth smallest distinct element?', 'How would a max-heap of size K help for very large arrays?'],
       similarQuestions: ['Find Second Smallest Element', 'Find Third Largest Element'],
@@ -748,16 +811,21 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['`.filter()` with a `num > 0` predicate keeps only strictly positive values.', '0 must be excluded — use strict `>`, not `>=`.', 'Order is preserved automatically by `.filter()`.'],
     },
     solution: {
-      algorithm: 'Filter the array, keeping only elements strictly greater than 0.',
-      dryRun: '[1,-2,0,3,-4] -> keep 1, drop -2, drop 0, keep 3, drop -4 -> [1,3]',
-      javascriptSolution: `function findPositiveNumbers(arr) {
-  return arr.filter((num) => num > 0);
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function positiveNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]>0) result.push(arr[i]);
+  return result;
 }`,
-      typescriptSolution: `function findPositiveNumbers(arr: number[]): number[] {
-  return arr.filter((num) => num > 0);
+      typescriptSolution: `function positiveNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]>0) result.push(arr[i]);
+  return result;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the filtered result.',
+      builtInSolution: `const positiveNumbers = (arr: number[]) => arr.filter(value => value > 0);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using `>= 0`, which incorrectly includes 0 as positive.', 'Mutating the source array with `splice` inside a loop instead of using the non-mutating `filter`.'],
       followUpQuestions: ['How would you separate positives and negatives in a single pass instead of two filters?', 'How would this treat `-0`?'],
       similarQuestions: ['Find Negative Numbers', 'Separate Even and Odd Numbers'],
@@ -796,16 +864,21 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['`.filter()` with `num < 0` keeps only strictly negative values.', '0 is excluded by the strict comparison.', 'Order is preserved automatically.'],
     },
     solution: {
-      algorithm: 'Filter the array, keeping only elements strictly less than 0.',
-      dryRun: '[1,-2,0,3,-4] -> drop 1, keep -2, drop 0, drop 3, keep -4 -> [-2,-4]',
-      javascriptSolution: `function findNegativeNumbers(arr) {
-  return arr.filter((num) => num < 0);
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function negativeNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]<0) result.push(arr[i]);
+  return result;
 }`,
-      typescriptSolution: `function findNegativeNumbers(arr: number[]): number[] {
-  return arr.filter((num) => num < 0);
+      typescriptSolution: `function negativeNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]<0) result.push(arr[i]);
+  return result;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n).',
+      builtInSolution: `const negativeNumbers = (arr: number[]) => arr.filter(value => value < 0);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using `<= 0`, which incorrectly includes 0 as negative.', 'Forgetting the result order must match the original array order — `.filter()` already guarantees this.'],
       followUpQuestions: ['How would you count negatives without allocating a new array?', 'How would you find the largest-magnitude negative number?'],
       similarQuestions: ['Find Positive Numbers', 'Move Negative Numbers to Beginning'],
@@ -844,16 +917,21 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['A number is even when `num % 2 === 0`.', 'This works correctly for negative numbers too in JavaScript (`-4 % 2 === 0`).', '`.filter()` keeps the original order.'],
     },
     solution: {
-      algorithm: 'Filter the array, keeping elements where num % 2 === 0.',
-      dryRun: '[1,2,3,4,5,6] -> keep 2,4,6 -> [2,4,6]',
-      javascriptSolution: `function findEvenNumbers(arr) {
-  return arr.filter((num) => num % 2 === 0);
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function evenNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2===0) result.push(arr[i]);
+  return result;
 }`,
-      typescriptSolution: `function findEvenNumbers(arr: number[]): number[] {
-  return arr.filter((num) => num % 2 === 0);
+      typescriptSolution: `function evenNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2===0) result.push(arr[i]);
+  return result;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n).',
+      builtInSolution: `const evenNumbers = (arr: number[]) => arr.filter(value => value % 2 === 0);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using `num % 2 == 1` to detect "not odd" as a proxy for even, which mishandles negative numbers (`-3 % 2 === -1`, not `1`).', 'Using bitwise `& 1` without realizing it behaves the same as `% 2` for even/odd checks but can confuse readers unfamiliar with bit tricks.'],
       followUpQuestions: ['How would you check evenness using the bitwise AND operator instead of modulo?', 'How would you find evens using a `for` loop instead of `filter`?'],
       similarQuestions: ['Find Odd Numbers', 'Count Even Numbers'],
@@ -892,16 +970,20 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['`num % 2 !== 0` correctly detects odd numbers, including negatives.', 'Avoid `num % 2 === 1`, which fails for negative odds (`-3 % 2 === -1` in JS, not `1`).', '`.filter()` preserves original order.'],
     },
     solution: {
-      algorithm: 'Filter the array, keeping elements where num % 2 !== 0.',
-      dryRun: '[1,2,3,4,5,6] -> keep 1,3,5 -> [1,3,5]',
-      javascriptSolution: `function findOddNumbers(arr) {
-  return arr.filter((num) => num % 2 !== 0);
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function oddNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2!==0) result.push(arr[i]);
+  return result;
 }`,
-      typescriptSolution: `function findOddNumbers(arr: number[]): number[] {
-  return arr.filter((num) => num % 2 !== 0);
+      typescriptSolution: `function oddNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2!==0) result.push(arr[i]);
+  return result;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n).',
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Checking `num % 2 === 1`, which is wrong for negative odd numbers in JavaScript since the result of `%` takes the sign of the dividend.', 'Forgetting fractional numbers are neither cleanly even nor odd — assume integer input per constraints.'],
       followUpQuestions: ['How would `num % 2 === 1` need to change to work for negative numbers (e.g. using `Math.abs`)?', 'How would you find odd numbers with a `for` loop instead of `filter`?'],
       similarQuestions: ['Find Even Numbers', 'Count Odd Numbers'],
@@ -940,16 +1022,21 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Filter for evens first, then read `.length` of the result.', 'Alternatively, use `reduce` to accumulate a count directly without allocating an intermediate array.', 'Either approach is O(n); the reduce version saves the O(n) space of the filtered array.'],
     },
     solution: {
-      algorithm: 'Filter the array for elements where num % 2 === 0, then return the length of the filtered result.',
-      dryRun: '[1,2,3,4,5,6] -> filter -> [2,4,6] -> length 3',
-      javascriptSolution: `function countEvenNumbers(arr) {
-  return arr.filter((num) => num % 2 === 0).length;
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function countEven(arr: number[]): number {
+  let count=0;
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2===0) count+=1;
+  return count;
 }`,
-      typescriptSolution: `function countEvenNumbers(arr: number[]): number {
-  return arr.filter((num) => num % 2 === 0).length;
+      typescriptSolution: `function countEven(arr: number[]): number {
+  let count=0;
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2===0) count+=1;
+  return count;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the intermediate filtered array (O(1) if counted via reduce instead).',
+      builtInSolution: `const countEven = (arr:number[]) => arr.filter(value=>value%2===0).length;`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Allocating and discarding a full filtered array when only the count is needed, which is fine for readability but wasteful at scale versus a reduce-based count.', 'Reusing the odd-check condition by mistake.'],
       followUpQuestions: ['How would you count evens with `reduce` to avoid the intermediate array?', 'How would you count evens and odds in a single pass?'],
       similarQuestions: ['Find Even Numbers', 'Count Odd Numbers'],
@@ -988,16 +1075,21 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['Filter for odds (`num % 2 !== 0`), then read `.length`.', 'This mirrors "Count Even Numbers" with the opposite predicate.', 'For a very large array, prefer a single reduce-based counting pass over allocating a filtered array.'],
     },
     solution: {
-      algorithm: 'Filter the array for elements where num % 2 !== 0, then return the length of the filtered result.',
-      dryRun: '[1,2,3,4,5,6] -> filter -> [1,3,5] -> length 3',
-      javascriptSolution: `function countOddNumbers(arr) {
-  return arr.filter((num) => num % 2 !== 0).length;
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function countOdd(arr: number[]): number {
+  let count=0;
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2!==0) count+=1;
+  return count;
 }`,
-      typescriptSolution: `function countOddNumbers(arr: number[]): number {
-  return arr.filter((num) => num % 2 !== 0).length;
+      typescriptSolution: `function countOdd(arr: number[]): number {
+  let count=0;
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2!==0) count+=1;
+  return count;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the intermediate filtered array.',
+      builtInSolution: `const countOdd = (arr:number[]) => arr.filter(value=>value%2!==0).length;`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using `=== 1` for the odd check, which breaks on negative odd numbers as with "Find Odd Numbers".', 'Duplicating the array count logic instead of reusing the same filter predicate style as the even counter for consistency.'],
       followUpQuestions: ['How would you compute both even and odd counts in a single reduce pass?', 'How would this differ for a `Set` versus an array input?'],
       similarQuestions: ['Find Odd Numbers', 'Count Even Numbers'],
@@ -1036,30 +1128,21 @@ export const MOCK_JAVASCRIPT_ARRAY_BASICS_CODING_QUESTIONS: MockCodingQuestion[]
       hints: ['A single pass with `reduce` can build both buckets at once, avoiding two separate filter passes.', 'Seed the accumulator as `{ even: [], odd: [] }`.', 'Push each number into the matching bucket based on `num % 2 === 0`.'],
     },
     solution: {
-      algorithm: 'Reduce over the array with an { even: [], odd: [] } accumulator, pushing each number into the bucket matching its parity.',
-      dryRun: '[1,2,3,4,5,6] -> 1->odd -> 2->even -> 3->odd -> 4->even -> 5->odd -> 6->even\nresult={even:[2,4,6],odd:[1,3,5]}',
-      javascriptSolution: `function separateEvenOdd(arr) {
-  return arr.reduce(
-    (acc, num) => {
-      if (num % 2 === 0) acc.even.push(num);
-      else acc.odd.push(num);
-      return acc;
-    },
-    { even: [], odd: [] }
-  );
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function oddNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2!==0) result.push(arr[i]);
+  return result;
 }`,
-      typescriptSolution: `function separateEvenOdd(arr: number[]): { even: number[]; odd: number[] } {
-  return arr.reduce(
-    (acc, num) => {
-      if (num % 2 === 0) acc.even.push(num);
-      else acc.odd.push(num);
-      return acc;
-    },
-    { even: [] as number[], odd: [] as number[] }
-  );
+      typescriptSolution: `function oddNumbers(arr: number[]): number[] {
+  const result:number[]=[];
+  for(let i=0;i<arr.length;i+=1) if(arr[i]%2!==0) result.push(arr[i]);
+  return result;
 }`,
-      timeComplexity: 'O(n) — a single pass.',
-      spaceComplexity: 'O(n) for the two output buckets.',
+      builtInSolution: `const oddNumbers = (arr: number[]) => arr.filter(value => value % 2 !== 0);`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Running two separate `.filter()` passes instead of one `reduce`, which is correct but does twice the traversal work.',
         'Sharing the same array reference between calls by defining the initial accumulator outside the function (a stateful bug), instead of creating a fresh `{ even: [], odd: [] }` each call.',

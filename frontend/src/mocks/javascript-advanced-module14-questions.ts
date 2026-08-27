@@ -119,126 +119,126 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     number: 'JSADV-M14-291',
     title: 'What Is CommonJS?',
     difficulty: 'Easy',
-    expectedAnswer: 'CommonJS is the module system historically associated with Node.js, using `require()`, `module.exports`, and `exports`, with a synchronous loading model.',
+    expectedAnswer: "CommonJS uses `require()` and `module.exports` and remains important for legacy Node.js packages/tooling.",
     deepExplanation:
-      "`module.exports = { add }` in `math.js` and `const { add } = require('./math');` in `app.js` gives `add(2, 3)` → `5`. CommonJS remains important when maintaining older Node.js services, legacy tooling, older test configurations, and existing npm packages, even though modern frontend applications generally prefer ESM when the toolchain supports it.",
+      "Step 1 — Understand the concept.\n\nCommonJS uses `require()` and `module.exports` and remains important for legacy Node.js packages/tooling.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-292',
     number: 'JSADV-M14-292',
     title: 'What Are ES Modules?',
     difficulty: 'Easy',
-    expectedAnswer: 'ES Modules (ESM) are the standardized JavaScript module system defined by ECMAScript, using `export` and `import`.',
+    expectedAnswer: "ES modules are the standardized `import`/`export` module system with static structure suitable for tooling and tree shaking.",
     deepExplanation:
-      "`export function add(a, b) { return a + b; }` in `math.js` consumed as `import { add } from './math.js';` in `app.js` gives `add(2, 3)` → `5`. ESM provides standardized module syntax, module scope, static import/export structure, live bindings, tooling-friendly dependency graphs, tree-shaking opportunities, and native browser support via `<script type=\"module\" src=\"/app.js\"></script>`.",
+      "Step 1 — Understand the concept.\n\nES modules are the standardized `import`/`export` module system with static structure suitable for tooling and tree shaking.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-293',
     number: 'JSADV-M14-293',
     title: 'What Is the Difference Between CommonJS and ESM?',
     difficulty: 'Medium',
-    expectedAnswer: 'CommonJS uses `require()`/`module.exports` with synchronous loading and limited static analysis; ESM uses `import`/`export` with a static module graph, live bindings, and strong tree-shaking support.',
+    expectedAnswer: "CommonJS uses `require()` and `module.exports` and remains important for legacy Node.js packages/tooling.",
     deepExplanation:
-      "Beyond syntax, ESM offers native browser support (CommonJS has none), stronger static analysis and tree shaking, and supports top-level await, none of which CommonJS provides in the same way. Interview answer: don't just say \"CommonJS is old and ESM is new\" — explain the actual module semantics, loading behavior, interoperability, static analysis, and tooling/runtime differences.",
+      "Step 1 — Understand the concept.\n\nCommonJS uses `require()` and `module.exports` and remains important for legacy Node.js packages/tooling.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-294',
     number: 'JSADV-M14-294',
     title: 'What Is `import`?',
     difficulty: 'Easy',
-    expectedAnswer: '`import` consumes exported bindings from an ES module, supporting named, multiple, namespace, default, and side-effect-only forms.',
+    expectedAnswer: "Static `import` declares a module dependency at module scope and participates in the module graph.",
     deepExplanation:
-      "`import { add } from './math.js';` is a named import; `import * as math from './math.js';` is a namespace import; `import UserService from './UserService.js';` is a default import; `import './analytics.js';` loads a module purely for its side effects without importing a binding. Static imports must be declared at module top level — use dynamic `import()` when loading must happen conditionally.",
+      "Step 1 — Understand the concept.\n\nStatic `import` declares a module dependency at module scope and participates in the module graph.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-295',
     number: 'JSADV-M14-295',
     title: 'What Is `export`?',
     difficulty: 'Easy',
-    expectedAnswer: '`export` exposes module bindings, either inline at declaration, after declaration, as multiple named exports, or via re-export from another module.',
+    expectedAnswer: "Exports form a module's public API; named/default exports should be chosen consistently and deliberately.",
     deepExplanation:
-      "`export function add(a, b) {...}` exports inline; `function subtract(a, b) {...} export { subtract };` exports after declaration; `export { add } from './math.js';` re-exports a binding from another module; `export * from './math.js';` re-exports everything. `export *` should be used carefully, since it can make a module's public API less explicit.",
+      "Step 1 — Understand the concept.\n\nExports form a module's public API; named/default exports should be chosen consistently and deliberately.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-296',
     number: 'JSADV-M14-296',
     title: 'What Is the Difference Between Default and Named Exports?',
     difficulty: 'Medium',
-    expectedAnswer: 'A named export is imported with `{}` using its declared name (and a module can have many), while a default export is imported without `{}` under any local name the consumer chooses (only one per module).',
+    expectedAnswer: "CommonJS and ESM differ in syntax, loading/evaluation model, live bindings, tooling, and interoperability; explain those semantics instead of only calling one old/new.",
     deepExplanation:
-      "`export function formatDate(date) {...}` is imported as `import { formatDate } from './date.js';`, keeping the name part of the exported interface. `export default function formatDate(date) {...}` is imported as `import formatDate from './date.js';`, where the consumer can rename it freely. Senior recommendation: choose a convention and apply it consistently — consistency usually matters more than which style is \"correct.\"",
+      "Step 1 — Understand the concept.\n\nCommonJS and ESM differ in syntax, loading/evaluation model, live bindings, tooling, and interoperability; explain those semantics instead of only calling one old/new.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-297',
     number: 'JSADV-M14-297',
     title: 'What Is Dynamic `import()`?',
     difficulty: 'Medium',
-    expectedAnswer: 'Dynamic `import()` loads a module asynchronously and returns a Promise, enabling conditional and on-demand loading.',
+    expectedAnswer: "Static `import` declares a module dependency at module scope and participates in the module graph.",
     deepExplanation:
-      "`const analytics = await import('./analytics.js'); analytics.initialize();` loads the module only when called, e.g. conditionally: `if (user.isAdmin) { const { AdminPanel } = await import('./AdminPanel.js'); AdminPanel.mount(); }`. Production uses include route-level code splitting, admin functionality, heavy charts/editors/PDF viewers, and rarely used workflows; failures should be handled with `try/catch` around the `await import(...)` call.",
+      "Step 1 — Understand the concept.\n\nStatic `import` declares a module dependency at module scope and participates in the module graph.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-298',
     number: 'JSADV-M14-298',
     title: 'What Is Tree Shaking?',
     difficulty: 'Medium',
-    expectedAnswer: "Tree shaking removes unused exports from a production bundle when tooling can statically determine they are unreachable.",
+    expectedAnswer: "Tree shaking removes statically unused exports when the bundler can prove they have no required side effects.",
     deepExplanation:
-      "If `math.js` exports `add`, `subtract`, and `multiply`, but the application only imports `add`, a capable bundler can eliminate `subtract` and `multiply` from the output. ESM's statically analyzable import/export declarations make this dependency graph → used exports → dead code elimination → smaller bundle pipeline possible. Important: tree shaking isn't magic — it can be defeated by side effects, CommonJS modules, dynamic behavior, package configuration, and bundler configuration.",
+      "Step 1 — Understand the concept.\n\nTree shaking removes statically unused exports when the bundler can prove they have no required side effects.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-299',
     number: 'JSADV-M14-299',
     title: 'What Are Circular Dependencies?',
     difficulty: 'Hard',
-    expectedAnswer: 'A circular dependency occurs when modules depend on each other directly or indirectly (A imports B, B imports A), which can cause initialization-order problems.',
+    expectedAnswer: "Circular dependencies can expose partially initialized bindings or temporal errors depending on the module system and evaluation order.",
     deepExplanation:
-      "With `a.js` importing `valueB` from `b.js` to compute `valueA`, and `b.js` importing `valueA` from `a.js` to compute `valueB`, evaluation order determines whether a binding is initialized yet when it's read. ESM imports are live bindings and module evaluation follows dependency ordering — a circular graph isn't automatically invalid, but accessing a binding before its initialization causes a `ReferenceError`. Prefer `A → shared module ← B` over `A ↔ B`, extracting shared behavior into a lower-level abstraction.",
+      "Step 1 — Understand the concept.\n\nCircular dependencies can expose partially initialized bindings or temporal errors depending on the module system and evaluation order.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-300',
     number: 'JSADV-M14-300',
     title: 'What Are Barrel Files?',
     difficulty: 'Medium',
-    expectedAnswer: 'A barrel file re-exports multiple modules from a single central entry point, giving consumers one convenient import path.',
+    expectedAnswer: "Barrel files re-export symbols for convenience but can hide ownership and create cycles or larger dependency graphs if overused.",
     deepExplanation:
-      "`components/index.js` re-exporting `Button`, `Modal`, and `Input` lets consumers write `import { Button, Modal } from './components/index.js';`. Advantages: convenient imports, a centralized public API, cleaner package boundaries, easier discoverability. Disadvantages: poorly designed barrels can increase dependency graph complexity, create circular dependencies, blur module boundaries, affect bundling, and expose internals unintentionally — use barrels for deliberate public APIs, not automatically in every folder.",
+      "Step 1 — Understand the concept.\n\nBarrel files re-export symbols for convenience but can hide ownership and create cycles or larger dependency graphs if overused.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-301',
     number: 'JSADV-M14-301',
     title: 'What Is Module Scope?',
     difficulty: 'Easy',
-    expectedAnswer: 'Variables declared inside an ES module are scoped to that module and are inaccessible from other modules unless explicitly exported.',
+    expectedAnswer: "Each module has its own scope; bindings are not global unless deliberately attached to a global object.",
     deepExplanation:
-      "`const secret = 'private';` in `module.js` is invisible to other modules unless the module also `export`s a way to reach it (e.g. `export function getSecret() { return secret; }`). ES modules are also strict-mode code by definition. This module scope provides natural encapsulation without relying on global variables.",
+      "Step 1 — Understand the concept.\n\nEach module has its own scope; bindings are not global unless deliberately attached to a global object.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-302',
     number: 'JSADV-M14-302',
     title: 'What Is Lazy Loading?',
     difficulty: 'Medium',
-    expectedAnswer: 'Lazy loading defers loading a module until it is actually needed, instead of loading everything eagerly at startup.',
+    expectedAnswer: "Lazy loading trades smaller initial work for first-use latency and should be paired with prefetching when useful.",
     deepExplanation:
-      "`async function openReports() { const { Reports } = await import('./Reports.js'); Reports.open(); }` only downloads the `Reports` chunk when the user actually opens reports. Benefits: smaller initial JavaScript, faster startup, lower initial parse/compile work, reduced memory pressure. Trade-off: it can introduce a delay the first time a feature is requested — mitigate with prefetching, preloading, route-based splitting, and intelligent caching.",
+      "Step 1 — Understand the concept.\n\nLazy loading trades smaller initial work for first-use latency and should be paired with prefetching when useful.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-303',
     number: 'JSADV-M14-303',
     title: 'How Do Modules Work in the Browser?',
     difficulty: 'Medium',
-    expectedAnswer: 'A browser module script (`<script type="module">`) resolves its imports as URLs, fetches the dependency graph, then parses, instantiates, and evaluates the modules, and is deferred by default.',
+    expectedAnswer: "Browser ESM is loaded with `type=\"module\"`; module scripts are deferred by default and participate in the module dependency graph.",
     deepExplanation:
-      "The flow: HTML → module script → resolve imports → fetch dependency graph → parse modules → instantiate → evaluate → application executes. `<script type=\"module\" src=\"/app.js\"></script>` does not block HTML parsing the way a classic synchronous script can. Module specifiers resolve as URLs — relative (`./math.js`), absolute (`/assets/math.js`) — while bare specifiers usually require tooling, import maps, or an environment that resolves them.",
+      "Step 1 — Understand the concept.\n\nBrowser ESM is loaded with `type=\"module\"`; module scripts are deferred by default and participate in the module dependency graph.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-304',
     number: 'JSADV-M14-304',
     title: 'How Do Modules Work in Node.js?',
     difficulty: 'Medium',
-    expectedAnswer: 'Node.js supports both CommonJS (`require`) and ESM (`import`), with project configuration (like `"type": "module"` in `package.json`) determining how `.js` files are interpreted by default.',
+    expectedAnswer: "Modern Node.js supports both CommonJS and ESM; package metadata and file extensions influence how files are interpreted.",
     deepExplanation:
-      "`const fs = require('node:fs');` is CommonJS; `import fs from 'node:fs';` is ESM. Node ESM considerations: module resolution differs from browsers, package `exports` affects public entry points, file extensions may matter, CommonJS/ESM interoperability has specific rules, and `import()` works for asynchronous loading in either system. Interview trap: don't say \"Node.js only supports CommonJS\" — modern Node.js supports ESM as well.",
+      "Step 1 — Understand the concept.\n\nModern Node.js supports both CommonJS and ESM; package metadata and file extensions influence how files are interpreted.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
   {
     id: 'jsadv-m14-305',
@@ -246,9 +246,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Are Module Resolution, Bundling and Production Module Architecture?',
     difficulty: 'Hard',
     experienceLevel: '5–8 Years+',
-    expectedAnswer: 'Module resolution determines which physical module a specifier like `@company/ui` refers to, and production architecture flows that resolution through a bundler into deployable chunks.',
+    expectedAnswer: "Module resolution maps specifiers to files/packages; bundlers may transform, split, or eliminate code based on static analysis.",
     deepExplanation:
-      "The pipeline: source code → module specifier → package/alias/file resolution → dependency graph → bundler → chunks → minification → deployment. A large application typically separates `apps/web` from shared `packages/` (ui, api, auth, config, utils, analytics), importing only public package APIs rather than reaching into internal paths. Senior design principles: keep dependency direction intentional, avoid circular dependencies, define public package APIs, prefer ESM where practical, use dynamic imports for appropriate feature boundaries, keep shared packages stable, avoid giant barrel files, analyze bundle output, configure package `exports` where appropriate, and document module ownership.",
+      "Step 1 — Understand the concept.\n\nModule resolution maps specifiers to files/packages; bundlers may transform, split, or eliminate code based on static analysis.\n\nStep 2 — Easy method:\nState the rule in one sentence, trace one small example from input to output, then cover the important edge case.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction identity<T>(value: T): T {\n  return value;\n}\n\nconst result = identity(\"value\");\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst result = String(\"value\");\n```\n\nStep 5 — Production example:\nUse the native language/platform primitive when it communicates intent clearly, but understand the manual implementation so you can reason about behavior, complexity, and failures.\n\nStep 6 — Edge cases:\nTest empty/nullish inputs, invalid values, repeated calls, boundary sizes, asynchronous failure, cleanup, and browser/Node differences when applicable.\n\nStep 7 — Senior interview takeaway:\nExplain the semantic rule first, then implementation, complexity, failure mode, production use case, and trade-off.",
   },
 ];
 

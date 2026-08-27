@@ -43,9 +43,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Scope?"
     },
     "answer": {
-      "expectedAnswer": "**Scope** determines where an identifier can be accessed in a JavaScript program.",
-      "deepExplanation": "An identifier may be: a variable a constant a function a class an imported binding a parameter Example: `message` is available inside `greet`, but not outside it. Scope provides: data isolation predictable name resolution reduced global pollution encapsulation maintainability support for closures safer large-scale architecture Scope defines where an identifier is visible and accessible. JavaScript primarily uses lexical scoping, meaning accessibility is determined by where code is written rather than where a function is eventually called.",
-      "productionExample": "Work through the accompanying code example for \"What is Scope?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Scope?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Scope?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Scope?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -148,9 +148,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Global Scope?"
     },
     "answer": {
-      "expectedAnswer": "A global binding is accessible from code that can reach the global environment.",
-      "deepExplanation": "In a browser classic script: Classic browser scripts, ES modules, and Node.js have different top-level semantics. Typically: The top-level module binding is not automatically a global-object property. Avoid mutable global variables. Prefer: over:",
-      "productionExample": "Avoid mutable global variables. Prefer: over:",
+      "expectedAnswer": "**What is Global Scope?** should explain global bindings, browser/module differences, global pollution, and why application code should keep dependencies local or module-scoped.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Global Scope?** should explain global bindings, browser/module differences, global pollution, and why application code should keep dependencies local or module-scoped.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Global Scope?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -253,9 +253,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Function Scope?"
     },
     "answer": {
-      "expectedAnswer": "Function scope means a binding is accessible throughout the function in which it is declared.",
-      "deepExplanation": "`var` is function-scoped. The `if` block does not create a separate `var` scope.",
-      "productionExample": "Work through the accompanying code example for \"What is Function Scope?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Function Scope?** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Function Scope?** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Function Scope?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -358,14 +358,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Block Scope?"
     },
     "answer": {
-      "expectedAnswer": "Block scope means a variable declared with `let` or `const` is accessible only inside the nearest enclosing `{ }` block. `var` ignores block boundaries and is function-scoped instead.",
-      "deepExplanation": "Any `{ }` pair — an `if`, a `for`, or a bare block — creates a new lexical scope for `let`/`const`. Each iteration of a `for (let i ...)` loop even gets its own fresh binding of `i`, which is why closures created inside the loop capture the right value. `var` has no notion of block scope: it is hoisted to the nearest enclosing function (or the global object if there is none), so it \"leaks\" out of `if`/`for`/`{}` blocks.",
-      "example": {
-        "code": "console.log(value);\nvar value = 10;",
-        "output": "undefined",
-        "explanation": "`var` declarations are hoisted and initialized with `undefined`. Only the declaration is hoisted, not the assignment. Conceptually, JavaScript behaves like: `var value; console.log(value); value = 10;`. Contrast this with `let`/`const`: `console.log(value); let value = 10;` throws a ReferenceError instead, because the binding exists in the Temporal Dead Zone until its declaration runs."
-      },
-      "productionExample": "```js\n// 1. Basic block scope\n{\n  let a = 10;\n  const b = 20;\n\n  console.log(a); // 10\n  console.log(b); // 20\n}\n\nconsole.log(a); // ❌ ReferenceError: a is not defined\nconsole.log(b); // ❌ ReferenceError: b is not defined\n\n// 2. let/const vs var\nif (true) {\n  let x = 10;\n  var y = 20;\n}\n\nconsole.log(x); // ❌ ReferenceError: x is not defined\nconsole.log(y); // ✅ 20\n\n// 3. Loops\nfor (let i = 0; i < 3; i++) {\n  console.log(i); // 0, 1, 2\n}\nconsole.log(i); // ❌ ReferenceError: i is not defined\n\nfor (var j = 0; j < 3; j++) {\n  console.log(j); // 0, 1, 2\n}\nconsole.log(j); // ✅ 3\n\n// 4. Nested blocks\nlet name = \"Rasik\";\n{\n  let age = 25;\n  {\n    console.log(name); // ✅ \"Rasik\" — visible via the scope chain\n    console.log(age);  // ✅ 25 — visible in the nested block\n  }\n}\nconsole.log(age); // ❌ ReferenceError: age is not defined\n```",
+      "expectedAnswer": "**What is Block Scope?** should explain `let`/`const` block scope, shadowing, and TDZ behavior compared with `var`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Block Scope?** should explain `let`/`const` block scope, shadowing, and TDZ behavior compared with `var`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use `let` and `const` inside conditional and loop blocks to keep temporary bindings out of the surrounding function scope.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -468,9 +463,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Module Scope?"
     },
     "answer": {
-      "expectedAnswer": "Each ES module has its own top-level lexical scope.",
-      "deepExplanation": "`API_URL` does not become a global variable. Module scope supports: encapsulation dependency boundaries reusable packages tree shaking safer architecture reduced global pollution",
-      "productionExample": "Work through the accompanying code example for \"What is Module Scope?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Module Scope?** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Module Scope?** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Module Scope?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -573,9 +568,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Lexical Scope?"
     },
     "answer": {
-      "expectedAnswer": "JavaScript uses **lexical scoping**.",
-      "deepExplanation": "That means scope is determined by where functions and variables are written in source code. Even though `fn()` is called outside `outer`, `inner` was defined inside `outer`, so its lexical environment can resolve `value` from `outer`. not:",
-      "productionExample": "Work through the accompanying code example for \"What is Lexical Scope?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Lexical Scope?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Lexical Scope?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Lexical Scope?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -678,9 +673,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Dynamic Scope?"
     },
     "answer": {
-      "expectedAnswer": "Dynamic scoping determines variable lookup from the call chain rather than source-code nesting.",
-      "deepExplanation": "JavaScript does **not** use dynamic scoping for normal lexical identifier resolution. Compare conceptually: Example: If JavaScript were dynamically scoped, `\"caller\"` might be selected. It is not. JavaScript uses lexical scoping. Identifier resolution follows the lexical environment established from source-code nesting, not the runtime caller chain.",
-      "productionExample": "Work through the accompanying code example for \"What is Dynamic Scope?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Dynamic Scope?** should distinguish lexical scope from dynamic lookup: JavaScript uses lexical scoping for identifier resolution.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Dynamic Scope?** should distinguish lexical scope from dynamic lookup: JavaScript uses lexical scoping for identifier resolution.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Dynamic Scope?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -783,9 +778,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Scope Chain?"
     },
     "answer": {
-      "expectedAnswer": "The scope chain is the sequence of lexical environments consulted when resolving an identifier.",
-      "deepExplanation": "Lookup: For an identifier: If no environment contains the binding, JavaScript produces a `ReferenceError`.",
-      "productionExample": "Work through the accompanying code example for \"What is the Scope Chain?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Scope Chain?** should explain prototype lookup as walking `[[Prototype]]` links until a property is found or `null` is reached.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Scope Chain?** should explain prototype lookup as walking `[[Prototype]]` links until a property is found or `null` is reached.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Scope Chain?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -888,9 +883,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Identifier Resolution Work?"
     },
     "answer": {
-      "expectedAnswer": "Consider: The engine's semantic model begins resolution from the current lexical environment.",
-      "deepExplanation": "It does not continue searching after a matching binding is found.",
-      "productionExample": "Work through the accompanying code example for \"How Does Identifier Resolution Work?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Identifier Resolution Work?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Identifier Resolution Work?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Identifier Resolution Work?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -993,9 +988,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Shadowing?"
     },
     "answer": {
-      "expectedAnswer": "Shadowing occurs when an inner scope declares a binding with the same name as an outer scope.",
-      "deepExplanation": "Diagram: The inner binding shadows the outer binding. Avoid unnecessary shadowing because it can reduce readability.",
-      "productionExample": "Avoid unnecessary shadowing because it can reduce readability.",
+      "expectedAnswer": "**What is Shadowing?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Shadowing?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Shadowing?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1098,9 +1093,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Shadowing with `let`?"
     },
     "answer": {
-      "expectedAnswer": "This is valid: Two different lexical bindings exist.",
-      "deepExplanation": "This is valid: Two different lexical bindings exist.",
-      "productionExample": "Work through the accompanying code example for \"What is Shadowing with `let`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Shadowing with `let`?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Shadowing with `let`?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Shadowing with `let`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1203,9 +1198,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Shadowing with `var`?"
     },
     "answer": {
-      "expectedAnswer": "Because `var` is function-scoped: The function has its own `var` binding.",
-      "deepExplanation": "Because `var` is function-scoped: The function has its own `var` binding.",
-      "productionExample": "Work through the accompanying code example for \"What is Shadowing with `var`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Shadowing with `var`?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Shadowing with `var`?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Shadowing with `var`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1308,9 +1303,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Illegal Shadowing?"
     },
     "answer": {
-      "expectedAnswer": "Certain combinations of lexical and `var` declarations are prohibited when they conflict within the same variable environment.",
-      "deepExplanation": "A classic example: This results in a syntax error because the `var` declaration cannot coexist with the conflicting lexical declaration in the applicable scope structure. Do not memorize only one example. Understand the underlying rule: Lexical declarations and `var` declarations have different environment semantics, and certain redeclaration combinations are early errors.",
-      "productionExample": "Work through the accompanying code example for \"What is Illegal Shadowing?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Illegal Shadowing?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Illegal Shadowing?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Illegal Shadowing?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1413,9 +1408,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Can a `let` Inside a Block Shadow an Outer `var`?"
     },
     "answer": {
-      "expectedAnswer": "Yes, when the lexical declaration is inside a nested block.",
-      "deepExplanation": "This is valid because the `let` binding belongs to the nested lexical environment.",
-      "productionExample": "Work through the accompanying code example for \"Can a `let` Inside a Block Shadow an Outer `var`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Can a `let` Inside a Block Shadow an Outer `var`?** should explain `let`/`const` block scope, shadowing, and TDZ behavior compared with `var`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Can a `let` Inside a Block Shadow an Outer `var`?** should explain `let`/`const` block scope, shadowing, and TDZ behavior compared with `var`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Can a `let` Inside a Block Shadow an Outer `var`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1518,9 +1513,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Temporal Dead Zone?"
     },
     "answer": {
-      "expectedAnswer": "The **Temporal Dead Zone (TDZ)** is the period between entering a scope where a `let`, `const`, or class binding exists and the point where that binding is initialized.",
-      "deepExplanation": "Example: This throws: `let` and `const` are not “not hoisted.” Their bindings are established before execution reaches the declaration, but they cannot be accessed during the TDZ.",
-      "productionExample": "Work through the accompanying code example for \"What is the Temporal Dead Zone?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Temporal Dead Zone?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Temporal Dead Zone?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Temporal Dead Zone?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1623,9 +1618,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Why Does TDZ Exist?"
     },
     "answer": {
-      "expectedAnswer": "TDZ helps enforce safer declaration semantics.",
-      "deepExplanation": "It prevents code from using a lexical binding before its initialization. Bad: Correct: This makes declaration order and initialization requirements explicit.",
-      "productionExample": "Work through the accompanying code example for \"Why Does TDZ Exist?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Why Does TDZ Exist?** should explain that a lexical binding exists but is uninitialized until declaration execution; reading it before initialization throws `ReferenceError`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Why Does TDZ Exist?** should explain that a lexical binding exists but is uninitialized until declaration execution; reading it before initialization throws `ReferenceError`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Why Does TDZ Exist?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1728,9 +1723,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Does `const` Avoid TDZ?"
     },
     "answer": {
-      "expectedAnswer": "No. throws a `ReferenceError`.",
-      "deepExplanation": "`const` has: lexical scope TDZ required initialization no reassignment",
-      "productionExample": "Work through the accompanying code example for \"Does `const` Avoid TDZ?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Does `const` Avoid TDZ?** should explain that a lexical binding exists but is uninitialized until declaration execution; reading it before initialization throws `ReferenceError`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Does `const` Avoid TDZ?** should explain that a lexical binding exists but is uninitialized until declaration execution; reading it before initialization throws `ReferenceError`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Does `const` Avoid TDZ?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1833,9 +1828,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Does `let` Have TDZ?"
     },
     "answer": {
-      "expectedAnswer": "Yes. The binding exists but is uninitialized during the TDZ.",
-      "deepExplanation": "Yes. The binding exists but is uninitialized during the TDZ.",
-      "productionExample": "Work through the accompanying code example for \"Does `let` Have TDZ?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Does `let` Have TDZ?** should explain that a lexical binding exists but is uninitialized until declaration execution; reading it before initialization throws `ReferenceError`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Does `let` Have TDZ?** should explain that a lexical binding exists but is uninitialized until declaration execution; reading it before initialization throws `ReferenceError`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Does `let` Have TDZ?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -1938,9 +1933,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Does `var` Have TDZ?"
     },
     "answer": {
-      "expectedAnswer": "No. The `var` binding is initialized to `undefined` as part of its declaration semantics.",
-      "deepExplanation": "No. The `var` binding is initialized to `undefined` as part of its declaration semantics.",
-      "productionExample": "Work through the accompanying code example for \"Does `var` Have TDZ?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Does `var` Have TDZ?** should explain that a lexical binding exists but is uninitialized until declaration execution; reading it before initialization throws `ReferenceError`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Does `var` Have TDZ?** should explain that a lexical binding exists but is uninitialized until declaration execution; reading it before initialization throws `ReferenceError`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Does `var` Have TDZ?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2043,9 +2038,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Hoisting from a Scope Perspective?"
     },
     "answer": {
-      "expectedAnswer": "Hoisting is a teaching term describing the fact that declarations are processed before their corresponding executable use in ways defined by ECMAScript.",
-      "deepExplanation": "Example: For `let`: **Result:** The difference is initialization state, not the simplistic claim that one is “hoisted” and the other is not.",
-      "productionExample": "Work through the accompanying code example for \"What is Hoisting from a Scope Perspective?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Hoisting from a Scope Perspective?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Hoisting from a Scope Perspective?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Hoisting from a Scope Perspective?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2148,9 +2143,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Function Declarations and Scope"
     },
     "answer": {
-      "expectedAnswer": "Function declarations have declaration semantics that make them available earlier than many developers expect.",
-      "deepExplanation": "This behavior differs from function expressions stored in `let`, `const`, or `var` bindings.",
-      "productionExample": "Work through the accompanying code example for \"Function Declarations and Scope\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Function Declarations and Scope** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Function Declarations and Scope** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Function Declarations and Scope** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2253,9 +2248,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Function Expression and TDZ"
     },
     "answer": {
-      "expectedAnswer": "This throws a `ReferenceError` because the `const` binding is in its TDZ before initialization.",
-      "deepExplanation": "This throws a `ReferenceError` because the `const` binding is in its TDZ before initialization.",
-      "productionExample": "Work through the accompanying code example for \"Function Expression and TDZ\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Function Expression and TDZ** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Function Expression and TDZ** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Function Expression and TDZ** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2358,9 +2353,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Arrow Function and TDZ"
     },
     "answer": {
-      "expectedAnswer": "The arrow function itself is not available through the `const` binding until initialization.",
-      "deepExplanation": "The result is a `ReferenceError`.",
-      "productionExample": "Work through the accompanying code example for \"Arrow Function and TDZ\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Arrow Function and TDZ** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Arrow Function and TDZ** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Arrow Function and TDZ** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2463,9 +2458,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Lexical Environment vs Scope?"
     },
     "answer": {
-      "expectedAnswer": "These terms are related but not identical.",
-      "deepExplanation": "Concept – Meaning Scope – Language-level visibility/accessibility concept Lexical Environment – ECMAScript structure used to model bindings and outer lookup Scope Chain – Conceptual lookup path through environments Closure – Function behavior involving retained lexical access Strong answer: Scope describes visibility rules, while lexical environments are part of the specification machinery used to model those rules.",
-      "productionExample": "Work through the accompanying code example for \"What is Lexical Environment vs Scope?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Lexical Environment vs Scope?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Lexical Environment vs Scope?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Lexical Environment vs Scope?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2568,9 +2563,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is a Closure?"
     },
     "answer": {
-      "expectedAnswer": "A closure occurs when a function retains access to variables from its lexical environment after the surrounding function has returned.",
-      "deepExplanation": "A closure occurs when a function retains access to variables from its lexical environment after the surrounding function has returned.",
-      "productionExample": "Work through the accompanying code example for \"What is a Closure?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is a Closure?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is a Closure?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is a Closure?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2673,9 +2668,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Why Does a Closure Remember Variables?"
     },
     "answer": {
-      "expectedAnswer": "The function retains a reference to the lexical environment needed to resolve its free variables.",
-      "deepExplanation": "Example: The function's lexical environment relationship keeps `message` reachable.",
-      "productionExample": "Work through the accompanying code example for \"Why Does a Closure Remember Variables?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Why Does a Closure Remember Variables?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Why Does a Closure Remember Variables?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Why Does a Closure Remember Variables?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2778,9 +2773,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Are Closures Memory Leaks?"
     },
     "answer": {
-      "expectedAnswer": "No. A closure can retain memory intentionally.",
-      "deepExplanation": "A leak happens when memory remains reachable unintentionally or for longer than intended. Example of potentially problematic retention: If the handler is registered indefinitely and `largeData` is very large, it can retain more memory than expected. Remove listeners when their lifetime ends.",
-      "productionExample": "Remove listeners when their lifetime ends.",
+      "expectedAnswer": "**Are Closures Memory Leaks?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Are Closures Memory Leaks?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Are Closures Memory Leaks?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2883,9 +2878,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Do Closures Enable Data Privacy?"
     },
     "answer": {
-      "expectedAnswer": "Closures can hide internal state: External code cannot directly access the `balance` binding.",
-      "deepExplanation": "Closures can hide internal state: External code cannot directly access the `balance` binding.",
-      "productionExample": "Work through the accompanying code example for \"How Do Closures Enable Data Privacy?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Do Closures Enable Data Privacy?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Do Closures Enable Data Privacy?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Do Closures Enable Data Privacy?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -2988,9 +2983,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is a Closure Factory?"
     },
     "answer": {
-      "expectedAnswer": "A factory can generate functions with independent lexical state.",
-      "deepExplanation": "Each returned function has its own captured environment.",
-      "productionExample": "Work through the accompanying code example for \"What is a Closure Factory?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is a Closure Factory?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is a Closure Factory?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is a Closure Factory?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3093,9 +3088,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Affect Loop Closures?"
     },
     "answer": {
-      "expectedAnswer": "Compare `var` and `let`.",
-      "deepExplanation": "Typical output: Output: `let` provides per-iteration lexical bindings for this loop form.",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Affect Loop Closures?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Affect Loop Closures?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Affect Loop Closures?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Affect Loop Closures?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3198,9 +3193,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Work with `for` Loops?"
     },
     "answer": {
-      "expectedAnswer": "For `let` and `const`, loop iteration can create distinct lexical bindings that callbacks can capture.",
-      "deepExplanation": "This is one reason `let` is preferable to `var` in modern asynchronous loops.",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Work with `for` Loops?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Work with `for` Loops?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Work with `for` Loops?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Work with `for` Loops?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3303,9 +3298,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Happens When an Identifier Is Not Found?"
     },
     "answer": {
-      "expectedAnswer": "If identifier resolution reaches the outermost environment without finding the binding, JavaScript throws a `ReferenceError`.",
-      "deepExplanation": "Result: This differs from reading an existing property whose value happens to be `undefined`.",
-      "productionExample": "Work through the accompanying code example for \"What Happens When an Identifier Is Not Found?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Happens When an Identifier Is Not Found?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Happens When an Identifier Is Not Found?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Happens When an Identifier Is Not Found?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3408,9 +3403,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Difference Between `undefined` and an Undeclared Variable?"
     },
     "answer": {
-      "expectedAnswer": "Output: The binding exists.",
-      "deepExplanation": "But: throws: Case – Binding Exists? – Result `let x; x` – Yes – `undefined` `var x; x` – Yes – `undefined` `typeof undeclared` – No – `\"undefined\"` `undeclared` – No – `ReferenceError`",
-      "productionExample": "Work through the accompanying code example for \"What is the Difference Between `undefined` and an Undeclared Variable?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Difference Between `undefined` and an Undeclared Variable?** should explain `var`'s function scope and pre-initialization `undefined` behavior, and contrast it with `let`/`const`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Difference Between `undefined` and an Undeclared Variable?** should explain `var`'s function scope and pre-initialization `undefined` behavior, and contrast it with `let`/`const`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Difference Between `undefined` and an Undeclared Variable?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3513,9 +3508,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Why Does `typeof` Not Throw for an Undeclared Identifier?"
     },
     "answer": {
-      "expectedAnswer": "Historically, `typeof` has special behavior for an unresolvable identifier.",
-      "deepExplanation": "Output: This is useful for feature detection, although modern module and bundler environments often provide better explicit mechanisms.",
-      "productionExample": "Work through the accompanying code example for \"Why Does `typeof` Not Throw for an Undeclared Identifier?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Why Does `typeof` Not Throw for an Undeclared Identifier?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Why Does `typeof` Not Throw for an Undeclared Identifier?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Why Does `typeof` Not Throw for an Undeclared Identifier?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3618,9 +3613,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Shadowing in Nested Functions?"
     },
     "answer": {
-      "expectedAnswer": "Lookup stops at the first matching binding.",
-      "deepExplanation": "Lookup stops at the first matching binding.",
-      "productionExample": "Work through the accompanying code example for \"What is Shadowing in Nested Functions?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Shadowing in Nested Functions?** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Shadowing in Nested Functions?** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Shadowing in Nested Functions?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3723,9 +3718,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Scope Shadowing in `catch`?"
     },
     "answer": {
-      "expectedAnswer": "A `catch` block can have its own lexical binding: The `error` binding belongs to the catch environment.",
-      "deepExplanation": "Modern JavaScript also permits optional catch binding:",
-      "productionExample": "Work through the accompanying code example for \"What is Scope Shadowing in `catch`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Scope Shadowing in `catch`?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Scope Shadowing in `catch`?** should show how a nearer binding hides an outer binding and why unnecessary shadowing reduces readability.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Scope Shadowing in `catch`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3828,9 +3823,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Module Encapsulation?"
     },
     "answer": {
-      "expectedAnswer": "Modules provide private top-level scope by default.",
-      "deepExplanation": "`secret` is not automatically visible to importing modules. This is a major building block for enterprise frontend architecture.",
-      "productionExample": "Work through the accompanying code example for \"What is Module Encapsulation?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Module Encapsulation?** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Module Encapsulation?** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Module Encapsulation?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -3933,9 +3928,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Why is Module Scope Better Than Global State?"
     },
     "answer": {
-      "expectedAnswer": "Global state can cause: name collisions hidden dependencies difficult testing accidental mutation unpredictable initialization order",
-      "deepExplanation": "Module scope makes dependencies explicit: instead of:",
-      "productionExample": "Work through the accompanying code example for \"Why is Module Scope Better Than Global State?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Why is Module Scope Better Than Global State?** should explain global bindings, browser/module differences, global pollution, and why application code should keep dependencies local or module-scoped.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Why is Module Scope Better Than Global State?** should explain global bindings, browser/module differences, global pollution, and why application code should keep dependencies local or module-scoped.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Why is Module Scope Better Than Global State?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4038,9 +4033,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Scope Leakage?"
     },
     "answer": {
-      "expectedAnswer": "Scope leakage occurs when implementation details become visible outside the intended boundary.",
-      "deepExplanation": "Example: This creates an externally accessible global property. Prefer:",
-      "productionExample": "Work through the accompanying code example for \"What is Scope Leakage?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Scope Leakage?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Scope Leakage?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Scope Leakage?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4143,9 +4138,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Affect Maintainability?"
     },
     "answer": {
-      "expectedAnswer": "Good scope boundaries: reduce cognitive load make dependencies explicit reduce accidental coupling simplify testing enable modular architecture",
-      "deepExplanation": "Bad scope design: Better:",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Affect Maintainability?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Affect Maintainability?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Affect Maintainability?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Affect Maintainability?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4248,9 +4243,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Does Deeper Scope Always Mean Worse Performance?"
     },
     "answer": {
-      "expectedAnswer": "No. Modern JavaScript engines optimize variable access heavily.",
-      "deepExplanation": "Performance depends on: engine optimization hot code paths object shapes closures allocations deoptimization actual workload Do not rewrite readable code simply because a variable is several scopes outward. Measure first.",
-      "productionExample": "Work through the accompanying code example for \"Does Deeper Scope Always Mean Worse Performance?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Does Deeper Scope Always Mean Worse Performance?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Does Deeper Scope Always Mean Worse Performance?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Does Deeper Scope Always Mean Worse Performance?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4353,9 +4348,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Can Closures Affect Performance?"
     },
     "answer": {
-      "expectedAnswer": "Closures can retain state and objects.",
-      "deepExplanation": "Example: If the returned function remains alive, `largeConfig` may remain reachable. retained memory additional allocations longer object lifetimes increased GC pressure Closures are not inherently slow or dangerous.",
-      "productionExample": "Work through the accompanying code example for \"How Can Closures Affect Performance?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Can Closures Affect Performance?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Can Closures Affect Performance?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Can Closures Affect Performance?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4458,9 +4453,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Do You Debug Scope Problems?"
     },
     "answer": {
-      "expectedAnswer": "Use browser DevTools: Set a breakpoint. Pause execution. Inspect **Scope**. Inspect Local / Closure / Global values. Inspect the Call Stack. Step into or over code. Check whether a binding is shadowed.",
-      "deepExplanation": "Conceptual DevTools view:",
-      "productionExample": "Work through the accompanying code example for \"How Do You Debug Scope Problems?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Do You Debug Scope Problems?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Do You Debug Scope Problems?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Do You Debug Scope Problems?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4563,9 +4558,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Interact with React?"
     },
     "answer": {
-      "expectedAnswer": "React function components are ordinary JavaScript functions, so lexical scope and closures apply.",
-      "deepExplanation": "The handler closes over the `count` value from the render in which it was created. This explains React concepts such as: stale closures dependency arrays event handlers effect callbacks memoized callbacks",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Interact with React?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Interact with React?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Interact with React?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Interact with React?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4668,9 +4663,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is a Stale Closure?"
     },
     "answer": {
-      "expectedAnswer": "A stale closure occurs when a callback retains an older value than the developer expects.",
-      "deepExplanation": "Conceptual example: Output: The callback retains its lexical value. In React, stale closures commonly appear in asynchronous callbacks and effects.",
-      "productionExample": "Work through the accompanying code example for \"What is a Stale Closure?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is a Stale Closure?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is a Stale Closure?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is a Stale Closure?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4773,9 +4768,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Can Stale Closures Be Reduced?"
     },
     "answer": {
-      "expectedAnswer": "Use the appropriate React pattern for the situation.",
-      "deepExplanation": "For state derived from previous state: Instead of: The functional updater avoids depending on a potentially stale captured value.",
-      "productionExample": "Work through the accompanying code example for \"How Can Stale Closures Be Reduced?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Can Stale Closures Be Reduced?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Can Stale Closures Be Reduced?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Can Stale Closures Be Reduced?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4878,9 +4873,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Difference Between Lexical Scope and `this`?"
     },
     "answer": {
-      "expectedAnswer": "They are separate mechanisms.",
-      "deepExplanation": "Lexical scope determines identifier lookup: `this` is determined by invocation semantics for normal functions. Do not describe `this` as simply another lexical variable.",
-      "productionExample": "Work through the accompanying code example for \"What is the Difference Between Lexical Scope and `this`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Difference Between Lexical Scope and `this`?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Difference Between Lexical Scope and `this`?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Difference Between Lexical Scope and `this`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -4983,9 +4978,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Does Arrow Function Scope Change?"
     },
     "answer": {
-      "expectedAnswer": "Arrow functions still use lexical scope for identifiers.",
-      "deepExplanation": "They also capture `this` lexically from the surrounding function/environment.",
-      "productionExample": "Work through the accompanying code example for \"Does Arrow Function Scope Change?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Does Arrow Function Scope Change?** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Does Arrow Function Scope Change?** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Does Arrow Function Scope Change?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5088,9 +5083,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Work with `eval()`?"
     },
     "answer": {
-      "expectedAnswer": "`eval()` can interact with lexical and variable environments in ways that make static reasoning and optimization harder.",
-      "deepExplanation": "Example: Avoid `eval()` for application logic. Risks include: code injection difficult static analysis optimization barriers security vulnerabilities",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Work with `eval()`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Work with `eval()`?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Work with `eval()`?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Work with `eval()`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5193,9 +5188,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Work with `with`?"
     },
     "answer": {
-      "expectedAnswer": "`with` is deprecated/forbidden in strict mode and should not be used in modern production JavaScript.",
-      "deepExplanation": "It dynamically changes identifier lookup behavior in ways that complicate reasoning and optimization. Best practice: Never use `with` in modern application code.",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Work with `with`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Work with `with`?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Work with `with`?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Work with `with`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5298,9 +5293,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope in Browser Classic Scripts"
     },
     "answer": {
-      "expectedAnswer": "Classic scripts may participate in the global environment.",
-      "deepExplanation": "Typically: Use modules to create stronger boundaries.",
-      "productionExample": "Work through the accompanying code example for \"Scope in Browser Classic Scripts\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope in Browser Classic Scripts** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope in Browser Classic Scripts** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope in Browser Classic Scripts** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5403,9 +5398,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope in ES Modules"
     },
     "answer": {
-      "expectedAnswer": "The second expression does not access the module-local binding.",
-      "deepExplanation": "Modules are also strict by default.",
-      "productionExample": "Work through the accompanying code example for \"Scope in ES Modules\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope in ES Modules** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope in ES Modules** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope in ES Modules** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5508,9 +5503,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope in Node.js Modules"
     },
     "answer": {
-      "expectedAnswer": "Node.js commonly provides module-level encapsulation.",
-      "deepExplanation": "In CommonJS: The `secret` binding is not automatically a global variable. Modern Node.js also supports ES modules.",
-      "productionExample": "Work through the accompanying code example for \"Scope in Node.js Modules\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope in Node.js Modules** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope in Node.js Modules** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope in Node.js Modules** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5613,9 +5608,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "CommonJS Scope vs ES Module Scope"
     },
     "answer": {
-      "expectedAnswer": "Feature – CommonJS – ES Modules",
-      "deepExplanation": "Syntax – `require`, `module.exports` – `import`, `export` Top-level encapsulation – Module wrapper – Native module scope Strict mode – Not automatically equivalent to ESM semantics – Strict by default Static analysis – More limited – Strong static structure Tree shaking – Tool-dependent – Better suited Browser native support – No – Yes",
-      "productionExample": "Work through the accompanying code example for \"CommonJS Scope vs ES Module Scope\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**CommonJS Scope vs ES Module Scope** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**CommonJS Scope vs ES Module Scope** should explain module-scoped bindings, imports/exports, top-level encapsulation, and why ESM reduces accidental globals.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **CommonJS Scope vs ES Module Scope** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5718,9 +5713,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Scope of a Class?"
     },
     "answer": {
-      "expectedAnswer": "A class declaration creates a lexical binding.",
-      "deepExplanation": "The class name is available in its relevant lexical scope and has TDZ behavior before initialization.",
-      "productionExample": "Work through the accompanying code example for \"What is the Scope of a Class?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Scope of a Class?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Scope of a Class?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Scope of a Class?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5823,9 +5818,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Does a Class Name Exist Inside Its Body?"
     },
     "answer": {
-      "expectedAnswer": "Yes. This supports recursive class references.",
-      "deepExplanation": "Yes. This supports recursive class references.",
-      "productionExample": "Work through the accompanying code example for \"Does a Class Name Exist Inside Its Body?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Does a Class Name Exist Inside Its Body?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Does a Class Name Exist Inside Its Body?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Does a Class Name Exist Inside Its Body?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -5928,9 +5923,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Scope and Memory Lifetime?"
     },
     "answer": {
-      "expectedAnswer": "Scope controls accessibility. Reachability controls garbage collection.",
-      "deepExplanation": "These are related but not identical. The lexical binding `data` is no longer accessible by ordinary name lookup from outside `create`, but it remains reachable through the returned function.",
-      "productionExample": "Work through the accompanying code example for \"What is Scope and Memory Lifetime?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Scope and Memory Lifetime?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Scope and Memory Lifetime?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Scope and Memory Lifetime?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6033,9 +6028,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Can Event Listeners Cause Scope-Related Memory Retention?"
     },
     "answer": {
-      "expectedAnswer": "The listener retains access to `largeData`.",
-      "deepExplanation": "Production pattern: Explicit cleanup is important when listener lifetime should end.",
-      "productionExample": "Work through the accompanying code example for \"How Can Event Listeners Cause Scope-Related Memory Retention?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Can Event Listeners Cause Scope-Related Memory Retention?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Can Event Listeners Cause Scope-Related Memory Retention?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Can Event Listeners Cause Scope-Related Memory Retention?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6138,9 +6133,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope Best Practices for Enterprise JavaScript"
     },
     "answer": {
-      "expectedAnswer": "Prefer: `const` by default `let` when reassignment is required avoid `var` in modern code ES modules small lexical scopes explicit dependencies minimal globals meaningful names controlled closure lifetimes cleanup for event listeners linting for scope-related bugs",
-      "deepExplanation": "Useful lint rules include:",
-      "productionExample": "Work through the accompanying code example for \"Scope Best Practices for Enterprise JavaScript\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope Best Practices for Enterprise JavaScript** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope Best Practices for Enterprise JavaScript** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope Best Practices for Enterprise JavaScript** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6243,9 +6238,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Senior Scenario: Design Scope Boundaries for a Large Frontend"
     },
     "answer": {
-      "expectedAnswer": "Suppose a frontend has: Avoid: Prefer: A scope boundary is also an architecture boundary.",
-      "deepExplanation": "Good scope design reduces accidental coupling.",
-      "productionExample": "Work through the accompanying code example for \"Senior Scenario: Design Scope Boundaries for a Large Frontend\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Senior Scenario: Design Scope Boundaries for a Large Frontend** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Senior Scenario: Design Scope Boundaries for a Large Frontend** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Senior Scenario: Design Scope Boundaries for a Large Frontend** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6348,9 +6343,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope and Dependency Injection"
     },
     "answer": {
-      "expectedAnswer": "Lexical scope can provide simple dependency injection: The returned methods close over `httpClient`.",
-      "deepExplanation": "Benefits: testability explicit dependencies no global service lookup easy mocking",
-      "productionExample": "Work through the accompanying code example for \"Scope and Dependency Injection\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope and Dependency Injection** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope and Dependency Injection** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope and Dependency Injection** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6453,9 +6448,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope and Testability"
     },
     "answer": {
-      "expectedAnswer": "Prefer: over: Explicit lexical dependencies are easier to replace in tests.",
-      "deepExplanation": "Prefer: over: Explicit lexical dependencies are easier to replace in tests.",
-      "productionExample": "Work through the accompanying code example for \"Scope and Testability\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope and Testability** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope and Testability** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope and Testability** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6558,9 +6553,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope and Functional Programming"
     },
     "answer": {
-      "expectedAnswer": "Functional programming benefits from local immutable bindings.",
-      "deepExplanation": "Local scope reduces accidental shared mutation.",
-      "productionExample": "Work through the accompanying code example for \"Scope and Functional Programming\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope and Functional Programming** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope and Functional Programming** should explain function-level binding visibility, parameters/local variables, shadowing, and how closures retain access to the lexical environment.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope and Functional Programming** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6663,9 +6658,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope and Security"
     },
     "answer": {
-      "expectedAnswer": "Good scope boundaries reduce accidental exposure.",
-      "deepExplanation": "Avoid: Prefer keeping sensitive values in controlled closures or platform mechanisms appropriate to the architecture. For browser authentication, never treat JavaScript scope itself as a security boundary. XSS can execute code with the application's privileges.",
-      "productionExample": "Work through the accompanying code example for \"Scope and Security\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope and Security** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope and Security** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope and Security** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6768,9 +6763,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope and Performance Optimization"
     },
     "answer": {
-      "expectedAnswer": "Avoid premature optimization.",
-      "deepExplanation": "Potential concerns: long-lived closures retained large objects unnecessary allocations dynamic `eval` difficult-to-optimize dynamic code Measure using: Performance panel Memory panel heap snapshots allocation profiling production telemetry",
-      "productionExample": "Work through the accompanying code example for \"Scope and Performance Optimization\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope and Performance Optimization** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope and Performance Optimization** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope and Performance Optimization** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6873,9 +6868,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope and Garbage Collection"
     },
     "answer": {
-      "expectedAnswer": "Garbage collection is based primarily on reachability, not lexical scope alone.",
-      "deepExplanation": "After `fn` is removed and assuming no other references exist, the captured environment and object can eventually become unreachable and collectible.",
-      "productionExample": "Work through the accompanying code example for \"Scope and Garbage Collection\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope and Garbage Collection** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope and Garbage Collection** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope and Garbage Collection** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -6978,9 +6973,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Do You Detect Closure Retention?"
     },
     "answer": {
-      "expectedAnswer": "Use browser DevTools: Reproduce the interaction. Capture a heap snapshot. Look for retained objects. Inspect retaining paths. Identify event listeners or closures. Remove unnecessary references. Re-run the snapshot.",
-      "deepExplanation": "Conceptual path:",
-      "productionExample": "Work through the accompanying code example for \"How Do You Detect Closure Retention?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Do You Detect Closure Retention?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Do You Detect Closure Retention?** should explain that functions retain access to their surrounding lexical environment, enabling private state but also intentional lifetime retention.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Do You Detect Closure Retention?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7083,9 +7078,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Scope of `for...of` with `const`?"
     },
     "answer": {
-      "expectedAnswer": "The loop variable is scoped to the loop iteration environment.",
-      "deepExplanation": "The loop variable is scoped to the loop iteration environment.",
-      "productionExample": "Work through the accompanying code example for \"What is the Scope of `for...of` with `const`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Scope of `for...of` with `const`?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Scope of `for...of` with `const`?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Scope of `for...of` with `const`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7188,9 +7183,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Can `const` Be Mutated?"
     },
     "answer": {
-      "expectedAnswer": "The binding cannot be reassigned, but an object referenced by the binding can be mutated.",
-      "deepExplanation": "But: throws a `TypeError`. `const` protects the binding, not deep object contents.",
-      "productionExample": "Work through the accompanying code example for \"Can `const` Be Mutated?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Can `const` Be Mutated?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Can `const` Be Mutated?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Can `const` Be Mutated?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7293,9 +7288,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Scope-Based Encapsulation?"
     },
     "answer": {
-      "expectedAnswer": "Encapsulation can be achieved with module and lexical boundaries.",
-      "deepExplanation": "`endpoint` is implementation detail. This is useful in: repositories services factories adapters frontend infrastructure packages",
-      "productionExample": "Work through the accompanying code example for \"What is Scope-Based Encapsulation?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Scope-Based Encapsulation?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Scope-Based Encapsulation?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Scope-Based Encapsulation?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7398,9 +7393,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Support the Repository Pattern?"
     },
     "answer": {
-      "expectedAnswer": "The repository closes over: `apiClient` `basePath`",
-      "deepExplanation": "This avoids global dependencies.",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Support the Repository Pattern?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Support the Repository Pattern?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Support the Repository Pattern?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Support the Repository Pattern?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7503,9 +7498,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Support the Strategy Pattern?"
     },
     "answer": {
-      "expectedAnswer": "The strategy is injected through lexical scope.",
-      "deepExplanation": "The strategy is injected through lexical scope.",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Support the Strategy Pattern?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Support the Strategy Pattern?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Support the Strategy Pattern?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Support the Strategy Pattern?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7608,9 +7603,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Support Feature Flags?"
     },
     "answer": {
-      "expectedAnswer": "This makes configuration explicit and testable.",
-      "deepExplanation": "This makes configuration explicit and testable.",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Support Feature Flags?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Support Feature Flags?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Support Feature Flags?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Support Feature Flags?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7713,9 +7708,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Scope Pollution?"
     },
     "answer": {
-      "expectedAnswer": "Scope pollution occurs when too many unrelated bindings exist in a shared scope.",
-      "deepExplanation": "Bad: at a broad global level. Better: Use modules and local scopes to isolate concerns.",
-      "productionExample": "Work through the accompanying code example for \"What is Scope Pollution?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Scope Pollution?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Scope Pollution?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Scope Pollution?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7818,9 +7813,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Affect API Design?"
     },
     "answer": {
-      "expectedAnswer": "A module can expose a small public API while hiding implementation details.",
-      "deepExplanation": "Consumers receive the public API without needing internal implementation details.",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Affect API Design?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Affect API Design?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Affect API Design?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Affect API Design?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -7923,9 +7918,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is a Scope Boundary in Micro Frontends?"
     },
     "answer": {
-      "expectedAnswer": "Each micro frontend should minimize global assumptions.",
-      "deepExplanation": "Prefer: Avoid: Shared dependencies should be explicit and versioned.",
-      "productionExample": "Work through the accompanying code example for \"What is a Scope Boundary in Micro Frontends?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is a Scope Boundary in Micro Frontends?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is a Scope Boundary in Micro Frontends?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is a Scope Boundary in Micro Frontends?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -8028,9 +8023,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Scope and Monorepos"
     },
     "answer": {
-      "expectedAnswer": "A monorepo should expose package APIs rather than allowing every package to reach into internal implementation files.",
-      "deepExplanation": "Good module boundaries become organizational boundaries.",
-      "productionExample": "Work through the accompanying code example for \"Scope and Monorepos\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Scope and Monorepos** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Scope and Monorepos** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Scope and Monorepos** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -8133,9 +8128,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Scope Improve Code Review?"
     },
     "answer": {
-      "expectedAnswer": "Reviewers can reason about: where a variable originates who can mutate it what dependencies exist how long state can remain reachable whether a function has hidden dependencies",
-      "deepExplanation": "Explicit scope reduces the surface area a reviewer must understand.",
-      "productionExample": "Work through the accompanying code example for \"How Does Scope Improve Code Review?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Scope Improve Code Review?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Scope Improve Code Review?** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Scope Improve Code Review?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -8238,9 +8233,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Senior Interview: Explain `var`, `let`, and `const`"
     },
     "answer": {
-      "expectedAnswer": "`var` is function-scoped and has legacy declaration semantics. `let` and `const` are block-scoped lexical bindings and have TDZ behavior. `const` prevents reassignment of the binding but does not make referenced objects immutable.",
-      "deepExplanation": "Feature – `var` – `let` – `const` Scope – Function – Block – Block Redeclaration in same scope – Allowed in applicable cases – Not allowed – Not allowed Reassignment – Yes – Yes – No TDZ – No – Yes – Yes Initialization required – No – No – Yes Modern default – Avoid – Use when needed – Preferred",
-      "productionExample": "Work through the accompanying code example for \"Senior Interview: Explain `var`, `let`, and `const`\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Senior Interview: Explain `var`, `let`, and `const`** should explain `var`'s function scope and pre-initialization `undefined` behavior, and contrast it with `let`/`const`.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Senior Interview: Explain `var`, `let`, and `const`** should explain `var`'s function scope and pre-initialization `undefined` behavior, and contrast it with `let`/`const`.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Senior Interview: Explain `var`, `let`, and `const`** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",
@@ -8343,9 +8338,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE2_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Principal Interview: Explain Scope as an Architecture Concept"
     },
     "answer": {
-      "expectedAnswer": "At principal level, scope is not just a language feature.",
-      "deepExplanation": "It is an architecture mechanism. Strong answer: I use scope boundaries to control visibility, ownership, coupling, and dependency direction. At the JavaScript level, lexical and module scope prevent accidental access. At the architecture level, package public APIs and feature boundaries provide the same principle at a larger scale. Good scope design therefore improves correctness, testability, security posture, maintainability, and team scalability.",
-      "productionExample": "Work through the accompanying code example for \"Principal Interview: Explain Scope as an Architecture Concept\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Principal Interview: Explain Scope as an Architecture Concept** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Principal Interview: Explain Scope as an Architecture Concept** is about JavaScript lexical name resolution. Explain where bindings are created, how lookup walks enclosing lexical environments, and how block/function/module boundaries affect visibility.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction makeCounter(): () => number {\n  let count = 0;\n\n  return function increment(): number {\n    count += 1;\n    return count;\n  };\n}\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst makeCounter = () => {\n  let count = 0;\n\n  return () => ++count;\n};\n\nconst next = makeCounter();\nconst first = next();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Principal Interview: Explain Scope as an Architecture Concept** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "`var` → function scope",
         "`let` → block scope + TDZ",

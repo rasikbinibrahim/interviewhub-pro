@@ -49,16 +49,22 @@ export const MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS: MockCodingQu
       ],
     },
     solution: {
-      algorithm: 'Copy the array with .slice() to avoid mutating the input, then call .reverse() on the copy.',
-      dryRun: '[1,2,3,4,5] -> slice -> [1,2,3,4,5] -> reverse() -> [5,4,3,2,1]',
-      javascriptSolution: `function reverseArrayBuiltIn(arr) {
-  return arr.slice().reverse();
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function reverseArrayManual<T>(arr:T[]):T[]{
+  const copy=arr.slice();
+  let left=0,right=copy.length-1;
+  while(left<right){ const temp=copy[left]; copy[left]=copy[right]; copy[right]=temp; left+=1; right-=1; }
+  return copy;
 }`,
-      typescriptSolution: `function reverseArrayBuiltIn<T>(arr: T[]): T[] {
-  return arr.slice().reverse();
+      typescriptSolution: `function reverseArrayManual<T>(arr:T[]):T[]{
+  const copy=arr.slice();
+  let left=0,right=copy.length-1;
+  while(left<right){ const temp=copy[left]; copy[left]=copy[right]; copy[right]=temp; left+=1; right-=1; }
+  return copy;
 }`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the copy.',
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Calling `arr.reverse()` directly, mutating the caller\'s array — a common source of subtle bugs when the caller did not expect it.',
         'Assuming `.reverse()` returns a new array; it returns the same, now-reversed, array reference.',
@@ -106,32 +112,20 @@ export const MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS: MockCodingQu
       ],
     },
     solution: {
-      algorithm: 'Copy the array. With left=0 and right=length-1, repeatedly swap arr[left] and arr[right], incrementing left and decrementing right, until left >= right.',
-      dryRun: '[1,2,3,4,5] copy\nleft=0,right=4: swap -> [5,2,3,4,1]\nleft=1,right=3: swap -> [5,4,3,2,1]\nleft=2,right=2: stop',
-      javascriptSolution: `function reverseArrayManual(arr) {
-  const result = arr.slice();
-  let left = 0;
-  let right = result.length - 1;
-  while (left < right) {
-    [result[left], result[right]] = [result[right], result[left]];
-    left++;
-    right--;
-  }
-  return result;
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function reverseArrayManual<T>(arr:T[]):T[]{
+  const copy=arr.slice(); let left=0,right=copy.length-1;
+  while(left<right){ const temp=copy[left]; copy[left]=copy[right]; copy[right]=temp; left+=1; right-=1; }
+  return copy;
 }`,
-      typescriptSolution: `function reverseArrayManual<T>(arr: T[]): T[] {
-  const result = arr.slice();
-  let left = 0;
-  let right = result.length - 1;
-  while (left < right) {
-    [result[left], result[right]] = [result[right], result[left]];
-    left++;
-    right--;
-  }
-  return result;
+      typescriptSolution: `function reverseArrayManual<T>(arr:T[]):T[]{
+  const copy=arr.slice(); let left=0,right=copy.length-1;
+  while(left<right){ const temp=copy[left]; copy[left]=copy[right]; copy[right]=temp; left+=1; right-=1; }
+  return copy;
 }`,
-      timeComplexity: 'O(n) — each element is visited once via the two pointers.',
-      spaceComplexity: 'O(n) for the copy (O(1) extra beyond the required output).',
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Using `left <= right` as the loop condition, which re-swaps the middle element with itself on odd-length arrays — harmless here, but signals imprecise reasoning about the invariant.',
         'Forgetting to copy the array first, silently mutating the caller\'s data despite the "no built-in" constraint being about `.reverse()`, not about mutation.',
@@ -178,32 +172,21 @@ export const MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS: MockCodingQu
       ],
     },
     solution: {
-      algorithm: 'Copy the array. With left=start and right=end, swap and move pointers inward until left >= right, leaving indices outside [start, end] untouched.',
-      dryRun: '[1,2,3,4,5], start=1,end=3\nleft=1,right=3: swap arr[1],arr[3] -> [1,4,3,2,5]\nleft=2,right=2: stop',
-      javascriptSolution: `function reversePart(arr, start, end) {
-  const result = arr.slice();
-  let left = start;
-  let right = end;
-  while (left < right) {
-    [result[left], result[right]] = [result[right], result[left]];
-    left++;
-    right--;
-  }
-  return result;
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function reverseRange<T>(arr:T[],start:number,end:number):T[]{
+  const copy=arr.slice(); let left=Math.max(0,start),right=Math.min(copy.length-1,end);
+  while(left<right){ const temp=copy[left]; copy[left]=copy[right]; copy[right]=temp; left+=1; right-=1; }
+  return copy;
 }`,
-      typescriptSolution: `function reversePart<T>(arr: T[], start: number, end: number): T[] {
-  const result = arr.slice();
-  let left = start;
-  let right = end;
-  while (left < right) {
-    [result[left], result[right]] = [result[right], result[left]];
-    left++;
-    right--;
-  }
-  return result;
+      typescriptSolution: `function reverseRange<T>(arr:T[],start:number,end:number):T[]{
+  const copy=arr.slice(); let left=Math.max(0,start),right=Math.min(copy.length-1,end);
+  while(left<right){ const temp=copy[left]; copy[left]=copy[right]; copy[right]=temp; left+=1; right-=1; }
+  return copy;
 }`,
-      timeComplexity: 'O(end - start).',
-      spaceComplexity: 'O(n) for the copy.',
+      builtInSolution: `const reverseRangeBuiltIn = <T>(arr:T[],start:number,end:number) => { const copy=arr.slice(); copy.splice(start,end-start+1,...copy.slice(start,end+1).reverse()); return copy; };`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Reversing the whole array and then trying to splice the sub-range back in, which is more work and error-prone versus bounding the pointers directly.',
         'Off-by-one errors when the range is meant to be exclusive of `end` versus inclusive — this problem treats `end` as inclusive.',
@@ -250,36 +233,19 @@ export const MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS: MockCodingQu
       ],
     },
     solution: {
-      algorithm: 'Copy the array. For each block start i (stepping by k), reverse the sub-range [i, min(i + k - 1, length - 1)] using the two-pointer swap.',
-      dryRun: "[1..8], k=3\ni=0: reverse [0,2] -> [3,2,1,4,5,6,7,8]\ni=3: reverse [3,5] -> [3,2,1,6,5,4,7,8]\ni=6: reverse [6,7] (partial block) -> [3,2,1,6,5,4,8,7]",
-      javascriptSolution: `function reverseEveryK(arr, k) {
-  const result = arr.slice();
-  for (let i = 0; i < result.length; i += k) {
-    let left = i;
-    let right = Math.min(i + k - 1, result.length - 1);
-    while (left < right) {
-      [result[left], result[right]] = [result[right], result[left]];
-      left++;
-      right--;
-    }
-  }
-  return result;
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function reverseEveryK<T>(arr:T[],k:number):T[]{
+  const copy=arr.slice(); if(k<=1) return copy;
+  for(let start=0; start<copy.length; start+=k){ let left=start,right=Math.min(start+k-1,copy.length-1); while(left<right){ const temp=copy[left]; copy[left]=copy[right]; copy[right]=temp; left+=1; right-=1; }} return copy;
 }`,
-      typescriptSolution: `function reverseEveryK<T>(arr: T[], k: number): T[] {
-  const result = arr.slice();
-  for (let i = 0; i < result.length; i += k) {
-    let left = i;
-    let right = Math.min(i + k - 1, result.length - 1);
-    while (left < right) {
-      [result[left], result[right]] = [result[right], result[left]];
-      left++;
-      right--;
-    }
-  }
-  return result;
+      typescriptSolution: `function reverseEveryK<T>(arr:T[],k:number):T[]{
+  const copy=arr.slice(); if(k<=1) return copy;
+  for(let start=0; start<copy.length; start+=k){ let left=start,right=Math.min(start+k-1,copy.length-1); while(left<right){ const temp=copy[left]; copy[left]=copy[right]; copy[right]=temp; left+=1; right-=1; }} return copy;
 }`,
-      timeComplexity: 'O(n) — every element participates in exactly one swap pair within its block.',
-      spaceComplexity: 'O(n) for the copy.',
+      builtInSolution: `const reverseEveryK = <T>(arr:T[],k:number) => { const result:T[]=[]; for(let i=0;i<arr.length;i+=k) result.push(...arr.slice(i,i+k).reverse()); return result; };`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Forgetting the `Math.min` bound, causing an out-of-bounds `right` pointer on the final partial block.',
         'Reversing the entire array once instead of block-by-block, which produces a completely different (and wrong) result.',
@@ -322,18 +288,13 @@ export const MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS: MockCodingQu
       hints: ['An empty array has nothing to rotate — guard it explicitly.', 'The rest of the array (index 1 onward) followed by the first element gives the rotated result.', '`arr.slice(1).concat(arr.slice(0, 1))` expresses this directly.'],
     },
     solution: {
-      algorithm: 'If the array is empty, return []. Otherwise concatenate everything after index 0 with the element at index 0.',
-      dryRun: '[1,2,3,4,5] -> slice(1)=[2,3,4,5], slice(0,1)=[1] -> concat -> [2,3,4,5,1]',
-      javascriptSolution: `function rotateLeftOne(arr) {
-  if (arr.length === 0) return [];
-  return arr.slice(1).concat(arr.slice(0, 1));
-}`,
-      typescriptSolution: `function rotateLeftOne<T>(arr: T[]): T[] {
-  if (arr.length === 0) return [];
-  return arr.slice(1).concat(arr.slice(0, 1));
-}`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the result.',
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function rotateLeftOne<T>(arr:T[]):T[]{ if(arr.length===0)return []; const result:T[]=[]; for(let i=1;i<arr.length;i+=1)result.push(arr[i]); result.push(arr[0]); return result; }`,
+      typescriptSolution: `function rotateLeftOne<T>(arr:T[]):T[]{ if(arr.length===0)return []; const result:T[]=[]; for(let i=1;i<arr.length;i+=1)result.push(arr[i]); result.push(arr[0]); return result; }`,
+      builtInSolution: `const rotateLeftOne = <T>(arr:T[]) => arr.length===0 ? [] : [...arr.slice(1),arr[0]];`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Not handling the empty-array case, though `slice`/`concat` on an empty array happen to still work here — worth confirming explicitly rather than by accident.', 'Using `.shift()` + `.push()`, which mutates the input array in place.'],
       followUpQuestions: ['How would you rotate left by one in true O(1) extra space, in place?', 'How does this generalize to "Rotate Array Left by K Positions"?'],
       similarQuestions: ['Rotate Array Right by One', 'Rotate Array Left by K Positions'],
@@ -372,18 +333,13 @@ export const MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS: MockCodingQu
       hints: ['Guard the empty-array case explicitly.', 'The last element, followed by everything before it, gives the rotated result.', '`arr.slice(-1).concat(arr.slice(0, -1))` expresses this directly.'],
     },
     solution: {
-      algorithm: 'If the array is empty, return []. Otherwise concatenate the last element with everything before it.',
-      dryRun: '[1,2,3,4,5] -> slice(-1)=[5], slice(0,-1)=[1,2,3,4] -> concat -> [5,1,2,3,4]',
-      javascriptSolution: `function rotateRightOne(arr) {
-  if (arr.length === 0) return [];
-  return arr.slice(-1).concat(arr.slice(0, -1));
-}`,
-      typescriptSolution: `function rotateRightOne<T>(arr: T[]): T[] {
-  if (arr.length === 0) return [];
-  return arr.slice(-1).concat(arr.slice(0, -1));
-}`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the result.',
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function rotateRightOne<T>(arr:T[]):T[]{ if(arr.length===0)return []; const result=[arr[arr.length-1]] as T[]; for(let i=0;i<arr.length-1;i+=1)result.push(arr[i]); return result; }`,
+      typescriptSolution: `function rotateRightOne<T>(arr:T[]):T[]{ if(arr.length===0)return []; const result=[arr[arr.length-1]] as T[]; for(let i=0;i<arr.length-1;i+=1)result.push(arr[i]); return result; }`,
+      builtInSolution: `const rotateRightOne = <T>(arr:T[]) => arr.length===0 ? [] : [arr.at(-1)!,...arr.slice(0,-1)];`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: ['Using `.pop()` + `.unshift()`, which mutates the input and is O(n) per `.unshift()` call anyway.', 'Mixing up left and right rotation direction under time pressure.'],
       followUpQuestions: ['How would you rotate right by one in true O(1) extra space, in place?', 'How does this generalize to "Rotate Array Right by K Positions"?'],
       similarQuestions: ['Rotate Array Left by One', 'Rotate Array Right by K Positions'],
@@ -431,40 +387,13 @@ export const MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS: MockCodingQu
       ],
     },
     solution: {
-      algorithm: 'Built-in approach: arr.slice(normalizedK).concat(arr.slice(0, normalizedK)). Manual approach: single pass creating new array with result[i] = arr[(i + normalizedK) % n] or 3-step reverse technique.',
-      dryRun: '[1,2,3,4,5], k=7, length=5 -> normalized k=((7%5)+5)%5=2 -> slice(2)=[3,4,5], slice(0,2)=[1,2] -> [3,4,5,1,2]',
-      javascriptSolution: `function rotateLeftK(arr, k) {
-  if (arr.length === 0) return [];
-  const n = arr.length;
-  const normalizedK = ((k % n) + n) % n;
-
-  // Built-in approach (slice + concat):
-  return arr.slice(normalizedK).concat(arr.slice(0, normalizedK));
-
-  // Manual low-level approach (without built-in functions):
-  // const result = new Array(n);
-  // for (let i = 0; i < n; i++) {
-  //   result[i] = arr[(i + normalizedK) % n];
-  // }
-  // return result;
-}`,
-      typescriptSolution: `function rotateLeftK<T>(arr: T[], k: number): T[] {
-  if (arr.length === 0) return [];
-  const n = arr.length;
-  const normalizedK = ((k % n) + n) % n;
-
-  // Built-in approach (slice + concat):
-  return arr.slice(normalizedK).concat(arr.slice(0, normalizedK));
-
-  // Manual low-level approach (without built-in functions):
-  // const result: T[] = new Array(n);
-  // for (let i = 0; i < n; i++) {
-  //   result[i] = arr[(i + normalizedK) % n]!;
-  // }
-  // return result;
-}`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the result.',
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function rotateLeftK<T>(arr:T[],k:number):T[]{ if(arr.length===0)return []; const n=((k%arr.length)+arr.length)%arr.length; const result:T[]=[]; for(let i=n;i<arr.length;i+=1)result.push(arr[i]); for(let i=0;i<n;i+=1)result.push(arr[i]); return result; }`,
+      typescriptSolution: `function rotateLeftK<T>(arr:T[],k:number):T[]{ if(arr.length===0)return []; const n=((k%arr.length)+arr.length)%arr.length; const result:T[]=[]; for(let i=n;i<arr.length;i+=1)result.push(arr[i]); for(let i=0;i<n;i+=1)result.push(arr[i]); return result; }`,
+      builtInSolution: `const rotateLeftK = <T>(arr:T[],k:number) => { if(arr.length===0)return []; const n=((k%arr.length)+arr.length)%arr.length; return arr.slice(n).concat(arr.slice(0,n)); };`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Not normalizing k with the double-modulo trick, causing incorrect or negative slice indices when k is negative or larger than the array length.',
         'Rotating one step at a time in a loop k times, which is O(n*k) instead of O(n) and is disastrous for large k.',
@@ -516,40 +445,13 @@ export const MOCK_JAVASCRIPT_ARRAY_REVERSE_ROTATE_CODING_QUESTIONS: MockCodingQu
       ],
     },
     solution: {
-      algorithm: 'Built-in approach: arr.slice(n - normalizedK).concat(arr.slice(0, n - normalizedK)). Manual approach: single pass creating new array with result[(i + normalizedK) % n] = arr[i] or 3-step reverse technique.',
-      dryRun: '[1,2,3,4,5], k=7, length=5 -> normalized k=2 -> slice(5-2)=slice(3)=[4,5], slice(0,3)=[1,2,3] -> [4,5,1,2,3]',
-      javascriptSolution: `function rotateRightK(arr, k) {
-  if (arr.length === 0) return [];
-  const n = arr.length;
-  const normalizedK = ((k % n) + n) % n;
-
-  // Built-in approach (slice + concat):
-  return arr.slice(n - normalizedK).concat(arr.slice(0, n - normalizedK));
-
-  // Manual low-level approach (without built-in functions):
-  // const result = new Array(n);
-  // for (let i = 0; i < n; i++) {
-  //   result[(i + normalizedK) % n] = arr[i];
-  // }
-  // return result;
-}`,
-      typescriptSolution: `function rotateRightK<T>(arr: T[], k: number): T[] {
-  if (arr.length === 0) return [];
-  const n = arr.length;
-  const normalizedK = ((k % n) + n) % n;
-
-  // Built-in approach (slice + concat):
-  return arr.slice(n - normalizedK).concat(arr.slice(0, n - normalizedK));
-
-  // Manual low-level approach (without built-in functions):
-  // const result: T[] = new Array(n);
-  // for (let i = 0; i < n; i++) {
-  //   result[(i + normalizedK) % n] = arr[i]!;
-  // }
-  // return result;
-}`,
-      timeComplexity: 'O(n).',
-      spaceComplexity: 'O(n) for the result.',
+      algorithm: 'Step 1: validate edge cases. Step 2: implement the core logic manually without the built-in. Step 3: compare with the built-in/practical implementation. Step 4: verify output and complexity.',
+      dryRun: 'Input -> identify state -> process left-to-right -> verify expected output.',
+      javascriptSolution: `function rotateRightK<T>(arr:T[],k:number):T[]{ if(arr.length===0)return []; const n=((k%arr.length)+arr.length)%arr.length; const split=arr.length-n; const result:T[]=[]; for(let i=split;i<arr.length;i+=1)result.push(arr[i]); for(let i=0;i<split;i+=1)result.push(arr[i]); return result; }`,
+      typescriptSolution: `function rotateRightK<T>(arr:T[],k:number):T[]{ if(arr.length===0)return []; const n=((k%arr.length)+arr.length)%arr.length; const split=arr.length-n; const result:T[]=[]; for(let i=split;i<arr.length;i+=1)result.push(arr[i]); for(let i=0;i<split;i+=1)result.push(arr[i]); return result; }`,
+      builtInSolution: `const rotateRightK = <T>(arr:T[],k:number) => { if(arr.length===0)return []; const n=((k%arr.length)+arr.length)%arr.length; return arr.slice(-n).concat(arr.slice(0,-n)); };`,
+      timeComplexity: 'O(n) for a linear traversal, or O(1) where the operation is a direct property/index lookup.',
+      spaceComplexity: 'O(n) for a new result collection; O(h) recursion stack when recursive.',
       commonMistakes: [
         'Forgetting that `arr.slice(n - 0)` when normalizedK is 0 must return the full slice starting at n, not an empty rotation — this works correctly since `slice(n)` on a length-n array is `[]`, concatenated with the full `slice(0, n)`.',
         'Reimplementing this as "rotate left by (n - k)" without re-deriving the normalization, risking an off-by-one when k is already 0.',

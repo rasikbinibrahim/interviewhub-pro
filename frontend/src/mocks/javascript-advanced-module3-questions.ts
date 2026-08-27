@@ -43,9 +43,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Hoisting?"
     },
     "answer": {
-      "expectedAnswer": "Hoisting is the common term used to describe JavaScript's behavior where declarations are processed before normal statement execution within an execution context.",
-      "deepExplanation": "Example: Output: A useful mental model is: But avoid imagining that JavaScript literally moves source-code lines upward. Conceptually: Hoisting is a developer-friendly term for declaration processing before executable code runs. JavaScript does not physically move declarations to the top. Different declaration types have different initialization rules.",
-      "productionExample": "Work through the accompanying code example for \"What is Hoisting?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Hoisting?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Hoisting?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Hoisting?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -145,9 +145,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Variable Hoisting with `var`?"
     },
     "answer": {
-      "expectedAnswer": "Example: Output: Conceptually: The `var` binding is created. It is initialized to `undefined`. Execution begins. First `console.log()` reads `undefined`. Assignment executes. `count` becomes `10`.",
-      "deepExplanation": "Example: Output: Conceptually: The `var` binding is created. It is initialized to `undefined`. Execution begins. First `console.log()` reads `undefined`. Assignment executes. `count` becomes `10`.",
-      "productionExample": "Work through the accompanying code example for \"What is Variable Hoisting with `var`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Variable Hoisting with `var`?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Variable Hoisting with `var`?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Variable Hoisting with `var`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -247,9 +247,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Is `let` Hoisted?"
     },
     "answer": {
-      "expectedAnswer": "Yes, but do not describe it simply as “not hoisted.”",
-      "deepExplanation": "Consider: Result: The lexical binding is established before execution reaches the declaration, but it is not initialized for access during the Temporal Dead Zone. `let` declarations participate in declaration instantiation, but the binding remains uninitialized until execution reaches the declaration. Access before initialization throws a `ReferenceError`.",
-      "productionExample": "Work through the accompanying code example for \"Is `let` Hoisted?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Is `let` Hoisted?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Is `let` Hoisted?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Is `let` Hoisted?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -349,9 +349,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Temporal Dead Zone?"
     },
     "answer": {
-      "expectedAnswer": "The Temporal Dead Zone is the period from entering the relevant lexical scope until a `let`, `const`, or class binding is initialized.",
-      "deepExplanation": "Example: Diagram:",
-      "productionExample": "Work through the accompanying code example for \"What is the Temporal Dead Zone?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Temporal Dead Zone?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Temporal Dead Zone?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Temporal Dead Zone?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -451,9 +451,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Why Does `var` Return `undefined` but `let` Throw?"
     },
     "answer": {
-      "expectedAnswer": "Why Does `var` Return `undefined` but `let` Throw — see the accompanying code example in this Hoisting module for a concrete demonstration and its expected output.",
-      "deepExplanation": "Compare: with: Feature – `var` – `let` Scope – Function – Block Early read – `undefined` – `ReferenceError` TDZ – No – Yes Reassignment – Yes – Yes Redeclaration – Allowed in applicable scope – Not allowed in same lexical scope",
-      "productionExample": "Work through the accompanying code example for \"Why Does `var` Return `undefined` but `let` Throw?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Why Does `var` Return `undefined` but `let` Throw?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Why Does `var` Return `undefined` but `let` Throw?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Why Does `var` Return `undefined` but `let` Throw?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -553,9 +553,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Happens with `const`?"
     },
     "answer": {
-      "expectedAnswer": "`const` is also lexical and has TDZ behavior.",
-      "deepExplanation": "Result: `const` also requires an initializer: This is invalid:",
-      "productionExample": "Work through the accompanying code example for \"What Happens with `const`?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Happens with `const`?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Happens with `const`?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Happens with `const`?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -655,9 +655,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Function Declaration Hoisting?"
     },
     "answer": {
-      "expectedAnswer": "Function declarations can be called before their declaration appears textually.",
-      "deepExplanation": "Output:",
-      "productionExample": "Work through the accompanying code example for \"What is Function Declaration Hoisting?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Function Declaration Hoisting?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Function Declaration Hoisting?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Function Declaration Hoisting?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -757,9 +757,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Function Declaration vs Function Expression"
     },
     "answer": {
-      "expectedAnswer": "Works. Throws: because the `const` binding is in the TDZ before initialization.",
-      "deepExplanation": "Works. Throws: because the `const` binding is in the TDZ before initialization.",
-      "productionExample": "Work through the accompanying code example for \"Function Declaration vs Function Expression\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Function Declaration vs Function Expression** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Function Declaration vs Function Expression** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Function Declaration vs Function Expression** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -859,9 +859,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Are Arrow Functions Hoisted?"
     },
     "answer": {
-      "expectedAnswer": "Arrow functions are expressions.",
-      "deepExplanation": "Example: Result: The problem is not that JavaScript cannot create an arrow function. The `const` binding has not been initialized when `run()` is evaluated.",
-      "productionExample": "Work through the accompanying code example for \"Are Arrow Functions Hoisted?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Are Arrow Functions Hoisted?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Are Arrow Functions Hoisted?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Are Arrow Functions Hoisted?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -961,9 +961,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Happens with `var` Function Expressions?"
     },
     "answer": {
-      "expectedAnswer": "Consider: Result: Why?",
-      "deepExplanation": "Later: assigns the function. This is different from a `ReferenceError`.",
-      "productionExample": "Work through the accompanying code example for \"What Happens with `var` Function Expressions?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Happens with `var` Function Expressions?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Happens with `var` Function Expressions?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Happens with `var` Function Expressions?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1063,9 +1063,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What Happens with a `var` Arrow Function?"
     },
     "answer": {
-      "expectedAnswer": "Result: At the time of the call: The arrow function is assigned only when execution reaches the assignment.",
-      "deepExplanation": "Result: At the time of the call: The arrow function is assigned only when execution reaches the assignment.",
-      "productionExample": "Work through the accompanying code example for \"What Happens with a `var` Arrow Function?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What Happens with a `var` Arrow Function?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What Happens with a `var` Arrow Function?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What Happens with a `var` Arrow Function?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1165,9 +1165,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Are Classes Hoisted?"
     },
     "answer": {
-      "expectedAnswer": "Class declarations are processed as lexical declarations, but their binding cannot be accessed before initialization.",
-      "deepExplanation": "Result: The class binding is in the TDZ before initialization. Do not say: Classes are not hoisted. A better answer: Class declarations are instantiated before execution as lexical bindings, but they remain uninitialized until class evaluation reaches the declaration, so early access triggers the TDZ.",
-      "productionExample": "Work through the accompanying code example for \"Are Classes Hoisted?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Are Classes Hoisted?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Are Classes Hoisted?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Are Classes Hoisted?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1267,9 +1267,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Class Declaration vs Function Declaration"
     },
     "answer": {
-      "expectedAnswer": "Class Declaration vs Function Declaration — see the accompanying code example in this Hoisting module for a concrete demonstration and its expected output.",
-      "deepExplanation": "Throws: But: works. Declaration – Early access Function declaration – Generally works `var` – `undefined` `let` – `ReferenceError` `const` – `ReferenceError` Class – `ReferenceError`",
-      "productionExample": "Work through the accompanying code example for \"Class Declaration vs Function Declaration\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Class Declaration vs Function Declaration** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Class Declaration vs Function Declaration** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Class Declaration vs Function Declaration** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1369,9 +1369,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is Declaration Order?"
     },
     "answer": {
-      "expectedAnswer": "Consider: Execution stops at: The first output is: The second read fails because `b` is in its TDZ.",
-      "deepExplanation": "Declare values before use. Prefer: rather than depending on declaration processing.",
-      "productionExample": "Work through the accompanying code example for \"What is Declaration Order?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is Declaration Order?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is Declaration Order?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is Declaration Order?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1471,9 +1471,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Creation Phase?"
     },
     "answer": {
-      "expectedAnswer": "A common interview model describes execution contexts in two broad phases:",
-      "deepExplanation": "During setup, the runtime establishes bindings and other execution-context state according to ECMAScript semantics. Conceptually: Do not overstate this as a literal ECMAScript “creation phase” algorithm. It is a useful explanatory model.",
-      "productionExample": "Work through the accompanying code example for \"What is the Creation Phase?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Creation Phase?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Creation Phase?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Creation Phase?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1573,9 +1573,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Execution Phase?"
     },
     "answer": {
-      "expectedAnswer": "During execution, JavaScript evaluates statements and expressions in program order.",
-      "deepExplanation": "Example: Output: Hoisting/declaration instantiation does not mean executable statements are randomly reordered.",
-      "productionExample": "Work through the accompanying code example for \"What is the Execution Phase?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Execution Phase?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Execution Phase?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Execution Phase?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1675,9 +1675,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "How Does Hoisting Work Inside Functions?"
     },
     "answer": {
-      "expectedAnswer": "Each function invocation has its own execution context.",
-      "deepExplanation": "Output: Why? Inside `demo`, the local `var value` binding shadows the outer `value`. Conceptually: The lookup finds the local binding first.",
-      "productionExample": "Work through the accompanying code example for \"How Does Hoisting Work Inside Functions?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**How Does Hoisting Work Inside Functions?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**How Does Hoisting Work Inside Functions?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **How Does Hoisting Work Inside Functions?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1777,9 +1777,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Explain Hoisting with Shadowing"
     },
     "answer": {
-      "expectedAnswer": "Example: Output: Not: Because the local `var value` binding exists for the function and shadows the outer binding.",
-      "deepExplanation": "Equivalent interview mental model:",
-      "productionExample": "Work through the accompanying code example for \"Explain Hoisting with Shadowing\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Explain Hoisting with Shadowing** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Explain Hoisting with Shadowing** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Explain Hoisting with Shadowing** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1879,9 +1879,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "What is the Difference Between Hoisting and Initialization?"
     },
     "answer": {
-      "expectedAnswer": "These are different concepts.",
-      "deepExplanation": "Examples:",
-      "productionExample": "Work through the accompanying code example for \"What is the Difference Between Hoisting and Initialization?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**What is the Difference Between Hoisting and Initialization?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**What is the Difference Between Hoisting and Initialization?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **What is the Difference Between Hoisting and Initialization?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",
@@ -1981,9 +1981,9 @@ export const MOCK_JAVASCRIPT_ADVANCED_MODULE3_TECHNICAL_QUESTIONS: MockTechnical
       "question": "Does Hoisting Move Code?"
     },
     "answer": {
-      "expectedAnswer": "No. This is a useful but imperfect teaching analogy: is often explained as:",
-      "deepExplanation": "But JavaScript does not literally rewrite the source file and move the line. A senior engineer should describe declaration instantiation and initialization semantics.",
-      "productionExample": "Work through the accompanying code example for \"Does Hoisting Move Code?\" and verify the documented output before generalizing the behavior to production code.",
+      "expectedAnswer": "**Does Hoisting Move Code?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.",
+      "deepExplanation": "Step 1 — Understand the mechanism.\n\n**Does Hoisting Move Code?** should explain declaration processing before execution without the misleading idea that source lines are literally moved upward; declaration kinds have different initialization rules.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nfunction demo(): string {\n  let result = \"\";\n\n  result += String(value);\n  var value = 10;\n\n  return result;\n}\n\nconst output = demo();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nconst value = 10;\n\nconst output = String(value);\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.",
+      "productionExample": "Use the runtime rule from **Does Hoisting Move Code?** in production only when it makes the behavior more predictable and testable.",
       "bestPractices": [
         "Declare variables before use",
         "Prefer `const`",

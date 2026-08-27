@@ -128,18 +128,18 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Are ES6 Classes?',
     difficulty: 'Easy',
     expectedAnswer:
-      'A JavaScript class is syntax for defining objects and their behavior using a constructor and methods.',
+      '**What Are ES6 Classes?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      "Example: `class User { constructor(name) { this.name = name; } greet() { return \\`Hello ${this.name}\\`; } }` — `new User('Rasik').greet()` outputs `Hello Rasik`. Classes do not introduce a separate inheritance model; JavaScript remains prototype-based under the class syntax.",
+      'Step 1 — Understand the mechanism.\n\n**What Are ES6 Classes?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-157',
     number: 'JSADV-M8-157',
     title: 'What Is a Constructor?',
     difficulty: 'Easy',
-    expectedAnswer: 'A constructor initializes a newly created class instance.',
+    expectedAnswer: '**What Is a Constructor?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      'The constructor runs automatically when the class is instantiated with `new`, assigning arguments such as `name` and `role` onto `this` so the resulting instance carries `employee.name` and `employee.role`.',
+      'Step 1 — Understand the mechanism.\n\n**What Is a Constructor?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-158',
@@ -147,18 +147,18 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Happens When You Use `new` With a Class?',
     difficulty: 'Hard',
     expectedAnswer:
-      "`new` creates a new object, links it to the class's prototype, invokes the constructor with that object as `this`, initializes its properties, and returns the instance.",
+      '**What Happens When You Use `new` With a Class?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      'Conceptually: create object → connect it to `User.prototype` → call the constructor with the new instance as `this` → initialize properties → return the instance. The resulting prototype chain is `user → User.prototype → Object.prototype → null`. Class constructors also cannot normally be called without `new`.',
+      'Step 1 — Understand the mechanism.\n\n**What Happens When You Use `new` With a Class?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-159',
     number: 'JSADV-M8-159',
     title: 'What Is Inheritance in JavaScript Classes?',
     difficulty: 'Medium',
-    expectedAnswer: 'Inheritance allows a derived class to reuse behavior from a base class via `extends`.',
+    expectedAnswer: '**What Is Inheritance in JavaScript Classes?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      '`class Dog extends Animal {}` lets a `Dog` instance call both its own `bark()` and the inherited `speak()`, producing `Bruno makes a sound` then `Bruno barks`. The resulting chain is `dog → Dog.prototype → Animal.prototype → Object.prototype → null`.',
+      'Step 1 — Understand the mechanism.\n\n**What Is Inheritance in JavaScript Classes?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-160',
@@ -166,9 +166,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Is `super`?',
     difficulty: 'Medium',
     expectedAnswer:
-      '`super` is used inside derived classes to access base-class behavior — both the parent constructor and parent methods.',
+      '**What Is `super`?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      '`super(name)` in a derived constructor forwards arguments to the base constructor before `this.breed = breed` runs. `super.speak()` inside an overriding method calls the base implementation, producing `Animal sound + Bark`. Interview rule: in a derived constructor, `super()` must be called before `this` is accessed.',
+      'Step 1 — Understand the mechanism.\n\n**What Is `super`?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-161',
@@ -176,18 +176,18 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Is Method Overriding?',
     difficulty: 'Medium',
     expectedAnswer:
-      "A child class can provide its own implementation of an inherited method, replacing the parent's behavior for that class.",
+      '**What Is Method Overriding?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      "`CardPayment extends Payment` and redefines `process()`, so calling `process()` on a `CardPayment` instance returns `Processing card payment` instead of the generic implementation. This is one mechanism used to achieve polymorphic behavior.",
+      'Step 1 — Understand the mechanism.\n\n**What Is Method Overriding?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-162',
     number: 'JSADV-M8-162',
     title: 'What Are Static Methods?',
     difficulty: 'Medium',
-    expectedAnswer: 'A static method belongs to the class itself rather than its instances.',
+    expectedAnswer: '**What Are Static Methods?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      '`MathUtil.add(10, 20)` returns `30` because `add` is defined with `static`. Calling `util.add(10, 20)` on an instance throws a `TypeError`, since static members are not copied onto `MathUtil.prototype`.',
+      'Step 1 — Understand the mechanism.\n\n**What Are Static Methods?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-163',
@@ -195,9 +195,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Are Static Fields and Static Initialization Blocks?',
     difficulty: 'Hard',
     expectedAnswer:
-      'Modern JavaScript supports static fields and static initialization blocks that run once when the class itself is evaluated.',
+      '**What Are Static Fields and Static Initialization Blocks?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      "`static environment = 'production'` declares a class-level field, and a `static { ... }` block can run setup logic (e.g. reading `globalThis.APP_ENV`) once when the class is defined, before any instance exists. In browser code, avoid assuming `process.env` exists unless the build system provides it.",
+      'Step 1 — Understand the mechanism.\n\n**What Are Static Fields and Static Initialization Blocks?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-164',
@@ -205,18 +205,18 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Are Private Fields?',
     difficulty: 'Medium',
     expectedAnswer:
-      'JavaScript supports true private class fields declared with a leading `#`, accessible only from inside the class body.',
+      '**What Are Private Fields?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      '`#balance` on `BankAccount` can only be read or written through methods like `deposit()`/`getBalance()`; `account.#balance` from outside the class is a syntax error, not just a convention. This is stronger encapsulation than a `_balance` naming convention, which remains fully public.',
+      'Step 1 — Understand the mechanism.\n\n**What Are Private Fields?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-165',
     number: 'JSADV-M8-165',
     title: 'What Are Getters and Setters?',
     difficulty: 'Medium',
-    expectedAnswer: 'Getters expose computed, read-like access to a value, while setters intercept and control assignment.',
+    expectedAnswer: '**What Are Getters and Setters?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      '`get fullName()` and `set fullName(value)` let `user.fullName` be read and written like a plain property while custom logic runs underneath (splitting/joining `firstName`/`lastName`). Interview trap: a getter is accessed as `user.fullName`, never called as `user.fullName()`.',
+      'Step 1 — Understand the mechanism.\n\n**What Are Getters and Setters?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-166',
@@ -224,18 +224,18 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Is Encapsulation?',
     difficulty: 'Medium',
     expectedAnswer:
-      'Encapsulation means keeping internal state and implementation details controlled behind a clear public interface.',
+      '**What Is Encapsulation?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      '`Counter` exposes `increment()` and a `value` getter while keeping `#count` private, so consumers can only change state through the public API — `counter.value` reads `2` after two `increment()` calls — rather than mutating internals directly.',
+      'Step 1 — Understand the mechanism.\n\n**What Is Encapsulation?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-167',
     number: 'JSADV-M8-167',
     title: 'What Is Abstraction?',
     difficulty: 'Medium',
-    expectedAnswer: 'Abstraction exposes what an object does while hiding how it performs the operation.',
+    expectedAnswer: '**What Is Abstraction?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      "`PaymentService.pay(amount)` is the only method a consumer calls; private `#validate()` and `#charge()` methods handle the details internally, so `service.pay(500)` produces `Charging 500` then `Payment successful` without the caller needing to know how validation or charging work.",
+      'Step 1 — Understand the mechanism.\n\n**What Is Abstraction?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-168',
@@ -243,27 +243,27 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Is Polymorphism?',
     difficulty: 'Hard',
     expectedAnswer:
-      'Polymorphism means a common interface can produce different behavior depending on the concrete object that implements it.',
+      '**What Is Polymorphism?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      '`EmailNotification` and `SmsNotification` both implement `send()` from a shared `Notification` base; `notify(notification)` calls `notification.send()` without knowing the concrete type, yielding `Sending email` and `Sending SMS` respectively. The caller depends on the `send()` contract, not a specific implementation.',
+      'Step 1 — Understand the mechanism.\n\n**What Is Polymorphism?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-169',
     number: 'JSADV-M8-169',
     title: 'What Is Composition?',
     difficulty: 'Medium',
-    expectedAnswer: 'Composition combines independent behaviors into an object instead of building a deep inheritance hierarchy.',
+    expectedAnswer: '**What Is Composition?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      "`Object.assign(this, canLog, canTrack)` in `UserService`'s constructor mixes in `log()` and `track()` from separate behavior objects, producing `[LOG] User loaded` and `[TRACK] user_viewed`. Prefer composition when behaviors are independent and inheritance would not represent a genuine 'is-a' relationship.",
+      'Step 1 — Understand the mechanism.\n\n**What Is Composition?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-170',
     number: 'JSADV-M8-170',
     title: 'What Are Mixins?',
     difficulty: 'Hard',
-    expectedAnswer: 'A mixin is a function that adds reusable behavior to a class by returning a new class extending a given base.',
+    expectedAnswer: '**What Are Mixins?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      '`Timestamped(Base)` and `Identifiable(Base)` each return a subclass adding one field; composing them as `class User extends Timestamped(Identifiable(Entity)) {}` gives instances both `id` (a string UUID) and `createdAt` (a `Date`). Mixins are powerful, but excessive mixin chains can make class relationships hard to follow.',
+      'Step 1 — Understand the mechanism.\n\n**What Are Mixins?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-171',
@@ -271,9 +271,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Is the Difference Between Objects and Classes?',
     difficulty: 'Medium',
     expectedAnswer:
-      "An object is a concrete value that can hold data directly, while a class is blueprint-like syntax that defines construction and behavior — both remain prototype-based underneath.",
+      '**What Is the Difference Between Objects and Classes?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      "An object literal like `{ name: 'Rasik', greet() {...} }` can be used immediately, while a class like `User` must be instantiated with `new` to produce an instance with the same shape. Neither is universally better — the choice depends on the domain: objects (or `Object.create()`) suit ad-hoc composition, classes suit structured, repeatedly-instantiated domain models.",
+      'Step 1 — Understand the mechanism.\n\n**What Is the Difference Between Objects and Classes?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-172',
@@ -281,9 +281,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Are the Four Common OOP Principles?',
     difficulty: 'Medium',
     expectedAnswer:
-      'The four commonly taught OOP principles are encapsulation, abstraction, inheritance, and polymorphism.',
+      '**What Are the Four Common OOP Principles?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      "Encapsulation controls internal state, abstraction exposes a simple interface, inheritance reuses behavior through an 'is-a' relationship, and polymorphism lets a common interface produce different implementations. Modern JavaScript also benefits heavily from composition and functional techniques alongside these four.",
+      'Step 1 — Understand the mechanism.\n\n**What Are the Four Common OOP Principles?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-173',
@@ -291,9 +291,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'How Does JavaScript Class Inheritance Relate to Prototypes?',
     difficulty: 'Hard',
     expectedAnswer:
-      "Class syntax is built entirely on JavaScript's existing prototype model — `extends` wires up the prototype chain rather than introducing a separate inheritance mechanism.",
+      '**How Does JavaScript Class Inheritance Relate to Prototypes?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      'For `class Dog extends Animal {}`, both `Object.getPrototypeOf(dog) === Dog.prototype` and `Object.getPrototypeOf(Dog.prototype) === Animal.prototype` evaluate to `true`. The resulting chain is `dog → Dog.prototype → Animal.prototype → Object.prototype → null`, directly connecting class inheritance to the prototype chain.',
+      'Step 1 — Understand the mechanism.\n\n**How Does JavaScript Class Inheritance Relate to Prototypes?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-174',
@@ -301,9 +301,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     title: 'What Are Common OOP Mistakes in JavaScript?',
     difficulty: 'Hard',
     expectedAnswer:
-      'Common mistakes include unnecessary deep inheritance, using classes where a plain object would do, mutating shared prototype state, exposing unvalidated internal state, and treating `instanceof` as universal runtime validation.',
+      '**What Are Common OOP Mistakes in JavaScript?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      "Other frequent mistakes: overusing getters/setters and mixins, ignoring error handling, assuming JavaScript classes behave exactly like Java/C++ classes, and building large 'god classes'. The better approach escalates design complexity only as needed: simple requirement → object/function → composition → class → inheritance, choosing the simplest design that satisfies the requirement.",
+      'Step 1 — Understand the mechanism.\n\n**What Are Common OOP Mistakes in JavaScript?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
   {
     id: 'jsadv-m8-175',
@@ -312,9 +312,9 @@ const QUESTION_SEEDS: QuestionSeed[] = [
     difficulty: 'Hard',
     experienceLevel: '5–8 Years+',
     expectedAnswer:
-      'Production OOP code favors composition over inheritance, keeps classes small and single-responsibility, keeps public APIs minimal, and uses private fields and dependency injection deliberately.',
+      '**What Are JavaScript OOP Best Practices?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.',
     deepExplanation:
-      'Concretely: prefer composition when inheritance is not necessary, validate constructor inputs, avoid mutable global state and unnecessary prototype mutation, prefer dependency injection for external services, keep domain logic testable, use clear naming, document non-obvious invariants, avoid deep inheritance trees, profile before optimizing object creation, and treat class syntax as a tool rather than a requirement.',
+      'Step 1 — Understand the mechanism.\n\n**What Are JavaScript OOP Best Practices?** should explain JavaScript class syntax as prototype-based behavior expressed with class declarations, constructors, methods, inheritance, static members, and private fields.\n\nStep 2 — Easy method:\nStart with the runtime rule, then walk through one small example and identify the visible output before discussing edge cases.\n\nStep 3 — WITHOUT BUILT-IN / CORE TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return "Hello " + this.name;\n  }\n}\n\nconst user = new User("Rasik");\nconst message = user.greet();\n```\n\nStep 4 — WITH BUILT-IN / practical TypeScript:\n```ts\nclass User {\n  constructor(\n    public readonly name: string,\n  ) {}\n\n  greet(): string {\n    return `Hello ${this.name}`;\n  }\n}\n\nconst message =\n  new User("Rasik").greet();\n```\n\nStep 5 — Production example:\nKeep the binding/prototype/object/class boundary explicit, prefer predictable initialization, and test the behavior that callers depend on.\n\nStep 6 — Edge cases:\nCheck shadowing, null/undefined, detached methods, cross-realm behavior, mutation, lifecycle, and memory retention where relevant.\n\nStep 7 — Senior takeaway:\nExplain the runtime rule precisely, then connect it to maintainability, correctness, performance, and debugging.',
   },
 ];
 
