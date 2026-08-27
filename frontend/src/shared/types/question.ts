@@ -129,6 +129,7 @@ export interface CodingQuestionSolution {
   dryRun: string;
   javascriptSolution: string;
   typescriptSolution: string;
+  builtInSolution?: string;
   timeComplexity: string;
   spaceComplexity: string;
   commonMistakes: string[];

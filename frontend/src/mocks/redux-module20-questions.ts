@@ -278,4 +278,38 @@ const QUESTION_SEEDS: QuestionSeed[] = [
   },
 ];
 
-export const UPDATED_QUESTION_SEEDS = QUESTION_SEEDS;
+const FREQUENCY_BY_DIFFICULTY: Record<QuestionSeed['difficulty'], number> = {
+  Easy: 5,
+  Medium: 4,
+  Hard: 3,
+};
+
+export const MOCK_REDUX_MODULE20_TECHNICAL_QUESTIONS: MockTechnicalQuestion[] = QUESTION_SEEDS.map((seed) => ({
+  detail: {
+    id: seed.id,
+    questionNumber: seed.number,
+    title: seed.title,
+    difficulty: seed.difficulty,
+    companies: seed.companies,
+    frequency: FREQUENCY_BY_DIFFICULTY[seed.difficulty],
+    category: seed.category,
+    part: 'Redux/State',
+    concepts: seed.relatedTopics,
+    solved: false,
+    attempted: false,
+    bookmarked: false,
+    questionType: 'technical',
+    experienceLevel: seed.experienceLevel,
+    question: seed.title,
+  },
+  answer: {
+    expectedAnswer: seed.expectedAnswer,
+    deepExplanation: seed.deepExplanation,
+    productionExample: seed.productionExample,
+    bestPractices: seed.bestPractices,
+    tradeOffs: seed.tradeOffs,
+    commonMistakes: seed.commonMistakes,
+    followUpQuestions: seed.followUpQuestions,
+    relatedTopics: seed.relatedTopics,
+  },
+}));
